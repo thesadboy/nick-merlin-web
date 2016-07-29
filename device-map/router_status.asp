@@ -74,14 +74,18 @@ margin-top:-5px;
 transition: all 0.5s ease-in-out;
 }
 .other_info_table td{
-padding: 0 5px;
+padding: 3px 5px;
 }
 .other_info_table .info_title{
-line-height: 20px;
+font-size: 14px;
+height: 18px;
+line-height: 18px;
 font-weight: bold;
 padding: 0 5px;
 }
 .other_info_table .info_detail{
+height: 14px;
+line-height: 14px;
 padding: 0 5px;
 }
 .other_info_table .info_detail b{font-weight: normal; color: #1cfe16;}
@@ -600,7 +604,7 @@ catch (ex) {
 </td>
 </tr>
 <tr class="other_info_table">
-<td style="padding-bottom: 10px;">
+<td>
 <div class="info_title">CPU Load Average (1, 5, 15 mins)</div>
 <div class="info_detail">
 <span><% sysinfo("cpu.load.1"); %></span>,&nbsp;
