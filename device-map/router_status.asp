@@ -587,8 +587,8 @@ catch (ex) {
 </tr>
 <tr class="other_info_table">
 <td>
-<div class="info_title"><#1205#></div>
-<div class="info_detail"><span id="boot_days"></span> <#900#> <span id="boot_hours"></span> <#1223#> <span id="boot_minutes"></span> <#1476#> <span id="boot_seconds"></span> <#1760#></div>
+<div class="info_title">Uptime</div>
+<div class="info_detail"><span id="boot_days"></span> day(s) <span id="boot_hours"></span> hour(s) <span id="boot_minutes"></span> minute(s) <span id="boot_seconds"></span> second(s)</div>
 </td>
 </tr>
 <tr class="other_info_table">
@@ -615,7 +615,7 @@ catch (ex) {
 </tr>
 <tr class="other_info_table">
 <td style="padding-bottom: 8px;">
-<div class="info_title"><#888#>(WAN)</div>
+<div class="info_title">Speed (WAN)</div>
 <div class="info_detail"><b>D</b> <span id="upload_speed"></span> KB/s | <b>U</b> <span id="download_speed"></span> KB/s</div>
 </td>
 </tr>
