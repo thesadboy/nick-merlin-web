@@ -1,0 +1,2365 @@
+﻿English
+繁體中文
+简体中文
+Česky
+Polski
+Pусский
+Deutsch
+Español
+Français
+Türkçe
+ไทย
+Malay
+Norsk
+Suomi
+Dansk
+Svensk
+Portuguese(Brazil)
+日本語
+Italiano
+Український
+Hungarian
+Romanian
+한국어
+Mevcut sürüm
+En son sürüm
+Ana AP kapanabilir. Lütfen kontrol edin tekrar.
+Bağlantı başarısız. Parola doğru değil. Lütfen başka bir ağ seçmek için [Yeniden tara] üzerine tıklayın.
+Kablosuz bağlantı başarılı bir şekilde kuruldu.
+Tarayıcıyı yeniden başlatın. URL adres çubuğunda, "http://router.asus.com/" adresine girişi yaparak yineleyici bağlantı durumuna erişin.
+IP ayarları başarıyla güncellendi. R6900'nun web GUI'sine yeniden yönlendirileceksiniz.
+Başka bir ağ seçin
+R6900'n bağlanacağı ağı değiştirin.
+Kullanılabilir ağları araştırıyor, lütfen bekleyin...
+Herhangi bir ağ algılanamadı
+Ağı seçin ve [Bağlan]'a tıklayın.
+Güvenli olmayan bir ağa bağlanmaya çalışıyorsunuz. Ağ üzerinden iletilen bilgi şifrelenmemiş.
+Bu erişim noktasına zaten bağlısınız.
+Kimlik doğrulama yöntemi desteklenmiyor.
+Lütfen bekleyin, R6900 bağlanıyor
+Adı girin
+otomatik
+Bant Genişliği Sınırlayıcı
+Bant Genişliği Sınırlayıcı, istemci aygıtlarınızın en fazla indirme ve karşıya yükleme hızlarınıkontrol etmeye yardımcıolur.
+geçersiz IP adresidir.
+arasında bir değer girin lütfen
+ila
+Tür, bilgisayarınızın IP adresini otomatik almasınız sağlar. Bun bağlantı türü genellikle kablolu modem servis sağlayıcıları tarafından kullanılır.
+Kullanıcı adı ve parola gerektiren ADSL veya başka bağlantı. PPPoE olarak bilinir.
+PPTP VPN bağlantısı kullanıcı adı ve şifre gerektirir. Bazı ISS'ler sabit bir IP adresi gerektirir.
+L2TP VPN bağlantısı kullanıcı adı ve şifre gerektirir. Bazı ISS'ler sabit bir IP adresi gerektirir.
+Statik IP, bilgisayarınızın ISS'nız tarafından verilen sabit IP adresini kullanmasını sağlar.
+Otomatik IP
+Statik IP
+WAN bağlantı türünüz PPTP veya L2TP ise, lütfen VPN sunucusunun sunucu adı veta sunucu IP\'sini girin.
+VPN Sunucusu
+Ana Bilgisayar Adı (isteğe bağlı):
+MAC Adresi(isteğe bağlı)
+MAC Kopyası
+VPN Sunucusu Liste
+Sık Kullanılanlara Ekle
+R6900'n IP adresi değiştirildi.
+Bundan dolayı, kablosuz yönlendiricinin web GUI'sine hızlı erişim için URL'yi Sık Kullanılanlar listesine eklemenizi tavsiye ederiz.
+Tarayıcınız bu işlevi desteklememektedir.
+Yeniden Başlat
+Hayır
+Evet
+Bağlandı
+Bağlantı
+Bağlantı başarısız
+Bağlantı türü
+Bilinmeyen bağlantı türü
+Bağlan
+Uygula
+Tüm ayarları uygula
+İptal
+Varsayılanı kullan
+Değiştir
+İleri
+Geri
+İzni Kaydet
+Kurulum Sihirbazını Atla
+Oturum aç
+Geç
+Bilinmeyen Aygıt
+Daha fazla ayrıntı için, lütfen <a style="font-weight: bolder;text-decoration: underline;color:#000000;" href="http://www.asus.com/support/" target="_blank">http://www.asus.com/support/</a> adresini ziyaret edin
+* En küçük ping paketi, aralık başına yaklaşık 128 byte kullanır. Bundan dolayı, ping algılayıcıay başına
+MByte tüketir
+Bağlantı Kesildi
+SSID veya güvenlik ayarını değiştirmişsiniz. Bu nedenle, kablosuz istemcilerin bağlantısı kesilecek. Lütfen yeniden bağlanmaları için istemcilerin ayarını yapın.
+Bağlantı yeniden kuruldu.
+AP moduna geçildikten sonra DHCP işlevi devre dışı bırakıldığından R6900 ayar sayfasına giremeyebilirsiniz.<p>Ayar sayfasına yeniden girmek için ASUS Utility (ASUS Yardımcı Programı)'nı / Device Discovery (Aygıt Gezgini)'yi kullanmanızı ve AP IP'sini aramanızı öneririz.</p>
+Çift WAN
+Çift WAN ayarı
+Kullanıcı Tanımlı Hedefi Etkinleştir
+IP adresi yenilendi. Eğer bu işlem iki dakikadan uzun sürerse, lütfen bu üç adımı izleyerek IP'yi manuel olarak yenileyin: (1) ağ kablosunu fişten çekin; (2) yaklaşık on saniye bekleyin; ve (3) yeni IP adresi almak için tekrar takın.
+Hata iletisi
+En son aygıt yazılımı şu anda bulunmaktadır. En iyi deneyimi elde etmek için, yönlendiriciyi en son aygıt yazılımı sürümüne güncellemenizi kesinlikle öneririz. Aygıt yazılımını hemen güncellemek istiyor musunuz?
+WAN IP, harici IP değildir. Harici IP tabanlıhizmetler çalışmayacaktır.
+Kullanıcı Adı boş bırakılamaz.
+Kullanıcı Adı iki karakterden az olamaz.
+Kullanıcı Adı 20 karakterden fazla olamaz.
+Bu hesap zaten var.\nLütfen farklı bir ad girin.
+Parola boş bırakılamaz.
+Parolalar eşleşmelidir!.
+Donanım yazılımı yükseltme işlemi başarısız. Yanlış görüntü veya hatalı aktamdan kaynaklanabilir. Lütfen donanım yazılımı sürümünü kontrol edip yeniden deneyin.
+Donanım yazılımı yükseltiliyor. Lütfen 3 dakika kadar bekleyin.
+Aygıt yazılımı yükseltmesi tamamlandı. Lütfen R6900 maneül olarak yeniden başlatın.
+2016 ASUSTeK Computer Inc. Tüm hakları saklıdır.
+Eski ve yeni donanım yazılımındaki yapılandırma parametresi için, ayarları yükseltme işlemi sırasında korunur.
+Donanım Yazılımı Sürümü:
+* Bu saat diliminde yaz saati uygulaması etkin.
+Sistem Saati
+* Anımsatıcı: Sistem saatiniz, bir NTP sunucusuyla eşitlenmemiş.
+Misafir Ağı
+Because of security and compatibility concerns,  IE8 / IE9 / IE10 are no longer supported.
+Things might be bound to broken and perhaps unusable.
+We recommend an upgrade to latest version of Internet Explorer.
+Please refer to <a style="font-weight: bolder;text-decoration: underline;" href="https://www.microsoft.com/en-us/WindowsForBusiness/End-of-IE-support" target="_blank">Microsoft® announce</a> for more detail.
+Eğer WAN bağlantınız sabit bir IP adresi gerektirirse, bu alandaki IP adresini girin.
+IP Adresi
+WAN IP'sini R6900 Ağ Geçidi olarak ayarladınız ve R6900 Internet bağlanamayabilir. Lütfen Ağ Geçidini doğru değerde ayarlayın.
+Bu alan, R6900 yönlendiricisinin irtibat sağladığı DNS IP adresini gösterir.
+DNS Sunucusu1
+Bu alan, R6900 yönlendiricisinin irtibat sağladığı DNS IP adresini gösterir.
+DNS Sunucusu2
+Bu yönlendiricinin ISP'den otomatik olarak DNS IP adresi almasını sağlar.
+DNS Sunucusuna otomatik bağlansın mı
+Eğer WAN bağlantınız sabit bir IP adresi gerektirirse, bu alandaki ağ geçidi IP adresini girin.
+Varsayılan Ağ Geçidi
+Eğer WAN bağlantınız sabit bir IP adresi gerektirirse, bu alandaki alt ağ maskesini girin.
+Alt Ağ Maskesi
+MAC adresi geçerli değil.
+Yönlendiricinin mevcut aygıt yazılımı en son sürümdür.
+We suggest you to try a mix of letters, numbers, and symbols. Do you want to change now?
+Doğru alt ağ maskesini tamamlayacağız.
+yerel ana bilgisayar adresi için tutuluyor, lütfen 1 - 233 arası bir değer girin.
+Lütfen 1 - 233 arası bir değer girin.
+Alanlar boş olamaz.
+Lütfen Köprü için sabit bir kanal seçin.
+Oturumu kapattığınızdan emin misiniz?
+Ön paylaşımlı anahtar 8 -63 karakter veya 64 onaltılık rakam olmalıdır. Bu alanı boş bırakırsanız, sistem parolanız olarak [00000000] atar.
+Ön paylaşımlı anahtar 8 -63 karakter veya 64 onaltılık rakam olmalıdır!
+Ön paylaşımlı anahtar 8 -63 karakter!
+Bu alanı boş bırakamazsınız!
+Your password is too short.
+Geçersiz karakter!
+geçerli bir IP adresi değil!
+geçerli bir bağlantı noktası numarası değil.
+Güney Kore hükümetinin talimatına göre, şifre, 1 harf, 1 özel karakter, 1 sayısal karakter içermek üzere en az 8 karakterden oluşmalıdır.
+Lütfen
+arasında bir değer girin.
+SSID karakteri içeremez [
+].
+Bu dize ile başlatılamaz:
+Bu dizede bulunamaz:
+Lütfen doğru WEP anahtarını girin.
+Ön paylaşımlı anahtar 64 karakterden az olmalıdır.
+R6900 varsayılan Yerel Ağ IP'si
+.Daha sonra ayar sayfasına geri dönemezseniz, lütfen bilgisayarınızın IP yapılandırmasını yenileyin.
+Yönlendiricinizin IP adresi değiştirildi. Yönlendiricinizin yeni IP adresini aramak için lütfen Device Discovery (Aygıt Bulma) özelliğini kullanın.
+Yerel Ağ IP'si Ayarı
+R6900'nun LAN IP adresi. Varsayılan değer 192.168.1.1. IP temelli ağlarda veri paketleri ağ cihazlarının özel IP adreslerine gönderilir.
+MAC adresi için format, aktarım sırasına göre sütunlarla (:) ayrılmış iki tane on altılı sayıdan oluşan altı gruptur (örnek, 12:34:56:aa:bc:ef)
+R6900'nun LAN alt ağ maskesi. Varsayılan değer 255.255.255.0
+Geçersiz IP Adresi!
+Yerel Ağ IP'si Otomatik Alınsın mı?
+Parola 16 karakterden fazla olamaz.
+Güvenli bir parola en az 8 karakter uzunluğunda olmalı ve büyük harf, küçük harf, sayı ve sembollerden oluşmalıdır.
+WAN Bağlantı Türü
+Aşağıdaki IP adresini kullan:
+MAC adresi
+İşlem Devam Ediyor
+Bu, Internet bağlantınızı kesintiye uğratabilir.
+Tamamlandı!
+Lütfen bekleyin,
+Aygıt yazılımı güncelleme işlemi sırasında R6900 aygıtını kapatmayın.
+Yönlendiricinin yeniden başlatılması yaklaşık 60 saniye sürer. Yönlendiriciyi şimdi yeniden başlatmak istediğinizden emin misiniz?
+Manüel Ayar
+DSL günlüğü
+DSL Ayarı
+Trafik Yöneticisi
+USB uygulaması
+Ağ Eşleme
+Gelişmiş Ayar
+Kablosuz
+Genel
+WPS
+Köprü
+Kablosuz MAC Filtresi
+RADIUS Ayarı
+Profesyonel
+Yerel Ağ
+Yerel Ağ IP'si
+DHCP Sunucusu
+Rota
+WAN
+Internet Bağlantısı
+Bağlantı Noktası Tetikleyici
+Port Yönlendirme
+DMZ
+DDNS
+USB Uygulaması
+Ağ Yeri (Samba) Paylaşımı
+FTP Paylaşımı
+Çeşitli ayarlar
+USB Modem
+Güvenlik Duvarı
+URL Filtresi
+MAC Filtresi
+Ağ Hizmetleri Filtresi
+Anahtar Kelime Filtresi
+IPv6 Güvenlik Duvarı
+Yönetim
+İşlem Modu
+İşlem Modu
+Sistem
+Donanım Yazılımı Yükseltme
+Ayarları Geri Yükle
+Genel Günlük
+DHCP Kiralamaları
+Kablosuz Günlüğü
+Bağlantı Noktası İletme
+Rota Tablosu
+Lütfen 3 dakika kadar bekleyin.
+Lütfen 1 dakika kadar bekleyin.
+NAT Düz geçiş
+Ağ Anahtarı
+Yeni aygıt yazılımı otomatik olarak yüklenmeyecek. En son aygıt yazılımı sürümünü indirip ve kablosuz yönlendiricinizin aygıt yazılımı sürümünü güncellemek için <b>Yönetim</b> > <b>Aygıt Yazılımı Yükseltme</b> kısmına gidin.
+Tarayıcınız JavaScript'i desteklemiyor. JavaScript'i destekleyen bir tarayıcı seçin veya çok işlevli ASUS R6900 yönlendiricisini kullanmak üzere etkinleştirin.
+Ayarlar güncellendi. Web sayfası artık yenilenecek.
+IP adresinde veya port numarasında değişiklikler yapıldı. Artık R6900 öğesi ile bağlantınız kesildi.
+R6900 ayarlarına erişmek için, kablosuz ağa yeniden bağlanın ve güncellenen IP adresini ve port numarasını kullanın.
+Erişim Noktası (AP) modunda, R6900 kablosuz sinyal kapsamını başka bir ağ istemcisine genişletmek için Ethernet kablosu aracılığıyla bir kablosuz yönlendiriciye bağlanır. Bu modda, güvenlik duvarı, IP paylaşımı ve NAT fonksiyonları varsayılan olarak devre dışı bırakılır.
+Arama yapmak ve aygıt yapılandırma sayfasına girmek için <a href=\"http://findasus.local\" style=\"font-family:Lucida Console;text-decoration:underline;color:#FC0;\">http://findasus.local</a> adresine de gidebilirsiniz.
+Erişim Noktası (AP) modu
+R6900 farklı gereksinimleri karşılamak için birkaç çalışma modunu desteklemektedir. Lütfen durumunuza uygun modu seçin.
+Kablosuz Yönlendirici modunda, R6900 internete PPPoE, DHCP, PPTP, L2TP veya Sabit IP ile bağlanır ve LAN istemcileri ve cihazları ile kablosuz ağı paylaşır. Bu modda, NAT, güvenlik duvarı ve DHCP sunucusu varsayılan olarak etkinleştirilir. UPnP ve Dinamik DNS SOHO ve ev kullanıcıları için desteklenir. İlk kullanıcıysanız veya şu anda herhangi bir kablolu/kablosuz yönlendirici kullanmıyorsanız bu modu seçin.
+Kablosuz Yönlendirici (standard)
+Media Bridge
+R6900 Media Bridge (Ortam köprüsü) modunda yapılandırılabilir.
+Media Bridge (Ortam Köprüsü) modu, birden fazla ortam aygıtı için eşzamanlı olarak en hızlı 802.11ac Wi-Fi bağlantısını sağlar.
+Media Bridge (Ortam Köprüsü) modunu ayarlamak için, iki R6900 gerekir: biri Ortam istasyonu ve diğeri yönlendirici olarak yapılandırılmış olmalıdır.
+Bilgisayar, Akıllı TV, oyun konsolu, DVR veya Ethernet kablosu yoluyla ortam oynatıcı gibi ortam aygıtlarınız için eşzamanlı 802.11ac Wi-Fi bağlantısı sağlamak için bir R6900 yönlendirici olarak ve başka bir R6900 802.11ac Media Bridge (Ortam köprüsü) olarak yapılandırın.
+Ortam aygıtlarınız için eşzamanlı 802.11ac Wi-Fi bağlantısı sağlamak için Media Bridge (Ortam Köprüsü) modunu değiştirin.
+Medya köprüsü modunda, P-AP'ye yalnızca kablosuz aygıtlar bağlanır. İstemci aygıtların bir ağ kablosuyla medya köprüsüne bağlanması gerekir.
+Medya köprüsü modunda R6900. IP adresi değiştirilmişse.
+Medya köprüsü IP adresini belirlemek için lütfen <a href='http://dlcdnet.asus.com/pub/ASUS/LiveUpdate/Release/Wireless/Discovery.zip' target='_blank' style='font-family:Lucida Console;text-decoration:underline;color:#FC0;'>Device Discovery Utility</a>'nı indirin.
+Ağ kablosunu WAN bağlantı noktasından çıkarıp çıkarmadığınızı kontrol edin.
+Yineleyici modunda R6900 mevcut bir kablosuz sinyale bağlanır ve daha geniş bir kablosuz kapsama alanına ve daha iyi kablosuz sinyal kalitesine sahip olmak için bu sinyali genişletir.
+R6900 aygıtının LAN IP adresi değiştirilmiş olabilir.
+Bu pencereyi kapatıp http://router.asus.com adresine tekrar erişin.
+Yineleyici modu
+WISP modu
+R6900, ana yönlendiricinize, erişim noktanıza veya kamusal etkin noktaya kablosuz olarak bağlanır ve Internet bağlantısını kablolu/kablosuz istemcilerinizle paylaşır. Bu modda, NAT, güvenlik duvarı ve DHCP sunucusu varsayılan olarak etkinleştirilir.
+Bir Wi-Fi etkin noktaya bağlanırken, Internet’e erişim yetkiniz olduğundan emin olun.
+Bu işlev devre dışı bırakıldı.
+ebeveyn denetimi
+Yeni Parola
+Parolayı Yeniden Yazın
+Çok Zayıf
+Zayıf
+İyi
+Güçlü
+Çok Güçlü
+PIN kodu doğru değil. Lütfen doğru PIN kodunu girin ve USB adaptörünü tekrar bağlayın. Aynı hatayla karşılaşmaya devam ederseniz, PIN kodu işlevini kapatın, cihazı açıp tekrar deneyin.
+Parola
+PPP Kullanıcı Adı
+Hesap Ayarı
+Bu alan size R6900 ana bilgisayar adını verir. Genellikle ISS\'nız tarafından istenir.
+Özel ISS Gereksinimi
+MAC [Media Access Control (Ortam Erişim Kontrolü)] adresi bilgisayarınızı veya cihazınızı ağda tanımlayan tek tanımlayıcıdır. ISP\'ler hizmetleri için internete bağlanan MAC adresleridir ve yeni MAC adreslerinin internet bağlantısına izin vermeyecektir. Bu sorunu çözmek için aşağıdakilerden birini yapabilirsiniz:<p>* ISP\'nizle irtibat kurun ve ISP kaydınız ile ilgili MAC adresini güncelleştirmesini talep edin.<p>* Orijinal cihazın MAC adresine uydurmak için yeni cihazın MAC adresini kopyalayın veya değiştirin.
+DNS Sunucuları
+Bağlantı Durumu
+ISS'niz seçtiğinizden daha yüksek bir MPPEşifreleme düzeyini desteklediğinde, daha iyi güvenlik için daha yüksekşifreleme düzeyi kullanılacaktır.
+VPN Sunucunuz seçtiğinizden daha yüksek bir MPPEşifreleme düzeyini desteklediğinde, daha iyi güvenlik için daha yüksekşifreleme düzeyi kullanılacaktır.
+Hızlı Internet Kurulumu
+Yeni şifre, sistem varsayılanı şifreyle aynı. Daha karmaşık bir şifre ayarlamanızı kesinlikle öneririz.
+admin şeklindeki varsayılan şifreyi değiştirmezseniz, yönlendiriciniz güvenlik tehditlerine açık hale gelir ve başka kişiler oturum açma şifresini kolayca tahmin edebilir. Güvenli olmayan bu şifreyi tutmak istediğinize emin misiniz?
+Varsayılan ayar kullanın (Ana AP’niz ile aynı parolayı kullanın)
+Otomatik IP bağlantısı kurulumu
+Bilgisayarın MAC adresini yönlendiriciye klonlamaya başlıyor
+Lütfen bir süre bekleyin ...
+WAN IP adresini doğrulayın
+WAN IP adresini başarıyla aldı.
+MAC klonlamasının ardından yeni WAN IP adresini alın
+DSL hizmetinizin kullandığı Ek modunu seçin. Yanlış ayarlar, DSL hizmetinize bağlantıyı engelleyecektir.
+Hangi Ek modunun kullanılacağından emin değilseniz, lütfen yardım için ISS’nizle iletişime geçin.
+Ekleme modu seçili değil.
+İlk olarak kablosuz güvenlik ayarlarını ayarlamanızı önemle tavsiye ederiz, devam etmek istiyor musunuz?
+PPPoE/DSL bağlantısı algılandı.
+Kurulum Sihirbazı Internet bağlantı türünüzün PPPoE/DSL olduğunu algıladı.
+Internet Hizmet Sağlayıcınızın (ISS) sağladığı hesap adını ve parolayı girmek için "İleri" öğesini tıklayın.
+Bağlantı türü PPPoE/DSL değilse, lütfen "Bağlantı Türü" öğesini tıklayın.
+R6900 link durumunu kontrol ediyor, lütfen bekleyin...
+R6900 bağlantı türünü kontrol ediyor, lütfen bekleyin...
+R6900 bağlantı türünü bulamadı. Lütfen [Manual Setting (Manuel Ayar)]'a tıklayın.
+İnternet bağlantısı türünü algılama zaman aşımına uğradı. Tekrar denemek ister misiniz ?
+Modem manuel olarak sıfırlandı.
+WAN bağlantı türünü kontrol edin.
+Doğrulamak için bir süre bekleyin...
+Aşağıdaki DNS sunucusu adreslerini kullanın
+Ethernet WAN ağına başarıyla bağlandı.
+Ethernet WAN ağına bağlanamadı.
+Mobil geniş bant ağına başarıyla bağlandı.
+SIM kart düzgün biçimde takılı değil.
+Not : Internet hizmetine \"Mobil Geniş Bant Ağı\" aracılığıyla bağlanmak isterseniz <a onclick=\"redirect_page('unplug_sim');\">\"Diğer WAN'ı Yapılandır\"</a> öğesine tıklayın.
+Aşağıdaki işlem, mobil geniş bant Internet ayarlarını tamamlamanızda kılavuzluk edecektir.
+Not: Internet hizmetine \"Ethernet WAN\" aracılığıyla bağlanmak isterseniz <a onclick=\"redirect_page('unplug_ewan');\">\"Diğer WAN'ı Yapılandır\"</a> öğesine tıklayın.
+Aşağıdaki işlem, Ethernet WAN ayarlarını tamamlamanızda kılavuzluk edecektir.
+Ethernet WAN ve mobil geniş bant Bağlantı Durumu
+Mevcut WAN ayarlarınızı düzenleyin, lütfen <a href="" onclick="gotoWANSetting();">buraya</a> tıklayın.
+Yeni WAN ayarı ekleyin, lütfen <a href="QIS_manual_setting.htm">buraya</a> tıklayın.
+WAN ayarlarınızı daha önceden yapılandırdınız.
+Varsayılan kablosuz güvenliği ayarlarını kullanmak istiyor musunuz?
+R6900 cannot find the connection type. Your ADSL setting may belong to one of the following modes: MER Static IP, IPoA or Bridge. Please click Manual Setting to configure the WAN settings manually.
+Kimlik doğrulanamadı.
+Hesap adı ve parola doğru değil.
+Yönlendiriciyi çevrimdışı ayarlarsanız, Internet bağlantısı algılamayı atlamak için <b>Kablosuz Ayarı</b> öğesine tıklayıp, kablosuz adını ve şifresini ayarlamak için sonraki adıma gidin.
+ISS'niz tarafından sağlanan kullanıcı adını ve şifreyi yeniden girmek için <b>Internet Türünü Seç</b> öğesine tıklayın.
+Internet'e bağlanılamıyor. Lütfen hesap verilerinizi ISS'nizle bir daha kontrol edin veya teknik sorular ve destek için ASUS Destek Hattını arayın.
+Hesap adı ve parola kimlik doğrulamasını geçti, ancak ISS'nizden bir IP adresi alınamadı. Yardım için lütfen ISS'nize başvurun.
+Internet'e bağlanılamıyor
+Internet setting is error!
+PPPoE/DSL Bağlantısı başarısız
+Mobil geniş bant ağına bağlanılamadı.
+Algılama Arızası
+Yönlendirici Admin hesabı
+Yönlendirici Admin parolası
+R6900, bu Internet ve kablosuz ayarlarla ayarlanmıştır.
+Yapılandırılan Ağ
+Ağ Adı (SSID)
+Kablosuz Güvenlik
+VPN sunucusuna bağlanılsın mı?
+Ağınızda proxy sunucu bulunabilir. Lütfen İnternet Servis Sağlayıcısını veya ağ yöneticinizi kontrol edin.
+İnternet Servis Sağlayıcısı Etki Alanı Adında bazı hatalar bulunabilir. Lütfen ISP'nizi veya ağ yöneticinizi kontrol edin veya genel DNS'i ayarlamak için Gelişmiş Ayar sayfasına gidin.
+Lütfen İnternet Servis Sağlayıcınızı veya ağ yöneticinizi kontrol edin.
+Lütfen güç kablosunun fişini modemden çekin. Yaklaşık iki dakika bekleyin, ardından tekrar takın. <b>Bağlantıyı yeniden algıla</b>'ya tıklayın.
+IP alındı
+ISP DNS'e bağlandı
+ISP DNS'ye bağlanamadı
+Genel DNS'e bağlandı
+Genel DNS'e bağlanamadı
+VPN sunucusunun URL veya IP'sini henüz girmeyin!
+Bağlantı türünüz PPTP/L2TP ise, Lütfen [VPN sunucusuna bağlnama] için [Tamam]'ı tıklatın.\nDeğilse, lütfen [İptal Et]'i tıklatıp bilgileri kontrol edin ve ardından ayarları uygulayın.
+VPN Öğesi
+VPN türü
+MAC (Ortam Erişim Denetimi) adresi, ağdaki cihazı veya bilgisayarınızı tanıyan benzersiz bir tanımlayıcıdır. ISS'ler servislerine bağlı cihazların MAC adreslerini izlerler ve yeni MAC adreslerinin Internet bağlantılarına izin vermeyebilirler. Bu sorunu gidermek için aşağıdakilerden birini yapabilirsiniz:
+ISS'nizi bağlayın ve ISS aboneliğinizle ilişkili MAC adresini güncellemeyi isteyin. Bu yapıldığında, yönlendiricinin kurulum sihirbazını yeniden çalıştırabilirsiniz.
+Yeni cihazın MAC adresini orijinal cihazın MAC adresiyle eşleşecek şekilde klonlayın veya değiştirin. Eski yönlendiriciyi yeni değiştirdiyseniz eski yönlendiricinin MAC adresini etiketinden bulabilirsiniz. Bilgisayarınızı daha önce modeme bağladıysanız, bilgisayarınızın MAC adresini girmeniz veya bilgisayarınızın MAC adresini klonlamak için (MAC Kopyası) öğesini tıklatmanız gerekir.
+Adım 1 / 2. Kablo/DSL modemi kapatın
+Lütfen güç kablosunu bir kablolu TV çıkışına veya telefon jakına bağlanan ISS'nin sağladığı modemden çıkarın.
+Modem güç kablosu çıkarıldıktan sonra hala açıksa, pil yedekleme işlevi vardır. Lütfen sıfırlamak için modemin sıfırla düğmesine beş saniyeden fazla basın.
+Modemin güç kablosunu fişten çıkardıktan sonra "İleri" öğesini tıklatın.
+Bir modem kullanmıyorsanız, lütfen "Internet Türünü Seç" öğesini tıklatın.
+Adım 2 / 2. Kablo/DSL modemi kapatın
+Yaklaşık iki dakika bekleyin, sonra modemin güç kablosunu elektrik prizine yeniden takın.
+Modemin LED'i yanıp sönmeye başladığında, bağlantı türünü otomatik olarak algılamak için "Yeniden algıla" öğesini tıklatın.
+R6900'da bağlı telefon hattı bulunmuyor. Lütfen telefon hattının DSL bağlantı noktasına bağlı olduğundan emin olun.
+Telefon hattı yok
+ASUS kablosuz yönlendiricinize yetkisiz erişimi önlemek için yönlendirici parolasını değiştirin.
+Kullanıcı adı ve şifre, küçük-büyük harf duyarlıdır.
+Yönlendirici oturum açma bilgileriniz, yönlendiricinizin yönetim ayarlarına erişmek için kullanılır.
+Yönlendirici oturum açma bilgilerinden, FTP ve AiCloud 2.0 gibi ek özelliklere erişmek için de yararlanılır.
+Varsayılan kullanıcı adı ve şifre :
+Oturum Açma Bilgisi Ayarı
+Lütfen gerekli bilgileri aşağıya yazın.
+ISS'nizden hesap adını ve parolayı alın.
+PPPoE, PPTP veya L2TP bağlantı türüne abone olursanız, ISS'niz hesap adı ve parola içeren bir kart veya belge verir. ISS'nizin sağladığı hesap adı ve parola Internet'e bağlanmak için kullanılır. Bunlar yönlendirici yönetimi için kullanılan kullanıcı adı ve parolayla aynı değildir.
+Önceki kablosuz güvenlik ayarlarını kullanmak ister misiniz?
+İlk olarak kablosuz güvenlik ayarlarını ayarlamanızı önemle tavsiye ederiz.
+Yeniden tara
+Hizmet
+Parolayı göster
+(Önerilen)
+İnternet sağlayıcınız kullanıcı adı ve şifrenizi içeren bir kart veya dökümanı size sağlamalıdır, örnekte gösterildiği gibi
+İnternet bağlantınız için gerekli kullanıcı adı ve şifre bilgilerini giriniz. Bu bilgiler İnternet sağlayıcınız tarafından size verilir.
+HiNet user's client number is <span style="color:#FC0;">HNxxxxxxxx@hinet.net</span>
+Bağlantı senaryosu 1
+Bağlantı senaryosu 2
+İnternet sağlayıcınız IP, subnet mask, gateway ve DNS adresi bilgilerini size sağlamalıdır, aksi takdirde internet sağlayıcınız ile bağlantıya geçiniz.
+İnternet bağlantınız kullanıcı adı ve şifre gerektiriyor mu?
+İnternet bağlantı çeşidim Otomatik IP(Kablo modem, Dinamik IP, DHCP) veya Statik IP
+Cihazınızın otomatik IP almasını sağlayan şekil. Bu bağlantı çeşidi çoğunlukla kablo servis sağlayıcıları tarafından kullanılır
+İnternet bağlantı çeşidim PPPoE, L2TP veya PPTP
+* İnternet bağlantı çeşidinizi bilmiyorsanız lütfen İnternet Sağlayıcınız ile bağlantıya geçiniz.
+2.4 GHz'yi 5 GHz ayarlarına kopyalayın
+2.4 GHz'yi 5 GHz-1 ayarlarına kopyalayın
+5 GHz-1'yi 5 GHz-2 ayarlarına kopyalayın
+Bağlantıyı Kontrol Edin
+Internet Kurulumu
+Yönlendirici Kurulumu
+Hızlı Internet Kurulumu
+Kablosuz ağınıza bağlanacak istemciler ve bilgisayarlar için şu adımları izleyin:
+1. Bildirim alanında, ağ simgesini ( <img src="/images/qis/win7_network_icon1.jpg"> ) veya ( <img src="/images/qis/win7_network_icon2.jpg"> ) tıklatın.
+2. From the list of networks, click the network you want to connect to, then click "Connect".
+1. Bildirim alanında, ağ simgesini tıklatın, sonra "View Available Wireless Networks" (Kullanılabilir Kablosuz Ağları Görüntüle) öğesini tıklatın.
+1. Menü çubuğunda Airport durumu simgesini ( <img src="/images/qis/osx_network_icon.jpg"> ) tıklatın ve sonra bağlanmak istediğiniz kablosuz adını seçin.
+Kablosuz ağınıza bağlanma
+Lütfen aşağıdaki seçeneklerden Internet bağlantı türünü seçin. Internet bağlantı türünü bilmiyorsanız, ISS'nizle bağlantı kurun.
+Internet Türünü Seç
+SIM kart veya Ethernet kablosunun düzgün biçimde bağlandığından emin olup tekrar deneyin.
+Mobil ağı ayarlamak için:
+Ethernet kablosunun modeme ve yönlendiricinin WAN bağlantı noktasına doğru biçimde bağlandığından emin olun.
+Ethernet WAN ağını ayarlamak için:
+SIM kartı SIM kart yuvasına taktığınızdan emin olup tekrar deneyin.
+Mobil ağı ayarlamak için:
+SIM kartı SIM kart yuvasına takın.
+Ağ (RJ-45) kablosunu WAN bağlantı noktasına da bağlayabilirsiniz.
+Ağ kablosunu (RJ-45) modeme ve yönlendiricinin WAN bağlantı noktasına bağlayın.
+Web arayüzünde <b>Yeniden Algıla</b> öğesine tıklayın.
+Lütfen SIM kart ve Ethernet WAN kablosunu denetleyin
+Ağ Kablosu Durumu
+SIM Kart Durumu
+Lütfen kullanıcı adı ve şifrenizi giriniz
+VPN İstemcisini aktif edin
+R6900 modeli için Hızlı İnternet Kurulum Sihirbazını başlatmak için "İleri" üzerine tıklayın.
+Eşzamanlı 450+450 çift bantlı bağlantı.
+USB depolama alanı ve Çok işlevli yazıcı için çift USB portu.
+Gigabit Internet ve NAT ile gezinme.
+Üstün indirme ve oyun performansı için yüksek seviyede akım kullanımı ve çoklu istemcili bağlantılar.
+600Mbps / 2.4 GHz, R6900'ya ulaşmak için medya köprüsü modunda PCE-AC68 veya R6900'ya bağlanılmalıdır.
+ASUS Ağ Oluşturma Ailesine Hoşgeldiniz!
+Ağ adı veya SSID kablosuz ağı tanımlayan benzersiz bir addır. WiFi cihazlar otomatik olarak aralık içindeki tüm ağları algılar.
+Güvenlik anahtarı kablosuz bir ağı yetkisiz erişime karşı güvenli hale getirmek için atanan bir paroladır. Güvenli bir ağa erişmek için, kullanıcının güvenlik anahtarını girmesi istenir.
+Kablosuz ağının tanımlanmasına yardımcı olmak için benzersiz bir ad veya SSID (Hizmet Kümesi Tanımlayıcısı) atayın.
+8 ve 63 karakter arasında bir ağ anahtarı girin (harf, sayı veya her ikisi) veya 64 onaltılık rakam. Varsayılan kablosuz güvenlik ayarı WPA2-Personal AES'dir. Ağ güvenliğini ayarlamak istemiyorsanız, güvenlik anahtarı alanını boş bırakın, ancak bu, ağınızı yetkisiz erişime açık hale getirir.
+8 ve 63 karakter arasında bir ağ anahtarı girin (harf, sayı veya her ikisi). Varsayılan kablosuz güvenlik ayarı WPA2-Personal AES'dir.
+Hesap adı boş bırakılamaz.
+Kullanıcı Adı/Parola alanları boş olamaz.
+ISS Hesap Ayarı
+Hızlı Başlangıç
+Bağlantı türünüz algılanıyor
+Bağlantı durumunuz yeniden algılanıyor
+Yeniden algıla
+otomatik algılama
+Bağlantı türünüzü algılamayı başlatın...
+This process might take a few minutes, please wait until finished.
+Internet bağlantısı ayarı tamamlandı.
+Internete girme
+Basit Kablosuz Güvenlik Ayarı
+Şifreleme kurulumunu arayıp bulun ve yapılandırın.
+Gelişmiş Ayar sayfası
+El ile yapılandırma ve ince ayar.
+Lütfen bu pencereyi kapatın ve ayarları yapılandırmayı sonlandırın. İnternet'e bağlanmak için yeni bir pencere açın.
+Son
+Lütfen R6900 aygıtına bağlandığınızdan emin olup bu sayfayı elle yenileyin.
+Hesap veya parolayı yeniden girin
+DHCP bağlantısı başarısız.
+Geçersiz hesap veya bağlantı, değiştirmek için bağlantıyı tıklatın.
+PPPoE bağlantısı başarısız, yeniden denemek için bağlantıyı tıklatın.
+PPTP bağlantısı başarısız, yeniden denemek için bağlantıyı tıklatın.
+L2TP bağlantısı başarısız, yeniden denemek için bağlantıyı tıklatın.
+Statik bağlantı başarısız, yeniden denemek için bağlantıyı tıklatın.
+Lütfen ISS ayarınıza bakın ve ilgili bilgileri girin.
+Statik IP bağlantısı başarısız.
+Otomatik IP bağlantısı başarısız. Burada el ile yapılandırabilirsiniz.
+ISS Bilgileri Ayarı
+Kaydedilmiş yapılandırma ayarlarını yüklemek için <a><label for="upload_setting_profile" style="text-decoration:underline;cursor:pointer;font-weight:bold;color:#FC0;" onclick="">Ayarı geri yükle</label></a> öğesine tıklayın.
+Yönlendiriciyi sıfırlamadan önce yapılandırma ayarlarını yedeklediyseniz, yapılandırmayı geri yüklemek için <a><label for="upload_setting_profile" style="text-decoration:underline;cursor:pointer;font-weight:bold;color:#FC0;" onclick="">Ayarı geri yükle</label></a> öğesine tıklayın.
+ISS bağlantı türünüzü biliyorsanız, kablosuz ağınızı elle ayarlamak için <a><label style="text-decoration:underline;cursor:pointer;font-weight:bold;color:#FC0;" onclick="submitForm(0)">Manüel Ayar</label></a> öğesine tıklayın.
+Gelişmiş yönlendirici ayarlarını elle yapmak için <a><label style="text-decoration:underline;cursor:pointer;font-weight:bold;color:#FC0;" onclick="submitForm(0)">Manüel Ayar</label></a> öğesine tıklayın veya R6900 aygıtını
+Bir kablosuz ağ iletişimi uzmanısınız ve Internet kurulum sihirbazını atlamak mı istiyorsunuz?
+Lütfen ISP'nizin sağladığı Internet bağlantısı türünü seçin.
+Internet WAN bağlantısı türü
+Lütfen WAN türünü seçin
+Kablosuz Ayarı
+Radyo
+Uzak
+Yönlendirici Oturum Açma adı
+Not: Yaklaşık 60 saniye sürer.
+Güvenlik
+Seçin
+ISP Profilini Seçin
+Lütfen öğesini seçin
+ASUS yönlendirici hesabınızla oturum açın
+用华硕路由器帐号登录
+用网件路由器账号登录
+用思科路由器账号登录
+Standart Ayar
+Etkin
+Etkin değil
+Beklemede
+Durum
+Erişim Noktası durumu
+ASUS R6900
+Etkin Bağlantılar
+Otomatik Oturum Kapat
+Saat Dilimi değiştirin
+Sistem Günlüğü
+Bu, etkin bağlantıların geçmiş günlüğüdür.
+Yalnızca belirtilen IP adresine izin ver
+Belirtilen IP adresi
+Oturumu Kapat
+Trafik İzleyicisi
+Aktarım Modu
+Üç Bant Akıllı Bağlan
+aygıtları, konum, sinyal gücü ve kablosuz iletişim kuralı temelinde dinamik olarak ve sorunsuz biçimde farklı bantlara geçirerek, ağınızdaki her bir aygıt için tutarlı verimlilik sağlar.
+Medya Sunucusu
+Kullanıcı hesapları be 'root', 'guest', 'anonymous' olamaz! Lütfen geçerli bir hesap girin.
+VPN Ayrıntıları
+Kullanıcı adı ve şifreyi girin.
+Yönlendiricinin otomatik olarak yeni bir IP adresi alması için (Sonraki) düğmesine tıklayın. Yeni IP adresi:
+Yeni IP adresini kullanmak için, lütfen Bağlantı Noktası Yönlendirme ya da DMZ gibi her bir hizmeti yapılandırdığınızdan emin olun.
+Başarısız bağlantının nedeni
+Görüntülemek istediğiniz web sayfasına erişemediniz.
+Ağ kablosu bağlı değil.
+PPPoE veya VPN kimlik doğrulamanız başarısız.
+Uzak sunucudan yanıt yok.
+ISS'nızın DHCP sunucusu düzgün çalışmıyor.
+WAN Bağlantısı Türünüzün PPPoE olduğunu algıladık. Ancak, PPPoE Ayarınız tamamlanmamış.
+Internet bağlantısı başarısız. Yönlendiricinizin IP adresi ağ geçidi IP adresiyle aynı.
+Muhtemelen WAN bağlantısını el ile durdurdunuz.
+Yönlendiricinin dinamik ya da statik IP adresi ayarları doğru değil.
+IP çakışması algılandı.
+Kurulum sayfasına gitmek için buraya tıklayın
+Ayarınızı kendiniz kontrol edip yapılandırabilirsiniz.
+Sorun devam ederse, bağlantı ayarlarını elle değiştirin.
+WAN\'ı yenileyin.
+Size öneriyoruz
+Yönetici hesabı ve parolası gerekli.
+Lütfen kablonun, yönlendirici WAN ve modemin bağlantı noktasına düzgün biçimde bağlı olduğundan emin olun.
+\"Hesap Ayarı\" sayfasına gidin.
+ ve hesap parolanızı yeniden kontrol edin.
+Bağlantı türünü otomatik olarak algılamak için Hızlı Internet Kurulumu sayfasına gidin.
+ R6900 WAN türünüzü otomatik olarak algılayacaktır.
+Lütfen DHCP hatasının nedenini öğrenmek için ISS'nızla (Internet Servis Sağlayıcısı) irtibata geçin.
+Lütfen yönlendiricinin IP adresini yeniden yapılandırıp, ağ geçidi IP adresinden farklı olduğundan emin olun.
+Lütfen WAN bağlantısını el ile kurun.
+Lütfen IP ve DNS ayarlarının doğru olup olmadığını kontrol edin.
+Lütfen R6900 yönlendiricinizin yerel IP adresini yeniden yapılandırın ve WAN ağ geçidinizdenfarklı olduğundan emin olun. Ör: 192.168.X.X，X 2 -254 arasında bir sayıdır.
+Yönlendiriciyi modeme bağladıktan sonra, Hızlı Kurulum Sihirbazını çalıştırmak için "GİT" öğesine tıklayın.
+WAN bağlantısını çevrimdışı ayarlamak veya çalışma modunu Erişim Noktasına değiştirmek için Manüel Ayar öğesine tıklayın.
+Sonraki adımda, güvenlik için oturum açma adını ve şifreyi ayarlayın.
+ASUS Wireless Router R6900
+R6900
+Yapılandırılmış
+Kablosuz adı
+Kablosuz Yönlendirici
+Yok
+Kanal:
+Anahtar Dizini:
+WEP Anahtarı
+5 ASCII rakam veya 10 onaltılık rakam
+13 ASCII rakam veya 26 onaltılık rakam
+WPA Şifrelemesi
+Listedeki AP\'lere bağlanılsın mı?
+R6900, istemcilerin uygun bağlantıya sahip olmalarını sağlamak için WEP veya TKIP şifrelemesini AES in [n Sadece] moduna değiştirecektir.
+Bağlantı sağlandı.
+UTF-8
+İntranet Erişimi
+Misafirin intranet’e erişmesine izin ver.
+Artık USB depolama aygıtınıza ve R6900'e bağlı Ağ yeri (Samba) etkin aygıtlara erişim sağlayabilirsiniz.
+Erişim zamanı
+Misafirin Internet’e erişmesine izin verme zamanı.
+Yalnızca 6 hesaba izin verilir.
+Account Type
+Çift WAN Ayarı kısmına gidip USB modemi etkinleştirin.
+Uyarlanır
+Bu kategori Diablo, WOW, Steam oyunları, XBOX ve benzerlerini içerir. Daha iyi oyun deneyimi için bu kategoriyi yukarıya taşıyın.
+Bu kategori Youtube, Vimeo, iTunes, Hulu, Netflix, Spotify ve benzerlerini içerir. Daha iyi bir ağ deneyimi için bu kategoriyi yukarıya taşıyın.
+Bu kategori VoIP, Anlık Mesajlaşma, Posta hizmeti ve benzerlerini içerir. Önceliklerini kendi tercihinize göre ayarlayabilirsiniz.
+Bu kategori Flickr, Twitter, Facebook, Tumblr, Google Araç Çubuğu ve benzeri genel web hizmetleri ile sosyal ağ uygulamalarını içerir.
+Bu kategori uTorrent, BitTorrent, Dropbox, 4Shared, FTP uygulamaları ve benzeri P2P ve dosya aktarımı ile ilgili yazılımları içerir. Dosya aktarımı kategorisinin düşük öncelikte bırakılması önerilir.
+Oyun, Medya Akışı, Çevrimiçi Sohbet ve İletişim, Web'de Gezinme ve Dosya Aktarımı kategorilerinde bulunmayan tüm aktiviteler.
+Dosya Aktarımı
+Oyun
+Web Geçmişi
+Web Geçmişi, istemcinin Web'de Gezinme geçmişini gösterir.
+VoIP ve Anlık Mesajlaşma
+Uyarlanabilir QoS özelliğini etkinleştirmek birkaç dakika sürebilir.
+Diğerleri
+Uyarlanabilir QoS
+QoS yapılandırma
+QoS Uyarlanabilir tipte, bant genişliği kısıtlı olduğunda, daha yüksek önceliğe sahip uygulamalar diğerlerine göre daha fazla bant genişliği elde ederler, Önceliği yükseltmek için uygulama kategorisini sürükleyip üst seviyeye taşıyın.
+Video ve Ses Akışı
+Web'de Gezinme
+Yeni hesap hiçbir okuma / yazma erişim hakları vardır.
+Yeni hesap ekle
+Yeni klasörün varsayılan erişim hakları okuma/yazmadır.
+Yeni klasör ekle
+ปฏิบัติตามขั้นตอนที่แสดงด้านล่าง:
+Lokal makinenize doğru sürümü indirin.
+Yeni Sürücü Dosyasında yolu ve indirdiğiniz dosyanın adını belirleyin.
+Upload (Yükle)'ye tıklayarak dosyayı R6900'a yükleyin. Yükleme süreci yaklaşık bir dakika sürer.
+Doğru sürücü dosyasını aldıktan sonra, R6900 yeni DSL sürücüsünü otomatik olarak kurmaya başlayacaktır. Yükseltme süreci tamamlandıktan sonra sistem yeniden başlar.
+Yeni DSL Sürücü Dosyası
+Eğer DSL sürücüsü yükseltmesi yapılamazsa, sürücüyü bu web sayfasından kurabilirsiniz.
+Not:
+DSL Sürücü Sürümü
+DSL Link Durumu
+Kablosuz ile ilgili aşağıdaki bilgileri belirleyin.
+Hesap Durumu
+Kilidi aç
+En iyi görüntüleme ve dinleme deneyimi için bir geniş bant internet bağlantısına ihtiyacınız vardır. Aşağıdaki önerilere bakınız :
+Müzik için 768 Kbps veya daha hızlı yükleme bant genişliği önerilir.
+SD video için 5 Mbps veya daha hızlısı önerilir.
+720p video için 15 Mbps veya daha hızlısı önerilir.
+1080p HD video akışı için 30 Mbps veya daha hızlısı önerilir.
+İnternet yükleme hızları ISP’nize ve diğer faktörlere bağlı olarak farklılık gösterebilir. İnternet hızınızın ne olduğundan emin değilseniz, you ISP’niz ile temasa geçebilir veya ASUS Yönlendiricisine bağlı bir bilgisayardan çevrimiçi bant genişliği testini kullanabilirsiniz.
+Bulut Listesi
+Bulut diskine <a id="cloud_url" style="font-weight: bolder;text-decoration: underline;" href="https://router.asus.com" target="_blank">https://router.asus.com</a> adresinden giriş yapın.
+Bulut diskine bu URL\'den giriş yapabilirsiniz :
+ddns adını değiştirmek için, lütfen <a style="font-weight: bolder;text-decoration: underline;" href="/Advanced_ASUSDDNS_Content.asp?af=DDNSName" target="_blank">buraya</a> tıklayın.
+Bulut diskine <a style="font-weight: bolder;text-decoration: underline;" href="https://router.asus.com" target="_blank">https://router.asus.com</a> adresinden giriş yapın.
+Çevrimiçi bulut diskine giriş yapmak için bir ASUS DDNS\'ye <a style="font-weight: bolder;text-decoration: underline;" href="/Advanced_ASUSDDNS_Content.asp" target="_blank">buradan</a> kaydolun.
+USB ile takılı depolama aygıtlarına, Internet bağlantılı bir bilgisayar ya da aygıt aracılığıyla erişilmesini, akış yapılmasını veya paylaşımda bulunulmasını etkinleştirir.
+Bir bulut diski oluşturmak için, bu yönlendiriciye bir USB depolama aygıtı kurmanız, ardından Bulut Diski AÇIK (<b>ON</b>) konuma getirmeniz gerekir.
+Varsayılan bulut diskine giriş yapmak içn yönlendirici oturum açma hesabını kullanın.
+AiCloud 2.0'a gir
+Ayrıntılı bilgi için, <a id="faq1" href="" target="_blank" style="font-weight: bolder;text-decoration:underline;">Port Yönlendirme FAQ</a> ve <a id="faq2" href="" target="_blank" style="font-weight: bolder;text-decoration:underline;">DMZ FAQ</a> kısmına da bakabilirsiniz.
+Geçersiz davet kodu!
+Süre
+En fazla başarısız oturum açma deneme sayısı
+Bu sayfa AiCloud aktivitelerinin bir kaydını gösterir.
+ASUS AiCloud 2.0, internet olduğunda sizi verilerinize bağlı tutar. Ev ağınızla çevrimiçi depolama arasında bağlantı kurar ve iOS ya da Android mobil aygıtınızdaki AiCloud mobil uygulaması veya bir web tarayıcıdaki kişiselleştirilmiş bir web bağlantısı aracılığıyla verilerinize erişmenizi sağlar. Artık tüm verileriniz gittiğiniz her yerde yanınızda.
+IP Adresi geçerli değil. WAN IP adresini <a href=\"Advanced_WAN_Content.asp\" style=\"text-decoration:underline\">burada</a> ayarlayabilir veya <a href=\"https://
+\" style=\"text-decoration:underline\">AiCloud</a>'a gidebilirsiniz.
+Hiç kayıt yok.
+Parola Koruma Özelliğini Etkinleştirin.
+Parola Koruma özelliği:
+Parola Koruma özelliği AiCloud’a izinsiz erişimi önler.
+Sınırlı sayıda hesap/parola oturum açma denemesi ayarlayabilirsiniz.
+Örneğin, 3 kez / 2 dk ayarı kullanıcının hesap ve parola bilgisini 2 dakika içinde üç kez girebileceğiniz göstermektedir. Belirli sayıdaki deneme aşıldığında, AiCloud hesabı kilitlenecek ve kilidi açmak için yönetici erişimi gerekecektir.
+AiCloud içeriği akış portu
+AiCloud 2.0
+AiCloud Web erişim portu
+Hesap
+Adsız oturuma izin ver
+Uyarı: AiDisk ayarlandı. AiDisk'i yeniden ayarlarsanız, önceki hesap/parola ve erişim izni sıfırlanacaktır. Daha fazla hesap eklemek için, hesap profilini düzenlemek üzere <a href="../Advanced_AiDisk_ftp.asp" target="_blank" style="text-decoration: underline; font-family:Lucida Console;">burada</a> seçin.
+[ Adsız oturuma izin ver ] ayarının etkinleştirilmesiyle, herhangi bir kullanıcı kimlik doğrulama olmadan FTP hizmetinize erişebilir!
+FTP hizmetinde oturum açmak için kullanıcı adı ve şifre gereklidir.
+[ Adsız oturuma izin ver ] ayarının etkinleştirilmesiyle, herhangi bir kullanıcı kimlik doğrulama olmadan FTP hizmetinize erişebilir! Etkinleştirmek istediğinizden emin misiniz?
+Misafir oturumuna izin ver
+Gelişmiş dosya paylaşımı yapılandırması için. <a href="../Advanced_AiDisk_ftp.asp" target="_blank" style="text-decoration: underline; font-family:Lucida Console;">burada</a>
+NTFS Seyrek Dosyalar Desteği
+Okuma
+[ Misafir oturumuna izin ver ] ayarının etkinleştirilmesiyle, yerel ağdaki herhangi bir kullanıcı, kimlik doğrulama olmadan ağ konumunuza (Samba) erişebilir!
+Ağ alanında (Samba) oturum açmak için kullanıcı adı ve şifre gereklidir
+[ Misafir oturumuna izin ver ] ayarının etkinleştirilmesiyle, yerel ağdaki herhangi bir kullanıcı, kimlik doğrulama olmadan ağ konumunuza (Samba) erişebilir! Etkinleştirmek istediğinizden emin misiniz?
+Herhangi bir kullanıcı, sınırsız erişim haklarını kullanarak, kimlik doğrulama olmadan FTP hizmetinize erişebilir!
+R6900, size üç adet paylaşılan kaynaklara erişim hakkı türü sağlar:<p> a) FTP sunucusundaki USB diskinize herkesin erişebildiği sınırsız erişim hakkı.</p> <p>b) erişim hakkı atadıklarınıza USB diskinize erişimin sınırlı olduğu sınırlı erişim hakkı. Bu tür için, R6900 \"admin/Family\" hesapları oluşturur. </p> <p>c) R6900 yönlendiricisinin tam erişim hakkı için oluşturduğu \"admin\" hesabındaki yönetici hakları.</p><p>Not: İzin ayarları, orijinal hesaplar kümenizi silecektir.</p>
+Not: Hesap yönetimi işlevi NTFS bölümünde çalışamaz.
+Erişim haklarını oluşturma
+ASUS DDNS, dinamik IP adresine sahip bir etki alanı adı oluşturur. <p>Başka DDNS hizmeti ayarları yapılandırmanız gerekiyorsa, lütfen <a href='/Advanced_ASUSDDNS_Content.asp' target='_top'>Gelişmiş DDNS'e bakın</a></p>
+DDNS hizmetlerini ayarlama
+<a href='../Advanced_AiDisk_samba.asp' target='_top'>Ağ Komşuları Paylaşımı</a>: Samba sunucusunu profesyonel olarak çalıştırabilirsiniz<br/><a href='../Advanced_AiDisk_ftp.asp' target='_top'> FTP Paylaşımı</a>: FTP sunucusunu profesyonel olarak çalıştırabilirsiniz.
+Paylaşılan diski ayarlama
+Seçili hesap yok.
+Paylaşılan klasörü oluşturmak için seçili disk yok.
+Seçili klasör yok.
+Paylaşılan klasörü oluşturmak için seçili bölüm yok.
+Aidisk Sihirbazı istisna olarak çalıştı. Lütfen daha sonra tekrar deneyin.
+AiDisk Sihirbazında ayarları yapılandırdıktan sonra, diske erişmek için aşağıdaki bilgilere bakın:
+Yazma
+AiDisk şunları yapmanızı sağlar:
+USB diskteki dosyaları Internet üzerinden paylaşma.
+FTP sunucusu için kendi etki alanı adınızı oluşturma.
+AiDisk sihirbazına hoşgeldiniz
+AiDisk Sihirbazı
+Uyarı Tercihleri
+Lütfen istemci adını seçin
+Trend Micro ile AiProtection, ağ trafiğini gerçek zamanlı izleyerek kötü amaçlı yazılımların, virüslerin ve diğer izinsiz giriş teşebbüslerinin bilgisayarınıza veya bağlı cihazlarınıza erişmeden önce algılanmalarını sağlar. Ebeveyn Kontrolleri, bağlı bir cihazın Internet'e erişebileceği zamanları planlayabilmenize olanak tanır. Ayrıca istenmeyen web sitelerini ve uygulamaları da kısıtlayabilirsiniz.
+Etkilenen cihazların kişisel bilgileri ve/veya etkilenme durumunu harici kişilere iletmelerini engeller.
+Etkilenen Cihazın Önlenmesi ve Engellenmesi
+Web ve Uygulama Filtreleri
+Yetişkin
+Yetişkin içeriklerin engellenmesi, çocuğun seks, şiddet ve yasa dışı içerikleri ziyaret etmesini önler.
+Pornografi
+Yasa Dışı ve Şiddet
+Kumar
+Internet Telefonu
+Anlık Mesajlaşma
+Sanal Topluluk
+Blog
+Cep Telefonu
+İçerik Kategorisi
+Web ve Uygulama Filtreleri, istenmeyen web siteleri ile uygulamalara erişimi engelleyebilmenizi sağlar. Web ve Uygulama Filtrelerini kullanmak için:
+[İstemci Adı] sütununda, ağ kullanımını kontrol etmek istediğiniz istemcinin adını seçin. İstemci adı, ağ haritası istemci listesinde değiştirilebilir.
+İstenmeyen içerik kategorilerini işaretleyin
+Kural eklemek için artı (+) simgesine ve ardından uygula düğmesine tıklayın.
+Anlık Mesajlaşma ve İletişim
+Anlık mesajlaşma ve iletişim içeriğini engelleme, çocuğu, sosyal ağ kullanımı bağımlılığından koruyabilir.
+Kuralı geçici olarak devre dışı bırakmak istiyorsanız, kuralın önündeki kutuda bulunan onay işaretini kaldırın.
+P2P ve Dosya Aktarımı
+P2P ve Dosya Aktarımı içeriğinin engellenmesi, ağ iletiminizin daha kaliteli olmasını sağlar.
+Dosya aktarımı
+P2P
+Akış ve Eğlence
+Oyunlar
+Medya akışı
+Internet Radyosu ve TV
+Akış ve Eğlence içeriklerinin engellenmesi, çocuğun Internet eğlencesi ile uzun süre geçirmesini önler.
+Ağ Koruması
+İstemci cihazlarınız ile kötü amaçlı bir hedef arasında şüpheli bir bağlantı olduğu algılanarak engellendiğinde, Ağ Koruma size bir uyarı e-postası gönderecektir. Kimlik bilgilerinizi ve e-postanızı aşağıdaki bölüme girin.
+Trend Micro ile Ağ Koruması, ağınızı açıklardan yararlanmak isteyenlere karşı koruyarak güvende tutar.
+Yönlendirici Güvenlik Değerlendirmesi
+Yönlendiricinizi güvenlik açıklarına karşı tarayarak korumayı arttırmak için önerilerde bulunur.
+Varsayılan yönlendirici oturum açma kullanıcı adı ve parolası değişti
+Kablosuz parola gücü kontrolü
+Kablosuz şifreleme etkin
+UPnP hizmeti devre dışı
+WAN'dan web erişimi devre dışı
+WAN'dan PING devre dışı
+DMZ devre dışı
+Port tetikleme devre dışı
+Port iletme devre dışı
+FTP paylaşımında anonim oturum açma devre dışı
+Ağ Bağlantısı Paylaşımı için konuk oturumu açma devre dışı
+Kötü Amaçlı Web Sitesi Engelleme etkin
+İzinsiz Giriş Önleme etkin
+Yönlendirici güvenliğini arttırmak için lütfen kullanıcı adınızı ve parolanızı değiştirin.
+Güvenliği arttırmak için lütfen ağ parolanızı daha karmaşık hale getirin.
+Kablosuz ağınız güvende değil çünkü kablosuz şifresi yok. Parola ayarlamak için hiper bağlantıya tıklayın.
+Herhangi bir programın yönlendiricinizin ayarlarına ulaşmak amacıyla UPnP portunu kullanabilmesini engellemek için UPnP hizmetini devre dışı bırakın.
+Yönlendiricinizin dışarıdan kontrol edilebilmesini engellemek için WAN'dan web erişimini devre dışı bırakın.
+Kod çözücülerin harici ağdan yönlendiricinize bağlanabilmelerini engellemek için WAN'dan PING özelliğini devre dışı bırakın.
+Tüm gelen paketlerin bilgisayardan tekrar yönlendirilerek Internet'te teşhir edilmelerinden kaçınmak için DMZ'yi devre dışı bırakın.
+Kod çözücülerin belirli bir port aracılığıyla yönlendiricinize erişmelerini engellemek için Port tetiklemeyi devre dışı bırakın.
+Kod çözücülerin belirli bir port aracılığıyla yönlendiricinize erişmelerini engellemek için Port iletmeyi devre dışı bırakın.
+Yetkili olmayan kullanıcıların verilerinize erişebilmelerini önlemek için FTP paylaşımında anonim oturum açmayı devre dışı bırakın.
+Yetkili olmayan kullanıcıların verilerinize erişebilmelerini önlemek için Ağ Bağlantısı Paylaşımı için konuk oturumu açmayı devre dışı bırakın.
+Kötü amaçlı oldukları bilinen web sitelerine erişimi kısıtlamak için Kötü Amaçlı site engellemeyi etkinleştirin.
+Kod çözücülerin yönlendiricinizdeki veya aygıt yazılımınızdaki açıklardan yararlanarak içeri sızmalarını önlemek için İzinsiz Giriş Önlemeyi etkinleştirin.
+Verilerin çalınmasını önlemek için tüm şüpheli bağlantıları ve işlemleri algılayarak engellemek için Etkilenen Cihazın Önlenmesi ve Engellenmesini etkinleştirin.
+Korumanızın daima güncel kalmasını sağlamak için Trend Micro veri tabanındaki kötü amaçlı web sitelerine erişimi kısıtlar.
+Zararlı Sitelerin Engellenmesi
+AiProtection
+İzinsiz Girişlerin Önlenmesi
+Bu işlem Güvenlik Açığı Koruması, Kötü Amaçlı Site Engelleme ve Etkilenen Cihazın Önlenmesi ve Engellenmesi özelliklerini etkinleştirecektir. Güvenlik ayarları kablosuz, kablolu ve bağlı depolama cihazı ağ performanslarını etkileyecektir.
+Yönlendirici yapılandırması içindeki genel açıkları ortadan kaldırır.
+İzin/erişim hakları ayarlanamadı.
+Disk istenemedi.
+Takas dosyası oluşturulamadı.
+Disk biçimlendirilemedi.
+Hesap oluşturulamadı.
+Hesap silinemedi.
+Hesap değiştirilemedi.
+Paylaşılan klasör oluşturulamadı.
+Paylaşılan klasör silinemedi.
+Paylaşılan klasör değiştirilemedi.
+AiDisk uygulaması denetlenemedi.
+Disk çıkarılamadı.
+PROTOKOL ile ilgili girdi yok!
+KLASÖR ile ilgili girdi yanlış!
+HAVUZ veya KLASÖR ile ilgili girdi yanlış!
+İZİN ile ilgili girdi yok!
+İZİN ile ilgili girdi yanlış!
+PAROLA ile ilgili girdi yok! Parola girişi yok.
+PAROLA ile ilgili girdi yanlış!
+YENİ_HESAP veya YENİ_PAROLA ile ilgili girdi yok!
+YENİ_KLASÖR ile ilgili girdi yok!
+BAYRAK ile ilgili girdi yok!
+BAYRAK ile ilgili girdi yanlış!
+PROTOKOL ile ilgili girdi yanlış!
+DİSK ile ilgili girdi yok!
+Sistemde seçilmiş disk yok!
+Yeni bölüm adıyla ilgili girdi yok!
+Yeni bölüm adıyla ilgili yanlış biçim var!
+Yeni bölüm boyutuyla ilgili girdi yok!
+Yeni bölüm dosya sistemiyle ilgili girdi yok!
+MOD ile ilgili girdi yok!
+MOD ile ilgili girdi yanlış!
+HESAP ile ilgili girdi yok!
+HESAP ile ilgili girdi yanlış!
+HAVUZ ile ilgili girdi yok!
+HAVUZ ile ilgili girdi yanlış!
+KLASÖR ile ilgili girdi yok!
+Sistem hatası: Bellek ayrılamıyor!
+Sistem hatası: Disk verileri okunamıyor!
+Sistem hatası: Disk meşgul!
+Sistem Hatası.
+İlk ve son karakterde boşluk olmamalıdır.
+R6900, IE6 kullandığınızı algıladı. En iyi gözatma deneyimi için lütfen Google Chrome, IE7 veya daha üstünü deneyin.
+Tüm
+Android telefon
+IP bilgileri alınamadı.
+AP IP adresi
+AP Araştırma
+APN Yapılandırması
+APP listesini yüklüyor...
+WPA anahtarı doğrulanamadı. Lütfen WPA anahtarını tekrar girin.
+ASUS EZ yazıcı paylaşımı (Sadece Windows İşletim Sistemi)
+Mevcut modem giriş adınız ve şifreniz halen standart halde. Güvenlik riski yaşamamak için derhal değiştirmenizi öneririz.
+Cihazınız için yeni güncelleme mevcuttur. Lütfen kararlılık, geliştirilmiş özellik ve güvenlik güncellemeleri için cihazınızı güncelleyiniz.
+Kablosuz ağınız şifrelenmemiş durumda ve ağınız risk altındadır. Derhal yeni şifre oluşturmanızı öneririz.
+Geçerli AiDisk FTP izniniz, yetkisiz kullanıcıların oturum açmasına izin verir. Güvenlik risklerini önlemek için [ Adsız oturuma izin ver ] ayarını devre dışı bırakmanızı öneririz.
+FTP tehlike altında olduğundan [ Adsız oturuma izin ver ] ayarı otomatik olarak devre dışı bırakıldı. FTP’de oturumu açmak için yönlendirici oturum açma adını ve şifresini kullanabilirsiniz. İzin ayarını değiştirmek isterseniz
+Geçerli Ağ konumu (Samba) izniniz, yetkisiz kullanıcıların oturum açmasına izin verir. Güvenlik risklerini önlemek için [ Misafir oturumuna izin ver ] ayarını devre dışı bırakmanızı öneririz.
+Ağ Konumu (Samba) tehlike altında olduğundan [ Misafir oturumuna izin ver ] ayarı otomatik olarak devre dışı bırakıldı. Oturum açmak için yönlendirici oturum açma adını ve şifresini kullanabilirsiniz. İzin ayarını değiştirmek isterseniz
+Şimdi Değiştir
+Şimdi güncelle
+Şimdi Oluştur
+Bu mesajı bir daha gösterme
+Otomatik yükleniyor...
+Automatic
+Kullanılabilir alan
+ortalama
+Uygulama analizinin etkinleştirilmesi, cihaz simgesine tıklayıp her bir cihazın tüm uygulama trafiğini görerek istemciyi ayrıntılı takip edebilmenizi sağlar.
+Bant Genişliği Monitörü
+Uygulama analizi
+Trafik algılanmadı.
+WAN/LAN Bant Genişliği Monitörü
+Download Master etkinleştirilsin mi?
+Download Share etkinleştirilsin mi?
+iTunes Server etkinleştirilsin mi?
+UPnP etkinleştirilsin mi
+Kara Liste
+Engelle
+İstemciyi engellemek için burayı tıklatın
+Engellenen istemci listesi
+Bant genişliği bilgilerini İSS\'nizden alın veya bant genişliğini kontrol etmek için <a href="http://speedtest.net" target="_blank" style="text-decoration:underline;color:#000;">http://speedtest.net</a> adresine gidin.
+Bant Genişliği Durumu
+Bant Genişliği Yönetimi - Kullanıcı Belirleme Hizmeti
+Kullanıcı Belirleme Kuralı Listesi
+Hizmet Adı
+Kaynak IP ya da MAC
+Hedef Bağlantı Noktası
+Öncelik
+ISS tarafından sağlanan Ana Bilgisayar Adı:
+WAN bağlantı türünüz PPTP veya L2TP ise, lütfen VPN sunucusunun sunucu adı veta sunucu IP'sini girin.
+Bu alan size R6900 ana bilgisayar adını verir. Genellikle ISS'nız tarafından istenir.
+0, bant genişliği sınırı olmadığını anlamına gelir.
+Devre Dışı Bırak
+Devredışı
+Etkin
+Dış Aktar
+GİT
+Kaldır
+WAN ayarına
+Güvenlik kodu
+Lütfen güvenlik kodunu girin.
+Ethernet/Ağkablosunun düzgün biçimde takılıolduğundan emin olun
+Yönlendirici aygıt yazılımı güncellemesi için ASUS sunucusunu kontrol ediyor.
+Saat Formatı
+Cloud Disk
+Şifre uzunluğu en az 8 karakter olmalıdır.
+Tarayıcı
+Yeni bir davetiniz var.
+Uzak Yol
+Kural
+USB Diske İndir
+Eşitle
+Buluta Karşıya Yükle
+Sunucu paylaşım klasörü
+Hesap olmadan paylaşımda hesaplar gizli tutulur. Devre dışı bırakmak istediğinizden emin misiniz?
+Ağ Komşularında paylaşılan diski devre dışı bırakmak istediğinizden emin misiniz?
+FTP sunucusu ile paylaşılan diski devre dışı bırakmak istediğinizden emin misiniz?
+Ağ Komşu Paylaşımının engellenmesi Download Master'ı engelleyecektir.
+Paylaşım hesapla birlikte etkinleştirildiğinde, farklı erişim haklarına sahip birden fazla bilgisayarın dosya kaynaklarına erişmesi sağlanır. Etkinleştirmek istediğinizden emin misiniz?
+Diski Ağ Komşularında paylaşmak istediğinizden emin misiniz?
+Diski FTP sunucusu ile paylaşmak istediğinizden emin misiniz?
+Parolayı yeniden yaz
+Yönlendirici, bellek yazılımıgüncellemeleri için ASUS sunucusuna bağlanamıyor. İnternete yeniden bağlandıktan sonra, bu sayfaya geri dönün ve Check (Kontrol) üzerine tıklayarak en son aygıt yazılımı güncellemelerini kontrol edin.
+iOS veya Android aygıtlarınızı Wi-Fi ile R6900'e bağlayın. AiCloud 2.0 uygulaması sizi otomatik olarak kurulum sürecinden geçirecektir.
+İstemci Listesi
+Bağlanıyor…
+Bağlantı Süresi
+Bağlantılar
+Bağlantı durumu
+Create A Free Account
+Düzey 2 CTF, PPPoE, PPTP veya L2TP altında desteklenmiyor. Düzey 1 CTF olarak değiştirmek için lütfen Onayla düğmesine tıklayın.
+HW Accelerator etkinleştirilsin mi
+Ekle
+Katılıyorum
+Günlüğü denetle
+Temizle
+Kapat
+Sil
+Yeniden Algıla
+Devredışı
+Katılmıyorum
+Bağlantı Kesildi
+Etkin
+Son
+Oluştur
+Yardım
+Yerel Aygıt
+Login
+Desteklenmiyor
+Tamam
+Kaydet
+Otomatik yeniden bağlantı
+Yenile
+Sıfırla
+Geri yükle
+Tara
+önlendiricinizi Güvende Tutun
+Karşıya Yükle
+güncel
+Geçerli frekansı
+Mevcut Ayarlar
+Özel
+tarihi
+Cum
+Pzt
+Cts
+Paz
+Per
+Sa
+Çar
+gün
+Kaydol
+Kullanım Şartları Bildirgesi
+WAN IP ve ana bilgisayar adı doğrulama
+Check every
+Hizmeti kullanacağım
+Bu hesap, Ağ komşuları ve FTP'deki erişim haklarıyla birlikte silinecektir<p> Devam etmek istediğinizden emin misiniz?</p>
+Bu hesabı sil
+İlk Zaman Gecikmesi
+Klasörü silmeden önce, boş olduğundan emin olun.<br><br>Klasörü silmek istediğinize emin misiniz?
+Bu klasörü sil
+Aranıyor, lütfen bekleyin
+iTunes Hizmeti:
+Yazıcı Hizmeti:
+Bilgisayar
+Yönlendirici
+Erişim Noktası
+NAS
+IP Kamera
+Başka Aygıt
+Yineleyici modunda, DHCP tarafından atanmış IP adresi değişir. Kablosuz yönlendiricinin yeni IP adresini almak için <a href=\"http://dlcdnet.asus.com/pub/ASUS/LiveUpdate/Release/Wireless/Discovery.zip\" style=\"font-family:Lucida Console;text-decoration:underline;color:#FC0;\">Device Discovery Utility</a> kurup kullanın.
+Access Point (Erişim Noktası) (AP) modunda, DHCP atanan IP adresi değişir. Kablosuz yönlendiricinin IP adresini algılamak için <a href=\"http://dlcdnet.asus.com/pub/ASUS/LiveUpdate/Release/Wireless/Discovery.zip\" target=\"_blank\" style=\"font-family:Lucida Console;text-decoration:underline;color:#FC0;\">Device Discovery Utility</a> (Aygıt Bulama Programı) yükleyin ve kullanın.
+Medya köprüsü modunda, DHCP tarafından atanmış IP adresi değişir. Kablosuz yönlendiricinin yeni IP adresini almak için <a href=\"http://dlcdnet.asus.com/pub/ASUS/LiveUpdate/Release/Wireless/Discovery.zip\" style=\"font-family:Lucida Console;text-decoration:underline;color:#FC0;\">Device Discovery Utility</a> kurup kullanın.
+Kablosuz MAC filtresi, Kablosuz Yerel Ağınızda belirtilen MAC adresine sahip aygıtlardan gelen paketleri denetlemenizi sağlar.
+DHCP sorgu sıklığı
+Agresif Mod
+Normal Mod
+Bu sayfa MAC, IP ve kira süresi ayarları gibi cihazın ilgili ayarlarını gösterir.
+Hesap olmadan paylaş
+Paylaşımı Devre Dışı Bırak
+FTP'yi Devre Dışı Bırak
+İnternet bağlantısını kesin
+Takılı değil
+Sağlık Tarayıcı
+Sabit sürücünüzde hatalar algılandı. Hasar gören herhangi bir dosayayı kaldırın ya da bir PC kullanarak system sorunlarını düzeltin.
+Günlük
+Tarama Sonuçları
+Disk taraması planlandı :
+Disk taramasını bitiriyor…
+Frekans
+Bilgi
+Sabit sürücünüzün sağlıklı olup olmadığını kontrol etmek için Yeniden tara üzerine tıklayın.
+Disk taramasını başlatıyor…
+Aylık
+Disk taraması süreci tamamlandı. Lütfen aşağıdaki ayrıntılı sonuçları kontrol edin.
+Diski yeniden monte ediyor…
+Diski tarıyor…
+Tarama devam ederken tüm disk aktivitesi duracaktır. Disk taramasını şimdi çalıştırmak istiyor musunuz?
+Tarama devam ederken tüm disk aktivitesi duracaktır.
+Disk tarama çalışıyor. Lütfen bekleyin.
+Disk Taraması Planla
+Disk taraması neredeyse tamamlandı…
+Saat
+Diski kaldırıyor…
+Hafta
+Haftada bir
+USB diski taktım,
+sistem durumunu
+ yenile.
+Yönlendirme çizelgesini görüntüle
+Paylaşılan İçerik Türü
+Medya Sunucusu Dizini
+UPnP Medya Sunucusunu etkinleştirin
+Medya Sunucusu Adı
+Manüel Medya Sunucusu Yolu
+Medya Sunucusu Yol Ayarı
+Tüm Diskler Paylaşıldı
+Medya Sunucusu Durumu
+Download Master etkin değil.
+Windows® için ASUS Download Master uygulamasını hemen indirin.
+Bilgisayarsız indirme yöneticisi
+Lütfen erişmek istediğiniz USB depolama aygıtını seçin
+Download Master yüklemesi başarılı!
+Download Master şimdi başlat
+R6900 ilk bölüm için bu formatı desteklemiyor. Bu FAT32, MS-DOS ve ext2/3 destekler.
+İlk bölüm disk kotası < 1GB olduğu için Download Master'ı kullanamazsınız.
+Lütfen istemci aygıtında DNS sunucusunu kurun.
+ASUS AiCloud 2.0 uygulamasını telefona veya pad'e indireceğiniz yer :
+İndirme Bant Genişliği
+Download Master, R6900 içinde yüklü değil.
+Download Master, R6900 içinde desteklenmiyor.
+Öncelik
+Alınan Veri/Sn.
+Alınan Veri
+Sayfa yenileme
+Bu öğe Bitswap’ı etkinleştirir. Bitswap, kutular / kanallar için ayrılan bitleri ayarlar. Meşgul ya da kalabalık kutulara / kanallara daha az bitler atanırken, kullanılabilir kanallar ele alınacak daha fazla bitlere ayrılır.
+Arayüz Adı
+Mod
+Tutarlı veri aktarma oranları için SRA’yı (Sorunsuz Hız Adaptasyonu) etkinleştirin. Ancak, bağlantınızın oldukça dengede ise ve yükleme ve indirme hızında düşüş algılıyorsanız, SRA’yı devre dışı bırakabilirsiniz.
+Bu öğe Sinyalden Gürültüye Oranı Ofsetini yapılandırır. Eğer DSL bağlantınız dengede değilse ya da bir bağlantı kuramıyorsa, değeri negatif dB olarak ayarlayın, örneğin -1 dB. Eğer sorun devam ederse, değeri -2 dB ~ -10 dB (Maks. denge) olarak ayarlayın. Normal DSL bağlantısı için, değerler 1 dB ~ 10 dB (Maks. performans).
+Bir PVC ayarını düzenlemek için Düzenle simgesine tıklayın. Bir PVC ayarı eklemek veya silmek için ekle (+) veya sil (-) simgesine tıklayın.
+Telefon kablosu veya Ethernet kablosu takılı değil.
+PPPoE, PPPoA veya VPN doğrulaması başarısız.
+Herhangi bir değişiklik yapmadan önce DSL ayarlarınızı almak için lütfen ISP'niz ile temasa geçiniz.
+DSL modülasyonu
+Ek Modu
+DSL Hattı Yapılandırması
+PVC Paylaş
+Sorunsuz Oran Uyarlaması
+Kararlılık Ayarı
+R6900 aygıtı Çift WAN desteği sağlar. Yedek ağ erişimi için ikincil WAN kullanmak amacıyla Üstlenme modunu seçin. Her iki WAN bağlantısı için bant genişliğini en uygun duruma getirmek, verimliliği en üst düzeye çıkarmak, tepki süresini en aza indirmek ve aşırı veri yükünü önlemek amacıyla Yük Dengesi modunu seçin.
+Çift WAN'ı Etkinleştir
+Yeniden çalışmaya izin ver
+Yeniden başlama mekanizmasını tetiklemek için zaman aralığı ölçütü. İkincil WAN’a değiştirdiğinizde, yönlendirici, birincil WAN’ın ne kadar süre bağlı olduğunu kontrol edecektir. Birincil WAN bağlantısı kararsızsa (yeniden başlama algılama süresinden daha uzun), bağlantı birincil WAN’a değişecektir.
+Ülke / Birincil WAN için ISP profil kuralları
+ISP profil kurallarını içeri aktar
+Ülke / İkincil WAN için ISP profil kuralları
+Yük Dengesi, kaynağıen iyi duruma getirerek ve verimi en üst düzeye çıkararak, aynıağhızlarıyla Birincil veİkincil WAN için daha iyi performans sağlar.
+Bağlantı Noktası Tetikleyici / Port Yönlendirme / DMZ / DDNS işlevleri yalnızca kablolu (Ethernet) WAN bağlantısıyla çalışır.
+Çift WAN Modu
+Üstlenme
+Yük Dengesi
+Yük Dengesi Yapılandırması
+Yönlendirici yeniden başlatıldığında ilk ping paketinden önceki süre gecikmesi gönderilir.
+R6900 ile uzak ana bilgisayar arasındaki birincil WAN bağlantısını sürekli izlemek için Ping Süresi Gözetleyiciyi etkinleştirebilirsiniz. Yönlendirici bu ayarda kullanıcı tanımlı hedefe sürekli olarak ping gönderecektir. Yönlendirici hedef IP adresine ping gönderemezse otomatik olarak bir üstlenme gerçekleştirecektir.
+Üstlenme algılama süresi
+Failover Execution Time
+Maximum Continous Failures Allowed
+Yeniden başlama algılama süresi
+Failback Execution Time
+İki ping paketi arasındaki zaman aralığı.
+Yönlendiricinin sürekli olarak ping paketleri gönderdiği hedef ana bilgisayarın IP adresi.
+Üstlenme mekanizmasını tetiklemek için zaman aralığı ölçütü. Birincil WAN’ın bağlantı kesintisi süresi üstlenme algılama süresine ulaşırsa, birincil WAN bağlantısı ikincil WAN’a geçirilecektir.
+Ping Süresi Zamanlayıcı
+Auto Network Detection
+Birincil WAN
+Çift WAN için yönlendirme kuralları
+Yönlendirme kurallarını etkinleştir
+Yönlendirme kuralları
+İkincil WAN
+WAN Birimi
+USB diskini çıkarın
+Boş
+DMZ'yi etkinleştir
+MAC Filtresini Etkinleştir
+NAT etkinleştirilsin mi
+Yönlendirici Reklamı etkinleştirilsin mi
+Telnet etkinleştirilsin mi
+WAN etkinleştirilsin mi
+Hesapla birlikte paylaş
+Paylaşımı Etkinleştir
+FTP'yi Etkinleştir
+QoS Etkinleştir
+WAN arızasıtarayıcıyeniden yönlendirme bildirimini etkinleştir
+USB Modunu Etkinleştir
+R6900, LAN ve WAN protokollerini ATM aracılığıyla kapsülleyerek veya taşıyarak iki mod sağlar. Lütfen uygun Kapsülleme Modunu seçin.
+Ethernet WAN
+Yükleniyor...
+Yalnız harici
+TTL değerini genişlet
+EZQoS Bant Genişliği Yönetimi
+Quality of Service (QoS), öncelik tanınan görev ve uygulamalara bant genişliği atanmasını sağlar.
+<span style="font-weight:bolder;font-size:14px;">Uyarlanabilir QoS</span>, ön tanımlı, sürükle-bırak tipi ön ayarlar aracılığıyla öncelik tanınan görev ve uygulamalar (oyun, medya akışı, VoIP, web'de gezinme, dosya aktarımı) için hem kablolu hem de kablosuz bağlantılara gelen ve giden bant genişliği atanmasını sağlar.
+QoS işlevini etkinleştirmek için QoS kaydırma düğmesine tıklayarak yükleme ve indirme bilgilerini doldurun. Bant genişliği bilgilerini İSS'nizden alın veya bant genişliğini kontrol etmek için <a href="http://speedtest.net" target="_blank" style="text-decoration:underline;">http://speedtest.net</a> adresine gidin.
+<span style="font-weight:bolder;font-size:14px;">Geleneksel QoS</span>, öncelik tanınan uygulama ve görevler için hem kablolu hem de kablosuz bağlantılara kullanıcı tanımlı manuel parametreler aracılığıyla gelen ve giden bant genişliği atanmasını sağlar.
+EzQoS hakkında
+Akıllı QoS'u etkinleştir
+Uyarlanabilir QoS tipi, uygulama kategorisi önceliğinizi yönlendirici akışına göre değiştirebilmenizi sağlar. QoS tipi geçiş, her bir istemci için sadece öncelik yapılandırmasını saklar.
+Geleneksel QoS
+Geleneksel QoS tipi port, protokol ve aktarılan da dahil olmak üzere daha gelişmiş yapılandırma seçenekleri sunar. QoS tipi geçiş, her bir istemci için sadece öncelik yapılandırmasını saklar.
+Hizmet Kalitesi [Quality of Service (QoS)] ağın hız performansını sağlar. Varsayılan kural web gezintisini en yüksek öncelikte ayarlar ve Uçbirimden Uçbirime [Peer-To-Peer (P2P)] uygulamalardan (BitTorrent gibi uçbirimden uçbirime uygulamalar) etkilenmez. Hizmet Kalitesi fonksiyonunu etkinleştirmek için Hizmet Kalitesini Etkinleştir [Enable QoS] üzerine tıklayın ve geri yükleme ve indirme bant aralığı alanlarını doldurun. ISP'den bant aralığı bilgilerini alın.<p>Eğer belirli ağ uygulamalarını ve ağ cihazlarını önceliklendirmek isterseniz, Kullanıcı tarafından belirlenen Hizmet Kalitesi kurallarından tercih edilen önceliğinizi seçin.
+Daha fazla profesyonel ve ayrıntılı bilgi için, lütfen girin
+Üstlenme Yeniden Deneme Sayısı
+SSS bul
+Yorumlar / Öneriler
+Uyumluluk Sorunu
+Bağlantı/Hız Sorunu
+DSL hizmetinizin performansını en iyi açıklayan seçeneği belirtin.
+Ülkeniz
+ASUS ürünleri konusundaki geri bildirimlerinizi, yorumlarınızı, önerilerinizi ve özellik fikirlerinizi memnuniyetle karşılarız.
+Geri bildiriminiz bizim için çok önemlidir ve R6900 aygıt yazılımını geliştirmeye yardımcı olur. Yorumunuz ya da önerileriniz varsa, DSL günlüklerinizle birlikte aşağıdaki formu doldurun. Geri bildiriminizi yanıtlamamıza olanak tanımak için, e-posta adresinizi doğru girdiğinizden emin olun.
+E-posta Adresiniz
+E-posta adresi biçimi geçerli değil.
+E-posta adresi alanı boş. Devam etmek istediğinizden emin misiniz?
+Hata ayıklama için ek bilgi
+Geri bildiriminiz gönderilemedi. Lütfen Internet bağlantınızıkontrol edip tekrar deneyin.
+Sistem, posta sunucusuna bağlanamadı. Doğrudan adresine bir e-posta gönderebilirsiniz.
+Aşağıdaki içerikleri kopyalayıp, e-posta içeriğiniz olarak yapıştırmanız yeterlidir.
+Sık kesintiler
+Iptables ayarı
+Internet Servis Sağlayıcınız (ISS)
+En fazla 2000 karakter - kalan karakter
+Now this function can't work, because your ASUS Router isn't connected to the Internet. Please send your Feedback to this email address :
+Aygıt yazılımı sürümü, bilgileriniz ve geri bildiriminizle birlikte gönderilecektir.
+Geri bildirim, sorunları tanılamak ve R6900 aygıt yazılımını iyileştirmeye yardımcı olmak için kullanılacaktır. İster isteyerek isterse de yanlışlıkla gönderdiğiniz her türlü kişisel bilgi <a style="font-weight: bolder;text-decoration:underline;cursor:pointer;" href="http://www.asus.com/Terms_of_Use_Notice_Privacy_Policy/Privacy_Policy/" target="_blank">gizlilik ilkesi</a> hükümlerimiz uyarınca korunacaktır.
+Geri bildiriminizi göndererek, ASUS’un ağ ve kablosuz ürünlerini iyileştirmek için geri bildiriminizi kullanabileceğini kabul edersiniz.
+Nadiren kesintiler
+* İsteğe bağlı
+Sorun Açıklaması
+Sorun Türü
+Ayar dosyası
+Yapılandırma Sorunu
+Kararlı bağlantı
+Aldığımız tüm geri bildirimlere değer veririz. Geri bildirimlerinizi ve yorumlarınızı, ASUS deneyiminizi iyileştirmeye çaba harcamak için kullanacağız.
+Geri bildiriminizi göndermeye zaman ayırdığınız için teşekkür ederiz.
+Önerdiğiniz Çeviri
+Genellikle ya da hiçbir zaman mevcut değil
+Paylaşım 12'den fazla karakterle oluşturulduğunda bazı Windows® sürümlerinde görünmeyebilir.\nDevam etmek istiyor musunuz?
+Paylaşım adı boş bırakılamaz.
+Paylaşım adında yalnızca alfasayısal/kısa çizgi/alt çizgi/boşluk karakterleri bulunabilir.
+Paylaşım adı bu birimde zaten var. \nLütfen farklı bir ad girin!
+Bu yeni şifreyi sonraki oturum açışınızda kullanın.
+Kullanıcı Adı'nda yalnızca alfasayısal karakterler ve kısa çizgi sembolu bulunabilir.
+Ağ Hizmetleri filtresi LAN'dan WAN'a paket değişimini engeller ve cihazların belirli ağ hizmetlerini kullanmalarını kısıtlar.<p>Örneğin, cihazın İnternet hizmetini kullanmasını istemiyorsanız hedef porta 80 girin. Port 80'i kullanan trafik engellenecektir.<p>Bu kuralı tüm LAN cihazlarına uygulamak için IP alanını boş bırakın.
+Yerel alan ağınızı hacker'lerden korumak için güvenlik duvarını etkinleştirin. Güvenlik duvarı filtre kurallarına bağlı olarak gelen ve giden paketleri filtreler.
+<b>Kara Liste Süresi :</b> Planlanan süre boyunca, Kara Listedeki istemciler belirlenen ağ hizmetlerini kullanamaz. Belirlenen sürenin ardından, LAN'daki tüm istemciler belirlenen ağ hizmetlerine erişim sağlayabilir.<br><b>Beyaz Liste Süresi :</b> Planlanan süre boyunca, Beyaz Listedeki istemciler SADECE belirlenen ağ hizmetlerini kullanabilir. Belirlenen sürenin ardından, Beyaz Listedeki istemciler ve diğer ağ istemcileri internete veya internet hizmetlerine rişim sağlayamayacaklardır.
+<b>NOT :</b> Eğer Beyaz Liste için bir ağ ağ ayarlarsanız, alt ağın dışındaki IP adresleri internete veya herhangi bir internet hizmetine erişim sağlayamayacaklar.
+MAC filtresi özel MAC adresli cihazların ağ erişimini kabul ya da reddetmenizi sağlar.<p>MAC filtresini Kabul Et veya Reddet moduna ayarlayabilirsiniz.<p>Reddetme modunda listedeki cihazların ağa erişimi engellenir.<p>Kabul Et modunda sadece listedeki cihazlar ağa erişebilir. Listede olmayan cihazların ağa erişimi engellenir.
+Bir 'hizmeti engelleme' saldırısı geçerli bir kullanıcının bir hizmet veya bilgisayar kaynağını kullanmasını engellemek için bir dışarıdan gelen teşebbüstür.<p>Bu özelliği etkinleştirmek yönlendiriciyi DoS saldırılarından koruyabilir fakat bu yönlendiricinin iş yükünü artıracaktır.
+DoS koruması etkinleştirilsin mi
+Güvenlik duvarını devre dışı bırakmak tüm ilgili fonksiyonları devre dışı bırakır.
+Güvenlik Duvarı Etkinleştirilsin mi
+WAN kurulumunuz için FTP sunucunuzun bağlantı noktası aralığını 20:21 olarak ayarladığınızda, FTP sunucunuz, R6900'nun yerel FTP sunucusu ile çakışacaktır.
+Anahtar Kelime Filtesini Etkinleştir
+Anahtar Kelime Filtresi, belirlenen anahtar kelimeleri içeren web sayfalarına kullanıcıların erişimini engellemenize izin verir.
+Filtreleme işlevinin sınırlandırmaları :<ol><li>HTTP sıkıştırma teknolojisini kullanan sıkıştırılmış web sayfaları filtrelenemez. <a href="http://en.wikipedia.org/wiki/HTTP_compression" target="_blank" style="text-decoration: underline; font-family:Lucida Console;">Ayrıntılı bilgi için buraya bakınız</a></li><li>Https web sayfaları filtrelenemez.</li></ol>
+Anahtar Kelime Filtre Listesi
+Bu alanda LAN - WAN filtresinin etkinleştirileceği tarihler tanımlanır.
+LAN - WAN filtresini Etkinleştirme Tarihi
+Bu alanda LAN - WAN filtresinin etkinleştirileceği zaman aralığı tanımlanır.
+LAN - WAN filtresini Etkinleştirme Zamanı
+LAN'dan WAN'a olan paket değişikliklerini filtre tablosunda belirtilen istemciler için kabul veya reddetmek üzere White List (Beyaz Listesi)'yi veya Black List (Kara Liste)'yi seçin.
+Filtre tablosu türü
+Hedef IP'si
+Gelen ve giden paketleri denetim için IP veya bağlantı noktasını belirleyen filtreyi etkinleştirmek için [Evet]'i seçin.
+Yerel Ağ - WAN Filtresi Etkinleştirilsin mi
+Bu alanda filtrelenecek LAN - WAN ICMP paketleri türü listesi tanımlanır. Örneğin, Yankı (tür 8) ve Yankı Yanıtı (tür 0) ICMP paketlerini filtrelemek istiyorsanız, 0 8 şeklinde boşlukla ayrılmış sayı dizisi girmeniz gerekir.
+Filtrelenmiş ICMP paket türleri
+Kaynak IP'si
+Bağlantı Noktası Aralığı
+Yerel Ağ'dan WAN'a Filtre Tablosu
+MAC filtresi listesinde en az bir kabul etme adresi vardır.\n Bu oturum açma istemcisi MAC'ini eklemek istiyor musunuz?
+MAC filtresi listesi
+Kabul Et
+Reddet
+Kabul Et modunda, R6900 yalnızca listedeki MAC adresine sahip istemcileri kabul eder. Reddet modunda, R6900 listedeki MAC adresine sahip istemcileri red eder.
+MAC Filtresi Modu
+Ağınızın güvenlik duvarı devredışıyken, WAN kurulumunuz için HTTP sunucusunun bağlantı noktası aralığını 80 olarak ayarladığınızda, http sunucunuz/web sunucunuz R6900'nun web kullanıcı arayüzü ile çakışacaktır.
+Bu alanda URL filtresinin etkinleştirileceği tarihler tanımlanır.
+URL Filtresini Etkinleştirme Tarihi:
+Bu alanda URL filtresinin etkinleştirileceği zaman aralığı tanımlanır. Lütfen farklı başlangıç ve bitiş zamanı girin.
+Başlangıç zamanı bitiş zamanından sonra.
+Geçersiz zaman dönemi.
+Belirtilen süre örtüşmeyen olabilir.
+URL Filtresinin Etkinleştirileceği Zaman
+URL Filtresi Etkinleştirilsin mi
+Engellemek istediğiniz siteler için anahtar sözcükleri girin.<p>Örneğin, listeye "XXX" girin. URL filtresi http://www.abcXXX.com, http://www.XXXbbb.com ve benzeri siteleri engelleyecektir.
+URL Filtre Listesi:
+Bu alanda, Yerel Ağ ve WAN arasındaki günlüğe kaydedilmiş paketlerin türü belirtilir.
+Günlüğe kaydedilen paket türü
+R6900 yönlendiricisinin WAN'dan LPR isteğini yanıtlamasını sağlar.
+WAN'dan LPR İsteği yanıtlansın mı?
+Bu özellik WAN'dan ping isteğini yanıtlamanızı sağlar.
+WAN'dan Ping İsteği yanıtlansın mı
+Bu özellik İnternet aracılığıyla kablosuz yönlendiriciyi yapılandırmanızı sağlar. Varsayılan port 8080'dir ve kablosuz yönlendiricinin Web kullanıcı arayüzünü başlatmak için http://[WAN IP]:8080 veya http://[DDNS adı]:8080'i kullanabilirsiniz.
+WAN'dan Web Erişimi Etkinleştirilsin mi
+R6900 yönlendiricisini Internetten yapılandırmak üzere kullanılan bağlantı noktasını belirtmek için( 1024:65535 ). Varsayılan bağlantı noktası 8080'dir.
+WAN'dan Web Erişimi Bağlantı Noktası
+IPv6 Güvenlik Duvarı etkinleştirilsin mi
+LAN'ınızdaki IPv6 ana bilgisayarlardan gelen tüm giden trafiğin yanı sıra, ilgili gelen trafiğe de izin verilir. Diğer gelen trafiklere burada özel olarak izin verilmelidir.
+Herhangi bir uzak ana bilgisayardan trafiğe izin vermek için uzak IP bilgisini boş bırakabilirsiniz. Bir alt ağ da belirtilebilir. (Örneğin 2001::1111:2222:3333/64)
+Gelen Güvenlik Duvarı Kuralları
+Klasör Adı
+FTP hizmetinin hesap ve iznini ayarlayın.
+İstemciler
+En son aygıt yazılımı sürümünü <a id="asus_link" style="font-weight: bolder;text-decoration: underline;color:#FFFFFF;" href="http://www.asus.com/support/" target="_blank">http://www.asus.com/support/</a> adresindeki ASUS Destek sitesinden edinin.
+Güncel aygıt yazılımını almak için lütfen ASUS destek sitesini http://www.asus.com/support/ ziyaret edin.
+Firma Yazılımını indirin
+Ürün Kimliği
+Donanım Yazılımı Sürümü
+Yeni Donanım Yazılımı Dosyası
+En son firma yazılımı sürümüne önceki sürüme ait güncellemeler dahildir.
+Yükseltme işleminin başarısız olması durumunda, R6900 otomatik olarak acil durum moduna geçer. R6900 önündeki LED sinyalleri bu tür durumları gösterir. Sistem kurtarma işlemi için CD'deki Yazılım Sürümünü Kurtarma yardımcı programını kullanın.
+Not:
+Lütfen ilk olarak sıkıştırılan dosyayı açın.
+Game Boost
+Real-Time Network Protection
+AiProtection, incorporating state-of-the-art, three-pronged security from Trend Micro™, gives you enterprise-level security in the home — making ASUS routers equipped with this feature the most secure home routers you can buy! It constantly monitors the health and safety of your network for total peace of mind. You can temporally turn off anti-virus on your PCs to reserve system resources for gaming.
+Benefits to enable Game Boost on ASUS router
+Reduce average ping time and variation.
+Reduce average packet loss rate.
+Cross platform supported.
+Utility free for your PCs, reserve CPU/RAM usage for game.
+Life time free of one device acceleration.
+Game Boost,an exclusive gamer private network(GPN) powered by WTFast automatically performs route optimization, choosing the most efficient route for your game packets. Life-Time free for one device, cross platforms supported.
+Game Boost,an exclusive gamer private network(GPN) powered by WTFast automatically performs route optimization, choosing the most efficient route for your game packets.
+Game Boost Information
+Internet Game Boost
+LAN Boost
+Adaptive QoS optimizes inbound and outbound bandwidth on both wired and wireless connections. Applications and tasks can be prioritized easily using drag-and-drop presets for gaming.
+One Click Game First mode
+Enter WTFast account here
+Game Boost Management
+Router Free Basic Account
+Router Basic Account
+Router Advanced Account
+Ended Date
+You are now using router free basic account.
+* As you use Game Boost powered by WTFast, you agree with WTFast <span><a id="link" href="javascript:open_link('terms')" style="text-decoration:underline;color:#008DE5;">Terms of Use</a></span> and <span><a id="link" href="javascript:open_link('privacy')" style="text-decoration:underline;color:#008DE5;">Privacy Policy</a></span>
+* Check the latest supported games of router version <span><a id="link" href="javascript:open_link('')" style="text-decoration:underline;color:#008DE5;">here</a></span>.
+* GPN performance will be varied by your ISP or location. Please keep your firmware stay up to date.
+* How to choose a good GPN server? <span><a id="link" href="javascript:open_link('gpn1')" style="text-decoration:underline;color:#008DE5;">Here</a></span> And ensure best gaming experiences? <span><a id="link" href="javascript:open_link('gpn2')" style="text-decoration:underline;color:#008DE5;">Here</a></span>
+* How to use WTFast on ASUS Router? <span><a id="link" href="javascript:open_link('howto')" style="text-decoration:underline;color:#008DE5;">Here</a></span>
+Game Boost Rules List
+Sistem önyüklemesinden bu yana geçen süre
+Önyükleme zamanı
+Bu sayfa ayrıntılı sistem etkinliklerini gösterir.
+Misafir Ağına Gidin
+USB Modem Ayarlara Git
+Misafir Ağı etkinleştirilsin mi
+Kablosuz MAC Filtresi özelliğini etkinleştirmelisiniz
+Misafir Ağı Dizini
+Misafir Ağı misafirler için internet bağlantısı sağlar, fakat intranetinize erişimi kısıtlar.
+Konuk Ağını çalıştırmak için Wi-Fi\'ı açın.
+Donanım sürümü
+Help
+Yardım, yönlendirici işlevlerini kullanmayla ilgili size rehberlik ve bilgi sağlar. Yardım almak
+için sarı ve mavi altı çizili köprü bağlantılı sözcükleri
+tıklatın.
+Ağ Komşuları kısmında R6900’nin grup adıdır ve standart giriş karakterleri harfleri (A-Z, a-z) ve rakamları (0-9) içerir. Tire (-) ve alt çizgi ( _ ) ve nokta (.) karakterleri de kullanılabilir ama ilk karakter olamaz. Standart dışı ad kullanmak, diğer kullanıcıların LAN üzerinde bilgisayarınızı bulamamasıyla sonuçlanır.
+Yüksek
+En yüksek
+En Yüksek Öncelik paketi
+saat
+Internet bağlantısıbaşarısız. Lütfen tekrar deneyin veya Internet servis sağlayıcınızla (ISS) hesap ayarlarınızıkontrol edin.
+Lütfen ISP'nizin yerini seçiniz.
+Yer
+We currently do not support this location, please use [Manual]
+Lütfen arayacağınız numarayı giriniz.
+Numarayı Ara
+DNS Sunucusu
+3G/4G USB kablosuz güvenlik cihazı ya da Android telefonu USB modem olarak kullanmak için USB moduna geçin.
+Bağlantı türünü değiştirmek isterseniz, lütfen USB adaptörünü devreden çıkarmak için <a href="/Advanced_Modem_others.asp">USB Modem</a>'ya gidin.
+USB Modem etkinleştirilsin mi
+USB Modem modu
+USB adaptörünü R6900 aygıtına takıp mobil yönlendirici haline getirin.
+Lütfen İnternet Servis Sağlayıcınızı (ISP) seçiniz.
+ISP
+Lütfen şifrenizi giriniz.
+Şifre
+Lütfen SIM kartınızın PIN kodunu girin. Uzunluğu 4 rakamdan fazla ve 8 rakamdan az olan bir sayı olmalıdır. PIN kodunuzu bilmiyorsanız, lütfen ISS'nız ile irtibata geçin.
+APN hizmeti adını bilmiyorsanız, lütfen ISS'nız ile irtibata geçin.
+APN hizmeti(isteğe bağlı)
+USB Adaptör
+Lütfen usb adaptörünüzü seçiniz.
+Lütfen kullanıcı adınızı giriniz.
+Kullanıcı Adı
+Ayar sayfasına giriş
+HTTP ve HTTPS WAN bağlantı noktası ayarında yinelenen bağlantı noktası numarası.
+NAT [Network Address Translation (Ağ Adresi Dönüştürme)] yönlendiricide ağ paketinin adres bilgilerini yeni adres bilgileri ile değiştirmek için kullanılan bir işlemdir. NAT için normal uygulamalar LAN'a WAN ile bağlanan yönlendiricidir. LAN'da her ağ cihazı özel bir IP(LAN IP)'ye sahiptir fakat sadece bir genel IP (WAN IP) vardır. Ağ cihazlarının İnternete erişimini sağlamak için yönlendirici tüm giden veri paketlerinde göndericinin özel IP adresini kendi genel IP adresi ile değiştirir. Gelen veri paketlerinin doğru ağ cihazına atanması için yönlendirici tüm gerekli bilgileri bir tabloya (NAT tablosu) kaydeder.
+içinde
+Bant
+Hedef Bant
+Internet
+Aralık
+Davet
+Kaynak ve hedef IP adresi için : a) \"192.168.122.1\" gibi belirli bir IP adresi girin; b) bir alt ağ içerisine veya aynı IP havuzu içerisine \"192.168.123.*\", veya \"192.168.*.*\" gibi IP adresleri girin; ya da c) \"*.*.*.*\" gibi tüm IP adreslerini girin.
+IP Paylaşımı
+IP Paylaşımı: Birçok ISP genelde bu modu kullanır. IP paylaşım modunda Kablosuz ADSL Modem Yönlendiricisi internete bağlanır ve LAN istemcileri tek bir genel IP adresini paylaşır.
+Açıklama
+Bağlantı Noktası Tetikleyicisi Etkinleştirilsin mi
+Gelen Bağlantı Noktası
+Tetikleyici Bağlantı Noktası
+[Evet] seçildiğinde, Yerel Ağdaki birden çok oyuncunun aynı anda Starcraft oynaması sağlanır.
+Starcraft (Battle.Net)
+Bazı uygulamalar NAT'a göre özel denetleyici gerektirir. Bu özel denetleyiciler varsayılan olarak devre dışıdır.
+Özel Uygulamalar
+Korumasız İstasyonun IP Adresi
+Sanal DMZ Internette bir bilgisayarı korumasız duruma getirmenize imkan verir, böylece gelen paketlerin tümü ayarladığınız bilgisayara yeniden yönlendirilir. Belirsiz gelen bağlantı noktaları kullanan bazı uygulamaları çalıştırdığınızda faydalıdır. Lütfen dikkatli kullanın.
+WAN IP Ayarı
+LAN istemcinin IP adresini girin.
+Gelen paketlerin bu porta yeniden yönlendirilmesini istiyorsanız bu alanı boş bırakın.
+Port aralığı, Port Aralığı (300:350), bireysel portlar (566,789) veya Karışık (1015:1024,3021) gibi çeşitli formatları kabul eder.
+Port Tetikleyici, LAN cihazları İnternete sınırsız erişim gerektirdiğinde veri portlarını geçici olarak açmanızı sağlar. Gelen veri portlarını açmanın iki yöntemi vardır: Port yönlendirme ve port tetikleyici. Port yönlendirme özelleştirilen veri portlarını her zaman açar ve cihazlar sabit IP adresleri kullanmalıdırlar. Port tetikleyici bir LAN cihazı bir tetikleyici portuna erişim talep ettiğinde sadece gelen portu açar. Port yönlendirmenin aksine port tetikleyici LAN cihazları için sabit IP adresi gerektirmez. Port yönlendirme birden çok cihazın tek bir açık portu paylaşmasını sağlar ve port tetikleyici bir anda sadece bir istemcinin açık bir porta erişimini sağlar.
+Tetikleyici Bağlantı Noktası Listesi
+Kullanıcı Tanımlı
+Tanınmış Uygulamalar
+UPnP [Universal Plug and Play (Evrensel Tak ve Kullan)] bir ağ geçidi aracılığıyla bir merkezi kontrolle veya merkezi kontrol olmadan bir IP temelli ağ aracılığıyla birçok cihazın (yönlendiriciler, televizyonlar, ses sistemleri, oyun konsolları, cep telefonları) kontrol edilebilmesine olanak sağlar.
+Port Yönlendirmeyi Etkinleştir
+Port yönlendirme uzak bilgisayarların özel bir yerel ağda (LAN) özel bir bilgisayara veya hizmete bağlanmasını sağlar. Daha hızlı bir bağlantı için bazı P2P uygulamaları (BitTorrent gibi) port yönlendirme ayarlarını kurmanızı da gerektirebilir. Lütfen detaylar için P2P uygulamaları kullanım kılavuzuna bakın. <p>Aynı ağda bulunan istemciler için bir Bağlantı Noktası aralığı belirlemek istiyorsanız, Service Name (Servis Adı), Port Range (Bağlantı Noktası Aralığı) (örn. 10200:10300), LAN IP address (LAN IP adresi) girin ve Local Port (yerel Bağlantı Noktası)'nı boş bırakın.
+Yerel IP
+Yerel Bağlantı Noktası
+Protokol
+FTP Server Port
+Tanınmış Oyun Listesi
+Tanınmış Sunucu Listesi
+Tabloda veri yok.
+Port Yönlendirme Listesi
+Lütfen istemci aygıtında DNS sunucusunu kurun.
+WAN DNS Ayarı
+WAN ve LAN farklı IP adreslerine ve altağına sahiptir.
+WINS Sunucusu1
+WINS Sunucusu2
+WINS Sunucusuna otomatik bağlansın mı
+DHCP Seçeneği
+IPv4 Yönlendirici Maske Uzunluğu
+IPv6 Öneki
+IPv4 Sınır Yönlendirici
+Oto Yapılandırma Ayarı
+İstemci IPv6 Adresi
+Sunucusu IPv6 Adresi
+IPv6 DNS Sunucusu
+IPv6 DNS Ayarı
+IPv6 Ağ Bilgisi
+Bu sayfa IPv6 ağ bilgilerini gösterir.
+Yerel Ağ IPv6 Adresi
+Yerel Ağ IPv6 Öneki
+IPv6 Yerel Ağ Ayarı
+IPv6 Önayar Uzunluğu
+IPv4 Her Noktaya Yayın
+Statik IPv6
+Sunucu IPv4 Adresi
+WAN IPv6 Adresi
+WAN IPv6 Ağ Geçidi
+WAN Önayar Uzunluğu
+IPv6 WAN Ayarı
+Eğer bir GVT kullanıcısı iseniz, lütfen <b>turbonet@turbonet</b> kullanıcı adını ve <b>gvt25</b> parolasını girin. Aksi halde, ISP'niz tarafından verilen kullanıcı adını ve parolayı girin.
+Özel ISP ayarlarını yapılandırmak için ISP Profilini seçin.
+iTunes Server Name
+R6900 bağlantısı başarısız. İstek göndermek için Tamam\'ı veya durdurmak için İptal\'i tıklatın.
+Bu alanda Download Master'ı etkinleştirebilir veya devre dışı bırakabilirsiniz.
+Bu alan karşıdan yüklenen malzemeleri Internet kullanıcılarıyla paylaşmanızı sağlar.
+Bu alanda UPnP'yi etkinleştirebilir veya devre dışı bırakabilirsiniz.
+LAN IP adresi ve alt ağ maskesi değiştirildi. R6900 IP adresleri havuzu güncellenmelidir. IP adresleri havuzunu otomatik olarak güncellemek ister misiniz?
+Yeni IP Havuzu altağ maskesi ile eşleşmiyor. R6900'nun IP havuzunu otomatik olarak değiştirmesini istiyor musunuz?
+Bu girdi listeye alındı.
+Lütfen 1 - 2592000(saniye) arası bir değer girin.
+geçersiz karakterler.
+Geçersiz PIN Kodu.
+Doğrulama kodu geçerli değil.
+Yerel IP veya bağlantı noktası aralığı alanları boş bırakılamaz!
+Bu tablo yalnızca
+öğeye izin verir!
+Ağ Komşuları veya FTP Sunucusu için en fazla aynı anda bağlantı sayısıdır. Bazı FTP istemcileri birden çok bağlantı kurabilir. Bu sayının çok düşük ayarlanması oturum açılamamasına neden olur.
+Adı (aabbcc gibi) ayarladıktan sonra, Ağ Bağlantısı hizmetine hızla erişmek için Internet Explorer’ın adres alanına \\\\aabbcc yazın. Standart giriş karakterleri harfleri (A-Z, a-z) ve rakamları (0-9) içerir. Tire ( - ) ve alt çizgi ( _ ) karakterleri de kullanılabilir ama ilk karakter olamaz.
+Yönlendirici oturum açma adı yalnızca alfa sayısal karakterler, alt çizgi ve tire işaretlerini kabul eder. İlk karakter tire \"-\" ya da alt çizgi \"_\" olamaz.
+geçerli bağlantı noktası aralığı değil!
+Jumbo Frame etkinleştirilsin mi
+Yerel Ağ IP'si
+Dili seçin
+Yönlendiricinin DHCP sunucusunun ağ istemcilerine otomatik olarak IP adresi belirlemesini sağlamak için DHCP sunucusunu etkinleştirin. Eğer bu fonksiyon devre dışı ise LAN cihazlarınızdaki IP adres ayarlarını elle belirlemeniz gerekir.
+DHCP Sunucusu Etkinleştirilsin mi
+DHCP [Dynamic Host Configuration Protocol (Dinamik Ana Bilgisayar Yapılandırma Protokolü)] IP ağları üzerinde kullanılan otomatik yapılandırma için bir protokoldür. DHCP sunucusu her istemciye bir IP adresi verebilir ve DNS sunucusu IP ve varsayılan ağ geçidi IP'si ile ilgili bilgilendirir. R6900 yerel ağınız için 253 adete kadr IP adresini destekler.
+R6900 IP adresi:
+R6900'nun Yerel Ağ ayarlarını yapılandırın.
+Yerel Ağ IP, VPN sunucusu tarafından kullanılıyor. LAN IP adresi için lütfen başka bir IP adresi kullanın.
+R6900'nun IPv6 Internet ayarlarını yapılandırın.
+R6900'nun IPTV ayarlarını yapılandırın.
+IPTV izlemek için, WAN bağlantı noktası Internet'e bağlanmalıdır. Lütfen <a href="/Advanced_WANPort_Content.asp" style="text-decoration: underline;">WAN - Çift Wan</a> kısmına gidip, WAN bağlantı noktasının birincil WAN'a atandığını onaylayın.
+DHCP Sunucusundan IP Adresi isteyen istemcilerin Etki Alanı Adı.
+Etki Alanı Adı'nda yalnızca alfasayısal karakterler ve kısa çizgi sembolu bulunabilir.
+R6900 Etki Alanı Adı
+Ağ istemcisinin kablosuz yönlendiriciye bağlanması için mevcut IP adresini kullanmasına izin verilen kira süresini ayarlayın. Kira süresi sona erdiğinde ağ istemcisi IP adresini ya yenilemesi ya da kablosuz yönlendiricinin DHCP sunucusundan yeni bir IP adresi alması gerekir.
+Kira Süresi
+Özel bir istemci için Sabit bir IP adresi atayın. İstemcinin MAC adresi gerekir.
+El İle Atama Etkinleştirilsin mi
+DHCP Listesi Çevresinde El İle Atanmış IP
+Kablosuz yönlendiricinin çok noktaya gönderilecek paketleri işlemesini sağlar. Çok noktaya yönlendiricileri etkinleştirmek ayrıca RTP ve RTSP fonksiyonlarını da etkinleştirir.
+IPTV Set üstü kutunuzun bağlandığı LAN portu.
+Bu alanda, Yerel Ağdaki DHCP Sunucusu tarafından havuzda atanacak son adres belirtilir.
+IP Havuzu Bitiş Adresi
+Yerel Ağdaki DHCP Sunucusu tarafından havuzda atanacak ilk adres.
+IP Havuzu Başlangıç Adresi
+DDNS sunucusu yanıt vermiyor. Lütfen tekrar deneyin.
+Yetkisiz kayıt isteği!
+İstemci Hatası: Proxy Kimlik Doğrulaması Gerekli!
+DDNS sunucusu yanıt vermiyor.
+Etki alanı adının geçersiz karakterleri:
+Ana Bilgisayar Adı boş bırakılamaz.
+İstek hatası! Lütfen tekrar deneyin.
+Kayıt işlemi başarılı.
+Orijinal ana bilgisayar adı başarıyla kaydedildi.
+Yeni ana bilgisayar adı başarıyla kaydedildi.
+IP ve ana bilgisayar adı kayıtlı değil, lütfen önce kayıt yaptırın.
+Ana bilgisayar adı sayı ön ekini ve \".\" yi kabul edemez. (\"123abc\" veya \"aaa.bbb\" gibi)
+Geçersiz Etki Alanı! Biçim 'xxx.asuscomm.com' olmalı.
+Etki alanı adı
+Son güncellemeden beri ana bilgisayar ve IP adresinin her ikisi de değiştirilmedi.
+kayıtlı.
+zaten kayıtlı. Ve kayıtlı adres :
+Son güncellemeden bu yana IP adresi, sunucu ve ana bilgisayar adıdeğiştirilmedi. Güncellemek isterseniz lütfen [Evet] düğmesine tıklayın.
+DDNS İstemcisi Etkinleştirilsin mi
+DDNS [Dynamic Domain Name System (Dinamik Etki Alanı Adı Sistemi)] ağ istemcilerinin kayıtlı etki alanı adı ile bir dinamik genel IP adresi ile bile kablosuz yönlendiricilere bağlanmalarını sağlayan bir hizmettir. Kablosuz yönlendirici ASUS DDNS hizmeti ve diğer DDNS hizmetleri ile yerleştirilmiştir.<p>
+Kablosuz yönlendirici şu anda özel bir WAN IP adresi kullanır. Bu yönlendirici çoklu NAT ortamında olabilir ve DDNS hizmeti bu ortamda çalışamaz.
+Ana bilgisayar adı başarılı bir şekilde kaydedildi. Ev ağında WAN'dan hizmete erişmek için "[hostname (anabilgisayaradi)].asuscomm.com" kullanabilirsiniz. Ağınıza uzaktan erişmek için "[hostname (anabilgisayaradi)].asuscomm.com" kullanın.<p>Diğer WAN istemcilerini ağınıza uzaktan erişimini sağlamak amacıyla Port yönlendirmeyi veya DMZ ayarlarını yapılandırmak için Advanced Setting (Gelişmiş Ayarlar)>WAN yoluyla gidin.<p>Kablosuz yönlendiriciyi uzaktan yapılandırmak isterseniz <a href="/Advanced_System_Content.asp?af=misc_http_x" target="_blank" style="text-decoration: underline; font-family:Lucida Console;">burada</a>.
+DDNS Ayarı
+Sorgu
+Ana bilgisayar adı sayı ön ekini ve \".\"yi kabul edemez. (\"123abc\" veya \"aaa.bbb\" gibi)
+Ana Bilgisayar Adı
+Bu alan, Dinamik DNS hizmetinde oturum açma parolası olarak kullanılır.
+Parola veya DDNS Anahtarı
+Sunucu
+Ücretsiz Deneme
+Güncelleştir
+Bu düğme DDNS veritabanını el ile güncelleştirmenizi sağlar. Yalnızca otomatik DDNS güncelleştirmesi başarısız olduğunda kullanılabilir. O anki DDNS güncelleştirmesi durumunu Sistem Günlüğünden alabilirsiniz.
+El İle Güncelleştirme
+Bu alan, Dinamik DNS hizmetinde oturum açma kimliği olarak kullanılır.
+Kullanıcı Adı veya E-posta Adresi
+Etkinleştirildiğinde, joker karakterli etki alanı adı IP adresinize yönlendirilir.
+Joker karakteri etkinleştirilsin mi
+Bu, Erişim Noktasının varsayılan ağ geçidi IP adresidir
+Bu alanda, DHCP Sunucusunda IP adresi isteyen istemcilere sağlanan DNS IP adresi gösterilir. Boş bırakabilirsiniz, DNS isteğine R6900 tarafından işlem yapılır.
+DNS Sunucusu
+DNS ve WINS Sunucusu Ayarı
+Bu alanda, Yerel Ağınızdaki ağ geçidi IP adresi belirtilir. Boş bırakırsanız, R6900 IP adresi atanır.
+Sistem zamanınızı NTP Sunucusuyla eşleştirmek için.
+NTP Sunucusu
+NTP Bağlantısı
+Bu alan, R6900 yönlendiricisinin günlük iletilerini kaydetmek için uzak sunucu atamayı sağlar. Boş bırakırsanız, sistem 1024 iletiye kadar R6900 yönlendiricisine kaydeder.
+Uzak Günlük Sunucusu
+Bölgeniz veya yerelinizdeki standart saat.
+Hatırlatma: Sistem saat dilimi yerel ayarınızdan farklıdır.
+Saat Dilimi
+DST saat dilimi değişikliği başlar
+DST saat dilimi değişikliği sona erer
+Windows Internet Adlandırma Hizmeti her bilgisayarın Internet etkileşimini yönetir. WINS sunucusu kullanıyorsanız, sunucunun IP adresini buraya girin.
+WINS Sunucusu
+Son 30 gün
+R6900, WAN (Geniş Alan Ağı)'a bir kaç bağlantı türünü destekler. Bu türler WAN Bağlantı Türünün yanındaki aşağı doğru açılan menüden seçilir. Ayar alanları seçtiğiniz bağlantı türüne bağlı olarak değişir.
+WAN IP'si otomatik alınsın mı
+WAN bağlantı noktasına köprü vermek üzere LAN bağlantı noktasını seçin. WAN'a bağlanmak için başka bir aygıtınız varsa, ancak ISP'niz sadece bir WAN bağlantısı sağlıyorsa, WAN bağlantı noktasından paket almak için birkaç LAN bağlantı noktasını belirleyebilirsiniz. Örneğin IPTV set üstü kutunuzu belirlene bağlantı noktasına bağlayabilir ve ISP'nizden doğrudan sinyal ve IP adresi alabilirsiniz.
+IPTV STB Bağlantı Noktasını Seçin
+Internet bağlantısıayarlarıYük Dengesi modunda yapılandırıldığında, DDNS işlevi yalnızca kablolu (Ethernet) WAN bağlantısıyla çalışır.
+Internet bağlantısıayarlarıYük Dengesi modunda yapılandırıldığında, DMZ işlevi yalnızca kablolu (Ethernet) WAN bağlantısıyla çalışır.
+Internet bağlantısıayarlarıYük Dengesi modunda yapılandırıldığında, Port Yönlendirme işlevi yalnızca kablolu (Ethernet) WAN bağlantısıyla çalışır.
+Internet bağlantısıayarlarıYük Dengesi modunda yapılandırıldığında, Bağlantı Noktası Tetikleyici işlevi yalnızca kablolu (Ethernet) WAN bağlantısıyla çalışır.
+Daha fazla bilgi alın
+Kiralama sona erdi
+Sınırsız erişim
+Henüz Ağ Komşuları üzerinden paylaşımı etkinleştirmediniz. Lütfen USB uygulamasında / Komşular üzerinden paylaşımda etkinleştirin.
+Tarayıcınız köprü bağlantısını tıklatarak Ağ Komşularına girmeyi desteklemiyor.
+FTP sunucusu etkin değil. FTP sunucusunu <a href="../Advanced_AiDisk_ftp.asp" target="_blank" style="text-decoration: underline; font-family:Lucida Console;">burada</a> etkinleştirin.
+DDNS henüz etkin değil. İnsanların WAN'dan etki alanı adı ile FTP'ye erişmeleri gerektiğinde WAN / DDNS'de etkinleştirebilirsiniz.
+DDNS etkin, ancak etki alanı kaydı başarısız. İnsanlar hala WAN'dan etki alanı adı ile FTP'ye erişemiyor.
+Ekle / Sil
+Maks Sınır :
+Kontrol
+Günlük
+Oturum açma kullanıcı IP'si:
+Başka bir kullanıcı oturum kapatmadıkça Oturum Açamazsınız.
+Oturumu başarıyla kapattınız.
+Düşük
+En düşük
+Yazdırmayı paylaşmak için LPR protokolünü kullanın
+Eğer MAC filter listesinde giriş varsa, Apply (Uygula) üzerine tıklayarak bu girişleri silin, ardından Apply (Uygula) üzerine tekrar tıklayarak MAC Filtre işlevini engelleyin. Eğer giriş yoksa, Apply (Uygula) üzerine bir kez tıklayarak MAC Filtre işlevini engelleyin.
+Kılavuz
+Elle ata
+Şehir:
+Ülke:
+PTM bağlantısını ayarlamak için VLAN ID’ye gereksiniminiz olabilir. ISS’niz yapmanızı istemedikçe VLAN ID’yi değiştirmeyin.
+Bu Hızlı Kurulum size hızlı R6900 WAN ayarları yapılandırmasında rehberlik edecektir, lütfen açılır listeden ülkenizi ve ISP adınızı seçin, İleri'ye tıklayın ve gerekli bilgileri girin. Gerekirse, DSL bağlantınız hakkında bilgi için İnternet Hizmet Sağlayıcınız (ISP) ile iletişim kurun.
+ATM PVC'yi kurmak için Sanal Yol Tanımlayıcısına (VPI) ve Sanal Kanal Tanımlayıcısına (VCI) ihtiyacınız vardır. ISP'niz bunu yapmanızı istemediği sürece VPI ve VCI numaralarını değiştirmeyin.
+geçersizdir.
+menzil dışında
+Duyuru:
+Hızlı Manuel Ayar
+R6900 WAN ayarlarına bakınız. Eğer yeni bir ayar eklemek isterseniz, ekranda verilen talimatları izleyin. Önceki ayarı değiştirmek isterseniz, lütfen [Advanced Setting (Gelişmiş Ayar)] -> [WAN] -> [Internet Connection (İnternet Bağlantısı)] sayfasına gidiniz.
+Üretici
+Maksimum Bant Genişliği Sınırı
+Maksimum yükleme bant genişliği sınırını ayarlayın.
+Maximum Computers
+maksimum
+FTP ve Network Place (Samba) ayarlayın.
+Orta
+IPTV
+Geri Bildirimi
+AiDisk
+gerçek zamanlı
+Son 24 saat
+Günlük
+QoS
+Sistem Durumu
+Dinamik IP Ayarı
+MER
+Minimum Bant Genişliği Sınırı
+Minimum yükleme bant genişliği garanti sınırını ayarlayın.
+dakika
+APN Profili
+Yapılandırılıyor...
+PIN Onayla
+* APN ayarıotomatik olarak yapılandırılmazsa, elle yapılandırmanız gerekir.
+Veri Kullanımı
+R6900 için Mobil Geniş Bant ayarını yapılandırın.
+Mobil Geniş Bant devre dışı bırakılırsa Sıcak Bekleme devre dışı bırakılacaktır. Devre dışı bırakmak istediğinizden emin misiniz?
+Mobil Geniş Bant devre dışı.
+Mobil Geniş Bandı etkinleştir
+Mobil geniş bant şebekeye bağlanılamadı.
+PIN değiştirilemedi.
+Cep Telefonu Numarası
+Boşta Kalma Süresi
+Mobil Geniş Bant Bilgisi Sayfasına gidin.
+Lütfen PIN kodunu girin.
+Lütfen PUK kodunu girin.
+Internet Kullanımı
+Veri kullanım sınırıdeğeri, geçerli veri kullanım değerinden küçük. Mobil genişbant bağlantısıiçin daha yüksek bir veri kullanım sınırıayarlayın.
+Mobil genişbant veri kullanımına yönelik sınıra ulaşıldı. Mobil genişbanda daha fazla erişilemez. Mobil genişbant veri kullanım sınırına yönelik ayarlarıdeğiştirmek ister misiniz?
+PIN kodu gerekli.
+PIN2 kodu gerekli.
+PUK kodu gerekli.
+PUK2 kodu gerekli.
+Şebeke Operatörü
+Yeni PIN
+Lütfen yeni PIN kodunu girin.
+Sinyal yok
+Eski PIN
+PDP Türü
+Yanlış PIN kodu.
+Lütfen hizmet sağlayıcınızdan edindiğiniz PIN kodunu girin.
+PIN Yönetimi
+PIN Değiştirme
+PIN Doğrulama
+PIN Engelleme Kaldırma Anahtarı (PUK)
+Lütfen PIN engelleme kaldırma kodunu (PUK) hizmet sağlayıcınızdan edinin.
+En fazla SIM kart sayısına ulaşıldı. Geçerli SIM kartının veri kullanım ayarlarınıkaydetmek için en eski kayıt silinecek. Silmek istediğinizden emin misiniz? NOT: R6900, on (10) taneye kadar SIM kartın veri kullanım kayıtlarınıtutabilir.
+Kalan Veri
+Kalan deneme
+Yeni sıfırlama günü gelecek ay geçerli olacak.
+Döngü Başlangıç Günü
+Dolaşım
+Dolaşımda ISS
+Roaming Scanning Time
+Dolaşımdaki ISS tarama, geçerli mobil bağlantıyı kesecek.
+PIN Kodumu kaydet
+Operatörleri Seç
+Mobil Geniş Bant Ayarına gidin.
+Sinyal Gücü
+SIM kart okunamadı.
+SIM kart kilitli. Lütfen hizmet sağlayıcınızla iletişime geçin.
+SIM kart takılı değil.
+SIM kart hazır.
+SMS Bildirimi Gönder
+Tanımlıkullanıma ulaşıldığında bir SMS bildirimi gönderilir. SMS bildirimi almak içinMobile Phone Number (Cep Telefonu Numarası)alanına cep telefonu numaranızıgirdiğinizden emin olun.
+Başlama Günü
+Veri kullanımının kaydedileceği gün sayısınıseçin. Veri kullanımıdeğeri her döngünün sonunda sıfırlanacaktır.
+Mobil Bağlantı Durumu
+Bu sayfa, temel aygıt bilgilerini, Internet bağlantısı durumunu ve Internet kullanımını görüntüler.
+Bu mesajıbir daha gösterme.
+PIN başarıyla değiştirildi.
+Mobil Geniş Bant
+Veri Kullanımı Sınırlaması
+Engellemeyi Kaldır
+SIM engellemesini kaldır
+Tanımlıkullanıma ulaşıldığında, sistem bir uyarıbildirimi gönderir.
+Veri Kullanımı Döngüsü
+Veri Kullanımı Sınırı
+Tanımlıkullanıma ulaşıldığında, mobil genişbant bağlantısına daha fazla erişilemez.
+Veri Kullanımı Uyarısı
+USIM Kart Durumu
+SIM kart verileri yükleniyor; lütfen bekleyin…
+PIN kodu yanlış. Lütfen doğru PIN kodunu girin.
+PUK kodu yanlış. Lütfen doğru PUK kodunu girin.
+Hesabın erişim hakları ad ve parolasında değişiklik yaptıktan sonra değişmez. Herhangi bir değişiklik yapmak istemezseniz, hesap değerleri aynı kalacaktır.
+Yeni Parola
+Bu hesabı değiştir
+Model adı
+Yeniden adlandırdıktan sonra, klasör ve alt klasörlerinin erişim hakları değişmez.
+Bu klasörü yeniden adlandır
+ay
+Başka Yapılandırmalar
+MPPE Şifrelemeyi
+Kalan Süre
+NAT Hızlandırma
+NAT trafiği işlemci tarafından işlenir.
+CTF (Kısa Yoldan Yönlendirme) etkin.
+CTF (Kısa Yoldan Yönlendirme) ve FA (AkışHızlandırma) hızlandırıcıetkin.
+NAT Accelerator etkinleştirilsin mi
+H.323 Düz geçiş
+IPSec Düz geçiş
+L2TP Düz geçiş
+Sanal Özel Ağ (VPN) bağlantısının yönlendiriciden doğrudan ağ istemcilerine geçmesi için NAT Düz Geçiş'i etkinleştirin.
+PPTP Düz geçiş
+RTSP Düz geçiş
+SIP Düz geçiş
+DDNS'yi Devre Dışı Bırak.
+NAT’a bağlantılar
+Kaynak IP’ye göre
+SNAT bağlantıları
+hdf’ye göre sırala
+hdf bağlantı noktasına göre sırala
+kyn’ye göre sırala
+kyn bağlantı noktasına göre sırala
+Duruma göre sırala
+ağ
+Ağ Analizi
+Ağ yazıcı sunucusu iki yöntemi destekler: (1) ASUS EZ yazıcı paylaşımı (2) Yazıcı paylaşmak için LPR.
+Ağ Yazıcı sunucusu
+Ağ Araçları
+Ağ Türü
+Sayı
+Teşhis etmek
+Uzatılmış seçenek
+Ekran Ağı Ayrıntıları
+Yöntem
+Verilen ana bilgisayarın IP adresi için, belirtilen DNS sunucusunu kullanarak ad sunucusunu sorgulayın.
+Çevrimdışı listesi
+Seçenek
+Ağ ana makinesine ICMP ECHO_REQUEST paketleri gönderin.
+Adı çöz
+Hedef
+Ana bilgisayara iz yolu
+LAN’da Uyandır
+Uyandır
+Yeni Klasör Adı
+Sonraki sayfa
+Şifreleme yok
+Yazıcı algılanmadı
+USB diski algılanmadı
+Hesap Yok
+Aygıt Yok
+Smart Sync hizmetini henüz başlatmamışsınız.
+Listede olmayan
+WPS özelliğini çalıştırmak için Wi-Fi işlevini açın.
+WPS özelliğini etkinleştirmek için, kimlik doğrulama yöntemini WPA2 veya WPA-Otomatik olarak değiştirin.
+If you want to enable WPS, you need to disable hiding SSID first.
+Note: New patch will be updated regularly, please keep your firmware stay up to date.
+ASUS DDNS hizmetini kullanmak amacıyla bir statik adres aramak için <a href="http://iplookup.asus.com/nslookup.php" target="_blank" style="font-family:Lucida Console;text-decoration:underline;">http://iplookup.asus.com/nslookup.php</a> adresine gidin.
+R6900 önceden bu moda yapılandırılmış.
+OTP Kimlik Doğrulama
+Ana Erişim Noktası durumu
+Etkin program
+İzin ver
+Varsayılan olarak, Internet erişimi zaman aralıklarıyla sınırlıdır.
+Reddet
+Please disable <a id="disable_NAT" style="color:#FC0;text-decoration: underline;" href="" target="_blank">NAT Acceleration</a> for more precise scheduling control.
+Ebeveyn denetimini etkinleştir
+Zaman Programlamayı Etkinleştir
+Ebeveyn denetimi istemcinin ağ kullanımı için zaman sınırını ayarlamanıza olanak sağlar. Ebeveyn denetimini kullanmak için:
+Zaman Programlama istemcinin ağ kullanımı için zaman sınırını ayarlamanıza olanak tanır. Zaman Programlamayı kullanmak için:
+[İstemci Adı] sütunundan ağ kullanımını denetlemek istediğiniz istemciyi seçin. [İstemcinin MAC adresi] sütununa istemcinin MAC adresini de girebilirsiniz.
+[Ekle / Sil] sütununda Düzenle simgesine tıklayın.
+[Zaman Yönetimi] sütununda saat/tarih sınırını oluşturun.
+İzin verilen erişim zamanları için istenen zaman yuvalarını seçin. Daha uzun zaman yuvaları oluşturmak için sürükleyip tutun.
+Yapılan ayarları kaydetmek için [Tamam] öğesine tıklayın.
+İstemcinin MAC adresi
+Zaman Yönetimi
+İstemci Adı
+Yönlendirici oturum açma parolasını değiştirin
+lisan:
+PIN kodu
+Bölüm Adı
+Kaynak ve hedef bağlantı noktası aralığı için : a) \"95\" gibi belirli bir bağlantı noktası girebilir; veya b) \"103:315\", \">100\", ya da \"<65535\" gibi bir aralık içerisine bağlantı noktalarını girebilirsiniz.
+Port Haritalama
+Bağlantı Noktası Eşleştirme belirli LAN bağlantı noktası IPTV WAN arabirimini destekler. İlgili LAN bağlantı noktasını seçip Uygula'ya tıklayın.
+Port Haritalamayı Etkinleştir
+LAN Portu
+Bu bağlantı noktası
+Bu sayfa ayrıntılı port yönlendirme durumunu gösterir. Bazı P2P programları portu açmak için UPnP protokolü kullanırlar ve port numarası bu sayfada gösterilir.
+R6900, bağlantı türünün PPPoE olduğunu algıladı. Eğer evet'se, lütfen kullanıcı adını/parolayı girin ve Apply (Uygula)'ya tıklayın. <br>Eğer değilse, lütfen Manual Setting (Manuel Ayar)'a tekrar tıklayarak ayarlayın.
+Lütfen Internet Servis Sağlayıcınızın (ISS) verdiği kullanıcı adını/şifreyi girip İleri öğesine tıklayın.
+Bu öğe bazı ISS'lar tarafından belirtilebilir. ISS'nızdan kontrol edin ve gerekirse doldurun.
+Aygıt çok sık DHCP sorgusu yaparsa, bazı Internet Servis Sağlayıcılar MAC adreslerini engeller. Bunu önlemek için DHCP sorgusu sıklığını değiştirin. <br/> Varsayılan Agresif modunda, R6900 aygıtı ISS’den yanıt almazsa, 20 saniye sonra başka bir sorgu gönderir ve üç deneme daha yapar.<br/>Normal modda, R6900 aygıtı ISS’den yanıt almazsa, 120 saniye sonra başka bir sorgu gönderir ve iki deneme daha yapar.
+Kimlik Denetimi
+İsteğe bağlı arama<br>(boş zaman aşımı sayacı ile)
+İsteğe Bağlı Arama özelliği, sadece gerekli olduğunda ağınızın bağlantı kurmasına ve belirli bir etkinsizlik süresinin ardından bağlantıyı kesmesine izin verir.
+Bu alan isteğe bağlıdır ve belirli bir süre geçtikten sonra ISS bağlantınızı sonladırmayı yapılandırmanızı sağlar. Bu alan isteğe bağlıdır ve belirli bir süre işlem yapılmadığında ISS bağlantınızı sonlandırmanızı sağlar. Sıfır değeri sonsuz boş süreye izin verir. Yalnızca Tx işaretliyse, Internetten gelen veriler belirtilen boş süre için atlanır.
+İşlem yapılmayan süreden sonra bağlantıyı kes (saniye olarak)
+Bu alan yalnızca WAN Bağlantı Türünü PPPoE olarak ayarladığınızda kullanılabilir.
+Bu alan sadece WAN Bağlantı Türü olarak USB Modem, PPPoE, PPTP veya L2TP'yi ayarladığınızda kullanılabilir.
+Bu alan isteğe bağlıdır ve bazı ISS'lar tarafından belirtilebilir. ISS'nızdan kontrol edin ve gerekirse doldurun.
+Erişim Yoğunlaştırı Adı
+Bu öğe bazı ISS'lar tarafından belirtilebilir. ISS'nızdan kontrol edin ve gerekirse doldurun.
+Ek pppd seçenekleri
+Ana Bilgisayar Adı
+MAC Adresi
+PPPoE paketinin Maksimum Alım Birimi [Maximum Receive Unit (MRU)]. Varsayılan değer 1492. Bu değeri sadece ISP'niz gerektirirse değiştirin.
+MRU
+PPPoE paketinin Maksimum Aktarım Birimi [Maximum Transmission Unit (MTU)]. Varsayılan değer 1492. Bu değeri sadece ISP'niz gerektirirse değiştirin.
+MTU
+PPPoE rölesini etkinleştirmek LAN içindeki cihazların NAT üzerinden geçen bir bireysel PPPoE bağlantısı kurmasını sağlar.
+PPPoE Anahtarlama Etkinleştirilsin mi
+Bu öğe bazı ISS'lar tarafından belirtilebilir. ISS'nızdan kontrol edin ve gerekirse doldurun.
+PPTP Seçenekleri
+Bu alan isteğe bağlıdır ve bazı ISS'lar tarafından belirtilebilir. ISS'nızdan kontrol edin ve gerekirse doldurun.
+Hizmet Adı
+VPN + DHCP BağlantısınıEtkinleştir
+VPN sunucusu ev ağınıza herhangi bir yerden herhangi bir zamanda erişmenize olanak sağlar.
+VPN sunucusunu kullanmak içindir. Lütfen şu adımları izleyin.<br>(1) PPTP VPN sunucusunu etkinleştirin<br>(2) İstemci IP\'si için IP havuzunu ayarlayın. (Maksimum 10 istemci) <br>(3) VPN istemcisinin kullanıcı adını ve şifresini ayarlayın.<br>(4) Bilgisayarınızda veya akıllı telefonunuzda VPN bağlantısı programını açın.<br>(5) Yeni bir PPTP VPN bağlantısı ekleyin, VPN sunucu adresi
+(6) WAN IP adresiniz dinamiktir, <a href="../Advanced_ASUSDDNS_Content.asp" target="_blank" style="text-decoration: underline; font-family:Lucida Console;">lütfen DDNS'yi ayarlamak için burayı tıklatın.</a>
+Yerel Ağ Önayar Uzunluğu
+Önceki sayfa
+Monopoli Modunun etkinleştirilmesi yazıcı talepleri göndermek için yönlendiriciye geçici olarak özel bağlantı kullanmanıza olanak sağlar.
+R6900 yönlendiricisine bağlı yazıcı modeli.
+Yazıcı Modeli:
+O anki yazıcı durumu
+Yazıcı Durumu:
+Bu yazıcıyı kullanan kullanıcının IP adresi.
+Kullanımdaki kullanıcı:
+Tekel modu:
+Yazdırma durumu:
+Varsayılan ACK, SYN ve ICMP paketleri oyunun düzgün bir şekilde çalışmasını iyileştirmek için kullanılır.
+Yüksek
+Normal
+Düşük
+Ürün Bilgisi
+Sağlayıcı
+Kapsülleme
+Kapsülleme Modu
+İt
+Bu PVC'yi silmek istediğinizden emin misiniz?
+PVC Düzenle
+ATM (Asenkron Aktarım Modu) iki tür nakliye bağlantısı sağlar: Sanal yol arayüzü (VPI) ve Sanal kanal arayüzü (VCI). VCI, yönü olmayan bir boru olup bağlantı elemanlarının birleştirilmesinden oluşturulmuştur. VPI, bu kanallardan oluşmaktadır.
+PVC Özeti
+Düzenle
+PVC Ayarı
+PVC türü
+Hizmet Kategorisi
+Lütfen ethernet kablonun WAN bağlantı noktasına düzgün bağlandığını kontrol edin.
+Otomatik mod
+Bant genişliği sınırı geçerli değil.
+QoS Türü
+Kullanıcı Tanımlı Öncelik
+Kullanıcı tanımlı QoS kuralları
+Lütfen R6900 maneül olarak yeniden başlatın.
+Internet’e tekrar bağlan
+Hard diski yönlendiriciden güvenli şekilde ayırmak için ekranınızın sağ üst köşesindeki USB simgesine tıklayın.
+Sistemi fabrika varsayılan ayarlarına geri getirmek ve bağlantı türünüzü otomatik algılamayı etkinleştirmek için, lütfen <a href="" onclick="gotoRestoreSetting();">buraya</a> tıklayın.
+Rota hedef ağı veya ana bilgisayarı demektir. Yani, 「192.168.123.11」 gibi bir ana bilgisayar adresi ya da 「192.168.0.0」gibi bir ağ adresi olabilir.
+Ağ kimliği ve alt ağ kimliğinin kaç bit olduğunu gösterir. Örneğin: noktalı ondalık ağ maskesi 255.255.255.0 ise, ağ maskesi bitleri 24'tür. Hedef bir ana bilgisayar ise, ağ maskesi bitleri 32 olmalıdır.
+Paketlerin yönlendirildiği ağ geçidi IP adresi demektir. Belirtilen ağ geçidi önce erişilebilir olmalıdır. Ağ geçidi statik rotasını önceden ayarlamış olmanız gerekiyor demektir.
+Metrik, ağ mesafesi değeridir
+Rota kuralının uygulandığı ağ arabirimi.
+IPTV uygulamasını (VLC gibi) birkaç bilgisayarda aynı anda çalıştırmak için bu fonksiyonu kullanın. Bu fonksiyon çok noktaya UDP akışlarını tek noktaya HTTP akışlarına dönüştürebilir. IPTV uygulaması için atamak istediğiniz portu (4000 gibi) girin, daha sonra IPTV akışlarını izlemek amacıyla çalma listesine adresi girmek için bu formatı kullanın. http://[Yönlendirici IP]:[Udpxy portu]/[protokol]/[kanal IP adres]:[kanal portu] (http://192.168.1.1:4000/udp/239.255.1.1:5000 veya http://192.168.1.1:4000/rtp/239.255.1.2:5000 gibi).Bu fonksiyonu devre dışı bırakmak için 0 (sıfır) girin.
+Dolaşım yardımcısı
+Bu sayfa ayrıntılı yönlendirme durumunu gösterir.
+Yönlendirici modu
+Router mode: Only certain ISPs use this mode. IYönlendirici modu: Sadece bazı ISP'ler bu modu kullanır. Yönlendirici modunda, kablosuz ADSL yönlendirici IP adresini ve ISP'niz tarafından verilen altağ maskesini belirlemeniz gereklidir. Aynı zamanda DHCP sunucusunu engellemeniz ve bilgisayarınızın IP adresini manüel olarak ayarlamanız gerekebilir.
+DHCP rotaları kullanılsın mı
+Yayın fırtına kontrolü (Mbps):
+Bu özelliği etkinleştirerek ağ trafiğini kontrol edin ve ağın yavaşlamasına ya da dengesiz ağ oluşumuna sebep olabilecek yayın fırtınasından kaçının. Bu alanın menzili 1 ila 1024 arasındadır. Bu özelliği engellemek için 0 (sıfır) girin.
+Çok yönlü fırtına kontrolü (Mbps):
+Bilinmeyen çok yönlü fırtına kontrolü (Mbps):
+Bilinmeyen tek yönlü fırtına kontrolü (Mbps):
+Çoğa gönderim rotası etkinleştirilsin mi
+Statik Rota Listesi
+Statik rotalar etkinleştirilsin mi
+Bu işlev R6900 yönlendiricisine rota kuralları eklemenizi sağlar. Aynı Internet bağlantısını paylaşmak için R6900 araksındaki birkaç yönlendiriciye bağlanıyorsanız kullanışlıdır.
+Ağ Geçidi
+Ağ/Ana Bilgisayar IP'si
+Ağ Maskesi
+Metrik
+IPTV bağlantı noktası numarası, Çift WAN LAN bağlantı numarasıyla aynıdır.
+UDP Proxy (Udpxy)
+Eşitleme Sunucusu etkinleştirilemedi.
+Önce AiCloud 2.0'ı (Cloud Disk ve Smart Access) etkinleştirmek için buraya tıklayın.
+Klasör
+<b>İki yönlü eşleştirme:</b> Davet edenin ve davet edilenin seçilen klasörlerinde saklana dosyalarını senkronize edin. Senkronize edilen klasörlerde saklanan tüm dosyalara hem Davet Eden hem de Davet Edilen erişebilir.
+<b>İstemciden Sunucuya:</b> Davet edilenin dosyaları Davet Edenin senk klasörüne yüklemesine izin verilmiştir. Ancak, Davet edilen Davet Edenin senk klasörüne kaydettiği dosyalara erişmesine izin verilmez.
+<b>Sunucudan İstemciye:</b> Davet eden tarafından senk klasörüne kaydedilen dosyalar Davet edilen tarafından indirilebilir. Ancak, Davet edilenin dosyaları Davet Edenin senk klasörüne yüklemesine izin verilmez.
+İki yönlü eşleştirme
+İstemciden Sunucuya
+Sunucudan İstemciye
+Güvenlik Kodu
+Her AMPDU için RTS kullan
+Disk güvenle kaldırılabilir
+Bu diski gerçekten kaldırmak istiyor musunuz?
+Diski Güvenle Kaldır
+Ağ yeri (samba) hizmetinin hesap ve iznini ayarlayın.
+Kopya veya aynı VPI ve VCI ayarları.
+Sistem şimdi yeniden başlatılıyor! Lütfen bekleyin, R6900 ana sayfasına yeniden yönlendireceğiz.
+ölçek
+saniye
+Güvenlik düzeyi
+Tümünü seç
+Erişim Noktasını seçin.
+APN hizmetini seçin.
+DHCP istemcisini seçin.
+Aygıt adını seçin.
+DHCP istemcisinin IP adresini seçin.
+DHCP istemcisinin MAC adresini seçin.
+Internet hizmetini seçin.
+Hizmet adını seçin.
+USB AygıtıSeç
+Kablosuz istemcinin MAC adresini seçin.
+Posta gönder
+Servers Center
+Sunucu Adı
+Sync Server
+Ayar Dosyası karşıya yükleme işlemi başarısız. Yanlış Ayar Dosyası veya hatalı aktarımdan kaynaklanabilir. Lütfen Ayar Dosyası doğrulamasını kontrol edip yeniden deneyin.
+Ayarlar karşıya yükleniyor! Lütfen 60 saniye kadar bekleyin.
+Yükleme ve İndirme hızı sınırlarını ayarla
+O anki tüm ayarlar silinir ve yönlendirici fabrika varsayılan ayarlarına geri yüklenir.\n
+Devam etmek istediğinizden emin misiniz?
+R6900 varsayılan Yerel Ağ IP'si 192.168.1.1'dir.\nDaha sonra ayar sayfasına geri dönemezseniz, lütfen bilgisayarınızın IP yapılandırmasını yenileyin.
+Yönlendiriciyi fabrika varsayılan ayarlarına geri yükleyip o anki tüm ayarları silmek için [Geri yükle]'nı tıklatın. Yönlendirici yeniden başlatılıncaya kadar bir süre bekleyin.
+Fabrika varsayılan ayarları
+varsayılan değer
+R6900 yönlendiricisinin o anki ayarlarını bir dosyaya kaydetmek için [Kaydet]'i tıklatın. (Not: O anki ayarlar dosyaya kaydedilirken, aynı zamanda anlık belleğe de kaydedilir.)
+Ayarları kaydet
+Bu işlev R6900 yönlendiricisinin o anki ayarlarını bir dosyaya kaydetmenizi ya da ayarları dosyadan yüklemenizi sağlar.
+Dosya biçimi veya yol geçersiz!
+Ayar dosyasının yol ve adını belirtin. Dosyayı R6900 yönlendiricisine yazmak için [Karşıya Yükle]'yi tıklatın. Lütfen R6900 yeniden başlatılıncaya kadar 60 saniye bekleyin.
+Ayarları geri yükle
+Ayarlar
+Aygıt Adı
+Dosya şifrelemeniz için uygun olan doğru dil ayarlarını seçin.
+Karakter FTP Server ayarlanır
+İngilizce
+Geleneksel Çince
+Basitleştirilmiş Çince
+Rus
+Çek
+Maksimum eşzamanlı bağlantısı sayısı
+0 ila 999 arasında bir değer girin. Varsayılan değer herhangi bir yükleme sınırı olmadığını gösteren 0'dır.
+Maksimum Yükleme Hızı
+Tohumlama fonksiyonunu etkinleştirmenize veya devre dışı bırakmanıza izin verir. R6900 indirme işlemi tamamlanana kadar açık kalır.emains open until downloading process is completed.
+Tohumlama
+Çalışma Grubu
+tümünü göster
+Tüm yuvaları görüntüle
+Dinleyen sunucu yuvalarını görüntüle
+RAW yuvaları
+TCP yuvaları
+UDP yuvaları
+UNIX yuvaları
+Smart Access
+Ağ Yeri (Samba) ağa bağlı bilgisayarlara ve aygıtlara uzaktan erişilmesini etkinleştirir. Akıllı Erişim, uyku modundaki bilgisayarı da uyandırabilir.
+WOL (Wake-On-LAN) özelliği ağdaki herhangi bir aygıta bağlı bulunan bir bilgisayarı uyandırmanıza olanak sağlar.
+<a id="faq3" href="http://www.asus.com/support/FAQ/1009775" target="_blank" style="font-weight: bolder;text-decoration:underline;">WOL</a> nedir?
+Yansıma Algılama
+AkıllıBağlanİşlevini Etkinleştir
+Akıllı Bağlan ayarlarını aşağıda yapılandırın.
+Arayüz Seçimi ve Denetim Yordamları
+Akıllı Bağlan Kuralı
+STA Seçimi İlkesi
+Sayı
+Bekleme Süresi
+Pencere Süresi
+Döndürme Tetikleyici Koşulu
+Bant Genişliği Kullanımı
+Smart Sync
+USB ile takılı depolamanın <a style="font-weight: bolder;text-decoration: underline;" href="https://www.asuswebstorage.com/navigate/" target="_blank">ASUS Webstorage</a> gibi bulut hizmetleri ve diğer AiCloud 2.0 destekli ağlarla eşitlenmesini etkinleştirir.
+Smart Sync (Akıllı Eşitleme) işlevini etkinleştirir. Adım adım talimatlar için şu kısma gidin:
+Akıllı senki başlatmak için, bir <a style="font-weight: bolder;text-decoration: underline;" href="https://www.asuswebstorage.com/" target="_blank">ASUS webstorage</a> hesabı açmanız, ardından Bulut Diskini sve Akıllı Senki ON (AÇIK) konumuna getirmeniz gereklidir. Bu yönlendiriciye bir USB depolama aygıtı kurduğunuzdan emin olun.
+AiCloud'u başlatın, bulut diskinde ASUS WebStorage ile senkronize etmek istediğiniz belirli bir klasörü seçin, ardından sonraki talimatları yerine getirin.
+Kaynak veya hedef IP adresi için şunları yapabilirsiniz :<p>(a) \"192.168.122.1\" gibi özel bir IP adresi girmek;<p>(b) \"192.168.123.*\" veya \"192.168.*.*\" gibi bir alt ağ veya aynı IP havuzu içine IP adreslerini girmek veya;<p>(c) tüm IP adreslerini \"*.*.*.*\" olarak girmek<p>MAC adresi için format, aktarım sırasına göre sütunlarla (:) ayrılmış iki tane on altılı sayıdan oluşan altı gruptur (örnek, 12:34:56:aa:bc:ef )
+Sinyal-gürültü oranı grafiği, DSL bağlantısının kararlılığını belirlemede yararlı olabilen klasik SNR’yi (Sinyal-Gürültü Oranı) gösterir. Transmission(Gönderim) / Reception(Alım), taşıyıcı başına kaç bit gönderildiğini/alındığını gösterir.
+Veriler toplanıyor, Spektrum grafiği şu süre içinde görüntülenecek (saniye):
+Bu grafikler şu süre içinde güncellenecek (saniye):
+Kaydet/Yeniden Başlat
+Sıcak Bekleme
+Sıcak Bekleme modu etkinleştirildiğinde, birincil arabirimin arızalanmasıveya erişilemez olmasıdurumunda, sistem, bağlantıyıhızla başka bir arabirime geçirir.
+Sistem, beklemedeki WAN'ıbağlıdurumda tutacak ve algılama aralığınışu değere düşürecektir
+Yeniden Deneme Aralığı
+Detect Interval
+Yeniden Deneme Sayısı
+İstemci durumu
+Internet durumu
+Yazıcı durumu
+Harici USB disk durumu
+AiCloud kullanmak için :
+Klasörlerinizi nasıl paylaşacağınıza karar verin.
+ASUS DDNS hizmetleriyle etki alanı adınızı oluşturma.
+FTP sunucum paylaşılıyor.
+sınırsız erişim hakkı
+sınırlı erişim hakkı
+yönetici hakları
+Yapılandırma başarılı.
+Destek
+Anahtarlama frekansı
+Switch Control
+R6900 geçiş kontrolünü ayarlama.
+şalter sayfalar:
+Sync Server, bulut diskinizi diğer AiCloud 2.0 hesabıyla eşitlemenizi sağlar.  Başkalarına yönelik bir davet oluşturmak için formu doldurun.
+Aşağıdaki davet formunu doldurun.
+Güvenlik kodunu hangi yolla almak istediğinizi seçin.
+Bir davet oluşturmak için <b>Oluştur</b> öğesine tıklayın.
+Davetin içeriklerini kopyalayıp başkalarına e-postayla gönderin.
+Smart Sync kullanırken bir ISS güvenlik duvarı sorunuyla karşılaşırsanız, Internet Servis Sağlayıcınızla (ISS) iletişime geçin.  Gelişmiş kullanıcılar, Smart Sync'i başkalarıyla kullanmak için aşağıya belirli bir "Ana bilgisayar adı" girebilir.
+Otomatik oluştur
+Davet Oluşturucu
+Merhaba, dosyalarımızı Smart Sync ile paylaşalım!
+Eşitleme açıklaması
+Eşitleme yolu
+Eşitleme kuralı
+Lütfen kablolu veya kablosuz bağlantıaracılığıyla aygıtınızı ASUS yönlendiriciye bağlayın ve bu daveti onaylamak için aşağıdaki bağlantıya tıklayın.
+Eşitleme Listesi
+Yerel eşitleme klasörü
+Yönlendirici oturum açma parolasını, zaman dilimini ve NTP sunucu ayarlarını değiştirin.
+Temel Yapılandırma
+Yerel Ağ
+Çeşitli
+Telecommunications Standards
+WAN Arabirimini Sonlandır
+Zaman Planlama
+Time Machine
+Apple Time Machine nasıl kullanılır?
+Yedeklemeye başla
+Yedekleme Yolu
+Time Machine’i etkinleştirin
+Time Machine işlevini etkinleştir
+Time Machine SSS
+İlk yedekleme için bir Ethernet bağlantısı kullanmanızı öneririz.
+İlk yedekleme, OSX biriminizin boyutuna bağlı olarak biraz zaman alabilir. Gece boyu tamamlanması için ilk yedeklemeyi akşam başlatmayı yeğleyin.
+Yedekleme işleminiz askıda kalırsa, diski onarmak için lütfen bir disk yardımcı programı kullanın.
+Bir hedef disk bölümü seçin
+Time Machine öğreticisi
+İsterseniz kullanım sınırlamasını ayarlayın ve [ Uygula ] düğmesine tıklayın
+Time Machine Birim Boyutu
+Yayın alımı
+Gelen internet paketleri
+Kablolu ağdan gelen paketler
+Kablosuz ağdan gelen paketler
+Giden internet paketleri
+Kablolu ağdan giden paketler
+Kablosuz ağdan giden paketler
+Aktarım
+Kablolu
+Kablosuz
+Toplam
+Toplam alan
+Toplam Trafik
+Enable Traffic Statistic allows you to record networking traffic information of client device and analyse traffic usage by client or apps.
+Trafik Monitörü aşağıdaki gelen veya giden paketleri izlemenize olanak sağlar :
+<b>NOT :</b> İnternetten gelen paketler kablolu ve kablosuz aygıtlara düzgün bir şekilde aktarılır.
+NAT Hızlandırma etkinleştirildiğinde, kablolu ağ trafiği işlemciyi atlayabilir; bu, Trafik Monitörünün doğruluğunu etkileyebilir.
+Traffic Analyzer
+Tünel MTU
+Tünel TTL
+Eniwetok, Kwajalein
+Midway Adası, Samoa
+Hawaii
+Alaska
+Pasifik Zamanı (ABD, Kanada)
+Dağ Zamanı (ABD, Kanada)
+Arizona
+Chihuahua, La Paz, Mazatlan
+Saskatchewan
+Guadalajara, Mexico City
+Monterrey
+Orta Amerika
+Doğu Zamanı (ABD, Kanada)
+Indiana (Doğu)
+Bogota, Lima, Quito
+Atlantik Zamanı (Kanada)
+La Paz
+Caracas
+Santiago
+Newfoundland
+Brasilia
+Buenos Aires, Georgetown
+Grönland
+Orta Atlantik
+Azorlar
+Cape Verde Adaları
+Greenwich Ortalama Zamanı
+Dublin, Edinburgh, Lizbon, Londra
+Casablanca
+Monrovia
+Belgrad, Bratislava, Budapeşte
+Ljubljana, Prag
+Saraybosna, Üsküp
+Varşova, Zagrep
+Kopenhag, Stockholm, Oslo
+Helsinki
+Madrid, Paris
+Amsterdam, Berlin, Brüksel
+Roma, Viyana, Bern
+Batı orta Afrika
+Vilnius, Bükreş, Sofya
+Kahire
+Riga, Tallinn
+Minsk
+Kaliningrad
+Aina, İstanbul
+Kudüs
+Harare, Pretoria
+Kiev
+Moskova, St. Petersburg
+Volgograd
+Kuveyt, Riyad
+Nairobi
+Bağdat
+Tahran
+Abu Dhabi, Muscat
+Tiflis, Erivan
+Izhevsk, Samara
+Bakü
+Kabil
+Yekaterinburg
+İslamabad, Karaçi, Taşkent
+Kalküta, Chennai
+Mumbai, Yeni Delhi
+Katmandu
+Astana, Dakka
+Sri Jayawardenepura
+Almatı
+Yangon
+Bangkok, Hanoi, Cakarta
+Novosibirsk
+Krasnoyarsk
+Pekin, Hong Kong
+Chongqing, Urumqi
+Kuala Lumpur, Singapur
+Taipei
+Perth
+Ulaan Batur
+Irkutsk
+Seoul
+Osaka, Sapporo, Tokyo
+Yakutsk
+Darwin
+Adelaide
+Canberra, Melbourne, Sidney
+Brisbane
+Hobart
+Vladivostok
+Guam, Port Moresby
+Solomon Ad.
+Yeni Kaledonya
+Fiji, Marshall Ad.
+Magadan
+Auckland, Wellington
+Nuku'alofa
+Anadyr, Petropavlovsk-Kamchatsky
+Chokurdakh, Srednekolymsk
+Mevcut güncelleme yok
+AP modunda, R6900 Internet işlevini devre dışı bırakır.
+Yükleme kaldırılıyor
+Bir çevrimiçi güncelleme var
+Yükseltiliyor...
+Yükleme Bant Genişliği
+Yükleme Önceliği
+Gönderilen Veri/Sn.
+Gönderilen Veri
+iTunes ve UPnP Medya sunucusunu ayarlayın.
+R6900, UPnP standartlarını desteklemektedir. Etkinleştirebilir ve PS3 veya dijital medya oynatıcı gibi diğer UPnP aygıtlarının USB diskteki multimedya dosyalarına erişmelerine izin verebilirsiniz.
+URL anahtar kelime
+Lütfen USB Uygulamasını kontrol edin
+Disk kontrol ediliyor
+USB Disk için daha ayrıntılı ayarlar.
+Internet bağlantısı yok.
+Seçili bölüm kontrol ediliyor
+Uygulama hazırlanıyor
+Çalışan uygulama durduruluyor
+Çalışan takas dosyası durduruluyor
+Takas dosyası oluşturuluyor
+USB Modem devre dışı.
+Internet'e bağlanılamadı.
+Takas dosyası oluşturulamadı.
+Uygulama yüklenemedi.
+USB depolama aygıtı bağlanamadı.
+USB depolama aygıtı yanıt vermiyor.
+Uzak sunucu yanıt vermiyor.
+Uygulama yükseltme işlemi sırasında bilinmeyen bir hata oluştu.
+USB depolama aygıtı çıkarılamadı veya kaldırılamadı.
+Uygulama yükseltilemedi. Bunun nedeni iletimdeki yanlış bir dosya veya hata olabilir.
+Başlatılıyor, lütfen bekleyin
+Aygıt bulunamadı.
+Bölümlendiriliyor
+USB BağlantıPaylaşma
+USB bağlantıpaylaşmayıkullanmak için lütfen aşağıdaki adımlarıtamamlayın:
+Android telefonunuzu bir USB kablosuyla ASUS yönlendiriciye bağlayın.
+USB Aygıtını[Android Telefon] olarak seçip [Uygula] düğmesine tıklayın.
+Android telefonunuzda USB BağlantıPaylaşmayıelle etkinleştirin.
+Uygulamanın yüklemesi USB depolama aygıtından kaldırılıyor...
+USB işlevi engellendi
+Kablosuz yönlendiricinin IP adresini algılamak için <a href=\"http://dlcdnet.asus.com/pub/ASUS/LiveUpdate/Release/Wireless/Discovery.zip\" target=\"_blank\" style=\"font-family:Lucida Console;text-decoration:underline;color:#FC0;\">Device Discovery Utility</a> (Aygıt Bulama Programı) yükleyin ve kullanın.
+Kullanıcı Adı ve Prola
+Kullanıcı tarafından belirlenen Hizmet Kalitesi kuralları aşağıya doğru açılan listeden ağ uygulamalarını veya cihazlarını beş seviyede önceliklendirebilirsiniz. Öncelik seviyesine bağlı olarak, Hizmet Kalitesi veri paketlerini göndermekte aşağıdaki yöntemleri kullanır:<ul><li>Paketlerin İnternete gönderildiği sırayı ifade eden aboneden yukarı akış ağ paketlerinin sırasını değiştirin.</li><li>Yüksek öncelikli paketlerin aktarımını sağlamak için düşük öncelikli paketler göz ardı edilir. Daha yüksek öncelikli yukarı akım paketi daha yüksek öncelikli aşağı akım paketine neden olacaktır.</li><li>Yüksek öncelikli uygulamalardan gönderilen hiçbir paket yoksa İnternet Bağlantısının tam aktarım hızı düşük öncelikli paketler için uygundur.</li></ul>
+<ul><li>QoS'i etkinleştirin, ardından yükleme ve indirme hızı sınırlarını ayarlayın.</li></ul>
+Aktarılan
+[Aktarılan] sütunda, özel bir porta atanan hizmet için özel öncelik oluşturmak için ağ trafik sınırını (KB cinsinden) bir özel hizmete ayarlayın. Örneğin, eğer iki ağ istemcisi PC 1 ve PC 2'nin ikisi de İnternete (port 80'de ayarlı) giriyorsa, fakat PC 1 bazı indirme görevlerin dolayı ağ trafiği sınırını aşmamışsa, PC 1'e daha düşük öncelik verilecektir. Transferred (Aktarılan) sütun bir oturum için yukarı akım ve aşağı akım trafiğini (giden ve gelen ağ trafiği) ifade eder. Eğer trafik sınırını ayarlamak istemiyorsanız, boş bırakabilirsiniz.
+QoS'i etkinleştirin, ardından kullanıcı tanımlı kuralları ayarlayın.
+Varsayılan olarak, karşıya yükleme ve indirme bant genişliğine yönelik öncelik "Düşük" şeklindedir. Herhangi bir bant genişliği önceliği kuralı yoksa, hem karşıya yükleme hem de indirme bant genişliği için öncelik "Düşük" şeklindedir.
+Yardımcı Program
+Öğretici videolar bul
+Öğretici videoyu açmak için tıklatın.
+Bu değer şundan büyük olmalıdır
+Yayın Desteği
+LAN’dan VPN İstemcisine
+VPN İstemcisinden LAN’a
+İki yönlü
+İstemci IP adresi
+* VPN sunucu ayarları ile karışıyor:
+* Yönlendiricinin DHCP IP havuzu ile karışıyor:
+* Yönlendiricinin DHCP statik IP adresi ile karışıyor:
+* Yönlendiricinin LAN IP adresi ile karışıyor:
+VPN Sunucusunu etkinleştir
+OpenVPN Sunucusunu etkinleştir
+PPTP VPN Sunucusunu etkinleştir
+OpenVPN yapılandırma dosyasını dışarı aktar
+VPN sunucusunda en fazla 10 istemciye izin verilmektedir!
+Maksimum 10 istemci
+Sunucu modu
+Ağ Yerleştirme (Samba) Desteği
+DNS’yi istemcilere tanıt
+Yetkilendirme Modu
+Yalnızca Kullanıcı Adı / Şifre Yetkl.
+Ek HMAC yetkilendirme
+İstemci <-> İstemci İzin Ver
+İstemci Adresi Havuzu
+Yalnızca belirlenen istemcilere izin ver
+Sıkıştırma
+IP/Yönlendirme çakışması
+Özel Yapılandırma
+R6900, Sertifika Yetkisi anahtarıyla bir .ovpn dosyasını otomatik olarak oluşturacaktır. .ovpn dosyasını, OpenVPN sunucusuna bağlanan tüm kullanıcılara bir kullanıcı adı ve şifresiyle sağlayabilirsiniz.
+OpenVPN sunucu ayarlarını değiştirmek için şuraya gidin:
+Belirli bir bağlantı türü için özel bir OPVN dosyası sağlamak amacıyla OpenVPN sunucusunun varsayılan ayarlarını değiştirebilirsiniz.
+DHCP’den ayır
+Şifreleme anahtarı
+Yönlendirme çakışması! <p>Lütfen Gelişmiş Ayar sayfasından istemcinin IP adresi ayarlarını veya System (Sistem) günlüğünde yönlendirme tablosunu kontrol edin.
+Sertifika Kimlik Doğrulama / Sunucu sertifikası / Sunucu Anahtarı alanı hatası! <p>Lütfen Gelişmiş Ayar sayfasında Anahtarlar ve Sertifika içeriklerini kontrol edin.
+Diffle Hellman parametreleri alanı hatası! <p>Lütfen Gelişmiş Ayar sayfasında Anahtarlar ve Sertifika içeriklerini kontrol edin.
+OpenVPN sunucu arka plan yordamı başlayamadı.  <p>Lütfen Gelişmiş Ayar sayfasında aygıt ortamınızı veya içerikleri kontrol edin.
+Kendi anahtarınızı kullanmak için, ayarları düzenlemek amacıyla sarı bağlantıya tıklayın.
+OpenVPN ile ilgili hata mesajları için <a style="font-weight: bolder;text-decoration:underline;" class="hyperlink" href="Main_LogStatus_Content.asp">Sistem Günlüğü</a> kısmına başvurun.
+OpenVPN sunucusunun gelişmişayarlarınıyapılandırmadan önce, bu gelişmişayar seçeneklerinin, istemci aygıtlardaki OpenVPN yazılımıyla uyumlu olduğundan emin olun.
+OpenVPN sunucusunun ayarları ilklendiriliyor; VPN istemcilerinin bağlantı kurmasından önce sunucunun kurulumu tamamlamasını sağlamak için lütfen birkaç dakika bekleyin.
+Arayüz Tipi
+Sertifika Yetkilisi
+Diffie Hellman parametreleri
+Yalnızca
+bloğunun içeriğini (bu iki satır dahil) yapıştırın.
+Sınır: Alan başına 3999 karakter
+Sunucu Sertifikası
+Sunucu Anahtarı
+Statik Anahtar
+Anahtarlar ve Sertifikasyon
+Yerel / uzak uç nokta adresleri
+Elle yapılandırılmalıdır.
+Anahtarlar ve Sertifikasyonun içerik düzenlemesi.
+Yenileme Aralığı
+LAN’ı istemcilere it
+Internet trafiğini yeniden yönlendirmek için istemcileri yönlendir
+DNS’ye yanıt ver
+İstemciye Özel Seçenekleri Yönet
+VPN Alt Ağı / Ağ Maskesi
+TLS Yeniden Anlaşma Zamanı
+CA dosyası al
+.ovpn dosyası al
+CA dosyası alın ya da .ovpn dosyasını elle düzenleyin.
+Kablosuz yönlendirici şu an özel bir WAN IP adresi kullanıyor (192.168.x.x, 10.x.x.x ya da 172.16.x.x). VPN sunucusunu başlatmadan önce lütfen DDNS hizmetini yapılandırın.
+ASUSWRT aynı anda yalnızca bir VPN sunucusu bağlantısını destekler. \"OpenVPN sunucusunu\" etkinleştirirseniz \"PPTP sunucusu\" otomatik olarak devre dışı bırakılır. VPN sunucusunu etkinleştirmek istediğinizden emin misiniz?
+Genel bir ağ üzerinden özel kaynaklara güvenli biçimde erişmek amacıyla bir VPN sunucusuna bağlanmak için sıklıkla VPN (Sanal Özel Ağ) istemcileri kullanılır.
+Set üstü cihazlar, akıllı televizyonlar ve Blu-ray çalarlar gibi bazı aygıtlar VPN yazılımını desteklemez.
+ASUSWRT VPN özelliği, her bir aygıta VPN yazılımı kurmak zorunda kalmadan ev ağındaki tüm aygıtlara VPN erişimi sağlar.
+Bir VPN bağlantısı başlatmak için lütfen aşağıdaki adımları izleyin:
+Profil ekleyin
+Bir VPN bağlantısı türü seçin
+VPN sağlayıcınız tarafından verilen VPN kimlik doğrulama bilgilerini girip bağlanın.
+VPN İstemcisi
+Engel
+R6900 Ethernet WAN ayarlarınıyapılandırın.
+Varsayılan Yol
+WAN devre dışı.
+Ethernet
+WAN dizini
+Arabirim
+WAN Arabirimi
+WAN IP'si
+IP Evrensel Ayarlar
+IPv4 Ayarı
+IP sürümü
+R6900, Ethernet WAN, Mobil GenişBant veya WAN olarak LAN aracılığıyla Internet bağlantısıkurabilir. Internet bağlantınıza yönelik arabirimiWAN Interface (WAN Arabirimi)açılır listesinden seçin. [Çift WAN] sekmesinde çift WAN bağlantısınıetkinleştirebilir ve WAN arabirimlerinin önceliklerini değiştirebilirsiniz.
+PPP Kimlik Doğrulama
+PPP Ayarı
+WAN Ayarına gidin.
+Sıcak Beklemeyi etkinleştirmek Mobil Geniş Bandı etkinleştirecektir. Etkinleştirmek istediğinizden emin misiniz?
+WAN Türü
+EAP Kimliği
+EAP Yöntemi
+EAP-TLS
+802.1X Kimlik Doğrulama
+Her Zaman Açık (Önerilen)
+İstek Üzerine Bağlan (
+dakika boşta kalırsa kapat)
+Elle Bağlan
+Zamanlayıcıyı Etkinleştir
+Enable Ping to Internet
+TCP MSS Seçeneği
+byte
+VLAN ID
+Beyaz Liste
+WEP veya TKIP Şifreleme seçmek WPS işlevini devre dışıbırakır. Devam edilsin mi?
+SSID bilgisini gizlemek WPS işlevini devre dışıbırakır. Devam edilsin mi?
+Kimlik doğrulama yöntemi olarak Açık Sistem (güvenlik yok) ayarınıseçmek istediğinize emin misiniz?
+Lütfen ağ anahtarını girin
+Kablosuz radyosu
+Bu kısımda, RADIUS sunucusu üzerinden kablosuz istemcilerin kimliklerini doğrulamak için ek parametreler ayarlamanız sağlanır. "Kablosuz - Genel"de "Kimlik Doğrulama Yöntemi"ni "WPA-Enterprise / WPA2-Enterprise" olarak seçtiğinizde gereklidir.
+kablosuz kimlik doğrulaması ve dinamik WEP anahtarı türetme için RADIUS sunucusu IP adresi.
+Sunucu IP Adresi
+RADIUS sunucusuna bağlanma parolası.
+Bağlantı Gizliliği
+RADIUS sunucusu bağlantısı için UDP bağlantı noktası numarası.
+Sunucu Bağlantı Noktası:
+Bu alanda, kablosuz istemcilerin kimlik doğrulama yöntemleri etkinleştirilir.
+Kimlik Doğrulama Yöntemi
+En iyi kablosuz sinyalini sağlamak için, yönlendiricinizi Kanal 2’ye ayarlamanızı öneririz. Yönlendiriciyi Kanal 2’ye ayarlamak için lütfen Tamam düğmesine tıklayın. Aksi halde lütfen İptal Et düğmesine tıklayın.
+Yerel yönetmeliklerden dolayı, Kanal 1 en iyi kablosuz kapsamayı sağlayamaz. Kanal 1’i kullanmaya devam etmek isterseniz lütfen Tamam düğmesine tıklayın. Aksi halde lütfen İptal Et düğmesine tıklayın.
+En iyi kablosuz sinyalini sağlamak için, yönlendiricinizi Kanal 10’ye ayarlamanızı öneririz. Yönlendiriciyi Kanal 10’ye ayarlamak için lütfen Tamam düğmesine tıklayın. Aksi halde lütfen İptal Et düğmesine tıklayın.
+Yerel yönetmeliklerden dolayı, Kanal 11 en iyi kablosuz kapsamayı sağlayamaz. Kanal 11’i kullanmaya devam etmek isterseniz lütfen Tamam düğmesine tıklayın. Aksi halde lütfen İptal Et düğmesine tıklayın.
+Kablosuz bağlantı kullanımı için radyo kanalı.
+Daha geniş bir kanal bant genişliğinin seçilmesi size daha yüksek bir iletim hızı sağlar.
+Kanal bant genişliği
+Bu alanda, kablosuz istemcinin desteklemesi gereken temel hızlar gösterilir.
+Temel Hız Ayarı:
+Bu alan iletim hızını seçmenizi sağlar. En iyi performansı elde etmek için [Otomatik] önerilir.
+Veri Hızı(Mb/sn):
+Köprü (veya WDS- Wireless Distribution System) fonksiyonu R6900'nuzun bir erişim noktasına kablosuz olarak bağlanmasına olanak sağlar. WDS ayrıca bir tekrarlayıcı modu olarak da düşünülebilir. Fakat bu yöntemle erişim noktasına bağlanan cihazlar erişim noktasının orijinal kablosuz hızının sadece yarısını kullanabileceklerdir.
+işlev yalnızca [Open System/NONE, Open System/WEP] güvenlik kimlik doğrulama yöntemini desteklemektedir.
+WDS'nin kablosuz sinyalini genişletmek için lütfen şu adımı izleyin :
+[WDS Only(Sadece)] veya [Hybrid (Karma )] modunu seçin ve Uzak AP Listesindeki AP'lerin MAC adresini ekleyin.
+Bağlanmak istediğiniz bu kablosuz yönlendiricinin ve AP'nin aynı kanalı kullandığından emin olun.
+AP'nin WDS yönetim ara yüzünde AP Listesindeki AP MAC adresini ve kablosuz yönlendiricinin MAC adresini girin.
+En iyi performansı almak için lütfen Gelişmiş Ayarlar> Kablosuz > Genel kısmına gidin ve ağdaki her yönlendiriciye aynı kanal bant genişliğini, kontrol kanalını ve genişletme kanalını atayın.
+Şu an Otomatik kanal bant genişliğiı kullanıyorsunuz. Değiştirmek için <a style="font-size:13px;font-family: Lucida Console;color:#FC0;text-decoration:underline;" href="/Advanced_Wireless_Content.asp?af=wl_bw">buraya</a> tıklayın.
+Şu an Otomatik kanalı kullanıyorsunuz. Değiştirmek için <a style="font-size:13px;font-family: Lucida Console;color:#FC0;text-decoration:underline;" href="/Advanced_Wireless_Content.asp?af=wl_channel">buraya</a> tıklayın.
+Kablosuz Profesyonel Ayarı, kablsosuz için ek parametreler ayarlamanızı sağlar. Ancak, varsayılan değerler önerilir.
+WPS (Wi-Fi Korumalı Kurulum) bir kablosuz ağın kolay ve güvenli bir şekilde kurulmasını sağlar. WPS'yi burada PIN kodu veya WPS düğmesi aracılığıyla yapılandırabilirsiniz.
+Bant1 kanallarınıda içermek üzere kanalıotomatik olarak seç
+DFS kanallarınıda içermek üzere kanalıotomatik olarak seç
+Bant genişliğini 40MHz’e artırmak için Genişletme kanalı ve Kontrol kanalı birleştirilecektir.
+Uzatma Kanalı
+Çoğa gönderim iletim hızını seçin.
+Çoğa Gönderim Hızı(Mb/sn)
+Uzak AP Listesi
+Ağ adı veya SSID, kablosuz ağı tanımlayan benzersiz bir isimdir. WiFi cihazları alan içindeki tüm ağları otomatik olarak algılar. Kablosuz bağlantınız için 32 karaktere kadar bir kimlik dizisi belirleyin.
+CE düzenlemelerine uygun olarak, İletim Gücü değeri 100mW'yu geçmemelidir.
+İletim Gücü daha iyi sinyal performansı için iletim gücünü artırmanızı sağlar ve enerji tasarrufu için çıkış gücünü azaltır. İletim gücü ayarları yerel düzenlemeleri karşılamak için dinamik olarak ayarlanan gerçek çıkış ile en fazla 100mW'ye çıkabilir. İletim Gücünün maksimum değeri CE gereksinimlerine uygun şekilde 100mW'dur.
+Aktarma gücü için yeteneği ayarlayın. Maksimum değer %100’dür.
+İletim gücünü ayarlama
+Kablosuz ağınızda veri göndermek için WEP anahtarınız ayarlayın.
+WEP Anahtarı 1:
+WEP Anahtarı 2:
+WEP Anahtarı 3:
+WEP Anahtarı 4:
+Verileri şifrelemek için WEP Şifrelemesini etkinleştirme.
+WEP Şifrelemesi:
+Kablosuz iş çıkarma yeteneğini en yüksek seviyeye çıkarmak için 40MHz eşlik eden bant aralığını kullanır. Eğer kablosuz kararlılığı ile ilgili sorunlar yaşıyorsanız, lütfen varsayılan modu seçin (20MHz).
+Etkinleştir
+Devre Dışı Bırak
+Verileri şifrelemek için WPA Şifrelemesini etkinleştirin.
+IEEE 802.11h desteği
+Ack gizlemesini optimize edin
+Bir satırda gizlenecek olan maksimum ack sayısını optimize edin.
+AMPDU kümelenmesini optimize edin
+Bir AMPDU\'da maksimum mpdus sayısını optimize edin.
+Kablosuz Köprü işlevini devre dışı bırakmak için [AP Only (Yalnızca AP)] modunu seçin. Yerel kablosuz istasyon bağlantısını devre dışı bırakmak için [WDS Only (Yalnızca WDS)]'yi seçin. Kablosuz köprüyü etkinleştirmek için [Hybrid (Karma)]'yı seçin ve kablosuz istasyonları AP'ye bağlanabilirler.
+AP Modu
+AP Only
+WDS Only
+Hybrid
+WMM APSD (Otomatik Güç Tasarruflu Dağıtımı) Etkinleştir veya Devre Dışı Bırak.
+WMM APSD Etkinleştirilsin mi
+Yayın Süresi Eşitliği
+Kablosuz Modu, Otomatik olarak ayarlanmalıdır.
+İşaret Aralığı, bir işaretle diğeri arasındaki süre demektir. Varsayılan deper 100'dür (birim milisaniye veya 1/1000 saniyedir). Kararsız ortamda ya da dolaşan istemciler için iletişim performansını artırmak üzere İşaret Aralığını azaltın, ancak fazla güç tüketecektir.
+İşaret Aralığı
+[Evet] seçilirse, kablosuz mobil istemcilerin araştırmalarında SSID'niz görünmez ve yalnızca AP SSID'nize sahip ASUS Kablosuz Yönlendiricisine bağlanabilirler.
+SSID Gizle
+R6900'yu Uzak AP Listesinde listelenen başka AP'lere bağlamak için (Evet) seçin.
+Listedeki AP'lere bağlanılsın mı?
+Yönlendiricinin, işlemcinin WPS yardımcı programındaki PIN kodunu girin ve ağ adını ve güvenlik ayarlarını yapılandırın.
+AP PIN Kodu:
+WMM DLS (Doğrudan Bağlantı Kurulumu) Etkinleştir veya Devre Dışı Bırak.
+WMM DLS Etkinleştirilsin mi
+İşaret paketinde DTIM (Trafik Teslim Belirtimi İletisi) bulunur. DTIM Aralığı (1-255) kablosuz istemcisini Uyku Modundan uyandırma süresi demektir. Varsayılan değer 3'dir.
+İşaret paketinde DTIM (Trafik Teslim Belirtimi İletisi) bulunur. DTIM Aralığı (1-255) kablosuz istemcisini Uyku Modundan uyandırma süresi demektir. Varsayılan değer 1'dir.
+DTIM Aralığı
+Etkili çok noktaya gönderim yönlendirmeyi etkinleştir (IGMP Trafik Gözetleme)
+Bu seçenek etkinleştirildiğinde, yüksek etkileşimin olduğu ortamda yönlendirici performansı iyileşecektir, ancak bazı durumlarda bağlantı kararlılığını azaltabilir.
+Gelişmiş arayüz yönetimi
+Açık ışın oluşumu
+WLAN Adaptör ve yönlendiricinin her ikisi de ışın oluşumu teknolojisini destekler. Bu teknoloji, indirme ve üst bağlantı hızını iyileştirmek için bu cihazların kanal tahminini ve direksiyon yönünün birbiri ile iletişimde olmasına olanak sağlar.
+Parçalanma Eşiği, parçalanma sınırı olarak kullanılan gelen iletiler çerçeve boyutunu (256 - 2346 bayt aralığında) ayarlar. Çerçeve boyutu çok büyükse, ağır girişim iletişim güvenilirliğini etkiler. Çerçeve hızı çok küçükse, iletişim verimliliğini azaltır.
+Parçalanma Eşiği
+Etkinleştir'in seçilmesi ağın önceki standartlara izin vermesi için Yeşil alana izin verecektir.
+Yeşil alan etkinleştirilsin mi
+Etkinleştirildiğinde, IGMP Gözetleme, aygıtlar arasındaki IGMP iletişimini izler ve kablosuz çok noktaya yayın trafiğini optimize eder.
+IGMP Gözetlemeyi Etkinleştir
+Dolaylı ışın oluşturma
+Işın oluşumunu desteklemeyen bilinen kablosuz ağ adaptörü için, yönlendirici kanalı tahmin eder ve uydu-yer hızını iyileştirmek için direksiyon yönünü belirler.
+Bu özellik etkinleştirildiğinde kablosuz istemciler ve cihazlar birbiriyle iletişim kuramayacaklar. Kablosuz ağınızı sürekli kullanan çok sayıda konuklarınız varsa bu özelliği kullanmak isteyebilirsiniz.
+Yalıtılmış AP ayarlansın mı
+Aktarma gücü için yeteneği ayarlayın. Maksimum değer
+dir ve bölgesel düzenlemeleri karşılaması için gerçek aktarma gücü dinamik olarak ayarlanacaktır.
+KorumalıYönetim Çerçeveleri
+Yeterli
+Gerekli
+Bu öğe 802.11n ara yüzünüzün Kablosuz Modu için bu seçeneklerden herhangi birini seçmenize izin verir. <p>[Otomatik]: 802.11n, 802.11g ve 802.11b cihazlarının R6900'ya bağlanmalarına olanak sağlar.</p><p>[Legacy]: 802.11b/g/n cihazlarının R6900'ya bağlanmalarına olanak sağlar, fakat 802.11n cihazları sadece 54Mbps hızla çalışır.</p><p>[N Only]: Performansı en yüksek seviyeye çıkarır fakat 802.11g ve 802.11b cihazlarının cihazınıza bağlanmasına olanak sağlamaz.</p><p> 11n cihazlarını etkilemeden b/g cihazlarının R6900'ya bağlanmasını sağlamak için b/g Protection (b/g koruma) üzerine tıklayın fakat bu yönlendiricinin iş yükünü artırır.</p>
+Bu öğe 802.11n ara yüzünüzün Kablosuz Modu için bu seçeneklerden herhangi birini seçmenize izin verir. <p>[Otomatik]: 802.11n ve 802.11a cihazlarının R6900'ya bağlanmalarına olanak sağlar.</p><p>[Legacy]: 802.11n/a cihazlarının R6900'ya bağlanmalarına olanak sağlar, fakat 802.11n cihazları sadece 54Mbps hızla çalışır.</p><p>[N Only]: Performansı en yüksek seviyeye çıkarır fakat 802.11a cihazlarının cihazınıza bağlanmasına olanak sağlamaz.</p>
+Bu öğe 802.11ac ara yüzünüzün Kablosuz Modu için bu seçeneklerden herhangi birini seçmenize izin verir. <p>[Otomatik]: 802.11ac, 802.11n ve 802.11a cihazlarının R6900'ya bağlanmalarına olanak sağlar.</p><p>[Legacy]: 802.11n/a cihazlarının R6900'ya bağlanmalarına olanak sağlar, fakat 802.11n cihazları sadece 54Mbps hızla çalışır.</p><p>[N + AC]: Performansı en yüksek seviyeye çıkarır fakat 802.11a cihazlarının cihazınıza bağlanmasına olanak sağlamaz.</p>
+Bu öğe 802.11ac ara yüzünüzün Kablosuz Modu için bu seçeneklerden herhangi birini seçmenize izin verir. <p>[Otomatik]: 802.11ac, 802.11n ve 802.11a cihazlarının R6900'ya bağlanmalarına olanak sağlar.</p><p>[N Only]: Performansı en yüksek seviyeye çıkarır fakat 802.11ac, 802.11a cihazlarının cihazınıza bağlanmasına olanak sağlamaz.</p>
+Bu öğe 802.11ac ara yüzünüzün Kablosuz Modu için bu seçeneklerden herhangi birini seçmenize izin verir. <p>[Otomatik]: 802.11ac, 802.11n ve 802.11a cihazlarının R6900'ya bağlanmalarına olanak sağlar.</p><p>[Legacy]: 802.11n/a cihazlarının R6900'ya bağlanmalarına olanak sağlar, fakat 802.11n cihazları sadece 54Mbps hızla çalışır.</p><p>[N/AC mixed]: Performansı en yüksek seviyeye çıkarır fakat 802.11a cihazlarının cihazınıza bağlanmasına olanak sağlamaz.</p><p>[N Only]: Performansı en yüksek seviyeye çıkarır fakat 802.11ac, 802.11a cihazlarının cihazınıza bağlanmasına olanak sağlamaz.</p>
+Kablosuz Modu
+b/g Koruması
+Xbox için en uygun hale getirilmiş
+[No-Acknowledgement (Onay Yok)], MAC düzeyinde onay ilkesidir. Etkinleştirildiğinde, parazitli radyo Frekansı (RF) ortamında daha verimli geçiş ancak daha yüksek hata oranına neden olur.
+WMM Onay Yok Etkinleştirilsin mi
+WEP Şifrelemeyi seçerseniz, otomatik olarak WEP anahtarları oluşturmak için bu alana bazı kelimeler girebilirsiniz.
+ASUS Parolası:
+[Enable] (Etkinleştir)'in seçilmesi ağınıza verilen bant genişliğini arttırmak için Paket Yığını etkinleştirir.
+Paket Yığını etkinleştirilsin mi
+Bu alan, şifreleme işleminin başlatılması için 8- 63 karakterlik bir parola gerektirir(harf, sayı veya her ikisi) veya 64 onaltılık rakam. Bu alanı boş bırakıtsanız, parolanız varsayılan [00000000] olarak atanır.
+WPA Ön Paylaşımlı Anahtarı
+Radyo işlevini etkinleştirmek için [Evet]'i seçin.
+Radyo Etkinleştirilsin mi
+Bu alanda kablosuz işlevinin etkinleştirildiği tarih tanımlanır.
+Radyo Etkinleştirme Tarihi
+Bu alanda kablosuz işlevinin etkinleştirildiği zaman aralığı tanımlanır.
+Radyo Etkinleştirme Saati
+USB 3.0 etkileşimini düşürme
+Bu özelliğin etkinleştirilmesi 2.4 GHz bandında en iyi kablosuz performansı garanti eder. Bu özelliğin devre dışı bırakılması USB 3.0 bağlantı noktasının aktarma hızını artırır ve 2.4 GHz kablosuz aralığını etkileyebilir.
+Bölge
+Bu alanda, WPA grup anahtarı değiştirilme aralığı (saniye olarak) belirtilir. Periyodik anahtar değişiminin gerekli olmadığını belirtmek için [0] (sıfır) girin.
+Ağ Anahtarı Devir Aralığı
+Çoklu Erişim Noktalarını ya da kablosuz yineleyicileri içeren ağ yapılandırmalarında, kablosuz istemciler, ana kablosuz yönlendiriciye bağlı kalmaya devam ettiklerinden, bazen mevcut en iyi Erişim Noktasına otomatik olarak bağlanamayabilirler. Sinyal gücünün belirli bir eşiğin altında olması durumunda, istemcinin ana kablosuz yönlendiriciden bağlantıyı kesip daha güçlü bir sinyale bağlanması için bu ayarı etkinleştirin.
+Parazitli ortam veya çok fazla istemci durumunda iletişim verimliliğini sağlamak için RTS (Gönderme İsteği) sinyalini düşürün.
+RTS Eşiği
+Enerjiden tasarruf etmek ve ağ güvenliğini sağlamak için yöneticilerin kablosuz ağın ne zaman kapanacağını belirlemelerine olanak sağlar.
+Kablosuz planlayıcıyı etkinleştir
+Hassas trafik sayacınıetkinleştir
+Turbo QAM
+256-QAM (MCS 8/9) desteği.
+Etkinleştir'in seçilmesi g aygıtlarının İletim hızını (AP'den alıcıya) yükseltmek üzere TX Patlamasını etkinleştirir.
+TX Patlaması etkinleştirilsin mi
+Evrensel Hüzmeleme
+Kablosuz ağınızda multimedya uygulamalarının kullanıcı deneyimini iyileştirmek için WMM'i (Wi-Fi Multimedya) etkinleştirin.
+WMM Etkinleştirilsin mi
+[Evet] seçildiğinde, Wi-Fi Korumalı Kurulumu (WPS) herhangi bir aygıtın kablosuz ağa bağlanma işlemini basitleştirir. WPS, Açık sistem, WPA-Personal, WPA2-Personal kimlik doğrulamasını destekler. Paylaşımlı Anahtar, WPA-Enterprise, WPA2-Enterprise ve Radius desteği yoktur.
+WPS Etkinleştirme:
+Basmalı düğme
+Lütfen önce WPS'yi kapatın.
+WPS (Wi-Fi Korumalı Ayar) işlevini kullanmadan önce bir çalışma bandı (2.4 GHz veya 5 GHz) seçin.
+Current Band
+PIN (Kişisel Bilgi Numarası) seçildiğinde, kablosuz bağlantı kurmak için bir sayı girmeniz gerekir. PBC (Push Button Configuration) seçildiğinde, kablosuz bağlantı kurmak için düğmeye (bu sayfadaki Uygula düğmesi) basmanız gerekir.
+WPS Yöntemi:
+Müşteri PIN kodu için alt rakamlı bir sayı girin.<p>
+İstemci PIN Kodu
+[otomatik], geçerli misafir ağ kimlik doğrulama yöntemiyle (TKIP ya da WEP) uyumlu değil. Lütfen <a id="gn_link" href="/Guest_network.asp?af=wl_NOnly_note" target="_blank" style="color:#FFCC00;font-family:Lucida Console;text-decoration:underline;">Misafir Ağ</a>’a gidin ve kimlik doğrulama yöntemini değiştirin.
+WEP veya TKIP şifrelemesine sahip otomatik Mod altında, R6900 54Mbps'lik maksimum aktarım hızını desteklemektedir.
+Lütfen WPA2-Kişisel olarak değiştirin.
+[N+AC], geçerli misafir ağ kimlik doğrulama yöntemiyle (TKIP ya da WEP) uyumlu değil. Lütfen <a id="gn_link" href="/Guest_network.asp?af=wl_NOnly_note" target="_blank" style="color:#FFCC00;font-family:Lucida Console;text-decoration:underline;">Misafir Ağ</a>’a gidin ve kimlik doğrulama yöntemini değiştirin.
+[N Only], geçerli misafir ağ kimlik doğrulama yöntemiyle (TKIP ya da WEP) uyumlu değil. Lütfen <a id="gn_link" href="/Guest_network.asp?af=wl_NOnly_note" target="_blank" style="color:#FFCC00;font-family:Lucida Console;text-decoration:underline;">Misafir Ağ</a>’a gidin ve kimlik doğrulama yöntemini değiştirin.
+Başlama eki türü kablosuz aygıtlar arasında veri aktarım hatalarını algılama tekniği olan CRC (Çevrimsel Hata Denetimi) engelinin uzunluğunu tanımlamaktadır. Bütün kablosuz aygıtları aynı başlama eki türünde yapılandırmanızı öneririz. Yüksek ağ trafiğik alanlarında kablosuz aygıtlar için kısa başlama eki kullanın. Daha eski kablosuz aygıtlar için uzun başlama eki kullanın.
+Preamble Type
+Uzun
+Kısa
+Bu sayfa ayrıntılı kablosuz durumunu gösterir.
+WPA-PSK anahtarı
+Aşağıdaki iki yoldan herhangi biriyle bir WPS istemcisini ağa kolayca bağlayabilirsiniz:<ul><li>Yöntem 1: Bu arayüzdeki WPS düğmesine tıklayın (veya yönlendirici üzerindeki fiziksel WPS düğmesine basın), ardından istemcinin WLAN bağdaştırıcısındaki WPS düğmesine basıp, bağlantının yapılması için yaklaşık üç dakika bekleyin.</li><li>Yöntem 2: İstemci WPS işlemini başlatın ve istemci PIN kodunu alın. İstemcinin PIN kodunu, Client PIN code (İstemci PIN kodu) alanına girip Start (Başlat) düğmesine tıklayın. WPS işlevini destekleyip desteklemediğini öğrenmek için lütfen kablosuz istemcinizin kullanım kılavuzunu inceleyin. Kablosuz istemciniz WPS işlevini desteklemiyorsa, kablosuz istemciyi elle yapılandırıp, bu yönlendiriciyle aynı ağ adını (SSID) ve güvenlik ayarlarını girmeniz gereklidir.</li></ul>
+WPS Etkinleştir
+WPS düğmesi davranışı
+Radyo Değiştir
+SSID gizli olursa WPS işlemi kullanılamayacak.
+Başlatmak
+Kullanılmıyor
+NOT: WPS 2.0 düzenlemesinden dolayı, eğer yönlendirici WEP veya TKIP şifrelemesi kullanıyorsa WPS fonksiyonu devre dışı bırakılmalıdır.
+WPS, ayarladığınız Kimlik Doğrulama Yöntemini destekleyemiyor. Lütfen değiştirmek için bağlanın
+ardından WPS'i etkinleştirin.
+Yandex.DNS
+Yandex.DNS allows to restrict access to malicious sites and adult content.
+To use the service, select default protection mode and assign individual modes to specific clients.
+Use Yandex.DNS
+yandex-en.png
+http://dns.yandex.com
+Koruma Modu
+Basic mode
+Standard DNS service without additional protection.
+Güvenli Mod
+Protection from infected and fraudulent content sites.
+Family mode
+Protection from infected, fraudulent sites and blocking adult content.
+Use Safe mode as default mode.
+I want to use Yandex.DNS and agree to the <a class="link" href="http://legal.yandex.com/dns_termsofuse/" target="_blank">terms of use</a>.

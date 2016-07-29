@@ -1,0 +1,2368 @@
+﻿English
+繁體中文
+简体中文
+Česky
+Polski
+Pусский
+Deutsch
+Español
+Français
+Türkçe
+ไทย
+Malay
+Norsk
+Suomi
+Dansk
+Svensk
+Portuguese(Brazil)
+日本語
+Italiano
+Український
+Hungarian
+Romanian
+한국어
+Current Version
+Latest Version
+The Parent-AP might be turned off. Please check again.
+Connection failed. Password is not correct. Please click [Rescan] to select another network.
+Successfully established the wireless connection.
+Relaunch the browser. In the URL address bar, key in "http://router.asus.com/" to access the repeater connection status.
+Successfully updated the IP settings. You will be redirected to R6900\'s web GUI.
+Select another network
+Change the network that R6900 will connect to.
+Searching for available networks, please wait...
+Failed to detect any networks.
+Select the network and click [Connect].
+You are trying to connect to an unsecured network. The information transmitted in the network is not encrypted.
+You have already connected to this AP.
+Authentication method is not supported.
+Please wait, the R6900 is connecting to
+Key in the name
+Auto
+Bandwidth Limiter
+Bandwidth Limiter helps control the maximum download and upload speed of your client devices.
+is invalid IP address.
+Please enter a value between
+to
+The type allows your PC to obtain IP address automatically. This connection type is often used by cable modem service providers.
+ADSL or other connection that requires username, and password. It is known as PPPoE.
+PPTP VPN connection requires username, password, some ISP require fixed IP address.
+L2TP VPN connection requires username, password, some ISP require fixed IP address.
+Static IP allows your PC to use a fixed IP address provided by your ISP.
+Automatic IP
+Static IP
+If your WAN connection type is PPTP or L2TP, please enter the server name or server ip of the VPN server.
+VPN Server
+Host Name(optional):
+MAC Address(optional)
+MAC Clone
+VPN Server List
+Add to Favorites
+The R6900\'s IP address is changed to
+Hence, we recommend that you add this URL to your Favorites list for quick access to the R6900's web GUI.
+Your browser does not support this function.
+Reboot
+No
+Yes
+Connected
+Connection
+Connection failed
+Connection type
+Unknown connection type
+Connect
+Apply
+Apply all settings
+Cancel
+Use factory default
+Modify
+Next
+Previous
+Save Permission
+Skip Setup Wizard
+Sign in
+Skip
+Unknown Device
+For more details, please visit <a style="font-weight: bolder;text-decoration: underline;color:#000000;" href="http://www.asus.com/support/" target="_blank">http://www.asus.com/support/</a>
+*A minimum ping packet consumes approximately 128 bytes per interval. Therefore, the ping detector will consume
+MBytes per month
+Disconnected
+You have changed SSID or security setting. This will result in wireless clients disconnecting. Please adjust client's setting for connecting again.
+Connection is reestablished.
+You may not enter setting page of R6900 because DHCP function is disabled after switching to AP mode.<p>We recommend you to use ASUS Utility / Device Discovery and search IP of AP for enter setting page again.</p>
+Dual WAN
+Dual WAN setting
+Enable User-Defined Target
+The IP address is being renewed. If this process takes more than two minutes, please follow these three steps to renew the IP manually: (1) unplug the network cable; (2) wait for about ten seconds; and (3) plug it back again to get a new IP address.
+Error message
+The latest firmware is available now. To get the best experience, ASUS highly recommend that you update your router to the latest firmware version. Do you want to update firmware now?
+The WAN IP is not the external IP. External IP-based services will not work.
+Username cannot be blank.
+Username cannot be less than two characters.
+Username cannot be greater than 20 characters.
+This account already exists.\nPlease enter a different name.
+Password cannot be blank.
+Password should be matched.
+Firmware upgrade unsuccessful. This may result from incorrect image or error transmission. Please check the version of firmware and try again.
+Firmware is upgrading. Please wait about 3 minutes.
+Firmware upgrade is done. Please reboot R6900 manually.
+2016 ASUSTeK Computer Inc. All rights reserved.
+For a configuration parameter existing both in the old and new firmware, its setting will be kept during the upgrade process.
+Firmware Version:
+* Daylight savings time is enabled in this time zone.
+System Time
+* Reminder: The system time has not been synchronized with an NTP server.
+Guest Network
+Because of security and compatibility concerns,  IE8 / IE9 / IE10 are no longer supported.
+Things might be bound to broken and perhaps unusable.
+We recommend an upgrade to latest version of Internet Explorer.
+Please refer to <a style="font-weight: bolder;text-decoration: underline;" href="https://www.microsoft.com/en-us/WindowsForBusiness/End-of-IE-support" target="_blank">Microsoft® announce</a> for more detail.
+If your WAN connection requires a static IP address, key in the IP address in this field.
+IP Address
+You have set WAN IP as R6900's Gateway, and R6900 maybe could not connect to Internet. Please set Gateway with correct value.
+This field indicates the IP address of DNS that R6900 contact to.
+DNS Server1
+This field indicates the IP address of DNS that R6900 contact to.
+DNS Server2
+Allows this router to get the DNS IP address from the ISP automatically.
+Connect to DNS Server automatically
+If your WAN connection requires a static IP address, key in the gateway IP address in this field.
+Default Gateway
+If your WAN connection requires a static IP address, key in the subnet mask in this field.
+Subnet Mask
+MAC address is not valid.
+The router's current firmware is the latest version.
+We suggest you to try a mix of letters, numbers, and symbols. Do you want to change now?
+The default subnet mask is automatically filled in.
+is kept for localhost address, please input value between 1 to 233.
+Please input the value between 1 to 233.
+Fields cannot be blank.
+Please choose a fixed channel for Bridge.
+Are you sure you want to logout?
+Pre-shared key should be 8 to 63 characters or 64 hex digits. If you leave this field blank, system will assign [00000000] as your passphrase.
+Pre-shared key should be 8 to 63 characters or 64 hex digits!
+Pre-shared key should be 8 to 63 characters!
+You cannot leave this field blank!
+Your password is too short.
+Invalid character!
+is not a valid IP address!
+is not a valid port number.
+According to South Korea government instruction, password must contain at least 8 characters including 1 alphabet letter, 1 special character, 1 numeric character.
+Please enter a value between
+to
+SSID cannot contain the character \"
+\".
+This string cannot start with:
+This string cannot contain:
+Please enter the correct WEP key.
+Pre-shared key should be less than 64 characters!
+The LAN IP of R6900 is
+.If you can't get back setting page later, please renew IP configuration of your computer.
+The IP address for your router has been changed. Please use the Device Discovery utility to search for your router's new IP address.
+LAN IP Setting
+The LAN IP address of R6900. The default value is 192.168.1.1. In IP-based networks, data packets are sent to the network devices' specific IP addresses.
+The format for the MAC address is six groups of two hexadecimal digits, separated by colons (:), in transmission order (e.g. 12:34:56:aa:bc:ef)
+The LAN subnet mask of R6900. The default value is 255.255.255.0
+Invalid IP Address!
+Get LAN IP Automatically?
+Password cannot be greater than 16 characters.
+A secure password must be at least 8 characters and contain a combination of uppercase and lowercase letters, numbers and symbols.
+WAN Connection Type
+Use the following IP address:
+MAC address
+applying settings
+This may interrupt your internet connection.
+Complete!
+Please wait,
+Do not power off R6900 while upgrade in progress.
+Rebooting the router takes about 60 seconds. Are you sure you want to reboot the router now?
+Manual Setting
+DSL Log
+DSL Setting
+Traffic Manager
+USB Application
+Network Map
+Advanced Settings
+Wireless
+General
+WPS
+Bridge
+Wireless MAC Filter
+RADIUS Setting
+Professional
+LAN
+LAN IP
+DHCP Server
+Route
+WAN
+Internet Connection
+Port Trigger
+Virtual Server / Port Forwarding
+DMZ
+DDNS
+USB Application
+Network Place (Samba) Share
+FTP Share
+Miscellaneous setting
+USB Modem
+Firewall
+URL Filter
+MAC Filter
+Network Services Filter
+Keyword Filter
+IPv6 Firewall
+Administration
+Operation Mode
+Operation Mode
+System
+Firmware Upgrade
+Restore/Save/Upload Setting
+General Log
+DHCP leases
+Wireless Log
+Port Forwarding
+Routing Table
+Please wait about 3 minutes.
+Please wait about 1 minutes.
+NAT Passthrough
+Network Key
+New firmware will not be installed automatically. Go to <b>Administration</b> > <b>Firmware Upgrade</b> to download the latest firmware version and update your wireless router's firmware version.
+Your browser does not support JavaScript. Choose a browser that supports JavaScript, or enable it to use the multi-functional router, ASUS R6900.
+Settings have been updated. Web page will now refresh.
+Changes have been made to the IP address or port number. You will now be disconnected from R6900.
+To access the settings of R6900, reconnect to the wireless network and use the updated IP address and port number.
+In Access Point (AP) mode, R6900 connects to a wireless router through an Ethernet cable to extend the wireless signal coverage to other network clients. In this mode, the firewall, IP sharing, and NAT functions are disabled by default.
+You can also go to <a href=\"http://findasus.local\" style=\"font-family:Lucida Console;text-decoration:underline;color:#FC0;\">http://findasus.local</a> to search and enter device configuration page.
+Access Point(AP) mode
+R6900 supports several operation modes to meet different requirements. Please select the mode that match your situation.
+In wireless router/ IP sharing mode, R6900 connects to the Internet via PPPoE, DHCP, PPTP, L2TP, or Static IP and shares the wireless network to LAN clients or devices. In this mode, NAT, firewall, and DHCP server are enabled by default. UPnP and Dynamic DNS are supported for SOHO and home users. Select this mode if you are a first-time user or you are not currently using any wired/wireless routers.
+Wireless router mode (Default)
+Media Bridge
+R6900 can be configured in Media Bridge mode.
+The Media Bridge mode provides the fastest 802.11ac Wi-Fi connection for multiple media devices simultaneously.
+To set up the Media Bridge mode, you need two R6900: one configured as the Media station and the other as a router.
+Configure one R6900 as a router and another R6900 as an 802.11ac Media Bridge to provide a simultaneous 802.11ac Wi-Fi connection for your media devices such as computer, Smart TV, game console, DVR, or media player via Ethernet cable.
+Change to Media Bridge mode to provide a simultaneous 802.11ac Wi-Fi connection for your media devices.
+In Media Bridge mode, only wireless devices connect to the P-AP. Client devices need to be connected to the Media Bridge with a network cable.
+R6900 in Media Bridge mode. IP address has been changed.
+Please download the <a href='http://dlcdnet.asus.com/pub/ASUS/LiveUpdate/Release/Wireless/Discovery.zip' target='_blank' style='font-family:Lucida Console;text-decoration:underline;color:#FC0;'>Device Discovery Utility</a> to identify the Media Bridge IP address.
+Please check if you have unplugged the network cable from the WAN port.
+In Repeater mode, R6900 wirelessly connects to an existing wireless network to extend the wireless coverage. In this mode, the firewall, IP sharing, and NAT functions are disabled.
+The LAN IP address of R6900 may have changed.
+Close this window and access http://router.asus.com again.
+Repeater mode
+WISP mode
+R6900 wirelessly connects to your main router, AP or public hot spot, and shares internet with your wired / wireless clients. In this mode, NAT, firewall, and DHCP server are enabled by default.
+Please make sure you are authorized to access internet if you are connecting to public hot spots service.
+This function is disabled.
+Parental Controls
+New Password
+Retype Password
+Very Weak
+Weak
+Good
+Strong
+Very Strong
+PIN code is not correct. Please key in the correct PIN code and reconnect the USB adapter. If you still encounter the same error, turn off the PIN code function, then turn it on and try again.
+Password
+PPP Username
+Account Settings
+This field allows you to provide a host name for R6900. It is usually requested by your ISP.
+Special Requirement from ISP
+MAC (Media Access Control) address is a unique identifier that identifies your computer or device in the network. ISPs monitor the MAC addresses of devices that connect to their services, and would disallow Internet connection for new MAC addresses. To fix this issue, you can do either of the following:<p>* Contact your ISP and request to update the MAC address associated with your ISP subscription.<p>* Clone or change the MAC address of the new device to match the MAC address of the original device.<p>
+DNS Server
+Connection Status
+When your ISP supports a higher MPPE encryption level than your selected level, the higher encryption level will be used for better security.
+When your VPN Server supports a higher MPPE encryption level than your selected level, the higher encryption level will be used for better security.
+Quick Internet Setup
+The new password is the same as system default password. We strongly recommend that you set a more complex password.
+If you do not change the default password (admin), your router is vulnerable to security threats and others can easily guess the login password. Are you sure to keep this unsafe password?
+Use the default settings (the same settings as the network you want to extend)
+Automatic IP connection setup
+Starting to clone the computer's MAC address into the router.
+Please wait...
+Verify the WAN IP address
+Obtained the WAN IP address successfully.
+Get the new WAN IP address after MAC cloning
+Select which ANNEX mode your DSL service uses. Incorrect settings will prevent connection to your DSL service.
+If you are not sure which ANNEX mode to use, please contact your ISP for assistance.
+ANNEX mode is not selected.
+We strongly recommend that you set the wireless security settings first, do you want to continue?
+PPPoE/DSL connection is detected.
+The Setup Wizard detected that your Internet connection type is PPPoE/DSL.
+Click "Next" to enter the account name and password that your Internet Service Provider (ISP) has provided.
+If the connection type is not PPPoE/DSL, please click "Connection Type".
+R6900 is checking the link status, please wait...
+R6900 is detecting the connection type, please wait...
+R6900 cannot find the connection type. Please click [Manual Setting].
+Detecting the Internet connection type timed out. Do you want to try again ?
+The modem has been reset manually.
+Check the WAN connection type.
+Wait a while for verifying...
+Use the following DNS server addresses
+Successfully connected to the Ethernet WAN network.
+Fail to connect to Ethernet WAN network.
+Successfully connected to the mobile broadband network.
+SIM card is not inserted properly.
+Note: If you want to connect to the internet service via \"Mobile Broadband Network\", click <a onclick=\"redirect_page('unplug_sim');\">\"Configure Another WAN\"</a>.
+The following process will guide you in completing the mobile broadband Internet settings.
+Note: If you want to connect to the internet service via \"Ethernet WAN\", click <a onclick=\"redirect_page('unplug_ewan');\">\"Configure Another WAN\"</a>.
+The following process will guide you in completing the Ethernet WAN settings.
+Ethernet WAN and mobile broadband Connection Status
+Edit the existing WAN settings, please click <a href="" onclick="gotoWANSetting();">here</a>.
+Add the new WAN setting, please click <a href="QIS_manual_setting.htm">here</a>.
+You have already configured the WAN settings.
+Do you want to use the default wireless security settings?
+R6900 cannot find the connection type. Your ADSL type may be one of the following modes: MER Static IP, IPoA or Bridge. Please click Manual Setting to configure the WAN settings manually.
+Authentication failed.
+The account name and password are not correct.
+If you set the router offline, click <b>Wireless Setting</b> to skip Internet connection detection and go to next step to setup wireless name and password.
+Click <b>Select Internet Type</b> to retype the user name password provided by ISP.
+Unable to connect to the Internet. Please double-check your account data with your ISP or contact ASUS Support Hotline for technical inquiries and support.
+The account name and password has passed authentication but failed to get an IP address from your ISP. Please contact your ISP for assistance.
+Unable to connect to the Internet
+Internet setting error!
+PPPoE/DSL Connection failed
+Failed to connect to the mobile broadband network.
+Detection Failure
+Router admin account
+Router Admin password
+R6900 is set up with these Internet and wireless settings.
+Completed Network Configuration Summary
+Network Name (SSID)
+Wireless Security
+Connect to the VPN server?
+There might be a proxy server in your network. Please check with your Internet Service Provider or network administrator.
+There might be an error in the Internet Service Provider Domain Name Server. Please check with your ISP or network administrator or go to the Advanced Setting page to set the public DNS.
+Please check with your Internet Service Provider or network administrator.
+Please unplug the power cord from the modem. Wait for about two minutes, then plug it back in again. Click <b>Detect connection again</b>.
+Got IP
+Connected to the ISP DNS
+Failed to connected to the ISP DNS
+Connected to the public DNS
+Failed to connect to the public DNS
+Don't input the URL or IP of the VPN server yet!
+If your connection type is PPTP/L2TP, Please click [OK] to [Connecting the VPN server].\nIf not, please click [Concel] and check the information then Apply the settings.
+VPN Item
+VPN type
+MAC (Media Access Control) address is a unique identifier that identifies your computer or device in the network. ISPs monitor the MAC addresses of devices that connect to their services, and would disallow Internet connection for new MAC addresses. To fix this issue, you can do either of the following:
+Contact your ISP and request to update the MAC address associated with your ISP subscription. Once this is done, you can run the router's setup wizard again.
+Clone or change the MAC address of the new device to match the MAC address of the original device. If you just replaced an old router, you will find the old router's MAC address from its label. If you previously connected your computer to the modem, you will need to enter your computer's MAC address or click "MAC Clone" to clone your computer's MAC addresss.
+Step 1 of 2. Turn off the Cable/DSL modem
+Please unplug the power cord from the modem, which is the ISP-provided device that connects to a cable TV outlet or a phone jack.
+If the modem is still on after unplugging its power cord, it may have a battery backup function. Please press the modem's reset button for more than five seconds to reset it.
+Click "Next" after unplugging the modem's power cord.
+If you are not using a modem, please click "Select Internet Type".
+Step 2 of 2. Turn off the Cable/DSL modem
+Wait for about two minutes then replug the modem's power cord into a power outlet.
+When the modem's LED starts blinking, click "Detect again" to auto-detect the connection type.
+Please ensure that the phone cable is connected to the DSL port.
+Phone line is not connected.
+Change the router password to prevent unauthorized access to your ASUS wireless router.
+Username and password are case sensitive.
+Your router login information is used for accessing your router's administration settings.
+Router login information is also used to access additional features like FTP and AiCloud 2.0.
+The default username and password is :
+Login Information Setup
+Please enter the required information below.
+Obtain the account name and password from your ISP.
+If you subscribe to PPPoE, PPTP or L2TP connection type, your ISP would give you a card or document that contains the account name and password on it. The account name and password that your ISP provided are used to connect to the Internet. These are not the same as the username and password used for router administration.
+Do you want to use the previous wireless security settings?
+We strongly recommend that you set the wireless security settings first.
+Rescan
+Service
+Show password
+(Recommended)
+Your ISP should give you a card or document with user name and password. *This sample document is an example for purpose of illustration only.
+Enter the user name and password for your Internet connection information.These settings were given by your Internet Service Provider (ISP) .
+HiNet user's client number is <span style="color:#FC0;">HNxxxxxxxx@hinet.net</span>
+Connection Scenario 1
+Connection Scenario 2
+Your ISP should give you the information about IP, subnet mask, gateway, and DNS address. If not, please contact your ISP.
+Does your Internet connection require user name and password?
+My Internet connection type is Automatic IP (Cable modem, Dynamic IP, DHCP) or Static IP
+The type allows your R6900 to obtain IP address automatically. This connection type is often used by cable service providers.
+My Internet connection type is PPPoE, L2TP or PPTP
+* If you do not know the Internet connection type, please contact your ISP.
+Copy 2.4 GHz to 5 GHz settings
+Copy 2.4 GHz to 5 GHz-1 settings
+Copy 5 GHz-1 to 5 GHz-2 settings
+Check Connection
+Internet Setup
+Router Setup
+Quick Internet Setup
+For clients or computers to connect to your wireless network, follow these steps:
+1. In the notification area, click the network icon ( <img src="/images/qis/win7_network_icon1.jpg"> ) or ( <img src="/images/qis/win7_network_icon2.jpg"> ).
+2. From the list of networks, click the network you want to connect to, then click "Connect".
+1. In the notification area, click the network icon, then click "View Available Wireless Networks".
+1. Click the Airport status icon( <img src="/images/qis/osx_network_icon.jpg"> ) in the menu bar, and then select the wireless name you want to connect to.
+Connecting to your wireless network
+Please select the Internet connection type from the options below. If you do not know the Internet connection type, contact your ISP.
+Select Internet Type
+Ensure that SIM card or Ethernet cable are connected properly, then try again.
+To set up the mobile network:
+Ensure that the Ethernet cable is properly connected to the modem and to the WAN port of the router.
+To set up the  Ethernet WAN network:
+Ensure that you insert the SIM card into the SIM card slot, then try again.
+To set up the mobile network:
+Insert the SIM card into the SIM card slot.
+You can also connect the network (RJ-45) cable into the WAN port.
+Connect the network (RJ-45) cable into the modem and into the WAN port of the router.
+On the web interface, click Detect Again.
+Please check SIM card and Ethernet WAN cable
+Network Cable Status
+SIM Card Status
+Please enter your username and password.
+Enable VPN client
+Click "Next" to start the Quick Internet Setup Wizard for your R6900.
+Concurrent 2.4 and 5 GHz 450 Mbps Dual Band Router.
+High Speed and High Powered USB Ports for network Storage and Multifunction printer support.
+High Performance Gigabit Switch with Turbo NAT.
+High level current usage for superior download, gaming performance and multi client connections.
+To reach up to 600 Mbps / 2.4 GHz, pair the R6900 with a TurboQAM compatible client, such as the PCE-AC68 or another R6900 in Media Bridge / repeater mode.
+Welcome to the ASUS Networking Family!
+The network name or SSID is a unique name that identifies the wireless network. WiFi devices automatically detect all networks within range.
+A security key is the password that is assigned to secure a wireless network from unauthorized access. To access a secured network, the user will be asked to enter the security key.
+Assign a unique name or SSID (Service Set Identifier) to help identify your wireless network.
+Enter a network key between 8 and 63 characters(letters, numbers or a combination) or 64 hex digits. The default wireless security setting is WPA2-Personal AES. If you do not want to set the network security, leave the security key field blank, but this exposes your network to unauthorized access.
+Enter a network key between 8 and 63 characters(letters, numbers or a combination). The default wireless security setting is WPA2-Personal AES.
+Account name cannot be blank.
+User Name / Password fields cannot be empty.
+ISP Account Setting
+Quick Start
+Detecting your connection type
+Redetecting your connection status
+Detect again
+auto detecting
+Start to detect your connection type...
+This process might take a few minutes, please wait until finished.
+Internet connection setting is finished.
+Going to Internet
+Simply Wireless Security Setting
+Look up and configure the encryption setup.
+Advanced Setting page
+Manual configuration and fine-tuning.
+Please close this window and finish configuring the settings. Open a new window to connect to the Internet.
+Finish
+Please check you are connecting to R6900 then refresh this page manually.
+Enter account or password again
+DHCP connection failed.
+Invalid account or password, click the link to modify it.
+PPPoE connection failed, click the link to try again.
+PPTP connection failed, click the link to try again.
+L2TP connection failed, click the link to try again.
+Static connection failed, click the link to try again.
+Please refer to your ISP setting, and input the related information.
+Static IP connection failed.
+Automatic IP connection failed. You can configure here manually.
+ISP Information Setting
+Click <a><label for="upload_setting_profile" style="text-decoration:underline;cursor:pointer;font-weight:bold;color:#FC0;" onclick="">Restore setting</label></a> to load saved configuration settings.
+Click <a><label for="upload_setting_profile" style="text-decoration:underline;cursor:pointer;font-weight:bold;color:#FC0;" onclick="">Restore setting</label></a> to restore the configuration if you have backed up the configuration settings before resetting the router.
+Click <a><label style="text-decoration:underline;cursor:pointer;font-weight:bold;color:#FC0;" onclick="submitForm(0)">Manual Setting</label></a> to manually set up your wireless network if you know your ISP connection type.
+Click <a><label style="text-decoration:underline;cursor:pointer;font-weight:bold;color:#FC0;" onclick="submitForm(0)">Manual Setting</label></a> to manually set up advanced router settings or set up R6900 to work in
+You are a wireless networking expert and want to skip the internet setup wizard?
+Please select the Internet connection type that your ISP provided.
+Internet WAN connection type
+Please Choose the WAN type
+Wireless Setting
+Radio
+remote
+Router Login Name
+Note: It takes about 60 seconds.
+Security
+Select
+Select ISP Profile
+Please select
+Sign in with your ASUS router account
+Sign in with your ASUS router account
+Sign in with your NETGEAR router account
+Sign in with your LINKSYS router account
+Standard Setup
+Active
+Inactive
+Standby
+Status
+Access Point status
+ASUS R6900
+Active Connections
+Auto Logout
+Change the time zone
+System Log
+This is the history log of active connections.
+Allow only specified IP address
+Specified IP address
+Logout
+Traffic Monitor
+Transfer Mode
+Tri-band Smart Connect
+dynamically and seamlessly switches devices to different bands based on location, signal strength and wireless protocol, ensuring consistent throughput for each device on your network.
+Media Server
+User's account cannot be 'root', 'guest' or 'anonymous'! Please enter a valid account.
+VPN Details
+Enter username and password.
+Click (Next) to have the router automatically get a new IP address. The new IP address is:
+Please ensure that you configure each services, such as Port Forwarding or DMZ, to use the new IP address.
+Reason for failed connection
+You failed to access to the web page that you want to view.
+The network cable is not connected.
+Your PPPoE or VPN authentification failed.
+Connecting to remote server now.
+Your ISP's DHCP does not function properly.
+We have detected that your WAN Connection Type is PPPoE. But your PPPoE Setting is not complete.
+The Internet connection failed. The router's IP address is the same as the gateway's IP address.
+You have probably stopped the WAN connection manually.
+The router's dynamic or static IP address settings are not correct.
+IP conflict detected.
+Click here to go to the setup page
+You can check and config your setting by yourself.
+If a problem still persists, manually change the connection settings.
+Turn on the WAN.
+We suggest you
+Need account and password of administrator.
+Please ensure that the cable is properly connected between R6900 WAN port and the modem.
+Go to Account Setting page
+ and check your account and password again.
+Go to the Quick Internet Setup page to automatically detect the connection type.
+ and R6900 will detect your WAN type automatically.
+Please contact your ISP(Internet Service Provider) to find out the root cause of DHCP failure.
+Please reconfigure the router's IP address and ensure that it is different from the gateway IP address.
+Please build the WAN connection manually.
+Please check that the IP and DNS settings are correct.
+Plese reconfigure the local IP address for your R6900, and ensure that it is different from your WAN's gateway.Ex: 192.168.X.X; X is the number between 2 to 254.
+After connecting the router to the modem, click "GO" to launch the Quick Setup Wizard.
+To set up the WAN connection offline or change the operation mode to Access Point, click Manual Setting.
+In the next step, set up the login name and password for security.
+ASUS Wireless Router R6900
+R6900
+Configured
+Wireless name
+Wireless router
+None
+Control Channel
+Key Index
+WEP Key
+5 ASCII digits or 10 hex digits
+13 ASCII digits or 26 hex digits
+WPA Encryption
+Connect to APs in list
+R6900 will change WEP or TKIP encryption to AES in [n Only] mode to ensure that clients to get the proper connection.
+Succeed to build connection.
+UTF-8
+Access Intranet
+Allow guest to access intranet.
+You can now access your USB storage device and Network place (Samba) enabled devices connected to R6900.
+Access time
+The time allow guest to access internet.
+Only 6 accounts allowed.
+Account Type
+Go to Dual WAN Setting and activate USB modem.
+Adaptive
+This category includes Diablo, WOW, Steam game and XBOX, etc. Move this category up for better game experience.
+This category includes Youtube, Vimeo, iTunes, Hulu, Netflix and Spotify,etc. Move this category up for better networking experience.
+This category includes VoIP, Instant Messaging, Mail service,etc. You can adjust their priorities according to your preference.
+This category includes general web service and social network applications like flickr, twitter, facebook, tumblr, google toolbar,etc.
+This category includes peer to peer and file transfer related software like uTorrent, BitTorrent, Dropbox, 4Shared and FTP applications,etc. It is recommended to leave file transfer category at a lower priority.
+All the activities not included in Game, Streaming Media, Online Chat & Communication, Web Surfing and File Transfer.
+File Transferring
+Gaming
+Web History
+Web History shows clients Web Surfing history.
+VoIP and Instant Messaging
+Enabling Adaptive QoS may take several minutes.
+Others
+Adaptive QoS
+QoS to configuration
+In the QoS Adaptive type, the APPs with higher priority will be get better bandwidth over another when the APPs are competing for limited bandwidth, Drag and drop APPs category to upper level for higher priority
+Video and Audio Streaming
+Web Surfing
+New account has no read/write access rights.
+Add new account
+The default access rights for a new folder is read/write.
+Add new folder
+Follow instructions listed below:
+Download a proper version to your local machine.
+Specify the path and name of the downloaded file in the New Driver File.
+Click [Upload] to upload the file to R6900. Uploading process takes about one minutes.
+After receiving a correct driver file, R6900 will automatically start to install the new DSL driver. The system reboots after the upgrading process is finished.
+New DSL Driver File
+If the DSL driver upgrade fails, you can install the driver again from this web page.
+Note:
+DSL Driver Version
+DSL Link Status
+Set up the wireless related information below.
+Account Status
+Unlock
+You need a broadband Internet connection for the best viewing and listening experience. Refer to the recommendations below :
+768 Kbps or faster upload bandwidth is recommended for music.
+5 Mbps or faster is recommended SD video.
+15 Mbps or faster is recommended for 720p video.
+30 Mbps or faster is recommended for 1080p HD video streaming.
+Internet upload speeds may vary depending on your ISP and other factors. If you are not sure what your Internet speed is, you can contact your ISP, or use an online bandwidth test from a computer connected to the ASUS Router.
+Cloud List
+Access the Cloud Disk from <a id="cloud_url" style="font-weight: bolder;text-decoration: underline;" href="https://router.asus.com" target="_blank">https://router.asus.com</a>.
+You can access the Cloud Disk via this URL :
+To modify the ddns name, please click <a style="font-weight: bolder;text-decoration: underline;" href="/Advanced_ASUSDDNS_Content.asp?af=DDNSName" target="_blank">here</a>.
+Access the Cloud Disk from <a style="font-weight: bolder;text-decoration: underline;" href="https://router.asus.com" target="_blank">https://router.asus.com</a>.
+Register for an ASUS DDNS <a style="font-weight: bolder;text-decoration: underline;" href="/Advanced_ASUSDDNS_Content.asp" target="_blank">here</a> to access the Cloud Disk online.
+Enables USB-attached storage devices to be accessed, streamed or shared through an Internet-connected PC or device.
+To create a Cloud Disk, you need to install a USB storage device into this router, then turn Cloud Disk <b>ON</b>.
+Use the router login account to log into the default Cloud Disk.
+Enter AiCloud 2.0
+For more detail, you can also refer to the <a id="faq1" href="" target="_blank" style="font-weight: bolder;text-decoration:underline;">Port forwarding FAQ</a> and <a id="faq2" href="" target="_blank" style="font-weight: bolder;text-decoration:underline;">DMZ FAQ</a>.
+Invalid invitation code!
+Duration
+Maximum number of failed login attempts
+This page displays a log of AiCloud's activities.
+ASUS AiCloud 2.0 keeps you connected to your data wherever and whenever you have an Internet connection. It links your home network and online storage service and lets you access your data through the AiCloud mobile app on your iOS or Android mobile device or through a personalized web link in a web browser. Now all your data can go where you go.
+IP Address is not valid. You can set the WAN IP address <a href=\"Advanced_WAN_Content.asp\" style=\"text-decoration:underline\">here</a>, or go to <a href=\"https://
+\" style=\"text-decoration:underline\">AiCloud</a>.
+There is no record.
+Enable Password Protection Feature.
+Password Protection feature:
+The Password Protection feature prevents unauthorized access to AiCloud.
+You can set a limited number of account/password login attempts.
+For example, a setting of 3 times / 2 mins indicates that the user has three attempts to input the account and password in 2 minutes. Once the specificed number of attempts has been exceeded, the AiCloud account will be locked and administrator access is needed to unlock it.
+AiCloud content streaming port
+AiCloud 2.0
+AiCloud Web access port
+Account
+Allow anonymous login
+Warning: The AiDisk had been set. If you set the AiDisk again, the previous account/password and access permission will be reset. To add more account, Select <a href="../Advanced_AiDisk_ftp.asp" target="_blank" style="text-decoration: underline; font-family:Lucida Console;">here</a> to edit the account profile.
+By enabling [ Allow anonymous login ],  any user can access your FTP service without authentication!
+Username and password is necessary to log in FTP service.
+By enabling [ Allow anonymous login ],  any user can access your FTP service without authentication! Are you sure you want to enable it?
+Allow guest login
+For advanced file-sharing configuration. Click <a href="../Advanced_AiDisk_ftp.asp" target="_blank" style="text-decoration: underline; font-family:Lucida Console;">here</a>
+NTFS Sparse Files Support
+Read
+By enabling [ Allow guest login ],  any user in local network can access your network place(Samba) without authentication!
+Username and password is necessary to log in network place(Samba)
+By enabling [ Allow guest login ],  any user in local network can access your network place(Samba) without authentication!  Are you sure you want to enable it?
+By using limitless access rights, any user can access your FTP service without authentication!
+R6900 provides you with these three types of access rights to the shared resources:<p> a) limitless access rights, in which anyone can access your USB disk in the FTP server.</p> <p>b) limited access rights, in which access to your USB disk is limited to those you have assigned access rights. For this type, the R6900 creates the \"admin/Family\" accounts. </p> <p>c) admin rights in which the R6900 creates the \"admin\" account for full access rights.</p><p>Note: The permission settings will clear your original set of accounts.</p>
+PS. Account management function cannot work on NTFS partition.
+Creating the access rights
+ASUS DDNS creates a domain name with a dynamic IP address. <p>If you need to configure other DDNS service settings, please refer to <a href='/Advanced_ASUSDDNS_Content.asp' target='_top'>Advanced DDNS</a></p>
+Setting up the DDNS services
+<a href='../Advanced_AiDisk_samba.asp' target='_top'>Network Neighborhood Share</a>: You can operate the Samba server professionally. <br/><a href='../Advanced_AiDisk_ftp.asp' target='_top'>FTP Share</a>: You can operate the FTP server professionally.
+Setting up the shared disk
+No selected account.
+No selected disk for creating the shared folder.
+No selected folder.
+No selected partition for creating the shared folder.
+Aidisk Wizard worked exceptionally. Please try again later.
+After configuring the settings in AiDisk Wizard, refer to the information below to access the disk:
+Write
+AiDisk enables you to:
+Share files in the USB disk through the Internet.
+Create your own domain name for the FTP server.
+Welcome to AiDisk wizard
+AiDisk Wizard
+Alert Preference
+Please select the client name
+AiProtection with Trend Micro uses real-time network monitoring to detect malware, viruses and other intrusions before it reaches your PC or connected devices. Parental Controls let you schedule times that a connected device is able to access the Internet. You can also restrict unwanted websites and apps.
+Prevents infected devices from communicating personal information and/or infected status to external parties.
+Infected Device Prevention and Blocking
+Web & Apps Filters
+Adult
+Block adult content can prevent child from visiting sexy, violence and illegal related content.
+Pornography
+Illegal and Violence
+Gambling
+Internet Telephony
+Instant Mssaging
+Virtual Community
+Blog
+Mobile
+Content Category
+Web & Apps Filters allows you to block access to unwanted websites and apps. To use web & apps Filters:
+In the [Clients Name] column, select the client whose network usage you want to control. The client name can be modified in network map client list.
+Check the unwanted content categories
+Click the plus (+) icon to add rule then click apply.
+Instant Message and Communication
+Block IM and communication content can prevent child from addicted to social networking usage.
+If you want to disable the rule temporarily, uncheck the check box in front of rule.
+P2P and File Transfer
+Block P2P and File Transfer content can keep your network in a better transmission quality.
+File transfer
+Peer to Peer
+Streaming and Entertainment
+Games
+Streaming media
+Internet Radio and TV
+Block Streaming and Entertainment content can prevent child from spending long time on Internet entertainment.
+Network Protection
+Network Protection will send you an alert email if a suspicious connection between your client devices and malicious destination has been detected and blocked. Enter in your credentials and email below.
+Network Protection with Trend Micro protects against network exploits to secure your network from unwanted access.
+Router Security Assessment
+Scans your router for any security vulnerabilities and recommends options for increased protection.
+Default router login username and password changed
+Wireless password strength check
+Wireless encryption enabled
+UPnP service disabled
+Web access from WAN disabled
+PING from WAN disabled
+DMZ disabled
+Port trigger disabled
+Port forwarding disabled
+Anonymous login to FTP share disabled
+Disable guest login for Network Place Share
+Malicious Website Blocking enabled
+Vulnerability Protection enabled
+Please change your login username and password for better router security.
+Please make your network password more complex for better security.
+Your wireless network is insecure because there is not wireless password. Click the hyper link to set the password.
+Disable UPnP service to avoid any program have chance to use UPnP port to alter a your router’s settings.
+Disable Web access from WAN to prevent your router from external control.
+Disable PING from WAN to avoid cracker can connect to router from external network.
+Disable DMZ to avoid all the inbounds packets are redirected to the computer exposing on internet.
+Disable Port trigger to prevent your router from cracker access via specific port.
+Disable Port forwarding to prevent your router from cracker access via specific port.
+Disable Anonymous login to FTP share to avoid unauthorized user have chance to access your data.
+Disable guest login for Network Place Share to avoid unauthorized user have chance to access your data.
+Enable Malicious site blocking to restricts access to known malicious websites.
+Enable Vulnerability Protection to prevent cracker invasion via vulnerability of router or device software.
+Enable Infected device prevention and blocking to detects any suspicious connections or activities and blocks them to prevent data stealing.
+Restricts access to known malicious websites in Trend Micro’s database for always-up-to-date protection.
+Malicious Sites Blocking
+AiProtection
+Vulnerability Protection
+This will enable Vulnerability Protection, Malicious Site Blocking and Infected Device Prevention and Blocking. Security settings will impact your wireless, wired and attached storage network performance.
+Resolves common exploits within the router configuration. Protects the system and applications from exploits and vulnerabilities with Trend Micro Virtual Patch.
+Failed to set the permission/access rights.
+Failed to claim the disk.
+Failed to build the swap file.
+Failed to format the disk.
+Failed to create the account.
+Failed to delete the account.
+Failed to modify the account.
+Failed to create the shared folder.
+Failed to delete the shared folder.
+Failed to modify the shared folder.
+Failed to control the AiDisk application.
+Failed to unmount the disk.
+There is no input about PROCOTOL!
+The input about FOLDER is incorrect!
+The input about POOL or FOLDER are incorrect!
+There is no input about PERMISSION!
+The input about PERMISSION is incorrect!
+There is no input about PASSWORD! There is no password entry.
+The input about PASSWORD is incorrect!
+There is no input about NEW_ACCOUNT or NEW_PASSWORD!
+There is no input about NEW_FOLDER!
+There is no input about FLAG!
+The input about FLAG is incorrect!
+The input about PROCOTOL is incorrect!
+There is no input about DISK!
+There is not the chosen disk in the system!
+There is no input about the name of the new partition!
+There is a wrong format about the name of the new partition!
+There is no input about the size of the new partition!
+There is no input about the file system of the new partition!
+There is no input about MODE!
+The input about MODE is incorrect!
+There is no input about ACCOUNT!
+The input about ACCOUNT is incorrect!
+There is no input about POOL!
+The input about POOL is incorrect!
+There is no input about FOLDER!
+System error: Cannot allocate the memory!
+System error: Cannot read out the disk's data!
+System error: The disk is busy!
+System Error.
+There should not be any space in the first and last character.
+R6900  detected that you are using IE6. Please Try Google Chrome, IE7 or higher for the best browsing experience.
+All
+Android phone
+Failed to get the IP information.
+AP IP address
+AP Survey
+APN Configuration
+Loading APP list...
+Failed to authenticate the WPA key. Please enter the WPA key again.
+ASUS EZ printer sharing (Windows OS only)
+Your network login name and password are still the default settings. We strongly recommend that you change this to avoid security risks.
+A new firmware update is now available for your router. Please update to increase system stability, get new and improved features, and avoid security risks.
+Your Wi-Fi network has not been encrypted yet and is at risk. We recommend that you create a password for your network to avoid security risks.
+Your current AiDisk FTP permission allows unauthorized users to log in. We recommend that you disable [ Allow anonymous login ] to avoid security risks.
+The FTP was at risk and therefore [ Allow anonymous login ] has been automatically disabled. You can use router login name and password to login FTP. If you want to change permission setting
+Your current Network place(samba) permission allows unauthorized users to log in. We recommend that you disable [ Allow guest login ] to avoid security risks.
+The Network Place (Samba) was at risk and therefore [ Allow guest login ] has been automatically disabled.  You can use router login name and password to log in. If you want to change permission setting
+Change now
+Update now
+Create now
+Do not show this message again
+Auto-installing...
+Automatic
+Available space
+Average
+Enable Apps analysis allows you to click device icon and show all apps traffic by each device for detailed client monitor.
+Bandwidth Monitor
+Apps analysis
+Traffic not detected.
+WAN/LAN Bandwidth Monitor
+Enable Download Master?
+Enable Download Share?
+Enable iTunes Server?
+Enable UPnP
+Black List
+Block
+Click here to block the client
+Blocked client list
+Get the bandwidth information from ISP or go to <a href="http://speedtest.net" target="_blank" style="text-decoration:underline;color:#000;">http://speedtest.net</a> to check bandwidth.
+Bandwidth Status
+Bandwidth Management - User Specify Service
+User Specify Rule List
+Service Name
+Source IP or MAC
+Destination Port
+Priority
+Host Name provided by ISP:
+If your WAN connection type is PPTP or L2TP, Please enter the server name or server ip of the VPN server.
+This field allows you to provide a host name for R6900. It is usually requested by your ISP.
+Set the maximum download bandwidth limit. 0 means no bandwidth limit.
+Disable
+Disabled
+Enabled
+Export
+GO
+Remove
+WAN setting
+Captcha
+Please enter the captcha.
+Ensure that the Ethernet/network cable is connected properly
+The router is checking the ASUS server for the firmware update.
+Clock Format
+Cloud Disk
+The password length should be at least 8 characters.
+Browser
+You have a new invitation.
+Remote Path
+Rule
+Download to USB Disk
+Synchronisation
+Upload to Cloud
+Server share folder
+Through share without account, accounts kept hidden. Are you sure you want to disable it?
+Are you sure you want to disable the disk shared in the Network Neighborhood?
+Are you sure you want to disable the disk shared via the FTP server?
+Disable Network Neighborhood Share will cause your Download Master can't be used.
+Enabling share with account enables multiple computers, with different access rights, to access the file resources. Are you sure you want to enable it?
+Are you sure you want to share the disk in the Network Neighborhood?
+Are you sure you want to share the disk by via the FTP server?
+Retype password
+The router cannot connect to ASUS server to check for the firmware update. After reconnecting to the Internet, go back to this page and click Check to check for the latest firmware updates.
+Connect your iOS or Android devices to R6900 through WiFi. The AiCloud 2.0 app will automatically guide you through the setup process.
+Client List
+Connecting...
+Connection Time
+Connections
+Connection status
+Create A Free Account
+Level 2 CTF is not supported under PPPoE, PPTP, or L2TP. To change to Level 1 CTF, please click Confirm.
+Enable HW Accelerator
+Add
+Agree
+Check log
+Clear
+Close
+Delete
+Detect Again
+Disabled
+Disagree
+Disconnected
+Enabled
+Finish
+Generate
+Help
+Local Device
+Login
+Nonsupported
+OK
+Save
+Auto-reconnection
+Refresh
+Reset
+Restore
+Scan
+Secure Your Router
+Upload
+Current
+Current Frequency
+Current Settings
+Custom
+Date
+Fri
+Mon
+Sat
+Sun
+Thu
+Tue
+Wed
+days
+Register
+Terms of Use Notice
+WAN IP and hostname verification
+Check every
+I will use the service
+This account will be deleted with its access rights in the Network Neighborhood and FTP<p>Are you sure you want to continue?</p>
+Delete this account
+First time dealy
+Before deleting the folder, ensure that it is empty.<br><br>Are you sure you want to delete the folder?
+Delete this folder
+Searching, please wait...
+iTunes Service:
+Printer Service:
+PC
+Router
+Access Point
+NAS
+IP Camera
+Other Device
+In Repeater mode, the DHCP-assigned IP address changes. Install and use the <a href=\"http://dlcdnet.asus.com/pub/ASUS/LiveUpdate/Release/Wireless/Discovery.zip\" style=\"font-family:Lucida Console;text-decoration:underline;color:#FC0;\">Device Discovery Utility</a>  to get the wireless router's new IP address.
+In Access Point (AP) mode, the DHCP-assigned IP address changes. Install and use the <a href=\"http://dlcdnet.asus.com/pub/ASUS/LiveUpdate/Release/Wireless/Discovery.zip\" target=\"_blank\" style=\"font-family:Lucida Console;text-decoration:underline;color:#FC0;\">Device Discovery Utility</a> in order to detect the wireless router's IP address.
+In Media Bridge mode, the DHCP-assigned IP address changes. Install and use the <a href=\"http://dlcdnet.asus.com/pub/ASUS/LiveUpdate/Release/Wireless/Discovery.zip\" style=\"font-family:Lucida Console;text-decoration:underline;color:#FC0;\">Device Discovery Utility</a> to get the wireless router's new IP address.
+Wireless MAC filter allows you to control packets from devices with specified MAC address in your Wireless LAN.
+DHCP query frequency
+Aggressive Mode
+Normal Mode
+This page shows the device's related settings such as MAC, IP, and lease time settings.
+Share without account
+Disable Share
+Disable FTP
+Disconnect the Internet connection
+Unmounted
+Health Scanner
+Errors have been detected on your hard drive. Remove any damaged files or use a PC to correct system issues.
+Daily
+Scan Results
+Disk scan has been scheduled :
+Finishing disk scanning...
+Frequency
+Information
+Click [Rescan] to check if your hard drive is healthy.
+Initializing disk scanning…
+Monthly
+Disk scan process complete. Please check the detailed results below.
+Disk Re-Mounting…
+Disk scanning...
+All disk activity will stop while scanning is in progress. Do you want to run disk scan now?
+All disk activity will stop while scanning is in progress.
+Disk scan running. Please wait.
+Schedule Disk Scan
+Disk scan almost complete…
+Time
+Unmounting disk…
+Week
+Weekly
+I have plugged USB disk,
+renew
+ the system status.
+Display routing table
+Shared Content Type
+Media Server Directory
+Enable UPnP Media Server
+Media Server Name
+Manual Media Server Path
+Media Server Path Setting
+All Disks Shared
+Media Server Status
+Download Master is disabled.
+Get ASUS Download Master  for Windows® now.
+PC-free download manager.
+Please select the USB storage device that you want to access
+Download Master installation successful!
+Launch Download Master now
+R6900 does not support this format for the first partition. It supports FAT32, MS-DOS, and ext2/3.
+Disk quota for the first partition is < 1GB.
+Please set up the DNS server on the client device.
+Download ASUS AiCloud 2.0 app to phone or pad from :
+Download Bandwidth
+Download Master is not installed in your R6900.
+Download Master is not supported in your R6900.
+Download Priority
+Data Received/Sec
+Data Received
+Refresh page
+This item enables Bitswap. Bitswap adjusts bits allocated for bins/channels. Busy or congested bins / channels are assigned fewer bits while available channels are allocated more bits to handle.
+Interface Name
+Mode
+Enable SRA (Seamless Rate Adaptation) for consistent data transfer rates  and prevent dropped connections. However, if your connection is very stable and you notice a drop in download or upload speed, you can disable SRA.
+This item configures SNR Margin Offset. If your DSL connection is unstable or is not able to establish a connection, set the value to a negative dB, for example -1 dB. If the issue persists, set the value to -2 dB ~ -10 dB (Max.stability).  For a normal DSL connection, values are 1 dB ~ 10 dB (Max.performance).
+Click the Edit icon to edit a PVC setting. Click the add (+) or delete (-) icon to add or delete a PVC setting.
+The telephone cable or Ethernet cable is not plugged in.
+PPPoE, PPPoA or VPN authentication failed.
+Please contact your ISP to obtain your DSL settings before doing any changes.
+DSL modulation
+ANNEX Mode
+DSL Line Configuration
+Share PVC
+SRA (Seamless Rate Adaptation)
+Stability Adjustment
+R6900 provides Dual WAN support. Select Failover mode to use a secondary WAN for backup network access. Select Load Balance mode to optimize bandwidth, maximize throughput, minimize response time, and prevent data overload for both WAN connections.
+Enable Dual WAN
+Allow failback
+The time period criteria to trigger failback mechanism. When you change to the secondary WAN, the router will check how long primary WAN is connected. If the primary WAN connection is stable (longer than failback deteck time), the connection will change to primary WAN.
+Country / ISP profile rules for Primary WAN
+Import ISP profile rules
+Country / ISP profile rules for Secondary WAN
+Load Balance optimizes resource and maximizes throughput, which provides better performance for Primary and Secondary WAN with similar network speeds.
+Port Trigger / Port Forwarding / DMZ / DDNS functions only work with wired (Ethernet) WAN connection.
+Dual WAN Mode
+Fail Over
+Load Balance
+Load Balance Configuration
+Time delay before the first ping packet is sent out when the router is restarted.
+You can enable Ping Time Watchdog to continuously monitor the primary WAN connection between R6900 and the remote host. The router will continuously ping a user defined target in this setting. If the router fails to ping the target IP address, the router will automatically do a failover.
+Failover Detection Time
+Failover Execution Time
+Maximum Continous Failures Allowed
+Failback Detection Time
+Failback Execution Time
+Time interval between two ping packets.
+The IP address of the target host where the router is sending ping packets continuously.
+The time period criteria to trigger failover mechanism. If the disconnection time of the primary WAN reach the failover detect time, the primary WAN connection will be switched to the secondary WAN.
+Ping Time Watch Dog
+Auto Network Detection
+Primary WAN
+Routing rules for Dual WAN
+Enable Routing rules
+Routing rules
+Secondary WAN
+WAN Unit
+Eject USB disk
+Empty
+Enable DMZ
+Enable MAC Filter
+Enable NAT
+Enable Router Advertisement
+Enable Telnet
+Enable WAN
+Share with account
+Enable Share
+Enable FTP
+Enable QoS
+Enable WAN down browser redirect notice
+Enable USB Mode
+R6900 provides two modes for encapsulating or transporting LAN and WAN protocols via ATM. Please select the appropriate Encapsulation Mode.
+Ethernet WAN
+Installing...
+External only
+Extend the TTL value
+EZQoS Bandwidth Management
+Quality of Service (QoS) ensures bandwidth for prioritized tasks and applications.
+<span style="font-weight:bolder;font-size:14px;">Adaptive QoS</span> ensures inbound and outbound bandwidth on both wired and wireless connections for prioritized applications and tasks via pre-defined, drag-and-drop presets: gaming, media streaming, VoIP, web surfing and file transferring.
+To enable QoS function, click the QoS slide switch and fill in the upload and download. Get the bandwidth information from ISP or go to <a href="http://speedtest.net" target="_blank" style="text-decoration:underline;">http://speedtest.net</a> to check bandwidth.
+<span style="font-weight:bolder;font-size:14px;">Traditional QoS</span> ensures inbound and outbound bandwidth on both wired and wireless connections for prioritized applications and tasks via manual user-defined parameters.
+About EzQoS
+Enable Smart QoS
+Adaptive QoS type supports you to modify apps category priority based on router stream. QoS type switching will only keep priority configuration for each client.
+Traditional QoS
+Traditional QoS type offers you advanced configure item including port, protocol and transferred. QoS type switching will only keep priority configuration for each client.
+The Quality of Service (QoS) ensures the network's speed performance. The default rule sets Web Surfing as the highest priority and is not influenced by P2P applications (peer-to-peer applications such as BitTorrent). To enable QoS function, click Enable QoS, and fill in the upload and download bandwidth fields. Get the bandwith information from your ISP.<p>If you want to prioritize specific network applications and network devices, select your preferred priority from the User-defined QoS rules.
+For more professional and detailed configuration, please enter
+Fail Over Retry Count
+Find FAQs
+Comments / Suggestions
+Compatibility Problem
+Connection/Speed Problem
+Choose which option best describes the performance of your DSL service.
+Your Country
+We welcome your feedbacks, comments, suggestions, and feature ideas about ASUS products.
+Your feedback is very important to us and will help to improve the firmware of R6900. If you have any comments, suggestions or connection issue, complete the form below, these information along with current DSL logs will be send to ASUS Support Team. In order to allow us to respond to your feedback, kindly ensure that you have entered your e-mail correctly.
+Your e-mail Address
+E-mail address format is not valid.
+E-mail address field is empty. Are you sure you want to proceed?
+Extra information for debugging
+Failed to send your feedback. Please check your Internet connection and try again.
+The system failed to connect to the mail server. You can send an email directly to
+Simply copy the contents below and paste it as your e-mail contents.
+Frequent interruptions
+iptable setting
+Your ISP / Internet Service Provider
+Maximum of 2000 characters - characters left
+Now this function can't work, because your ASUS Router isn't connected to the Internet. Please send your Feedback to this email address :
+The Firmware Version will be submitted in addition to any info you choose to include above.
+Feedback will be used to diagnose problems and help to improve the firmware of R6900, any personal information you submitted, whether explicitly or incidentally will be protected in accordance with our <a style="font-weight: bolder;text-decoration:underline;cursor:pointer;" href="http://www.asus.com/Terms_of_Use_Notice_Privacy_Policy/Privacy_Policy/" target="_blank">privacy policy</a>.
+By submitting this Feedback, you agree that ASUS may use feedback that you provided to improve ASUS Networking & Wireless product.
+Occasional interruptions
+* Optional
+Feedback problem description
+Feedback problem type
+Setting file
+Configuration Issue
+stable connection
+We value all feedbacks that we receive. We will use your feedbacks and comments to strive to improve your ASUS experience.
+Thanks for taking the time to submit your feedback.
+Your Suggested Translation
+Usually to always unavailable
+Creating a share with more than 12 characters may make it invisible in some WindowsR version.\nDo you want to continue?
+Share name cannot be blank.
+Share name can only contain alphanumeric/dash/underscore/space characters.
+The share name already exists in this volume. \nPlease enter a different name!
+Use this new password on your next login.
+Username can only contain alphanumeric characters and the dash symbol.
+The Network Services filter blocks the LAN to WAN packet exchanges and restricts devices from using specific network services.<p>For example, if you do not want the device to use the Internet service, key in 80 in the destination port. The traffic that uses port 80 will be blocked.<p>Leave the source IP field blank to apply this rule to all LAN devices.
+Enable the firewall to protect your local area network against attacks from hackers. The firewall filters the incoming and outgoing packets based on the filter rules.
+<b>Black List Duration :</b> During the scheduled duration, clients in the Black List cannot use the specified network services. After the specified duration, all the clients in LAN can access the specified network services.<br><b>White List Duration :</b> During the scheduled duration, clients in the White List can ONLY use the specified network services. After the specified duration, clients in the White List and other network clients will not be able to access the Internet or any Internet service.
+<b>NOTE :</b> If you set the subnet for the White List, IP addresses outside the subnet will not be able to access the Internet or any Internet service.
+MAC filter allows you to accept or deny network access for devices with specific MAC addresses.<p>You can set the MAC filter to the Accept or Reject mode.<p>In the Reject mode, devices in the list are denied access to the network.<p>In the Accept mode, only the devices that are in the list can access the network. The devices that are not in the list are denied access to the network.
+A \"denial-of-service\" attack is an explicit attempt to deny legitimate users from using a service or computer resource.<p>Enabling this feature can protect the router from DoS attack but it would increase the router's workload.
+Enable DoS protection
+Disabling the firewall will deactivate all the related functions.
+Enable Firewall
+When you set 20:21 as your FTP server's port range for your WAN setup, then your FTP server would be in conflict with R6900's native FTP server.
+Enable Keyword Filter
+Keyword Filter allows you to block the clients' access to webpages containing the specified keywords.
+Limitations of the filtering function :<ol><li>Compressed webpages that use HTTP compression technology cannot be filtered. <a href="http://en.wikipedia.org/wiki/HTTP_compression" target="_blank" style="text-decoration: underline; font-family:Lucida Console;">See here for more details.</a></li><li>Https webpages cannot be filtered.</li></ol>
+Keyword Filter List
+This field defines the dates that LAN to WAN filter will be enabled.
+Date to Enable LAN to WAN Filter
+This field defines the time interval that LAN to WAN filter will be enabled.
+Time of Day to Enable LAN to WAN Filter
+Select either White List or Black List to accept or reject those LAN to WAN packet exchanges for clients specified in the filter table.
+Filter table type
+Destination IP
+Select [Yes] to enable filter that specify IP or port for control incoming and outgoing packets.
+Enable Network Services Filter
+This field defines a list of LAN to WAN ICMP packets type that will be filtered. For example, if you would like to filter Echo(type 8) and Echo Reply(type 0) ICMP packets, you need to enter a string with numbers separated by blank, such as, [0 8].
+Filtered ICMP packet types
+Source IP
+Port Range
+Network Services Filter Table
+There is at least one accept address in MAC filter list.\n Do you want to add this login client MAC?
+MAC filter list
+Accept
+Reject
+In Accept mode, R6900 only accept clients with MAC address in the list. In Reject mode, R6900 will reject clients with MAC address in the list.
+MAC Filter Mode
+When your network's firewall is disabled and you set 80 as the HTTP server's port range for your WAN setup, then your http server/web server would be in conflict with R6900's web user interface.
+This field defines the dates that URL filter will be enabled.
+Date to Enable URL Filter:
+This field defines the time interval that URL filter will be enabled. Please enter different start and end time.
+The start time is later than end time.
+Invalid time period.
+Specified time interval can not overlap.
+Time of Day to Enable URL Filter
+Enable URL Filter
+Key in the keywords for the sites that you want to block.<p>For example, enter "XXX" in the list The URL filter will block the http://www.abcXXX.com, http://www.XXXbbb.com and so on.
+URL Filter List:
+This field indicates the kind of packets logged between LAN and WAN.
+Logged packets type
+Allows R6900 to respond LPR request from WAN.
+Respond LPR Request from WAN?
+This feature allows you to respond to ping request from WAN.
+Respond Ping Request from WAN
+This feature allows you to configure the wireless router via the Internet. The default port is 8080 and you can use http://[WAN IP]:8080 or http://[DDNS name]:8080 to launch the wireless router's web user interface.
+Enable Web Access from WAN
+To specify the port used to config R6900 from the Internet( 1024:65535 ). The default port is 8080.
+Port of Web Access from WAN
+Enable IPv6 Firewall
+All outbound traffic coming from IPv6 hosts on your LAN is allowed, as well as related inbound traffic. Any other inbound traffic must be specifically allowed here.
+You can leave the remote IP empty to allow traffic from any remote host. A subnet can also be specified. (2001::1111:2222:3333/64 for example)
+Inbound Firewall Rules
+Folder Name
+Set the account and permission of FTP service.
+Clients
+Get the latest firmware version from ASUS Support site at <a id="asus_link" style="font-weight: bolder;text-decoration: underline;color:#FFFFFF;" href="http://www.asus.com/support/" target="_blank">http://www.asus.com/support/</a>
+Please visit the ASUS support site http://www.asus.com/support/ to get the latest firmware.
+Download Firmware
+Product ID
+Firmware Version
+New Firmware File
+The latest firmware version include updates on the previous version.
+In case the upgrade process fails, R6900 enters the emergency mode automatically. The LED signals at the front of R6900 will indicate such a situation. Use the Firmware Restoration utility on the CD to do system recovery.
+Note:
+Please decompress the file first.
+Game Boost
+Real-Time Network Protection
+AiProtection, incorporating state-of-the-art, three-pronged security from Trend Micro™, gives you enterprise-level security in the home — making ASUS routers equipped with this feature the most secure home routers you can buy! It constantly monitors the health and safety of your network for total peace of mind. You can temporally turn off anti-virus on your PCs to reserve system resources for gaming.
+Benefits to enable Game Boost on ASUS router
+Reduce average ping time and variation.
+Reduce average packet loss rate.
+Cross platform supported.
+Utility free for your PCs, reserve CPU/RAM usage for game.
+Life time free of one device acceleration.
+Game Boost,an exclusive gamer private network(GPN) powered by WTFast automatically performs route optimization, choosing the most efficient route for your game packets. Life-Time free for one device, cross platforms supported.
+Game Boost,an exclusive gamer private network(GPN) powered by WTFast automatically performs route optimization, choosing the most efficient route for your game packets.
+Game Boost Information
+Internet Game Boost
+LAN Boost
+Adaptive QoS optimizes inbound and outbound bandwidth on both wired and wireless connections. Applications and tasks can be prioritized easily using drag-and-drop presets for gaming.
+One Click Game First mode
+Enter WTFast account here
+Game Boost Management
+Router Free Basic Account
+Router Basic Account
+Router Advanced Account
+Ended Date
+You are now using router free basic account.
+* As you use Game Boost powered by WTFast, you agree with WTFast <span><a id="link" href="javascript:open_link('terms')" style="text-decoration:underline;color:#008DE5;">Terms of Use</a></span> and <span><a id="link" href="javascript:open_link('privacy')" style="text-decoration:underline;color:#008DE5;">Privacy Policy</a></span>
+* Check the latest supported games of router version <span><a id="link" href="javascript:open_link('')" style="text-decoration:underline;color:#008DE5;">here</a></span>.
+* GPN performance will be varied by your ISP or location. Please keep your firmware stay up to date.
+* How to choose a good GPN server? <span><a id="link" href="javascript:open_link('gpn1')" style="text-decoration:underline;color:#008DE5;">Here</a></span> And ensure best gaming experiences? <span><a id="link" href="javascript:open_link('gpn2')" style="text-decoration:underline;color:#008DE5;">Here</a></span>
+* How to use WTFast on ASUS Router? <span><a id="link" href="javascript:open_link('howto')" style="text-decoration:underline;color:#008DE5;">Here</a></span>
+Game Boost Rules List
+Elapsed time since system boot
+Uptime
+This page shows the detailed system's activities.
+Go to the Guest Network
+Go to USB Modem setting.
+Enable Guest Network
+You must go to enable Wireless MAC Filter
+Guest Network index
+The Guest Network provides Internet connection for guests but restricts access to your local network.
+Turn Wi-Fi on to operate the Guest Network.
+Hardware Version
+Help
+Help provides you with guidelines and information about using the router's functions. Click the
+hyperlinked words with yellow and blue underline.
+to get help.
+It is the group name of the R6900 in the Network Neighborhood, and standard input characters include letters(A-Z, a-z), digits(0-9). The hyphen (-) and under line ( _ ) and full-stop (.) characters may also be used, but not as the first character. Using a non-standard name results in other users cannot find your computer in LAN.
+High
+Highest
+The Highest Priority packet
+hours
+Unable to connect to the Internet, please re-enter the information, or double-check your account data with your ISP.
+Please select your internet service provider location.
+Location
+We currently do not support this location, please use [Manual]
+Please enter your dial number.
+Dial Number
+DNS Server
+Switch to USB mode to use a 3G/4G USB wireless dongle or Android phone as a USB modem.
+If you want to change the connection type, please go to <a href="/Advanced_Modem_others.asp">USB Modem</a> to disable USB adapter.
+Enable USB Modem
+USB Modem mode
+Pluging the USB adapter into R6900 and make it become mobile router.
+Please select your internet service provider(ISP).
+ISP
+Please enter your password.
+Password
+Please input the Personal Identification Number(PIN) code of your SIM card. It must be the number which length is greater than 4 and smaller than 8. If you do not know the PIN code, please contact your ISP.
+If you do not know the APN service name, please contact your ISP.
+APN Service(optional)
+USB Adapter
+Please select your usb adaptor.
+Please enter your username.
+Username
+Access setting page via
+Duplicate port number with HTTP and HTTPS WAN port setting.
+NAT (Network Address Translation) is a process used in routers to replace the address information of network packet with new address information. Typical applications for NAT is router which connect to LAN with the WAN. In LAN every network devices had a private IP(LAN IP) but there is only one public IP(WAN IP). To grant the network devices access to the Internet, the router replaces the private IP address of the sender with its own public IP address in all outgoing data packets. The router saves all necessary information in a table(NAT table) so that incoming data packets can then be assigned on the correct network device.
+in
+Band
+Target Band
+Internet
+Interval
+Invitation
+For source or destination IP address, you can : (a) enter a specific IP address, such as \"192.168.122.1\"; (b) enter IP addresses within one subnet or within the same IP pool, such as \"192.168.123.*\", or \"192.168.*.*\"; or (c) enter all IP addresses as \"*.*.*.*\".
+IP Sharing
+IP Sharing: Most ISPs commonly use this mode. In IP sharing mode, the Wireless ADSL Modem Router connects to the Internet and LAN clients share one public IP address.
+Description
+Enable Port Trigger
+Incoming Port
+Trigger Port
+Selecting Yes allows multiple players in the LAN to play Starcraft at the same time.
+Starcraft (Battle.Net)
+Some applications require special handler against NAT. These special handlers are disabled in default.
+Special Applications
+IP Address of Exposed Station
+Virtual DMZ allows you to expose one computer to the Internet, so that all the inbounds packets will be redirected to the computer you set. It is useful while you run some applications that use uncertained incoming ports. Please use it carefully.
+WAN IP Setting
+Key in the LAN client's IP address.
+Leave this field blank if you want the incoming packets to be redirected to this port.
+Port range accepts various formats such as Port Range (300:350), individual ports (566,789) or Mix (1015:1024,3021)
+Port Trigger allows you to temporarily open data ports when LAN devices require unrestricted access to the Internet. There are two methods for opening incoming data ports: port forwarding and port trigger. Port forwarding opens the specified data ports all the time and devices must use static IP addresses. Port trigger only opens the incoming port when a LAN device requests access to the trigger port. Unlike port forwarding, port trigger does not require static IP addresses for LAN devices. Port forwarding allows multiple devices to share a single open port and port trigger only allows one client at a time to access the open port.
+Trigger Port List
+User Defined
+Well-Known Applications
+UPnP (Universal Plug and Play) allows several devices (routers, televisions, stereo systems, game consoles, cellular phone) to be controlled via an IP-based network with or without a central control through a gateway.
+Enable Port Forwarding
+Virtual Server / Port forwarding allows remote computers to connect to a specific computer or service within a private local area network (LAN). For a faster connection, some P2P applications (such as BitTorrent), may also require that you set the port forwarding setting. Please refer to the P2P application's user manual for details. You can open the multiple port or a range of ports in router and redirect data through those ports to a single client on your network. <p>If you want to specify a Port Range for clients on the same network, enter the Service Name, the Port Range (e.g. 10200:10300), the LAN IP address, and leave the Local Port empty.
+Local IP
+Local Port
+Protocol
+FTP Server Port
+Famous Game List
+Famous Server List
+No data in table.
+Port Forwarding List
+Please set up the DNS server on the client device.
+WAN DNS Setting
+WAN and LAN should have different IP addresses and subnet.
+WINS Server1
+WINS Server2
+Connect to WINS Server automatically
+DHCP Option
+IPv4 Router Mask Length
+IPv6 Prefix
+IPv4 Border Router
+Auto Configuration Setting
+Client IPv6 Address
+Server IPv6 Address
+IPv6 DNS Server
+IPv6 DNS Setting
+IPv6 Network Information
+This page shows IPv6 network details.
+LAN IPv6 Address
+LAN IPv6 Prefix
+IPv6 LAN Setting
+IPv6 Prefix Length
+IPv4 Anycast Relay
+Static IPv6
+Server IPv4 Address
+WAN IPv6 Address
+WAN IPv6 Gateway
+WAN Prefix Length
+IPv6 WAN Setting
+If you are GVT users, please key in the user name <b>turbonet@turbonet</b> and password <b>gvt25</b>. Otherwise, please key in the user name and password provided by your ISP.
+Select the ISP Profile to configure special ISP settings.
+iTunes Server Name
+The connection to R6900 has failed. Click OK to send request or Cancel to stop.
+This field allows you to enable or disable Download Master.
+This field allows you to share downloaded materials to Internet users.
+This field allows you to enable or disable UPnP.
+LAN IP address and subnet mask has changed. R6900 IP Pool of addresses should be updated. Would you like to update IP Pool of addresses automatically?
+The new IP Pool does not match the subnet mask. Would you like to allow R6900 to change the IP pool automatically?
+This entry has been in list.
+Please input the value between 1 to 2592000(Secondes).
+are invalid characters.
+Invalid PIN Code.
+Verification code is not valid.
+Local IP or port range fields cannot be empty!
+This table only allows
+items!
+It is the maximum number of concurrent connections for the Network Neighborhood or FTP Server. Some ftp clients may establish more than one connection. Setting this number too low leads to failed logon.
+After setting up the name (such as aabbcc), enter \\\\aabbcc in Internet Explorer's URL field to quickly access the Network Place service. The standard input characters include letters(A-Z, a-z), digits(0-9). The hyphen ( - ) and under line ( _ ) characters may also be used, but not as the first character.
+Router login name only accept alphanumeric characters, under line and dash symbol. The first character cannot be dash \"-\" or under line \"_\".
+is not a valid port range!
+Enable Jumbo Frame
+LAN IP
+Select Language
+Enable the DHCP server function to allow the router's DHCP server to automatically assign IP addresses to network clients. If this function is disabled, you need to manually assign the IP address settings on your LAN devices.
+Enable the DHCP Server
+DHCP (Dynamic Host Configuration Protocol) is a protocol for the automatic configuration used on IP networks. The DHCP server can assign each client an IP address and informs the client of the of DNS server IP and default gateway IP. R6900 supports up to 253 IP addresses for your local network.
+R6900 IP address:
+Configure the LAN setting of R6900.
+LAN IP address is used by the VPN server. Please use another IP address for the LAN IP address.
+Configure the IPv6 Internet setting of R6900.
+Configure the IPTV setting of R6900.
+To watch IPTV, the WAN port must be connected to the Internet. Please go to <a href="/Advanced_WANPort_Content.asp" style="text-decoration: underline;">WAN - Dual WAN</a>  to confirm that WAN port is assigned to primary WAN.
+The Domain Name for clients who request IP Address from the DHCP Server.
+It can only contain alphanumeric characters and the dash symbol.
+R6900's Domain Name
+Set the lease time that the network client is allowed to use its current IP address to connect to the wireless router. When the lease time expires, the network client should either renew or get a new IP address from the wireless router's DHCP server.
+Lease time
+Assign a fixed IP address for a specific client. The client's MAC address is required.
+Enable Manual Assignment
+Manually Assigned IP around the DHCP list
+Allows the wireless router to handle the multicast packets. Enabling multicast router also enables the RTP and RTSP functions.
+The LAN port that your IPTV Set-top-box connects to.
+This field indicates the last address in the pool to be assigned by the DHCP server in LAN.
+IP Pool Ending Address
+The first address in the pool to be assigned by the DHCP server in LAN.
+IP Pool Starting Address
+DDNS server does not respond. Please try again.
+Unauthorized registration request!
+Client Error: Proxy Authentication Required!
+DDNS server does not response.
+Invalid characters of domain name is
+Hostname cannot be blank.
+Request error! Please try again.
+Registration is successful.
+Registered the original hostname successfully.
+Registered the new hostname successfully.
+The IP and hostname are not registered, please register first.
+The host name cannot accept number prefix and '.' (such as '123abc' or 'aaa.bbb')
+Invalid Domain! The format should be 'xxx.asuscomm.com'.
+The domain name
+Both hostname & IP address have not changed since the last update.
+is registered.
+is already registered. And you have registered :
+IP address, server and hostname have not changed since the last update. If you want to update, please click [Yes].
+Enable the DDNS Client
+DDNS (Dynamic Domain Name System) is a service that allows network clients to connect to the wireless router, even with a dynamic public IP address, through its registered domain name. The wireless router is embedded with the ASUS DDNS service and other DDNS services.<p>
+The wireless router currently uses a private WAN IP address.<p>This router may be in the multiple-NAT environment and DDNS service cannot work in this environment.
+The host name is successfully registered. You can use "[hostname].asuscomm.com" to access the service in home network from WAN. Use "[hostname].asuscomm.com" to remotely access your network.<p>Go to Advanced Settings > WAN to configure the port forwarding or DMZ settings to allow other WAN clients to remotely access your network.<p> If you want to remotely configure the wireless router, go to <a href="/Advanced_System_Content.asp?af=misc_http_x" target="_blank" style="text-decoration: underline; font-family:Lucida Console;">here</a>.
+DDNS Setting
+Query
+The host name cannot accept number prefix and \".\" (such as \"123abc\" or \"aaa.bbb\").
+Host Name
+This field is used as a password to log into the Dynamic-DNS service.
+Password or DDNS Key
+Server
+Free Trial
+Update
+This button allows you to update DDNS database manually. It is available only when automatic DDNS update failed. You can get current status of DDNS update from the System Log.
+Update Manually
+This field is used as an identity to log into the Dynamic-DNS service.
+User Name or E-mail Address
+When enabled, the domain name with wildcard is redirected to your IP address.
+Enable wildcard
+This is the IP address of default gateway for Access Point
+This field indicates the IP address of DNS to provide to clients that request IP Address from DHCP Server. You can leave it blank, then the DNS request will be processed by R6900.
+DNS Server
+DNS and WINS Server Setting
+This field indicates the IP address of gateway in your LAN. If you leave it blank, the IP address of R6900 will be assigned.
+To synchronize your system time with NTP Server.
+NTP Server
+NTP Link
+This field allows to assign a remote server to record log messages of R6900. If you leave it blank, the system will record up to 1024 messages on R6900.
+Remote Log Server
+The standard time in your area or locality.
+Reminder: The System time zone is different from your locale setting.
+Time Zone
+DST time zone changes starts
+DST time zone changes ends
+The Windows Internet Naming Service manages interaction of each PC with the Internet. If you use a WINS server, enter IP Address of server here.
+WINS Server
+Last 30 Days
+R6900 supports several connection types to WAN (wide area network).These types are selected from the dropdown menu beside WAN Connection Type. The setting fields differ depending on the connection type you selected.
+Get the WAN IP automatically
+Choose the LAN port to bridge to WAN port. If you have another device to connect to WAN but your ISP only provide one WAN link, you can specify some LAN port to receive packets from WAN port. For example, you can connect your IPTV Set-top box to the specified port and get the signal and IP address from your ISP directly.
+Choose IPTV STB Port
+When the Internet connection settings is configured in Load Balance mode, the DDNS function only works with wired (Ethernet) WAN connection.
+When the Internet connection settings is configured in Load Balance mode, the DMZ function only works with wired (Ethernet) WAN connection.
+When the Internet connection settings is configured in Load Balance mode, the Port Forwarding function only works with wired (Ethernet) WAN connection.
+When the Internet connection settings is configured in Load Balance mode, the Port Trigger function only works with wired (Ethernet) WAN connection.
+Learn more
+Lease expires
+Unlimited access
+You have not yet enabled share via the Network Neighborhood. Please enable it in USB Application / Share via the neighborhood.
+Your browser does not support entering the Network Neighborhood through clicking the hyperlink.
+FTP server is not enabled. Enable the FTP server in <a href="../Advanced_AiDisk_ftp.asp" target="_blank" style="text-decoration: underline; font-family:Lucida Console;">here</a>.
+DDNS is not enable yet. You can enable it in WAN / DDNS when people need to access FTP via the domain name from WAN.
+DDNS is enable but register of domain name is fail. People still can't access FTP by domain name from WAN.
+Add / Delete
+Max Limit :
+Check
+Log
+Login user IP:
+You cannot Login unless logout another user first.
+You have logged out successfully.
+Low
+Lowest
+Use LPR protocol to sharing printing
+If there are entries in the MAC filter list, click Apply to delete those entries, then click Apply again to disable the MAC Filter function. If there are no entries, click Apply once to disable the MAC Filter function.
+Manual
+Manually assign
+City:
+Country:
+You might need the VLAN ID to set up the PTM connection. Do not change the VLAN ID unless your ISP instructs you to do so.
+This Quick Setup guides you to quickly configure the R6900 WAN settings, please select your country and ISP name from the dropdown list, click Next, and enter the necessary information. Contact your Internet Service Provider (ISP) for information about your DSL connection settings, if necessary.
+You need the Virtual Path Identifier (VPI) and Virtual Channel Identifier (VCI) to set up the ATM PVC. Do not change the VPI and VCI numbers unless your ISP instructs you to do so.
+is invalid.
+is out of range
+Notice:
+Quick Manual Setting
+Refer to the R6900 WAN settings. If you want to add a new setting, follow the onscreen instructions. If you want to modify the previous setting, please go to [Advanced Setting] -> [WAN] -> [Internet Connection] page.
+Manufacturer
+Maximum Bandwidth Limit
+Set the maximum upload bandwidth limit
+Maximum Computers
+Maximum
+Setup the FTP and Network Place (Samba).
+Medium
+IPTV
+Feedback
+AiDisk
+Real-time
+Last 24 Hours
+Daily
+QoS
+System Status
+Dynamic IP Setting
+IP Setting
+Minimum Reserved Bandwidth
+Set the minimum reserved bandwidth
+minute(s)
+APN Profile
+Configuring...
+Confirm PIN
+* If APN setting is not automatically configured, you must manually configure it.
+Data Usage
+Configure the Mobile Broadband settings of R6900.
+Hot-Standby will be disabled if Mobile Braodband is disabled. Are you sure you want to disable it?
+Mobile Broadband is disabled.
+Enable Mobile Broadband
+Failed to connect to the mobile broadband network.
+Failed to change the PIN.
+Mobile Phone Number
+Idle Time
+Go to Mobile Broadband Information Page.
+Please enter the PIN.
+Please enter the PUK.
+Internet Usage
+The value of the data usage limit is smaller than the value of the current data usage. Set a higher data usage limit for mobile broadband connection.
+The limit for mobile broadband data usage is reached. The mobile broadband is no longer accessible. Do you want to change the settings for the mobile broadband data usage limit?
+PIN code is required.
+PIN2 code is required.
+PUK code is required.
+PUK2 code is required.
+Network Operator
+New PIN
+Please enter the new PIN.
+No signal
+Old PIN
+PDP Type
+Wrong PIN code.
+Please input the PIN code obtained from the internet service provider.
+PIN Management
+PIN Modification
+PIN Verification
+PIN Unblocking Key (PUK)
+Please get the PIN unblocking code (PUK) from your service provider.
+The maximum number of SIM cards is reached. To save the data usage settings of the current SIM card, the oldest record will be deleted. Are you sure you want to delete it?   NOTE:  R6900 can keep the data usage records of up to ten (10) SIM cards.
+Remaining Data
+Remaining Attempts
+The new reset day will take effect next month.
+Cycle Start Day
+Roaming
+Roaming ISP
+Roaming Scanning Time
+Roaming ISP scan will disconnect the current mobile connection.
+Save My PIN
+Select Operators
+Go to Mobile Broadband Setting.
+Signal Strength
+Failed to read the SIM card.
+SIM card is locked. Please contact your service provider.
+SIM card is not inserted.
+SIM card is ready.
+Send SMS Notification
+An SMS notification is sent when the defined usage is reached. Ensure that you enter your mobile number in the Mobile Phone Numberfield to receive the SMS notification.
+Starting Day
+Select the number of days that data usage is recorded. The data usage value will be reset at the end of each cycle.
+Mobile Connection Status
+This page displays basic device information, internet connection status and internet usage.
+Stop showing this message again.
+Successfully changed the PIN.
+Mobile Broadband
+Data Usage Limitation
+Unblock
+Unblock SIM
+When the defined usage is reached, the system sends out an alert notification.
+Data Usage Cycle
+Data Usage Limit
+When the defined usage is reached, mobile broadband connection is no longer accessible.
+Data Usage Alert
+USIM Card Status
+Loading SIM card data, please wait…
+PIN code is wrong. Please enter the correct PIN code.
+PUK code is wrong. Please enter the correct PUK code.
+The account's access rights does not change after modifying its name and password. If you choose not to do any changes, the account values will remain the same.
+New Password
+Modify this account
+Model Name
+After renaming, the access rights for the folder and its sub-folder do not change.
+Rename this folder
+month
+More Config
+MPPE Encryption
+Time Remaining
+NAT Acceleration
+NAT traffic is processed by CPU.
+CTF (Cut Through Forwarding) is enabled.
+CTF (Cut Through Forwarding) and FA (Flow Acceleration) accelerator are enabled.
+Enable NAT Accelerator
+H.323 Passthrough
+IPSec Passthrough
+L2TP Passthrough
+Enable NAT Passthrough to allow a Virtual Private Network (VPN) connection to pass through the router to the network clients.
+PPTP Passthrough
+RTSP Passthrough
+SIP Passthrough
+Disable DDNS.
+Connections to NAT
+By source IP
+SNAT connections
+Sort by dst
+Sort by dst-port
+Sort by src
+Sort by src-port
+Sort by state
+Network
+Network Analysis
+The network printer server supports two methods: (1) ASUS EZ printer sharing (2) LPR to share printer.
+Network Printer Server
+Network Tools
+Network Type
+Count
+Diagnose
+Extended option
+Display Network Details
+Method
+Query the nameserver for the IP address of the given host using a specified DNS server.
+Offline list
+Option
+Send ICMP ECHO_REQUEST packets to network host.
+Resolve name
+Target
+Trace route to host
+Wake on LAN
+Wake up
+New Folder Name
+Next page
+No Encryption
+No Printer detected
+No USB disk detected.
+No Account
+No Device
+You have not started the Smart Sync service yet.
+not listed
+Turn Wi-Fi on to operate the WPS.
+To enable WPS, change the authentication method to WPA2 or WPA-Auto.
+If you want to enable WPS, you need to disable hiding SSID first.
+Note: New patch will be updated regularly, please keep your firmware stay up to date.
+If you cannot use ASUS DDNS services, please go to <a href="http://iplookup.asus.com/nslookup.php" target="_blank" style="font-family:Lucida Console;text-decoration:underline;">http://iplookup.asus.com/nslookup.php</a> to reach your internet IP address to use this service.
+is already configured to this mode.
+OTP Authentication
+Parent AP status
+Active Schedule
+Allow
+Clients that are added to Parental Controls will have their internet access restricted by default.
+Deny
+Please disable <a id="disable_NAT" style="color:#FC0;text-decoration: underline;" href="" target="_blank">NAT Acceleration</a> for more precise scheduling control.
+Enable Parental Controls
+Enable Time Scheduling
+Parental Controls allow you to set the time limit for a client's network usage. To use Parental Controls:
+Time Scheduling allows you to set the time limit for a client's network usage. To use Time Scheduling:
+In the [Clients Name] column, select the client whose network usage you want to control. You may also key in the clients MAC address in the [Clients MAC Address] column.
+In the [Add / Delete] column, click the plus(+) icon to add the client.
+In the [Time Management] column, click the edit icon to edit the Active Schedule.
+Select the desired time slots for allowed access times. Drag and hold to create longer time slots.
+Click [OK] to save the settings made.
+Clients MAC Address
+Time Management
+Clients Name
+Change the router login password
+Language:
+PIN code
+Partition Name
+For source or destination port range, you can either : a) enter a specific port, such as \"95\"; or b) enter ports within a range, such as \"103:315\", \">100\", or \"<65535\".
+Port Mapping
+Port Mapping supports IPTV WAN interface for specific LAN port. You could select the appropriate LAN port then click Apply.
+Enable Port Mapping
+LAN Port
+This port is for
+This page shows the port forwarding status. Some P2P programs use the UPnP protocol to open the port and the port number is shown on this page.
+R6900 has detected that the connection type is PPPoE. If yes, please key in the username/password and click Apply.<br>If not, please click Manual Setting to set again.
+Please key in the user name/password that your Internet Service Provider (ISP) has provided and click Next.
+This item may be specified by some ISPs. Check with your ISP and fill them in if required.
+Some Internet Service Providers block MAC addresses if the device makes DHCP queries too often. To prevent this, change the DHCP query frequency. <br/> In the default Aggressive mode, if R6900 does not get a response from the ISP, it sends another query after 20 seconds and makes three more attempts.<br/>In Normal mode, if R6900 does not get a response from the ISP, it makes a second query after 120 seconds and makes two more attempts.
+Authentication
+Dial on demand<br>(with idle timeout timer)
+The Dial on Demand feature allows your network to establish a connection only when needed and to disconnect after the specified period of inactivity.
+This field is optional and allows you to configure to terminate your ISP connection after a specified period of time. A value of zero allows infinite idle time.
+Disconnect after time of inactivity (in seconds)
+This field is only available when you set WAN Connection Type as PPPoE.
+This field is only available when you set the WAN Connection Type as USB Modem, PPPoE, PPTP or L2TP.
+This field is optional and may be specified by some ISPs. Check with your ISP and fill them in if required.
+Access Concentrator Name
+This item may be specified by some ISPs. Check with your ISP and fill them in if required.
+Additional pppd options
+Host Name
+MAC Address
+The Maximum Receive Unit (MRU) of PPPoE packet. The default value is 1492. Change this value only if your ISP requires it.
+MRU
+The Maximum Transmission Unit (MTU) of PPPoE packet. The default value is 1492. Change this value only if your ISP requires it.
+MTU
+Enable PPPoE relay allows devices in LAN to establish a individual PPPoE connections that passes through NAT.
+Enable PPPoE Relay
+This item may be specified by some ISPs. Check with your ISP and fill them in if required.
+PPTP Options
+This field is optional and may be specified by some ISPs. Check with your ISP and fill them in if required.
+Service Name
+Enable VPN + DHCP Connection
+The VPN server allows you to access your home network anytime, anywhere.
+To use the VPN server. Please follow these steps.<br>(1) Enable the PPTP VPN server<br>(2) Set the IP pool for client IP. (Maximum 10 clients)<br>(3) Set up the username and password for VPN client.<br>(4) Open the VPN connection program on your computer or smartphone.<br>(5) Add a new PPTP VPN connection and the VPN server address is
+(6) If your WAN IP address is dynamic, <a href="../Advanced_ASUSDDNS_Content.asp" target="_blank" style="text-decoration: underline; font-family:Lucida Console;">please click here to set the DDNS.</a>
+LAN Prefix Length
+Previous page
+Enabling Monopoly Mode allows you to temporarily have exclusive connection to the router for sending print requests.
+Printer model connect to R6900.
+Printer Model:
+Current status of printer
+Printer Status:
+IP address of user which using this printer.
+User in use:
+Monopoly mode:
+Printing status:
+The default ACK, SYN and ICMP packets are used to improve the game smoothness.
+High
+Normal
+Low
+Product Information
+Provider
+Encapsulation
+Encapsulation Mode
+Push
+Are you sure you want to delete this PVC?
+Edit PVC
+ATM(Asynchronous Transfer Mode) provides two types of transport connection, Virtual path interface(VPI) and Virtual channel interface(VCI). A VCI is a unidirectional pipe made up from the concatanation of a sequence of connection elements. A VPI consists of a set of these channels.
+PVC Summary
+Edit
+PVC Setting
+PVC type is
+Service Category
+Please check that the ethernet cable is connected properly to the WAN port.
+Automatic mode
+Bandwidth limit is not valid.
+QoS Type
+User-defined priorities
+User-defined QoS rules
+Please reboot R6900 manually.
+Reconnect to the Internet
+To remove the hard disk from the router, click the USB icon at the upper right corner of your screen.
+To restore the system to its factory default settings and enable the auto-detection of your connection type, please click <a href="" onclick="gotoRestoreSetting();">here</a>.
+It stands for the destination network or host of a route rule. So it could be a host address, such as '192.168.123.11' or a network address, such as '192.168.0.0'.
+It indicates how many bits are for network ID and subnet ID. For example: if the dotted-decimal netmask is 255.255.255.0, then its netmask bits is 24. If the destination is a host, its netmask bits should be 32.
+It stands for the IP address of gateway where packets are routed to. The specified gateway must be reachable first. It means you have to set up a static route to the gateway beforehand.
+Metric is a value of distance for the network
+Network interface that the route rule apply to.
+Use this function to run the IPTV application (such as VLC) on several computers at the same time. This function can convert multicast UDP streams to unicast HTTP streams. Enter the port (such as 4000) that you want to assign for the IPTV application, then use this format to enter the address in the play list to watch IPTV streams: http://[Router IP]:[Udpxy port]/[protocol]/[channel IP address]:[channel  port] (such as http://192.168.1.1:4000/udp/239.255.1.1:5000 or http://192.168.1.1:4000/rtp/239.255.1.2:5000). Enter 0 (zero) to disable this function.
+Roaming assistant
+This page shows the detailed routing status.
+Router mode
+Router mode: Only certain ISPs use this mode. In Router mode, you need to specify your wireless ADSL Modem Router's IP address and subnet mask provided by your ISP . You may also need to disable the DHCP server and specify your computer's IP address manually.
+Use DHCP routes
+Broadcast storm control(Mbps):
+Enable this feature to control the network traffic and avoid a broadcast storm, which would result to a network slowdown or to an unusable network. The range for this field is 1 to 1024. Enter 0 (zero) to disable this feature.
+Multicast storm control(Mbps):
+Unknown multicast storm control(Mbps):
+Unknown unicast storm control(Mbps):
+Enable multicast routing
+Static Route List
+Enable static routes
+This function allows you to add routing rules into R6900. It is useful if you connect several routers behind R6900 to share the same connection to the Internet.
+Gateway
+Network/Host IP
+Netmask
+Metric
+IPTV port number is the same as the Dual WAN LAN port number.
+UDP Proxy (Udpxy)
+Failed to enable the Sync Server.
+Click here to enable AiCloud 2.0 (Cloud Disk and Smart Access) first.
+Folder
+<b>Two-way sync:</b> Syncs files stored in selected folders of the Inviter and Invitee. All files stored in the sync folders can be accessed by both the Inviter and Invitee.
+<b>Client to Server:</b> Invitee is allowed to upload files to the sync folder of the Inviter. However, the Invitee is not allowed to access files stored in the Inviter's sync folder.
+<b>Server to Client:</b> Files stored in the sync folder by the Inviter can be downloaded by the Invitee. However, the Invitee is not allowed to upload files to the Inviter's sync folder.
+Two-way sync
+Client to Server
+Server to Client
+Security Code
+use RTS for every AMPDU
+Safe to remove disk
+Do you really want to remove this disk?
+Safely Remove disk
+Set the account and permission of network place(samba) service.
+Duplicate or same VPI and VCI settings.
+System is restarting now! Please wait and we will redirect to home of R6900.
+Scale
+seconds
+Security level
+Select all
+Select the Access Point.
+Select the APN service.
+Select the DHCP client.
+Select the device name.
+Select the IP address of the DHCP client.
+Select the MAC address of the DHCP client.
+Select the Internet service.
+Select the service name.
+Select USB Device
+Select the MAC address of the wireless client.
+Send mail
+Media Services and Servers
+Server Name
+Sync Server
+Setting File upload fail. It may result from incorrect Setting File or error transmission. Please check the validation of Setting File and try again.
+Setting is uploading! Please wait about 60 seconds.
+Set up the Upload and Download rate limits
+All current settings are deleted and the router will be restored to its factory default settings.\n
+Are you sure you want to continue?
+The default LAN IP of R6900 is 192.168.1.1.\nIf you can't back setting page later, please renew IP configuration of your computer.
+Click [Restore] to restore the router to its factory default settings and delete all the current settings. Wait for a while until the router reboots.
+Factory default
+Default
+Click the [Save] button to save current setting of R6900 into a file. (Note: When you save current settings to a file, it will be saved to flash as well.)
+Save setting
+This function allows you to save current settings of R6900 to a file, or load settings from a file.
+File format or path is invalid!
+Specify the path and name of setting file. Then click [Upload] to write the file to R6900. Please wait 60 seconds until R6900 reboots.
+Restore setting
+Settings
+Device Name
+Choose the correct language settings suitable for your file encoding.
+Character set on FTP Server
+English
+Traditional Chinese
+Simplified Chinese
+Russian
+Czech
+Maximum number of concurrent connections
+Enter a value between 0 to 999. The default value is 0, which denotes that there is no upload limit.
+Maximum Upload Rate
+Allows you to enable or disable the seeding function. R6900 remains open until downloading process is completed.
+Seeding
+Work Group
+show all
+Display all sockets
+Display listening server sockets
+RAW sockets
+TCP sockets
+UDP sockets
+UNIX sockets
+Smart Access
+Enables Network Place (Samba) networked PCs and devices to be accessed remotely. Smart Access can also wake up a sleeping PC.
+The WOL (Wake-On-LAN) feature lets you wake up a computer from any device in the network.
+What is <a id="faq3" href="http://www.asus.com/support/FAQ/1009775" target="_blank" style="font-weight: bolder;text-decoration:underline;">WOL</a> ?
+Bounce Detect
+Enable Smart Connect
+Set up the Smart Connect related information below.
+Interface Select and Qualify Procedures
+Smart Connect Rule
+STA Selection Policy
+Counts
+Dwell Time
+Window Time
+Steering Trigger Condition
+Bandwidth Utilization
+Smart Sync
+Enables synchronization of USB-attached storage with cloud services like <a style="font-weight: bolder;text-decoration: underline;" href="https://www.asuswebstorage.com/navigate/" target="_blank">ASUS Webstorage</a> and other AiCloud 2.0-enabled networks.
+Enables Smart Sync functionality. For step-by-step instructions, go to
+To start smart sync, you need to sign up for an <a style="font-weight: bolder;text-decoration: underline;" href="https://www.asuswebstorage.com/" target="_blank">ASUS webstorage</a> account, then turn Cloud Disk and Smart Sync. Ensure that you installed a USB storage device into this router.
+Launch AiCloud, choose the specific folder in Cloud Disk that you want to synchronize with ASUS WebStorage, then follow the succeeding instructions.
+For source or destination IP address, you can:<p>(a) enter a specific IP address, such as \"192.168.122.1\";<p>(b) enter IP addresses within one subnet or within the same IP pool, such as \"192.168.123.*\", or \"192.168.*.*\"; or<p>(c) enter all IP addresses as \"*.*.*.*\". <p>The format for the MAC address is six groups of two hexadecimal digits, separated bycolons (:), in transmission order (e.g. 12:34:56:aa:bc:ef )
+The graph of signal-to-noise ratio shows the classic SNR (Signal-to-Noise Ratio), which can be useful in identifying the stability of DSL connection. Transmission / Reception shows how many bits per-carrier are transmitted / received.
+Gathering data, Spectrum graph will be displayed in(seconds):
+These graphs will be updated in(seconds):
+Save/Reboot
+Hot-Standby
+When Hot-Standby mode is enabled, the system quickly switches connection to another interface when the primary interface is down or not accessible.
+System will keep the standby WAN in connected state and reduce the detection interval to
+Retry Interval
+Detect Interval
+Retry Count
+Client status
+Internet status
+Printer status
+External USB disk status
+To use AiCloud :
+Decide how to share your folders.
+Create your domain name via the ASUS DDNS services.
+My FTP server is shared.
+limitless access rights
+limited access rights
+admin rights
+Configuration is successful.
+Support
+Switch Frequency
+Switch Control
+Setting R6900 switch control.
+Switch Pages:
+Sync Server let you to sync your cloud disk with another AiCloud 2.0 account.  Fill in the form to generate an invitation for others.
+Fill in the invitation form below.
+Select how you want to get a security code.
+Click <b>Generate</b> to generate a invitation.
+Copy the contents of the invitation and email to others.
+If you encounter an ISP firewall issue when using Smart Sync, contact your Internet Service Provider (ISP).  For advanced users, please enter a specific "Host name" below to use Smart Sync  with others.
+Auto generate
+Invitation Generator
+Hi, let's share our files with Smart Sync!
+Sync description
+Sync path
+Sync rule
+Please connect your device to ASUS router via wired or wireless connection, and click the link below to confirm this invitation.
+Sync List
+Local sync folder
+Change the router login password, time zone, and NTP server settings.
+Basic Config
+LAN
+Miscellaneous
+Telecommunications Standards
+Terminate WAN Interface
+Time Scheduling
+Time Machine
+How to use Apple Time Machine?
+Start to backup
+Backup Path
+Enable Time Machine
+Enable Time Machine functionality
+Time Machine FAQ
+We recommend you use an Ethernet connection for the initial backup.
+Initial backup may take a while depending on the size of your OSX volume. Consider starting the first backup in  the evening so it will complete overnight.
+Please use disk utility to repair the disk if your backup process hanged.
+Select a target disk partition
+Time Machine tutorial
+Set usage limitation if you want and click [ Apply ]
+Time Machine Volume Size
+Reception
+Incoming Internet packets
+Incoming packets from wired network
+Incoming packets from wireless network
+Outgoing Internet packets
+Outgoing packets to wired network
+Outgoing packets to wireless network
+Transmission
+Wired
+Wireless
+Total
+Total space
+Total Traffic
+Enable Traffic Statistic allows you to record network traffic information of client device and analyse traffic usage by client or apps.
+Traffic Monitor allows you to monitor the incoming or outgoing packets of the following:
+<b>NOTE:</b> Packets from the Internet are evenly transmitted to the wired and wireless devices.
+When NAT Acceleration is enabled, the wired network traffic bypasses the CPU, which may affect the accuracy of Traffic Monitor.
+Traffic Analyzer
+Tunnel MTU
+Tunnel TTL
+Eniwetok, Kwajalein
+Midway Island, Samoa
+Hawaii
+Alaska
+Pacific Time (US, Canada)
+Mountain Time (US, Canada)
+Arizona
+Chihuahua, La Paz, Mazatlan
+Saskatchewan
+Guadalajara, Mexico City
+Monterrey
+Central Time (US, Canada)
+Eastern Time (US, Canada)
+Indiana (East)
+Bogota, Lima, Quito
+Atlantic Time (Canada)
+La Paz
+Caracas
+Santiago
+Newfoundland
+Brasilia
+Buenos Aires, Georgetown
+Greenland
+Mid-Atlantic
+Azores
+Cape Verde Is.
+Greenwich Mean Time
+Dublin, Edinburgh, Lisbon, London
+Casablanca
+Monrovia
+Belgrade, Bratislava, Budapest
+Ljubljana, Prague
+Sarajevo, Skopje
+Warsaw, Zagreb
+Copenhagen, Stockholm, Oslo
+Helsinki
+Madrid, Paris
+Amsterdam, Berlin, Brussels
+Rome, Vienna, Bern
+West Central Africa
+Vilnius, Bucharest, Sofija
+Cairo
+Riga, Tallinn
+Minsk
+Kaliningrad
+Athens, Istanbul
+Jerusalem
+Harare, Pretoria
+Kiev
+Moscow, St. Petersburg
+Volgograd
+Kuwait, Riyadh
+Nairobi
+Baghdad
+Tehran
+Abu Dhabi, Muscat
+Tbilisi, Yerevan
+Izhevsk, Samara
+Baku
+Kabul
+Yekaterinburg
+Islamabad, Karachi, Tashkent
+Kolkata, Chennai
+Mumbai, New Delhi
+Kathmandu
+Astana, Dhaka
+Sri Jayawardenepura
+Almaty
+Yangon
+Bangkok, Hanoi, Jakarta
+Novosibirsk
+Krasnoyarsk
+Beijing, Hong Kong
+Chongqing, Urumqi
+Kuala Lumpur, Singapore
+Taipei
+Perth
+Ulaan Bataar
+Irkutsk
+Seoul
+Osaka, Sapporo, Tokyo
+Yakutsk
+Darwin
+Adelaide
+Canberra, Melbourne, Sydney
+Brisbane
+Hobart
+Vladivostok
+Guam, Port Moresby
+Solomon Is.
+New Caledonia
+Fiji, Marshall Is.
+Magadan
+Auckland, Wellington
+Nuku'alofa
+Anadyr, Petropavlovsk-Kamchatsky
+Chokurdakh, Srednekolymsk
+No available updates
+Under the AP mode, R6900 disables Internet function.
+Uninstalling
+An online update is available
+Updating...
+Upload Bandwidth
+Upload Priority
+Data Sent/Sec
+Data Sent
+Setup the iTunes and UPnP media server.
+Setup the UPnP, iTunes, FTP and Network Place (Samba).
+URL Keyword
+Please check USB Application
+Checking the disk
+More detailed settings for the USB Disk.
+No Internet connection.
+Checking the selected partition
+Preparing the application
+Stopping the running application
+Stopping the running swap file
+Creating the swap file
+USB Modem is disabled.
+Failed to connect to the Internet.
+Failed to create the swap file.
+Failed to install the application.
+Failed to mount the USB storage device.
+USB storage device is not responding.
+The remote server is not responding.
+An unknown error occurred during the application upgrade process.
+Failed to unmount or remove the USB storage device.
+Failed to upgrade the application. This may be caused by an incorrect file or an error in transmission.
+Initializing, please wait
+Device is not found.
+Partitioning
+USB Tethering
+To use USB tethering, please complete the following steps:
+Connect your Android phone to ASUS router with a USB cable.
+Select USB Device to [Android Phone] and click [Apply].
+Manually enable USB Tethering on your Android phone.
+Uninstalling app from the USB storage device...
+USB function is disabled.
+Install and use the <a href=\"http://dlcdnet.asus.com/pub/ASUS/LiveUpdate/Release/Wireless/Discovery.zip\" target=\"_blank\" style=\"font-family:Lucida Console;text-decoration:underline;color:#FC0;\">Device Discovery Utility</a> in order to detect the wireless router's IP address.
+Username and Password
+From the User-defined QoS rules dropdown list, you can prioritize the network applications or devices into five levels. Based on priority level, QoS uses the following methods in sending data packets:<ul><li>Change the order of upstream network packets, which refer to the order in which packets are sent to the Internet.</li><li>Low-priority packets are disregarded to ensure the transmission of high-priority packets. The higher priority upstream packet will cause the higher priority downstream packet.</li><li>If there are no packets being sent from high-priority applications, the full transmission rate of the Internet connection is available for low-priority packets.</li></ul>
+<ul><li>Enable QoS then set up the upload and download rate limits.</li></ul>
+Transferred
+In the 'Transferred column', set the network traffic limit (in KB) for a specific service to generate specific priorities for the service assigned to a specific port. For example, if two network clients, PC 1 and PC 2, are both accessing the Internet (set at port 80), but PC 1 exceeded the network traffic limit due to some downloading tasks, PC 1 will be given a lower priority. The Transferred column refers to the upstream and downstream traffic (outgoing and incoming network traffic) for one session. If you do not want to set the traffic limit, you can leave it blank.
+Enable QoS then set up the user-defined rules.
+By default, the priority for upload and download bandwidth is "low". If there is no bandwidth priority rule, the priority for both upload and download bandwidth is "low".
+Utility
+Find tutorial videos
+Click to open the tutorial video.
+This value should be higher than
+Broadcast Support
+LAN to VPN Client
+VPN Client to LAN
+Two-way
+Client IP address
+* In conflict with the VPN server settings:
+* Conflict with the router's DHCP IP pool:
+* Conflict with the router's DHCP static IP address:
+* Conflict with the router's LAN IP address:
+Enable VPN Server
+Enable OpenVPN Server
+Enable PPTP VPN Server
+Export OpenVPN configuration file
+VPN server only allows max 10 clients!
+Maximum 10 clients
+Server mode
+Network Place (Samba) Support
+Advertise DNS to clients
+Authorization Mode
+Username / Password Auth. Only
+Extra HMAC authorization
+Allow Client <-> Client
+Client Address Pool
+Allow only specified clients
+Compression
+IP/Routing conflict
+Custom Configuration
+R6900 will automatically generate a .ovpn file with the Certification Authority key. You can provide the .ovpn file with a username and password to all users connecting to the OpenVPN server.
+To change OpenVPN server settings, go to
+You can change the default settings of the OpenVPN server to provide a custom OPVN file for a specific connection type.
+Allocate from DHCP
+Encryption cipher
+Routing conflict! <p>Please check the client's IP address settings from the Advanced Settings page or check the routing table on System log.
+Certification Authentication / Server certification / Server Key field error! <p>Please check the Keys and Certification contents on the Advanced Settings page.
+Diffle Hellman parameters field error! <p>Please check the Keys and Certification contents on the Advanced Settings page.
+OpenVPN server daemon failed to start. <p>Please check your device environment or contents on the Advanced Setting page.
+To use your own key, click the yellow link to modify settings.
+Refer to the <a style="font-weight: bolder;text-decoration:underline;" class="hyperlink" href="Main_LogStatus_Content.asp">System Log</a> for any error messages related to OpenVPN.
+Before configuring the advanced settings of the OpenVPN server, ensure that these advanced settings options are compatible with the OpenVPN software in the client devices.
+Initialinzing the settings of OpenVPN server now, please wait a few minutes to let the server to setup completed before VPN clients establish the connection.
+Interface Type
+Certificate Authority
+Diffie Hellman parameters
+Only paste the content of the
+block (including those two lines).
+Limit: 3999 characters per field
+Server Certificate
+Server Key
+Static Key
+Keys and Certification
+Local / remote endpoint addresses
+Must be manually configured.
+Content modification of Keys & Certification.
+Poll Interval
+Push LAN to clients
+Direct clients to redirect Internet traffic
+Respond to DNS
+Manage Client-Specific Options
+VPN Subnet / Netmask
+TLS Renegotiation Time
+Import CA file
+Import .ovpn file
+Import the CA file or edit the .ovpn file manually.
+The wireless router currently uses a private WAN IP address (192.168.x.x, 10.x.x.x, or 172.16.x.x). Please configure DDNS service before starting the VPN server.
+ASUSWRT only supports one VPN server connection at one time. If you enable the \"OpenVPN server\", the \"PPTP server\" is disabled automatically. Are you sure you want to enable the VPN server?
+VPN (Virtual Private Network) clients are often used to connect to a VPN server to access private resources securely over a public network.
+Some devices like set-top boxes, smart TVs and Blu-ray players do not support VPN software.
+The ASUSWRT VPN feature provides VPN access to all devices in a home network without having to install VPN software on each device.
+To start a VPN connection, please follow the steps below:
+Add profile
+Select a VPN connection type
+Enter VPN authentication information provided by your VPN provider then connect.
+VPN Client
+Barrier
+Configure the Ethernet WAN settings of R6900.
+Default Route
+WAN is disabled.
+Ethernet
+WAN Index
+Interface
+WAN Interface
+WAN IP
+IP Universal Settings
+IPv4 Setting
+IP version
+R6900 can establish Internet connection via Ethernet WAN, Mobile Broadband or LAN as WAN. Select the interface for your Internet connection from the WAN Interface dropdown list. You can enable the dual WAN connection and change the priorities of the WAN interfaces from the [Dual WAN] tab.
+PPP Authentication
+PPP Setting
+Go to WAN Setting.
+Enabling Hot-Standby will enable Mobile Broadband. Are you sure you want to enable it?
+WAN Type
+EAP Identity
+EAP Method
+EAP-TLS
+802.1X Authentication
+Always On (Recommended)
+Connect On-Demand (Close if idle for
+minutes)
+Connect Manually
+Enable Watch Dog
+Enable Ping to Internet
+TCP MSS Option
+bytes
+VLAN ID
+White List
+Selecting WEP or TKIP Encryption disables the WPS function. Continue ?
+Hiding the SSID disables the WPS function. Continue ?
+Are you sure you want to select Open System (no security) as the authentication method ?
+Please type network key
+Wireless radio
+This section allows you to set up additional parameters for authorizing wireless clients through RADIUS server. It is required while you select "Authentication Method" in "Wireless - General" as "WPA-Enterprise / WPA2-Enterprise".
+The IP address of the RADIUS server for wireless authentication and dynamic WEP key derivation.
+Server IP Address
+The password to connect to the RADIUS server.
+Connection Secret
+The UDP port number for connection to the RADIUS server.
+Server Port:
+This field enables the authentication methods for wireless clients.
+Authentication Method
+To ensure the best wireless signal, we suggest that you set the router channel to Channel 2. To set the router channel to Channel 2, please click OK. Otherwise, please click Cancel.
+Due to local regulations, Channel 1 cannot provide the best wireless coverage. If you want to keep using Channel 1, please click OK. Otherwise, please click Cancel.
+To ensure the best wireless signal, we suggest that you set the router channel to Channel 10. To set the router channel to Channel 10, please click OK. Otherwise, please click Cancel.
+Due to local regulations, Channel 11 cannot provide the best wireless coverage. If you want to keep using Channel 11, please click OK. Otherwise, please click Cancel.
+The radio channel for wireless connection operation.
+Selecting a wider channel bandwidth provides you with a higher transmission speed.
+Channel bandwidth
+This field indicates the basic rates that wireless client must support.
+Basic Rate Set:
+This field allows you to select the transmission rate.[Auto] is recommended to maximize performance.
+Data Rate(Mbps):
+Bridge (or named WDS - Wireless Distribution System) function allows your R6900 to connect to an access point wirelessly. WDS may also be considered a repeater mode. But with this method, the devices connected to the access point will only be able to use half of the access point's original wireless speed.
+The function only support [Open System/NONE, Open System/WEP] security authentication method.
+To enable WDS to extend the wireless signal, please follow these steps :
+Select [WDS Only] or [Hybrid] mode and add MAC address of APs in Remote AP List.
+Ensure that this wireless router and the AP you want to connect to use the same channel.
+Key in the remote AP mac in the remote AP list and open the remote AP's WDS management interface, key in the this router's MAC address.
+To get the best performance, please go to Advanced Settings > Wireless > General and assign the same channel bandwidth, control channel, and extension channel to every router in the network.
+You are currently using the Auto channel bandwidth. Click <a style="font-size:13px;font-family: Lucida Console;color:#FC0;text-decoration:underline;" href="/Advanced_Wireless_Content.asp?af=wl_bw">Here</a> to modify.
+You are currently using the Auto channel. Click <a style="font-size:13px;font-family: Lucida Console;color:#FC0;text-decoration:underline;" href="/Advanced_Wireless_Content.asp?af=wl_channel">Here</a> to modify.
+Wireless Professional Setting allows you to set up additional parameters for wireless. But default values are recommended.
+WPS (Wi-Fi Protected Setup) provides easy and secure establishment of a wireless network. You can configure WPS here via the PIN code or the WPS buttton.
+Auto select channel including band1 channels
+Auto select channel including DFS channels
+Extension channel and Control channel will be combined to expand bandwidth to 40MHz.
+Extension Channel
+Select the multicast transmission rate.
+Multicast Rate(Mbps)
+Remote AP List
+The network name or SSID is a unique name that identifies the wireless network. WiFi devices automatically detect all networks within range. Assign an identification string of up to 32 characters for your wireless connection.
+In compliance with CE regulations, the Tx Power value should not exceed 100mW.
+TxPower allows you to increase the transmission power for better signal performance, and lower the output power to conserve energy. Transmission power settings go up to a maximum of 100mW, with actual output dynamically adjusted to meet local regulations. TxPower's maximum value is 100mW in compliance with CE requirements.
+Set the capability for transmission power. The maximum value is 100%.
+Tx power adjustment
+Set the WEP key to transmit data on your wireless.
+WEP Key 1:
+WEP Key 2:
+WEP Key 3:
+WEP Key 4:
+Enable WEP Encyption to encrypt data.
+WEP Encryption
+Uses 40MHz coexistent bandwidth to maximize the wireless throughput. If you experience issues with wireless stability, please choose the default mode (20MHz).
+Enable
+Disable
+Enable WPA Encyption to encrypt data.
+IEEE 802.11h support
+Optimize ack suppression
+Optimize max number of ack to suppress in a row.
+Optimize AMPDU aggregation
+Optimize max number of mpdus in an AMDPU.
+Select [AP Only] to disable Wireless Bridge function. Select [WDS Only] to disable local wireless station connection. Select [Hybrid] to enable Wireless bridge function and wireless stations will be able to connect to the AP.
+AP Mode
+AP Only
+WDS Only
+Hybrid
+Enable or Disable WMM APSD (Automatic Power Save Delivery).
+Enable WMM APSD
+Airtime Fairness
+Wireless Mode must be set to Auto.
+Beacon Interval means the period of time between one beacon and the next one. The default value is 100 (the unit is millisecond, or 1/1000 second). Lower the Beacon Interval to improve transmission performance in unstable environment or for roaming clients, but it will be power consuming.
+Beacon Interval
+If [Yes] is selected, your SSID does not show in site surveys by wireless mobile clients and they can only connect to your ASUS Wireless Router with your SSID of AP.
+Hide SSID
+Select [Yes] to connect R6900 to other APs listed in the Remote AP List.
+Connect to APs in list
+Key in the router's PIN code in the client's WPS utility and configure the network name and security settings.
+AP PIN Code
+Enable or Disable WMM DLS (Direct Link Setup).
+Enable WMM DLS
+DTIM (Delivery Traffic Indication Message) is included in Beacon packet.The DTIM Interval (1-255) means the period of time to wake up wireless clients from Sleep Mode. The default value is 3.
+DTIM (Delivery Traffic Indication Message) is included in Beacon packet.The DTIM Interval (1-255) means the period of time to wake up wireless clients from Sleep Mode. The default value is 1.
+DTIM Interval
+Enable efficient multicast forwarding (IGMP Snooping)
+When this option is enabled, router performance will improve in an environment where there is high interference, but it might reduce connection stability under some circumstances.
+Enhanced interference management
+Explicit beamforming
+The client's WLAN adapter and router both support beamforming technology. This technology allows these devices to communicate channel estimation and steering direction to each other to improve download and uplink speed.
+Fragmentation Threshold sets the frame size of incoming messages (ranging from 256 to 2346 bytes) used as fragmentation boundary. If the frame size is too big, the heavy interference affects transmission reliability. If the frame size is too small, it decreases transmission efficiency.
+Fragmentation Threshold
+Selecting [Enable] enables Greenfield to allow the network to ignore earlier standards.
+Enable Greenfield
+When enabled, IGMP Snooping monitors IGMP communication among devices and optimizes wireless multicast traffic.
+Enable IGMP Snooping
+Implicit beamforming
+For legacy wireless network adapter that do not support beamforming, the router estimates the channel and determines the steering direction to improve the downlink speed.
+When this feature is enabled, wireless clients or devices will not be able to communicate with each other. You may want to utilize this feature if you have many guests that frequent your wireless network.
+Set AP Isolated
+Set the capability for transmission power. The maximum value is
+ and the real transmission power will be dynamically adjusted to meet regional regulations.
+Protected Management Frames
+Capable
+Required
+This item allows you to select any of these options for the Wireless Mode of your 802.11n interface. <p>[Auto]: Allows 802.11n, 802.11g, and 802.11b devices to connect to R6900.</p><p>[Legacy]: Allows 802.11b/g/n devices to connect to R6900, but 802.11n devices only run at a speed of 54Mbps.</p><p>[N Only]: Maximizes performance, but does not allow 802.11g and 802.11b devices to connect to your device.</p><p>Tick b/g Protection to allow b/g devices to connect to R6900 without affecting 11n devices, but this increases the router's workload.</p>
+This item allows you to select any of these options for the Wireless Mode of your 802.11n interface. <p>[Auto]: Allows 802.11n and 802.11a devices to connect to R6900.</p><p>[Legacy]: Allows 802.11n/a devices to connect to R6900, but 802.11n devices only run at a speed of 54Mbps.</p><p>[N Only]: Maximizes performance, but does not allow 802.11a devices to connect to your device.</p>
+This item allows you to select any of these options for the Wireless Mode of your 802.11ac interface. <p>[Auto]: Allows 802.11ac, 802.11n and 802.11a devices to connect to R6900.</p><p>[Legacy]: Allows 802.11n/a devices to connect to R6900, but 802.11n devices only run at a speed of 54Mbps.</p><p>[N + AC]: Maximizes performance, but does not allow 802.11a devices to connect to your device.</p>
+This item allows you to select any of these options for the Wireless Mode of your 802.11ac interface. <p>[Auto]: Allows 802.11ac, 802.11n and 802.11a devices to connect to R6900.</p><p>[N Only]: 802.11n maximizes performance, but does not allow 802.11ac, 802.11a devices to connect to your device.</p>
+This item allows you to select any of these options for the Wireless Mode of your 802.11ac interface. <p>[Auto]: Allows 802.11ac, 802.11n and 802.11a devices to connect to R6900.</p><p>[Legacy]: Allows 802.11n/a devices to connect to R6900, but 802.11n devices only run at a speed of 54Mbps.</p><p>[N/AC mixed]: Maximizes performance, but does not allow 802.11a devices to connect to your device.</p><p>[N Only]: 802.11n maximizes performance, but does not allow 802.11ac, 802.11a devices to connect to your device.</p>
+Wireless Mode
+b/g Protection
+Optimized for Xbox
+[No-Acknowledgement] is the acknowledge policy at MAC level. When enabled, it results in more efficient throughput but higher error rates in a noisy Radio Frequency (RF) environment.
+Enable WMM No-Acknowledgement
+If you select WEP Encryption, you can key in some words in this field to generate WEP keys automatically.
+ASUS Passphrase:
+Selecting [Enable] enables Packet Aggregation to increase the delivered bandwidth in your network.
+Enable Packet Aggregation
+This field requires a password of 8 and 63 characters(letters, numbers or a combination) or 64 hex digits to start the encryption process . If you leave this field blank, the default [00000000] will be assigned as your password.
+WPA Pre-Shared Key
+Select [Yes] to enable Radio function.
+Enable Radio
+This field defines the dates that wireless function is enabled.
+Date to Enable Radio
+This field defines the time interval that wireless function is enabled.
+Time of Day to Enable Radio
+Reducing USB 3.0 interference
+Enabling this feature ensures the best wireless performance on the 2.4 GHz band. Disabling this feature increases USB 3.0 port\'s transmission speed and may affect the 2.4 GHz wireless range.
+Region
+This field specifies the interval (in seconds) after which a WPA group key is changed . Enter [0] (zero) to indicate that a periodic key-change is not required.
+Group Key Rotation Interval
+In network configurations that involve multiple Access Points or wireless repeaters, wireless clients sometimes cannot connect automatically to the best available AP because they are still connected to the main wireless router. Enable this setting so that the client will disconnect from the main wireless router if the signal strength is under a specific threshold and connect to a stronger signal.
+Lower the signal RTS (Request To Send) to promote the transmission efficiency in condition of noisy environment or too many clients.
+RTS Threshold
+Allows administrators to specify when the wireless network will power off to conserve energy and maintain network security.
+Enable wireless scheduler
+Enable accurate traffic counter
+Turbo QAM
+256-QAM (MCS 8/9) support.
+Selecting [Enable] enables TX Bursting to improve the transmission speed (from AP to client) of g devices.
+Enable TX Bursting
+Universal Beamforming
+Enable WMM (Wi-Fi Multimedia) to improve user experience of multimedia applications on your wireless network.
+Enable WMM
+Selecting [ON] allows Wi-Fi Protected Setup (WPS) to simplify the process of connecting any device to the wireless network.WPS support the authentication of Open system, WPA-Personal, WPA2-Personal. Not support Shared Key, WPA-Enterprise, WPA2-Enterprise and Radius.
+Enable WPS
+Push button
+Please turn off WPS first.
+Select an operating band (2.4 GHz or 5 GHz) before using the WPS (Wi-Fi Protected Setup) function. If you want to change the operating band, please disable the WPS function first.
+Current Band
+Selecting PIN (Personal Information Number) you have to enter a number to establish a wireless connection. Select PBC (Push Button Configuration) you have to push a button (the Apply button on this page) to establish a wireless connection.
+WPS Method:
+Key in an eight-digit number for the client's PIN code.<p>
+Client PIN Code
+[Auto] is not compatible with current guest network authentication method(TKIP or WEP),  Please go to <a id="gn_link" href="/Guest_network.asp?af=wl_NOnly_note" target="_blank" style="color:#FFCC00;font-family:Lucida Console;text-decoration:underline;">Guest Network</a> and change the authentication method.
+Under Auto mode with WEP or TKIP encryption, R6900 supports the maximum transmission rate of 54Mbps.
+Please change to WPA2-Personal.
+[N+AC] is not compatible with current guest network authentication method(TKIP or WEP),  Please go to <a id="gn_link" href="/Guest_network.asp?af=wl_NOnly_note" target="_blank" style="color:#FFCC00;font-family:Lucida Console;text-decoration:underline;">Guest Network</a> and change the authentication method.
+[N Only] is not compatible with current guest network authentication method(TKIP or WEP),  Please go to <a id="gn_link" href="/Guest_network.asp?af=wl_NOnly_note" target="_blank" style="color:#FFCC00;font-family:Lucida Console;text-decoration:underline;">Guest Network</a> and change the authentication method.
+The Preamble type defines the length of the CRC (Cyclic Redundancy Check) block, which is a technique for detecting data transmission errors among wireless devices. We recommend that you configure all wireless devices to the same preamble type. Use short preamble for wireless devices in high network traffic areas. Use long preamble for older wireless devices.
+Preamble Type
+Long
+Short
+This page shows the detailed wireless status.
+WPA-PSK key
+You can easily connect a WPS client to the network in either of these two ways:<ul><li>Method1: Click the WPS button on this interface (or press the physical WPS button on the router), then press the WPS button on the client's WLAN adapter and wait for about three minutes to make the connection.</li><li>Method2: Start the client WPS process and get the client PIN code. Enter the client's PIN code on the Client PIN code field and click Start. Please check the user manual of your wireless client to see if it supports the WPS function. If your wireless client does not support the WPS function, you have to configure the wireless client manually and set the same network Name (SSID), and security settings as this router.</li></ul>
+Activate WPS
+WPS Button behavior
+Toggle Radio
+WPS function will not be available if SSID is hidden.
+Start
+Not used
+NOTE: Due to the WPS 2.0 regulation, the WPS function must be disabled if the router is using WEP or TKIP encryption.
+WPS cannot support the Authentication Method you have set. Please link
+to modify it then enable WPS.
+Yandex.DNS
+Yandex.DNS allows you to restrict access to malicious sites and adult content.
+To use the service, select default protection mode and assign individual modes to specific clients.
+Use Yandex.DNS
+yandex-en.png
+http://dns.yandex.com
+Protection Mode
+Basic mode
+Standard DNS service without additional protection.
+Safe mode
+Protection from infected and fraudulent content sites.
+Family mode
+Protection from infected, fraudulent sites and blocking adult content.
+Use Safe mode as default mode.
+I want to use Yandex.DNS and agree to the <a class="link" href="http://legal.yandex.com/dns_termsofuse/" target="_blank">terms of use</a>.
+Clients are using Yandex.DNS regardless of the DNS setting.
+Your share folder setting is
+Disable : 0
