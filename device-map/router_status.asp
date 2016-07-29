@@ -615,7 +615,7 @@ catch (ex) {
 </tr>
 <tr class="other_info_table">
 <td style="padding-bottom: 8px;">
-<div class="info_title">Speed (WAN)</div>
+<div class="info_title">Internet Speed</div>
 <div class="info_detail"><b>D</b> <span id="upload_speed"></span> KB/s | <b>U</b> <span id="download_speed"></span> KB/s</div>
 </td>
 </tr>
