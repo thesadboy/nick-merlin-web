@@ -685,7 +685,7 @@ function render_Internet_Speed(upload, download){
 <tr class="other_info_table">
 <td>
 <div class="info_title">Uptime</div>
-<div class="info_detail"><span id="boot_days"></span> day(s) <span id="boot_hours"></span> hour(s) <span id="boot_minutes"></span> minute(s) <span id="boot_seconds"></span> second(s)</div>
+<div class="info_detail"><span id="boot_days"></span> day(s) <span id="boot_hours"></span> hour(s) <span id="boot_minutes"></span> min(s) <span id="boot_seconds"></span> sec(s)</div>
 </td>
 </tr>
 <tr class="other_info_table">
