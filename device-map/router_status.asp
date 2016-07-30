@@ -420,8 +420,8 @@ function render_Internet_Speed(upload, download){
   if(max_speed < 50){
     max_speed = 50;
   }
-  var upt = '',
-      dpt = '';
+  var upt = '0,51 ',
+      dpt = '0,51 ';
   for(i=0;i<array_size;i++){
     upt += i*6 + ',' + parseInt(internet_speed.upload[i] == -1 ? 51 : (50 - internet_speed.upload[i] / max_speed * 50), 10) + ' ';
     dpt += i*6 + ',' + parseInt(internet_speed.download[i] == -1 ? 51 : (50 - internet_speed.download[i] / max_speed * 50), 10) + ' ';
