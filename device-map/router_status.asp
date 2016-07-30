@@ -426,6 +426,8 @@ function render_Internet_Speed(upload, download){
     upt += i*6 + ',' + parseInt(internet_speed.upload[i] == -1 ? 51 : (50 - internet_speed.upload[i] / max_speed * 50), 10) + ' ';
     dpt += i*6 + ',' + parseInt(internet_speed.download[i] == -1 ? 51 : (50 - internet_speed.download[i] / max_speed * 50), 10) + ' ';
   }
+  upt += i*6 + 1 +',51 ';
+  dpt += i*6 + 1 +',51 ';
   document.getElementById('speed_max').innerHTML = max_speed.toFixed(2) +' KB/s';
   document.getElementById('speed_half').innerHTML = (max_speed / 2).toFixed(2) +' KB/s';
   document.getElementById('upload_graph').setAttribute('points', upt);
@@ -656,8 +658,8 @@ function render_Internet_Speed(upload, download){
 <line stroke-width="1" stroke-opacity="0.3" stroke="rgb(40,255,40)" x1="210" y1="0%" x2="210" y2="100%" id="tick8" />
 <line stroke-width="1" stroke-opacity="0.3" stroke="rgb(40,255,40)" x1="240" y1="0%" x2="240" y2="100%" id="tick9" />
 <line stroke-width="1" stroke-opacity="1" stroke="rgb(0,0,121)" x1="270" y1="0%" x2="270" y2="100%" id="tick10" />
-<polyline id="upload_graph" style="fill:none;stroke:#FF9000;stroke-width:1;width:200px;" points=""></polyline>
-<polyline id="download_graph" style="fill:none;stroke:#3CF;stroke-width:1;width:200px;" points=""></polyline>
+<polyline id="upload_graph" style="fill:#FF9000;stroke:#FF9000;stroke-width:1;width:200px;fill-opacity: 0.5" points=""></polyline>
+<polyline id="download_graph" style="fill:#3CF;stroke:#3CF;stroke-width:1;width:200px;fill-opacity:0.5;" points=""></polyline>
 </svg>
 </div>
 </td>
