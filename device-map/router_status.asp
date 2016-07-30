@@ -391,8 +391,8 @@ this.timeExpect = n + 2000;
 }
 c = netdev['INTERNET'];
 if(prev[0] != -1 && prev[1] != -1){
-upload_speed = (((c.rx < prev[0]) ? (c.rx + (0xFFFFFFFF - prev[0])) : (c.rx - prev[0])) / 1024 / (new Date().getTime() - timestamp) * 1000);
-download_speed = (((c.tx < prev[1]) ? (c.tx + (0xFFFFFFFF - prev[1])) : (c.tx - prev[1])) / 1024 / (new Date().getTime() - timestamp) * 1000);
+download_speed = (((c.rx < prev[0]) ? (c.rx + (0xFFFFFFFF - prev[0])) : (c.rx - prev[0])) / 1024 / (new Date().getTime() - timestamp) * 1000);
+upload_speed = (((c.tx < prev[1]) ? (c.tx + (0xFFFFFFFF - prev[1])) : (c.tx - prev[1])) / 1024 / (new Date().getTime() - timestamp) * 1000);
 }
 timestamp = new Date().getTime();
 prev[0] = c.rx;
@@ -624,12 +624,12 @@ function render_Internet_Speed(upload, download){
 </tr>
 <tr class="ram_table">
 <td>
-<div>Upload</div>
-<div id="upload_speed" style="color: #FF9000;">0 KB/s</div>
+<div>Download</div>
+<div id="download_speed" style="color: #FF9000;">0 KB/s</div>
 </td>
 <td>
-<div>Download</div>
-<div id="download_speed" style="color: #3CF;">0 KB/</div>
+<div>Upload</div>
+<div id="upload_speed" style="color: #3CF;">0 KB/s</div>
 </td>
 </tr>
 <tr style="height:50px;">
@@ -658,8 +658,8 @@ function render_Internet_Speed(upload, download){
 <line stroke-width="1" stroke-opacity="0.3" stroke="rgb(40,255,40)" x1="210" y1="0%" x2="210" y2="100%" id="tick8" />
 <line stroke-width="1" stroke-opacity="0.3" stroke="rgb(40,255,40)" x1="240" y1="0%" x2="240" y2="100%" id="tick9" />
 <line stroke-width="1" stroke-opacity="1" stroke="rgb(0,0,121)" x1="270" y1="0%" x2="270" y2="100%" id="tick10" />
-<polyline id="upload_graph" style="fill:#FF9000;stroke:#FF9000;stroke-width:1;width:200px;fill-opacity: 0.5" points=""></polyline>
-<polyline id="download_graph" style="fill:#3CF;stroke:#3CF;stroke-width:1;width:200px;fill-opacity:0.5;" points=""></polyline>
+<polyline id="download_graph" style="fill:#FF9000;stroke:#FF9000;stroke-width:1;width:200px;fill-opacity: 0.5" points=""></polyline>
+<polyline id="upload_graph" style="fill:#3CF;stroke:#3CF;stroke-width:1;width:200px;fill-opacity:0.5;" points=""></polyline>
 </svg>
 </div>
 </td>
