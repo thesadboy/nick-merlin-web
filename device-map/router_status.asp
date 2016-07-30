@@ -625,11 +625,11 @@ function render_Internet_Speed(upload, download){
 <tr class="ram_table">
 <td>
 <div>Upload</div>
-<div id="upload_speed" style="color: #FF9000;"></div>
+<div id="upload_speed" style="color: #FF9000;">0 KB/s</div>
 </td>
 <td>
 <div>Download</div>
-<div id="download_speed" style="color: #3CF;"></div>
+<div id="download_speed" style="color: #3CF;">0 KB/</div>
 </td>
 </tr>
 <tr style="height:50px;">
