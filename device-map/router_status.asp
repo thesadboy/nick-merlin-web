@@ -98,6 +98,10 @@ if(parent.location.pathname.search("index") === -1) top.location.href = "../inde
 var cpu_info_old = new Array();
 var core_num = '<%cpu_core_num();%>';
 var cpu_usage_array = new Array();
+var internet_speed = {
+  upload:[],
+  download:[]
+};
 var array_size = 46;
 for(i=0;i<core_num;i++){
 cpu_info_old[i] = {
@@ -106,12 +110,17 @@ usage:0
 };
 cpu_usage_array[i] = new Array();
 for(j=0;j<array_size;j++){
-cpu_usage_array[i][j] = 101;
+cpu_usage_array[i][j] = 51;
 }
 }
 var ram_usage_array = new Array(array_size);
 for(i=0;i<array_size;i++){
-ram_usage_array[i] = 101;
+ram_usage_array[i] = 51;
+}
+
+for(i=0;i<array_size;i++){
+  internet_speed.upload.push(-1);
+  internet_speed.download.push(-1);
 }
 /*End*/
 function initial(){
@@ -180,7 +189,7 @@ used_percentage = Math.round((used/total)*100);
 document.getElementById('ram_bar').style.width = used_percentage +"%";
 document.getElementById('ram_bar').style.width = used_percentage +"%";
 document.getElementById('ram_quantification').innerHTML = used_percentage +"%";
-ram_usage_array.push(100 - used_percentage);
+ram_usage_array.push((100 - used_percentage) / 2);
 ram_usage_array.splice(0,1);
 for(i=0;i<array_size;i++){
 pt += i*6 +","+ ram_usage_array[i] + " ";
@@ -202,7 +211,7 @@ else
 percentage = parseInt(100*usage_diff/total_diff);
 document.getElementById('cpu'+i+'_bar').style.width = percentage +"%";
 document.getElementById('cpu'+i+'_quantification').innerHTML = percentage +"%"
-cpu_usage_array[i].push(100 - percentage);
+cpu_usage_array[i].push((100 - percentage) / 2);
 cpu_usage_array[i].splice(0,1);
 for(j=0;j<array_size;j++){
 pt += j*6 +","+ cpu_usage_array[i][j] + " ";
@@ -382,18 +391,45 @@ this.timeExpect = n + 2000;
 }
 c = netdev['INTERNET'];
 if(prev[0] != -1 && prev[1] != -1){
-upload_speed = (((c.rx < prev[0]) ? (c.rx + (0xFFFFFFFF - prev[0])) : (c.rx - prev[0])) / 1024 / (new Date().getTime() - timestamp) * 1000).toFixed(2);
-download_speed = (((c.tx < prev[1]) ? (c.tx + (0xFFFFFFFF - prev[1])) : (c.tx - prev[1])) / 1024 / (new Date().getTime() - timestamp) * 1000).toFixed(2);
+upload_speed = (((c.rx < prev[0]) ? (c.rx + (0xFFFFFFFF - prev[0])) : (c.rx - prev[0])) / 1024 / (new Date().getTime() - timestamp) * 1000);
+download_speed = (((c.tx < prev[1]) ? (c.tx + (0xFFFFFFFF - prev[1])) : (c.tx - prev[1])) / 1024 / (new Date().getTime() - timestamp) * 1000);
 }
 timestamp = new Date().getTime();
 prev[0] = c.rx;
 prev[1] = c.tx;
-E('upload_speed').innerHTML = upload_speed;
-E('download_speed').innerHTML = download_speed;
+E('upload_speed').innerHTML = upload_speed.toFixed(2) + 'KB/s';
+E('download_speed').innerHTML = download_speed.toFixed(2) + 'KB/s';
+  render_Internet_Speed(upload_speed, download_speed);
 }
 catch (ex) {
 }
 --updating;
+};
+var max_speed = 0;
+function render_Internet_Speed(upload, download){
+  internet_speed.upload.push(upload);
+  internet_speed.download.push(download);
+  internet_speed.upload.splice(0,1);
+  internet_speed.download.splice(0,1);
+  var max_upload = Math.max.apply(null, internet_speed.upload);
+  var max_download = Math.max.apply(null, internet_speed.download);
+  max_speed = max_upload;
+  if(max_speed < max_download){
+    max_speed = max_download;
+  }
+  if(max_speed < 50){
+    max_speed = 50;
+  }
+  var upt = '',
+      dpt = '';
+  for(i=0;i<array_size;i++){
+    upt += i*6 + ',' + parseInt(internet_speed.upload[i] == -1 ? 51 : (50 - internet_speed.upload[i] / max_speed * 50), 10) + ' ';
+    dpt += i*6 + ',' + parseInt(internet_speed.download[i] == -1 ? 51 : (50 - internet_speed.download[i] / max_speed * 50), 10) + ' ';
+  }
+  document.getElementById('speed_max').innerHTML = max_speed.toFixed(2) +' KB/s';
+  document.getElementById('speed_half').innerHTML = (max_speed / 2).toFixed(2) +' KB/s';
+  document.getElementById('upload_graph').setAttribute('points', upt);
+  document.getElementById('download_graph').setAttribute('points', dpt);
 }
 </script>
 </head>
@@ -446,25 +482,25 @@ catch (ex) {
 </td>
 </tr >
 <tr>
-<td>
+<td style="padding: 0 5px;">
 <table id="cpu_field"></table>
 </td>
 </tr>
-<tr style="height:100px;">
+<tr style="height:50px;">
 <td colspan="3">
 <div style="margin:0px 11px 0px 11px;background-color:black;">
-<svg width="270px" height="100px">
+<svg width="270px" height="50px">
 <g>
-<line stroke-width="1" stroke-opacity="1" stroke="rgb(255,255,255)" x1="0" y1="0%" x2="100%" y2="0%" />
+<!--<line stroke-width="1" stroke-opacity="1" stroke="rgb(255,255,255)" x1="0" y1="0%" x2="100%" y2="0%" />-->
 <line stroke-width="1" stroke-opacity="0.2" stroke="rgb(255,255,255)" x1="0" y1="25%" x2="100%" y2="25%" />
 <line stroke-width="1" stroke-opacity="0.2" stroke="rgb(255,255,255)" x1="0" y1="50%" x2="100%" y2="50%" />
 <line stroke-width="1" stroke-opacity="0.2" stroke="rgb(255,255,255)" x1="0" y1="75%" x2="100%" y2="75%" />
-<line stroke-width="1" stroke-opacity="1" stroke="rgb(255,255,255)" x1="0" y1="100%" x2="100%" y2="100%" />
+<!--<line stroke-width="1" stroke-opacity="1" stroke="rgb(255,255,255)" x1="0" y1="100%" x2="100%" y2="100%" />-->
 </g>
 <g>
-<text font-family="Verdana" fill="#FFFFFF" font-size="8" x="0" y="98%">0%</text>
+<text font-family="Verdana" fill="#FFFFFF" font-size="8" x="0" y="95%">0%</text>
 <text font-family="Verdana" fill="#FFFFFF" font-size="8" x="0" y="55%">50%</text>
-<text font-family="Verdana" fill="#FFFFFF" font-size="8" x="0" y="11%">100%</text>
+<text font-family="Verdana" fill="#FFFFFF" font-size="8" x="0" y="15%">100%</text>
 </g>
 <line stroke-width="1" stroke-opacity="1" stroke="rgb(0,0,121)" x1="0" y1="0%" x2="0" y2="100%" id="tick1" />
 <line stroke-width="1" stroke-opacity="0.3" stroke="rgb(40,255,40)" x1="30" y1="0%" x2="30" y2="100%" id="tick2" />
@@ -536,21 +572,21 @@ catch (ex) {
 </div>
 </td>
 </tr>
-<tr style="height:100px;">
+<tr style="height:50px;">
 <td colspan="3">
 <div style="margin:0px 11px 0px 11px;background-color:black;">
-<svg width="270px" height="100px">
+<svg width="270px" height="50px">
 <g>
-<line stroke-width="1" stroke-opacity="1" stroke="rgb(255,255,255)" x1="0" y1="0%" x2="100%" y2="0%" />
+<!--<line stroke-width="1" stroke-opacity="1" stroke="rgb(255,255,255)" x1="0" y1="0%" x2="100%" y2="0%" />-->
 <line stroke-width="1" stroke-opacity="0.2" stroke="rgb(255,255,255)" x1="0" y1="25%" x2="100%" y2="25%" />
 <line stroke-width="1" stroke-opacity="0.2" stroke="rgb(255,255,255)" x1="0" y1="50%" x2="100%" y2="50%" />
 <line stroke-width="1" stroke-opacity="0.2" stroke="rgb(255,255,255)" x1="0" y1="75%" x2="100%" y2="75%" />
-<line stroke-width="1" stroke-opacity="1" stroke="rgb(255,255,255)" x1="0" y1="100%" x2="100%" y2="100%" />
+<!--<line stroke-width="1" stroke-opacity="1" stroke="rgb(255,255,255)" x1="0" y1="100%" x2="100%" y2="100%" />-->
 </g>
 <g>
-<text font-family="Verdana" fill="#FFFFFF" font-size="8" x="0" y="98%">0%</text>
+<text font-family="Verdana" fill="#FFFFFF" font-size="8" x="0" y="95%">0%</text>
 <text font-family="Verdana" fill="#FFFFFF" font-size="8" x="0" y="55%">50%</text>
-<text font-family="Verdana" fill="#FFFFFF" font-size="8" x="0" y="11%">100%</text>
+<text font-family="Verdana" fill="#FFFFFF" font-size="8" x="0" y="15%">100%</text>
 </g>
 <line stroke-width="1" stroke-opacity="1" stroke="rgb(0,0,121)" x1="0" y1="0%" x2="0" y2="100%" id="tick1" />
 <line stroke-width="1" stroke-opacity="0.3" stroke="rgb(40,255,40)" x1="30" y1="0%" x2="30" y2="100%" id="tick2" />
@@ -574,7 +610,66 @@ catch (ex) {
 </div>
 </td>
 </tr>
-
+<tr>
+<td>
+<div>
+<table width="98%" border="1" align="center" cellpadding="4" cellspacing="0" class="table1px">
+<tr>
+<td colspan="2">
+<div class="title">INTERNET</div>
+<img class="line_image" src="/images/New_ui/networkmap/linetwo2.png">
+</td>
+</tr>
+<tr class="ram_table">
+<td>
+<div>Upload</div>
+<div id="upload_speed" style="color: #FF9000;"></div>
+</td>
+<td>
+<div>Download</div>
+<div id="download_speed" style="color: #3CF;"></div>
+</td>
+</tr>
+<tr style="height:50px;">
+<td colspan="2">
+<div style="margin:0px 11px 0px 11px;background-color:black;">
+<svg width="270px" height="50px">
+<g>
+<!--<line stroke-width="1" stroke-opacity="1" stroke="rgb(255,255,255)" x1="0" y1="0%" x2="100%" y2="0%" />-->
+<line stroke-width="1" stroke-opacity="0.2" stroke="rgb(255,255,255)" x1="0" y1="25%" x2="100%" y2="25%" />
+<line stroke-width="1" stroke-opacity="0.2" stroke="rgb(255,255,255)" x1="0" y1="50%" x2="100%" y2="50%" />
+<line stroke-width="1" stroke-opacity="0.2" stroke="rgb(255,255,255)" x1="0" y1="75%" x2="100%" y2="75%" />
+<!--<line stroke-width="1" stroke-opacity="1" stroke="rgb(255,255,255)" x1="0" y1="100%" x2="100%" y2="100%" />-->
+</g>
+<g>
+<text font-family="Verdana" fill="#FFFFFF" font-size="8" x="0" y="95%">0 KB/s</text>
+<text font-family="Verdana" fill="#FFFFFF" font-size="8" x="0" y="55%" id="speed_half">25 KB/s</text>
+<text font-family="Verdana" fill="#FFFFFF" font-size="8" x="0" y="15%" id="speed_max">50 KB/s</text>
+</g>
+<line stroke-width="1" stroke-opacity="1" stroke="rgb(0,0,121)" x1="0" y1="0%" x2="0" y2="100%" id="tick1" />
+<line stroke-width="1" stroke-opacity="0.3" stroke="rgb(40,255,40)" x1="30" y1="0%" x2="30" y2="100%" id="tick2" />
+<line stroke-width="1" stroke-opacity="0.3" stroke="rgb(40,255,40)" x1="60" y1="0%" x2="60" y2="100%" id="tick3" />
+<line stroke-width="1" stroke-opacity="0.3" stroke="rgb(40,255,40)" x1="90" y1="0%" x2="90" y2="100%" id="tick4" />
+<line stroke-width="1" stroke-opacity="0.3" stroke="rgb(40,255,40)" x1="120" y1="0%" x2="120" y2="100%" id="tick5" />
+<line stroke-width="1" stroke-opacity="0.3" stroke="rgb(40,255,40)" x1="150" y1="0%" x2="150" y2="100%" id="tick6" />
+<line stroke-width="1" stroke-opacity="0.3" stroke="rgb(40,255,40)" x1="180" y1="0%" x2="180" y2="100%" id="tick7" />
+<line stroke-width="1" stroke-opacity="0.3" stroke="rgb(40,255,40)" x1="210" y1="0%" x2="210" y2="100%" id="tick8" />
+<line stroke-width="1" stroke-opacity="0.3" stroke="rgb(40,255,40)" x1="240" y1="0%" x2="240" y2="100%" id="tick9" />
+<line stroke-width="1" stroke-opacity="1" stroke="rgb(0,0,121)" x1="270" y1="0%" x2="270" y2="100%" id="tick10" />
+<polyline id="upload_graph" style="fill:none;stroke:#FF9000;stroke-width:1;width:200px;" points=""></polyline>
+<polyline id="download_graph" style="fill:none;stroke:#3CF;stroke-width:1;width:200px;" points=""></polyline>
+</svg>
+</div>
+</td>
+</tr>
+<tr>
+<tr class="other_info_table">
+<td style="border-bottom:5px #2A3539 solid;padding:0 10px 5px 10px;" colspan="2">
+</td>
+</table>
+</div>
+</td>
+</tr>
 <tr>
 <td>
 <div>
@@ -604,19 +699,13 @@ catch (ex) {
 </td>
 </tr>
 <tr class="other_info_table">
-<td>
+<td style="padding-bottom: 8px;">
 <div class="info_title">CPU Load Average (1, 5, 15 mins)</div>
 <div class="info_detail">
 <span><% sysinfo("cpu.load.1"); %></span>,&nbsp;
 <span><% sysinfo("cpu.load.5"); %></span>,&nbsp;
 <span><% sysinfo("cpu.load.15"); %></span>
 </div>
-</td>
-</tr>
-<tr class="other_info_table">
-<td style="padding-bottom: 8px;">
-<div class="info_title">Internet Speed</div>
-<div class="info_detail"><b>D</b> <span id="upload_speed"></span> KB/s | <b>U</b> <span id="download_speed"></span> KB/s</div>
 </td>
 </tr>
 </table>
