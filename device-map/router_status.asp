@@ -428,8 +428,8 @@ function render_Internet_Speed(upload, download){
   }
   upt += i*6 + 1 +',51 ';
   dpt += i*6 + 1 +',51 ';
-  document.getElementById('speed_max').innerHTML = max_speed.toFixed(2) +' KB/s';
-  document.getElementById('speed_half').innerHTML = (max_speed / 2).toFixed(2) +' KB/s';
+  document.getElementById('speed_max').firstChild.nodeValue = max_speed.toFixed(0) +' KB/s';
+  document.getElementById('speed_half').firstChild.nodeValue = (max_speed / 2).toFixed(0) +' KB/s';
   document.getElementById('upload_graph').setAttribute('points', upt);
   document.getElementById('download_graph').setAttribute('points', dpt);
 }
