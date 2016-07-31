@@ -189,7 +189,7 @@ used_percentage = Math.round((used/total)*100);
 document.getElementById('ram_bar').style.width = used_percentage +"%";
 document.getElementById('ram_bar').style.width = used_percentage +"%";
 document.getElementById('ram_quantification').innerHTML = used_percentage +"%";
-ram_usage_array.push((100 - used_percentage) / 2);
+ram_usage_array.push(100 - used_percentage);
 ram_usage_array.splice(0,1);
 for(i=0;i<array_size;i++){
 pt += i*6 +","+ ram_usage_array[i] + " ";
@@ -211,7 +211,7 @@ else
 percentage = parseInt(100*usage_diff/total_diff);
 document.getElementById('cpu'+i+'_bar').style.width = percentage +"%";
 document.getElementById('cpu'+i+'_quantification').innerHTML = percentage +"%"
-cpu_usage_array[i].push((100 - percentage) / 2);
+cpu_usage_array[i].push(100 - percentage);
 cpu_usage_array[i].splice(0,1);
 for(j=0;j<array_size;j++){
 pt += j*6 +","+ cpu_usage_array[i][j] + " ";
