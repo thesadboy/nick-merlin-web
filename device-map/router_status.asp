@@ -110,12 +110,12 @@ usage:0
 };
 cpu_usage_array[i] = new Array();
 for(j=0;j<array_size;j++){
-cpu_usage_array[i][j] = 51;
+cpu_usage_array[i][j] = 101;
 }
 }
 var ram_usage_array = new Array(array_size);
 for(i=0;i<array_size;i++){
-ram_usage_array[i] = 51;
+ram_usage_array[i] = 101;
 }
 
 for(i=0;i<array_size;i++){
@@ -243,10 +243,11 @@ mem_object = {
 total: mem_info.getElementsByTagName('total')[0].textContent,
 free: mem_info.getElementsByTagName('free')[0].textContent,
 used: mem_info.getElementsByTagName('used')[0].textContent,
-}
+};
 render_CPU(cpu_info_new);
 render_RAM(mem_object.total, mem_object.free, mem_object.used);
 setTimeout("detect_CPU_RAM();", 2000);
+resetParentHeight();
 }
 });
 }
@@ -431,18 +432,34 @@ function render_Internet_Speed(upload, download){
   if(max_speed < 50){
     max_speed = 50;
   }
-  var upt = '0,51 ',
-      dpt = '0,51 ';
+  var upt = '-1,101 ',
+      dpt = '-1,101 ';
   for(i=0;i<array_size;i++){
-    upt += i*6 + ',' + parseInt(internet_speed.upload[i] == -1 ? 51 : (50 - internet_speed.upload[i] / max_speed * 50), 10) + ' ';
-    dpt += i*6 + ',' + parseInt(internet_speed.download[i] == -1 ? 51 : (50 - internet_speed.download[i] / max_speed * 50), 10) + ' ';
+    upt += i*6 + ',' + parseInt(internet_speed.upload[i] == -1 ? 101 : (100 - internet_speed.upload[i] / max_speed * 100), 10) + ' ';
+    dpt += i*6 + ',' + parseInt(internet_speed.download[i] == -1 ? 101 : (100 - internet_speed.download[i] / max_speed * 100), 10) + ' ';
   }
-  upt += i*6 + 1 +',51 ';
-  dpt += i*6 + 1 +',51 ';
+  upt += i*6 + 1 +',101 ';
+  dpt += i*6 + 1 +',101 ';
   document.getElementById('speed_max').firstChild.nodeValue = max_speed.toFixed(0) +' KB/s';
   document.getElementById('speed_half').firstChild.nodeValue = (max_speed / 2).toFixed(0) +' KB/s';
   document.getElementById('upload_graph').setAttribute('points', upt);
   document.getElementById('download_graph').setAttribute('points', dpt);
+}
+function resetParentHeight(){
+  var parent = $(window.parent.document.body),
+      height = $(document.body).height() + 15;
+  parent.find('#NM_table').css({
+    'min-height':parent.find('#NM_table').height() + 100 + 'px',
+    'height': height +'px'
+  });
+  parent.find('#_NM_table').css({
+    'min-height':parent.find('#_NM_table').height() + 'px',
+    'height': height + 'px'
+  });
+  parent.find('#statusframe').css({
+    'min-height':parent.find('#statusframe').height() + 'px',
+    'height': height + 'px'
+  });
 }
 </script>
 </head>
@@ -478,7 +495,7 @@ function render_Internet_Speed(upload, download){
 </td>
 <td>
 <div id="t3" class="tabclick_NW" align="center" style="font-weight: bolder; margin-right:2px; width:90px;" onclick="tabclickhandler(3)">
-<span id="span3" style="cursor:pointer;font-weight: bolder;">Status</span>
+<span id="span3" style="cursor:pointer;font-weight: bolder;">状态</span>
 </div>
 </td>
 </table>
@@ -490,7 +507,7 @@ function render_Internet_Speed(upload, download){
 <table width="98%" border="1" align="center" cellpadding="4" cellspacing="0" class="table1px" id="cpu">
 <tr>
 <td >
-<div class="title">CPU</div>
+<div class="title">处理器</div>
 <img class="line_image" src="/images/New_ui/networkmap/linetwo2.png">
 </td>
 </tr >
@@ -499,10 +516,10 @@ function render_Internet_Speed(upload, download){
 <table id="cpu_field"></table>
 </td>
 </tr>
-<tr style="height:50px;">
+<tr style="height:100px;">
 <td colspan="3">
 <div style="margin:0px 11px 0px 11px;background-color:black;">
-<svg width="270px" height="50px">
+<svg width="270px" height="100px">
 <g>
 <!--<line stroke-width="1" stroke-opacity="1" stroke="rgb(255,255,255)" x1="0" y1="0%" x2="100%" y2="0%" />-->
 <line stroke-width="1" stroke-opacity="0.2" stroke="rgb(255,255,255)" x1="0" y1="25%" x2="100%" y2="25%" />
@@ -511,9 +528,9 @@ function render_Internet_Speed(upload, download){
 <!--<line stroke-width="1" stroke-opacity="1" stroke="rgb(255,255,255)" x1="0" y1="100%" x2="100%" y2="100%" />-->
 </g>
 <g>
-<text font-family="Verdana" fill="#FFFFFF" font-size="8" x="0" y="95%">0%</text>
+<text font-family="Verdana" fill="#FFFFFF" font-size="8" x="0" y="98%">0%</text>
 <text font-family="Verdana" fill="#FFFFFF" font-size="8" x="0" y="55%">50%</text>
-<text font-family="Verdana" fill="#FFFFFF" font-size="8" x="0" y="15%">100%</text>
+<text font-family="Verdana" fill="#FFFFFF" font-size="8" x="0" y="10%">100%</text>
 </g>
 <line stroke-width="1" stroke-opacity="1" stroke="rgb(0,0,121)" x1="0" y1="0%" x2="0" y2="100%" id="tick1" />
 <line stroke-width="1" stroke-opacity="0.3" stroke="rgb(40,255,40)" x1="30" y1="0%" x2="30" y2="100%" id="tick2" />
@@ -546,21 +563,21 @@ function render_Internet_Speed(upload, download){
 <table width="98%" border="1" align="center" cellpadding="4" cellspacing="0" class="table1px">
 <tr>
 <td colspan="3">
-<div class="title">RAM</div>
+<div class="title">内存</div>
 <img class="line_image" src="/images/New_ui/networkmap/linetwo2.png">
 </td>
 </tr>
 <tr class="ram_table">
 <td>
-<div>Used</div>
+<div>已用</div>
 <div id="ram_used_info"></div>
 </td>
 <td>
-<div>Free</div>
+<div>空闲</div>
 <div id="ram_free_info"></div>
 </td>
 <td>
-<div>Total</div>
+<div>安装</div>
 <div id="ram_total_info"></div>
 </td>
 </tr>
@@ -585,10 +602,10 @@ function render_Internet_Speed(upload, download){
 </div>
 </td>
 </tr>
-<tr style="height:50px;">
+<tr style="height:100px;">
 <td colspan="3">
 <div style="margin:0px 11px 0px 11px;background-color:black;">
-<svg width="270px" height="50px">
+<svg width="270px" height="100px">
 <g>
 <!--<line stroke-width="1" stroke-opacity="1" stroke="rgb(255,255,255)" x1="0" y1="0%" x2="100%" y2="0%" />-->
 <line stroke-width="1" stroke-opacity="0.2" stroke="rgb(255,255,255)" x1="0" y1="25%" x2="100%" y2="25%" />
@@ -597,9 +614,9 @@ function render_Internet_Speed(upload, download){
 <!--<line stroke-width="1" stroke-opacity="1" stroke="rgb(255,255,255)" x1="0" y1="100%" x2="100%" y2="100%" />-->
 </g>
 <g>
-<text font-family="Verdana" fill="#FFFFFF" font-size="8" x="0" y="95%">0%</text>
+<text font-family="Verdana" fill="#FFFFFF" font-size="8" x="0" y="98%">0%</text>
 <text font-family="Verdana" fill="#FFFFFF" font-size="8" x="0" y="55%">50%</text>
-<text font-family="Verdana" fill="#FFFFFF" font-size="8" x="0" y="15%">100%</text>
+<text font-family="Verdana" fill="#FFFFFF" font-size="8" x="0" y="10%">100%</text>
 </g>
 <line stroke-width="1" stroke-opacity="1" stroke="rgb(0,0,121)" x1="0" y1="0%" x2="0" y2="100%" id="tick1" />
 <line stroke-width="1" stroke-opacity="0.3" stroke="rgb(40,255,40)" x1="30" y1="0%" x2="30" y2="100%" id="tick2" />
@@ -629,24 +646,24 @@ function render_Internet_Speed(upload, download){
 <table width="98%" border="1" align="center" cellpadding="4" cellspacing="0" class="table1px">
 <tr>
 <td colspan="2">
-<div class="title">INTERNET</div>
+<div class="title">网络</div>
 <img class="line_image" src="/images/New_ui/networkmap/linetwo2.png">
 </td>
 </tr>
 <tr class="ram_table">
 <td>
-<div>Download</div>
+<div>下载</div>
 <div id="download_speed" style="color: #FF9000;">0 KB/s</div>
 </td>
 <td>
-<div>Upload</div>
+<div>上传</div>
 <div id="upload_speed" style="color: #3CF;">0 KB/s</div>
 </td>
 </tr>
-<tr style="height:50px;">
+<tr style="height:100px;">
 <td colspan="2">
 <div style="margin:0px 11px 0px 11px;background-color:black;">
-<svg width="270px" height="50px">
+<svg width="270px" height="100px">
 <g>
 <!--<line stroke-width="1" stroke-opacity="1" stroke="rgb(255,255,255)" x1="0" y1="0%" x2="100%" y2="0%" />-->
 <line stroke-width="1" stroke-opacity="0.2" stroke="rgb(255,255,255)" x1="0" y1="25%" x2="100%" y2="25%" />
@@ -655,9 +672,9 @@ function render_Internet_Speed(upload, download){
 <!--<line stroke-width="1" stroke-opacity="1" stroke="rgb(255,255,255)" x1="0" y1="100%" x2="100%" y2="100%" />-->
 </g>
 <g>
-<text font-family="Verdana" fill="#FFFFFF" font-size="8" x="0" y="95%">0 KB/s</text>
+<text font-family="Verdana" fill="#FFFFFF" font-size="8" x="0" y="99%">0 KB/s</text>
 <text font-family="Verdana" fill="#FFFFFF" font-size="8" x="0" y="55%" id="speed_half">25 KB/s</text>
-<text font-family="Verdana" fill="#FFFFFF" font-size="8" x="0" y="15%" id="speed_max">50 KB/s</text>
+<text font-family="Verdana" fill="#FFFFFF" font-size="8" x="0" y="10%" id="speed_max">50 KB/s</text>
 </g>
 <line stroke-width="1" stroke-opacity="1" stroke="rgb(0,0,121)" x1="0" y1="0%" x2="0" y2="100%" id="tick1" />
 <line stroke-width="1" stroke-opacity="0.3" stroke="rgb(40,255,40)" x1="30" y1="0%" x2="30" y2="100%" id="tick2" />
@@ -689,31 +706,31 @@ function render_Internet_Speed(upload, download){
 <table width="98%" border="1" align="center" cellpadding="4" cellspacing="0" class="table1px">
 <tr>
 <td>
-<div class="title">SYSTEM</div>
+<div class="title">系统</div>
 <img class="line_image" src="/images/New_ui/networkmap/linetwo2.png">
 </td>
 </tr>
 <tr class="other_info_table">
 <td>
-<div class="info_title">Uptime</div>
-<div class="info_detail"><span id="boot_days"></span> day(s) <span id="boot_hours"></span> hour(s) <span id="boot_minutes"></span> min(s) <span id="boot_seconds"></span> sec(s)</div>
+<div class="info_title">开机时间</div>
+<div class="info_detail"><span id="boot_days"></span> 天 <span id="boot_hours"></span> 时 <span id="boot_minutes"></span> 分 <span id="boot_seconds"></span> 秒</div>
 </td>
 </tr>
 <tr class="other_info_table">
 <td>
-<div class="info_title">Temperatures</div>
+<div class="info_title">温度</div>
 <div class="info_detail" id="temp_td"></div>
 </td>
 </tr>
 <tr class="other_info_table">
 <td>
-<div class="info_title">CPU Frequency</div>
+<div class="info_title">处理器频率</div>
 <div class="info_detail"><span><% sysinfo("cpu.freq"); %></span> MHz</div>
 </td>
 </tr>
 <tr class="other_info_table">
 <td style="padding-bottom: 8px;">
-<div class="info_title">CPU Load Average (1, 5, 15 mins)</div>
+<div class="info_title">处理器负载 (1, 5, 15 分钟)</div>
 <div class="info_detail">
 <span><% sysinfo("cpu.load.1"); %></span>,&nbsp;
 <span><% sysinfo("cpu.load.5"); %></span>,&nbsp;
