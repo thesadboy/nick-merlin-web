@@ -156,6 +156,7 @@ detect_CPU_RAM();
 showbootTime();
 update_temperatures();
 ref.start();
+resetParentHeight();
 }
 function tabclickhandler(wl_unit){
 if(wl_unit == 3){
@@ -247,7 +248,6 @@ used: mem_info.getElementsByTagName('used')[0].textContent,
 render_CPU(cpu_info_new);
 render_RAM(mem_object.total, mem_object.free, mem_object.used);
 setTimeout("detect_CPU_RAM();", 2000);
-resetParentHeight();
 }
 });
 }
@@ -447,7 +447,7 @@ function render_Internet_Speed(upload, download){
 }
 function resetParentHeight(){
   var parent = $(window.parent.document.body),
-      height = $(document.body).height() + 15;
+      height = $(document.body).height() + 20;
   parent.find('#NM_table').css({
     'min-height':parent.find('#NM_table').height() + 100 + 'px',
     'height': height +'px'
