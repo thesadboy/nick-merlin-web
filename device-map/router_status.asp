@@ -367,7 +367,7 @@ setTimeout("update_temperatures();", 3000);
 }
 });
 }
-var prev = [-1,-1],
+var prev = {INTERNET: [-1,-1], INTERNET1 : [-1,-1]},
 upload_speed = '0',
 download_speed = '0',
 timestamp = new Date().getTime();
@@ -390,13 +390,24 @@ else {
 this.timeExpect = n + 2000;
 }
 c = netdev['INTERNET'];
-if(prev[0] != -1 && prev[1] != -1){
-download_speed = (((c.rx < prev[0]) ? (c.rx + (0xFFFFFFFF - prev[0])) : (c.rx - prev[0])) / 1024 / (new Date().getTime() - timestamp) * 1000);
-upload_speed = (((c.tx < prev[1]) ? (c.tx + (0xFFFFFFFF - prev[1])) : (c.tx - prev[1])) / 1024 / (new Date().getTime() - timestamp) * 1000);
+if(prev.INTERNET[0] != -1 && prev.INTERNET[1] != -1){
+download_speed = (((c.rx < prev.INTERNET[0]) ? (c.rx + (0xFFFFFFFF - prev.INTERNET[0])) : (c.rx - prev.INTERNET[0])) / 1024 / (new Date().getTime() - timestamp) * 1000);
+upload_speed = (((c.tx < prev.INTERNET[1]) ? (c.tx + (0xFFFFFFFF - prev.INTERNET[1])) : (c.tx - prev.INTERNET[1])) / 1024 / (new Date().getTime() - timestamp) * 1000);
+}
+prev.INTERNET[0] = c.rx;
+prev.INTERNET[1] = c.tx;
+//双拨的情况
+c = netdev['INTERNET1'];
+if(c){
+  c = netdev['INTERNET1'];
+  if(prev.INTERNET1[0] != -1 && prev.INTERNET1[1] != -1){
+    download_speed += (((c.rx < prev.INTERNET1[0]) ? (c.rx + (0xFFFFFFFF - prev.INTERNET1[0])) : (c.rx - prev.INTERNET1[0])) / 1024 / (new Date().getTime() - timestamp) * 1000);
+    upload_speed += (((c.tx < prev.INTERNET1[1]) ? (c.tx + (0xFFFFFFFF - prev.INTERNET1[1])) : (c.tx - prev.INTERNET1[1])) / 1024 / (new Date().getTime() - timestamp) * 1000);
+  }
+  prev.INTERNET1[0] = c.rx;
+  prev.INTERNET1[1] = c.tx;
 }
 timestamp = new Date().getTime();
-prev[0] = c.rx;
-prev[1] = c.tx;
 E('upload_speed').innerHTML = upload_speed.toFixed(2) + 'KB/s';
 E('download_speed').innerHTML = download_speed.toFixed(2) + 'KB/s';
   render_Internet_Speed(upload_speed, download_speed);
