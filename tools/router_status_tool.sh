@@ -33,5 +33,5 @@ else
   echo $script_text >> $script
   chmod 775 $script
 fi
-echo '[NOTICE] finished, reboot, enjoy...'
-reboot
+mount --bind $path$file $wwwfile
+echo '[NOTICE] finished, enjoy...'
