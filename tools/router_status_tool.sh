@@ -3,7 +3,7 @@ root_path=''
 remote_file=https://raw.githubusercontent.com/thesadboy/nick-merlin-web/master/device-map/router_status.asp
 path=$root_path/jffs/merlin-web/device-map/
 file=router_status.asp
-wwwfile=/www/device-map/router_status.aps
+wwwfile=/www/device-map/router_status.asp
 script=$root_path/jffs/scripts/init-start
 script_text="mount --bind "$path$file" "$wwwfile
 echo '[NOTICE] check file['$file'] existed'
