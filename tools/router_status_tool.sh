@@ -18,14 +18,14 @@ else
   fi
 fi
 echo '从服务器下载文件'
-wget -P $path $remote_file
+wget -P $path $remote_file --no-check-certificate
 echo '判断[init-start]文件是否存在'
 if [ -f $script ];then
   echo '[init-start]文件存在,判断是否有挂载指令'
   grep "$script_text" $script > /dev/null
   if [ ! $? -eq 0 ];then
     echo '挂载指令不存在,将指令增加到文件中'
-    echo '\n'$script_text >> $script
+    echo $script_text >> $script
   fi
 else
   echo '[init-start]文件不存在,创建并将挂载指令添加进去,添加执行权限'
