@@ -8,7 +8,7 @@ script=$root_path/jffs/scripts/init-start
 script_text="mount --bind "$path$file" "$wwwfile
 echo '[NOTICE] check file['$file'] existed'
 if [ -f $path$file ];then
-  echo '[NOTICE] file ['$file'] existed, deltet'
+  echo '[NOTICE] file ['$file'] existed, delete'
   rm -rf $path$file
 else
   echo '[NOTICE] check dir ['$path'] existed'
