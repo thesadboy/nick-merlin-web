@@ -77,7 +77,8 @@ transition: all 0.5s ease-in-out;
 padding: 3px 5px;
 }
 .other_info_table .info_title{
-font-size: 14px;
+font-size: 12px;
+color: #ffffff;
 height: 18px;
 line-height: 18px;
 font-weight: bold;
