@@ -344,7 +344,6 @@ document.getElementById("boot_seconds").innerHTML = Seconds;
 boottime += 1;
 setTimeout("showbootTime()", 1000);
 }
-
 function update_temperatures(){
 $.ajax({
 url: '/ajax_coretmp.asp',
@@ -365,6 +364,10 @@ if ((based_modelid == "RT-N18U") || (based_modelid == "RT-AC56U") ||
 code +=" | <b>CPU:</b> <span>" + curr_coreTmp_cpu +"&deg;C</span>";
 }
 document.getElementById("temp_td").innerHTML = code;
+if(!updateParentHeightByTemperatures){
+  updateParentHeightByTemperatures = true;
+  resetParentHeight();
+}
 setTimeout("update_temperatures();", 3000);
 }
 });
@@ -446,19 +449,20 @@ function render_Internet_Speed(upload, download){
   document.getElementById('upload_graph').setAttribute('points', upt);
   document.getElementById('download_graph').setAttribute('points', dpt);
 }
+var updateParentHeightByTemperatures = false;
 function resetParentHeight(){
   var parent = $(window.parent.document.body),
       height = $(document.body).height() + 20;
-  parent.find('#NM_table').css({
-    'min-height':parent.find('#NM_table').height() + 100 + 'px',
+  parent.find('#NM_table').data('height', parent.find('#NM_table').data('height') || parent.find('#NM_table').height()).css({
+    'min-height':parent.find('#NM_table').data('height') + 100 + 'px',
     'height': height +'px'
   });
-  parent.find('#_NM_table').css({
-    'min-height':parent.find('#_NM_table').height() + 'px',
+  parent.find('#_NM_table').data('height', parent.find('#_NM_table').data('height') || parent.find('#_NM_table').height()).css({
+    'min-height':parent.find('#_NM_table').data('height') + 'px',
     'height': height + 'px'
   });
-  parent.find('#statusframe').css({
-    'min-height':parent.find('#statusframe').height() + 'px',
+  parent.find('#statusframe').data('height', parent.find('#statusframe').data('height') || parent.find('#statusframe').height()).css({
+    'min-height':parent.find('#statusframe').data('height') + 'px',
     'height': height + 'px'
   });
 }
