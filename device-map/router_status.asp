@@ -85,7 +85,7 @@ font-weight: bold;
 padding: 0 5px;
 }
 .other_info_table .info_detail{
-height: 14px;
+min-height: 14px;
 line-height: 14px;
 padding: 0 5px;
 }
@@ -578,7 +578,7 @@ function resetParentHeight(){
 <div id="ram_free_info"></div>
 </td>
 <td>
-<div>安装</div>
+<div>总共</div>
 <div id="ram_total_info"></div>
 </td>
 </tr>
