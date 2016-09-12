@@ -14,6 +14,7 @@
 <script type="text/javascript" src="/state.js"></script>
 <script type="text/javascript" src="/js/jquery.js"></script>
 <script language="JavaScript" type="text/javascript" src="/tmmenu.js"></script>
+<script type="text/javascript" src="/dbconf?p=ss_basic_install_status,ss_basic_state_china,ss_basic_state_foreign,ss_basic_enable"></script>
 <style type="text/css">
 .title{
 font-size:16px;
@@ -158,6 +159,7 @@ showbootTime();
 update_temperatures();
 ref.start();
 resetParentHeight();
+checkSSStatus();
 }
 function tabclickhandler(wl_unit){
 if(wl_unit == 3){
@@ -466,6 +468,43 @@ function resetParentHeight(){
     'height': height + 'px'
   });
 }
+function freshSSStatus(){
+  $.ajax({
+    url:'/ss_status',
+    dataType: 'html',
+    error: function(){},
+    success: function(){
+      $.ajax({
+         url :'/dbconf?p=ss_basic_install_status,ss_basic_state_china,ss_basic_state_foreign,ss_basic_enable&_t=' + new Date().getTime(),
+         dataType: 'html',
+         error: function(){},
+         success: function(response){
+            $.globalEval(response);
+            if(db_ss_basic_state_china && db_ss_basic_state_china['ss_basic_state_china'] && db_ss_basic_state_foreign && db_ss_basic_state_foreign['ss_basic_state_foreign']){
+              $('#ss_basic_state_foreign').html(db_ss_basic_state_foreign['ss_basic_state_foreign']);
+              $('#ss_basic_state_china').html(db_ss_basic_state_china['ss_basic_state_china']);
+            } else{
+              $('.ss_basic_state').html('刷新中，请稍后...');
+            }
+         }
+      });
+    }
+  });
+}
+function checkSSStatus(){
+  if(db_ss_basic_install_status['ss_basic_install_status'] == 0){
+    if(db_ss_basic_enable['ss_basic_enable'] == 1){
+      $('.ss_basic_state').html('刷新中，请稍后...');
+      freshSSStatus();
+      setInterval(freshSSStatus,parseInt(cookie.get('status_restart') || 5) * 1000);
+    }
+    else{
+      $('.ss_basic_state').html('SS插件未启用！')
+    }
+  } else{
+    $('.ss_basic_state').html('未安装SS插件，请到应用中心安装！')
+  }
+}
 </script>
 </head>
 <body class="statusbody" onload="initial();">
@@ -698,6 +737,33 @@ function resetParentHeight(){
 </td>
 </tr>
 <tr>
+<tr class="other_info_table">
+<td style="border-bottom:5px #2A3539 solid;padding:0 10px 5px 10px;" colspan="2">
+</td>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div>
+<table width="98%" border="1" align="center" cellpadding="4" cellspacing="0" class="table1px">
+<tr>
+<td>
+<div class="title">ShadowSocks</div>
+<img class="line_image" src="/images/New_ui/networkmap/linetwo2.png">
+</td>
+</tr>
+<tr class="other_info_table">
+<td>
+<div class="info_detail">国外 - <span class="ss_basic_state" id="ss_basic_state_foreign">刷新中，请稍后...</span></div>
+</td>
+</tr>
+<tr class="other_info_table">
+<td>
+<div class="info_detail">国内 - <span class="ss_basic_state" id="ss_basic_state_china">刷新中，请稍后...</span></div>
+</td>
+</tr>
 <tr class="other_info_table">
 <td style="border-bottom:5px #2A3539 solid;padding:0 10px 5px 10px;" colspan="2">
 </td>
