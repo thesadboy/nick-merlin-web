@@ -481,8 +481,8 @@ function freshSSStatus(){
          success: function(response){
             $.globalEval(response);
             if(db_ss_basic_state_china && db_ss_basic_state_china['ss_basic_state_china'] && db_ss_basic_state_foreign && db_ss_basic_state_foreign['ss_basic_state_foreign']){
-              $('#ss_basic_state_foreign').html(db_ss_basic_state_foreign['ss_basic_state_foreign']);
-              $('#ss_basic_state_china').html(db_ss_basic_state_china['ss_basic_state_china']);
+              $('#ss_basic_state_foreign').html(db_ss_basic_state_foreign['ss_basic_state_foreign'].replace('working...','正常滴 O(∩_∩)O~').replace('Waiting for first refresh...','刷新中，请稍后...').replace('Problem detected!','故障咯 o(╯□╰)o'));
+              $('#ss_basic_state_china').html(db_ss_basic_state_china['ss_basic_state_china'].replace('working...','正常滴 O(∩_∩)O~').replace('Waiting for first refresh...','刷新中，请稍后...').replace('Problem detected!','故障咯 o(╯□╰)o'));
             } else{
               $('.ss_basic_state').html('刷新中，请稍后...');
             }
@@ -750,18 +750,18 @@ function checkSSStatus(){
 <table width="98%" border="1" align="center" cellpadding="4" cellspacing="0" class="table1px">
 <tr>
 <td>
-<div class="title">ShadowSocks</div>
+<div class="title">影梭</div>
 <img class="line_image" src="/images/New_ui/networkmap/linetwo2.png">
 </td>
 </tr>
 <tr class="other_info_table">
 <td>
-<div class="info_detail">国外 - <span class="ss_basic_state" id="ss_basic_state_foreign">刷新中，请稍后...</span></div>
+<div class="info_detail">国外 <span class="ss_basic_state" id="ss_basic_state_foreign">刷新中，请稍后...</span></div>
 </td>
 </tr>
 <tr class="other_info_table">
 <td>
-<div class="info_detail">国内 - <span class="ss_basic_state" id="ss_basic_state_china">刷新中，请稍后...</span></div>
+<div class="info_detail">国内 <span class="ss_basic_state" id="ss_basic_state_china">刷新中，请稍后...</span></div>
 </td>
 </tr>
 <tr class="other_info_table">
