@@ -211,10 +211,10 @@
 			<div class="item-title-line"></div>
 			<div class="item-container">
 				<div class="row">
-					<div class="row-info">国外<span class="color-ffcc00 ss_basic_state" id="ss_basic_state_foreign"> [ 2016-09-15 19:36:00 ] 故障咯 o(╯□╰)o</span></div>
+					<div class="row-info">国外 <span class="color-ffcc00 ss_basic_state" id="ss_basic_state_foreign"> [ 2016-09-15 19:36:00 ] 故障咯 o(╯□╰)o</span></div>
 				</div>
 				<div class="row">
-					<div class="row-info">国内<span class="color-ffcc00 ss_basic_state" id="ss_basic_state_china"> [ 2016-09-15 19:36:00 ] 正常滴 O(∩_∩)O~</span></div>
+					<div class="row-info">国内 <span class="color-ffcc00 ss_basic_state" id="ss_basic_state_china"> [ 2016-09-15 19:36:00 ] 正常滴 O(∩_∩)O~</span></div>
 				</div>
 			</div>
 		</div>
