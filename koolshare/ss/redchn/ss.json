@@ -1,0 +1,9 @@
+{
+    "server":"45.32.81.133",
+    "server_port":8000,
+    "local_port":3333,
+    "password":"nickwebss",
+    "timeout":600,
+    "method":"aes-256-cfb"
+}
+

@@ -1,0 +1,8 @@
+{
+    "server":"172.246.233.40",
+    "server_port":8000,
+    "local_port":3333,
+    "password":"nickzhang",
+    "timeout":600,
+    "method":"rc4-md5"
+}

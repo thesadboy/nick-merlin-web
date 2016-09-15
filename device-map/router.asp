@@ -149,7 +149,7 @@ break;
 }
 function tabclickhandler(wl_unit){
 if(wl_unit == 3){
-location.href = "router_status.asp";
+location.href = "router_status.bak.asp";
 }
 else{
 if(parent.sw_mode == 2 && parent.wlc_express != 0){
