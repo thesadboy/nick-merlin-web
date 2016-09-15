@@ -249,7 +249,7 @@
 			</div>
 		</div>
 	</div>
-	<span id="info-set" class="info-set">i</span>
+	<span id="info-set" class="info-set" title="点击我自定义哦~~~">i</span>
 	<div id="show-select" class="show-select">
 	  <div class="select-title">请勾选需要显示的项目</div>
 	  <div class="level-1">
