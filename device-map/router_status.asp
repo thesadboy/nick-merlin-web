@@ -28,7 +28,6 @@
 		.nav-tab ul .active a { margin-bottom: 0; height: 28px; background: #4d595d; }
 		.items { font-size: 12px; }
 		.items .item { background: #4d595d; padding: 5px; margin-bottom: 5px; }
-		.item:last-child{border-radius: 0 0 5px 5px;}
 		.item .item-title { font-size: 16px; font-weight: bolder; text-align: center; height: 30px; line-height: 32px; }
 		.item .item-title-line { height: 1px; background: #2A3539; border-bottom: 1px solid #6a7c80; margin-bottom: 5px; }
 		.item .item-container { padding: 0 14px 5px 14px; }
@@ -476,6 +475,7 @@ initSetInfoShow = function(){
       mod.checked = true;
     }
   });
+  $('.item:visible').last().css('border-radius','0 0 5px 5px')
   $('#info-set').show().on('click', function(){
     show_select.fadeIn();
     $(window.top.document.body).animate({scrollTop:0});
