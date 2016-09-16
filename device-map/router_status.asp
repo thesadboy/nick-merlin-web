@@ -614,17 +614,19 @@ modFns = {
         console.log(arguments);
       },
       success : function(data){
-        var c, n;
+        var c, n, download_speed = 0, upload_speed = 0;
         try{
           netdev = null
           $.globalEval(data);
           c = netdev['INTERNET'];
-          if(vars.internet_prev.INTERNET[0] != -1 && vars.internet_prev.INTERNET[1] != -1){
-            download_speed = (((c.rx < vars.internet_prev.INTERNET[0]) ? (c.rx + (0xFFFFFFFF - vars.internet_prev.INTERNET[0])) : (c.rx - vars.internet_prev.INTERNET[0])) / 1024 / (new Date().getTime() - timestamp) * 1000);
-            upload_speed = (((c.tx < vars.internet_prev.INTERNET[1]) ? (c.tx + (0xFFFFFFFF - vars.internet_prev.INTERNET[1])) : (c.tx - vars.internet_prev.INTERNET[1])) / 1024 / (new Date().getTime() - timestamp) * 1000);
+          if(c){
+            if(vars.internet_prev.INTERNET[0] != -1 && vars.internet_prev.INTERNET[1] != -1){
+              download_speed = (((c.rx < vars.internet_prev.INTERNET[0]) ? (c.rx + (0xFFFFFFFF - vars.internet_prev.INTERNET[0])) : (c.rx - vars.internet_prev.INTERNET[0])) / 1024 / (new Date().getTime() - timestamp) * 1000);
+              upload_speed = (((c.tx < vars.internet_prev.INTERNET[1]) ? (c.tx + (0xFFFFFFFF - vars.internet_prev.INTERNET[1])) : (c.tx - vars.internet_prev.INTERNET[1])) / 1024 / (new Date().getTime() - timestamp) * 1000);
+            }
+            vars.internet_prev.INTERNET[0] = c.rx;
+            vars.internet_prev.INTERNET[1] = c.tx;
           }
-          vars.internet_prev.INTERNET[0] = c.rx;
-          vars.internet_prev.INTERNET[1] = c.tx;
           //双拨的情况
           c = netdev['INTERNET1'];
           if(c){
