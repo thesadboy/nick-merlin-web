@@ -49,8 +49,9 @@
 		.item .color-1cfe16 { color: #1cfe16; }
 		.info-set{ position: absolute; right:5px; bottom:5px; width:15px; height:15px; border:1px solid #FFFFFF; border-radius: 20px; text-align: center; line-height: 15px; cursor: pointer;}
 		.show-select{ position: absolute; right:0; bottom:0; left:0; top:0; background: #4d595d; z-index: 100; padding:10px; display: none; }
-		.show-select .level-1{}
-		.show-select .level-2{padding-left: 20px;}
+		.show-select input{margin-right:5px;}
+		.show-select .level-2{padding-left: 25px;}
+		.show-select .list{margin: 5px 0;}
 		.show-select .select-title{font-size: 16px; line-height: 30px; border-bottom: 1px dotted #6a7c80; margin-bottom: 10px;}
 		.show-select .btns{border-top: 1px dotted #6a7c80; margin-top: 10px; padding: 10px 0;}
 		.show-select .btns .btn{ float: left; width: 65px; height:32px; background: #2A3539; margin-left: 30px; line-height: 32px; text-align: center; border-radius: 5px;}
@@ -258,7 +259,7 @@
         <div class="list"><label><input name="mod-ram" type="checkbox">内存</label></div>
         <div class="list"><label><input name="mod-net" type="checkbox">网络</label></div>
         <div class="list"><label><input name="mod-ss" type="checkbox">影梭</label></div>
-        <div>
+        <div class="list">
           <label><input name="mod-sys" type="checkbox">系统</label>
           <div class="level-2">
             <div class="list"><label><input name="mod-uptime" type="checkbox">开机时间</label></div>
@@ -487,11 +488,25 @@ initSetInfoShow = function(){
     if(that.parents('.level-2').length){
       if(that.get(0).checked){
         that.parents('.level-2').siblings('label').find('input[type="checkbox"]').get(0).checked = true;
+      } else{
+        var needUncheckedParent = true;
+        that.parents('.list:first').siblings('.list').find('input[type="checkbox"]').each(function(){
+          if(this.checked){
+            needUncheckedParent = false;
+          }
+        });
+        if(needUncheckedParent){
+          that.parents('.level-2').siblings('label').find('input[type="checkbox"]').get(0).checked = false;
+        }
       }
     }
     if(that.parent('label').siblings('.level-2').length && !that.get(0).checked){
       that.parent('label').siblings('.level-2').find('input[type="checkbox"]').each(function(){
         this.checked = false;
+      })
+    }else{
+      that.parent('label').siblings('.level-2').find('input[type="checkbox"]').each(function(){
+        this.checked = true;
       })
     }
   });
