@@ -10,7 +10,7 @@
   <link rel="icon" href="images/favicon.png">
   <title></title>
 	<style type="text/css">
-		body { background: #2A3539; padding: 5px; margin: 0; color: #FFFFFF; font-size: 13px; font-family: Arial, Helvetica, sans-serif; }
+		body { background: #2A3539; padding: 5px 6px; margin: 0; color: #FFFFFF; font-size: 13px; font-family: Arial, Helvetica, sans-serif; }
 		a { text-decoration: none; color: #ffffff; }
 		.float-left { float: left; }
 		.float-right { float: right; }
@@ -28,6 +28,7 @@
 		.nav-tab ul .active a { margin-bottom: 0; height: 28px; background: #4d595d; }
 		.items { font-size: 12px; }
 		.items .item { background: #4d595d; padding: 5px; margin-bottom: 5px; }
+		.item:last-child{border-radius: 0 0 5px 5px;}
 		.item .item-title { font-size: 16px; font-weight: bolder; text-align: center; height: 30px; line-height: 32px; }
 		.item .item-title-line { height: 1px; background: #2A3539; border-bottom: 1px solid #6a7c80; margin-bottom: 5px; }
 		.item .item-container { padding: 0 14px 5px 14px; }
@@ -249,7 +250,7 @@
 			</div>
 		</div>
 	</div>
-	<span id="info-set" class="info-set" title="点击我自定义哦~~~">i</span>
+	<span id="info-set" class="info-set hide" title="点击我自定义哦~~~">i</span>
 	<div id="show-select" class="show-select">
 	  <div class="select-title">请勾选需要显示的项目</div>
 	  <div class="level-1">
@@ -474,7 +475,7 @@ initSetInfoShow = function(){
       mod.checked = true;
     }
   });
-  $('#info-set').on('click', function(){
+  $('#info-set').show().on('click', function(){
     show_select.fadeIn();
     $(window.top.document.body).animate({scrollTop:0});
   });
@@ -521,7 +522,7 @@ checkSSStatus = function(){
 },
 resetParentHeight = function(){
   var parent = $(window.parent.document.body),
-      height = $(document.body).height() + 10;
+      height = $(document.body).height() + parseInt($(document.body).css('padding-top'),10) * 2;
   parent.find('#NM_table').data('height', parent.find('#NM_table').data('height') || parent.find('#NM_table').height()).css({
     'min-height':parent.find('#NM_table').data('height') + 100 + 'px',
     'height': height +'px'
