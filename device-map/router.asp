@@ -149,7 +149,7 @@ break;
 }
 function tabclickhandler(wl_unit){
 if(wl_unit == 3){
-location.href = "router_status.bak.asp";
+location.href = "router_status.asp";
 }
 else{
 if(parent.sw_mode == 2 && parent.wlc_express != 0){
@@ -556,7 +556,7 @@ break;
 </td>
 <td>
 <div id="t3" class="tab_NW" align="center" style="font-weight: bolder; margin-right:2px; width:90px;" onclick="tabclickhandler(3)">
-<span id="span3" style="cursor:pointer;font-weight: bolder;">Status</span>
+<span id="span3" style="cursor:pointer;font-weight: bolder;">状态</span>
 </div>
 </td>
 </table>
