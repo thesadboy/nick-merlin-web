@@ -397,7 +397,7 @@ generate_cpu_field = function(){
     html.push('<div class="progress">');
     html.push('<div class="progress-width" style="background:',$(document.getElementById("cpu" + i + "_graph")).css('stroke'),'"></div>');
     html.push('</div>');
-    html.push('<div class="text">核心 ',parseInt(i+1),'</div>');
+    html.push('<div class="text">核心[',parseInt(i+1),']</div>');
     html.push('<div class="pct">0 %</div>');
     html.push('</div>');
     document.getElementById('cpu'+i+'_graph').style.display = "";
