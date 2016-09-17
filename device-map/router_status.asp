@@ -536,20 +536,15 @@ checkSSStatus = function(){
   }
 },
 resetParentHeight = function(){
-  var parent = $(window.parent.document.body),
-      height = $(document.body).height() + parseInt($(document.body).css('padding-top'),10) * 2;
-  parent.find('#NM_table').data('height', parent.find('#NM_table').data('height') || parent.find('#NM_table').height()).css({
-    'min-height':parent.find('#NM_table').data('height') + 100 + 'px',
-    'height': height +'px'
-  });
-  parent.find('#_NM_table').data('height', parent.find('#_NM_table').data('height') || parent.find('#_NM_table').height()).css({
-    'min-height':parent.find('#_NM_table').data('height') + 'px',
-    'height': height + 'px'
-  });
-  parent.find('#statusframe').data('height', parent.find('#statusframe').data('height') || parent.find('#statusframe').height()).css({
-    'min-height':parent.find('#statusframe').data('height') + 'px',
-    'height': height + 'px'
-  });
+  var height = $(document.body).height() + parseInt($(document.body).css('padding-top'),10) * 2,
+      parent = $(window.parent.document.body).find('#statusframe');
+      while(parent.length && parent.get(0).nodeName.toLocaleLowerCase() != 'body'){
+        if(parseInt(parent.css('height') || '0', 10) < height + 50){
+          parent.css('height','');
+        }
+        parent.css('min-height', height + 'px');
+        parent = parent.parent();
+      }
 },
 updateInfos = function(){
   var mods = getShow();
