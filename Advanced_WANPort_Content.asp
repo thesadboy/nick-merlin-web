@@ -933,8 +933,8 @@ document.form.wans_mode.value = "fo";
 <tr>
 <th><#1029#></th>
 <td>
-<select name="wans_second" class="input_option" onchange="changeWANProto(this);"></select>
-<select id="wans_lanport2" name="wans_lanport2" class="input_option" style="margin-left:7px;">
+<select name="wans_second" <% nvram_match("multiwanbyoneline", "1", "disabled"); %> class="input_option" onchange="changeWANProto(this);"></select>
+<select id="wans_lanport2" <% nvram_match("multiwanbyoneline", "1", "disabled"); %> name="wans_lanport2" class="input_option" style="margin-left:7px;">
 <option value="1" <% nvram_match("wans_lanport", "1", "selected"); %>>LAN Port 1</option>
 <option value="2" <% nvram_match("wans_lanport", "2", "selected"); %>>LAN Port 2</option>
 <option value="3" <% nvram_match("wans_lanport", "3", "selected"); %>>LAN Port 3</option>
@@ -953,7 +953,7 @@ document.form.wans_mode.value = "fo";
 <th><#1009#></th>
 <td>
 <input type="hidden" name="wans_mode" value=''>
-<select id="wans_mode_option" class="input_option" onchange="appendModeOption(this.value);">
+<select id="wans_mode_option" <% nvram_match("multiwanbyoneline", "1", "disabled"); %> class="input_option" onchange="appendModeOption(this.value);">
 <option value="fo"><#1010#></option>
 <option value="lb" <% nvram_match("wans_mode", "lb", "selected"); %>><#1011#></option>
 </select>
