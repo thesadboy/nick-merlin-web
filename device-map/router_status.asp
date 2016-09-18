@@ -606,7 +606,7 @@ modFns = {
       type: 'post',
       data: 'output=netdev&timestamp=' + new Date().getTime(),
       error: function(){
-        console.log(arguments);
+        modFns['mod-net']();
       },
       success : function(data){
         var c, n, download_speed = 0, upload_speed = 0;
