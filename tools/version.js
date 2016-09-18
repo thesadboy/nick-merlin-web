@@ -1,1 +1,0 @@
-check_router_status_version('1.0.0');
