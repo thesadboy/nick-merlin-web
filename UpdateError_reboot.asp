@@ -13,13 +13,20 @@ var reboottime = eval("<% get_default_reboot_time(); %>");
 var upgrade_fw_status = '<% nvram_get("upgrade_fw_status"); %>';
 if(upgrade_fw_status == 2 || upgrade_fw_status == 4){
 parent.document.getElementById("hiddenMask").style.visibility = "hidden";
-parent.document.getElementById('loading_block2').innerHTML = "<#104#>";
+parent.document.getElementById('loading_block2').innerHTML = "<#106#>";
+parent.document.getElementById('loading_block3').style.display = "none";
+parent.showLoadingBar(reboottime);
+setTimeout("parent.detect_httpd();", reboottime*1000);
+}
+else if(upgrade_fw_status == 6){
+parent.document.getElementById("hiddenMask").style.visibility = "hidden";
+parent.document.getElementById('loading_block2').innerHTML = "<#109#>";
 parent.document.getElementById('loading_block3').style.display = "none";
 parent.showLoadingBar(reboottime);
 setTimeout("parent.detect_httpd();", reboottime*1000);
 }
 else{
-aler("<#104#>");
+aler("<#106#>");
 parent.location.href=parent.location.href;
 }
 </script>

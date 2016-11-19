@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#533#> - <#1884#></title>
+<title><#548#> - <#1930#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="other.css">
@@ -17,8 +17,8 @@
 <script type="text/javascript" src="/general.js"></script>
 <script type="text/javascript" src="/popup.js"></script>
 <script type="text/javascript" src="/help.js"></script>
-<script type="text/javascript" src="/disk_functions.js"></script>
 <script type="text/javascript" src="/validator.js"></script>
+<script type="text/javascript" src="/disk_functions.js"></script>
 <script language="JavaScript" type="text/javascript" src="/js/jquery.js"></script>
 <script type="text/javascript" src="/switcherplugin/jquery.iphone-switch.js"></script>
 <script type="text/javascript" src="/form.js"></script>
@@ -30,12 +30,12 @@ cal_panel_block("folderTree_panel", 0.25);
 }
 function initial(){
 show_menu();
-document.getElementById("_APP_Installation").innerHTML = '<table><tbody><tr><td><div class="_APP_Installation"></div></td><td><div style="width:120px;"><#201#></div></td></tr></tbody></table>';
+document.getElementById("_APP_Installation").innerHTML = '<table><tbody><tr><td><div class="_APP_Installation"></div></td><td><div style="width:120px;"><#204#></div></td></tr></tbody></table>';
 document.getElementById("_APP_Installation").className = "menu_clicked";
 if('<% nvram_get("tm_device_name"); %>' != '')
 document.getElementById("tmPath").innerHTML = '/mnt/<% nvram_get("tm_device_name"); %>';
 else
-document.getElementById("tmPath").innerHTML = '<div style="margin-left:5px;color:#FC0"><#971#></div>';
+document.getElementById("tmPath").innerHTML = '<div style="margin-left:5px;color:#FC0"><#989#></div>';
 if(document.form.timemachine_enable.value == "0"){
 document.getElementById("backupPath_tr").style.display = "none";
 document.getElementById("volSize_tr").style.display = "none";
@@ -46,7 +46,7 @@ document.getElementById("volSize_tr").style.display = "";
 }
 if(document.form.tm_vol_size.value != "")
 document.form.tm_vol_size.value = document.form.tm_vol_size.value/1024;
-detectUSBStatusApp();
+setInterval(show_partition, 2000);
 }
 function selPartition(){
 show_partition();
@@ -57,7 +57,7 @@ function cancel_folderTree(){
 $("#folderTree_panel").fadeOut(300);
 }
 function show_partition(){
-require(['/require/modules/diskList.js'], function(diskList){
+require(['/require/modules/diskList.js?hash=' + Math.random().toString()], function(diskList){
 var htmlcode = "";
 var mounted_partition = 0;
 htmlcode += '<table align="center" style="margin:auto;border-collapse:collapse;">';
@@ -83,16 +83,16 @@ htmlcode += '<tr><td class="app_table_radius_left"><div class="iconUSBdisk_noquo
 htmlcode += '<div class="app_desc"><b>'+ usbDevicesList[i].partition[j].partName + '</b></div>';
 }
 if(all_accessable_size > 1)
-htmlcode += '<div class="app_desc"><#795#>: <b>'+ all_accessable_size+" GB" + '</b></div>';
+htmlcode += '<div class="app_desc"><#812#>: <b>'+ all_accessable_size+" GB" + '</b></div>';
 else
-htmlcode += '<div class="app_desc"><#795#>: <b>'+ all_accessable_size+" GB <span style=\'color:#FFCC00\'>(Disk quota can not less than 1GB)" + '</span></b></div>';
-htmlcode += '<div class="app_desc"><#1909#>: <b>'+ all_total_size+" GB" + '</b></div>';
+htmlcode += '<div class="app_desc"><#812#>: <b>'+ all_accessable_size+" GB <span style=\'color:#FFCC00\'>(Disk quota can not less than 1GB)" + '</span></b></div>';
+htmlcode += '<div class="app_desc"><#1955#>: <b>'+ all_total_size+" GB" + '</b></div>';
 htmlcode += '</div><br/><br/></td></tr>\n';
 mounted_partition++;
 }
 }
 if(mounted_partition == 0)
-htmlcode += '<tr height="300px"><td colspan="2"><span class="app_name" style="line-height:100%"><#1606#></span></td></tr>\n';
+htmlcode += '<tr height="300px"><td colspan="2"><span class="app_name" style="line-height:100%"><#1646#></span></td></tr>\n';
 document.getElementById("partition_div").innerHTML = htmlcode;
 });
 }
@@ -104,15 +104,8 @@ document.form.tm_device_name.value = _part;
 cancel_folderTree();
 totalSpace = _total;
 availSpace = _avail;
-document.getElementById("maxVolSize").innerHTML = "<#795#>: " + _avail + " GB";
+document.getElementById("maxVolSize").innerHTML = "<#812#>: " + _avail + " GB";
 document.form.tm_vol_size.value = "";
-}
-function detectUSBStatusApp(){
-require(['/require/modules/diskList.js'], function(diskList){
-setInterval(function(){
-diskList.update(show_partition);
-}, 2000);
-});
 }
 function applyRule(){
 if(document.form.tm_device_name.value == "" && document.form.timemachine_enable.value == "1"){
@@ -135,22 +128,22 @@ document.form.submit();
 <table>
 <tr>
 <td>
-<div style="width:450px;font-family:Arial;font-size:13px;font-weight:bolder; margin-top:23px;margin-left:30px;"><#971#> :</div>
+<div style="width:450px;font-family:Arial;font-size:13px;font-weight:bolder; margin-top:23px;margin-left:30px;"><#989#> :</div>
 </td>
 </tr>
 </table>
 <div id="partition_div" class="folder_tree" style="margin-top:15px;height:335px;">
-<#1606#>
+<#1646#>
 </div>
 <div style="background-image:url(images/Tree/bg_02.png);background-repeat:no-repeat;height:90px;margin-top:5px;">
-<input class="button_gen" type="button" style="margin-left:40%;margin-top:18px;" onclick="cancel_folderTree();" value="<#74#>">
+<input class="button_gen" type="button" style="margin-left:40%;margin-top:18px;" onclick="cancel_folderTree();" value="<#75#>">
 </div>
 </div>
 <div id="hiddenMask" class="popup_bg">
 <table cellpadding="5" cellspacing="0" id="dr_sweet_advise" class="dr_sweet_advise" align="center">
 <tr>
 <td>
-<div class="drword" id="drword" style="height:110px;"><#174#> <#171#>...
+<div class="drword" id="drword" style="height:110px;"><#177#> <#174#>...
 <br/>
 <br/>
 </div>
@@ -197,7 +190,7 @@ document.form.submit();
 <table width="730px">
 <tr>
 <td align="left">
-<span class="formfonttitle"><#1884#></span>
+<span class="formfonttitle"><#1930#></span>
 </td>
 <td align="right">
 <img onclick="go_setting('/APP_Installation.asp')" align="right" style="cursor:pointer;position:absolute;margin-left:-20px;margin-top:-30px;" title="Back to USB Extension" src="/images/backprev.png" onMouseOver="this.src='/images/backprevclick.png'" onMouseOut="this.src='/images/backprev.png'">
@@ -213,15 +206,15 @@ document.form.submit();
 <img src="/images/New_ui/USBExt/time_machine_banner.png">
 </td>
 <td>
-1. <#1888#><br>
-2. <#1894#> <br>
-3. <#1896#><br>
-4. <#1886#> ( <a href="http://www.asus.com/support/Knowledge-Detail/11/2/RTAC68U/3FEED048-5AC2-4B97-ABAE-DE609DDBC151/" target="_blank" style="text-decoration:underline;"><#1885#></a> )<br>
-5. <a href="http://www.asus.com/support/Knowledge-Detail/11/2/RTAC68U/25DFAE22-873C-4796-91C4-5CF1F08A2064/" target="_blank" style="text-decoration:underline;"><#1890#></a><br>
+1. <#1934#><br>
+2. <#1940#> <br>
+3. <#1942#><br>
+4. <#1932#> ( <a href="http://www.asus.com/support/Knowledge-Detail/11/2/RTAC68U/3FEED048-5AC2-4B97-ABAE-DE609DDBC151/" target="_blank" style="text-decoration:underline;"><#1931#></a> )<br>
+5. <a href="http://www.asus.com/support/Knowledge-Detail/11/2/RTAC68U/25DFAE22-873C-4796-91C4-5CF1F08A2064/" target="_blank" style="text-decoration:underline;"><#1936#></a><br>
 <span style="color:#FC0">
-* <#1891#> <br>
-* <#1892#> <br>
-* <#1893#>
+* <#1937#> <br>
+* <#1938#> <br>
+* <#1939#>
 </span>
 </td>
 </tr>
@@ -230,11 +223,11 @@ document.form.submit();
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable" style="margin-top:8px">
 <thead>
 <tr>
-<td colspan="2"><#1878#></td>
+<td colspan="2"><#1924#></td>
 </tr>
 </thead>
 <tr>
-<th><#1888#></th>
+<th><#1934#></th>
 <td>
 <div class="left" style="width:94px; float:left; cursor:pointer;" id="radio_timemachine_enable"></div>
 <div class="iphone_switch_container" style="height:32px; width:74px; position: relative; overflow: hidden">
@@ -256,22 +249,22 @@ $("#volSize_tr").fadeOut(300);
 </td>
 </tr>
 <tr id="backupPath_tr">
-<th><#1887#></a></th>
+<th><#1933#></a></th>
 <td>
-<input class="button_gen" onclick="selPartition()" type="button" value="<#471#>"/>
+<input class="button_gen" onclick="selPartition()" type="button" value="<#472#>"/>
 <span id="tmPath" style="font-family: Lucida Console;"></span>
 </td>
 </tr>
 <tr id="volSize_tr">
-<th><#1897#></a></th>
+<th><#1943#></a></th>
 <td>
-<input id="tm_vol_size" name="tm_vol_size" maxlength="5" class="input_6_table" type="text" maxLength="8" value="<% nvram_get("tm_vol_size"); %>" onKeyPress="return validator.isNumber(this,event);" placeholder="0" autocorrect="off" autocapitalize="off"/> GB (0: <#1428#>)
+<input id="tm_vol_size" name="tm_vol_size" maxlength="5" class="input_6_table" type="text" maxLength="8" value="<% nvram_get("tm_vol_size"); %>" onKeyPress="return validator.isNumber(this,event);" placeholder="0" autocorrect="off" autocapitalize="off"/> GB (0: <#1466#>)
 &nbsp;<span id="maxVolSize"></span>
 </td>
 </tr>
 </table>
 <div class="apply_gen">
-<input class="button_gen" onclick="applyRule()" type="button" value="<#72#>"/>
+<input class="button_gen" onclick="applyRule()" type="button" value="<#73#>"/>
 </div>
 </td>
 </tr>

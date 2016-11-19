@@ -7,7 +7,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#533#> - VLAN</title>
+<title><#548#> - VLAN</title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="other.css">
@@ -151,7 +151,7 @@ return false;
 }
 else if(document.form.tDescription.value=="")
 {
-alert("<#137#>");
+alert("<#140#>");
 document.form.tDescription.focus();
 document.form.tDescription.select();
 return false;
@@ -422,7 +422,7 @@ var row = document.getElementById("trVLANRuleListEmpty");
 var td = row.insertCell(-1);
 td.colSpan = 8;
 td.style.color = "#FFCC00";
-htmlcode +='<#1286#>';
+htmlcode +='<#1324#>';
 td.innerHTML = htmlcode;
 $("tDescription").value = "VLAN1";
 }
@@ -522,7 +522,7 @@ configuration. Please go to DHCP setting.</div>
 <th id="thWireless2">Wireless2</th>
 <th>Subnet</th>
 <th>Intranet only</th>
-<th><#1434#></th>
+<th><#1472#></th>
 </tr>
 <tr>
 <td >
@@ -560,7 +560,7 @@ configuration. Please go to DHCP setting.</div>
 </table>
 <div id="divVLANRulelistBlock" style="width:100%"></div>
 <div class="apply_gen">
-<input class="button_gen" onclick="applyRule()" type="button" value="<#72#>"/>
+<input class="button_gen" onclick="applyRule()" type="button" value="<#73#>"/>
 </div>
 </td>
 </tr>

@@ -27,25 +27,25 @@ if(document.getElementsByTagName("body")[0]){
 var htmlCode = "";
 htmlCode += '<div class="QISmain" id="QISmain">';
 htmlCode += '<div id="descTltle"><table width="100%"><tr><td align="left">';
-htmlCode += '<div class="description_down"><#329#></div></td><td align="right"></td></tr></table></div>';
+htmlCode += '<div class="description_down"><#334#></div></td><td align="right"></td></tr></table></div>';
 htmlCode += '<div style="margin:5px;" id="splitLine">';
 htmlCode += '<img style="width: 720px; *width: 710px; height: 2px;" src="/images/New_ui/export/line_export.png"></div>';
 if(sw_mode_submit == "4"){
-htmlCode += "<br><br><br><p style='font-size:20px;line-height: 25px;color:#FC0;' class='QISGeneralFont'>* <#245#> <#244#>";
-htmlCode += "<br><br>* <#246#>";
-htmlCode += "<br><br>* <#247#>";
+htmlCode += "<br><br><br><p style='font-size:20px;line-height: 25px;color:#FC0;' class='QISGeneralFont'>* <#248#> <#247#>";
+htmlCode += "<br><br>* <#249#>";
+htmlCode += "<br><br>* <#250#>";
 }else{
-htmlCode += "<br><br><br><p style='font-size:20px;line-height: 25px;color:#FC0;' class='QISGeneralFont'>* <#249#><br><#250#>";
-htmlCode += "<br><br>* <#88#>";
+htmlCode += "<br><br><br><p style='font-size:20px;line-height: 25px;color:#FC0;' class='QISGeneralFont'>* <#252#><br><#253#>";
+htmlCode += "<br><br>* <#90#>";
 }
 if(sw_mode_submit == "2")
-htmlCode += "<br><br>* <#247#></p>";
+htmlCode += "<br><br>* <#250#></p>";
 else
 htmlCode += "</p>";
 document.getElementsByTagName("body")[0].innerHTML = htmlCode;
 }
 else{
-alert("<#249#> <#250#> <#88#>");
+alert("<#252#> <#253#> <#90#>");
 }
 }
 if(parent.ISMOBILE){

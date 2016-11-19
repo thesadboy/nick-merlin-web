@@ -7,7 +7,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#533#> - VLAN Group</title>
+<title><#548#> - VLAN Group</title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="other.css">
@@ -86,7 +86,7 @@ var row = document.getElementById("trVLANGroupEmpty");
 var td = row.insertCell(-1);
 td.style.color = "#FFCC00";
 td.colSpan = 3;
-htmlcode +='<#1286#>';
+htmlcode +='<#1324#>';
 td.innerHTML = htmlcode;
 $("tdGroupNum").innerHTML = "Lan List";
 }
@@ -114,7 +114,7 @@ function validForm()
 if(!document.form.cbLAN1.checked && !document.form.cbLAN2.checked && !document.form.cbLAN3.checked && !document.form.cbLAN4.checked &&
 !document.form.cbLAN5.checked && !document.form.cbLAN6.checked && !document.form.cbLAN7.checked && !document.form.cbLAN8.checked)
 {
-alert("<#137#>");
+alert("<#140#>");
 return false;
 }
 return true;
@@ -204,7 +204,7 @@ other.</div>
 <tr>
 <th>Group</th>
 <th>LAN</th>
-<th><#1434#></th>
+<th><#1472#></th>
 </tr>
 <tr>
 <td id="tdGroupNum" style="width:10%;">
@@ -225,7 +225,7 @@ other.</div>
 </tr>
 </table>
 <div class="apply_gen">
-<input class="button_gen" onclick="applyRule()" type="button" value="<#72#>"/>
+<input class="button_gen" onclick="applyRule()" type="button" value="<#73#>"/>
 </div>
 </td>
 </tr>

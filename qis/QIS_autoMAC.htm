@@ -25,12 +25,12 @@ var wanauxstate = -1;
 function initial(){
 parent.doAutoMAC();
 parent.set_step("t1");
-$("#string_obj1")[0].innerHTML = "<#282#>";
-$("#string_obj2")[0].innerHTML = "<#280#>";
+$("#string_obj1")[0].innerHTML = "<#285#>";
+$("#string_obj2")[0].innerHTML = "<#283#>";
 setTimeout("start_mac_clone();", 500);
 }
 function start_mac_clone(){
-$("#string_obj2")[0].innerHTML = "<#281#>";
+$("#string_obj2")[0].innerHTML = "<#284#>";
 $.ajax({
 url: '/automac.asp',
 dataType: 'script',
@@ -52,7 +52,7 @@ setTimeout("ajax_detectWAN();", 1000);
 success: function(response){
 if(autodet_state >= 2 && wanstate == 2 && wanauxstate != 1){
 $("#img_obj2")[0].src = "/images/checked_qis.png";
-$("#string_obj2")[0].innerHTML = "<#283#>";
+$("#string_obj2")[0].innerHTML = "<#286#>";
 document.redirectForm.prev_page.value = "/qis/QIS_autoMAC.htm";
 setTimeout("gotoPage('/qis/QIS_detectWAN.htm', 'auto_way_static', 0);", 2000);
 }
@@ -63,7 +63,7 @@ else{
 $("#img_obj2")[0].src = "/images/button-close.gif";
 $("#img_obj2")[0].width = 30;
 $("#img_obj2")[0].height = 30;
-$("#string_obj1")[0].innerHTML = "<#284#>";
+$("#string_obj1")[0].innerHTML = "<#287#>";
 setTimeout("gotoPage('/qis/QIS_resetModem.htm', '', 0);", 2000);
 }
 }
@@ -91,7 +91,7 @@ document.redirectForm.submit();
 <table width="730px">
 <tr>
 <td align="left">
-<div class="description_down"><#57#></div>
+<div class="description_down"><#58#></div>
 </td>
 </tr>
 </table>
@@ -117,8 +117,8 @@ document.redirectForm.submit();
 </tr>
 </table>
 <div id="fresharea" style="display:none">
-<input type="button" class="button_gen" width="72" onclick="gotoPage('/qis/QIS_detect.htm', '', 0);" value="<#433#>">
-<input type="button" class="button_gen" width="72" onclick="parent.location.href='/index.asp';" value="<#80#>">
+<input type="button" class="button_gen" width="72" onclick="gotoPage('/qis/QIS_detect.htm', '', 0);" value="<#434#>">
+<input type="button" class="button_gen" width="72" onclick="parent.location.href='/index.asp';" value="<#82#>">
 </div>
 </div>
 <br/>

@@ -7,7 +7,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#1586#> - <#1600#></title>
+<title><#1626#> - <#1640#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="/device-map/device-map.css">
@@ -43,12 +43,12 @@ setTimeout("showDropdownClientList('setClientIP', 'mac', 'all', 'ClientList_Bloc
 }
 function onSubmitCtrl(o, s) {
 if(document.form.destIP.value == ""){
-alert("<#137#>");
+alert("<#140#>");
 document.form.destIP.focus();
 return false;
 }
 if(check_hwaddr_flag(document.form.destIP) != 0){
-alert("<#131#>");
+alert("<#134#>");
 document.form.destIP.focus();
 return false;
 }
@@ -103,7 +103,7 @@ function showwollist(){
 var code = "";
 code +='<table width="100%" cellspacing="0" cellpadding="4" align="center" class="list_table" id="wollist_table">';
 if(Object.keys(manually_wol_list_array).length == 0)
-code +='<tr><td style="color:#FFCC00;" colspan="6"><#1286#></td></tr>';
+code +='<tr><td style="color:#FFCC00;" colspan="6"><#1324#></td></tr>';
 else{
 var userIconBase64 = "NoIcon";
 var clientName, deviceType, deviceVender;
@@ -126,25 +126,25 @@ deviceVender = "";
 }
 code += '<table style="width:100%;"><tr><td style="width:40%;height:56px;border:0px;float:right;">';
 if(clientList[clientMac] == undefined) {
-code += '<div class="clientIcon type0" onClick="popClientListEditTable(\'' + clientMac + '\', this, \'' + clientName + '\', \'\', \'WOL\')"></div>';
+code += '<div class="clientIcon type0" onClick="popClientListEditTable(&quot;' + clientMac + '&quot;, this, &quot;' + clientName + '&quot;, &quot;&quot;, &quot;WOL&quot;)"></div>';
 }
 else {
 if(usericon_support) {
 userIconBase64 = getUploadIcon(clientMac.replace(/\:/g, ""));
 }
 if(userIconBase64 != "NoIcon") {
-code += '<div style="text-align:center;" onClick="popClientListEditTable(\'' + clientMac + '\', this, \'' + clientName + '\', \'\', \'WOL\')"><img class="imgUserIcon_card" src="' + userIconBase64 + '"></div>';
+code += '<div style="text-align:center;" onClick="popClientListEditTable(&quot;' + clientMac + '&quot;, this, &quot;' + clientName + '&quot;, &quot;&quot;, &quot;WOL&quot;)"><img class="imgUserIcon_card" src="' + userIconBase64 + '"></div>';
 }
 else if(deviceType != "0" || deviceVender == "") {
-code += '<div class="clientIcon type' + deviceType + '" onClick="popClientListEditTable(\'' + clientMac + '\', this, \'' + clientName + '\', \'\', \'WOL\')"></div>';
+code += '<div class="clientIcon type' + deviceType + '" onClick="popClientListEditTable(&quot;' + clientMac + '&quot;, this, &quot;' + clientName + '&quot;, &quot;&quot;, &quot;WOL&quot;)"></div>';
 }
 else if(deviceVender != "" ) {
 var venderIconClassName = getVenderIconClassName(deviceVender.toLowerCase());
 if(venderIconClassName != "" && !downsize_4m_support) {
-code += '<div class="venderIcon ' + venderIconClassName + '" onClick="popClientListEditTable(\'' + clientMac + '\', this, \'' + clientName + '\', \'\', \'WOL\')"></div>';
+code += '<div class="venderIcon ' + venderIconClassName + '" onClick="popClientListEditTable(&quot;' + clientMac + '&quot;, this, &quot;' + clientName + '&quot;, &quot;&quot;, &quot;WOL&quot;)"></div>';
 }
 else {
-code += '<div class="clientIcon type' + deviceType + '" onClick="popClientListEditTable(\'' + clientMac + '\', this, \'' + clientName + '\', \'\', \'WOL\')"></div>';
+code += '<div class="clientIcon type' + deviceType + '" onClick="popClientListEditTable(&quot;' + clientMac + '&quot;, this, &quot;' + clientName + '&quot;, &quot;&quot;, &quot;WOL&quot;)"></div>';
 }
 }
 }
@@ -154,7 +154,7 @@ code += '<div style="font-weight:bold;cursor:pointer;text-decoration:underline;f
 code += '</td></tr></table>';
 code +='</td>';
 code +='<td width="20%">';
-code +='<input class="remove_btn" onclick="del_Row(this, \'' + clientMac + '\');" value=""/></td></tr>';
+code +='<input class="remove_btn" onclick="del_Row(this, &quot;' + clientMac + '&quot;);" value=""/></td></tr>';
 });
 }
 code +='</table>';
@@ -164,11 +164,11 @@ function addRow_Group(upper){
 var rule_num = document.getElementById('wollist_table').rows.length;
 var item_num = document.getElementById('wollist_table').rows[0].cells.length;
 if(rule_num >= upper){
-alert("<#1331#> " + upper + " <#1332#>");
+alert("<#1369#> " + upper + " <#1370#>");
 return false;
 }
 if(document.form.wollist_macAddr.value==""){
-alert("<#137#>");
+alert("<#140#>");
 document.form.wollist_macAddr.focus();
 document.form.wollist_macAddr.select();
 return false;
@@ -180,7 +180,7 @@ return false;
 if(item_num >=2){
 for(i=0; i<rule_num; i++){
 if(manually_wol_list_array[document.form.wollist_macAddr.value] != null){
-alert("<#1325#>");
+alert("<#1363#>");
 document.form.wollist_macAddr.focus();
 document.form.wollist_macAddr.select();
 return false;
@@ -202,7 +202,7 @@ var childsel=document.createElement("div");
 childsel.setAttribute("id","check_mac");
 childsel.style.color="#FFCC00";
 obj.parentNode.appendChild(childsel);
-document.getElementById("check_mac").innerHTML="<#162#>";
+document.getElementById("check_mac").innerHTML="<#165#>";
 document.getElementById("check_mac").style.display = "";
 return false;
 }else if(flag ==2){
@@ -210,7 +210,7 @@ var childsel=document.createElement("div");
 childsel.setAttribute("id","check_mac");
 childsel.style.color="#FFCC00";
 obj.parentNode.appendChild(childsel);
-document.getElementById("check_mac").innerHTML="<#131#>";
+document.getElementById("check_mac").innerHTML="<#134#>";
 document.getElementById("check_mac").style.display = "";
 return false;
 }else{
@@ -251,7 +251,7 @@ var tmp_value = "";
 Object.keys(manually_wol_list_array).forEach(function(key) {
 tmp_value += "<" + manually_wol_list_array[key] + ">" + key;
 });
-if(tmp_value == "<"+"<#1286#>" || tmp_value == "<")
+if(tmp_value == "<"+"<#1324#>" || tmp_value == "<")
 tmp_value = "";
 document.wolform.wollist.value = tmp_value;
 showLoading();
@@ -291,16 +291,16 @@ document.wolform.submit();
 <tr>
 <td bgcolor="#4D595D" colspan="3" valign="top">
 <div>&nbsp;</div>
-<div class="formfonttitle"><#1586#> - <#1600#></div>
+<div class="formfonttitle"><#1626#> - <#1640#></div>
 <div style="margin-left:5px;margin-top:10px;margin-bottom:10px"><img src="/images/New_ui/export/line_export.png"></div>
-<div class="formfontdesc"><#1816#></div>
-<div class="formfontdesc"><#1817#></div>
+<div class="formfontdesc"><#1858#></div>
+<div class="formfontdesc"><#1859#></div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <tr>
-<th width="20%"><#1598#></th>
+<th width="20%"><#1638#></th>
 <td>
 <input type="text" class="input_20_table" maxlength="17" name="destIP" value="" placeholder="ex: <% nvram_get("lan_hwaddr"); %>" onKeyPress="return validator.isHWAddr(this,event);" autocorrect="off" autocapitalize="off">
-<input class="button_gen" id="cmdBtn" onClick="onSubmitCtrl(this, ' Refresh ')" type="button" value="<#1601#>">
+<input class="button_gen" id="cmdBtn" onClick="onSubmitCtrl(this, ' Refresh ')" type="button" value="<#1641#>">
 <img id="loadingIcon" style="display:none;" src="/images/InternetScan.gif"></span>
 </td>
 </tr>
@@ -308,17 +308,17 @@ document.wolform.submit();
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable_table" style="margin-top:8px;">
 <thead>
 <tr>
-<td colspan="2" id="GWStatic"><#1594#>&nbsp;(<#1435#>&nbsp;32)</td>
+<td colspan="2" id="GWStatic"><#1634#>&nbsp;(<#1473#>&nbsp;32)</td>
 </tr>
 </thead>
 <tr>
 <th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,10);">Client Name (MAC address)</a></th>
-<th><#1434#></th>
+<th><#1472#></th>
 </tr>
 <tr>
 <td width="80%">
 <input type="text" class="input_20_table" maxlength="17" name="wollist_macAddr" onClick="hideClients_Block();" autocorrect="off" autocapitalize="off" style="margin-left:-12px;width:255px;" onKeyPress="return validator.isHWAddr(this,event)" placeholder="ex: <% nvram_get("lan_hwaddr"); %>">
-<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" style="position:absolute;*margin-left:-3px;*margin-top:1px;" onclick="pullLANIPList(this);" title="<#1766#>">
+<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" style="position:absolute;*margin-left:-3px;*margin-top:1px;" onclick="pullLANIPList(this);" title="<#1808#>">
 <div id="ClientList_Block_PC" class="clientlist_dropdown"></div>
 </td>
 <td width="20%">
@@ -330,7 +330,7 @@ document.wolform.submit();
 </table>
 <div id="wollist_Block"></div>
 <div class="apply_gen">
-<input type="button" name="button" class="button_gen" onclick="applyRule();" value="<#72#>"/>
+<input type="button" name="button" class="button_gen" onclick="applyRule();" value="<#73#>"/>
 </div>
 </td>
 </tr>

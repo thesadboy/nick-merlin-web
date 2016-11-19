@@ -21,7 +21,7 @@ var from_page = '<% get_parameter("prev_page"); %>';
 var original_switch_wantag = '<% nvram_get("switch_wantag"); %>';
 <% wan_get_parameter(); %>
 function QKInternet_load_body(){
-parent.document.title = "<#533#> - <#456#>";
+parent.document.title = "<#548#> - <#457#>";
 if(parent.ISMOBILE){
 parent.set_step("internet_type");
 hideObjs();
@@ -62,7 +62,7 @@ blocking_m("dns_sec_m", true);
 blocking_m("DNSDiv", true);
 blocking_m("showserver_m", false);
 blocking_m("showhwaddr_m", true);
-document.getElementById("dns_info_title_m").innerHTML = "<#271#>";
+document.getElementById("dns_info_title_m").innerHTML = "<#274#>";
 document.form.wan_dnsenable_x[0].checked = 0;
 document.form.wan_dnsenable_x[1].checked = 1;
 document.form.prev_page.value = "QIS_internet_type.htm";
@@ -91,11 +91,11 @@ parent.set_step("t2");
 hideLinkTag();
 flash_button();
 if(now_flag.length <= 0)
-showtext(document.getElementById("page_title"), "<#453#>");
-else if(DHCPClient == "1")
-showtext(document.getElementById("page_title"), "<#455#>");
-else // if(DHCPClient == "0")
 showtext(document.getElementById("page_title"), "<#454#>");
+else if(DHCPClient == "1")
+showtext(document.getElementById("page_title"), "<#456#>");
+else // if(DHCPClient == "0")
+showtext(document.getElementById("page_title"), "<#455#>");
 if(now_flag == "auto_way_vpn" && from_page == "start_apply.htm")
 now_flag = "auto_way";
 get_value_from_parent();
@@ -125,7 +125,7 @@ document.form.prev_page.value = "QIS_internet_account.htm";
 else if(document.form.wan_proto.value == "static"){
 document.getElementById("dhcp_info_radio").style.display = "none";
 blocking("showip", true);
-document.getElementById("dns_info_title").innerHTML = "<#271#>";
+document.getElementById("dns_info_title").innerHTML = "<#274#>";
 document.getElementById("dns_info_radio").style.display = "none";
 blocking("dns_sec", true);
 blocking("showserver", false);
@@ -308,10 +308,10 @@ return true;
 if(document.form.vpn_enable[1].checked)
 return false;
 if(DHCPClient == "1")
-str += "<#455#>";
+str += "<#456#>";
 else
-str += "<#454#>";
-str += "\n\n<#343#>";
+str += "<#455#>";
+str += "\n\n<#348#>";
 if(confirm(str))
 return true;
 else
@@ -416,7 +416,7 @@ return true;
 if(ip_num > A_class_start && ip_num < A_class_end)
 return true;
 else if(ip_num > B_class_start && ip_num < B_class_end){
-alert(ip_obj.value+" <#146#>");
+alert(ip_obj.value+" <#149#>");
 ip_obj.focus();
 ip_obj.select();
 return false;
@@ -424,7 +424,7 @@ return false;
 else if(ip_num > C_class_start && ip_num < C_class_end)
 return true;
 else{
-alert(ip_obj.value+" <#146#>");
+alert(ip_obj.value+" <#149#>");
 ip_obj.focus();
 ip_obj.select();
 return false;
@@ -448,7 +448,7 @@ return true;
 if(ip_num > A_class_start && ip_num < A_class_end)
 return true;
 else if(ip_num > B_class_start && ip_num < B_class_end){
-alert(ip_obj.value+" <#146#>");
+alert(ip_obj.value+" <#149#>");
 ip_obj.focus();
 ip_obj.select();
 return false;
@@ -456,7 +456,7 @@ return false;
 else if(ip_num > C_class_start && ip_num < C_class_end)
 return true;
 else{
-alert(ip_obj.value+" <#146#>");
+alert(ip_obj.value+" <#149#>");
 ip_obj.focus();
 ip_obj.select();
 return false;
@@ -467,7 +467,7 @@ if(document.form.wan_dhcpenable_x != null && document.form.wan_dhcpenable_x[0].c
 if(!valid_IP(document.form.wan_ipaddr_x, "")) return false; //WAN IP
 if(!valid_IP(document.form.wan_gateway_x, "GW"))return false; //Gateway IP
 if(document.form.wan_gateway_x.value == document.form.wan_ipaddr_x.value){
-alert("<#120#>");
+alert("<#123#>");
 document.form.wan_ipaddr_x.focus();
 document.form.wan_ipaddr_x.select();
 return false;
@@ -492,7 +492,7 @@ break;
 }
 }
 if(wrong_netmask == 1){
-alert(netmask_obj.value+" <#146#>");
+alert(netmask_obj.value+" <#149#>");
 netmask_obj.value = default_netmask;
 netmask_obj.focus();
 netmask_obj.select();
@@ -506,7 +506,7 @@ if(document.form.wan_dnsenable_x != null && !document.form.wan_dnsenable_x[0].ch
 if(document.form.wan_dns1_x.value.length <= 0 && document.form.wan_dns2_x.value.length <= 0){
 document.form.wan_dns1_x.focus();
 document.form.wan_dns1_x.select();
-alert("<#137#>");
+alert("<#140#>");
 document.getElementById("wan_dns1_x_div").style.border = "2px solid #CE1E1E";
 return false;
 }
@@ -571,7 +571,7 @@ return false;
 if((now_flag != "auto_way_static" && now_flag != "auto_way")
 && (document.form.wan_proto.value == "pptp" || document.form.wan_proto.value == "l2tp")){
 if(document.form.wan_heartbeat_x.value.length <= 0){
-alert("<#342#>");
+alert("<#347#>");
 document.form.wan_heartbeat_x.focus();
 document.form.wan_heartbeat_x.select();
 changeiuiBackground(0);
@@ -600,7 +600,12 @@ document.form.wan_dns2_x.disabled = false;
 }
 remove_red_field();
 if(validForm() == true){
+if(parent.flag_manual == 1){
+document.form.action_wait.value = 0;
+}
+else{
 simple_showLoading();
+}
 document.form.wan_dhcpenable_x[0].disabled = 0;
 document.form.wan_dhcpenable_x[1].disabled = 0;
 document.form.wan_ipaddr_x.disabled = 0;
@@ -662,7 +667,7 @@ var childsel=document.createElement("div");
 childsel.setAttribute("id","check_mac");
 childsel.style.color="#FFCC00";
 obj.parentNode.appendChild(childsel);
-document.getElementById("check_mac").innerHTML="<#162#>";
+document.getElementById("check_mac").innerHTML="<#165#>";
 document.getElementById("check_mac").style.display = "";
 return false;
 }else if(flag == 2){
@@ -670,7 +675,7 @@ var childsel=document.createElement("div");
 childsel.setAttribute("id","check_mac");
 childsel.style.color="#FFCC00";
 obj.parentNode.appendChild(childsel);
-document.getElementById("check_mac").innerHTML="<#131#>";
+document.getElementById("check_mac").innerHTML="<#134#>";
 document.getElementById("check_mac").style.display = "";
 return false;
 }else{
@@ -788,20 +793,20 @@ document.form.wan_dns2_x.disabled = false;
 <table id="heartbeat_server" class="QISform" width="400" border=0 align="center" cellpadding="5" cellspacing="0" style="display:none;">
 <tr>
 <th width="190">
-<span onmouseout="return nd();" onclick="overlib('<#53#>');" style="cursor:help;"><#54#><img align="right" style="cursor:pointer;margin-top:-14px\9;" src="/images/New_ui/helpicon.png"></span>
+<span onmouseout="return nd();" onclick="overlib('<#54#>');" style="cursor:help;"><#55#><img align="right" style="cursor:pointer;margin-top:-14px\9;" src="/images/New_ui/helpicon.png"></span>
 </th>
-<td class="QISformtd"> <input type="text" name="wan_heartbeat_x" value="" tabindex="10" size="36" maxlength="64" title="<#54#>" class="input_32_table" disabled autocorrect="off" autocapitalize="off">
+<td class="QISformtd"> <input type="text" name="wan_heartbeat_x" value="" tabindex="10" size="36" maxlength="64" title="<#55#>" class="input_32_table" disabled autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 </table>
 <table id="vpn_enable_block" class="QISform" width="400" border=0 align="center" cellpadding="5" cellspacing="0" style="display:none;">
 <tr>
 <th width="190">
-<span onmouseout="return nd();" onclick="overlib('<#53#>');" style="cursor:help;"><#332#><img align="right" style="cursor:pointer;margin-top:-14px\9;" src="/images/New_ui/helpicon.png"></span>
+<span onmouseout="return nd();" onclick="overlib('<#54#>');" style="cursor:help;"><#337#><img align="right" style="cursor:pointer;margin-top:-14px\9;" src="/images/New_ui/helpicon.png"></span>
 </th>
 <td class="QISformtd">
-<input type="radio" name="vpn_enable" value="1" tabindex="11" onclick="show_next_button();" class="input"><#65#>
-<input type="radio" name="vpn_enable" value="0" tabindex="12" onclick="show_next_button();" class="input"><#64#>
+<input type="radio" name="vpn_enable" value="1" tabindex="11" onclick="show_next_button();" class="input"><#66#>
+<input type="radio" name="vpn_enable" value="0" tabindex="12" onclick="show_next_button();" class="input"><#65#>
 </td>
 </tr>
 </table>
@@ -810,16 +815,16 @@ document.form.wan_dns2_x.disabled = false;
 <div id="showip" style="display:none">
 <fieldset>
 <legend>
-<#169#>
+<#172#>
 <span id="dhcp_info_radio">
-<input type="radio" name="wan_dhcpenable_x" class="input" value="0" tabindex="1" onclick="show_dhcpenable(this.value);"><#65#>
-<input type="radio" name="wan_dhcpenable_x" class="input" value="1" tabindex="2" onclick="show_dhcpenable(this.value);"><#64#>
+<input type="radio" name="wan_dhcpenable_x" class="input" value="0" tabindex="1" onclick="show_dhcpenable(this.value);"><#66#>
+<input type="radio" name="wan_dhcpenable_x" class="input" value="1" tabindex="2" onclick="show_dhcpenable(this.value);"><#65#>
 </span>
 </legend>
 <table id="tblsetting_2" class="QISform" width="400" border="0" align="center" cellpadding="3" cellspacing="0">
 <tr>
 <th width="190">
-<span onmouseout="return nd();" onclick="overlib('<#118#>');" style="cursor:help;"><#119#><img align="right" style="cursor:pointer;margin-top:-14px\9;" src="/images/New_ui/helpicon.png"></span>
+<span onmouseout="return nd();" onclick="overlib('<#121#>');" style="cursor:help;"><#122#><img align="right" style="cursor:pointer;margin-top:-14px\9;" src="/images/New_ui/helpicon.png"></span>
 </th>
 <td class="QISformtd">
 <input type="text" name="wan_ipaddr_x" value="<% nvram_get("wan_ipaddr_x"); %>" tabindex="3" onClick="clean_input(this)" onkeypress="return validator.isIPAddr(this, event);" size="36" maxlength="15" class="input_20_table" autocorrect="off" autocapitalize="off"/>
@@ -837,7 +842,7 @@ onpaste="return !clipboardData.getData('text').match(/\D/)" ondragenter="return 
 </tr>
 <tr>
 <th width="190">
-<span onmouseout="return nd();" onclick="overlib('<#129#>');" style="cursor:help;"><#130#><img align="right" style="cursor:pointer;margin-top:-14px\9;" src="/images/New_ui/helpicon.png"></span>
+<span onmouseout="return nd();" onclick="overlib('<#132#>');" style="cursor:help;"><#133#><img align="right" style="cursor:pointer;margin-top:-14px\9;" src="/images/New_ui/helpicon.png"></span>
 </th>
 <td class="QISformtd">
 <input type="text" name="wan_netmask_x" value="<% nvram_get("wan_netmask_x"); %>" tabindex="4" onClick="clean_input(this)" onkeypress="return validator.isIPAddr(this, event);" size="36" maxlength="15" class="input_20_table" autocorrect="off" autocapitalize="off"/>
@@ -855,7 +860,7 @@ onpaste="return !clipboardData.getData('text').match(/\D/)" ondragenter="return 
 </tr>
 <tr>
 <th>
-<span onmouseout="return nd();" onclick="overlib('<#127#>');" style="cursor:help;"><#128#><img align="right" style="cursor:pointer;margin-top:-14px\9;" src="/images/New_ui/helpicon.png"></span>
+<span onmouseout="return nd();" onclick="overlib('<#130#>');" style="cursor:help;"><#131#><img align="right" style="cursor:pointer;margin-top:-14px\9;" src="/images/New_ui/helpicon.png"></span>
 </th>
 <td class="QISformtd">
 <input type="text" name="wan_gateway_x" value="<% nvram_get("wan_gateway_x"); %>" tabindex="5" onClick="clean_input(this)" onkeypress="return validator.isIPAddr(this, event);" size="36" maxlength="15" class="input_20_table" autocorrect="off" autocapitalize="off"/>
@@ -877,16 +882,16 @@ onpaste="return !clipboardData.getData('text').match(/\D/)" ondragenter="return 
 <div id="dns_sec" style="display:none">
 <fieldset>
 <legend>
-<span id="dns_info_title"><#126#></span>
+<span id="dns_info_title"><#129#></span>
 <span id="dns_info_radio">
-<input type="radio" name="wan_dnsenable_x" value="1" onclick="show_dnsenable(this.value);" tabindex="6" class="input"><#65#>
-<input type="radio" name="wan_dnsenable_x" value="0" onclick="show_dnsenable(this.value);" tabindex="7" class="input"><#64#>
+<input type="radio" name="wan_dnsenable_x" value="1" onclick="show_dnsenable(this.value);" tabindex="6" class="input"><#66#>
+<input type="radio" name="wan_dnsenable_x" value="0" onclick="show_dnsenable(this.value);" tabindex="7" class="input"><#65#>
 </span>
 </legend>
 <table id="tblsetting_4" class="QISform" width="400" border=0 align="center" cellpadding="5" cellspacing="0">
 <tr>
 <th width="190">
-<span onmouseout="return nd();" onclick="overlib('<#121#>');" style="cursor:help;"><#122#><img align="right" style="cursor:pointer;margin-top:-14px\9;" src="/images/New_ui/helpicon.png"></span>
+<span onmouseout="return nd();" onclick="overlib('<#124#>');" style="cursor:help;"><#125#><img align="right" style="cursor:pointer;margin-top:-14px\9;" src="/images/New_ui/helpicon.png"></span>
 </th>
 <td class="QISformtd">
 <input type="text" name="wan_dns1_x" value="<% nvram_get("wan_dns1_x"); %>" tabindex="8" onkeypress="return validator.isIPAddr(this, event);" size="36" maxlength="15" class="input_20_table" autocorrect="off" autocapitalize="off"/>
@@ -904,7 +909,7 @@ onpaste="return !clipboardData.getData('text').match(/\D/)" ondragenter="return 
 </tr>
 <tr>
 <th width="190">
-<span onmouseout="return nd();" onclick="overlib('<#123#>');" style="cursor:help;"><#124#><img align="right" style="cursor:pointer;margin-top:-14px\9;" src="/images/New_ui/helpicon.png"></span>
+<span onmouseout="return nd();" onclick="overlib('<#126#>');" style="cursor:help;"><#127#><img align="right" style="cursor:pointer;margin-top:-14px\9;" src="/images/New_ui/helpicon.png"></span>
 </th>
 <td class="QISformtd">
 <input type="text" name="wan_dns2_x" value="<% nvram_get("wan_dns2_x"); %>" tabindex="9" onkeypress="return validator.isIPAddr(this, event);" size="36" maxlength="15" class="input_20_table" autocorrect="off" autocapitalize="off"/>
@@ -927,48 +932,48 @@ onpaste="return !clipboardData.getData('text').match(/\D/)" ondragenter="return 
 <table id="heartbeat_server" class="QISform" width="400" border=0 align="center" cellpadding="5" cellspacing="0">
 <tr>
 <th width="190">
-<div onmouseout="return nd();" onclick="overlib('<#270#>', FIXX, 285, FIXY,50);" style="white-space:normal;cursor:help;"><#56#><img align="right" style="cursor:pointer;margin-top:-14px \9;" src="/images/New_ui/helpicon.png"></div>
+<div onmouseout="return nd();" onclick="overlib('<#273#>', FIXX, 285, FIXY,50);" style="white-space:normal;cursor:help;"><#57#><img align="right" style="cursor:pointer;margin-top:-14px \9;" src="/images/New_ui/helpicon.png"></div>
 </th>
 <td class="QISformtd">
 <input type="text" name="wan_hwaddr_x" tabindex="13" onkeypress="return validator.isHWAddr(this,event);" style="height:25px;" class="input_20_table" size="36" maxlength="17" value="" autocorrect="off" autocapitalize="off">
-<input type="button" class="button_gen_long" tabindex="14" onclick="showMAC();" value="<#57#>">
+<input type="button" class="button_gen_long" tabindex="14" onclick="showMAC();" value="<#58#>">
 </td>
 </tr>
 </table>
 </fieldset>
 </div>
 <div class="apply_gen" style="margin-top:30px">
-<input type="button" id="prevButton" value="<#78#>" tabindex="16" onclick="gotoprev(document.form);" class="button_gen">
-<input type="submit" id="nextButton" value="<#77#>" tabindex="15" class="button_gen">
-<span id="loadHint" style="display:none"><#469#></span>
+<input type="button" id="prevButton" value="<#80#>" tabindex="16" onclick="gotoprev(document.form);" class="button_gen">
+<input type="submit" id="nextButton" value="<#79#>" tabindex="15" class="button_gen">
+<span id="loadHint" style="display:none"><#470#></span>
 <img id="loadingIcon" style="display:none;" src="/images/InternetScan.gif"></span>
 </div>
 </div>
 <div style="display:none;" id="QISmain_m">
 <div id="showip_m">
-<span class="itemTitle"><#169#></span>
+<span class="itemTitle"><#172#></span>
 <fieldset>
 <div id="dhcp_info_radio_m">
 <div class="row">
 <label><#40#></label>
 <div id="toggleWANIP" class="toggle" onclick="displayLANIPCtrl();" toggled="true">
 <span class="thumb"></span>
-<span class="toggleOn"><#65#></span>
-<span class="toggleOff"><#64#></span>
+<span class="toggleOn"><#66#></span>
+<span class="toggleOff"><#65#></span>
 </div>
 </div>
 </div>
 <div id="WANIPDiv">
 <div class="row">
-<label><#119#></label>
+<label><#122#></label>
 <input type="text" name="wan_ipaddr_x_m" placeholder="" maxlength="15" value="" autocorrect="off" autocapitalize="off"/>
 </div>
 <div class="row">
-<label><#130#></label>
+<label><#133#></label>
 <input type="text" name="wan_netmask_x_m" placeholder="" maxlength="15" value="" autocorrect="off" autocapitalize="off"/>
 </div>
 <div class="row_end">
-<label><#128#></label>
+<label><#131#></label>
 <input type="text" name="wan_gateway_x_m" placeholder="" maxlength="15" value="" autocorrect="off" autocapitalize="off"/>
 </div>
 </div>
@@ -976,23 +981,23 @@ onpaste="return !clipboardData.getData('text').match(/\D/)" ondragenter="return 
 <br />
 </div>
 <div id="dns_sec_m" style="display:none">
-<span class="itemTitle" id="dns_info_title_m"><#126#></span>
+<span class="itemTitle" id="dns_info_title_m"><#129#></span>
 <fieldset>
 <div class="row" id="dns_info_radio_m">
 <label><#40#></label>
 <div id="toggleDNS" class="toggle" onclick="displayDNSCtrl();" toggled="true">
 <span class="thumb"></span>
-<span class="toggleOn"><#65#></span>
-<span class="toggleOff"><#64#></span>
+<span class="toggleOn"><#66#></span>
+<span class="toggleOff"><#65#></span>
 </div>
 </div>
 <div id="DNSDiv">
 <div class="row">
-<label><#122#></label>
+<label><#125#></label>
 <input type="text" name="wan_dns1_x_m" placeholder="" maxlength="15" value="" autocorrect="off" autocapitalize="off"/>
 </div>
 <div class="row_end">
-<label><#124#></label>
+<label><#127#></label>
 <input type="text" name="wan_dns2_x_m" placeholder="" maxlength="15" value="" autocorrect="off" autocapitalize="off"/>
 </div>
 </div>
@@ -1002,7 +1007,7 @@ onpaste="return !clipboardData.getData('text').match(/\D/)" ondragenter="return 
 <div id="showserver_m" style="display:none">
 <fieldset>
 <div class="row_end">
-<label><#54#></label>
+<label><#55#></label>
 <input type="text" name="wan_heartbeat_x_m" onkeypress="" placeholder="" maxlength="64" value="" autocorrect="off" autocapitalize="off"/>
 </div>
 </fieldset>
@@ -1011,7 +1016,7 @@ onpaste="return !clipboardData.getData('text').match(/\D/)" ondragenter="return 
 <div id="showhwaddr_m" style="display:none">
 <fieldset>
 <div class="row_end">
-<label><#56#></label>
+<label><#57#></label>
 <input type="text" name="wan_hwaddr_x_m" onkeypress="return validator.isHWAddr(this,event);" placeholder="" maxlength="17" value="" autocorrect="off" autocapitalize="off"/>
 </div>
 </fieldset>
@@ -1019,7 +1024,7 @@ onpaste="return !clipboardData.getData('text').match(/\D/)" ondragenter="return 
 </div>
 <fieldset class="theFieldset" id="theFieldset">
 <div class="row_end">
-<a id="loadingIcon_iui" class="iuiA" onclick="changeiuiBackground(1);submitForm();"><#77#></a>
+<a id="loadingIcon_iui" class="iuiA" onclick="changeiuiBackground(1);submitForm();"><#79#></a>
 </div>
 </fieldset>
 </div>

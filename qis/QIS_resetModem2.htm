@@ -9,6 +9,7 @@
 <script type="text/JavaScript" src="/js/jquery.js"></script>
 <script type="text/javascript">
 var now_flag = '<% get_parameter("flag"); %>';
+var odmpid = '<% nvram_get("odmpid"); %>';
 function initial(){
 if(parent.ISMOBILE){
 parent.set_step("internet_type");
@@ -20,6 +21,8 @@ else{
 parent.set_step("t1");
 document.getElementById("go_detect").focus();
 }
+if(odmpid == "RT-AC66U_B1")
+document.getElementById("modem_plug_img").src = "/images/RT-AC66U_V2/modem_plug.png";
 parent.doResetModem();
 }
 function gotoPage(dst_url, flag, isParent){
@@ -54,37 +57,37 @@ return true;
 <table width="730px">
 <tr>
 <td align="left">
-<div class="description_down"><#354#></div>
+<div class="description_down"><#359#></div>
 </td>
 </tr>
 </table>
 </div>
 <div style="margin:5px;" id="splitLine"><img style="width: 720px; *width: 710px; height: 2px;" src="/images/New_ui/export/line_export.png"></div>
 </div>
-<p class="QISGeneralFont"><#355#></p>
-<p class="QISGeneralFont"><#356#></p>
+<p class="QISGeneralFont"><#360#></p>
+<p class="QISGeneralFont"><#361#></p>
 <table id="tblsetting_1" class="QISform" width="400" border=0 align="center" cellpadding="5" cellspacing="0">
 <tr>
 <td align="center" colspan="2">
-<br/><br/><img src="/images/modem_plug.png"></span>
+<br/><br/><img id="modem_plug_img" src="/images/modem_plug.png"></span>
 </td>
 </tr>
 </table>
 <br/>
 <div class="apply_gen">
 <div id="fresharea">
-<input type="button" id="go_detect" class="button_gen_long" onclick="gotoPage('/qis/QIS_verify_detect.htm', 'resetModem', 0);" value="<#433#>">
+<input type="button" id="go_detect" class="button_gen_long" onclick="gotoPage('/qis/QIS_verify_detect.htm', 'resetModem', 0);" value="<#434#>">
 </div>
 </div>
 </div>
 </div>
 <div id="QISmain_m" style="display:none;">
-<div><#354#></div><br>
-<div><#355#></div><br>
-<div><#356#></div><br>
+<div><#359#></div><br>
+<div><#360#></div><br>
+<div><#361#></div><br>
 <fieldset class="theFieldset">
 <div class="row_end">
-<a class="iuiA" onclick="gotoPage('/qis/QIS_verify_detect.htm', 'resetModem', 0);"><#77#></a>
+<a class="iuiA" onclick="gotoPage('/qis/QIS_verify_detect.htm', 'resetModem', 0);"><#79#></a>
 </div>
 </fieldset>
 </div>

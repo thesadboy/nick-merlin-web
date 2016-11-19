@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
-<title><#533#> - <#*** not_found_dict : menu5_8_3***#></title>
+<title><#548#> - <#*** not_found_dict : menu5_8_3***#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="tmmenu.css">
@@ -61,10 +61,10 @@ rows = 0;
 block = '';
 gn = 0;
 grid = '<table width="730px" class="FormTable_NWM">';
-grid += "<tr><th style=\"height:30px;\"><#892#></th>";
-grid += "<th><#1898#></th>";
-grid += "<th><#1905#></th>";
-grid += "<th><#1908#></th></tr>";
+grid += "<tr><th style=\"height:30px;\"><#910#></th>";
+grid += "<th><#1944#></th>";
+grid += "<th><#1951#></th>";
+grid += "<th><#1954#></th></tr>";
 for (i = 0; i < monthly_history.length-1; ++i) {
 h = monthly_history[i];
 yr = (((h[0] >> 16) & 0xFF) + 1900);
@@ -73,7 +73,7 @@ grid += makeRow(((rows & 1) ? 'odd' : 'even'), ymText(yr, mo), rescale(h[1]), re
 ++rows;
 }
 if(rows == 0)
-grid +='<tr><td style="color:#FFCC00;" colspan="4"><#1286#></td></tr>';
+grid +='<tr><td style="color:#FFCC00;" colspan="4"><#1324#></td></tr>';
 E('bwm-monthly-grid').innerHTML = grid + '</table>';
 }
 function init()
@@ -84,11 +84,11 @@ selGroup = E('page_select');
 optGroup = document.createElement('OPTGROUP');
 optGroup.label = "Per device";
 opt = document.createElement('option');
-opt.innerHTML = "<#1467#>";
+opt.innerHTML = "<#1505#>";
 opt.value = "5";
 optGroup.appendChild(opt);
 opt = document.createElement('option');
-opt.innerHTML = "<#1469#>";
+opt.innerHTML = "<#1507#>";
 opt.value = "6";
 optGroup.appendChild(opt);
 opt = document.createElement('option');
@@ -160,28 +160,28 @@ return false;
 <tr><td><table width="100%" >
 <tr>
 <td class="formfonttitle" align="left">
-<div style="margin-top:5px;"><#180#> - <#493#></div>
+<div style="margin-top:5px;"><#183#> - <#494#></div>
 </td>
 <td>
 <div align="right">
 <select id="page_select" class="input_option" style="width:120px" onchange="switchPage(this.options[this.selectedIndex].value)">
-<!--option><#1861#></option-->
+<!--option><#1907#></option-->
 <optgroup label="Global">
-<option value="1"><#1467#></option>
-<option value="2"><#1468#></option>
-<option value="3"><#1469#></option>
+<option value="1"><#1505#></option>
+<option value="2"><#1506#></option>
+<option value="3"><#1507#></option>
 <option value="4" selected>Monthly</option>
 </optgroup>
 </select>&nbsp;&nbsp;&nbsp;
 <select class="input_option" style="width:100px" onchange='changeDate(this, "ym")' id='dafm'>
-<option value=0><#892#>:</option>
+<option value=0><#910#>:</option>
 <option value=0>yyyy-mm</option>
 <option value=1>mm-yyyy</option>
 <option value=2>mmm yyyy</option>
 <option value=3>mm.yyyy</option>
 </select>
 <select style="width:80px" class="input_option" onchange='changeScale(this)' id='scale'>
-<option value=0><#1759#>:</option>
+<option value=0><#1801#>:</option>
 <option value=0>KB</option>
 <option value=1>MB</option>
 <option value=2 selected>GB</option>

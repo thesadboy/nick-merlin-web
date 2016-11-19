@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#533#> - <#1466#></title>
+<title><#548#> - AiCloud 2.0</title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="app_installation.css">
@@ -99,12 +99,12 @@ aicloud_url += '<% nvram_get("lan_ipaddr"); %>';
 if(https_port != 443){
 aicloud_url += ":" + https_port;
 }
-document.getElementById("accessMethod").innerHTML = "<#608#> <a id=\"cloud_url\" style=\"font-weight: bolder;text-decoration: underline;\" href=\"" + aicloud_url + "\" target=\"_blank\">" + aicloud_url + "</a>";
+document.getElementById("accessMethod").innerHTML = "<#624#> <a id=\"cloud_url\" style=\"font-weight: bolder;text-decoration: underline;\" href=\"" + aicloud_url + "\" target=\"_blank\">" + aicloud_url + "</a>";
 /*
 if(https_port == 443)
-document.getElementById("accessMethod").innerHTML = "<#608#> <a id=\"cloud_url\" style=\"font-weight: bolder;text-decoration: underline;\" href=\"https://router.asus.com\" target=\"_blank\">https://router.asus.com</a>";
+document.getElementById("accessMethod").innerHTML = "<#624#> <a id=\"cloud_url\" style=\"font-weight: bolder;text-decoration: underline;\" href=\"https://router.asus.com\" target=\"_blank\">https://router.asus.com</a>";
 else{
-document.getElementById("accessMethod").innerHTML = "<#608#> <a id=\"cloud_url\" style=\"font-weight: bolder;text-decoration: underline;\" href=\"https://router.asus.com\" target=\"_blank\">https://router.asus.com</a>";
+document.getElementById("accessMethod").innerHTML = "<#624#> <a id=\"cloud_url\" style=\"font-weight: bolder;text-decoration: underline;\" href=\"https://router.asus.com\" target=\"_blank\">https://router.asus.com</a>";
 document.getElementById('cloud_url').href = "https://"+ theUrl +":" + https_port;
 document.getElementById('cloud_url').innerHTML = "https://"+ theUrl +":" + https_port;
 }
@@ -114,16 +114,16 @@ break;
 case 1:
 if('<% nvram_get("ddns_enable_x"); %>' == '1' && ddns_hostname != ''){
 if(https_port == 443) // if the port number of https is 443, hide it
-document.getElementById("accessMethod").innerHTML = "<#608#> <a style=\"font-weight: bolder;text-decoration: underline;word-break:break-all;\" href=\"https://"+ ddns_hostname + ":"+ https_port +"\" target=\"_blank\">https://"+ ddns_hostname +"</a><br />";
+document.getElementById("accessMethod").innerHTML = "<#624#> <a style=\"font-weight: bolder;text-decoration: underline;word-break:break-all;\" href=\"https://"+ ddns_hostname + ":"+ https_port +"\" target=\"_blank\">https://"+ ddns_hostname +"</a><br />";
 else
-document.getElementById("accessMethod").innerHTML = "<#608#> <a style=\"font-weight: bolder;text-decoration: underline;word-break:break-all;\" href=\"https://"+ ddns_hostname + ":"+ https_port +"\" target=\"_blank\">https://"+ ddns_hostname +":"+ https_port +"</a><br />";
+document.getElementById("accessMethod").innerHTML = "<#624#> <a style=\"font-weight: bolder;text-decoration: underline;word-break:break-all;\" href=\"https://"+ ddns_hostname + ":"+ https_port +"\" target=\"_blank\">https://"+ ddns_hostname +":"+ https_port +"</a><br />";
 document.getElementById("accessMethod").innerHTML += "To modify the ddns name, please click <a style=\"font-weight: bolder;text-decoration: underline;\" href=\"/Advanced_ASUSDDNS_Content.asp?af=DDNSName\" target=\"_blank\">here</a>.";
 }
 else{
 if(https_port == 443) // if the port number of https is 443, hide it
-document.getElementById("accessMethod").innerHTML = "<#608#> <a id=\"cloud_url\" style=\"font-weight: bolder;text-decoration: underline;\" href=\"https://router.asus.com\" target=\"_blank\">https://router.asus.com</a>";
+document.getElementById("accessMethod").innerHTML = "<#624#> <a id=\"cloud_url\" style=\"font-weight: bolder;text-decoration: underline;\" href=\"https://router.asus.com\" target=\"_blank\">https://router.asus.com</a>";
 else{
-document.getElementById("accessMethod").innerHTML = "<#608#> <a id=\"cloud_url\" style=\"font-weight: bolder;text-decoration: underline;\" href=\"https://router.asus.com\" target=\"_blank\">https://router.asus.com</a>";
+document.getElementById("accessMethod").innerHTML = "<#624#> <a id=\"cloud_url\" style=\"font-weight: bolder;text-decoration: underline;\" href=\"https://router.asus.com\" target=\"_blank\">https://router.asus.com</a>";
 document.getElementById('cloud_url').href = "https://"+ theUrl +":" + https_port;
 document.getElementById('cloud_url').innerHTML = "https://"+ theUrl +":" + https_port;
 }
@@ -218,16 +218,16 @@ htmlcode += '<tr><td class="app_table_radius_left"><div class="iconUSBdisk_noquo
 htmlcode += '<div class="app_desc"><b>'+ usbDevicesList[i].partition[j].partName + '</b></div>';
 }
 if(all_accessable_size > 1)
-htmlcode += '<div class="app_desc"><#795#>: <b>'+ all_accessable_size+" GB" + '</b></div>';
+htmlcode += '<div class="app_desc"><#812#>: <b>'+ all_accessable_size+" GB" + '</b></div>';
 else
-htmlcode += '<div class="app_desc"><#795#>: <b>'+ all_accessable_size+" GB <span style=\'color:#FFCC00\'>(Disk quota can not less than 1GB)" + '</span></b></div>';
-htmlcode += '<div class="app_desc"><#1909#>: <b>'+ all_total_size+" GB" + '</b></div>';
+htmlcode += '<div class="app_desc"><#812#>: <b>'+ all_accessable_size+" GB <span style=\'color:#FFCC00\'>(Disk quota can not less than 1GB)" + '</span></b></div>';
+htmlcode += '<div class="app_desc"><#1955#>: <b>'+ all_total_size+" GB" + '</b></div>';
 htmlcode += '</div><br/><br/></td></tr>\n';
 mounted_partition++;
 }
 }
 if(mounted_partition == 0)
-htmlcode += '<tr height="360px"><td colspan="2"><span class="app_name" style="line-height:100%"><#1606#></span></td></tr>\n';
+htmlcode += '<tr height="360px"><td colspan="2"><span class="app_name" style="line-height:100%"><#1646#></span></td></tr>\n';
 document.getElementById("partition_div").innerHTML = htmlcode;
 });
 }
@@ -318,21 +318,21 @@ document.getElementById('cloudsetup_movie').style.display = "";
 if(apps_state_upgrade != 4 && apps_state_upgrade != ""){ // upgrade error handler
 errorcode = "apps_state_upgrade = " + apps_state_upgrade;
 if(apps_state_error == 1)
-document.getElementById("apps_state_desc").innerHTML = "<#2047#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2102#>";
 else if(apps_state_error == 2)
-document.getElementById("apps_state_desc").innerHTML = "<#2040#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2095#>";
 else if(apps_state_error == 4)
-document.getElementById("apps_state_desc").innerHTML = "<#2039#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2094#>";
 else if(apps_state_error == 6)
-document.getElementById("apps_state_desc").innerHTML = "<#2042#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2097#>";
 else if(apps_state_error == 7)
-document.getElementById("apps_state_desc").innerHTML = "<#2045#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2100#>";
 else if(apps_state_error == 9)
-document.getElementById("apps_state_desc").innerHTML = "<#2044#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2099#>";
 else if(apps_state_error == 10)
-document.getElementById("apps_state_desc").innerHTML = "<#2041#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2096#>";
 else if(apps_state_upgrade == 0)
-document.getElementById("apps_state_desc").innerHTML = "<#2046#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2101#>";
 else if(apps_state_upgrade == 1){
 if(apps_download_percent > 0 && apps_download_percent <= 100){
 document.getElementById("apps_state_desc").innerHTML = apps_download_file + " is downloading.. " + " <b>" + apps_download_percent + "</b> <span style='font-size: 16px;'>%</span>";
@@ -342,23 +342,23 @@ else if(apps_download_percent_done > 5){
 if(installPercent > 99)
 installPercent = 99;
 document.getElementById("loadingicon").style.display = "none";
-document.getElementById("apps_state_desc").innerHTML = "[" + cookie.get("apps_last") + "] " + "<#1047#> <b>" + Math.round(installPercent) +"</b> <span style='font-size: 16px;'>%</span>";
+document.getElementById("apps_state_desc").innerHTML = "[" + cookie.get("apps_last") + "] " + "<#1065#> <b>" + Math.round(installPercent) +"</b> <span style='font-size: 16px;'>%</span>";
 installPercent = installPercent + proceed;//*/
 }
 else{
-document.getElementById("apps_state_desc").innerHTML = "<#2046#>...";
+document.getElementById("apps_state_desc").innerHTML = "<#2101#>...";
 apps_download_percent_done++;
 }
 }
 else if(apps_state_upgrade == 2)
-document.getElementById("apps_state_desc").innerHTML = "<#2054#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2109#>";
 else{
 if(apps_depend_action_target != "terminated" && apps_depend_action_target != "error"){
 if(apps_depend_action_target == "")
-document.getElementById("apps_state_desc").innerHTML = "<b>[" + cookie.get("apps_last") + "] " + "<#1047#> </b>";
+document.getElementById("apps_state_desc").innerHTML = "<b>[" + cookie.get("apps_last") + "] " + "<#1065#> </b>";
 else
-document.getElementById("apps_state_desc").innerHTML = "<b>[" + cookie.get("apps_last") + "] " + "<#1047#> </b>"
-+"<br> <span style='font-size: 16px;'> <#1047#>："+apps_depend_do+"</span>"
+document.getElementById("apps_state_desc").innerHTML = "<b>[" + cookie.get("apps_last") + "] " + "<#1065#> </b>"
++"<br> <span style='font-size: 16px;'> <#1065#>："+apps_depend_do+"</span>"
 +"<br> <span style='font-size: 16px;'>"+apps_depend_action+" "+apps_depend_action_target+"</span>"
 ;
 }
@@ -366,7 +366,7 @@ else{
 if(installPercent > 99)
 installPercent = 99;
 document.getElementById("loadingicon").style.display = "none";
-document.getElementById("apps_state_desc").innerHTML = "[" + cookie.get("apps_last") + "] " + "<#1047#> <b>" + Math.round(installPercent) +"</b> <span style='font-size: 16px;'>%</span>";
+document.getElementById("apps_state_desc").innerHTML = "[" + cookie.get("apps_last") + "] " + "<#1065#> <b>" + Math.round(installPercent) +"</b> <span style='font-size: 16px;'>%</span>";
 installPercent = installPercent + proceed;
 }
 }
@@ -374,89 +374,89 @@ installPercent = installPercent + proceed;
 else if(apps_state_enable != 2 && apps_state_enable != ""){
 errorcode = "apps_state_enable = " + apps_state_enable;
 if(apps_state_error == 1)
-document.getElementById("apps_state_desc").innerHTML = "<#2043#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2098#>";
 else if(apps_state_error == 2)
-document.getElementById("apps_state_desc").innerHTML = "<#2040#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2095#>";
 else if(apps_state_error == 3)
-document.getElementById("apps_state_desc").innerHTML = "<#2038#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2093#>";
 else if(apps_state_error == 8)
 document.getElementById("apps_state_desc").innerHTML = "Enable error!";
 else{
 document.getElementById("loadingicon").style.display = "";
-document.getElementById("apps_state_desc").innerHTML = "<#281#>";
+document.getElementById("apps_state_desc").innerHTML = "<#284#>";
 }
 }
 else if(apps_state_update != 2 && apps_state_update != ""){
 errorcode = "apps_state_update = " + apps_state_update;
 if(apps_state_error == 1)
-document.getElementById("apps_state_desc").innerHTML = "<#2032#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2087#>";
 else if(apps_state_error == 2)
-document.getElementById("apps_state_desc").innerHTML = "<#2030#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2085#>";
 else
 document.getElementById("apps_state_desc").innerHTML = "Updating...";
 }
 else if(apps_state_remove != 2 && apps_state_remove != ""){
 errorcode = "apps_state_remove = " + apps_state_remove;
-document.getElementById("apps_state_desc").innerHTML = "<#2017#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2072#>";
 }
 else if(apps_state_switch != 4 && apps_state_switch != 5 && apps_state_switch != ""){
 errorcode = "apps_state_switch = " + apps_state_switch;
 if(apps_state_error == 1)
-document.getElementById("apps_state_desc").innerHTML = "<#2043#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2098#>";
 else if(apps_state_error == 2)
-document.getElementById("apps_state_desc").innerHTML = "<#2040#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2095#>";
 else if(apps_state_switch == 1)
-document.getElementById("apps_state_desc").innerHTML = "<#2033#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2088#>";
 else if(apps_state_switch == 2)
-document.getElementById("apps_state_desc").innerHTML = "<#2034#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2089#>";
 else if(apps_state_switch == 3)
-document.getElementById("apps_state_desc").innerHTML = "<#2031#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2086#>";
 else
-document.getElementById("apps_state_desc").innerHTML = "<#1047#>";
+document.getElementById("apps_state_desc").innerHTML = "<#1065#>";
 }
 else if(apps_state_autorun != 4 && apps_state_autorun != ""){
 errorcode = "apps_state_autorun = " + apps_state_autorun;
 if(apps_state_error == 1)
-document.getElementById("apps_state_desc").innerHTML = "<#2043#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2098#>";
 else if(apps_state_error == 2)
-document.getElementById("apps_state_desc").innerHTML = "<#2040#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2095#>";
 else if(apps_state_autorun == 1)
-document.getElementById("apps_state_desc").innerHTML = "<#2028#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2083#>";
 else if(apps_state_install == 2)
-document.getElementById("apps_state_desc").innerHTML = "<#2035#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2090#>";
 else
-document.getElementById("apps_state_desc").innerHTML = "<#793#>";
+document.getElementById("apps_state_desc").innerHTML = "<#810#>";
 }
 else if(apps_state_install != 5 && apps_state_error > 0){ // install error handler
 if(apps_state_error == 1)
-document.getElementById("apps_state_desc").innerHTML = "<#2047#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2102#>";
 else if(apps_state_error == 2)
-document.getElementById("apps_state_desc").innerHTML = "<#2040#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2095#>";
 else if(apps_state_error == 3)
-document.getElementById("apps_state_desc").innerHTML = "<#2038#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2093#>";
 else if(apps_state_error == 4)
-document.getElementById("apps_state_desc").innerHTML = "<#2039#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2094#>";
 else if(apps_state_error == 5)
-document.getElementById("apps_state_desc").innerHTML = "<#2037#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2092#>";
 else if(apps_state_error == 6)
-document.getElementById("apps_state_desc").innerHTML = "<#2042#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2097#>";
 else if(apps_state_error == 7)
-document.getElementById("apps_state_desc").innerHTML = "<#2045#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2100#>";
 else if(apps_state_error == 9)
-document.getElementById("apps_state_desc").innerHTML = "<#2044#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2099#>";
 else if(apps_state_error == 10)
-document.getElementById("apps_state_desc").innerHTML = "<#2041#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2096#>";
 isinstall = 0;
 }
 else if(apps_state_install != 5 && apps_state_install != ""){
 isinstall = 1;
 errorcode = "_apps_state_install = " + apps_state_install;
 if(apps_state_install == 0)
-document.getElementById("apps_state_desc").innerHTML = "<#2048#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2103#>";
 else if(apps_state_install == 1)
-document.getElementById("apps_state_desc").innerHTML = "<#2028#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2083#>";
 else if(apps_state_install == 2)
-document.getElementById("apps_state_desc").innerHTML = "<#2035#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2090#>";
 else if(apps_state_install == 3){
 if(apps_download_percent > 0 && apps_download_percent <= 100){
 document.getElementById("apps_state_desc").innerHTML = apps_download_file + " is downloading.. " + " <b>" + apps_download_percent + "</b> <span style='font-size: 16px;'>%</span>";
@@ -466,21 +466,21 @@ else if(apps_download_percent_done > 5){
 if(installPercent > 99)
 installPercent = 99;
 document.getElementById("loadingicon").style.display = "none";
-document.getElementById("apps_state_desc").innerHTML = "[" + cookie.get("apps_last") + "] " + "<#1047#> <b>" + Math.round(installPercent) +"</b> <span style='font-size: 16px;'>%</span>";
+document.getElementById("apps_state_desc").innerHTML = "[" + cookie.get("apps_last") + "] " + "<#1065#> <b>" + Math.round(installPercent) +"</b> <span style='font-size: 16px;'>%</span>";
 installPercent = installPercent + proceed;//*/
 }
 else{
-document.getElementById("apps_state_desc").innerHTML = "<#2046#>...";
+document.getElementById("apps_state_desc").innerHTML = "<#2101#>...";
 apps_download_percent_done++;
 }
 }
 else{
 if(apps_depend_action_target != "terminated" && apps_depend_action_target != "error"){
 if(apps_depend_action_target == "")
-document.getElementById("apps_state_desc").innerHTML = "<b>[" + cookie.get("apps_last") + "] " + "<#1047#> </b>";
+document.getElementById("apps_state_desc").innerHTML = "<b>[" + cookie.get("apps_last") + "] " + "<#1065#> </b>";
 else
-document.getElementById("apps_state_desc").innerHTML = "<b>[" + cookie.get("apps_last") + "] " + "<#1047#> </b>"
-+"<br> <span style='font-size: 16px;'> <#1047#>："+apps_depend_do+"</span>"
+document.getElementById("apps_state_desc").innerHTML = "<b>[" + cookie.get("apps_last") + "] " + "<#1065#> </b>"
++"<br> <span style='font-size: 16px;'> <#1065#>："+apps_depend_do+"</span>"
 +"<br> <span style='font-size: 16px;'>"+apps_depend_action+" "+apps_depend_action_target+"</span>"
 ;
 }
@@ -488,14 +488,14 @@ else{
 if(installPercent > 99)
 installPercent = 99;
 document.getElementById("loadingicon").style.display = "none";
-document.getElementById("apps_state_desc").innerHTML = "[" + cookie.get("apps_last") + "] " + "<#1047#> <b>" + Math.round(installPercent) +"</b> <span style='font-size: 16px;'>%</span>";
+document.getElementById("apps_state_desc").innerHTML = "[" + cookie.get("apps_last") + "] " + "<#1065#> <b>" + Math.round(installPercent) +"</b> <span style='font-size: 16px;'>%</span>";
 installPercent = installPercent + proceed;
 }
 }
 }
 else{
 document.getElementById("loadingicon").style.display = "";
-document.getElementById("apps_state_desc").innerHTML = "<#281#>";
+document.getElementById("apps_state_desc").innerHTML = "<#284#>";
 }
 if(apps_state_error != 0){
 document.getElementById("return_btn").style.display = "";
@@ -504,7 +504,7 @@ stoppullstate = 1;
 }
 else
 document.getElementById("return_btn").style.display = "none";
-document.getElementById("apps_state_desc").innerHTML += '<span class="app_action" onclick="apps_form(\'cancel\',\'\',\'\');">(<#74#>)</span>';
+document.getElementById("apps_state_desc").innerHTML += '<span class="app_action" onclick="apps_form(\'cancel\',\'\',\'\');">(<#75#>)</span>';
 return false;
 }
 function update_applist(e){
@@ -588,8 +588,8 @@ The English version of this agreement is the controlling version. Any translatio
 This agreement constitutes the entire agreement between you and ASUS with respect to AiCloud 2.0 and supersedes all previous communications, representations, understandings and agreements, either oral or written, between you and ASUS regarding AiCloud 2.0. This agreement may not be modified or waived except in writing and signed by an officer or other authorized representative of each party. If any provision is held invalid, all other provisions shall remain valid, unless such invalidity would frustrate the purpose of this agreement. The failure of either party to enforce any rights granted hereunder or to take action against the other party in the event of any breach hereunder will not waive that party’s as to subsequent enforcement of rights or subsequent action in the event of future breaches. AiCloud 2.0 reserves the right to: (a) add or remove functions and features or to provide updates, upgrades or programming fixes to AiCloud 2.0 with or without prior notice to you; (b) require you to agree to a new agreement in order to use any new version of AiCloud 2.0 that it releases; or (c) require you to upgrade to a new version of AiCloud 2.0 by discontinuing service or support to any prior version of AiCloud 2.0 without notice.
 </div>
 <div style="background-image:url(images/Tree/bg_02.png);background-repeat:no-repeat;height:90px;">
-<input class="button_gen_long" type="button" style="margin-left:20%;margin-top:18px;" onclick="cancel();" value="<#870#>">
-<input class="button_gen_long" type="button" onclick="_confirm();" value="<#863#>">
+<input class="button_gen_long" type="button" style="margin-left:20%;margin-top:18px;" onclick="cancel();" value="<#887#>">
+<input class="button_gen_long" type="button" onclick="_confirm();" value="<#881#>">
 </div>
 </div>
 <div id="hiddenMask" class="popup_bg" style="z-index:999;">
@@ -634,16 +634,16 @@ This agreement constitutes the entire agreement between you and ASUS with respec
 <div class="tabclick"><span>AiCloud 2.0</span></div>
 </td>
 <td>
-<a id="smart_sync_link" href="cloud_sync.asp"><div class="tab" id="tab_smartsync"><span><#1829#></span></div></a>
+<a id="smart_sync_link" href="cloud_sync.asp"><div class="tab" id="tab_smartsync"><span><#1871#></span></div></a>
 </td>
 <td>
-<a id="rrsLink" href="cloud_router_sync.asp"><div class="tab" id="tab_routersync"><span><#1776#></span></div></a>
+<a id="rrsLink" href="cloud_router_sync.asp"><div class="tab" id="tab_routersync"><span><#1818#></span></div></a>
 </td>
 <td>
-<a href="cloud_settings.asp"><div class="tab" id="tab_setting"><span><#1792#></span></div></a>
+<a href="cloud_settings.asp"><div class="tab" id="tab_setting"><span><#1834#></span></div></a>
 </td>
 <td>
-<a href="cloud_syslog.asp"><div class="tab" id="tab_syslog"><span><#1437#></span></div></a>
+<a href="cloud_syslog.asp"><div class="tab" id="tab_syslog"><span><#1475#></span></div></a>
 </td>
 </tr>
 </tbody>
@@ -663,14 +663,14 @@ This agreement constitutes the entire agreement between you and ASUS with respec
 <div id="cloud_uninstall" style="display:none;">
 <table>
 <tr>
-<td><div class="formfontdesc" id="usbHint"><#614#></div></td>
+<td><div class="formfontdesc" id="usbHint"><#630#></div></td>
 </tr>
 <tr>
-<td><div class="formfontdesc" id="usbHint2"><#1426#> : <a href="http://aicloud-faq.asuscomm.com/aicloud-faq/" target="_blank" style="color:#FC0;text-decoration: underline; font-family:Lucida Console;">http://aicloud-faq.asuscomm.com/aicloud-faq/</a></div></td>
+<td><div class="formfontdesc" id="usbHint2"><#1464#> : <a href="http://www.asus.com/search/results.aspx?SearchKey=AiCloud&SearchType=FAQ&IsSupport=True&Page=1" target="_blank" style="color:#FC0;text-decoration: underline; font-family:Lucida Console;">GO</a></div></td>
 </tr>
-<tr>
+<!--tr>
 <td valign="top"><div id="cloud_movie" style="box-shadow: 2px 2px 15px #222;margin-top: 50px;width:400px;height:241px;margin-left:165px;background:url(images/movie.jpg) no-repeat center;cursor:pointer" onClick="window.open('http://www.youtube.com/watch?v=MgIAfG5ZhPs')"></div></td>
-</tr>
+</tr-->
 <tr>
 <td align="center" width="740px" height="60px">
 <div id="gotonext">
@@ -688,7 +688,7 @@ This agreement constitutes the entire agreement between you and ASUS with respec
 <tr bgcolor="#444f53">
 <td colspan="5" bgcolor="#444f53" class="cloud_main_radius">
 <div style="padding:10px;width:95%;font-style:italic;font-size:14px;">
-<#614#>
+<#630#>
 <br/><br/>
 <table width="100%" >
 <tr>
@@ -697,14 +697,14 @@ This agreement constitutes the entire agreement between you and ASUS with respec
 <li style="margin-top:-5px;">
 <div id="accessMethod"></div>
 </li>
+<!--li style="margin-top:-5px;">
+<#2120#> <a style="font-weight: bolder;text-decoration: underline;" href="http://www.youtube.com/asusrouters" target="_blank">GO</a>
+</li-->
 <li style="margin-top:-5px;">
-<#2065#> <a style="font-weight: bolder;text-decoration: underline;" href="http://www.youtube.com/asusrouters" target="_blank">GO</a>
+<#1085#> <a style="font-weight: bolder;text-decoration: underline;" href="http://www.asus.com/search/results.aspx?SearchKey=AiCloud&SearchType=FAQ&IsSupport=True&Page=1" target="_blank">GO</a>
 </li>
 <li style="margin-top:-5px;">
-<#1063#> <a style="font-weight: bolder;text-decoration: underline;" href="http://aicloud-faq.asuscomm.com/aicloud-faq/" target="_blank">GO</a>
-</li>
-<li style="margin-top:-5px;">
-<#1615#>
+<#1655#>
 </li>
 </ul>
 </td>
@@ -728,7 +728,7 @@ This agreement constitutes the entire agreement between you and ASUS with respec
 <tr bgcolor="#444f53" width="235px">
 <td bgcolor="#444f53" class="cloud_main_radius_left" width="20%" height="50px">
 <div style="padding:10px;" align="center"><img src="/images/cloudsync/001.png">
-<div align="center" style="margin-top:10px;font-size: 18px;text-shadow: 1px 1px 0px black;"><#834#></div>
+<div align="center" style="margin-top:10px;font-size: 18px;text-shadow: 1px 1px 0px black;"><#852#></div>
 </div>
 </td>
 <td width="6px">
@@ -737,7 +737,7 @@ This agreement constitutes the entire agreement between you and ASUS with respec
 <td width="1px"></td>
 <td>
 <div style="padding:10px;width:95%;font-style:italic;font-size:14px;">
-<#605#>
+<#621#>
 </div>
 </td>
 <td bgcolor="#444f53" class="cloud_main_radius_right" width="100px">
@@ -774,7 +774,7 @@ document.form.submit();
 <tr bgcolor="#444f53">
 <td bgcolor="#444f53" class="cloud_main_radius_left" width="20%" height="50px">
 <div align="center"><img src="/images/cloudsync/002.png">
-<div align="center" style="margin-top:10px;font-size: 18px;text-shadow: 1px 1px 0px black;"><#1814#></div>
+<div align="center" style="margin-top:10px;font-size: 18px;text-shadow: 1px 1px 0px black;"><#1856#></div>
 </div>
 </td>
 <td>
@@ -785,7 +785,7 @@ document.form.submit();
 </td>
 <td width="">
 <div style="padding:10px;width:95%;font-style:italic;font-size:14px;">
-<#1815#>
+<#1857#>
 </div>
 </td>
 <td bgcolor="#444f53" class="cloud_main_radius_right" width="100">
@@ -823,7 +823,7 @@ document.form.submit();
 <td bgcolor="#444f53" class="cloud_main_radius_left" width="20%" height="50px">
 <div align="center">
 <img src="/images/cloudsync/003.png">
-<div align="center" style="margin-top:10px;font-size: 18px;text-shadow: 1px 1px 0px black;"><#1829#></div>
+<div align="center" style="margin-top:10px;font-size: 18px;text-shadow: 1px 1px 0px black;"><#1871#></div>
 </div>
 </td>
 <td>
@@ -834,7 +834,7 @@ document.form.submit();
 </td>
 <td width="">
 <div style="padding:10px;width:95%;font-style:italic;font-size:14px;">
-<#1830#>
+<#1872#>
 </div>
 </td>
 <td bgcolor="#444f53" class="cloud_main_radius_right" width="100">
@@ -857,7 +857,7 @@ document.form.submit();
 );
 </script>
 </div-->
-<input name="button" type="button" class="button_gen_short" onclick="location.href='/cloud_sync.asp'" value="<#826#>"/>
+<input name="button" type="button" class="button_gen_short" onclick="location.href='/cloud_sync.asp'" value="<#843#>"/>
 </td>
 </tr>
 <tr>

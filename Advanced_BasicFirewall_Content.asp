@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#533#> - <#185#></title>
+<title><#548#> - <#188#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <script language="JavaScript" type="text/javascript" src="/state.js"></script>
@@ -98,29 +98,29 @@ refreshpage();
 <tr>
 <td bgcolor="#4D595D" valign="top">
 <div>&nbsp;</div>
-<div class="formfonttitle"><#206#> - <#185#></div>
+<div class="formfonttitle"><#209#> - <#188#></div>
 <div style="margin-left:5px;margin-top:10px;margin-bottom:10px"><img src="/images/New_ui/export/line_export.png"></div>
-<div class="formfontdesc"><#1104#></div>
+<div class="formfontdesc"><#1140#></div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(8,6);"><#1111#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(8,6);"><#1147#></a></th>
 <td>
-<input type="radio" value="1" name="fw_enable_x" onClick="return change_common_radio(this, 'FirewallConfig', 'fw_enable_x', '1')" <% nvram_match("fw_enable_x", "1", "checked"); %>><#65#>
-<input type="radio" value="0" name="fw_enable_x" onClick="return change_common_radio(this, 'FirewallConfig', 'fw_enable_x', '0')" <% nvram_match("fw_enable_x", "0", "checked"); %>><#64#>
+<input type="radio" value="1" name="fw_enable_x" onClick="return change_common_radio(this, 'FirewallConfig', 'fw_enable_x', '1')" <% nvram_match("fw_enable_x", "1", "checked"); %>><#66#>
+<input type="radio" value="0" name="fw_enable_x" onClick="return change_common_radio(this, 'FirewallConfig', 'fw_enable_x', '0')" <% nvram_match("fw_enable_x", "0", "checked"); %>><#65#>
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(8,7);"><#1109#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(8,7);"><#1145#></a></th>
 <td>
-<input type="radio" value="1" name="fw_dos_x" class="input" onClick="return change_common_radio(this, 'FirewallConfig', 'fw_dos_x', '1')" <% nvram_match("fw_dos_x", "1", "checked"); %>><#65#>
-<input type="radio" value="0" name="fw_dos_x" class="input" onClick="return change_common_radio(this, 'FirewallConfig', 'fw_dos_x', '0')" <% nvram_match("fw_dos_x", "0", "checked"); %>><#64#>
+<input type="radio" value="1" name="fw_dos_x" class="input" onClick="return change_common_radio(this, 'FirewallConfig', 'fw_dos_x', '1')" <% nvram_match("fw_dos_x", "1", "checked"); %>><#66#>
+<input type="radio" value="0" name="fw_dos_x" class="input" onClick="return change_common_radio(this, 'FirewallConfig', 'fw_dos_x', '0')" <% nvram_match("fw_dos_x", "0", "checked"); %>><#65#>
 </td>
 </tr>
 <tr>
-<th align="right"><a class="hintstyle" href="javascript:void(0);" onClick="openHint(8,1);"><#1149#></a></th>
+<th align="right"><a class="hintstyle" href="javascript:void(0);" onClick="openHint(8,1);"><#1185#></a></th>
 <td>
 <select name="fw_log_x" class="input_option">
-<option value="none" <% nvram_match("fw_log_x", "none","selected"); %>><#538#></option>
+<option value="none" <% nvram_match("fw_log_x", "none","selected"); %>><#553#></option>
 <option value="drop" <% nvram_match("fw_log_x", "drop","selected"); %>>Dropped</option>
 <option value="accept" <% nvram_match("fw_log_x", "accept","selected"); %>>Accepted</option>
 <option value="both" <% nvram_match("fw_log_x", "both","selected"); %>>Both</option>
@@ -128,10 +128,10 @@ refreshpage();
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(8,5);"><#1153#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(8,5);"><#1189#></a></th>
 <td>
-<input type="radio" value="1" name="misc_ping_x" class="input" onClick="return change_common_radio(this, 'FirewallConfig', 'misc_ping_x', '1')" <% nvram_match("misc_ping_x", "1", "checked"); %>><#65#>
-<input type="radio" value="0" name="misc_ping_x" class="input" onClick="return change_common_radio(this, 'FirewallConfig', 'misc_ping_x', '0')" <% nvram_match("misc_ping_x", "0", "checked"); %>><#64#>
+<input type="radio" value="1" name="misc_ping_x" class="input" onClick="return change_common_radio(this, 'FirewallConfig', 'misc_ping_x', '1')" <% nvram_match("misc_ping_x", "1", "checked"); %>><#66#>
+<input type="radio" value="0" name="misc_ping_x" class="input" onClick="return change_common_radio(this, 'FirewallConfig', 'misc_ping_x', '0')" <% nvram_match("misc_ping_x", "0", "checked"); %>><#65#>
 </td>
 </tr>
 <tr id="st_webdav_mode_tr" style="display:none;">
@@ -160,7 +160,7 @@ refreshpage();
 <th width="40%">NAT Loopback</th>
 <td>
 <select name="fw_nat_loopback" class="input_option">
-<option value="0" <% nvram_match("fw_nat_loopback", "0","selected"); %>><#822#></option>
+<option value="0" <% nvram_match("fw_nat_loopback", "0","selected"); %>><#839#></option>
 <option value="1" <% nvram_match("fw_nat_loopback", "1","selected"); %>>Asus</option>
 <option value="2" <% nvram_match("fw_nat_loopback", "2","selected"); %>>Merlin</option>
 </select>
@@ -168,7 +168,7 @@ refreshpage();
 </tr>
 </table>
 <div class="apply_gen">
-<input name="button" type="button" class="button_gen" onclick="applyRule();" value="<#72#>"/>
+<input name="button" type="button" class="button_gen" onclick="applyRule();" value="<#73#>"/>
 </div>
 </td>
 </tr>

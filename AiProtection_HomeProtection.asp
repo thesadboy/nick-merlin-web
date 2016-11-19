@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
-<title><#533#> - Home Security</title>
+<title><#548#> - Home Security</title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <script type="text/javascript" src="/state.js"></script>
@@ -97,7 +97,7 @@ var ctf_disable = '<% nvram_get("ctf_disable"); %>';
 var ctf_fa_mode = '<% nvram_get("ctf_fa_mode"); %>';
 function initial(){
 show_menu();
-document.getElementById("_AiProtection_HomeSecurity").innerHTML = '<table><tbody><tr><td><div class="_AiProtection_HomeSecurity"></div></td><td><div style="width:120px;"><#726#></div></td></tr></tbody></table>';
+document.getElementById("_AiProtection_HomeSecurity").innerHTML = '<table><tbody><tr><td><div class="_AiProtection_HomeSecurity"></div></td><td><div style="width:120px;"><#742#></div></td></tr></tbody></table>';
 document.getElementById("_AiProtection_HomeSecurity").className = "menu_clicked";
 }
 function applyRule(){
@@ -134,7 +134,7 @@ function close_weakness_status(){
 $('#weakness_div').fadeOut(100);
 }
 function enable_whole_security(){
-if(!confirm("<#728#>")){
+if(!confirm("<#744#>")){
 return false;
 }
 var action_script_temp = "";
@@ -288,24 +288,24 @@ document.form.submit();
 }
 function check_login_name_password(){
 if(<% check_acorpw(); %> == 1){
-document.getElementById('login_password').innerHTML = "<a href='Advanced_System_Content.asp' target='_blank'><#64#></a>";
+document.getElementById('login_password').innerHTML = "<a href='Advanced_System_Content.asp' target='_blank'><#65#></a>";
 document.getElementById('login_password').className = "status_no";
 document.getElementById('login_password').onmouseover = function(){overHint(10);}
 document.getElementById('login_password').onmouseout = function(){nd();}
 }
 else{
-document.getElementById('login_password').innerHTML = "<#65#>";
+document.getElementById('login_password').innerHTML = "<#66#>";
 document.getElementById('login_password').className = "status_yes";
 }
 }
 function check_wireless_password(){
 var nScore = <% check_passwd_strength("wl_key"); %>;
 var oScore = document.getElementById("score");
-if (nScore >= 0 && nScore < 20) { sComplexity = "<#259#>"; }
-else if (nScore >= 20 && nScore < 40) { sComplexity = "<#260#>"; }
-else if (nScore >= 40 && nScore < 60) { sComplexity = "<#261#>"; }
-else if (nScore >= 60 && nScore < 80) { sComplexity = "<#262#>"; }
-else if (nScore >= 80 && nScore <= 100) { sComplexity = "<#263#>"; }
+if (nScore >= 0 && nScore < 20) { sComplexity = "<#262#>"; }
+else if (nScore >= 20 && nScore < 40) { sComplexity = "<#263#>"; }
+else if (nScore >= 40 && nScore < 60) { sComplexity = "<#264#>"; }
+else if (nScore >= 60 && nScore < 80) { sComplexity = "<#265#>"; }
+else if (nScore >= 80 && nScore <= 100) { sComplexity = "<#266#>"; }
 if(nScore >= 0 && nScore < 40){
 document.getElementById('score').className = "status_no";
 }
@@ -321,11 +321,11 @@ document.getElementById('score').onmouseout = function(){nd();}
 }
 function check_wireless_encryption(){
 if(<% check_wireless_encryption(); %> == "1"){
-document.getElementById('wireless_encryption').innerHTML = "<#262#>";
+document.getElementById('wireless_encryption').innerHTML = "<#265#>";
 document.getElementById('wireless_encryption').className = "status_yes";
 }
 else{
-document.getElementById('wireless_encryption').innerHTML = "<a href='Advanced_Wireless_Content.asp' target='_blank'><#260#></a>";
+document.getElementById('wireless_encryption').innerHTML = "<a href='Advanced_Wireless_Content.asp' target='_blank'><#263#></a>";
 document.getElementById('wireless_encryption').className = "status_no";
 document.getElementById('wireless_encryption').onmouseover = function(){overHint(12);}
 document.getElementById('wireless_encryption').onmouseout = function(){nd();}
@@ -334,11 +334,11 @@ document.getElementById('wireless_encryption').onmouseout = function(){nd();}
 function check_WPS(){
 var wps_enable = document.form.wps_enable.value;
 if(wps_enable == 0){
-document.getElementById('wps_status').innerHTML = "<#65#>";
+document.getElementById('wps_status').innerHTML = "<#66#>";
 document.getElementById('wps_status').className = "status_yes";
 }
 else{
-document.getElementById('wps_status').innerHTML = "<a href='Advanced_WWPS_Content.asp' target='_blank'><#64#></a>";
+document.getElementById('wps_status').innerHTML = "<a href='Advanced_WWPS_Content.asp' target='_blank'><#65#></a>";
 document.getElementById('wps_status').className = "status_no";
 document.getElementById('wps_status').onmouseover = function(){overHint(25);}
 document.getElementById('wps_status').onmouseout = function(){nd();}
@@ -349,11 +349,11 @@ var wan0_upnp_enable = document.form.wan0_upnp_enable.value;
 var wan1_upnp_enable = document.form.wan1_upnp_enable.value;
 if(dualwan_enabled){
 if(wan0_upnp_enable == 0 && wan1_upnp_enable == 0){
-document.getElementById('upnp_service').innerHTML = "<#65#>";
+document.getElementById('upnp_service').innerHTML = "<#66#>";
 document.getElementById('upnp_service').className = "status_yes";
 }
 else{
-document.getElementById('upnp_service').innerHTML = "<a href='Advanced_WAN_Content.asp' target='_blank'><#64#></a>";
+document.getElementById('upnp_service').innerHTML = "<a href='Advanced_WAN_Content.asp' target='_blank'><#65#></a>";
 document.getElementById('upnp_service').className = "status_no";
 document.getElementById('upnp_service').onmouseover = function(){overHint(13);}
 document.getElementById('upnp_service').onmouseout = function(){nd();}
@@ -361,11 +361,11 @@ document.getElementById('upnp_service').onmouseout = function(){nd();}
 }
 else{
 if(wan0_upnp_enable == 0){
-document.getElementById('upnp_service').innerHTML = "<#65#>";
+document.getElementById('upnp_service').innerHTML = "<#66#>";
 document.getElementById('upnp_service').className = "status_yes";
 }
 else{
-document.getElementById('upnp_service').innerHTML = "<a href='Advanced_WAN_Content.asp' target='_blank'><#64#></a>";
+document.getElementById('upnp_service').innerHTML = "<a href='Advanced_WAN_Content.asp' target='_blank'><#65#></a>";
 document.getElementById('upnp_service').className = "status_no";
 document.getElementById('upnp_service').onmouseover = function(){overHint(13);}
 document.getElementById('upnp_service').onmouseout = function(){nd();}
@@ -375,11 +375,11 @@ document.getElementById('upnp_service').onmouseout = function(){nd();}
 function check_wan_access(){
 var wan_access_enable = document.form.misc_http_x.value;
 if(wan_access_enable == 0){
-document.getElementById('access_from_wan').innerHTML = "<#65#>";
+document.getElementById('access_from_wan').innerHTML = "<#66#>";
 document.getElementById('access_from_wan').className = "status_yes";
 }
 else{
-document.getElementById('access_from_wan').innerHTML = "<a href='Advanced_System_Content.asp' target='_blank'><#64#></a>";
+document.getElementById('access_from_wan').innerHTML = "<a href='Advanced_System_Content.asp' target='_blank'><#65#></a>";
 document.getElementById('access_from_wan').className = "status_no";
 document.getElementById('access_from_wan').onmouseover = function(){overHint(14);}
 document.getElementById('access_from_wan').onmouseout = function(){nd();}
@@ -388,11 +388,11 @@ document.getElementById('access_from_wan').onmouseout = function(){nd();}
 function check_ping_form_wan(){
 var wan_ping_enable = document.form.misc_ping_x.value;
 if(wan_ping_enable == 0){
-document.getElementById('ping_from_wan').innerHTML = "<#65#>";
+document.getElementById('ping_from_wan').innerHTML = "<#66#>";
 document.getElementById('ping_from_wan').className = "status_yes";
 }
 else{
-document.getElementById('ping_from_wan').innerHTML = "<a href='Advanced_BasicFirewall_Content.asp' target='_blank'><#64#></a>";
+document.getElementById('ping_from_wan').innerHTML = "<a href='Advanced_BasicFirewall_Content.asp' target='_blank'><#65#></a>";
 document.getElementById('ping_from_wan').className = "status_no";
 document.getElementById('ping_from_wan').onmouseover = function(){overHint(15);}
 document.getElementById('ping_from_wan').onmouseout = function(){nd();}
@@ -400,11 +400,11 @@ document.getElementById('ping_from_wan').onmouseout = function(){nd();}
 }
 function check_dmz(){
 if(document.form.dmz_ip.value == ""){
-document.getElementById('dmz_service').innerHTML = "<#65#>";
+document.getElementById('dmz_service').innerHTML = "<#66#>";
 document.getElementById('dmz_service').className = "status_yes";
 }
 else{
-document.getElementById('dmz_service').innerHTML = "<a href='Advanced_Exposed_Content.asp' target='_blank'><#64#></a>";
+document.getElementById('dmz_service').innerHTML = "<a href='Advanced_Exposed_Content.asp' target='_blank'><#65#></a>";
 document.getElementById('dmz_service').className = "status_no";
 document.getElementById('dmz_service').onmouseover = function(){overHint(16);}
 document.getElementById('dmz_service').onmouseout = function(){nd();}
@@ -413,11 +413,11 @@ document.getElementById('dmz_service').onmouseout = function(){nd();}
 function check_port_trigger(){
 var port_trigger_enable = document.form.autofw_enable_x.value;
 if(port_trigger_enable == 0){
-document.getElementById('port_tirgger').innerHTML = "<#65#>";
+document.getElementById('port_tirgger').innerHTML = "<#66#>";
 document.getElementById('port_tirgger').className = "status_yes";
 }
 else{
-document.getElementById('port_tirgger').innerHTML = "<a href='Advanced_PortTrigger_Content.asp' target='_blank'><#64#></a>";
+document.getElementById('port_tirgger').innerHTML = "<a href='Advanced_PortTrigger_Content.asp' target='_blank'><#65#></a>";
 document.getElementById('port_tirgger').className = "status_no";
 document.getElementById('port_tirgger').onmouseover = function(){overHint(17);}
 document.getElementById('port_tirgger').onmouseout = function(){nd();}
@@ -426,11 +426,11 @@ document.getElementById('port_tirgger').onmouseout = function(){nd();}
 function check_port_forwarding(){
 var port_forwarding_enable = document.form.vts_enable_x.value;
 if(port_forwarding_enable == 0){
-document.getElementById('port_forwarding').innerHTML = "<#65#>";
+document.getElementById('port_forwarding').innerHTML = "<#66#>";
 document.getElementById('port_forwarding').className = "status_yes";
 }
 else{
-document.getElementById('port_forwarding').innerHTML = "<a href='Advanced_VirtualServer_Content.asp' target='_blank'><#64#></a>";
+document.getElementById('port_forwarding').innerHTML = "<a href='Advanced_VirtualServer_Content.asp' target='_blank'><#65#></a>";
 document.getElementById('port_forwarding').className = "status_no";
 document.getElementById('port_forwarding').onmouseover = function(){overHint(18);}
 document.getElementById('port_forwarding').onmouseout = function(){nd();}
@@ -439,26 +439,26 @@ document.getElementById('port_forwarding').onmouseout = function(){nd();}
 function check_ftp_anonymous(){
 var ftp_account_mode = document.form.st_ftp_mode.value; //1: shared mode, 2: account mode
 if(ftp_account_mode == 1){
-document.getElementById('ftp_account').innerHTML = "<a href='Advanced_AiDisk_ftp.asp' target='_blank'><#64#></a>";
+document.getElementById('ftp_account').innerHTML = "<a href='Advanced_AiDisk_ftp.asp' target='_blank'><#65#></a>";
 document.getElementById('ftp_account').className = "status_no";
 document.getElementById('ftp_account').onmouseover = function(){overHint(19);}
 document.getElementById('ftp_account').onmouseout = function(){nd();}
 }
 else{
-document.getElementById('ftp_account').innerHTML = "<#65#>";
+document.getElementById('ftp_account').innerHTML = "<#66#>";
 document.getElementById('ftp_account').className = "status_yes";
 }
 }
 function check_samba_anonymous(){
 var samba_account_mode = document.form.st_samba_mode.value; //1: shared mode, 4: account mode
 if(samba_account_mode == 1){
-document.getElementById('samba_account').innerHTML = "<a href='Advanced_AiDisk_samba.asp' target='_blank'><#64#></a>";
+document.getElementById('samba_account').innerHTML = "<a href='Advanced_AiDisk_samba.asp' target='_blank'><#65#></a>";
 document.getElementById('samba_account').className = "status_no";
 document.getElementById('samba_account').onmouseover = function(){overHint(20);}
 document.getElementById('samba_account').onmouseout = function(){nd();}
 }
 else{
-document.getElementById('samba_account').innerHTML = "<#65#>";
+document.getElementById('samba_account').innerHTML = "<#66#>";
 document.getElementById('samba_account').className = "status_yes";
 }
 }
@@ -467,31 +467,31 @@ var wrs_cc_enable = document.form.wrs_cc_enable.value;
 var wrs_vp_enable = document.form.wrs_vp_enable.value;
 var wrs_mals_enable = document.form.wrs_mals_enable.value;
 if(wrs_mals_enable == 1){
-document.getElementById('wrs_service').innerHTML = "<#65#>";
+document.getElementById('wrs_service').innerHTML = "<#66#>";
 document.getElementById('wrs_service').className = "status_yes";
 }
 else{
-document.getElementById('wrs_service').innerHTML = "<a href='AiProtection_HomeProtection.asp' target='_blank'><#64#></a>";
+document.getElementById('wrs_service').innerHTML = "<a href='AiProtection_HomeProtection.asp' target='_blank'><#65#></a>";
 document.getElementById('wrs_service').className = "status_no";
 document.getElementById('wrs_service').onmouseover = function(){overHint(21);}
 document.getElementById('wrs_service').onmouseout = function(){nd();}
 }
 if(wrs_vp_enable == 1){
-document.getElementById('vp_service').innerHTML = "<#65#>";
+document.getElementById('vp_service').innerHTML = "<#66#>";
 document.getElementById('vp_service').className = "status_yes";
 }
 else{
-document.getElementById('vp_service').innerHTML = "<a href='AiProtection_HomeProtection.asp' target='_blank'><#64#></a>";
+document.getElementById('vp_service').innerHTML = "<a href='AiProtection_HomeProtection.asp' target='_blank'><#65#></a>";
 document.getElementById('vp_service').className = "status_no";
 document.getElementById('vp_service').onmouseover = function(){overHint(22);}
 document.getElementById('vp_service').onmouseout = function(){nd();}
 }
 if(wrs_cc_enable == 1){
-document.getElementById('cc_service').innerHTML = "<#65#>";
+document.getElementById('cc_service').innerHTML = "<#66#>";
 document.getElementById('cc_service').className = "status_yes";
 }
 else{
-document.getElementById('cc_service').innerHTML = "<a href='AiProtection_HomeProtection.asp' target='_blank'><#64#></a>";
+document.getElementById('cc_service').innerHTML = "<a href='AiProtection_HomeProtection.asp' target='_blank'><#65#></a>";
 document.getElementById('cc_service').className = "status_no";
 document.getElementById('cc_service').onmouseover = function(){overHint(23);}
 document.getElementById('cc_service').onmouseout = function(){nd();}
@@ -609,13 +609,13 @@ break;
 <div id="agreement_panel" class="panel_folder" style="margin-top: -100px;"></div>
 <div id="hiddenMask" class="popup_bg" style="z-index:999;">
 <table cellpadding="5" cellspacing="0" id="dr_sweet_advise" class="dr_sweet_advise" align="center"></table>
-<!--[if lte IE 6.5.]><script>alert("<#772#>");</script><![endif]-->
+<!--[if lte IE 6.5.]><script>alert("<#788#>");</script><![endif]-->
 </div>
 <div id="weakness_div" class="weakness">
 <table style="width:99%;">
 <tr>
 <td>
-<div class="weakness_router_status"><#695#></div>
+<div class="weakness_router_status"><#711#></div>
 </td>
 </tr>
 <tr>
@@ -623,19 +623,19 @@ break;
 <div>
 <table class="weakness_status" cellspacing="0" cellpadding="4" align="center">
 <tr>
-<th><#697#> -</th>
+<th><#713#> -</th>
 <td>
 <div id="login_password"></div>
 </td>
 </tr>
 <tr>
-<th><#698#> -</th>
+<th><#714#> -</th>
 <td>
 <div id="score"></div>
 </td>
 </tr>
 <tr>
-<th><#699#> -</th>
+<th><#715#> -</th>
 <td>
 <div id="wireless_encryption"></div>
 </td>
@@ -647,67 +647,67 @@ break;
 </td>
 </tr>
 <tr>
-<th><#700#> -</th>
+<th><#716#> -</th>
 <td>
 <div id="upnp_service"></div>
 </td>
 </tr>
 <tr>
-<th><#701#> -</th>
+<th><#717#> -</th>
 <td>
 <div id="access_from_wan"></div>
 </td>
 </tr>
 <tr>
-<th><#702#> -</th>
+<th><#718#> -</th>
 <td>
 <div id="ping_from_wan"></div>
 </td>
 </tr>
 <tr>
-<th><#703#> -</th>
+<th><#719#> -</th>
 <td>
 <div id="dmz_service"></div>
 </td>
 </tr>
 <tr>
-<th><#704#> -</th>
+<th><#720#> -</th>
 <td>
 <div id="port_tirgger"></div>
 </td>
 </tr>
 <tr>
-<th><#705#> -</th>
+<th><#721#> -</th>
 <td>
 <div id="port_forwarding"></div>
 </td>
 </tr>
 <tr>
-<th><#706#> -</th>
+<th><#722#> -</th>
 <td>
 <div id="ftp_account"></div>
 </td>
 </tr>
 <tr>
-<th><#707#> -</th>
+<th><#723#> -</th>
 <td>
 <div id="samba_account"></div>
 </td>
 </tr>
 <tr>
-<th><#708#> -</th>
+<th><#724#> -</th>
 <td>
 <div id="wrs_service"></div>
 </td>
 </tr>
 <tr>
-<th><#709#> -</th>
+<th><#725#> -</th>
 <td>
 <div id="vp_service"></div>
 </td>
 </tr>
 <tr>
-<th><#663#> -</th>
+<th><#679#> -</th>
 <td>
 <div id="cc_service"></div>
 </td>
@@ -721,10 +721,10 @@ break;
 <table style="margin-top:10px;margin-left:auto;margin-right:auto;">
 <tr>
 <td>
-<input class="button_gen" type="button" onclick="close_weakness_status();" value="<#866#>">
+<input class="button_gen" type="button" onclick="close_weakness_status();" value="<#884#>">
 </td>
 <td>
-<input class="button_gen_long" type="button" onclick="enable_whole_security();" value="<#886#>">
+<input class="button_gen_long" type="button" onclick="enable_whole_security();" value="<#903#>">
 </td>
 </tr>
 </table>
@@ -736,17 +736,17 @@ break;
 <table style="width:99%">
 <tr>
 <th>
-<div style="font-size:16px;"><#659#></div>
+<div style="font-size:16px;"><#675#></div>
 </th>
 </tr>
 <td>
-<div class="formfontdesc" style="font-style: italic;font-size: 14px;"><#693#></div>
+<div class="formfontdesc" style="font-style: italic;font-size: 14px;"><#709#></div>
 </td>
 <tr>
 <td>
 <table class="FormTable" width="99%" border="1" align="center" cellpadding="4" cellspacing="0">
 <tr>
-<th><#1694#></th>
+<th><#1736#></th>
 <td>
 <div>
 <select class="input_option" id="mail_provider">
@@ -767,7 +767,7 @@ break;
 </td>
 </tr>
 <tr>
-<th><#1239#></th>
+<th><#1276#></th>
 <td>
 <div>
 <input type="password" class="input_30_table" id="mail_password" maxlength="100" value="" autocorrect="off" autocapitalize="off">
@@ -779,11 +779,11 @@ break;
 <td>
 <div>
 <input type="checkbox" class="" id="mal_website_item" value="">
-<label><#725#></label>
+<label><#741#></label>
 <input type="checkbox" class="" id="vp_item" value="">
-<label><#727#></label>
+<label><#743#></label>
 <input type="checkbox" class="" id="cc_item" value="">
-<label><#663#></label>
+<label><#679#></label>
 </div>
 </td>
 </tr>
@@ -793,8 +793,8 @@ break;
 <tr>
 <td>
 <div style="text-align:center;margin-top:20px;">
-<input class="button_gen" type="button" onclick="close_alert_preference();" value="<#866#>">
-<input class="button_gen_long" type="button" onclick="apply_alert_preference();" value="<#72#>">
+<input class="button_gen" type="button" onclick="close_alert_preference();" value="<#884#>">
+<input class="button_gen_long" type="button" onclick="apply_alert_preference();" value="<#73#>">
 </div>
 </td>
 </tr>
@@ -856,7 +856,7 @@ break;
 <table width="730px">
 <tr>
 <td align="left">
-<span class="formfonttitle"><#726#> - <#692#></span>
+<span class="formfonttitle"><#742#> - <#708#></span>
 </td>
 </tr>
 </table>
@@ -873,8 +873,8 @@ break;
 <table>
 <tr>
 <td>
-<div style="width:430px"><#694#></div>
-<div style="width:430px"><a style="text-decoration:underline;" href="http://www.asus.com/us/support/FAQ/1008719/" target="_blank"><#692#> FAQ</a></div>
+<div style="width:430px"><#710#></div>
+<div style="width:430px"><a style="text-decoration:underline;" href="http://www.asus.com/support/FAQ/1008719/" target="_blank"><#708#> FAQ</a></div>
 </td>
 <td>
 <div style="width:100px;height:48px;margin-left:-40px;background-image:url('images/New_ui/tm_logo.png');"></div>
@@ -902,15 +902,15 @@ break;
 <div><img src="/images/cloudsync/line.png"></div>
 </td>
 <td style="padding:10px;">
-<div style="font-size:18px;text-shadow:1px 1px 0px black;"><#695#></div>
-<div style="font-style: italic;font-size: 14px;color:#FC0;height:auto;padding-top:5px;"><#696#></div>
+<div style="font-size:18px;text-shadow:1px 1px 0px black;"><#711#></div>
+<div style="font-style: italic;font-size: 14px;color:#FC0;height:auto;padding-top:5px;"><#712#></div>
 </td>
 <td width="6px">
 <div><img src="/images/cloudsync/line.png"></div>
 </td>
 <td style="width:20%;border-radius:0px 10px 10px 0px;">
 <div>
-<input class="button_gen" type="button" onclick="check_weakness();" value="<#885#>">
+<input class="button_gen" type="button" onclick="check_weakness();" value="<#902#>">
 </div>
 </td>
 </tr>
@@ -927,14 +927,14 @@ break;
 <table>
 <tr>
 <td style="padding-bottom:10px;">
-<div style="font-size:18px;text-shadow:1px 1px 0px black;"><#725#></div>
-<div style="font-style: italic;font-size: 14px;color:#FC0;height:auto;padding-top:5px;"><#724#></div>
+<div style="font-size:18px;text-shadow:1px 1px 0px black;"><#741#></div>
+<div style="font-style: italic;font-size: 14px;color:#FC0;height:auto;padding-top:5px;"><#740#></div>
 </td>
 </tr>
 <tr>
 <td>
-<div style="font-size:18px;text-shadow:1px 1px 0px black;"><#727#></div>
-<div style="font-style: italic;font-size: 14px;color:#FC0;height:auto;padding-top:5px;"><#729#></div>
+<div style="font-size:18px;text-shadow:1px 1px 0px black;"><#743#></div>
+<div style="font-style: italic;font-size: 14px;color:#FC0;height:auto;padding-top:5px;"><#745#></div>
 </td>
 </tr>
 </table>
@@ -1007,8 +1007,8 @@ applyRule();
 <div><img src="/images/cloudsync/line.png"></div>
 </td>
 <td style="padding:10px;">
-<div style="font-size:18px;text-shadow:1px 1px 0px black;"><#663#></div>
-<div style="font-style: italic;font-size: 14px;color:#FC0;height:auto;;padding-top:5px;"><#662#></div>
+<div style="font-size:18px;text-shadow:1px 1px 0px black;"><#679#></div>
+<div style="font-style: italic;font-size: 14px;color:#FC0;height:auto;;padding-top:5px;"><#678#></div>
 </td>
 <td width="6px">
 <div><img src="/images/cloudsync/line.png"></div>
@@ -1035,7 +1035,7 @@ applyRule();
 </script>
 </div>
 <div style="margin-top:-15px;">
-<input class="button_gen_long" type="button" onclick="show_alert_preference();" value="<#659#>">
+<input class="button_gen_long" type="button" onclick="show_alert_preference();" value="<#675#>">
 </div>
 </td>
 </tr>

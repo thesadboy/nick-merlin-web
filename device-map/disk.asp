@@ -93,14 +93,8 @@ else
 dm_url = "http://" + parent.location.host + ":" + dm_http_port;
 window.open(dm_url);
 }
-function remove_disk(){
-var str = "<#1754#>";
-if(confirm(str)){
-parent.showLoading();
-document.diskForm.action = "safely_remove_disk.asp";
-document.diskForm.disk.value = thisForeignDisksIndex;
-setTimeout("document.diskForm.submit();", 1);
-}
+function remove_disk_call(){
+top.remove_disk(thisForeignDisksIndex)
 }
 </script>
 </head>
@@ -111,12 +105,12 @@ setTimeout("document.diskForm.submit();", 1);
 <table id="diskTab" width="100px" border="0" align="left" style="margin-left:5px;display:none;" cellpadding="0" cellspacing="0">
 <td>
 <div id="t0" class="tabclick_NW" align="center" style="font-weight: bolder;margin-right:2px;" onclick="">
-<span id="span1" style="cursor:pointer;font-weight: bolder;"><#940#></span>
+<span id="span1" style="cursor:pointer;font-weight: bolder;"><#958#></span>
 </div>
 </td>
 <td>
 <div id="t1" class="tab_NW" align="center" style="font-weight: bolder;margin-right:2px;" onclick="location.href='disk_utility.asp'">
-<span id="span1" style="cursor:pointer;font-weight: bolder;"><#933#></span>
+<span id="span1" style="cursor:pointer;font-weight: bolder;"><#951#></span>
 </div>
 </td>
 </table>
@@ -126,7 +120,7 @@ setTimeout("document.diskForm.submit();", 1);
 <table width="95%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="table1px" style="margin-top:-3px;">
 <tr>
 <td style="padding:5px 10px 0px 15px;">
-<p class="formfonttitle_nwm"><#1554#>:</p>
+<p class="formfonttitle_nwm"><#1592#>:</p>
 <p style="padding-left:10px; margin-top:3px; background-color:#444f53; line-height:20px; color:#FFFFFF;" id="disk_model_name"></p>
 <img style="margin-top:5px;" src="/images/New_ui/networkmap/linetwo2.png">
 </td>
@@ -135,36 +129,36 @@ setTimeout("document.diskForm.submit();", 1);
 <table id="mounted_item1" width="95%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="table1px">
 <tr>
 <td style="padding:5px 10px 0px 15px;">
-<p class="formfonttitle_nwm"><#795#>:</p>
+<p class="formfonttitle_nwm"><#812#>:</p>
 <p style="padding-left:10px; margin-top:3px; background-color:#444f53; line-height:20px; color:#FFFFFF;" id="disk_avail_size"></p>
 <img style="margin-top:5px;" src="/images/New_ui/networkmap/linetwo2.png">
 </td>
 </tr>
 <tr>
 <td style="padding:5px 10px 0px 15px;">
-<p class="formfonttitle_nwm"><#1909#>:</p>
+<p class="formfonttitle_nwm"><#1955#>:</p>
 <p style="padding-left:10px; margin-top:3px; background-color:#444f53; line-height:20px; color:#FFFFFF;" id="disk_total_size"></p>
 <img style="margin-top:5px;" src="/images/New_ui/networkmap/linetwo2.png">
 </td>
 </tr>
 <tr id="mediaserver_hyperlink">
 <td style="padding:10px 15px 0px 15px;;">
-<p class="formfonttitle_nwm" style="float:left;width:138px;"><#497#>:</p>
-<input type="button" class="button_gen" onclick="goUPnP();" value="<#826#>" >
+<p class="formfonttitle_nwm" style="float:left;width:138px;"><#498#>:</p>
+<input type="button" class="button_gen" onclick="goUPnP();" value="<#843#>" >
 <img style="margin-top:5px;" src="/images/New_ui/networkmap/linetwo2.png">
 </td>
 </tr>
 <tr id="aidisk_hyperlink">
 <td height="50" style="padding:10px 15px 0px 15px;">
-<p class="formfonttitle_nwm" style="float:left;width:138px;"><#658#>:</p>
-<input type="button" class="button_gen" onclick="gotoAidisk();" value="<#826#>" >
+<p class="formfonttitle_nwm" style="float:left;width:138px;"><#674#>:</p>
+<input type="button" class="button_gen" onclick="gotoAidisk();" value="<#843#>" >
 <img style="margin-top:5px;" src="/images/New_ui/networkmap/linetwo2.png">
 </td>
 </tr>
 <tr id="dmLink" style="display:none;">
 <td height="50" style="padding:10px 15px 0px 15px;">
 <p class="formfonttitle_nwm" style="float:left;width:138px;">Download Master</p>
-<input type="button" class="button_gen" onclick="gotoDM();" value="<#826#>" >
+<input type="button" class="button_gen" onclick="gotoDM();" value="<#843#>" >
 <img style="margin-top:5px;" src="/images/New_ui/networkmap/linetwo2.png">
 </td>
 </tr>
@@ -172,9 +166,9 @@ setTimeout("document.diskForm.submit();", 1);
 <table width="95%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="table1px">
 <tr>
 <td height="50" style="padding:10px 15px 0px 15px;">
-<p class="formfonttitle_nwm" style="float:left;width:138px; "><#1755#>:</p>
-<input id="show_remove_button" class="button_gen" type="button" class="button" onclick="remove_disk();" value="<#827#>">
-<div id="show_removed_string" style="display:none;"><#1753#></div>
+<p class="formfonttitle_nwm" style="float:left;width:138px; "><#1797#>:</p>
+<input id="show_remove_button" class="button_gen" type="button" class="button" onclick="remove_disk_call();" value="<#844#>">
+<div id="show_removed_string" style="display:none;"><#1795#></div>
 <img style="margin-top:5px;" src="/images/New_ui/networkmap/linetwo2.png">
 </td>
 </tr>
@@ -182,7 +176,7 @@ setTimeout("document.diskForm.submit();", 1);
 <table width="95%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="table1px" id="reduce_usb3_table" style="display:none">
 <tr>
 <td height="50" style="padding:10px 15px 0px 15px;">
-<p class="formfonttitle_nwm" style="float:left;width:138px; " onmouseover="parent.overHint(24);" onmouseout="parent.nd();"><#2301#></p>
+<p class="formfonttitle_nwm" style="float:left;width:138px; " onmouseover="parent.overHint(24);" onmouseout="parent.nd();"><#2351#></p>
 <form method="post" name="form" action="/start_apply.htm" target="hidden_frame">
 <input type="hidden" name="current_page" value="/index.asp">
 <input type="hidden" name="next_page" value="/index.asp">
@@ -212,7 +206,7 @@ document.form.submit();
 </table>
 <div id="unmounted_refresh" style="padding:5px 0px 5px 25px; display:none">
 <ul style="font-size:11px; font-family:Arial; padding:0px; margin:0px; list-style:outside; line-height:150%;">
-<li><#956#><a href="/" target="_parent"><#957#></a><#958#></li>
+<li><#974#><a href="/" target="_parent"><#975#></a><#976#></li>
 </ul>
 </div>
 <form method="post" name="diskForm" action="">

@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#533#> - <#113#></title>
+<title><#548#> - <#116#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="usp_style.css">
@@ -148,12 +148,12 @@ if(slicesb > 0)
 htmlcode += 'margin-top:20px;';
 htmlcode += '"><tr><th align="left" width="160px">';
 htmlcode += '<table id="GNW_'+GN_band+'G" class="gninfo_th_table" align="left" style="margin:auto;border-collapse:collapse;">';
-htmlcode += '<tr><th align="left" style="height:40px;"><#330#></th></tr>';
-htmlcode += "<tr><th align=\"left\" style=\"height:40px;\"><#2186#></th></tr>";
-htmlcode += '<tr><th align="left" style="height:40px;"><#226#></th></tr>';
-htmlcode += '<tr><th align="left" style="height:40px;"><#1560#></th></tr>';
+htmlcode += '<tr><th align="left" style="height:40px;"><#335#></th></tr>';
+htmlcode += "<tr><th align=\"left\" style=\"height:40px;\"><#2239#></th></tr>";
+htmlcode += '<tr><th align="left" style="height:40px;"><#229#></th></tr>';
+htmlcode += '<tr><th align="left" style="height:40px;"><#1598#></th></tr>';
 if(sw_mode != "3"){
-htmlcode += '<tr><th align="left" style="width:20%;height:28px;"><#549#></th></tr>';
+htmlcode += '<tr><th align="left" style="width:20%;height:28px;"><#565#></th></tr>';
 }
 htmlcode += '<tr><th align="left" style="height:40px;"></th></tr>';
 htmlcode += '</table></th>';
@@ -191,31 +191,31 @@ if(show_str.length <= 0)
 show_str = "&nbsp; ";
 htmlcode += '<tr><td align="center" onclick="change_guest_unit('+ unit +','+ subunit +');">'+ show_str +'</td></tr>';
 if(gn_array[i][11] == 0)
-htmlcode += '<tr><td align="center" onclick="change_guest_unit('+ unit +','+ subunit +');"><#1428#></td></tr>';
+htmlcode += '<tr><td align="center" onclick="change_guest_unit('+ unit +','+ subunit +');"><#1466#></td></tr>';
 else{
 var expire_day = Math.floor(gn_array[i][13]/86400);
 var expire_hr = Math.floor((gn_array[i][13]%86400)/3600);
 var expire_min = Math.floor((gn_array[i][13]%3600)/60);
 if(expire_day > 0)
-htmlcode += '<tr><td align="center" onclick="change_guest_unit('+ unit +','+ subunit +');"><b id="expire_day_'+i+'">'+ expire_day + '</b> <#900#> <b id="expire_hr_'+i+'">'+ expire_hr + '</b> <#1223#> <b id="expire_min_'+i+'">' + expire_min +'</b> <#1476#></td></tr>';
+htmlcode += '<tr><td align="center" onclick="change_guest_unit('+ unit +','+ subunit +');"><b id="expire_day_'+i+'">'+ expire_day + '</b> <#918#> <b id="expire_hr_'+i+'">'+ expire_hr + '</b> <#1260#> <b id="expire_min_'+i+'">' + expire_min +'</b> <#1514#></td></tr>';
 else if(expire_hr > 0)
-htmlcode += '<tr><td align="center" onclick="change_guest_unit('+ unit +','+ subunit +');"><b id="expire_hr_'+i+'">'+ expire_hr + '</b> <#1223#> <b id="expire_min_'+i+'">' + expire_min +'</b> <#1476#></td></tr>';
+htmlcode += '<tr><td align="center" onclick="change_guest_unit('+ unit +','+ subunit +');"><b id="expire_hr_'+i+'">'+ expire_hr + '</b> <#1260#> <b id="expire_min_'+i+'">' + expire_min +'</b> <#1514#></td></tr>';
 else{
 if(expire_min > 0)
-htmlcode += '<tr><td align="center" onclick="change_guest_unit('+ unit +','+ subunit +');"><b id="expire_min_'+i+'">' + expire_min +'</b> <#1476#></td></tr>';
+htmlcode += '<tr><td align="center" onclick="change_guest_unit('+ unit +','+ subunit +');"><b id="expire_min_'+i+'">' + expire_min +'</b> <#1514#></td></tr>';
 else
-htmlcode += '<tr><td align="center" onclick="change_guest_unit('+ unit +','+ subunit +');"><b id="expire_min_'+i+'">< 1</b> <#1476#></td></tr>';
+htmlcode += '<tr><td align="center" onclick="change_guest_unit('+ unit +','+ subunit +');"><b id="expire_min_'+i+'">< 1</b> <#1514#></td></tr>';
 }
 }
 }else{
-htmlcode += '<tfoot><tr rowspan="3"><td align="center"><input type="button" class="button_gen" value="<#2229#>" onclick="create_guest_unit('+ unit +','+ subunit +');"></td></tr></tfoot>';
+htmlcode += '<tfoot><tr rowspan="3"><td align="center"><input type="button" class="button_gen" value="<#2279#>" onclick="create_guest_unit('+ unit +','+ subunit +');"></td></tr></tfoot>';
 }
 if(sw_mode != "3"){
 if(gn_array[i][0] == "1") htmlcode += '<tr><td align="center" onclick="change_guest_unit('+ unit +','+ subunit +');">'+ gn_array[i][12] +'</td></tr>';
 }
 if(gn_array[i][0] == "1"){
 htmlcode += '<tr><td align="center" class="gninfo_table_bottom"></td></tr>';
-htmlcode += '<tfoot><tr><td align="center"><input type="button" class="button_gen" value="<#827#>" onclick="close_guest_unit('+ unit +','+ subunit +');"></td></tr></tfoot>';
+htmlcode += '<tfoot><tr><td align="center"><input type="button" class="button_gen" value="<#844#>" onclick="close_guest_unit('+ unit +','+ subunit +');"></td></tr></tfoot>';
 }
 htmlcode += '</table></td>';
 }
@@ -243,7 +243,7 @@ var band5sb = 0;
 var band5sb_2 = 0;
 htmlcode += '<table style="margin-left:20px;margin-top:25px;" width="95%" align="center" cellpadding="4" cellspacing="0" class="gninfo_head_table" id="gninfo_table_2g">';
 htmlcode += '<tr id="2g_title"><td align="left" style="color:#5AD;font-size:16px; border-bottom:1px dashed #AAA;"><span>2.4GHz</span>';
-htmlcode += '<span id="2g_radio_hint" style="font-size: 14px;display:none;color:#FC0;margin-left:17px;">* <#1213#> <a style="font-family:Lucida Console;color:#FC0;text-decoration:underline;cursor:pointer;" onclick="_change_wl_unit_status(0);"><#826#></a></span></td></tr>';
+htmlcode += '<span id="2g_radio_hint" style="font-size: 14px;display:none;color:#FC0;margin-left:17px;">* <#1250#> <a style="font-family:Lucida Console;color:#FC0;text-decoration:underline;cursor:pointer;" onclick="_change_wl_unit_status(0);"><#843#></a></span></td></tr>';
 while(gn_array_2g_tmp.length > 4){
 htmlcode += '<tr><td>';
 htmlcode += gen_gntable_tr(0, gn_array_2g_tmp.slice(0, 4), band2sb);
@@ -262,7 +262,7 @@ if(wl_info.band5g_2_support)
 htmlcode5 += '<span>5GHz-1</span>';
 else
 htmlcode5 += '<span>5GHz</span>';
-htmlcode5 += '<span id="5g_radio_hint" style="font-size: 14px;display:none;color:#FC0;margin-left:17px;">* <#1213#> <a style="font-family:Lucida Console;color:#FC0;text-decoration:underline;cursor:pointer;" onclick="_change_wl_unit_status(1);"><#826#></a></span></td></tr>';
+htmlcode5 += '<span id="5g_radio_hint" style="font-size: 14px;display:none;color:#FC0;margin-left:17px;">* <#1250#> <a style="font-family:Lucida Console;color:#FC0;text-decoration:underline;cursor:pointer;" onclick="_change_wl_unit_status(1);"><#843#></a></span></td></tr>';
 while(gn_array_5g_tmp.length > 4){
 htmlcode5 += '<tr><td >';
 htmlcode5 += gen_gntable_tr(1, gn_array_5g_tmp.slice(0, 4), band5sb);
@@ -278,7 +278,7 @@ document.getElementById("guest_table5").innerHTML = htmlcode5;
 if(wl_info.band5g_2_support){
 htmlcode5_2 += '<table style="margin-left:20px;margin-top:25px;" width="95%" align="center" cellpadding="4" cellspacing="0" class="gninfo_head_table" id="gninfo_table_5g_2">';
 htmlcode5_2 += '<tr id="5g_2_title"><td align="left" style="color:#5AD; font-size:16px; border-bottom:1px dashed #AAA;"><span>5GHz-2</span>';
-htmlcode5_2 += '<span id="5g_2_radio_hint" style="font-size: 14px;display:none;color:#FC0;margin-left:17px;">* <#1213#> <a style="font-family:Lucida Console;color:#FC0;text-decoration:underline;cursor:pointer;" onclick="_change_wl_unit_status(1);"><#826#></a></span></td></tr>';
+htmlcode5_2 += '<span id="5g_2_radio_hint" style="font-size: 14px;display:none;color:#FC0;margin-left:17px;">* <#1250#> <a style="font-family:Lucida Console;color:#FC0;text-decoration:underline;cursor:pointer;" onclick="_change_wl_unit_status(1);"><#843#></a></span></td></tr>';
 while(gn_array_5g_2_tmp.length > 4){
 htmlcode5_2 += '<tr><td >';
 htmlcode5_2 += gen_gntable_tr(2, gn_array_5g_2_tmp.slice(0, 4), band5sb_2);
@@ -301,7 +301,7 @@ add_option(o, "mbss_"+arr, arr, 0);
 }
 function applyRule(){
 var auth_mode = document.form.wl_auth_mode_x.value;
-if(document.form.wl_wpa_psk.value == "<#2176#>")
+if(document.form.wl_wpa_psk.value == "<#2229#>")
 document.form.wl_wpa_psk.value = "";
 if(validForm()){
 showLoading();
@@ -347,7 +347,7 @@ return false;
 }
 var is_common_string = check_common_string(document.form.wl_wpa_psk.value, "wpa_key");
 if(is_common_string){
-if(confirm("<#133#>")){
+if(!confirm("<#136#>")){
 document.form.wl_wpa_psk.focus();
 document.form.wl_wpa_psk.select();
 return false;
@@ -361,7 +361,7 @@ return false;
 }
 if(document.form.wl_expire_radio[0].checked){
 if(document.form.wl_expire_day.value==0 && (document.form.wl_expire_hr.value=="" || document.form.wl_expire_hr.value==0) & (document.form.wl_expire_min.value=="" || document.form.wl_expire_min.value==0)){
-alert("<#137#>");
+alert("<#140#>");
 document.form.wl_expire_min.focus();
 return false;
 }
@@ -550,7 +550,7 @@ function show_wl_maclist_x(){
 var code = "";
 code +='<table width="80%" border="1" cellspacing="0" cellpadding="4" align="center" class="list_table" id="wl_maclist_x_table">';
 if(Object.keys(manually_maclist_list_array).length == 0)
-code +='<tr><td style="color:#FFCC00;"><#1286#></td>';
+code +='<tr><td style="color:#FFCC00;"><#1324#></td>';
 else{
 var userIconBase64 = "NoIcon";
 var clientName, deviceType, deviceVender;
@@ -570,25 +570,25 @@ code +='<tr id="row_'+clientMac+'">';
 code +='<td width="80%" align="center">';
 code += '<table style="width:100%;"><tr><td style="width:40%;height:56px;border:0px;float:right;">';
 if(clientList[clientMac] == undefined) {
-code += '<div class="clientIcon type0" onClick="popClientListEditTable(\'' + clientMac + '\', this, \'\', \'\', \'GuestNetwork\')"></div>';
+code += '<div class="clientIcon type0" onClick="popClientListEditTable(&quot;' + clientMac + '&quot;, this, &quot;&quot;, &quot;&quot;, &quot;GuestNetwork&quot;)"></div>';
 }
 else {
 if(usericon_support) {
 userIconBase64 = getUploadIcon(clientMac.replace(/\:/g, ""));
 }
 if(userIconBase64 != "NoIcon") {
-code += '<div style="text-align:center;" onClick="popClientListEditTable(\'' + clientMac + '\', this, \'\', \'\', \'GuestNetwork\')"><img class="imgUserIcon_card" src="' + userIconBase64 + '"></div>';
+code += '<div style="text-align:center;" onClick="popClientListEditTable(&quot;' + clientMac + '&quot;, this, &quot;&quot;, &quot;&quot;, &quot;GuestNetwork&quot;)"><img class="imgUserIcon_card" src="' + userIconBase64 + '"></div>';
 }
 else if(deviceType != "0" || deviceVender == "") {
-code += '<div class="clientIcon type' + deviceType + '" onClick="popClientListEditTable(\'' +clientMac + '\', this, \'\', \'\', \'GuestNetwork\')"></div>';
+code += '<div class="clientIcon type' + deviceType + '" onClick="popClientListEditTable(&quot;' +clientMac + '&quot;, this, &quot;&quot;, &quot;&quot;, &quot;GuestNetwork&quot;)"></div>';
 }
 else if(deviceVender != "" ) {
 var venderIconClassName = getVenderIconClassName(deviceVender.toLowerCase());
 if(venderIconClassName != "" && !downsize_4m_support) {
-code += '<div class="venderIcon ' + venderIconClassName + '" onClick="popClientListEditTable(\'' + clientMac + '\', this, \'\', \'\', \'GuestNetwork\')"></div>';
+code += '<div class="venderIcon ' + venderIconClassName + '" onClick="popClientListEditTable(&quot;' + clientMac + '&quot;, this, &quot;&quot;, &quot;&quot;, &quot;GuestNetwork&quot;)"></div>';
 }
 else {
-code += '<div class="clientIcon type' + deviceType + '" onClick="popClientListEditTable(\'' + clientMac + '\', this, \'\', \'\', \'GuestNetwork\')"></div>';
+code += '<div class="clientIcon type' + deviceType + '" onClick="popClientListEditTable(&quot;' + clientMac + '&quot;, this, &quot;&quot;, &quot;&quot;, &quot;GuestNetwork&quot;)"></div>';
 }
 }
 }
@@ -615,11 +615,11 @@ var rule_num = document.getElementById('wl_maclist_x_table').rows.length;
 var item_num = document.getElementById('wl_maclist_x_table').rows[0].cells.length;
 var mac = obj.value.toUpperCase();
 if(rule_num >= upper){
-alert("<#1331#> " + upper + " <#1332#>");
+alert("<#1369#> " + upper + " <#1370#>");
 return false;
 }
 if(mac==""){
-alert("<#137#>");
+alert("<#140#>");
 obj.focus();
 obj.select();
 return false;
@@ -631,7 +631,7 @@ return false;
 for(i=0; i<rule_num; i++){
 for(j=0; j<item_num-1; j++){
 if(manually_maclist_list_array[mac] != null){
-alert("<#1325#>");
+alert("<#1363#>");
 return false;
 }
 }
@@ -652,7 +652,7 @@ var tmp_value = "";
 Object.keys(manually_maclist_list_array).forEach(function(key) {
 tmp_value += "<" + key;
 });
-if(tmp_value == "<"+"<#1286#>" || tmp_value == "<")
+if(tmp_value == "<"+"<#1324#>" || tmp_value == "<")
 tmp_value = "";
 document.form.wl_maclist_x.value = tmp_value;
 }
@@ -667,7 +667,7 @@ var childsel=document.createElement("div");
 childsel.setAttribute("id","check_mac");
 childsel.style.color="#FFCC00";
 obj.parentNode.appendChild(childsel);
-document.getElementById("check_mac").innerHTML="<#162#>";
+document.getElementById("check_mac").innerHTML="<#165#>";
 document.getElementById("check_mac").style.display = "";
 return false;
 }else if(flag ==2){
@@ -675,7 +675,7 @@ var childsel=document.createElement("div");
 childsel.setAttribute("id","check_mac");
 childsel.style.color="#FFCC00";
 obj.parentNode.appendChild(childsel);
-document.getElementById("check_mac").innerHTML="<#131#>";
+document.getElementById("check_mac").innerHTML="<#134#>";
 document.getElementById("check_mac").style.display = "";
 return false;
 }else{
@@ -711,14 +711,14 @@ hideClients_Block();
 <table cellpadding="4" cellspacing="0" id="dr_sweet_advise" class="dr_sweet_advise" align="center">
 <tr>
 <td>
-<div class="drword" id="drword"><#174#> <#171#>...
+<div class="drword" id="drword"><#177#> <#174#>...
 <br/>
-<div id="disconnect_hint" style="display:none;"><#172#></div>
+<div id="disconnect_hint" style="display:none;"><#175#></div>
 <br/>
 </div>
 <div id="wireless_client_detect" style="margin-left:10px;position:absolute;display:none;width:400px;">
 <img src="images/loading.gif">
-<div style="margin:-55px 0 0 75px;"><#445#></div>
+<div style="margin:-55px 0 0 75px;"><#446#></div>
 </div>
 <div class="drImg"><img src="images/alertImg.png"></div>
 <div style="height:100px; "></div>
@@ -784,7 +784,7 @@ hideClients_Block();
 <tr>
 <td bgcolor="#4D595D" valign="top" id="table_height" >
 <div>&nbsp;</div>
-<div class="formfonttitle"><#113#></div>
+<div class="formfonttitle"><#116#></div>
 <div style="margin-left:5px;margin-top:10px;margin-bottom:10px"><img src="/images/New_ui/export/line_export.png"></div>
 <div>
 <table width="650px" style="margin:25px;">
@@ -793,7 +793,7 @@ hideClients_Block();
 <img id="guest_image" src="/images/New_ui/network_config.png">
 </td>
 <td>
-<div id="gn_desc" class="formfontdesc" style="font-style: italic;font-size: 14px;"><#1212#></div>
+<div id="gn_desc" class="formfontdesc" style="font-style: italic;font-size: 14px;"><#1249#></div>
 </td>
 </tr>
 </table>
@@ -803,7 +803,7 @@ hideClients_Block();
 <div id="guest_table5_2"></div>
 <table width="80%" border="1" align="center" style="margin-top:10px;display:none" cellpadding="4" cellspacing="0" id="gnset_table" class="FormTable">
 <tr id="wl_unit_field" style="display:none">
-<th><#1251#></th>
+<th><#1288#></th>
 <td>
 <select name="wl_unit" class="input_option" onChange="change_wl_unit();" style="display:none">
 <option id="wl_opt0" class="content_input_fd" value="0" <% nvram_match("wl_unit", "0","selected"); %>>2.4GHz</option>
@@ -819,28 +819,28 @@ hideClients_Block();
 </td>
 </tr>
 <tr>
-<th><#1211#></th>
+<th><#1248#></th>
 <td>
 <p id="wl_vifname"></p>
 </td>
 </tr>
 <tr style="display:none">
-<th><#1209#></th>
+<th><#1246#></th>
 <td>
 <select id="wl_bss_enabled_field" name="wl_bss_enabled" class="input_option">
-<option class="content_input_fd" value="0" <% nvram_match("wl_bss_enabled", "0","selected"); %>><#64#></option>
-<option class="content_input_fd" value="1" <% nvram_match("wl_bss_enabled", "1","selected"); %>><#65#></option>
+<option class="content_input_fd" value="0" <% nvram_match("wl_bss_enabled", "0","selected"); %>><#65#></option>
+<option class="content_input_fd" value="1" <% nvram_match("wl_bss_enabled", "1","selected"); %>><#66#></option>
 </select>
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 1);"><#330#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 1);"><#335#></a></th>
 <td>
 <input type="text" maxlength="32" class="input_32_table" name="wl_ssid" value="<% nvram_get("wl_ssid"); %>" onkeypress="return validator.isString(this, event)" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr style="display:none">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 4);"><#2284#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 4);"><#2334#></a></th>
 <td>
 <select name="wl_nmode_x" class="input_option" onChange="wireless_mode_change(this);" disabled>
 <option value="0" <% nvram_match("wl_nmode_x", "0","selected"); %>><#40#></option>
@@ -848,11 +848,11 @@ hideClients_Block();
 <option value="2" <% nvram_match("wl_nmode_x", "2","selected"); %>>Legacy</option>
 </select>
 <input type="checkbox" name="wl_gmode_check" id="wl_gmode_check" value="" onClick="wl_gmode_protection_check();"> b/g Protection</input>
-<!--span id="wl_nmode_x_hint" style="display:none"><#2330#></span-->
+<!--span id="wl_nmode_x_hint" style="display:none"><#2380#></span-->
 </td>
 </tr>
 <tr id="wl_channel_field">
-<th><a id="wl_channel_select" class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 3);"><#539#></a></th>
+<th><a id="wl_channel_select" class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 3);"><#554#></a></th>
 <td>
 <select name="wl_channel" class="input_option" onChange="insertExtChannelOption();" disabled>
 <% select_channel("WLANConfig11b"); %>
@@ -860,7 +860,7 @@ hideClients_Block();
 </td>
 </tr>
 <tr id="wl_bw_field" style="display:none;">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 14);"><#2193#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 14);"><#2246#></a></th>
 <td>
 <select name="wl_bw" class="input_option" onChange="insertExtChannelOption();" disabled>
 <option class="content_input_fd" value="0" <% nvram_match("wl_bw", "0","selected"); %>>20 MHz</option>
@@ -870,7 +870,7 @@ hideClients_Block();
 </td>
 </tr>
 <tr id="wl_nctrlsb_field">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 15);"><#2212#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 15);"><#2262#></a></th>
 <td>
 <select name="wl_nctrlsb" class="input_option" disabled>
 <option value="lower" <% nvram_match("wl_nctrlsb", "lower", "selected"); %>>lower</option>
@@ -879,7 +879,7 @@ hideClients_Block();
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 5);"><#2186#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 5);"><#2239#></a></th>
 <td>
 <select name="wl_auth_mode_x" class="input_option" onChange="authentication_method_change(this);">
 <option value="open" <% nvram_match("wl_auth_mode_x", "open", "selected"); %>>Open System</option>
@@ -889,11 +889,11 @@ hideClients_Block();
 <option value="pskpsk2" <% nvram_match("wl_auth_mode_x", "pskpsk2","selected"); %>>WPA-Auto-Personal</option>
 </select>
 <br>
-<span id="wl_nmode_x_hint" style="display:none;"><#2330#></span>
+<span id="wl_nmode_x_hint" style="display:none;"><#2380#></span>
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 6);"><#544#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 6);"><#559#></a></th>
 <td>
 <select name="wl_crypto" class="input_option" onChange="authentication_method_change(this);">
 <option value="aes" <% nvram_match("wl_crypto", "aes", "selected"); %>>AES</option>
@@ -902,16 +902,16 @@ hideClients_Block();
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 7);"><#2294#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 7);"><#2344#></a></th>
 <td>
 <input type="text" name="wl_wpa_psk" maxlength="64" class="input_32_table" value="<% nvram_get("wl_wpa_psk"); %>" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 9);"><#2227#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 9);"><#2277#></a></th>
 <td>
 <select name="wl_wep_x" class="input_option" onChange="wep_encryption_change(this);">
-<option value="0" <% nvram_match("wl_wep_x", "0", "selected"); %>><#538#></option>
+<option value="0" <% nvram_match("wl_wep_x", "0", "selected"); %>><#553#></option>
 <option value="1" <% nvram_match("wl_wep_x", "1", "selected"); %>>WEP-64bits</option>
 <option value="2" <% nvram_match("wl_wep_x", "2", "selected"); %>>WEP-128bits</option>
 </select>
@@ -919,7 +919,7 @@ hideClients_Block();
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 10);"><#540#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 10);"><#555#></a></th>
 <td>
 <select name="wl_key" class="input_option" onChange="wep_key_index_change(this);">
 <option value="1" <% nvram_match("wl_key", "1","selected"); %>>1</option>
@@ -930,58 +930,58 @@ hideClients_Block();
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 18);"><#2222#></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 18);"><#2272#></th>
 <td><input type="text" name="wl_key1" id="wl_key1" maxlength="32" class="input_32_table" value="<% nvram_get("wl_key1"); %>" onKeyUp="return change_wlkey(this, 'WLANConfig11b');" autocorrect="off" autocapitalize="off"></td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 18);"><#2223#></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 18);"><#2273#></th>
 <td><input type="text" name="wl_key2" id="wl_key2" maxlength="32" class="input_32_table" value="<% nvram_get("wl_key2"); %>" onKeyUp="return change_wlkey(this, 'WLANConfig11b');" autocorrect="off" autocapitalize="off"></td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 18);"><#2224#></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 18);"><#2274#></th>
 <td>
 <input type="text" name="wl_key3" id="wl_key3" maxlength="32" class="input_32_table" value="<% nvram_get("wl_key3"); %>" onKeyUp="return change_wlkey(this, 'WLANConfig11b');" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 18);"><#2225#></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 18);"><#2275#></th>
 <td>
 <input type="text" name="wl_key4" id="wl_key4" maxlength="32" class="input_32_table" value="<% nvram_get("wl_key4"); %>" onKeyUp="return change_wlkey(this, 'WLANConfig11b');" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr style="display:none">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 8);"><#2290#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 8);"><#2340#></a></th>
 <td>
 <input type="text" name="wl_phrase_x" maxlength="64" class="input_32_table" value="<% nvram_get("wl_phrase_x"); %>" onKeyUp="return is_wlphrase('WLANConfig11b', 'wl_phrase_x', this);" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 25);"><#552#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 25);"><#568#></a></th>
 <td>
 <input type="radio" value="1" name="wl_expire_radio" class="content_input_fd" onClick="">
-<select name="wl_expire_day" class="input_option"></select> <#900#>
-<input type="text" maxlength="2" name="wl_expire_hr" class="input_3_table" value="" onKeyPress="return validator.isNumber(this,event);" onblur="validator.timeRange(this, 0);" autocorrect="off" autocapitalize="off"> <#1223#>
-<input type="text" maxlength="2" name="wl_expire_min" class="input_3_table" value="" onKeyPress="return validator.isNumber(this,event);" onblur="validator.timeRange(this, 1);" autocorrect="off" autocapitalize="off"> <#1476#>
+<select name="wl_expire_day" class="input_option"></select> <#918#>
+<input type="text" maxlength="2" name="wl_expire_hr" class="input_3_table" value="" onKeyPress="return validator.isNumber(this,event);" onblur="validator.timeRange(this, 0);" autocorrect="off" autocapitalize="off"> <#1260#>
+<input type="text" maxlength="2" name="wl_expire_min" class="input_3_table" value="" onKeyPress="return validator.isNumber(this,event);" onblur="validator.timeRange(this, 1);" autocorrect="off" autocapitalize="off"> <#1514#>
 <br>
-<input type="radio" value="0" name="wl_expire_radio" class="content_input_fd" onClick=""><#1428#>
+<input type="radio" value="0" name="wl_expire_radio" class="content_input_fd" onClick=""><#1466#>
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 26);"><#549#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 26);"><#565#></a></th>
 <td>
 <select name="wl_lanaccess" class="input_option">
-<option value="on" <% nvram_match("wl_lanaccess", "on","selected"); %>><#2229#></option>
-<option value="off" <% nvram_match("wl_lanaccess", "off","selected"); %>><#822#></option>
+<option value="on" <% nvram_match("wl_lanaccess", "on","selected"); %>><#2279#></option>
+<option value="off" <% nvram_match("wl_lanaccess", "off","selected"); %>><#839#></option>
 </select>
 </td>
 </tr>
 <tr>
-<th><#1034#></th>
+<th><#1052#></th>
 <td>
 <select name="wl_macmode" class="input_option">
-<option class="content_input_fd" value="disabled" <% nvram_match("wl_macmode", "disabled","selected"); %>><#822#></option>
-<option class="content_input_fd" value="allow" <% nvram_match("wl_macmode", "allow","selected"); %>><#1133#></option>
-<option class="content_input_fd" value="deny" <% nvram_match("wl_macmode", "deny","selected"); %>><#1134#></option>
+<option class="content_input_fd" value="disabled" <% nvram_match("wl_macmode", "disabled","selected"); %>><#839#></option>
+<option class="content_input_fd" value="allow" <% nvram_match("wl_macmode", "allow","selected"); %>><#1169#></option>
+<option class="content_input_fd" value="deny" <% nvram_match("wl_macmode", "deny","selected"); %>><#1170#></option>
 </select>
 <script>
 document.form.wl_macmode.onchange = function(){
@@ -995,17 +995,17 @@ document.getElementById("maclistMain").style.display = (this.value == "disabled"
 <table id="maclistTable" width="80%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable_table">
 <thead>
 <tr>
-<td colspan="2"><#1132#>&nbsp;(<#1435#>&nbsp;64)</td>
+<td colspan="2"><#1168#>&nbsp;(<#1473#>&nbsp;64)</td>
 </tr>
 </thead>
 <tr>
 <th width="80%"><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,10);">Client Name (MAC address)</th>
-<th width="20%"><#1434#></th>
+<th width="20%"><#1472#></th>
 </tr>
 <tr>
 <td width="80%">
 <input type="text" maxlength="17" class="input_macaddr_table" name="wl_maclist_x_0" onKeyPress="return validator.isHWAddr(this,event)" onClick="hideClients_Block();" autocorrect="off" autocapitalize="off" placeholder="ex: <% nvram_get("lan_hwaddr"); %>" style="width:255px;">
-<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" style="position:absolute;display:none;" onclick="pullWLMACList(this);" title="<#1772#>">
+<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" style="position:absolute;display:none;" onclick="pullWLMACList(this);" title="<#1814#>">
 <div id="WL_MAC_List_Block" class="clientlist_dropdown" style="margin-left:107px;"></div>
 </td>
 <td width="20%">
@@ -1016,8 +1016,8 @@ document.getElementById("maclistMain").style.display = (this.value == "disabled"
 <div id="wl_maclist_x_Block"></div>
 </div>
 <div class="apply_gen" id="applyButton" style="display:none;margin-top:20px">
-<input type="button" class="button_gen" value="<#74#>" onclick="guest_divctrl(0);">
-<input type="button" class="button_gen" value="<#72#>" onclick="applyRule();">
+<input type="button" class="button_gen" value="<#75#>" onclick="guest_divctrl(0);">
+<input type="button" class="button_gen" value="<#73#>" onclick="applyRule();">
 </div>
 </td>
 </tr>

@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#533#> - Blocking Page</title>
+<title><#548#> - Blocking Page</title>
 <script type="text/JavaScript" src="/js/jquery.js"></script>
 <style>
 body{
@@ -222,32 +222,32 @@ if(block_info != "")
 block_info = JSON.parse(block_info);
 var client_list_array = '<% get_client_detail_info(); %>';
 var custom_name = decodeURIComponent('<% nvram_char_to_ascii("", "custom_clientlist"); %>').replace(/&#62/g, ">").replace(/&#60/g, "<");
-var category_info = [["Parental Controls", "1", "<#665#>", "<#667#>", "Sites with profane or vulgar content generally considered inappropriate for minors; includes sites that offer erotic content or ads for sexual services, but excludes sites with sexually explicit images."],
-["Parental Controls", "2", "<#665#>", "<#667#>", "Sites that provide information about or software for sharing and transferring files related to child pornography."],
-["Parental Controls", "3", "<#665#>", "<#667#>", "Sites with sexually explicit imagery designed for sexual arousal, including sites that offer sexual services."],
-["Parental Controls", "4", "<#665#>", "<#667#>", "Sites with or without explicit images that discuss reproduction, sexuality, birth control, sexually transmitted disease, safe sex, or coping with sexual trauma."],
-["Parental Controls", "5", "<#665#>", "<#667#>", "Sites that sell swimsuits or intimate apparel with images of models wearing them."],
-["Parental Controls", "6", "<#665#>", "<#667#>", "Sites showing nude or partially nude images that are generally considered artistic, not vulgar or pornographic."],
-["Parental Controls", "8", "<#665#>", "<#667#>", "Sites that promote, sell, or provide information about alcohol or tobacco products."],
-["Parental Controls", "9", "<#665#>", "<#668#>", "Sites that promote and discuss how to perpetrate nonviolent crimes, including burglary, fraud, intellectual property theft, and plagiarism; includes sites that sell plagiarized or stolen materials."],
-["Parental Controls", "10", "<#665#>", "<#668#>", "Sites with content that is gratuitously offensive and shocking; includes sites that show extreme forms of body modification or mutilation and animal cruelty."],
-["Parental Controls", "14", "<#665#>", "<#668#>", "Sites that promote hate and violence; includes sites that espouse prejudice against a social group, extremely violent and dangerous activities, mutilation and gore, or the creation of destructive devices."],
-["Parental Controls", "15", "<#665#>", "<#668#>", "Sites about weapons, including their accessories and use; excludes sites about military institutions or sites that discuss weapons as sporting or recreational equipment."],
-["Parental Controls", "16", "<#665#>", "<#668#>", "Sites that promote, encourage, or discuss abortion, including sites that cover moral or political views on abortion."],
-["Parental Controls", "25", "<#665#>", "<#668#>", "Sites that promote, glamorize, supply, sell, or explain how to use illicit or illegal intoxicants."],
-["Parental Controls", "26", "<#665#>", "<#668#>", "Sites that discuss the cultivation, use, or preparation of marijuana, or sell related paraphernalia."],
-["Parental Controls", "11", "<#665#>", "<#669#>", "Sites that promote or provide information on gambling, including online gambling sites."],
-["Parental Controls", "24", "<#680#>", "<#670#>", "Sites that provide web-based services or downloadable software for Voice over Internet Protocol (VoIP) calls"],
-["Parental Controls", "51", "<#680#>", "<#671#>", "Sites that send malicious tracking cookies to visiting web browsers."],
-["Parental Controls", "53", "<#680#>", "<#672#>", "Sites that provide software for bypassing computer security systems."],
-["Parental Controls", "89", "<#680#>", "<#672#>", "Malicious Domain or website, Domains that host malicious payloads."],
-["Parental Controls", "42", "<#680#>", "<#673#>", "Content servers, image servers, or sites used to gather, process, and present data and data analysis, including web analytics tools and network monitors."],
-["Parental Controls", "56", "<#683#>", "<#685#>", "Sites that provide downloadable 'joke' software, including applications that can unsettle users."],
-["Parental Controls", "70", "<#683#>", "<#685#>", "Sites that use scraped or copied content to pollute search engines with redundant and generally unwanted results."],
-["Parental Controls", "71", "<#683#>", "<#685#>", "Sites dedicated to displaying advertisements, including sites used to display banner or popup advertisement."],
-["Parental Controls", "57", "<#683#>", "<#686#>", "Sites that distribute password cracking software."],
-["Parental Controls", "69", "<#687#>", "<#689#>", "Sites that provide tools for remotely monitoring and controlling computers"],
-["Parental Controls", "23", "<#687#>", "<#690#>", "Sites that primarily provide streaming radio or TV programming; excludes sites that provide other kinds of streaming content."],
+var category_info = [["Parental Controls", "1", "<#681#>", "<#683#>", "Sites with profane or vulgar content generally considered inappropriate for minors; includes sites that offer erotic content or ads for sexual services, but excludes sites with sexually explicit images."],
+["Parental Controls", "2", "<#681#>", "<#683#>", "Sites that provide information about or software for sharing and transferring files related to child pornography."],
+["Parental Controls", "3", "<#681#>", "<#683#>", "Sites with sexually explicit imagery designed for sexual arousal, including sites that offer sexual services."],
+["Parental Controls", "4", "<#681#>", "<#683#>", "Sites with or without explicit images that discuss reproduction, sexuality, birth control, sexually transmitted disease, safe sex, or coping with sexual trauma."],
+["Parental Controls", "5", "<#681#>", "<#683#>", "Sites that sell swimsuits or intimate apparel with images of models wearing them."],
+["Parental Controls", "6", "<#681#>", "<#683#>", "Sites showing nude or partially nude images that are generally considered artistic, not vulgar or pornographic."],
+["Parental Controls", "8", "<#681#>", "<#683#>", "Sites that promote, sell, or provide information about alcohol or tobacco products."],
+["Parental Controls", "9", "<#681#>", "<#684#>", "Sites that promote and discuss how to perpetrate nonviolent crimes, including burglary, fraud, intellectual property theft, and plagiarism; includes sites that sell plagiarized or stolen materials."],
+["Parental Controls", "10", "<#681#>", "<#684#>", "Sites with content that is gratuitously offensive and shocking; includes sites that show extreme forms of body modification or mutilation and animal cruelty."],
+["Parental Controls", "14", "<#681#>", "<#684#>", "Sites that promote hate and violence; includes sites that espouse prejudice against a social group, extremely violent and dangerous activities, mutilation and gore, or the creation of destructive devices."],
+["Parental Controls", "15", "<#681#>", "<#684#>", "Sites about weapons, including their accessories and use; excludes sites about military institutions or sites that discuss weapons as sporting or recreational equipment."],
+["Parental Controls", "16", "<#681#>", "<#684#>", "Sites that promote, encourage, or discuss abortion, including sites that cover moral or political views on abortion."],
+["Parental Controls", "25", "<#681#>", "<#684#>", "Sites that promote, glamorize, supply, sell, or explain how to use illicit or illegal intoxicants."],
+["Parental Controls", "26", "<#681#>", "<#684#>", "Sites that discuss the cultivation, use, or preparation of marijuana, or sell related paraphernalia."],
+["Parental Controls", "11", "<#681#>", "<#685#>", "Sites that promote or provide information on gambling, including online gambling sites."],
+["Parental Controls", "24", "<#696#>", "<#686#>", "Sites that provide web-based services or downloadable software for Voice over Internet Protocol (VoIP) calls"],
+["Parental Controls", "51", "<#696#>", "<#687#>", "Sites that send malicious tracking cookies to visiting web browsers."],
+["Parental Controls", "53", "<#696#>", "<#688#>", "Sites that provide software for bypassing computer security systems."],
+["Parental Controls", "89", "<#696#>", "<#688#>", "Malicious Domain or website, Domains that host malicious payloads."],
+["Parental Controls", "42", "<#696#>", "<#689#>", "Content servers, image servers, or sites used to gather, process, and present data and data analysis, including web analytics tools and network monitors."],
+["Parental Controls", "56", "<#699#>", "<#701#>", "Sites that provide downloadable 'joke' software, including applications that can unsettle users."],
+["Parental Controls", "70", "<#699#>", "<#701#>", "Sites that use scraped or copied content to pollute search engines with redundant and generally unwanted results."],
+["Parental Controls", "71", "<#699#>", "<#701#>", "Sites dedicated to displaying advertisements, including sites used to display banner or popup advertisement."],
+["Parental Controls", "57", "<#699#>", "<#702#>", "Sites that distribute password cracking software."],
+["Parental Controls", "69", "<#703#>", "<#705#>", "Sites that provide tools for remotely monitoring and controlling computers"],
+["Parental Controls", "23", "<#703#>", "<#706#>", "Sites that primarily provide streaming radio or TV programming; excludes sites that provide other kinds of streaming content."],
 ["Home Protection", "91", "Anti-Trojan detecting and blocked", "", "Anti-Trojan detecting and blocked"],
 ["Home Protection", "39", "Malicious site blocked", "", "Sites about bypassing proxy servers or web filtering systems, including sites that provide tools for that purpose."],
 ["Home Protection", "73", "Malicious site blocked", "", "Sites that contain potentially harmful downloads."],
@@ -341,7 +341,7 @@ code += "</div></li>";
 if(casenum != "")
 code += "<li><div><span class='desc_info'>URL: </span>" + target_info.url +"</div></li>";
 if(target_info.category_type == "Parental Controls")
-code += "<li><div><span class='desc_info'><#675#> :</span>" + target_info.content_category + "</div></li>";
+code += "<li><div><span class='desc_info'><#691#> :</span>" + target_info.content_category + "</div></li>";
 code += "</ul>";
 document.getElementById('detail_info').innerHTML = code;
 if(target_info.category_type == "Parental Controls"){
@@ -386,9 +386,9 @@ else{ //for Parental Control(Time Scheduling)
 code_title = "<div class='er_title' style='height:auto;'>Warning! The device can't access the Internet now.</div>"
 code_suggestion = "<ul>";
 if(bwdpi_support)
-parental_string = "<#1883#>";
+parental_string = "<#1929#>";
 else
-parental_string = "<#256#>";
+parental_string = "<#259#>";
 code_suggestion += "<li>If you are a manager and want to access the Internet, please go to "+ parental_string +" for configuration change.</li>"; //untranslated string
 code_suggestion += "<li>If you are a client and have any problems, please contact your manager.</li>";//untranslated string
 code_suggestion += "</ul>";
@@ -411,7 +411,7 @@ document.getElementById('suggestion').innerHTML = code_suggestion;
 </div>
 <div id="page_title" class="div_td title_text"></div>
 </div>
-<div class="prod_madelName"><#534#></div>
+<div class="prod_madelName"><#549#></div>
 <div id="main_reason" class="p1 title_gap">Detailed informations:</div><div ></div>
 <div>
 <div class="p1 title_gap"></div>
@@ -419,7 +419,7 @@ document.getElementById('suggestion').innerHTML = code_suggestion;
 <div id="detail_info"></div>
 </div>
 </div>
-<div class="p1 title_gap"><#518#></div>
+<div class="p1 title_gap"><#533#></div>
 <div>
 <div class="p1 title_gap"></div>
 <div class="nologin">
@@ -431,7 +431,7 @@ document.getElementById('suggestion').innerHTML = code_suggestion;
 </div>
 </div>
 </div>
-<div id="go_btn" class='button' style="display:none;"><#826#></div>
+<div id="go_btn" class='button' style="display:none;"><#843#></div>
 </div>
 </body>
 </html>

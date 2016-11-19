@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#533#> - System Information</title>
+<title><#548#> - System Information</title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <style>
@@ -25,12 +25,11 @@ font-weight: bolder;
 <script language="JavaScript" type="text/javascript" src="/client_function.js"></script>
 <script language="JavaScript" type="text/javascript" src="/js/jquery.js"></script>
 <script>
-hwacc = "<% nvram_get("ctf_disable"); %>";
-hwacc_force = "<% nvram_get("ctf_disable_force"); %>";
-arplist = [<% get_arp_table(); %>];
-etherstate = "<% sysinfo("ethernet"); %>";
-odmpid = "<% nvram_get("odmpid");%>";
-ctf_fa = "<% nvram_get("ctf_fa_mode"); %>";
+var hwacc = "<% nvram_get("ctf_disable"); %>";
+var hwacc_force = "<% nvram_get("ctf_disable_force"); %>";
+var etherstate = "<% sysinfo("ethernet"); %>";
+var odmpid = "<% nvram_get("odmpid");%>";
+var ctf_fa = "<% nvram_get("ctf_fa_mode"); %>";
 overlib_str_tmp = "";
 overlib.isOut = true;
 function initial(){
@@ -50,7 +49,6 @@ document.getElementById("model_id").innerHTML = odmpid;
 else
 document.getElementById("model_id").innerHTML = productid;
 var buildno = '<% nvram_get("buildno"); %>';
-var firmver = '<% nvram_get("firmver"); %>'
 var extendno = '<% nvram_get("extendno"); %>';
 if ((extendno == "") || (extendno == "0"))
 document.getElementById("fwver").innerHTML = buildno;
@@ -70,16 +68,10 @@ update_temperatures();
 },
 success: function(response){
 code = "<b>2.4 GHz:</b><span> " + curr_coreTmp_2_raw + "</span>";
-if (band5g_support) {
+if (band5g_support)
 code += "&nbsp;&nbsp;-&nbsp;&nbsp;<b>5 GHz:</b> <span>" + curr_coreTmp_5_raw + "</span>";
-}
-if ((based_modelid == "RT-N18U") || (based_modelid == "RT-AC56U") ||
-(based_modelid == "RT-AC56S") || (based_modelid == "RT-AC68U") ||
-(based_modelid == "RT-AC87U") || (based_modelid == "RT-AC68U") ||
-(based_modelid == "RT-AC3200") || (based_modelid == "RT-AC88U") ||
-(based_modelid == "RT-AC5300") || (based_modelid == "RT-AC3100") || (based_modelid == "EA6200") || (based_modelid == "EA6400") || (based_modelid == "EA6700") || (based_modelid == "EA6900") || (based_modelid == "EA9200") || (based_modelid == "R7000") || (based_modelid == "R6300V2")) {
+if (curr_coreTmp_cpu != "")
 code +="&nbsp;&nbsp;-&nbsp;&nbsp;<b>CPU:</b> <span>" + curr_coreTmp_cpu +"&deg;C</span>";
-}
 document.getElementById("temp_td").innerHTML = code;
 setTimeout("update_temperatures();", 3000);
 }
@@ -170,10 +162,10 @@ hostname = "";
 if (devicemac == "00:00:00:00:00:00") {
 devicename = '<span class="ClientName">&lt;none&gt;</span>';
 } else {
-overlib_str = "<p><#170#>:</p>" + devicemac;
+overlib_str = "<p><#173#>:</p>" + devicemac;
 if (clientList[devicemac])
 hostname = (clientList[devicemac].nickName == "") ? clientList[devicemac].hostname : clientList[devicemac].nickName;
-if ((hostname != "") && (typeof hostname !== 'undefined')) {
+if ((typeof hostname !== 'undefined') && (hostname != "")) {
 devicename = '<span class="ClientName" onclick="oui_query_full_vendor(\'' + devicemac +'\');;overlib_str_tmp=\''+ overlib_str +'\';return overlib(\''+ overlib_str +'\');" onmouseout="nd();" style="cursor:pointer; text-decoration:underline;">'+ hostname +'</span>';
 } else {
 devicename = '<span class="ClientName" onclick="oui_query_full_vendor(\'' + devicemac +'\');;overlib_str_tmp=\''+ overlib_str +'\';return overlib(\''+ overlib_str +'\');" onmouseout="nd();" style="cursor:pointer; text-decoration:underline;">'+ devicemac +'</span>';
@@ -199,17 +191,6 @@ tmpPort = "0";
 else{
 tmpPort = 4 - tmpPort;
 }
-}else if (based_modelid == "EA6700" || based_modelid == "EA6400" || based_modelid == "EA6200"){
-if (tmpPort == "5"){ //CPU port
-continue;
-}else if (tmpPort == "4"){
-tmpPort = "0";
-}else{
-tmpPort++;
-}
-}else if (based_modelid == "EA6900"){
-if (tmpPort == "5") //CPU port
-continue;
 }
 if (tmpPort == "0") {
 port = "WAN";
@@ -317,8 +298,8 @@ setTimeout("updateClientList();", 3000);
 <td><% nvram_get("rc_support"); %></td>
 </tr>
 <tr>
-<th><#1205#></a></th>
-<td><span id="boot_days"></span> <#900#> <span id="boot_hours"></span> <#1223#> <span id="boot_minutes"></span> <#1476#> <span id="boot_seconds"></span> <#1760#></td>
+<th><#1242#></a></th>
+<td><span id="boot_days"></span> <#918#> <span id="boot_hours"></span> <#1260#> <span id="boot_minutes"></span> <#1514#> <span id="boot_seconds"></span> <#1802#></td>
 </tr>
 <tr>
 <th>Temperatures</th>
@@ -451,7 +432,7 @@ Associated: <span><% sysinfo("conn.wifi.1.assoc"); %></span>
 </tr>
 <tr class="apply_gen" valign="top" height="95px">
 <td>
-<input type="button" onClick="location.href=location.href" value="<#882#>" class="button_gen">
+<input type="button" onClick="location.href=location.href" value="<#899#>" class="button_gen">
 </td>
 </tr>
 </tbody>

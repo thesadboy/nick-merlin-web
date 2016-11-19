@@ -7,7 +7,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#533#> - <#221#></title>
+<title><#548#> - <#224#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <script language="JavaScript" type="text/javascript" src="/state.js"></script>
@@ -124,7 +124,7 @@ document.getElementById("vserverblock").innerHTML = code;
 <tr bgcolor="#4D595D">
 <td valign="top">
 <div>&nbsp;</div>
-<div class="formfonttitle"><#488#> - <#221#></div>
+<div class="formfonttitle"><#489#> - <#224#></div>
 <div style="margin-left:5px;margin-top:10px;margin-bottom:10px"><img src="/images/New_ui/export/line_export.png"></div>
 <br>
 <div style="margin-top:8px">
@@ -136,7 +136,7 @@ document.getElementById("vserverblock").innerHTML = code;
 </div>
 <br>
 <div class="apply_gen">
-<input type="button" onClick="location.href=location.href" value="<#882#>" class="button_gen">
+<input type="button" onClick="location.href=location.href" value="<#899#>" class="button_gen">
 </div>
 </td>
 </tr>

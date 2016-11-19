@@ -19,6 +19,7 @@ var hw_ver = '<% nvram_get("hardware_version"); %>';
 var usb_flag = '<% nvram_get("ehci_ports"); %>';
 var odmpid = '<% nvram_get("odmpid"); %>';
 var ttc = '<% nvram_get("territory_code"); %>';
+var is_TW_sku = (ttc.search("TW") == -1) ? false : true;
 var color = '<% nvram_get("color"); %>';
 color = color.toUpperCase();
 var update_color = '';
@@ -69,14 +70,14 @@ else
 return color;
 }
 function QKinternettype_load_body(){
+parent.flag_manual = 0;
 if('<% check_asus_model(); %>' == '0'){
 document.getElementById("warming_field").style.display ="";
 document.getElementById("main_manual").style.display ="none";
 disable_button();
 }
 if(wanstate == 4 && wansbstate == 4){
-gotoPage("/error_page.htm", "6", 1);
-return;
+parent.changeSubnet = true;
 }
 if(parent.repeater_support){
 document.getElementById("repeater_title").style.display = "";
@@ -87,7 +88,7 @@ document.getElementById("mediaBridge_title").style.display = "";
 if(parent.wisp_support){
 document.getElementById("wisp_title").style.display = "";
 }
-parent.document.title = "<#533#> - Welcome!";
+parent.document.title = "<#548#> - Welcome!";
 parent.set_step("t0");
 update_color = assign_color();
 MP_png_path = "/images/Model_product_"+ update_color +".png";
@@ -100,6 +101,8 @@ document.getElementById("ModelPid_img").src="/images/Model_product.png";
 else if(odmpid.length > 0 && odmpid != based_modelid){ //odmpid MODELDEP
 if(odmpid == "RT-N66W" || odmpid == "RT-AC66W" || odmpid == "RT-AC68W" || odmpid == "RT-AC68RW")
 document.getElementById("ModelPid_img").src="/images/Model_product_W.png";
+else if(odmpid == "RT-AC66U_B1")
+document.getElementById("ModelPid_img").src="/images/RT-AC66U_V2/Model_product.png";
 else
 document.getElementById("ModelPid_img").src="/images/Model_product.png";
 }
@@ -110,10 +113,10 @@ document.getElementById("QISmain").style.display = "none";
 document.getElementById("QISmain_m").style.display = "";
 return true;
 }
-var check_desc1 = "<#416#>";
-var check_desc2 = "<#417#>";
-var check_desc3 = "<#418#>";
-var check_desc4 = "<#419#>";
+var check_desc1 = "<#2442#>";
+var check_desc2 = "<#2443#>";
+var check_desc3 = "<#2444#>";
+var check_desc4 = "<#2445#>";
 if(based_modelid == "RT-N12" || based_modelid == "AP-N12" || hw_ver.search("N12") != -1){ //MODELDEP : N12 serious
 var desc1_split = check_desc1.split("#ZVSPLITVZ#");
 var desc2_split = check_desc2.split("#ZVSPLITVZ#");
@@ -124,31 +127,15 @@ if( hw_ver.search("RTN12HP") != -1 //MODELDEP : RT-N12HP
 && check_desc2.split("#ZVSPLITVZ#").length == 3
 && check_desc3.split("#ZVSPLITVZ#").length == 3
 && check_desc4.split("#ZVSPLITVZ#").length == 3){
-document.getElementById("Productdesc_1").innerHTML = desc1_split[1];
-document.getElementById("Productdesc_2").innerHTML = desc2_split[1];
-document.getElementById("Productdesc_3").innerHTML = desc3_split[1];
-document.getElementById("Productdesc_4").innerHTML = desc4_split[1];
 }else if( hw_ver.search("APN12HP") != -1 //MODELDEP : AP-N12HP
 && check_desc1.split("#ZVSPLITVZ#").length == 3
 && check_desc2.split("#ZVSPLITVZ#").length == 3
 && check_desc3.split("#ZVSPLITVZ#").length == 3
 && check_desc4.split("#ZVSPLITVZ#").length == 3){
-document.getElementById("Productdesc_1").innerHTML = desc1_split[2];
-document.getElementById("Productdesc_2").innerHTML = desc2_split[2];
-document.getElementById("Productdesc_3").innerHTML = desc3_split[2];
-document.getElementById("Productdesc_4").innerHTML = desc4_split[2];
 }else{ // rest of N12 serious
-document.getElementById("Productdesc_1").innerHTML = desc1_split[0];
-document.getElementById("Productdesc_2").innerHTML = desc2_split[0];
-document.getElementById("Productdesc_3").innerHTML = desc3_split[0];
-document.getElementById("Productdesc_4").innerHTML = desc4_split[0];
 }
 }
 else{
-document.getElementById("Productdesc_1").innerHTML = check_desc1;
-document.getElementById("Productdesc_2").innerHTML = check_desc2;
-document.getElementById("Productdesc_3").innerHTML = check_desc3;
-document.getElementById("Productdesc_4").innerHTML = check_desc4;
 }
 if(based_modelid == "4G-AC55U"){
 document.getElementById("main_manual").style.display = "none";
@@ -156,7 +143,13 @@ document.getElementById("lte_manual").style.display = "";
 }
 else if(based_modelid == "PL-N12" || based_modelid == "PL-AC56")
 document.getElementById("Productdesc_4").style.display = "none";
-document.getElementById("btn_next_step").focus();
+setTimeout(function() {document.getElementById("btn_next_step").focus();}, 10);
+if(wanauxstate != 1){
+location.href = "/qis/QIS_admin_pass.htm";
+}
+else{
+document.getElementById("QISmain").style.display = "";
+}
 }
 function redirect_page(redirect_flag){
 document.redirectForm.action = "/qis/QIS_"+redirect_flag+".htm";
@@ -198,11 +191,12 @@ else if(flag == null){
 document.getElementById("producticon").style.display = "none";
 if(based_modelid == "RT-AC87U"){
 document.getElementById("noti_wan_uplus").style.display = "none";
-document.getElementById("Productdesc_1").innerHTML = "<#520#>";
+document.getElementById("productDesc").style.display = "";
+document.getElementById("Productdesc_1").innerHTML = "<#535#>";
 document.getElementById("Productdesc_1").style.color = "#FC0";
-document.getElementById("Productdesc_2").innerHTML = '<#530#>';
-document.getElementById("Productdesc_3").innerHTML = '<#531#>';
-document.getElementById("Productdesc_4").innerHTML = '<#532#>';
+document.getElementById("Productdesc_2").innerHTML = '<#545#>';
+document.getElementById("Productdesc_3").innerHTML = '<#546#>';
+document.getElementById("Productdesc_4").innerHTML = '<#547#>';
 }
 if(parent.ISMOBILE){
 document.getElementById("wan_unplug_m").style.display = "";
@@ -288,7 +282,7 @@ if(flag == null){
 document.getElementById("loadingIcon").style.display = "";
 changeiuiBackground(1);
 if(plc_cnt == 2){
-alert("<#68#>!!<#520#>");
+alert("<#69#>!!<#535#>");
 submitForm(1);
 }
 else
@@ -305,7 +299,7 @@ function startDetect(){
 if(parent.powerline_support)
 update_plc_info();
 else{
-if((autodet_state == "2" && autodet_auxstate == "6") || (wanstate == 2 && wansbstate == 0 && wanauxstate == 0)){
+if((autodet_state == "6" || autodet_auxstate == "6") || (wanstate == 2 && wansbstate == 0 && wanauxstate == 0)){
 submitForm(1);
 }
 else{
@@ -322,10 +316,14 @@ if(parent.modem_support){
 if(parent.ISMOBILE){
 if(document.getElementById("unplugImg1_m").style.display == "none"){
 $("#unplugImg2_m").fadeOut(500);
+if(odmpid == "RT-AC66U_B1")
+document.getElementById("unplugImg1_m").src = "/images/RT-AC66U_V2/WANunplug_eth.png";
 setTimeout('$("#unplugImg1_m").fadeIn(500);', 500);
 }
 else{
 $("#unplugImg1_m").fadeOut(500);
+if(odmpid == "RT-AC66U_B1")
+document.getElementById("unplugImg2_m").src = "/images/RT-AC66U_V2/WANunplug_usb.png";
 setTimeout('$("#unplugImg2_m").fadeIn(500);', 500);
 }
 }
@@ -333,10 +331,14 @@ else{
 if(usb_flag != "" && based_modelid != "RT-AC87U"){
 if(document.getElementById("unplugImg1").style.display == "none"){
 $("#unplugImg2").fadeOut(500);
+if(odmpid == "RT-AC66U_B1")
+document.getElementById("unplugImg1").src = "/images/RT-AC66U_V2/WANunplug_eth.png";
 setTimeout('$("#unplugImg1").fadeIn(500);', 500);
 }
 else{
 $("#unplugImg1").fadeOut(500);
+if(odmpid == "RT-AC66U_B1")
+document.getElementById("unplugImg2").src = "/images/RT-AC66U_V2/WANunplug_usb.png";
 setTimeout('$("#unplugImg2").fadeIn(500);', 500);
 }
 }
@@ -349,10 +351,14 @@ setTimeout('$("#unplugImg1").fadeIn(500);', 500);
 else{
 if(parent.ISMOBILE){
 $("#unplugImg1_m").fadeOut(500);
+if(odmpid == "RT-AC66U_B1")
+document.getElementById("unplugImg1_m").src = "/images/RT-AC66U_V2/WANunplug_eth.png";
 setTimeout('$("#unplugImg1_m").fadeIn(500);', 500);
 }
 else{
 $("#unplugImg1").fadeOut(500);
+if(odmpid == "RT-AC66U_B1")
+document.getElementById("unplugImg1").src = "/images/RT-AC66U_V2/WANunplug_eth.png";
 setTimeout('$("#unplugImg1").fadeIn(500);', 500);
 }
 }
@@ -373,19 +379,19 @@ return true;
 function uploadSetting(){
 var file_obj = document.form.file;
 if(file_obj.value == ""){
-alert("<#137#>");
+alert("<#140#>");
 file_obj.focus();
 }
 else if(file_obj.value.length < 6 ||
 file_obj.value.lastIndexOf(".CFG") < 0 ||
 file_obj.value.lastIndexOf(".CFG") != (file_obj.value.length)-4){
-alert("<#1789#>");
+alert("<#1831#>");
 file_obj.focus();
 }
 else{
 stopFlag = 1;
 parent.document.getElementById('proceeding_img_text').style.display = "";
-parent.document.getElementById('connHint').innerHTML = "<#1778#>";
+parent.document.getElementById('connHint').innerHTML = "<#1820#>";
 document.form.action = "/upload.cgi";
 document.form.enctype = "multipart/form-data";
 document.form.submit();
@@ -409,10 +415,10 @@ disable_button_x[x].disabled = true;
 <input type="hidden" name="prev_page" value="">
 <input type="hidden" name="flag" value="">
 <input type="hidden" name="sw_mode" value="1">
-<div class="QISmain" id="QISmain">
+<div class="QISmain" id="QISmain" style="display:none">
 <table border=0 align="center" cellpadding="2" cellspacing="0">
 <tr>
-<td align="left"><div class="description_down"><#421#></div></td>
+<td align="left"><div class="description_down"><#422#></div></td>
 </tr>
 <tr>
 <td>
@@ -425,14 +431,37 @@ disable_button_x[x].disabled = true;
 <table style="margin-left:20px;" width="98%" border=0 align="center" cellpadding="5" cellspacing="0">
 <tr>
 <td id="desc_td" width="55%" colspan="2" >
-<div id="productDesc" style="font-style:italic;">
-<p style="font-size:20px;font-weight:bolder;margin-bottom:15px;"><#484#></p>
+<p style="font-size:20px;font-weight:bolder;margin-bottom:15px;font-style:italic"><#485#></p>
+<div id="productDesc" style="font-style:italic;display:none">
 <ul>
 <li style="line-height:25px;" id="Productdesc_1"></li>
 <li style="line-height:25px;" id="Productdesc_2"></li>
 <li style="line-height:25px;" id="Productdesc_3"></li>
 <li style="line-height:25px;" id="Productdesc_4"></li>
 </ul>
+</div>
+<div>
+<div style="margin: 15px 0">
+<div style="">
+<div style="margin: 0 0 10px 6px"><#292#></div>
+</div>
+<div style="">
+<div>
+<input class="button_gen_long" id="btn_next_step" type="button" value="<#41#>" onclick="startDetect();" style="">
+<img id="loadingIcon" style="display:none;" src="/images/InternetScan.gif">
+</div>
+</div>
+</div>
+<div style="margin: 30px 0">
+<div style="">
+<div style="margin: 0 0 10px 6px"><#293#></div>
+</div>
+<div style="">
+<div>
+<input class="button_gen_long" type="button" value="<#180#>" onclick="submitForm(0);" style="">
+</div>
+</div>
+</div>
 </div>
 </td>
 <td id="product_td" width="45%" style="height:300px">
@@ -441,7 +470,7 @@ disable_button_x[x].disabled = true;
 <img src="/images/qis/border.png">
 <div style="margin-top:-330px">
 <div id="noti_wan_uplus" class="QISGeneralFont" style="color:#FC0;font-weight:bolder;text-align:left;margin-left:25px;">
-<#520#>
+<#535#>
 </div>
 <br>
 <div><img id="unplugImg" src="/images/WANunplug.png"></div>
@@ -453,9 +482,8 @@ disable_button_x[x].disabled = true;
 </tr>
 <tr>
 <td colspan="3" align="left">
-<input class="button_gen_long" type="button" value="<#177#>" onclick="submitForm(0);" style="margin-left:30px;">
-<input class="button_gen_long" id="btn_next_step" type="button" value="<#826#>" onclick="startDetect();" style="margin-left:50px;">
-<img id="loadingIcon" style="display:none;" src="/images/InternetScan.gif">
+<!--input class="button_gen_long" type="button" value="<#180#>" onclick="submitForm(0);" style="margin-left:30px;"-->
+<!--input class="button_gen_long" id="btn_next_step" type="button" value="<#843#>" onclick="startDetect();" style="margin-left:50px;"-->
 </td>
 </tr>
 </table>
@@ -466,17 +494,17 @@ disable_button_x[x].disabled = true;
 <div id="AreaHint" style="margin-top:25px;">
 <div><img style="width: 720px; *width: 710px; height: 2px;" src="/images/New_ui/export/line_export.png"></div>
 <div id="main_manual" style="padding-left:20px;margin-top:10px">
-<span><#461#> </span>
-<span><#460#> <#234#></span>
-<span id="repeater_title" style="display:none">/ <#251#></span>
-<span id="mediaBridge_title" style="display:none">/ <#238#></span>
-<span id="wisp_title" style="display:none">/ <#252#></span>
+<span><#462#> </span>
+<span><#461#> <#237#></span>
+<span id="repeater_title" style="display:none">/ <#254#></span>
+<span id="mediaBridge_title" style="display:none">/ <#241#></span>
+<span id="wisp_title" style="display:none">/ <#255#></span>
 <span>. </span>
-<span><#457#></span>
+<span><#458#></span>
 </div>
 <div id="lte_manual" style="padding-left:20px;margin-top:10px;display:none">
-<span><#459#> </span>
-<span><#458#></span>
+<span><#460#> </span>
+<span><#459#></span>
 </div>
 <div style="height:30px;display:none">
 <input id="upload_setting_profile" type="file" name="file" class="input" style="color:#FFCC00;" onchange="uploadSetting();">
@@ -489,14 +517,14 @@ disable_button_x[x].disabled = true;
 <div style="display:none;" id="QISmain_m">
 <div id="QISFeature" style="margin-left:-20px;">
 <ul>
-<li style="line-height:25px;"><#416#></li>
-<li style="line-height:25px;"><#417#></li>
-<li style="line-height:25px;"><#418#></li>
-<li style="line-height:25px;"><#419#></li>
+<li style="line-height:25px;"><#2442#></li>
+<li style="line-height:25px;"><#2443#></li>
+<li style="line-height:25px;"><#2444#></li>
+<li style="line-height:25px;"><#2445#></li>
 </ul>
 </div>
 <div id="wan_unplug_m" style="color:#FC0;display:none;text-align:center;">
-<div style="text-align:left;"><#520#></div>
+<div style="text-align:left;"><#535#></div>
 <br><br>
 <img id="unplugImg0_m" src="/images/WANunplug.png">
 <img id="unplugImg1_m" style="margin-top: -220px;" src="/images/WANunplug_eth.png">
@@ -504,10 +532,10 @@ disable_button_x[x].disabled = true;
 </div><br>
 <fieldset class="theFieldset">
 <div id="nextBtn" class="row">
-<a id="loadingIcon_iui" class="iuiA" onclick="startDetect();"><#77#></a>
+<a id="loadingIcon_iui" class="iuiA" onclick="startDetect();"><#79#></a>
 </div>
 <div id="skipBtn" class="row">
-<a id="loadingIcon_skip" class="iuiA" onclick="skip();"><#77#></a>
+<a id="loadingIcon_skip" class="iuiA" onclick="skip();"><#79#></a>
 </div>
 <script>
 if(!parent.tmo_support){

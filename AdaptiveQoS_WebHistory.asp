@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#533#> - <#566#></title>
+<title><#548#> - <#582#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="usp_style.css">
@@ -240,10 +240,10 @@ document.getElementById(obj).style.marginLeft = blockmarginLeft+"px";
 <tr>
 <td bgcolor="#4D595D" colspan="3" valign="top">
 <div>&nbsp;</div>
-<div id="content_title" class="formfonttitle"><#1470#> - <#566#></div>
+<div id="content_title" class="formfonttitle"><#1508#> - <#582#></div>
 <div style="margin-left:5px;margin-top:10px;margin-bottom:10px"><img src="/images/New_ui/export/line_export.png"></div>
 <div class="formfontdesc">
-<#567#>
+<#583#>
 </div>
 <div style="margin:5px">
 <table style="margin-left:0px;" width="95%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
@@ -294,7 +294,7 @@ document.form.submit();
 <table style="width:100%" id="log_table"></table>
 </div>
 <div class="apply_gen">
-<input class="button_gen_long" onClick="getWebHistory(document.form.clientList.value)" type="button" value="<#882#>">
+<input class="button_gen_long" onClick="getWebHistory(document.form.clientList.value)" type="button" value="<#899#>">
 </div>
 </div>
 </td>

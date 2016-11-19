@@ -167,7 +167,13 @@ userIconBase64 = clientMacUploadIcon[clientObj.mac];
 }
 }
 var deviceTitle = (clientObj.dpiDevice == "") ? clientObj.vendor : clientObj.dpiDevice;
-if(userIconBase64 != "NoIcon") {
+if(top.isIE8){
+clientHtmlTd += '<div class="clientIconIE8HACK"';
+clientHtmlTd += ' title="';
+clientHtmlTd += deviceTitle;
+clientHtmlTd += '"></div>';
+}
+else if(userIconBase64 != "NoIcon") {
 clientHtmlTd += '<div title="'+ deviceTitle + '"">';
 clientHtmlTd += '<img id="imgUserIcon_'+ i +'" class="imgUserIcon" src="' + userIconBase64 + '"';
 clientHtmlTd += '</div>';
@@ -218,20 +224,20 @@ var rssi_t = 0;
 var connectModeTip = "";
 rssi_t = convRSSI(clientObj.rssi);
 if(isNaN(rssi_t))
-connectModeTip = "<#1906#>";
+connectModeTip = "<#1952#>";
 else {
 switch (rssi_t) {
 case 1:
-connectModeTip = "<#466#>: <#260#>\n";
+connectModeTip = "<#467#>: <#263#>\n";
 break;
 case 2:
-connectModeTip = "<#466#>: <#261#>\n";
+connectModeTip = "<#467#>: <#264#>\n";
 break;
 case 3:
-connectModeTip = "<#466#>: <#262#>\n";
+connectModeTip = "<#467#>: <#265#>\n";
 break;
 case 4:
-connectModeTip = "<#466#>: <#263#>\n";
+connectModeTip = "<#467#>: <#266#>\n";
 break;
 }
 if(stainfo_support) {
@@ -239,7 +245,7 @@ if(clientObj.curTx != "")
 connectModeTip += "Tx Rate: " + clientObj.curTx + "\n";
 if(clientObj.curRx != "")
 connectModeTip += "Rx Rate: " + clientObj.curRx + "\n";
-connectModeTip += "<#552#>: " + clientObj.wlConnectTime + "";
+connectModeTip += "<#568#>: " + clientObj.wlConnectTime + "";
 }
 }
 if(parent.sw_mode != 4) {
@@ -271,9 +277,9 @@ i++;
 }
 if(clientHtmlTd == ''){
 if(networkmap_fullscan == 1)
-clientHtmlTd = '<div style="color:#FC0;height:30px;text-align:center;margin-top:15px"><#911#><img src="/images/InternetScan.gif"></div>';
+clientHtmlTd = '<div style="color:#FC0;height:30px;text-align:center;margin-top:15px"><#929#><img src="/images/InternetScan.gif"></div>';
 else
-clientHtmlTd = '<div style="color:#FC0;height:30px;text-align:center;margin-top:15px"><#1286#></div>';
+clientHtmlTd = '<div style="color:#FC0;height:30px;text-align:center;margin-top:15px"><#1324#></div>';
 }
 clientHtml += clientHtmlTd;
 clientHtml += '</td></tr></tbody></table>';
@@ -330,21 +336,21 @@ pagesVar.endIndex = (pagesVar.endIndex < pagesVar.CLIENTSPERPAGE) ? pagesVar.CLI
 drawClientList(pagesVar.curTab);
 }
 function retOverLibStr(client){
-var overlibStr = "<p><#170#>:</p>" + client.mac.toUpperCase();
+var overlibStr = "<p><#173#>:</p>" + client.mac.toUpperCase();
 if(client.ssid)
 overlibStr += "<p>SSID:</p>" + client.ssid.replace(/"/g, '&quot;');
 if(client.isLogin)
 overlibStr += "<p>Logged In User:</p>YES";
 if(client.isPrinter)
-overlibStr += "<p><#913#></p>YES";
+overlibStr += "<p><#931#></p>YES";
 if(client.isITunes)
-overlibStr += "<p><#912#></p>YES";
+overlibStr += "<p><#930#></p>YES";
 if(client.isWL > 0){
-overlibStr += "<p><#2177#>:</p>" + wl_nband_title[client.isWL-1] + " (" + client.rssi + " dBm)";
+overlibStr += "<p><#2230#>:</p>" + wl_nband_title[client.isWL-1] + " (" + client.rssi + " dBm)";
 if(stainfo_support) {
 overlibStr += "<p>Tx Rate:</p>" + ((client.curTx != "") ? client.curTx : "-");
 overlibStr += "<p>Rx Rate:</p>" + ((client.curRx != "") ? client.curRx : "-");
-overlibStr += "<p><#552#>:</p>" + client.wlConnectTime;
+overlibStr += "<p><#568#>:</p>" + client.wlConnectTime;
 }
 }
 return overlibStr;
@@ -503,7 +509,7 @@ drawClientList();
 </table>
 <br/>
 <img height="25" id="leftBtn" onclick="updatePagesVar('-');" style="cursor:pointer;margin-left:10px;" src="/images/arrow-left.png">
-<input type="button" id="refresh_list" class="button_gen" value="<#882#>" style="margin-left:70px;">
+<input type="button" id="refresh_list" class="button_gen" value="<#899#>" style="margin-left:70px;">
 <script>
 document.getElementById('refresh_list').onclick = function(){
 var local_mac = '<% nvram_get("lan_hwaddr"); %>';

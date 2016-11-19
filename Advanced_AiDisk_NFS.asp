@@ -7,7 +7,7 @@
 <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
-<link rel="icon" href="images/favicon.png"><title><#533#> - NFS Exports</title>
+<link rel="icon" href="images/favicon.png"><title><#548#> - NFS Exports</title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="usp_style.css">
@@ -76,7 +76,7 @@ var nfsd_enable = '<% nvram_get("nfsd_enable"); %>';
 var nfsd_exportlist_array = '<% nvram_get("nfsd_exportlist"); %>';
 function initial(){
 show_menu();
-document.getElementById("_APP_Installation").innerHTML = '<table><tbody><tr><td><div class="_APP_Installation"></div></td><td><div style="width:120px;"><#181#></div></td></tr></tbody></table>';
+document.getElementById("_APP_Installation").innerHTML = '<table><tbody><tr><td><div class="_APP_Installation"></div></td><td><div style="width:120px;"><#184#></div></td></tr></tbody></table>';
 document.getElementById("_APP_Installation").className = "menu_clicked";
 shownfsd_exportlist();
 document.aidiskForm.protocol.value = PROTOCOL;
@@ -126,7 +126,7 @@ if(j != item_num-2)
 tmp_value += ">";
 }
 }
-if(tmp_value == "<"+"<#1286#>" || tmp_value == "<")
+if(tmp_value == "<"+"<#1324#>" || tmp_value == "<")
 tmp_value = "";
 document.form.nfsd_exportlist.value = tmp_value;
 showLoading();
@@ -135,7 +135,7 @@ document.form.submit();
 }
 function get_disk_tree(){
 if(disk_flag == 1){
-alert('<#1606#>');
+alert('<#1646#>');
 return false;
 }
 cal_panel_block();
@@ -440,7 +440,7 @@ function addRow_Group(upper){
 var rule_num = document.getElementById('nfsd_exportlist_table').rows.length;
 var item_num = document.getElementById('nfsd_exportlist_table').rows[0].cells.length;
 if(rule_num >= upper){
-alert("<#1331#> " + upper + " <#1332#>");
+alert("<#1369#> " + upper + " <#1370#>");
 return false;
 }
 if(document.form.nfsd_path_x_0.value==""){
@@ -452,7 +452,7 @@ return false;
 if(item_num >=2){
 for(i=0; i<rule_num; i++){
 if(document.form.nfsd_path_x_0.value == document.getElementById('nfsd_exportlist_table').rows[i].cells[0].innerHTML){
-alert("<#1325#>");
+alert("<#1363#>");
 document.form.nfsd_path_x_0.focus();
 document.form.nfsd_path_x_0.select();
 return false;
@@ -489,7 +489,7 @@ var nfsd_exportlist_row = nfsd_exportlist_array.split('&#60');
 var code = "";
 code +='<table width="100%" cellspacing="0" cellpadding="4" align="center" class="list_table" id="nfsd_exportlist_table">';
 if(nfsd_exportlist_row.length == 1)
-code +='<tr><td style="color:#FFCC00;" colspan="6"><#1286#></td></tr>';
+code +='<tr><td style="color:#FFCC00;" colspan="6"><#1324#></td></tr>';
 else{
 for(var i = 1; i < nfsd_exportlist_row.length; i++){
 code +='<tr id="row'+i+'">';
@@ -516,23 +516,23 @@ document.getElementById('PATH').value = "/" + dir_array[1] + "/" + dir_array[2] 
 <div id="DM_mask" class="mask_bg"></div>
 <div id="folderTree_panel" class="panel_folder" >
 <table><tr><td>
-<div class="machineName" style="width:200px;font-family:Microsoft JhengHei;font-size:12pt;font-weight:bolder; margin-top:15px;margin-left:30px;"><#534#></div>
+<div class="machineName" style="width:200px;font-family:Microsoft JhengHei;font-size:12pt;font-weight:bolder; margin-top:15px;margin-left:30px;"><#549#></div>
 </td>
 <td>
 <div style="width:240px;margin-top:17px;margin-left:125px;">
 <table>
 <tr>
-<td><div id="createFolderBtn" class="createFolderBtn" title="<#579#>"></div></td>
-<td><div id="deleteFolderBtn" class="deleteFolderBtn" title="<#910#>"></div></td>
-<td><div id="modifyFolderBtn" class="modifyFolderBtn" title="<#1556#>"></div></td>
+<td><div id="createFolderBtn" class="createFolderBtn" title="<#595#>"></div></td>
+<td><div id="deleteFolderBtn" class="deleteFolderBtn" title="<#928#>"></div></td>
+<td><div id="modifyFolderBtn" class="modifyFolderBtn" title="<#1594#>"></div></td>
 <tr>
 </table>
 </div>
 </td></tr></table>
 <div id="e0" class="folder_tree"></div>
 <div style="background-image:url(images/Tree/bg_02.png);background-repeat:no-repeat;height:90px;">
-<input class="button_gen" type="button" style="margin-left:27%;margin-top:18px;" onclick="cancel_folderTree();" value="<#74#>">
-<input class="button_gen" type="button" onclick="confirm_folderTree();" value="<#879#>">
+<input class="button_gen" type="button" style="margin-left:27%;margin-top:18px;" onclick="cancel_folderTree();" value="<#75#>">
+<input class="button_gen" type="button" onclick="confirm_folderTree();" value="<#896#>">
 </div>
 </div>
 <div id="DM_mask_floder" class="mask_floder_bg"></div>
@@ -612,8 +612,8 @@ submit_server(1);
 <tr>
 <th>Enable legacy (NFS V2) support</th>
 <td>
-<input type="radio" name="nfsd_enable_v2" class="input" value="1" <% nvram_match_x("", "nfsd_enable_v2", "1", "checked"); %>><#65#>
-<input type="radio" name="nfsd_enable_v2" class="input" value="0" <% nvram_match_x("", "nfsd_enable_v2", "0", "checked"); %>><#64#>
+<input type="radio" name="nfsd_enable_v2" class="input" value="1" <% nvram_match_x("", "nfsd_enable_v2", "1", "checked"); %>><#66#>
+<input type="radio" name="nfsd_enable_v2" class="input" value="0" <% nvram_match_x("", "nfsd_enable_v2", "0", "checked"); %>><#65#>
 </td>
 </tr>
 </table>
@@ -650,7 +650,7 @@ submit_server(1);
 </table>
 <div id="nfsd_exportlist_Block"></div>
 <div class="apply_gen">
-<input type="button" name="button" class="button_gen" onclick="apply();" value="<#72#>"/>
+<input type="button" name="button" class="button_gen" onclick="apply();" value="<#73#>"/>
 </div>
 </tr>
 </table>

@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#533#> - <#217#></title>
+<title><#548#> - <#220#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="other.css">
@@ -32,13 +32,13 @@ document.getElementById("jffsbackup").style.display = "none";
 }
 }
 function restoreRule(){
-var alert_string = "<#1780#>";
+var alert_string = "<#1822#>";
 if(lan_ipaddr != '<% nvram_default_get("lan_ipaddr"); %>')
-alert_string += "<#1782#>\n\n".replace("192.168.1.1", '<% nvram_default_get("lan_ipaddr"); %>');
-alert_string += "<#1781#>";
+alert_string += "<#1824#>\n\n".replace("192.168.1.1", '<% nvram_default_get("lan_ipaddr"); %>');
+alert_string += "<#1823#>";
 if(confirm(alert_string)){
 document.form.action1.blur();
-showtext(document.getElementById("loading_block2"), "<#1758#>");
+showtext(document.getElementById("loading_block2"), "<#1800#>");
 document.getElementById('loading_block3').style.display = "none";
 showLoading();
 document.restoreform.submit();
@@ -59,18 +59,18 @@ location.href='Settings_'+productid+'.CFG?path=' + flag;
 function uploadSetting(){
 var file_obj = document.form.file;
 if(file_obj.value == ""){
-alert("<#137#>");
+alert("<#140#>");
 file_obj.focus();
 }
 else if(file_obj.value.length < 6 ||
 file_obj.value.lastIndexOf(".CFG") < 0 ||
 file_obj.value.lastIndexOf(".CFG") != (file_obj.value.length)-4){
-alert("<#1789#>");
+alert("<#1831#>");
 file_obj.focus();
 }
 else{
 disableCheckChangedStatus();
-showtext(document.getElementById("loading_block2"), "<#1778#>");
+showtext(document.getElementById("loading_block2"), "<#1820#>");
 document.getElementById('loading_block3').style.display = "none";
 document.form.submit();
 }
@@ -81,7 +81,7 @@ location.href='backup_jffs.tar';
 function uploadJFFS(){
 var file_obj = document.form.file2;
 if(file_obj.value == ""){
-alert("<#137#>");
+alert("<#140#>");
 file_obj.focus();
 }
 else if(file_obj.value.length < 6 ||
@@ -112,9 +112,9 @@ document.getElementById('loading_block1').style.display = "none";
 document.getElementById('loading_block2').style.display = "none";
 document.getElementById('loading_block3').style.display = "";
 if(findasus_support){
-document.getElementById('loading_block3').innerHTML = "<div><#233#></div>";
+document.getElementById('loading_block3').innerHTML = "<div><#236#></div>";
 }else{
-document.getElementById('loading_block3').innerHTML = "<div><#173#>.<#159#></div>";
+document.getElementById('loading_block3').innerHTML = "<div><#176#>.<#162#></div>";
 }
 }
 },
@@ -147,7 +147,7 @@ location.href = "index.asp";
 <table cellpadding="5" cellspacing="0" id="dr_sweet_advise" class="dr_sweet_advise" align="center">
 <tr>
 <td>
-<div class="drword" id="drword"><#174#> <#171#>...
+<div class="drword" id="drword"><#177#> <#174#>...
 <br/>
 <br/>
 </div>
@@ -186,9 +186,9 @@ location.href = "index.asp";
 <tr>
 <td bgcolor="#4D595D" valign="top">
 <div>&nbsp;</div>
-<div class="formfonttitle"><#212#> - <#217#></div>
+<div class="formfonttitle"><#215#> - <#220#></div>
 <div style="margin-left:5px;margin-top:10px;margin-bottom:10px"><img src="/images/New_ui/export/line_export.png"></div>
-<div class="formfontdesc"><#1788#></div>
+<div class="formfontdesc"><#1830#></div>
 <table width="100%" border="1" align="center" cellpadding="6" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <thead>
 <tr>
@@ -197,32 +197,32 @@ location.href = "index.asp";
 </thead>
 <tr>
 <th width="25%" align="right">
-<a class="hintstyle" href="javascript:void(0);" onclick="openHint(19,1)"><#1784#></a>
+<a class="hintstyle" href="javascript:void(0);" onclick="openHint(19,1)"><#1826#></a>
 </th>
 <td>
-<input class="button_gen" onclick="restoreRule();" type="button" value="<#884#>" name="action1" />
+<input class="button_gen" onclick="restoreRule();" type="button" value="<#901#>" name="action1" />
 <input type="hidden" name="wl_gmode_protection_x" value="<% nvram_get("wl_gmode_protection_x"); %>" />
 </td>
 </tr>
 <tr>
 <th align="right">
-<a class="hintstyle" href="javascript:void(0);" onclick="openHint(19,2)"><#1787#></a>
+<a class="hintstyle" href="javascript:void(0);" onclick="openHint(19,2)"><#1829#></a>
 </th>
 <td>
-<input class="button_gen" onclick="saveSetting();" type="button" value="<#880#>" name="action2" />
+<input class="button_gen" onclick="saveSetting();" type="button" value="<#897#>" name="action2" />
 <span id="transfer_ddns_field" style="display:none"><input id="transfer_ddns" type="checkbox">Transfer ASUS DDNS name</span>
 </td>
 </tr>
 <tr>
 <th align="right">
-<a class="hintstyle" href="javascript:void(0);" onclick="openHint(19,3)"><#1791#></a>
+<a class="hintstyle" href="javascript:void(0);" onclick="openHint(19,3)"><#1833#></a>
 </th>
 <td>
 <div style="margin-left:-10px;">
 <table>
 <tr>
 <td style="border:0px">
-<input type="button" class="button_gen" onclick="uploadSetting();" value="<#887#>"/>
+<input type="button" class="button_gen" onclick="uploadSetting();" value="<#904#>"/>
 </td>
 <td style="border:0px">
 <input type="file" name="file" class="input" style="color:#FFCC00;"/>
@@ -244,7 +244,7 @@ location.href = "index.asp";
 Backup JFFS partition
 </th>
 <td>
-<input class="button_gen" onclick="saveJFFS();" type="button" value="<#880#>" name="action10" />
+<input class="button_gen" onclick="saveJFFS();" type="button" value="<#897#>" name="action10" />
 </td>
 </tr>
 <tr id="jffsrestore">
@@ -256,7 +256,7 @@ Restore JFFS partition
 <table>
 <tr>
 <td style="border:0px">
-<input type="button" class="button_gen" onclick="uploadJFFS();" value="<#887#>"/>
+<input type="button" class="button_gen" onclick="uploadJFFS();" value="<#904#>"/>
 </td>
 <td style="border:0px">
 <input id="jffsfile" type="file" name="file2" class="input" style="color:#FFCC00;"/>

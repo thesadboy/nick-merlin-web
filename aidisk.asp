@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#533#> - <#1466#></title>
+<title><#548#> - <#1504#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <script type="text/javascript" src="/state.js"></script>
@@ -22,7 +22,7 @@ var folderlist = [];
 var page = parseInt('<% get_parameter("page"); %>'-'0');
 function initial(){
 show_menu();
-document.getElementById("_APP_Installation").innerHTML = '<table><tbody><tr><td><div class="_APP_Installation""></div></td><td><div style="width:120px;"><#181#></div></td></tr></tbody></table>';
+document.getElementById("_APP_Installation").innerHTML = '<table><tbody><tr><td><div class="_APP_Installation""></div></td><td><div style="width:120px;"><#184#></div></td></tr></tbody></table>';
 document.getElementById("_APP_Installation").className = "menu_clicked";
 document.getElementById("statusframe").style.display = "block";
 if(page == 2)

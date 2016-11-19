@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 <link rel="icon" href="images/favicon.png">
-<title><#533#> - <#95#></title>
+<title><#548#> - <#97#></title>
 <script type="text/JavaScript" src="/js/jquery.js"></script>
 <style>
 body{
@@ -238,51 +238,7 @@ var wans_dualwan_orig = '<% nvram_get("wans_dualwan"); %>';
 var wans_flag = (wans_dualwan_orig.search("none") == -1) ? 1 : 0;
 if(wans_dualwan_orig.search(" ") == -1)
 wans_flag = 0;
-var new_lan_ip = (function(){
-var current_lanip = '<% nvram_get("lan_ipaddr"); %>';
-var current_mask = '<% nvram_get("lan_netmask"); %>';
-var MAX_SUBNET = 3232300800;
-var MIN_LAN_IP = 3232235521;
-var inet_aton = function(ip_str){
-if(!ip_str)
-return -1;
-var re = /^(\d+)\.(\d+)\.(\d+)\.(\d+)$/;
-if(re.test(ip_str)){
-var v1 = parseInt(RegExp.$1);
-var v2 = parseInt(RegExp.$2);
-var v3 = parseInt(RegExp.$3);
-var v4 = parseInt(RegExp.$4);
-if(v1 < 256 && v2 < 256 && v3 < 256 && v4 < 256)
-return v1*256*256*256+v2*256*256+v3*256+v4;
-}
-return -2;
-}
-var inet_ntoa = function(ip_num){
-var v1, v2, v3, v4;
-var ip_str = "";
-if(!ip_num || typeof(ip_num) != "number")
-return null;
-v1 = (ip_num&0xff000000)>>>24;
-v2 = (ip_num&0x00ff0000)>>>16;
-v3 = (ip_num&0x0000ff00)>>>8;
-v4 = (ip_num&0x000000ff);
-ip_str = v1+"."+v2+"."+v3+"."+v4;
-return ip_str;
-}
-if(tmo_support){
-return (current_lanip.indexOf("192.168.29") == -1) ? "192.168.29.1" : "192.168.24.1";
-}
-else{
-var reverse_mask_num = ~(inet_aton(current_mask));
-var current_lanip_num = inet_aton(current_lanip);
-var lan_subnet = current_lanip_num+reverse_mask_num;
-if(lan_subnet >= MAX_SUBNET)
-var new_lanip_num = MIN_LAN_IP;
-else
-var new_lanip_num = lan_subnet+1;
-return inet_ntoa(new_lanip_num);
-}
-})();
+var new_lan_ip = [<% get_next_lanip(); %>][0].next_lanip;
 function initial(){
 <% login_state_hook(); %>
 var LoginIP = login_ip_str();
@@ -292,25 +248,25 @@ var url_flag = "";
 var html_code_notlogin = "<ul><li>Please check with your network administrator.</li></ul>";
 var showtext = function(obj, str){if(obj)obj.innerHTML=str;}
 if(casenum == 1){
-showtext($("#failReason1")[0], "<#505#>");
+$("#page_title").html("<#520#>");
 html_code += "<ul>";
-html_code += "<li><#520#></li>";
+html_code += "<li><#502#></li>";
+html_code += "<li><#503#></li>";
 html_code += "</ul>";
 $("#wanLink").click(function(){
 detect_general();
 });
+$("#reason_title").hide();
+$("#reason_field").hide();
+$("#suggestion").hide();
 }
 else if(casenum == 2){
 html_code += "<ul>";
 html_code += "<li>";
 if(wansbstate == 2 || wanauxstate == 3){ //Authentication Failed
-showtext($("#failReason1")[0], "<#506#>");
-html_code += "<div>";
-html_code += "<span><#521#></span>";
-html_code += "<span><#522#></span>";
-html_code += "</div>";
+$("#page_title").html("<#505#>");
+html_code += "<div><#504#></div>";
 $("#wanLink").click(function(){
-pppoeLink();
 });
 }
 else if(wansbstate == 1){ //No Response
@@ -330,39 +286,54 @@ $("#back_btn").show();
 $("#wanLink").click(function(){
 history.go(-1);
 });
-$("#wanLink").html("<#1679#>");
+$("#wanLink").html("<#1721#>");
 }
 html_code += "</li>";
 html_code += "</ul>";
+$("#wanLink").hide();
+$("#reason_title").hide();
+$("#reason_field").hide();
+$("#suggestion").hide();
 }
 else if(casenum == 3){
-showtext($("#failReason1")[0], "<#319#>");
+$("#page_title").html("<#326#>");
 html_code += "<ul>";
-html_code += "<li><#525#></li>";
+html_code += "<li><#507#></li>";
+html_code += "<li><#540#></li>";
 html_code += "</ul>";
 $("#wanLink").click(function(){
 detect_general();
 });
+$("#wanLink").html("<#506#>");
+$("#wanLink").hide();
+$("#reason_title").hide();
+$("#reason_field").hide();
+$("#suggestion").hide();
 }
 else if(casenum == 4){
-showtext($("#failReason1")[0], "<#510#>");
+showtext($("#failReason1")[0], "<#525#>");
 html_code += "<ul>";
-html_code += "<li><#526#></li>";
+html_code += "<li><#541#></li>";
 html_code += "</ul>";
 $("#wanLink").click(function(){
 detect_general();
 });
 }
 else if(casenum == 5){
-if(wanstate == 5)
-showtext($("#failReason1")[0], "<#511#>");
-else
-showtext($("#failReason1")[0], "<#512#>");
+if(wanstate == 5){
+$("#page_title").html("<#511#>");
+}
+else{
+$("#page_title").html("<#512#>");
+}
 html_code += '<ul>';
-if(wanstate == 5)
-html_code += '<li><#527#></li>';
-else
-html_code += '<li><#528#></li>';
+if(wanstate == 5){
+html_code += "<li><#508#></li>";
+}
+else{
+html_code += "<li><#509#></li>";
+html_code += "<li><#510#></li>";
+}
 html_code += '</ul>';
 if(wanstate == 5){
 $("#wanLink").click(function(){
@@ -373,36 +344,36 @@ $("#wanLink").click(function(){
 detect_general();
 });
 }
+$("#wanLink").hide();
+$("#reason_title").hide();
+$("#reason_field").hide();
+$("#suggestion").hide();
 }
 else if(casenum.search("6") !== -1){
-if(LoginIP != "0.0.0.0" && LoginIP != nowIP){
-showtext($("#failReason1")[0], "<#513#> Please check again.");
-html_code = html_code_notlogin;
-}else{
-showtext($("#failReason1")[0], "<#513#>");
+$("#page_title").html("<#528#>");
 html_code += "<ul>";
-html_code += "<li><#501#>";
+html_code += "<li><#513#>";
 html_code += "<span style='font-weight:bolder'>"+ new_lan_ip +"</span></li>";
-html_code += "<li><#502#></li>";
-html_code += "<li><#519#></li>";
+html_code += "<li><#514#></li>";
 html_code += "</ul>";
-}
-$("#wanLink").html("<#77#>");
+$("#wanLink").html("<#79#>");
 $("#wanLink").click(function(){
 change_lan_subnet();
 });
+$("#reason_title").hide();
+$("#reason_field").hide();
 $("#suggestion").hide();
 }
 else if(casenum == 8){
-showtext($("#failReason1")[0], "<#25#>");
+$("#page_title").html("<#517#>");
 if(LoginIP != "0.0.0.0" && LoginIP != nowIP){
 html_code = html_code_notlogin;
 $("#wanLink").hide();
 }
 else{
 html_code += "<ul>";
-html_code += "<li><a href='/QIS_wizard.htm?flag=manual'><#442#></a></li>";
-html_code += "<li><#519#></li>";
+html_code += "<li><#515#></li>";
+html_code += "<li><#516#></li>";
 html_code += "</ul>";
 if(sw_mode == "2"){
 if(wlc_express == '1')
@@ -418,6 +389,9 @@ $("#wanLink").click(function(){
 top.location.href = "/QIS_wizard.htm?flag=" + url_flag;
 });
 }
+$("#wanLink").hide();
+$("#reason_title").hide();
+$("#reason_field").hide();
 $("#suggestion").hide();
 }
 else{
@@ -449,26 +423,7 @@ function manually_start_wan_Link(){
 top.location.href = "/index.asp?flag=Internet";
 }
 function change_lan_subnet(){
-send_setting();
-$("#wanLink").hide();
-$("#submitBtn").show();
-$("#submitBtn").html('<span><#881#>&nbsp</span><img src="/images/InternetScan.gif">')
-}
-function send_setting(){
-$.ajax({
-url: '/setting_lan.htm',
-dataType: 'script',
-error: function(xhr){
-setTimeout(send_setting, 1000);
-if(xhr.responseText.search("Main_Login.asp") !== -1) top.location.href = "/updateSubnet.htm";
-},
-success: function(response){
-setTimeout(detect_router, 5000);
-}
-});
-}
-if (!window.location.origin) {
-window.location.origin = window.location.protocol + "//" + window.location.hostname + (window.location.port ? ':' + window.location.port: '');
+top.location.href = "/updateSubnet.htm";
 }
 function iAmAlive(json){
 top.location.href = location.origin.replace(location.hostname, new_lan_ip)
@@ -483,7 +438,7 @@ timeout: 2000,
 error: function(xhr){
 setTimeout(detect_router, 1000);
 setTimeout(function(){
-$("#case_content ul").html("<li><#94#></li>");
+$("#case_content ul").html("<li><#96#></li>");
 }, 3000);
 }
 });
@@ -535,17 +490,17 @@ setTimeout(detect_ppp_connect, 1000);
 <div class="div_td img_gap">
 <div class="login_img"></div>
 </div>
-<div id="page_title" class="div_td title_text"><#504#></div>
+<div id="page_title" class="div_td title_text"><#519#></div>
 </div>
-<div class="prod_madelName"><#534#></div>
-<div id="reason_title" class="p1 title_gap"><#503#></div>
+<div class="prod_madelName"><#549#></div>
+<div id="reason_title" class="p1 title_gap"><#518#></div>
 <div id="reason_field">
 <div class="p1 title_gap"></div>
 <div class="nologin">
 <div id="failReason1"></div>
 </div>
 </div>
-<div id="suggest_title" class="p1 title_gap"><#518#></div>
+<div id="suggest_title" class="p1 title_gap"><#533#></div>
 <div>
 <div class="p1 title_gap"></div>
 <div class="nologin">
@@ -569,14 +524,14 @@ setTimeout(detect_ppp_connect, 1000);
 <div id="suggestion">
 <ul>
 <li>
-<span><#516#></span>
+<span><#531#></span>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div>
-<div id="wanLink" class='button' onclick="history.go(-1)"><#826#></div>
+<div id="wanLink" class='button'><#843#></div>
 <div id="submitBtn" class='button button_background' style="display:none"></div>
 </div>
 </body>

@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#533#> - <#1466#></title>
+<title><#548#> - AiCloud 2.0</title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <script type="text/javascript" src="/state.js"></script>
@@ -17,6 +17,7 @@
 <script type="text/javascript" src="/md5.js"></script>
 <script type="text/javascript" src="/general.js"></script>
 <script type="text/javascript" src="/validator.js"></script>
+<script type="text/javascript" src="/disk_functions.js"></script>
 <script type="text/javascript" src="/js/jquery.js"></script>
 <script type="text/javascript" src="/switcherplugin/jquery.iphone-switch.js"></script>
 <script type="text/javascript" src="/disk_functions.js"></script>
@@ -200,23 +201,23 @@ if(window.scrollTo)
 window.scrollTo(0,0);
 cal_panel_block("invitation", 0.25);
 if(!isInvite){
-document.getElementById("invitationInfo").innerHTML = "<br/> <#610#>";
+document.getElementById("invitationInfo").innerHTML = "<br/> <#626#>";
 $("#invitation").fadeIn(300);
 $("#invitationBg").fadeIn(300);
 }
 else{
 var htmlCode = "";
 htmlCode += "<table width='98%' style='margin-top:15px'>";
-htmlCode += "<tr height='40px'><td width='30%'><#1259#></td><td style='font-weight:bolder;'>" + decode_array[0] + "</td></tr>";
-htmlCode += "<tr height='40px'><td width='30%'><#839#></td><td style='font-weight:bolder;'>" + parseRule(decode_array[2]) + "</td></tr>";
+htmlCode += "<tr height='40px'><td width='30%'><#1297#></td><td style='font-weight:bolder;'>" + decode_array[0] + "</td></tr>";
+htmlCode += "<tr height='40px'><td width='30%'><#857#></td><td style='font-weight:bolder;'>" + parseRule(decode_array[2]) + "</td></tr>";
 htmlCode += "<tr height='40px'><td width='30%'>Destination</td><td style='font-weight:bolder;'>" + decode_array[1] + "</td></tr>";
-htmlCode += "<tr height='40px'><td width='30%'><#1876#></td><td>";
+htmlCode += "<tr height='40px'><td width='30%'><#1922#></td><td>";
 htmlCode += "<input type='text' id='PATH_rs' class='input_20_table' style='margin-left:0px;height:23px;' name='cloud_dir' value='' onclick=''/>";
-htmlCode += "<input name='button' type='button' class='button_gen_short' style='margin-left:5px;' onclick='get_disk_tree(1);document.getElementById(\"folderTree_panel\").style.marginLeft+=30;' value='<#836#>'/>";
+htmlCode += "<input name='button' type='button' class='button_gen_short' style='margin-left:5px;' onclick='get_disk_tree(1);document.getElementById(\"folderTree_panel\").style.marginLeft+=30;' value='<#854#>'/>";
 htmlCode += "</td></tr>";
 if(decode_array[3] != ""){
 htmlCode += "<tr id='verification' height='40px'><td width='30%'>Verification</td><td><input id='veriCode' type='text' onkeypress='return validator.isNumber(this,event)' class='input_6_table' style='margin-left:0px;' maxlength='4' value=''>";
-htmlCode += "<span style='color:#FC0;display:none;margin-left:5px;' id='codeHint'><#1329#></span></td></tr>";
+htmlCode += "<span style='color:#FC0;display:none;margin-left:5px;' id='codeHint'><#1367#></span></td></tr>";
 }
 htmlCode += "</table>";
 document.getElementById("invitationInfo").innerHTML = htmlCode;
@@ -251,7 +252,7 @@ return false;
 }
 if(document.getElementById("PATH_rs")){
 if(document.getElementById("PATH_rs").value == ""){
-alert("<#143#>");
+alert("<#146#>");
 document.getElementById("PATH_rs").focus();
 return false;
 }
@@ -299,7 +300,7 @@ function addRow_Group(upper){
 var rule_num = document.getElementById('cloud_synclist_table').rows.length;
 var item_num = document.getElementById('cloud_synclist_table').rows[0].cells.length;
 if(rule_num >= upper){
-alert("<#1331#> " + upper + " <#1332#>");
+alert("<#1369#> " + upper + " <#1370#>");
 return false;
 }
 Do_addRow_Group();
@@ -391,11 +392,11 @@ var code = "";
 rulenum = 0;
 code +='<table width="99%" cellspacing="0" cellpadding="4" align="center" class="list_table" id="cloud_synclist_table">';
 if(enable_cloudsync == '0' && cloud_synclist_array != "")
-code +='<tr height="55px"><td style="color:#FFCC00;" colspan="6"><#1609#></td>';
+code +='<tr height="55px"><td style="color:#FFCC00;" colspan="6"><#1649#></td>';
 else if(document.getElementById("usb_status").className == "usbstatusoff")
-code +='<tr height="55px"><td style="color:#FFCC00;" colspan="6"><#1606#></td>';
+code +='<tr height="55px"><td style="color:#FFCC00;" colspan="6"><#1646#></td>';
 else if(cloud_synclist_array == "")
-code +='<tr height="55px"><td style="color:#FFCC00;" colspan="6"><#1286#></td>';
+code +='<tr height="55px"><td style="color:#FFCC00;" colspan="6"><#1324#></td>';
 else{
 for(var i = 0; i < cloud_synclist_row.length; i++){
 rulenum++;
@@ -592,7 +593,7 @@ captcha_flag = 1;
 _cloud_msg += cloud_msg;
 }
 else{
-_cloud_msg += "<#617#>";
+_cloud_msg += "<#633#>";
 }
 var _cloud_status;
 if(cloud_status != "")
@@ -639,7 +640,7 @@ else if(cloud_dropbox_msg){
 _cloud_dropbox_msg += cloud_dropbox_msg;
 }
 else{
-_cloud_dropbox_msg += "<#617#>";
+_cloud_dropbox_msg += "<#633#>";
 }
 var _cloud_dropbox_status;
 if(cloud_dropbox_status != "")
@@ -683,7 +684,7 @@ else if(cloud_ftpclient_msg){
 _cloud_ftpclient_msg += cloud_ftpclient_msg;
 }
 else{
-_cloud_ftpclient_msg += "<#617#>";
+_cloud_ftpclient_msg += "<#633#>";
 }
 var _cloud_ftpclient_status;
 if(cloud_ftpclient_status != "")
@@ -727,7 +728,7 @@ else if(cloud_usbclient_msg){
 _cloud_usbclient_msg += cloud_usbclient_msg;
 }
 else{
-_cloud_usbclient_msg += "<#617#>";
+_cloud_usbclient_msg += "<#633#>";
 }
 var _cloud_usbclient_status;
 if(cloud_usbclient_status != "")
@@ -771,7 +772,7 @@ else if(cloud_sambaclient_msg){
 _cloud_sambaclient_msg += cloud_sambaclient_msg;
 }
 else{
-_cloud_sambaclient_msg += "<#617#>";
+_cloud_sambaclient_msg += "<#633#>";
 }
 var _cloud_sambaclient_status;
 if(cloud_sambaclient_status != "")
@@ -816,7 +817,7 @@ else if(rs_msg){
 _rs_msg += rs_msg;
 }
 else{
-_rs_msg += "<#617#>";
+_rs_msg += "<#633#>";
 }
 document.getElementById("rsStatus_"+rs_rulenum).innerHTML = '<div style="text-decoration:underline; cursor:pointer" onmouseout="return nd();" onclick="return overlib(\''+ _rs_msg +'\');">'+ rs_status +'</div>';
 }
@@ -869,7 +870,7 @@ return false;
 }
 if((document.getElementById('select_service').innerHTML != "FTP server") && (document.getElementById('select_service').innerHTML != "Usb") ){ // to allow ftp client could use anonymous/anonymous, blank field, Jieming added at 2013/12/09
 if(document.form.cloud_username.value == ''){
-alert("<#98#>");
+alert("<#100#>");
 document.form.cloud_username.focus();
 return false;
 }
@@ -878,17 +879,17 @@ if(!Block_chars(document.form.cloud_password, ["<", ">"]))
 return false;
 if((document.getElementById('select_service').innerHTML != "FTP server") && (document.getElementById('select_service').innerHTML != "Usb")){ // to allow ftp client could use anonymous/anonymous, blank field, Jieming added at 2013/12/09
 if(document.form.cloud_password.value == ''){
-alert("<#102#>");
+alert("<#104#>");
 document.form.cloud_password.focus();
 return false;
 }
 }
 /*if(document.form.cloud_password.value.length < 8){ //disable to check length of password temporary, Jieming added at 2013.08.13
-alert("<#835#>");
+alert("<#853#>");
 return false;
 }*/
 if(document.form.cloud_dir.value == ''){
-alert("<#743#>");
+alert("<#759#>");
 document.form.cloud_dir.focus();
 return false;
 }
@@ -1060,7 +1061,7 @@ document.getElementById("applyDiv").style.display = "none";
 var folderlist = new Array();
 function get_disk_tree(flag){
 if(disk_flag == 1){
-alert('<#1606#>');
+alert('<#1646#>');
 return false;
 }
 cal_panel_block("folderTree_panel", 0.25);
@@ -1567,38 +1568,38 @@ document.getElementById("authHint").style.display = "none";
 <table>
 <tr>
 <td>
-<div class="machineName" style="font-family:Microsoft JhengHei;font-size:12pt;font-weight:bolder; margin-top:20px;margin-left:30px;"><#837#></div>
+<div class="machineName" style="font-family:Microsoft JhengHei;font-size:12pt;font-weight:bolder; margin-top:20px;margin-left:30px;"><#855#></div>
 </td>
 </tr>
 </table>
 <div id="invitationInfo" class="folder_tree" style="word-break:break-all;z-index:999;"></div>
 <div style="background-image:url(images/Tree/bg_02.png);background-repeat:no-repeat;height:90px;">
-<input class="button_gen" type="button" style="margin-left:27%;margin-top:18px;" onclick="cancel_invitation();" value="<#74#>">
-<input class="button_gen" type="button" onclick="confirm_invitation();" value="<#879#>">
+<input class="button_gen" type="button" style="margin-left:27%;margin-top:18px;" onclick="cancel_invitation();" value="<#75#>">
+<input class="button_gen" type="button" onclick="confirm_invitation();" value="<#896#>">
 </div>
 </div>
 </div>
 <div id="DM_mask" class="mask_bg"></div>
 <div id="folderTree_panel" class="panel_folder" style="z-index:1000;">
 <table><tr><td>
-<div class="machineName" style="width:200px;font-family:Microsoft JhengHei;font-size:12pt;font-weight:bolder; margin-top:15px;margin-left:30px;"><#534#></div>
+<div class="machineName" style="width:200px;font-family:Microsoft JhengHei;font-size:12pt;font-weight:bolder; margin-top:15px;margin-left:30px;"><#549#></div>
 </td>
 <td>
 <div style="width:240px;margin-top:14px;margin-left:135px;">
 <table >
 <tr>
-<td><div id="createFolderBtn" class="createFolderBtn" title="<#579#>"></div></td>
-<td><div id="deleteFolderBtn" class="deleteFolderBtn" title="<#910#>"></div></td>
-<td><div id="modifyFolderBtn" class="modifyFolderBtn" title="<#1556#>"></div></td>
+<td><div id="createFolderBtn" class="createFolderBtn" title="<#595#>"></div></td>
+<td><div id="deleteFolderBtn" class="deleteFolderBtn" title="<#928#>"></div></td>
+<td><div id="modifyFolderBtn" class="modifyFolderBtn" title="<#1594#>"></div></td>
 </tr>
 </table>
 </div>
 </td></tr></table>
 <div id="e0" class="folder_tree"></div>
 <div style="background-image:url(images/Tree/bg_02.png);background-repeat:no-repeat;height:90px;">
-<input class="button_gen" type="button" style="margin-left:27%;margin-top:18px;" onclick="cancel_folderTree();" value="<#74#>">
-<input class="button_gen" type="button" id="btn_confirm_folder0" onclick="confirm_folderTree0();" value="<#879#>" style="display:none;">
-<input class="button_gen" type="button" id="btn_confirm_folder" onclick="confirm_folderTree();" value="<#879#>" style="display:none;">
+<input class="button_gen" type="button" style="margin-left:27%;margin-top:18px;" onclick="cancel_folderTree();" value="<#75#>">
+<input class="button_gen" type="button" id="btn_confirm_folder0" onclick="confirm_folderTree0();" value="<#896#>" style="display:none;">
+<input class="button_gen" type="button" id="btn_confirm_folder" onclick="confirm_folderTree();" value="<#896#>" style="display:none;">
 </div>
 </div>
 <div id="DM_mask_floder" class="mask_floder_bg"></div>
@@ -1619,18 +1620,18 @@ document.getElementById("authHint").style.display = "none";
 <table width="97%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable" id="cloudAddTable" style="margin-top:10px;margin-bottom:10px;">
 <thead>
 <tr>
-<td colspan="6" id="cloud_synclist"><#599#></td>
+<td colspan="6" id="cloud_synclist"><#615#></td>
 </tr>
 </thead>
 <tr>
-<th width="30%" style="height:40px;font-family: Calibri;font-weight: bolder;"><#1694#></th>
+<th width="30%" style="height:40px;font-family: Calibri;font-weight: bolder;"><#1736#></th>
 <td>
 <div id="divOneProvider" style="display:none;"></div>
 <ul id="povider_tr" class="navigation" style="margin:-15px 0 0 -39px;*margin:-20px 0 0 0;">
 <li >
 <dl>
 <dt>
-<div id="select_service" style="height:35px;margin:-4px 0px 0px 0px;padding:4px;" value=""><#577#></div>
+<div id="select_service" style="height:35px;margin:-4px 0px 0px 0px;padding:4px;" value=""><#593#></div>
 </dt>
 <dd style="text-align: center;font-weight: bold;font-size: 13px;padding:3px;width:139px;" onclick="change_service('WebStorage');">
 <div id="WebStorage" style="background: url('/images/cloudsync/ASUS-WebStorage.png') no-repeat; height:35px;"><a style="text-align:left;padding:10px 0px 0px 45px;">WebStorage</a></div>
@@ -1654,16 +1655,16 @@ document.getElementById("authHint").style.display = "none";
 </tr>
 <tr style="display:none;">
 <th width="30%" style="font-family: Calibri;font-weight: bolder;">
-<#1775#> </th>
+<#1817#> </th>
 <td>
 <input type="text" class="input_32_table" maxlength="32" style="height: 23px;" id="sambaclient_name" name="sambaclient_name" autocorrect="off" autocapitalize="off">
 &nbsp;
-<span><#1087#></span>
+<span><#1122#></span>
 </td>
 </tr>
 <tr style="display:none;">
 <th width="30%" style="font-family: Calibri;font-weight: bolder;">
-<#2180#>
+<#2233#>
 </th>
 <td>
 <span>smb://</span>
@@ -1672,7 +1673,7 @@ document.getElementById("authHint").style.display = "none";
 </tr>
 <tr style="display:none;">
 <th width="30%" style="font-family: Calibri;font-weight: bolder;">
-<#843#></th>
+<#861#></th>
 <td>
 <input type="text" class="input_32_table" style="height: 23px;" id="sambaclient_sharefolder" name="sambaclient_sharefolder" value="" autocorrect="off" autocapitalize="off">
 </td>
@@ -1689,7 +1690,7 @@ Server Name
 </tr>
 <tr style="display:none;">
 <th width="30%" style="font-family: Calibri;font-weight: bolder;">
-<#2180#>
+<#2233#>
 </th>
 <td>
 <span>usb://</span>
@@ -1702,13 +1703,13 @@ Server share folder
 </th>
 <td>
 <input type="text" class="input_32_table" style="height: 23px;" id="usbclient_sharefolder" name="usbclient_sharefolder" value="" autocorrect="off" autocapitalize="off">
-<input name="button" type="button" class="button_gen_short" onclick="get_disk_tree(0);" value="<#836#>"/>
-<div id="noUSB0" style="color:#FC0;display:none;margin-left: 3px;"><#1606#></div>
+<input name="button" type="button" class="button_gen_short" onclick="get_disk_tree(0);" value="<#854#>"/>
+<div id="noUSB0" style="color:#FC0;display:none;margin-left: 3px;"><#1646#></div>
 </td>
 </tr>
 <tr style="display:none;">
 <th width="30%" style="font-family: Calibri;font-weight: bolder;">
-<#2180#>
+<#2233#>
 </th>
 <td>
 <select id="ftp_protocol" name="ftp_protocol" class="input_option">
@@ -1719,7 +1720,7 @@ Server share folder
 </tr>
 <tr style="display:none;">
 <th width="30%" style="font-family: Calibri;font-weight: bolder;">
-<#1283#>
+<#1321#>
 </th>
 <td>
 <input type="text" maxlength="32" class="input_32_table" style="height: 23px;" id="ftp_port" name="ftp_port" value="21" autocorrect="off" autocapitalize="off">
@@ -1727,14 +1728,14 @@ Server share folder
 </tr>
 <tr style="display:none;">
 <th width="30%" style="font-family: Calibri;font-weight: bolder;">
-<#838#> </th>
+<#856#> </th>
 <td>
 <input type="text" class="input_32_table" style="height: 23px;" id="ftp_root_path" name="ftp_root_path" value="" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr id="cloud_username_tr">
 <th width="30%" style="font-family: Calibri;font-weight: bolder;">
-<#626#>
+<#642#>
 </th>
 <td>
 <input type="text" maxlength="32"class="input_32_table" style="height: 23px;" id="cloud_username" name="cloud_username" value="" autocorrect="off" autocapitalize="off">
@@ -1742,7 +1743,7 @@ Server share folder
 </tr>
 <tr id="cloud_password_tr">
 <th width="30%" style="font-family: Calibri;font-weight: bolder;">
-<#1239#>
+<#1276#>
 </th>
 <td>
 <input id="cloud_password" name="cloud_password" type="password" autocapitalize="off" onBlur="switchType(this, false);" onFocus="switchType(this, true);" class="input_32_table" style="height: 23px;" value="" autocorrect="off" autocapitalize="off">
@@ -1750,51 +1751,51 @@ Server share folder
 </tr>
 <tr>
 <th width="30%" style="font-family: Calibri;font-weight: bolder;">
-<#1744#>
+<#1786#>
 </th>
 <td>
 <input type="text" id="PATH" class="input_32_table" style="height: 23px;" name="cloud_dir" value="" onclick="" autocomplete="off" autocorrect="off" autocapitalize="off"/>
-<input name="button" type="button" class="button_gen_short" onclick="get_disk_tree(1);" value="<#836#>"/>
-<div id="noUSB" style="color:#FC0;display:none;margin-left: 3px;"><#1606#></div>
+<input name="button" type="button" class="button_gen_short" onclick="get_disk_tree(1);" value="<#854#>"/>
+<div id="noUSB" style="color:#FC0;display:none;margin-left: 3px;"><#1646#></div>
 </td>
 </tr>
 <tr>
 <th width="30%" style="font-family: Calibri;font-weight: bolder;">
-<#839#>
+<#857#>
 </th>
 <td>
 <select id="cloud_rule" name="cloud_rule" class="input_option">
-<option value="0"><#841#></option>
-<option value="1"><#840#></option>
-<option value="2"><#842#></option>
+<option value="0"><#859#></option>
+<option value="1"><#858#></option>
+<option value="2"><#860#></option>
 </select>
 </td>
 </tr>
 <tr id="security_code_tr">
 <th width="30%" style="font-family: Calibri;font-weight: bolder;">
-<#1751#>
+<#1793#>
 </th>
 <td>
-<div style="color:#FC0;"><input id="security_code_field" name="security_code_field" type="text" maxlength="6" class="input_32_table" style="height: 23px;width:100px;margin-right:10px;" autocorrect="off" autocapitalize="off"><#1617#></div>
+<div style="color:#FC0;"><input id="security_code_field" name="security_code_field" type="text" maxlength="6" class="input_32_table" style="height: 23px;width:100px;margin-right:10px;" autocorrect="off" autocapitalize="off"><#1660#></div>
 </td>
 </tr>
 <tr height="45px;" id="captcha_tr" style="display:none;">
 <th width="30%" style="font-family: Calibri;font-weight: bolder;">
-<#829#>
+<#847#>
 </th>
 <td style="height:85px;">
 <div style="height:25px;"><input id="captcha_field" name="captcha_field" type="text" maxlength="6" class="input_32_table" style="height: 23px;width:100px;margin-top:8px;" autocomplete="off" autocorrect="off" autocapitalize="off"></div>
-<div id="captcha_hint" style="color:#FC0;height:25px;margin-top:10px;"><#830#></div>
+<div id="captcha_hint" style="color:#FC0;height:25px;margin-top:10px;"><#848#></div>
 <div>
 <iframe id="captcha_iframe" frameborder="0" scrolling="no" src="" style="width:230px;height:80px;*width:210px;*height:87px;margin:-60px 0 0 160px;*margin-left:165px;"></iframe>
 </div>
-<div style="color:#FC0;text-decoration:underline;height:35px;margin:-35px 0px 0px 380px;cursor:pointer" onclick="refresh_captcha();"><#882#></div>
+<div style="color:#FC0;text-decoration:underline;height:35px;margin:-35px 0px 0px 380px;cursor:pointer" onclick="refresh_captcha();"><#899#></div>
 </td>
 </tr>
 </table>
 <div class="apply_gen" style="margin-top:20px;margin-bottom:10px;display:none;background-color: #2B373B;" id="applyDiv">
-<input name="button" type="button" class="button_gen" onclick="showAddTable();" value="<#74#>"/>
-<input id="applyBtn" name="button" type="button" class="button_gen" onclick="applyRule()" value="<#72#>"/>
+<input name="button" type="button" class="button_gen" onclick="showAddTable();" value="<#75#>"/>
+<input id="applyBtn" name="button" type="button" class="button_gen" onclick="applyRule()" value="<#73#>"/>
 <input id="authBtn" name="button" type="button" class="button_gen" onclick="dropbox_login()" value="Authenticate"/>
 <span id="authHint" style="color:#FC0;display:none">Authenticated!</span>
 </div>
@@ -1815,16 +1816,16 @@ Server share folder
 <a href="cloud_main.asp"><div class="tab"><span>AiCloud 2.0</span></div></a>
 </td>
 <td>
-<div class="tabclick"><span><#1829#></span></div>
+<div class="tabclick"><span><#1871#></span></div>
 </td>
 <td>
-<a id="rrsLink" href="cloud_router_sync.asp"><div class="tab"><span><#1776#></span></div></a>
+<a id="rrsLink" href="cloud_router_sync.asp"><div class="tab"><span><#1818#></span></div></a>
 </td>
 <td>
-<a href="cloud_settings.asp"><div class="tab"><span><#1792#></span></div></a>
+<a href="cloud_settings.asp"><div class="tab"><span><#1834#></span></div></a>
 </td>
 <td>
-<a href="cloud_syslog.asp"><div class="tab"><span><#1437#></span></div></a>
+<a href="cloud_syslog.asp"><div class="tab"><span><#1475#></span></div></a>
 </td>
 </tr>
 </tbody>
@@ -1838,7 +1839,7 @@ Server share folder
 <tr>
 <td bgcolor="#4D595D" valign="top">
 <div>&nbsp;</div>
-<div class="formfonttitle">AiCloud 2.0 - <#1829#></div>
+<div class="formfonttitle">AiCloud 2.0 - <#1871#></div>
 <div style="margin-left:5px;margin-top:10px;margin-bottom:10px"><img src="/images/New_ui/export/line_export.png"></div>
 <div>
 <table width="700px" style="margin-left:25px;">
@@ -1866,7 +1867,7 @@ document.enableform.submit();
 <td>&nbsp;&nbsp;</td>
 <td>
 <div style="padding:10px;width:95%;font-style:italic;font-size:14px;word-break:normal;">
-<#1831#> <a href="http://aicloud-faq.asuscomm.com/aicloud-faq/" style="text-decoration:underline;font-weight:bolder;">http://aicloud-faq.asuscomm.com/aicloud-faq/</a>
+<#1873#> <a href="http://aicloud-faq.asuscomm.com/aicloud-faq/" style="text-decoration:underline;font-weight:bolder;">http://aicloud-faq.asuscomm.com/aicloud-faq/</a>
 </div>
 </td>
 </tr>
@@ -1875,23 +1876,23 @@ document.enableform.submit();
 <table width="99%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable_table" id="cloudlistTable" style="margin-top:30px;">
 <thead>
 <tr>
-<td colspan="6" id="cloud_synclist"><#599#></td>
+<td colspan="6" id="cloud_synclist"><#615#></td>
 </tr>
 </thead>
 <tr>
-<th width="10%"><#1694#></th>
-<th width="25%"><#1246#></a></th>
-<th width="10%"><#839#></a></th>
-<th width="30%"><#1162#></th>
-<th width="15%"><#272#></th>
-<th width="10%"><#867#></th>
+<th width="10%"><#1736#></th>
+<th width="25%"><#1283#></a></th>
+<th width="10%"><#857#></a></th>
+<th width="30%"><#1198#></th>
+<th width="15%"><#275#></th>
+<th width="10%"><#885#></th>
 </tr>
 </table>
 <div id="cloud_synclist_Block">
 <table width="99%" cellspacing="0" cellpadding="4" align="center" class="list_table" id="cloud_synclist_table">
 <tbody>
 <tr height="55px">
-<td style="color:#FFCC00;" colspan="6"><#434#>...</td> </tr>
+<td style="color:#FFCC00;" colspan="6"><#435#>...</td> </tr>
 </tbody>
 </table>
 </div>
@@ -1908,7 +1909,7 @@ document.enableform.submit();
 </tr>
 </table>
 <div class="apply_gen" id="creatBtn" style="margin-top:30px;display:none;">
-<input name="applybutton" id="applybutton" type="button" class="button_gen_long" onclick="showAddTable(9);" value="<#577#>" style="word-wrap:break-word;word-break:normal;">
+<input name="applybutton" id="applybutton" type="button" class="button_gen_long" onclick="showAddTable(9);" value="<#593#>" style="word-wrap:break-word;word-break:normal;">
 <img id="update_scan" style="display:none;" src="images/InternetScan.gif" />
 </div>
 </td>

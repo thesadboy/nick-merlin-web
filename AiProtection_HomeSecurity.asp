@@ -7,7 +7,7 @@
 <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
-<link rel="icon" href="images/favicon.png"><title><#533#> - <#181#></title>
+<link rel="icon" href="images/favicon.png"><title><#548#> - <#184#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="usp_style.css">
@@ -15,7 +15,6 @@
 <script type="text/javascript" src="/state.js"></script>
 <script type="text/javascript" src="/popup.js"></script>
 <script type="text/javascript" src="/help.js"></script>
-<script type="text/javascript" src="/disk_functions.js"></script>
 <script type="text/javascript" src="/js/jquery.js"></script>
 <script>
 function initial(){
@@ -65,7 +64,7 @@ document.getElementById("keyGuard_field").style.display = "";
 <table width="730px">
 <tr>
 <td align="left">
-<span class="formfonttitle"><#726#></span>
+<span class="formfonttitle"><#742#></span>
 </td>
 </tr>
 </table>
@@ -77,7 +76,7 @@ document.getElementById("keyGuard_field").style.display = "";
 </tr>
 <tr>
 <td>
-<div class="formfontdesc" style="font-size:14px;font-style:italic;"><#661#></div>
+<div class="formfontdesc" style="font-size:14px;font-style:italic;"><#677#></div>
 </td>
 </tr>
 <tr>
@@ -91,13 +90,13 @@ document.getElementById("keyGuard_field").style.display = "";
 </td>
 <td class="app_table_radius_right" style="width:350px;height:120px;">
 <div class="app_name">
-<a style="text-decoration: underline;" href="AiProtection_HomeProtection.asp"><#692#></a>
+<a style="text-decoration: underline;" href="AiProtection_HomeProtection.asp"><#708#></a>
 </div>
 <div class="app_desc" style="height:60px;white-space:nowrap;">
-<li><#695#></li>
-<li><#725#></li>
-<li><#727#></li>
-<li><#663#></li>
+<li><#711#></li>
+<li><#741#></li>
+<li><#743#></li>
+<li><#679#></li>
 </div>
 </td>
 </tr>
@@ -108,11 +107,11 @@ document.getElementById("keyGuard_field").style.display = "";
 </td>
 <td class="app_table_radius_right" style="width:350px;height:120px;">
 <div class="app_name">
-<a style="text-decoration: underline;" href="AiProtection_WebProtector.asp"><#256#></a>
+<a style="text-decoration: underline;" href="AiProtection_WebProtector.asp"><#259#></a>
 </div>
 <div class="app_desc" style="height:60px;">
-<li><#1883#></li>
-<li><#664#></li>
+<li><#1929#></li>
+<li><#680#></li>
 </div>
 </td>
 </tr>

@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#533#> - <#189#></title>
+<title><#548#> - <#192#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <script type="text/javascript" src="/state.js"></script>
@@ -46,8 +46,25 @@ document.form.submit();
 }
 }
 function validForm(){
+if(sw_mode == 1 && IPv6_support){
+var notIPv6 = false;
+var notIPv4 = false;
+if(!ipv6_valid(document.form.wl_radius_ipaddr))
+notIPv6 = true;
+if(!validator.ipAddrFinal(document.form.wl_radius_ipaddr, 'wl_radius_ipaddr', 1))
+notIPv4 = true;
+if(notIPv6 && notIPv4){
+alert(document.form.wl_radius_ipaddr.value+" <#149#>");
+document.form.wl_radius_ipaddr.value = "";
+document.form.wl_radius_ipaddr.focus();
+document.form.wl_radius_ipaddr.select();
+return false;
+}
+}
+else{
 if(!validator.ipAddrFinal(document.form.wl_radius_ipaddr, 'wl_radius_ipaddr'))
 return false;
+}
 if(!validator.range(document.form.wl_radius_port, 0, 65535))
 return false;
 if(!validator.string(document.form.wl_radius_key))
@@ -56,6 +73,16 @@ return true;
 }
 function done_validating(action){
 refreshpage();
+}
+function ipv6_valid(obj){
+var rangere=new RegExp("^((([0-9A-Fa-f]{1,4}:){7}[0-9A-Fa-f]{1,4})|(([0-9A-Fa-f]{1,4}:){6}:[0-9A-Fa-f]{1,4})|(([0-9A-Fa-f]{1,4}:){5}:([0-9A-Fa-f]{1,4}:)?[0-9A-Fa-f]{1,4})|(([0-9A-Fa-f]{1,4}:){4}:([0-9A-Fa-f]{1,4}:){0,2}[0-9A-Fa-f]{1,4})|(([0-9A-Fa-f]{1,4}:){3}:([0-9A-Fa-f]{1,4}:){0,3}[0-9A-Fa-f]{1,4})|(([0-9A-Fa-f]{1,4}:){2}:([0-9A-Fa-f]{1,4}:){0,4}[0-9A-Fa-f]{1,4})|(([0-9A-Fa-f]{1,4}:){6}((\\b((25[0-5])|(1\\d{2})|(2[0-4]\\d)|(\\d{1,2}))\\b)\\.){3}(\\b((25[0-5])|(1\\d{2})|(2[0-4]\\d)|(\\d{1,2}))\\b))|(([0-9A-Fa-f]{1,4}:){0,5}:((\\b((25[0-5])|(1\\d{2})|(2[0-4]\\d)|(\\d{1,2}))\\b)\\.){3}(\\b((25[0-5])|(1\\d{2})|(2[0-4]\\d)|(\\d{1,2}))\\b))|(::([0-9A-Fa-f]{1,4}:){0,5}((\\b((25[0-5])|(1\\d{2})|(2[0-4]\\d)|(\\d{1,2}))\\b)\\.){3}(\\b((25[0-5])|(1\\d{2})|(2[0-4]\\d)|(\\d{1,2}))\\b))|([0-9A-Fa-f]{1,4}::([0-9A-Fa-f]{1,4}:){0,5}[0-9A-Fa-f]{1,4})|(::([0-9A-Fa-f]{1,4}:){0,6}[0-9A-Fa-f]{1,4})|(([0-9A-Fa-f]{1,4}:){1,7}:))$", "gi");
+if(rangere.test(obj.value)){
+return true;
+}else{
+obj.focus();
+obj.select();
+return false;
+}
 }
 </script>
 </head>
@@ -92,12 +119,12 @@ refreshpage();
 <tr>
 <td bgcolor="#4D595D" valign="top" >
 <div>&nbsp;</div>
-<div class="formfonttitle"><#184#> - <#189#></div>
+<div class="formfonttitle"><#187#> - <#192#></div>
 <div style="margin-left:5px;margin-top:10px;margin-bottom:10px"><img src="/images/New_ui/export/line_export.png"></div>
-<div class="formfontdesc"><#2178#></div>
+<div class="formfontdesc"><#2231#></div>
 <table id="MainTable1" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable">
 <tr id="wl_unit_field">
-<th><#1251#></th>
+<th><#1288#></th>
 <td>
 <select name="wl_unit" class="input_option" onChange="change_wl_unit();">
 <option class="content_input_fd" value="0" <% nvram_match("wl_unit", "0","selected"); %>>2.4GHz</option>
@@ -106,21 +133,21 @@ refreshpage();
 </td>
 </tr>
 <tr id="repeaterModeHint" style="display:none;">
-<td colspan="2" style="color:#FFCC00;height:30px;" align="center"><#255#></td>
+<td colspan="2" style="color:#FFCC00;height:30px;" align="center"><#258#></td>
 </tr>
 <tr>
 <th>
 <a class="hintstyle" href="javascript:void(0);" onClick="openHint(2,1);">
-<#2180#></a>
+<#2233#></a>
 </th>
 <td>
-<input type="text" maxlength="15" class="input_15_table" name="wl_radius_ipaddr" value="<% nvram_get("wl_radius_ipaddr"); %>" onKeyPress="return validator.isIPAddr(this, event)" autocorrect="off" autocapitalize="off">
+<input type="text" maxlength="39" class="input_32_table" name="wl_radius_ipaddr" value="<% nvram_get("wl_radius_ipaddr"); %>" onKeyPress="return validator.isIPAddr(this, event)" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr>
 <th>
 <a class="hintstyle" href="javascript:void(0);" onClick="openHint(2,2);">
-<#2184#></a>
+<#2237#></a>
 </th>
 <td>
 <input type="text" maxlength="5" class="input_6_table" name="wl_radius_port" value="<% nvram_get("wl_radius_port"); %>" onkeypress="return validator.isNumber(this,event)" autocorrect="off" autocapitalize="off"/>
@@ -129,7 +156,7 @@ refreshpage();
 <tr>
 <th >
 <a class="hintstyle" href="javascript:void(0);" onClick="openHint(2,3);">
-<#2182#></a>
+<#2235#></a>
 </th>
 <td>
 <input type="password" maxlength="64" class="input_32_table" name="wl_radius_key" value="<% nvram_get("wl_radius_key"); %>" autocorrect="off" autocapitalize="off">
@@ -137,7 +164,7 @@ refreshpage();
 </tr>
 </table>
 <div id="submitBtn" class="apply_gen">
-<input class="button_gen" onclick="applyRule()" type="button" value="<#72#>"/>
+<input class="button_gen" onclick="applyRule()" type="button" value="<#73#>"/>
 </div>
 </td>
 </tr>

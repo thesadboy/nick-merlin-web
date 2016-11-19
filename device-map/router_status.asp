@@ -16,7 +16,9 @@
 		.float-right { float: right; }
 		.clear { display: block; float: none; clear: both; }
 		.hide {display: none;}
-		.main-contain { width: 308px; position: relative; min-height: 400px;}
+		.color-ffcc00 { color: #FFCC00; }
+		.color-1cfe16 { color: #1cfe16; }
+		.main-contain { width: 308px; position: relative; min-height: 725px;}
 		.nav-tab { height: 28px; overflow: hidden;}
 		.nav-tab ul { margin: 0; left: 0; padding: 0; }
 		.nav-tab ul li { float: left; width: 33.3%; list-style: none; padding: 0; height: 28px; display: none;}
@@ -44,8 +46,6 @@
 		.item .row { width: 100%; line-height: 16px; margin-top: 10px; }
 		.item .row .row-title { font-weight: bolder; margin-bottom: 2px; }
 		.item .row .row-info { min-height: 16px;}
-		.item .color-ffcc00 { color: #FFCC00; }
-		.item .color-1cfe16 { color: #1cfe16; }
 		.info-set{ position: absolute; right:5px; bottom:5px; width:15px; height:15px; border:1px solid #FFFFFF; border-radius: 20px; text-align: center; line-height: 15px; cursor: pointer;}
 		.show-select{ position: absolute; right:0; bottom:0; left:0; top:0; background: #4d595d; z-index: 100; padding:10px; display: none; }
 		.show-select input{margin-right:5px;}
@@ -54,6 +54,30 @@
 		.show-select .select-title{font-size: 16px; line-height: 30px; border-bottom: 1px dotted #6a7c80; margin-bottom: 10px;}
 		.show-select .btns{border-top: 1px dotted #6a7c80; margin-top: 10px; padding: 10px 0;}
 		.show-select .btns .btn{ float: left; width: 65px; height:32px; background: #2A3539; margin-left: 30px; line-height: 32px; text-align: center; border-radius: 5px;}
+		.update-tips{margin: 5px 0; background: #2A3539; padding: 10px; border-radius: 5px;}
+		.update-tips .version{line-height: 20px;}
+		.update-tips .version span{color: #FFCC00;}
+		.update-tips .update-logs{line-height: 20px; margin-top: 5px; font-weight: bolder;}
+		.update-tips .update-infos{padding-left: 25px; list-style: square; margin: 0; font-size: 12px; max-height: 200px; overflow-y: auto;}
+		.update-tips .update-infos li{line-height: 16px; margin-bottom: 5px;}
+		.update-tips .tips{font-size: 12px; word-break: break-all; color: #1cfe16; margin-top: 10px; line-height: 16px;}
+		.update-tips .tips a{color: #FFCC00; text-decoration: underline;}
+		.has-update{ border-color: #1cfe16; color: #1cfe16; -webkit-animation: updating 1s infinite ease-in-out;-o-animation: updating 1s infinite ease-in-out;animation: updating 1s infinite ease-in-out;}
+		@-webkit-keyframes updating {
+      0% {border-color: #1cfe16; color: #1cfe16;}
+      50% {border-color: #FFCC00; color: #FFCC00;}
+      100% {border-color: #1cfe16; color: #1cfe16;}
+		}
+		@-o-keyframes updating {
+      0% {border-color: #1cfe16; color: #1cfe16;}
+      50% {border-color: #FFCC00; color: #FFCC00;}
+      100% {border-color: #1cfe16; color: #1cfe16;}
+		}
+		@keyframes updating {
+      0% {border-color: #1cfe16; color: #1cfe16;}
+      50% {border-color: #FFCC00; color: #FFCC00;}
+      100% {border-color: #1cfe16; color: #1cfe16;}
+		}
 	</style>
 </head>
 <body>
@@ -247,12 +271,20 @@
 						<span class="color-ffcc00"><% sysinfo("cpu.load.15"); %></span>
 					</div>
 				</div>
+				<div id="mod-conns" class="row hide">
+					<div class="row-title">连接数</div>
+					<div class="row-info">
+						<span class="color-1cfe16">Total</span>: <span class="color-ffcc00" id="mod-conns-total"><% sysinfo("conn.total"); %></span> |
+						<span class="color-1cfe16">Max</span>: <span class="color-ffcc00" id="mod-conns-max"><% sysinfo("conn.max"); %></span> |
+						<span class="color-1cfe16">Active</span>: <span class="color-ffcc00" id="mod-conns-active"><% sysinfo("conn.active"); %></span>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
 	<span id="info-set" class="info-set hide" title="点击我自定义哦~~~">i</span>
 	<div id="show-select" class="show-select">
-	  <div class="select-title">请勾选需要显示的项目</div>
+	  <div class="select-title">首页信息显示 [ <a href="https://coding.net/u/thesadboy/p/koolshare-merlin-web/git/blob/master/tools/changelog.txt" target="_blank" id="current-version-show" class="color-ffcc00" title="点我查看日志哦~~"></a> ] </div>
 	  <div class="level-1">
         <div class="list"><label><input name="mod-cpu" type="checkbox">处理器</label></div>
         <div class="list"><label><input name="mod-ram" type="checkbox">内存</label></div>
@@ -265,26 +297,39 @@
             <div class="list"><label><input name="mod-temp" type="checkbox">温度</label></div>
             <div class="list"><label><input name="mod-cpu-freq" type="checkbox">处理器频率</label></div>
             <div class="list"><label><input name="mod-cpu-load" type="checkbox">处理器负载</label></div>
+            <div class="list"><label><input name="mod-conns" type="checkbox">连接数</label></div>
           </div>
         </div>
       </div>
 	  <div class="btns">
-		<a href="javascript:;" id="btn-select-save" class="btn">保存</a>
-		<a href="javascript:;" id="btn-select-back" class="btn">返回</a>
-		<div class="clear"></div>
+      <a href="javascript:;" id="btn-select-save" class="btn">保存</a>
+      <a href="javascript:;" id="btn-select-back" class="btn">返回</a>
+      <div class="clear"></div>
 	  </div>
+	  <div class="update-tips hide" id="update-tips">
+	  	<div class="select-title">有新版本咯~~~</div>
+      <div class="version">当前版本：<span id="current-version"></span></div>
+      <div class="version">线上版本：<span id="online-version"></span></div>
+      <div class="update-logs">升级日志</div>
+      <ul class="update-infos" id="update-infos">
+      </ul>
+      <div class="tips">请在 <a href="javascript:(function(){window.top.location.href='/Tools_Shell.asp'; return false;})()">Webshell</a>、<a href="javascript:(function(){window.top.location.href='/Module_shellinabox.asp'; return false;})()">shellinabox(需安装)</a>或 shell 工具执行 sh /jffs/scripts/router_status_tool.sh update 来更新，更新详情查看<a href="https://coding.net/u/thesadboy/p/koolshare-merlin-web/git/blob/master/tools/changelog.txt" target="_blank">升级日志</a></div>
     </div>
+  </div>
 </div>
 <script type="text/javascript" src="/general.js"></script>
 <script type="text/javascript" src="/state.js"></script>
 <script type="text/javascript" src="/js/jquery.js"></script>
 <script language="JavaScript" type="text/javascript" src="/tmmenu.js"></script>
 <script type="text/javascript" src="/dbconf?p=ss_basic_install_status,ss_basic_state_china,ss_basic_state_foreign,ss_basic_enable"></script>
+<script type="text/javascript" src="router_info_version.js"></script><!--本地文件-->
+<script type="text/javascript" src="https://coding.net/u/thesadboy/p/koolshare-merlin-web/git/raw/master/device-map/router_info_version.js"></script><!--线上文件-->
 <script type="text/javascript">
 <% backup_nvram("wan_ifname,lan_ifname,wl_ifname,wan_proto,web_svg,rstats_colors,cstats_enable"); %>
 if(parent.location.pathname.search("index") === -1)
   top.location.href = "../index.asp";
 vars = {
+  mods : '<% dbus_get_def("router_info_show_mods", "mod-cpu,mod-ram,mod-net,mod-ss,mod-sys,mod-uptime,mod-temp,mod-cpu-freq,mod-cpu-load,mod-conns"); %>'.split(','),
   core_num: '<%cpu_core_num();%>',
   cpu_info_old: [],
   cpu_usage_array:[],
@@ -303,7 +348,8 @@ vars = {
   array_size : 46,
   time_sec:0,
   ss_install_status:false,
-  ss_enabled_status: false
+  ss_enabled_status: false,
+  ss_version : '<% dbus_get_def("ss_basic_version_local", "0.0.0"); %>'
 };
 /**
 * tab切换
@@ -464,10 +510,11 @@ var init = function(){
   checkSSStatus();
   updateInfos();
   resetParentHeight();
+  checkUpdate();
 },
 initSetInfoShow = function(){
   var show_select = $('#show-select');
-  var mods = getShow();
+  var mods = vars.mods;
   $.each(mods, function(index, mod){
     $('#' + mod).show();
     mod = show_select.find('input[name="'+mod+'"]').get(0);
@@ -518,7 +565,6 @@ initSetInfoShow = function(){
       }
     });
     setShow(selected.join(','));
-    window.top.location.reload();
   });
 },
 checkSSStatus = function(){
@@ -547,17 +593,21 @@ resetParentHeight = function(){
       }
 },
 updateInfos = function(){
-  var mods = getShow();
+  var mods = vars.mods;
   if(vars.time_sec % 2 == 0){
     //CPU和RAM单单独处理
     if(mods.indexOf('mod-cpu') > -1 || mods.indexOf('mod-ram') > -1){
       modFns['mod-cpu-ram'] && modFns['mod-cpu-ram'](mods.indexOf('mod-cpu') > -1, mods.indexOf('mod-ram') > -1);
     }
     $.each(mods, function(index, mod){
-      if(['mod-cpu','mod-ram','mod-ss','mod-uptime'].indexOf(mod) < 0){
+      if(['mod-cpu','mod-ram','mod-ss','mod-uptime','mod-conns'].indexOf(mod) < 0){
         modFns[mod] && modFns[mod]();
       }
     })
+  }
+  //连接数单独处理
+  if(vars.time_sec % 5 == 0){
+    modFns['mod-conns'] && modFns['mod-conns']();
   }
   //影梭单独处理
   if(vars.time_sec % (cookie.get('status_restart') || 10) == 0){
@@ -645,27 +695,43 @@ modFns = {
     if(!vars.ss_install_status || !vars.ss_enabled_status){
       return;
     }
-    $.ajax({
-      url:'/ss_status',
-      dataType: 'html',
-      error: function(){},
-      success: function(){
-        $.ajax({
-           url :'/dbconf?p=ss_basic_install_status,ss_basic_state_china,ss_basic_state_foreign,ss_basic_enable&_t=' + new Date().getTime(),
-           dataType: 'html',
-           error: function(){},
-           success: function(response){
-              $.globalEval(response);
-              if(db_ss_basic_state_china && db_ss_basic_state_china['ss_basic_state_china'] && db_ss_basic_state_foreign && db_ss_basic_state_foreign['ss_basic_state_foreign']){
-                $('#ss_basic_state_foreign').html(db_ss_basic_state_foreign['ss_basic_state_foreign'].replace('working...','正常滴 O(∩_∩)O~').replace('Waiting for first refresh...','刷新中，请稍后...').replace('Problem detected!','故障咯 o(╯□╰)o'));
-                $('#ss_basic_state_china').html(db_ss_basic_state_china['ss_basic_state_china'].replace('working...','正常滴 O(∩_∩)O~').replace('Waiting for first refresh...','刷新中，请稍后...').replace('Problem detected!','故障咯 o(╯□╰)o'));
-              } else{
-                $('.ss_basic_state').html('刷新中，请稍后...');
-              }
-           }
-        });
-      }
-    });
+    if(vars.ss_version < '2.9.9'){
+      $.ajax({
+        url:'/ss_status',
+        dataType: 'html',
+        error: function(){},
+        success: function(){
+          $.ajax({
+             url :'/dbconf?p=ss_basic_state_china,ss_basic_state_foreign&_t=' + new Date().getTime(),
+             dataType: 'html',
+             error: function(){},
+             success: function(response){
+                $.globalEval(response);
+                if(db_ss_basic_state_china && db_ss_basic_state_china['ss_basic_state_china'] && db_ss_basic_state_foreign && db_ss_basic_state_foreign['ss_basic_state_foreign']){
+                  $('#ss_basic_state_foreign').html(db_ss_basic_state_foreign['ss_basic_state_foreign'].replace('working...','正常滴 O(∩_∩)O~').replace('Waiting for first refresh...','刷新中，请稍后...').replace('Problem detected!','故障咯 o(╯□╰)o'));
+                  $('#ss_basic_state_china').html(db_ss_basic_state_china['ss_basic_state_china'].replace('working...','正常滴 O(∩_∩)O~').replace('Waiting for first refresh...','刷新中，请稍后...').replace('Problem detected!','故障咯 o(╯□╰)o'));
+                } else{
+                  $('.ss_basic_state').html('刷新中，请稍后...');
+                }
+             }
+          });
+        }
+      });
+    } else{
+      $.ajax({
+        url: '/ss_status',
+        dataType: "html",
+        success: function(response) {
+          var arr = JSON.parse(response);
+          if (arr[0] == "" || arr[1] == ""){
+            $('.ss_basic_state').html('刷新中，请稍后...');
+          }else{
+            $('#ss_basic_state_foreign').html(arr[0].replace('working...','正常滴 O(∩_∩)O~').replace('Waiting for first refresh...','刷新中，请稍后...').replace('Problem detected!','故障咯 o(╯□╰)o'));
+            $('#ss_basic_state_china').html(arr[1].replace('working...','正常滴 O(∩_∩)O~').replace('Waiting for first refresh...','刷新中，请稍后...').replace('Problem detected!','故障咯 o(╯□╰)o'));
+          }
+        }
+      });
+    }
   },
   'mod-uptime': function(){
     Days = Math.floor(boottime / (60*60*24));
@@ -701,6 +767,21 @@ modFns = {
       }
     });
   },
+  'mod-conns': function(){
+    $.ajax({
+      url :'router_info_conns.js',
+      dataType: 'html',
+      error: function(){},
+      success: function(response){
+        $.globalEval(response);
+        try{
+          $('#mod-conns-total').html(router_status_conns.total);
+          $('#mod-conns-max').html(router_status_conns.max);
+          $('#mod-conns-active').html(router_status_conns.active);
+        }catch(e){}
+      }
+    });
+  }
 },
 renderCPU = function(cpu_info_new){
   var pt;
@@ -776,11 +857,34 @@ render_Internet_Speed = function(upload, download){
   document.getElementById('download_graph').setAttribute('points', dpt);
 }
 setShow = function(mods){
-  cookie.set('mods-show', mods);
+  $.ajax({
+    type: 'POST',
+    url: '/applydb.cgi?p=router_info',
+    data: $.param({
+      router_info_show_mods: mods
+    })
+  }).then(function () {
+    window.top.location.reload();
+  }, function () {
+    alert('保存失败！请联系该页面开发者。')
+  })
 },
-getShow = function(){
-  var mods = cookie.get('mods-show') || 'mod-cpu,mod-ram,mod-net,mod-ss,mod-sys,mod-uptime,mod-temp,mod-cpu-freq,mod-cpu-load';
-  return mods.split(',');
+checkUpdate = function(){
+  $('#current-version-show').html('版本:' + window.old_version+' | 日志');
+  if(window.version && window.old_version && window.version > window.old_version){
+    //提示有新版本升级
+    $('#info-set').addClass('has-update').attr('title','有更新哦，点我看看~~~');
+    $('#update-tips').show();
+    $('#current-version').html(window.old_version);
+    $('#online-version').html(window.version);
+    if(window.version_msg && window.version_msg.length){
+      $(window.version_msg).each(function(index, msg){
+        $('#update-infos').append('<li>'+msg+'</li>');
+      });
+    }else{
+      $('#update-infos').append('<li>无升级日志</li>');
+    }
+  }
 };
 
 $(function(){

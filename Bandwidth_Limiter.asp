@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
-<title><#533#> - <#41#></title>
+<title><#548#> - <#42#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="device-map/device-map.css">
@@ -107,28 +107,28 @@ max_priority = qos_bw_rulelist_row.length;
 if(!validator.string(document.form.PC_devicename))
 return false;
 if(document.form.PC_devicename.value == ""){
-alert("<#137#>");
+alert("<#140#>");
 document.form.PC_devicename.focus();
 return false;
 }
 if(qos_bw_rulelist.search(PC_mac) > -1 && PC_mac != ""){ //check same target
-alert("<#1325#>");
+alert("<#1363#>");
 document.form.PC_devicename.focus();
 PC_mac = "";
 return false;
 }
 if(qos_bw_rulelist.search(document.form.PC_devicename.value) > -1){
-alert("<#1325#>");
+alert("<#1363#>");
 document.form.PC_devicename.focus();
 return false;
 }
 if(document.getElementById("download_rate").value == ""){
-alert("<#137#>");
+alert("<#140#>");
 document.getElementById("download_rate").focus();
 return false;
 }
 if(document.getElementById("upload_rate").value == ""){
-alert("<#137#>");
+alert("<#140#>");
 document.getElementById("upload_rate").focus();
 return false;
 }
@@ -136,7 +136,7 @@ for(var i = 0; i < document.form.PC_devicename.value.length; ++i){
 if(document.form.PC_devicename.value.charAt(i) == '<' || document.form.PC_devicename.value.charAt(i) == '>'){
 invalid_char += document.form.PC_devicename.value.charAt(i);
 document.form.PC_devicename.focus();
-alert("<#154#> ' "+invalid_char + " '");
+alert("<#157#> ' "+invalid_char + " '");
 return false;
 }
 }
@@ -174,25 +174,25 @@ var qos_bw_rulelist_row = qos_bw_rulelist.split("<");
 var code = "";
 code += '<table width="100%" border="1" cellspacing="0" cellpadding="4" align="center" class="FormTable_table" id="mainTable_table">';
 code += '<thead><tr>';
-code += '<td colspan="5"><#854#>&nbsp;(<#1435#>&nbsp;32)</td>';
+code += '<td colspan="5"><#872#>&nbsp;(<#1473#>&nbsp;32)</td>';
 code += '</tr></thead>';
 code += '<tbody>';
 code += '<tr>';
-code += '<th width="5%" height="30px" title="<#1762#>">';
+code += '<th width="5%" height="30px" title="<#1804#>">';
 code += '<input id="selAll" type="checkbox" onclick="enable_check(this);">';
 code += '</th>';
-code += '<th width="45%"><#1598#></th>';
-code += '<th width="20%"><#978#></th>';
-code += '<th width="20%"><#2020#></th>';
-code += '<th width="10%"><#1434#></th>';
+code += '<th width="45%"><#1638#></th>';
+code += '<th width="20%"><#996#></th>';
+code += '<th width="20%"><#2075#></th>';
+code += '<th width="10%"><#1472#></th>';
 code += '</tr>';
 code += '<tr id="main_element">';
-code += '<td style="border-bottom:2px solid #000;" title="<#2229#>/<#822#>">';
+code += '<td style="border-bottom:2px solid #000;" title="<#2279#>/<#839#>">';
 code += '<input type="checkbox" checked>';
 code += '</td>';
 code += '<td style="border-bottom:2px solid #000;">';
-code += '<input type="text" style="margin-left:10px;float:left;width:255px;" class="input_20_table" name="PC_devicename" onkeyup="device_filter(this);" placeholder="<#660#>" autocorrect="off" autocapitalize="off" autocomplete="off">';
-code += '<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" onclick="pullLANIPList(this);" title="<#1765#>">';
+code += '<input type="text" style="margin-left:10px;float:left;width:255px;" class="input_20_table" name="PC_devicename" onkeyup="device_filter(this);" placeholder="<#676#>" autocorrect="off" autocapitalize="off" autocomplete="off">';
+code += '<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" onclick="pullLANIPList(this);" title="<#1807#>">';
 code += '<div id="ClientList_Block_PC" class="clientlist_dropdown" style="margin-top:25px;margin-left:10px;"></div>';
 code += '</td>';
 code += '<td style="border-bottom:2px solid #000;text-align:right;"><input type="text" id="download_rate" class="input_6_table" maxlength="6" onkeypress="return bandwidth_code(this, event);"><span style="margin: 0 5px;color:#FFF;">Mb/s</span></td>';
@@ -200,7 +200,7 @@ code += '<td style="border-bottom:2px solid #000;text-align:right;"><input type=
 code += '<td style="border-bottom:2px solid #000;"><input class="add_btn" type="button" onclick="addRow_main(this, 32)" value=""></td>';
 code += '</tr>';
 if(qos_bw_rulelist == ""){
-code += '<tr><td style="color:#FFCC00;" colspan="10"><#1286#></td></tr>';
+code += '<tr><td style="color:#FFCC00;" colspan="10"><#1324#></td></tr>';
 }
 else{
 for(k=0;k< qos_bw_rulelist_row.length;k++){
@@ -215,7 +215,7 @@ else {
 apps_client_name = (clientObj.nickName == "") ? clientObj.name : clientObj.nickName;
 }
 code += '<tr>';
-code += '<td title="<#2229#>/<#822#>">';
+code += '<td title="<#2279#>/<#839#>">';
 if(qos_bw_rulelist_col[0] == 1)
 code += '<input id="'+k+'" type="checkbox" onclick="enable_check(this)" checked>';
 else
@@ -329,7 +329,7 @@ qos_bw_rulelist = rulelist_row_temp;
 <div id="agreement_panel" class="panel_folder" style="margin-top: -100px;display:none;position:absolute;"></div>
 <div id="hiddenMask" class="popup_bg" style="z-index:999;">
 <table cellpadding="5" cellspacing="0" id="dr_sweet_advise" class="dr_sweet_advise" align="center"></table>
-<!--[if lte IE 6.5]><script>alert("<#772#>");</script><![endif]-->
+<!--[if lte IE 6.5]><script>alert("<#788#>");</script><![endif]-->
 </div>
 <iframe name="hidden_frame" id="hidden_frame" width="0" height="0" frameborder="0"></iframe>
 <form method="post" name="form" action="/start_apply.htm" target="hidden_frame">
@@ -364,13 +364,13 @@ qos_bw_rulelist = rulelist_row_temp;
 <table width="730px">
 <tr>
 <td align="left" class="formfonttitle">
-<div style="width:400px"><#1470#> - <#41#></div>
+<div style="width:400px"><#1508#> - <#42#></div>
 </td>
 <td align="right">
 <div>
 <select onchange="switchPage(this.options[this.selectedIndex].value)" class="input_option">
-<option value="1" ><#572#></option>
-<option value="2" selected><#41#></option>
+<option value="1" ><#587#></option>
+<option value="2" selected><#42#></option>
 </select>
 </div>
 </td>
@@ -386,8 +386,8 @@ qos_bw_rulelist = rulelist_row_temp;
 </td>
 <td>&nbsp;&nbsp;</td>
 <td style="font-size: 14px;">
-<div><#42#></div>
-<div><a style="text-decoration:underline;" href="http://www.asus.com/support/FAQ/1013333/" target="_blank"><#41#> FAQ</a></div>
+<div><#43#></div>
+<div><a style="text-decoration:underline;" href="http://www.asus.com/support/FAQ/1013333/" target="_blank"><#42#> FAQ</a></div>
 </td>
 </tr>
 </table>
@@ -398,7 +398,7 @@ qos_bw_rulelist = rulelist_row_temp;
 <td valign="top" align="center">
 <div id="mainTable" style="margin-top:10px;"></div>
 <div id="ctrlBtn" style="text-align:center;margin-top:20px;">
-<input class="button_gen" type="button" onclick="applyRule();" value="<#72#>">
+<input class="button_gen" type="button" onclick="applyRule();" value="<#73#>">
 </div>
 </td>
 </tr>

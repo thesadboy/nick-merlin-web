@@ -9,7 +9,13 @@
 </head>
 <body>
 <script>
-alert("<#104#>");
+var upgrade_fw_status = '<% nvram_get("upgrade_fw_status"); %>';
+if(upgrade_fw_status == 6){
+alert("<#109#>");
+}
+else{
+alert("<#106#>");
+}
 parent.location.href=parent.location.href;
 </script>
 </body>

@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#533#> - <#198#></title>
+<title><#548#> - <#201#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="device-map/device-map.css">
@@ -62,6 +62,12 @@ if(!parent.usb_support){
 document.getElementById('FTP_desc').style.display = "none";
 document.form.vts_ftpport.parentNode.parentNode.style.display = "none";
 }
+if('<% get_parameter("af"); %>' == 'KnownApps' && '<% get_parameter("item"); %>' == 'ftp'){
+var KnownApps = document.form.KnownApps;
+KnownApps.options[1].selected = 1;
+change_wizard(KnownApps, 'KnownApps');
+if(addRow_Group(32)) applyRule();
+}
 }
 function isChange(){
 if((document.form.vts_enable_x[0].checked == true && '<% nvram_get("vts_enable_x"); %>' == '0') ||
@@ -99,7 +105,7 @@ if(j != item_num-2)
 tmp_value += ">";
 }
 }
-if(tmp_value == "<"+"<#1286#>" || tmp_value == "<")
+if(tmp_value == "<"+"<#1324#>" || tmp_value == "<")
 tmp_value = "";
 document.form.vts_rulelist.value = tmp_value;
 /* 2014.04 Viz: No need to reboot for ctf enable models.
@@ -112,13 +118,13 @@ document.form.submit();
 }
 function loadAppOptions(){
 free_options(document.form.KnownApps);
-add_option(document.form.KnownApps, "<#473#>", 0, 1);
+add_option(document.form.KnownApps, "<#474#>", 0, 1);
 for(var i = 1; i < wItem.length; i++)
 add_option(document.form.KnownApps, wItem[i][0], i, 0);
 }
 function loadGameOptions(){
 free_options(document.form.KnownGames);
-add_option(document.form.KnownGames, "<#473#>", 0, 1);
+add_option(document.form.KnownGames, "<#474#>", 0, 1);
 for(var i = 1; i < wItem2.length; i++)
 add_option(document.form.KnownGames, wItem2[i][0], i, 0);
 }
@@ -221,13 +227,13 @@ if(document.form.vts_lport_x_0.value.length > 0
 return false;
 }
 if(document.form.vts_ipaddr_x_0.value==""){
-alert("<#137#>");
+alert("<#140#>");
 document.form.vts_ipaddr_x_0.focus();
 document.form.vts_ipaddr_x_0.select();
 return false;
 }
 if(document.form.vts_port_x_0.value==""){
-alert("<#137#>");
+alert("<#140#>");
 document.form.vts_port_x_0.focus();
 document.form.vts_port_x_0.select();
 return false;
@@ -245,8 +251,8 @@ document.form.vts_enable_x[0].checked = true;
 var rule_num = document.getElementById('vts_rulelist_table').rows.length;
 var item_num = document.getElementById('vts_rulelist_table').rows[0].cells.length;
 if(rule_num >= upper){
-alert("<#1331#> " + upper + " <#1332#>");
-return;
+alert("<#1369#> " + upper + " <#1370#>");
+return false;
 }
 if(item_num >=2){
 for(i=0; i<rule_num; i++){
@@ -255,19 +261,19 @@ if(entry_cmp(document.getElementById('vts_rulelist_table').rows[i].cells[4].inne
 || document.getElementById('vts_rulelist_table').rows[i].cells[4].innerHTML == 'BOTH'){
 if(overlib_str[i]){
 if(document.form.vts_port_x_0.value == overlib_str[i]){
-alert("<#1325#>");
+alert("<#1363#>");
 document.form.vts_port_x_0.value =="";
 document.form.vts_port_x_0.focus();
 document.form.vts_port_x_0.select();
-return;
+return false;
 }
 }else{
 if(document.form.vts_port_x_0.value == document.getElementById('vts_rulelist_table').rows[i].cells[1].innerHTML){
-alert("<#1325#>");
+alert("<#1363#>");
 document.form.vts_port_x_0.value =="";
 document.form.vts_port_x_0.focus();
 document.form.vts_port_x_0.select();
-return;
+return false;
 }
 }
 }
@@ -288,6 +294,7 @@ backup_lport = "";
 backup_proto = "";
 document.getElementById('vts_rulelist_table').rows[rule_num-1].scrollIntoView();
 }
+return true;
 }
 }
 function validate_multi_range(val, mini, maxi){
@@ -296,7 +303,7 @@ if(rangere.test(val)){
 if(!validator.eachPort(document.form.vts_port_x_0, RegExp.$1, mini, maxi) || !validator.eachPort(document.form.vts_port_x_0, RegExp.$2, mini, maxi)){
 return false;
 }else if(parseInt(RegExp.$1) >= parseInt(RegExp.$2)){
-alert("<#147#>");
+alert("<#150#>");
 return false;
 }else
 return true;
@@ -310,12 +317,12 @@ return true;
 function validate_single_range(val, min, max) {
 for(j=0; j<val.length; j++){ //is_number
 if (val.charAt(j)<'0' || val.charAt(j)>'9'){
-alert('<#149#> ' + min + ' <#150#> ' + max);
+alert('<#152#> ' + min + ' <#153#> ' + max);
 return false;
 }
 }
 if(val < min || val > max) { //is_in_range
-alert('<#149#> ' + min + ' <#150#> ' + max);
+alert('<#152#> ' + min + ' <#153#> ' + max);
 return false;
 }else
 return true;
@@ -328,7 +335,7 @@ for(i=0;i<PortSplit.length;i++){
 PortSplit[i] = PortSplit[i].replace(/(^\s*)|(\s*$)/g, ""); // "\space" to ""
 PortSplit[i] = PortSplit[i].replace(/(^0*)/g, ""); // "^0" to ""
 if(PortSplit[i] == "" ||PortSplit[i] == 0){
-alert("<#1330#>");
+alert("<#1368#>");
 obj.focus();
 obj.select();
 return false;
@@ -410,7 +417,7 @@ var vts_rulelist_row = decodeURIComponent(vts_rulelist_array).split('<');
 var code = "";
 code +='<table width="100%" cellspacing="0" cellpadding="4" align="center" class="list_table" id="vts_rulelist_table">';
 if(vts_rulelist_row.length == 1)
-code +='<tr><td style="color:#FFCC00;" colspan="6"><#1286#></td></tr>';
+code +='<tr><td style="color:#FFCC00;" colspan="6"><#1324#></td></tr>';
 else{
 for(var i = 1; i < vts_rulelist_row.length; i++){
 overlib_str0[i] ="";
@@ -486,48 +493,48 @@ document.getElementById("row" + num).style.background='#FFF';
 <tr>
 <td bgcolor="#4D595D" valign="top" >
 <div>&nbsp;</div>
-<div class="formfonttitle"><#195#> - <#198#></div>
+<div class="formfonttitle"><#198#> - <#201#></div>
 <div style="margin-left:5px;margin-top:10px;margin-bottom:10px"><img src="/images/New_ui/export/line_export.png"></div>
 <div>
-<div class="formfontdesc"><#1279#></div>
+<div class="formfontdesc"><#1317#></div>
 <ul style="margin-left:-25px; *margin-left:10px;">
-<div class="formfontdesc"><li><#1137#></div>
-<div class="formfontdesc" id="FTP_desc"><li><#1112#></div>
+<div class="formfontdesc"><li><#1173#></div>
+<div class="formfontdesc" id="FTP_desc"><li><#1148#></div>
 </ul>
 </div>
 <div class="formfontdesc" style="margin-top:-10px;">
-<a id="faq" href="" target="_blank" style="font-family:Lucida Console;text-decoration:underline;"><#198#>&nbspFAQ</a>
+<a id="faq" href="" target="_blank" style="font-family:Lucida Console;text-decoration:underline;"><#201#>&nbspFAQ</a>
 </div>
-<div class="formfontdesc" id="lb_note" style="color:#FFCC00; display:none;"><#1424#></div>
+<div class="formfontdesc" id="lb_note" style="color:#FFCC00; display:none;"><#1462#></div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable">
 <thead>
 <tr>
-<td colspan="4"><#1878#></td>
+<td colspan="4"><#1924#></td>
 </tr>
 </thead>
 <tr>
-<th><#1278#><input type="hidden" name="vts_num_x_0" value="<% nvram_get("vts_num_x"); %>" readonly="1" /></th>
+<th><#1316#><input type="hidden" name="vts_num_x_0" value="<% nvram_get("vts_num_x"); %>" readonly="1" /></th>
 <td>
-<input type="radio" value="1" name="vts_enable_x" class="content_input_fd" onclick="return change_common_radio(this, 'IPConnection', 'vts_enable_x', '1')" <% nvram_match("vts_enable_x", "1", "checked"); %>><#65#>
-<input type="radio" value="0" name="vts_enable_x" class="content_input_fd" onclick="return change_common_radio(this, 'IPConnection', 'vts_enable_x', '0')" <% nvram_match("vts_enable_x", "0", "checked"); %>><#64#>
+<input type="radio" value="1" name="vts_enable_x" class="content_input_fd" onclick="return change_common_radio(this, 'IPConnection', 'vts_enable_x', '1')" <% nvram_match("vts_enable_x", "1", "checked"); %>><#66#>
+<input type="radio" value="0" name="vts_enable_x" class="content_input_fd" onclick="return change_common_radio(this, 'IPConnection', 'vts_enable_x', '0')" <% nvram_match("vts_enable_x", "0", "checked"); %>><#65#>
 </td>
 </tr>
 <tr>
-<th><#1285#></th>
+<th><#1323#></th>
 <td id="vts_rulelist">
 <select name="KnownApps" id="KnownApps" class="input_option" onchange="change_wizard(this, 'KnownApps');">
 </select>
 </td>
 </tr>
 <tr>
-<th><#1284#></th>
+<th><#1322#></th>
 <td id="VSGameList">
 <select name="KnownGames" id="KnownGames" class="input_option" onchange="change_wizard(this, 'KnownGames');">
 </select>
 </td>
 </tr>
 <tr>
-<th><#1283#></th>
+<th><#1321#></th>
 <td>
 <input type="text" maxlength="5" name="vts_ftpport" class="input_6_table" value="<% nvram_get("vts_ftpport"); %>" onkeypress="return validator.isNumber(this,event);" autocorrect="off" autocapitalize="off">
 </td>
@@ -536,16 +543,16 @@ document.getElementById("row" + num).style.background='#FFF';
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable_table">
 <thead>
 <tr>
-<td colspan="7"><#1287#>&nbsp;(<#1435#>&nbsp;128)</td>
+<td colspan="7"><#1325#>&nbsp;(<#1473#>&nbsp;128)</td>
 </tr>
 </thead>
 <tr>
-<th><#814#></th>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,24);"><#1129#></a></th>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,25);"><#1280#></a></th>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,26);"><#1281#></a></th>
-<th><#1282#></th>
-<th><#1434#></th>
+<th><#831#></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,24);"><#1165#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,25);"><#1318#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,26);"><#1319#></a></th>
+<th><#1320#></th>
+<th><#1472#></th>
 </tr>
 <tr>
 <td width="27%">
@@ -556,7 +563,7 @@ document.getElementById("row" + num).style.background='#FFF';
 </td>
 <td width="21%">
 <input type="text" maxlength="15" class="input_15_table" name="vts_ipaddr_x_0" align="left" onkeypress="return validator.isIPAddr(this, event)" style="float:left;"/ autocomplete="off" onClick="hideClients_Block();" autocorrect="off" autocapitalize="off">
-<img id="pull_arrow" height="14px;" src="images/arrow-down.gif" align="right" onclick="pullLANIPList(this);" title="<#1767#>">
+<img id="pull_arrow" height="14px;" src="images/arrow-down.gif" align="right" onclick="pullLANIPList(this);" title="<#1809#>">
 <div id="ClientList_Block" class="clientlist_dropdown" style="margin-left:2px;margin-top:25px;"></div>
 </td>
 <td width="10%">
@@ -577,7 +584,7 @@ document.getElementById("row" + num).style.background='#FFF';
 </table>
 <div id="vts_rulelist_Block"></div>
 <div class="apply_gen">
-<input name="button" type="button" class="button_gen" onclick="applyRule();" value="<#72#>"/>
+<input name="button" type="button" class="button_gen" onclick="applyRule();" value="<#73#>"/>
 </div>
 </td>
 </tr>

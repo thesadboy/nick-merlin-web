@@ -7,7 +7,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#533#> - VLAN DHCP</title>
+<title><#548#> - VLAN DHCP</title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="other.css">
@@ -20,7 +20,7 @@
 <script>
 <% wanlink(); %>
 var $j = jQuery.noConflict();
-var alert_over = "<#2067#> ";
+var alert_over = "<#2122#> ";
 var subnet_rulelist_array = decodeURIComponent("<% nvram_char_to_ascii("","subnet_rulelist"); %>");
 var subnet_rulelist_row = subnet_rulelist_array.split('<');
 function initial() {
@@ -40,7 +40,7 @@ var C_class_end = inet_network("255.255.255.255");
 var ip_obj = obj_name;
 var ip_num = inet_network(ip_obj.value); //-1 means nothing
 if(obj_name.value.split(".")[3] < 1 || obj_name.value.split(".")[3] > 254) {
-alert(obj_name.value+" <#146#>");
+alert(obj_name.value+" <#149#>");
 obj_name.focus();
 return false;
 }
@@ -49,7 +49,7 @@ obj_name.value = ipFilterZero(ip_obj.value); //Filtering ip address with leading
 return true;
 }
 else if(ip_num > B_class_start && ip_num < B_class_end) {
-alert(ip_obj.value+" <#146#>");
+alert(ip_obj.value+" <#149#>");
 ip_obj.focus();
 ip_obj.select();
 return false;
@@ -59,7 +59,7 @@ obj_name.value = ipFilterZero(ip_obj.value); //Filtering ip address with leading
 return true;
 }
 else {
-alert(ip_obj.value+" <#146#>");
+alert(ip_obj.value+" <#149#>");
 ip_obj.focus();
 ip_obj.select();
 return false;
@@ -72,7 +72,7 @@ document.form.tGatewayIP.select();
 return false;
 }
 if(document.form.tSubnetMask.value == "") {
-alert("<#137#>");
+alert("<#140#>");
 document.form.tSubnetMask.focus();
 document.form.tSubnetMask.select();
 return false;
@@ -86,13 +86,13 @@ document.form.tGatewayIP.select();
 return false;
 }
 if(document.form.tDHCPStart.value == "") {
-alert("<#137#>");
+alert("<#140#>");
 document.form.tDHCPStart.focus();
 document.form.tDHCPStart.select();
 return false;
 }
 else if(document.form.tDHCPEnd.value == "") {
-alert("<#137#>");
+alert("<#140#>");
 document.form.tDHCPEnd.focus();
 document.form.tDHCPEnd.select();
 return false;
@@ -115,13 +115,13 @@ var ipPoolRangeArray = calculatorIPPoolRange().split(">");
 var ipPoolLegalStart = inet_network(ipPoolRangeArray[0]);
 var ipPoolLegalEnd = inet_network(ipPoolRangeArray[1]);
 if(ipPoolLegalStart > ipPoolStart || ipPoolLegalEnd < ipPoolStart) {
-alert(document.form.tDHCPStart.value + " <#146#>");
+alert(document.form.tDHCPStart.value + " <#149#>");
 document.form.tDHCPStart.focus();
 document.form.tDHCPStart.select();
 return false;
 }
 else if(ipPoolLegalEnd < ipPoolEnd || ipPoolLegalStart > ipPoolEnd) {
-alert(document.form.tDHCPEnd.value + " <#146#>");
+alert(document.form.tDHCPEnd.value + " <#149#>");
 document.form.tDHCPEnd.focus();
 document.form.tDHCPEnd.select();
 return false;
@@ -454,8 +454,8 @@ return ipPoolStart + ">" + ipPoolEnd;
 <tr>
 <th>Enable the DHCP Server</th>
 <td>
-<input type="radio" value="1" name="radioDHCPEnable" class="content_input_fd" checked><#65#>
-<input type="radio" value="0" name="radioDHCPEnable" class="content_input_fd"><#64#>
+<input type="radio" value="1" name="radioDHCPEnable" class="content_input_fd" checked><#66#>
+<input type="radio" value="0" name="radioDHCPEnable" class="content_input_fd"><#65#>
 </td>
 </tr>
 <tr>
@@ -517,7 +517,7 @@ return ipPoolStart + ">" + ipPoolEnd;
 </tr>
 </table>
 <div class="apply_gen">
-<input class="button_gen" onclick="applyRule()" type="button" value="<#72#>"/>
+<input class="button_gen" onclick="applyRule()" type="button" value="<#73#>"/>
 </div>
 </td>
 </tr>

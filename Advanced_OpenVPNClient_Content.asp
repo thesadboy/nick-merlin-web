@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#533#> - OpenVPN Client Settings</title>
+<title><#548#> - OpenVPN Client Settings</title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <script language="JavaScript" type="text/javascript" src="/state.js"></script>
@@ -245,6 +245,8 @@ digestsarray[i][0], digestsarray[i][0],
 }
 setRadioValue(document.form.vpn_client_x_eas, ((document.form.vpn_clientx_eas.value.indexOf(''+(openvpn_unit)) >= 0) ? "1" : "0"));
 getTLS(openvpn_unit);
+update_rgw_options();
+document.form.vpn_client_rgw.value = policy_ori;
 update_visibility();
 setTimeout("getConnStatus()", 2000);
 }
@@ -337,6 +339,19 @@ showhide("client_cn_label", ((auth == "tls") && (tlsremote == 1)));
 showhide("clientlist_Block", (rgw == 2));
 showhide("selectiveTable", (rgw == 2));
 showhide("client_enforce", (rgw == 2));
+}
+function update_rgw_options(){
+currentpolicy = document.form.vpn_client_rgw.value;
+iface = document.form.vpn_client_if_x.value;
+if ((iface == "tap") && (currentpolicy == 2)) {
+currentpolicy = 1;
+document.form.vpn_client_rgw.value = 1;
+}
+free_options(document.form.vpn_client_rgw);
+add_option(document.form.vpn_client_rgw, "No","0",(currentpolicy == 0));
+add_option(document.form.vpn_client_rgw, "All","1",(currentpolicy == 1));
+if (iface == "tun")
+add_option(document.form.vpn_client_rgw, "Policy Rules","2",(currentpolicy == 2));
 }
 function edit_Keys(){
 cal_panel_block();
@@ -464,7 +479,7 @@ if(j != item_num-2)
 tmp_value += ">";
 }
 }
-if(tmp_value == "<"+"<#1286#>" || tmp_value == "<")
+if(tmp_value == "<"+"<#1324#>" || tmp_value == "<")
 tmp_value = "";
 document.form.vpn_client_clientlist.value = tmp_value;
 if (((enforce_ori != getRadioValue(document.form.vpn_client_enforce)) ||
@@ -496,7 +511,7 @@ setTimeout("ovpnFileChecker();",2000);
 }
 var vpn_upload_state = "init";
 function ovpnFileChecker(){
-document.getElementById("importOvpnFile").innerHTML = "<#173#>";
+document.getElementById("importOvpnFile").innerHTML = "<#176#>";
 $.ajax({
 url: '/ajax_openvpn_server.asp',
 dataType: 'script',
@@ -529,7 +544,7 @@ var code = "";
 var width = ["24%", "29%", "25%", "10%", "12%"];
 code +='<table width="100%" cellspacing="0" cellpadding="4" align="center" class="list_table" id="clientlist_table">';
 if(clientlist_row.length == 1)
-code +='<tr><td style="color:#FFCC00;" colspan="6"><#1286#></td></tr>';
+code +='<tr><td style="color:#FFCC00;" colspan="6"><#1324#></td></tr>';
 else{
 for(var i = 1; i < clientlist_row.length; i++){
 code +='<tr id="row'+i+'">';
@@ -559,7 +574,7 @@ function addRow_Group(upper){
 var rule_num = document.getElementById('clientlist_table').rows.length;
 var item_num = document.getElementById('clientlist_table').rows[0].cells.length;
 if(rule_num >= upper){
-alert("<#1331#> " + upper + " <#1332#>");
+alert("<#1369#> " + upper + " <#1370#>");
 return false;
 }
 if(document.form.clientlist_ipAddr.value=="")
@@ -580,7 +595,7 @@ if(item_num >=2){
 for(i=0; i<rule_num; i++){
 if(document.form.clientlist_ipAddr.value.toLowerCase() == document.getElementById('clientlist_table').rows[i].cells[1].innerHTML.toLowerCase() &&
 document.form.clientlist_dstipAddr.value.toLowerCase() == document.getElementById('clientlist_table').rows[i].cells[2].innerHTML.toLowerCase()){
-alert("<#1325#>");
+alert("<#1363#>");
 document.form.clientlist_ipAddr.focus();
 document.form.clientlist_ipAddr.select();
 return false;
@@ -725,7 +740,7 @@ return false;
 </tr>
 <tr>
 <div style="margin-left:30px; margin-top:10px;">
-<p><#2111#> <span style="color:#FFCC00;">----- BEGIN xxx ----- </span>/<span style="color:#FFCC00;"> ----- END xxx -----</span> <#2112#>
+<p><#2164#> <span style="color:#FFCC00;">----- BEGIN xxx ----- </span>/<span style="color:#FFCC00;"> ----- END xxx -----</span> <#2165#>
 <p>Limit: 3499 characters per field
 </div>
 <div style="margin:5px;*margin-left:-5px;"><img style="width: 730px; height: 2px;" src="/images/New_ui/export/line_export.png"></div>
@@ -779,8 +794,8 @@ return false;
 </tbody>
 </table>
 <div style="margin-top:5px;width:100%;text-align:center;">
-<input class="button_gen" type="button" onclick="cancel_Keys();" value="<#74#>">
-<input class="button_gen" type="button" onclick="save_Keys();" value="<#880#>">
+<input class="button_gen" type="button" onclick="cancel_Keys();" value="<#75#>">
+<input class="button_gen" type="button" onclick="save_Keys();" value="<#897#>">
 </div>
 </td>
 </tr>
@@ -903,12 +918,12 @@ switch_on_container_path: '/switcherplugin/iphone_switch_container_off.png'
 </td>
 </tr>
 <tr>
-<th><#2129#></th>
+<th><#2182#></th>
 <td>
 <input id="ovpnfile" type="file" name="file" class="input" style="color:#FFCC00;*color:#000;">
-<input id="" class="button_gen" onclick="ImportOvpn();" type="button" value="<#887#>" />
+<input id="" class="button_gen" onclick="ImportOvpn();" type="button" value="<#904#>" />
 <img id="loadingicon" style="margin-left:5px;display:none;" src="/images/InternetScan.gif">
-<span id="importOvpnFile" style="display:none;"><#173#></span>
+<span id="importOvpnFile" style="display:none;"><#176#></span>
 </td>
 </tr>
 </table>
@@ -921,19 +936,19 @@ switch_on_container_path: '/switcherplugin/iphone_switch_container_off.png'
 <tr>
 <th>Start with WAN</th>
 <td>
-<input type="radio" name="vpn_client_x_eas" class="input" value="1"><#65#>
-<input type="radio" name="vpn_client_x_eas" class="input" value="0"><#64#>
+<input type="radio" name="vpn_client_x_eas" class="input" value="1"><#66#>
+<input type="radio" name="vpn_client_x_eas" class="input" value="0"><#65#>
 </td>
 </tr>
 <tr>
-<th><#2108#></th>
+<th><#2161#></th>
 <td>
-<select name="vpn_client_if_x" onclick="update_visibility();" class="input_option">
+<select name="vpn_client_if_x" onclick="update_rgw_options();update_visibility();" class="input_option">
 </select>
 </td>
 </tr>
 <tr>
-<th><#1282#></th>
+<th><#1320#></th>
 <td>
 <select name="vpn_client_proto" class="input_option">
 <option value="tcp-client" <% nvram_match("vpn_client_proto","tcp-client","selected"); %> >TCP</option>
@@ -949,7 +964,7 @@ switch_on_container_path: '/switcherplugin/iphone_switch_container_off.png'
 </td>
 </tr>
 <tr>
-<th><#206#></th>
+<th><#209#></th>
 <td>
 <select name="vpn_client_firewall" class="input_option" onclick="update_visibility();" >
 <option value="auto" <% nvram_match("vpn_client_firewall","auto","selected"); %> >Automatic</option>
@@ -958,7 +973,7 @@ switch_on_container_path: '/switcherplugin/iphone_switch_container_off.png'
 </td>
 </tr>
 <tr>
-<th><#2086#></th>
+<th><#2139#></th>
 <td>
 <select name="vpn_client_crypt" class="input_option" onclick="update_visibility();">
 <option value="tls" <% nvram_match("vpn_client_crypt","tls","selected"); %> >TLS</option>
@@ -972,33 +987,33 @@ switch_on_container_path: '/switcherplugin/iphone_switch_container_off.png'
 <tr id="client_userauth">
 <th>Username/Password Authentication</th>
 <td>
-<input type="radio" name="vpn_client_userauth" class="input" value="1" onclick="update_visibility();" <% nvram_match_x("", "vpn_client_userauth", "1", "checked"); %>><#65#>
-<input type="radio" name="vpn_client_userauth" class="input" value="0" onclick="update_visibility();" <% nvram_match_x("", "vpn_client_userauth", "0", "checked"); %>><#64#>
+<input type="radio" name="vpn_client_userauth" class="input" value="1" onclick="update_visibility();" <% nvram_match_x("", "vpn_client_userauth", "1", "checked"); %>><#66#>
+<input type="radio" name="vpn_client_userauth" class="input" value="0" onclick="update_visibility();" <% nvram_match_x("", "vpn_client_userauth", "0", "checked"); %>><#65#>
 </td>
 </tr>
 <tr id="client_username">
 <th>Username</th>
 <td>
-<input type="text" maxlength="50" class="input_25_table" name="vpn_client_username" value="<% nvram_get("vpn_client_username"); %>" >
+<input type="text" maxlength="255" class="input_25_table" name="vpn_client_username" value="<% nvram_get("vpn_client_username"); %>" >
 </td>
 </tr>
 <tr id="client_password">
 <th>Password</th>
 <td>
-<input type="password" maxlength="50" class="input_25_table" name="vpn_client_password" value="<% nvram_get("vpn_client_password"); %>">
-<input type="checkbox" name="show_pass_1" onclick="pass_checked(document.form.vpn_client_password)"><#372#>
+<input type="password" maxlength="255" class="input_25_table" name="vpn_client_password" value="<% nvram_get("vpn_client_password"); %>">
+<input type="checkbox" name="show_pass_1" onclick="pass_checked(document.form.vpn_client_password)"><#377#>
 </td>
 </tr>
 <tr id="client_useronly">
-<th><#2087#><br><i>(Must define certificate authority)</i></th>
+<th><#2140#><br><i>(Must define certificate authority)</i></th>
 <td>
-<input type="radio" name="vpn_client_useronly" class="input" value="1" onclick="update_visibility();" <% nvram_match_x("", "vpn_client_useronly", "1", "checked"); %>><#65#>
-<input type="radio" name="vpn_client_useronly" class="input" value="0" onclick="update_visibility();" <% nvram_match_x("", "vpn_client_useronly", "0", "checked"); %>><#64#>
+<input type="radio" name="vpn_client_useronly" class="input" value="1" onclick="update_visibility();" <% nvram_match_x("", "vpn_client_useronly", "1", "checked"); %>><#66#>
+<input type="radio" name="vpn_client_useronly" class="input" value="0" onclick="update_visibility();" <% nvram_match_x("", "vpn_client_useronly", "0", "checked"); %>><#65#>
 <span id="client_ca_warn_text">Warning: You must define a Certificate Authority.</span>
 </td>
 </tr>
 <tr id="client_hmac">
-<th><#2088#><br><i>(tls-auth)</i></th>
+<th><#2141#><br><i>(tls-auth)</i></th>
 <td>
 <select name="vpn_client_hmac" class="input_option">
 <option value="-1" <% nvram_match("vpn_client_hmac","-1","selected"); %> >Disabled</option>
@@ -1019,16 +1034,16 @@ switch_on_container_path: '/switcherplugin/iphone_switch_container_off.png'
 <tr id="client_bridge">
 <th>Server is on the same subnet</th>
 <td>
-<input type="radio" name="vpn_client_bridge" class="input" value="1" onclick="update_visibility();" <% nvram_match_x("", "vpn_client_bridge", "1", "checked"); %>><#65#>
-<input type="radio" name="vpn_client_bridge" class="input" value="0" onclick="update_visibility();" <% nvram_match_x("", "vpn_client_bridge", "0", "checked"); %>><#64#>
+<input type="radio" name="vpn_client_bridge" class="input" value="1" onclick="update_visibility();" <% nvram_match_x("", "vpn_client_bridge", "1", "checked"); %>><#66#>
+<input type="radio" name="vpn_client_bridge" class="input" value="0" onclick="update_visibility();" <% nvram_match_x("", "vpn_client_bridge", "0", "checked"); %>><#65#>
 <span id="client_bridge_warn_text">Warning: Cannot bridge distinct subnets. Will default to routed mode.</span>
 </td>
 </tr>
 <tr id="client_nat">
 <th>Create NAT on tunnel<br><i>(Router must be configured manually)</i></th>
 <td>
-<input type="radio" name="vpn_client_nat" class="input" value="1" onclick="update_visibility();" <% nvram_match_x("", "vpn_client_nat", "1", "checked"); %>><#65#>
-<input type="radio" name="vpn_client_nat" class="input" value="0" onclick="update_visibility();" <% nvram_match_x("", "vpn_client_nat", "0", "checked"); %>><#64#>
+<input type="radio" name="vpn_client_nat" class="input" value="1" onclick="update_visibility();" <% nvram_match_x("", "vpn_client_nat", "1", "checked"); %>><#66#>
+<input type="radio" name="vpn_client_nat" class="input" value="0" onclick="update_visibility();" <% nvram_match_x("", "vpn_client_nat", "0", "checked"); %>><#65#>
 <span id="client_nat_warn_text">Routes must be configured manually.</span>
 </td>
 </tr>
@@ -1060,7 +1075,7 @@ switch_on_container_path: '/switcherplugin/iphone_switch_container_off.png'
 </td>
 </tr>
 <tr>
-<th><#2121#><br><i>( <#2367#> )</i></th>
+<th><#2174#><br><i>( <#2417#> )</i></th>
 <td>
 <input type="text" maxlength="4" class="input_6_table" name="vpn_client_poll" onKeyPress="return validator.isNumber(this,event);" onblur="validate_number_range(this, 0, 1440)" value="<% nvram_get("vpn_client_poll"); %>">
 </td>
@@ -1077,7 +1092,7 @@ switch_on_container_path: '/switcherplugin/iphone_switch_container_off.png'
 </td>
 </tr>
 <tr>
-<th><#2099#></th>
+<th><#2152#></th>
 <td>
 <select name="vpn_client_cipher" class="input_option">
 <option value="<% nvram_get("vpn_client_cipher"); %>" selected><% nvram_get("vpn_client_cipher"); %></option>
@@ -1085,7 +1100,7 @@ switch_on_container_path: '/switcherplugin/iphone_switch_container_off.png'
 </td>
 </tr>
 <tr>
-<th><#2092#></th>
+<th><#2145#></th>
 <td>
 <select name="vpn_client_comp" class="input_option">
 <option value="-1" <% nvram_match("vpn_client_comp","-1","selected"); %> >Disabled</option>
@@ -1110,8 +1125,8 @@ switch_on_container_path: '/switcherplugin/iphone_switch_container_off.png'
 <tr id="client_tlsremote">
 <th>Verify Server Certificate</th>
 <td>
-<input type="radio" name="vpn_client_tlsremote" class="input" onclick="update_visibility();" value="1" <% nvram_match_x("", "vpn_client_tlsremote", "1", "checked"); %>><#65#>
-<input type="radio" name="vpn_client_tlsremote" class="input" onclick="update_visibility();" value="0" <% nvram_match_x("", "vpn_client_tlsremote", "0", "checked"); %>><#64#>
+<input type="radio" name="vpn_client_tlsremote" class="input" onclick="update_visibility();" value="1" <% nvram_match_x("", "vpn_client_tlsremote", "1", "checked"); %>><#66#>
+<input type="radio" name="vpn_client_tlsremote" class="input" onclick="update_visibility();" value="0" <% nvram_match_x("", "vpn_client_tlsremote", "0", "checked"); %>><#65#>
 <label style="padding-left:3em;" id="client_cn_label">Common name:</label><input type="text" maxlength="64" class="input_25_table" id="vpn_client_cn" name="vpn_client_cn" value="<% nvram_get("vpn_client_cn"); %>">
 </td>
 </tr>
@@ -1119,9 +1134,6 @@ switch_on_container_path: '/switcherplugin/iphone_switch_container_off.png'
 <th>Redirect Internet traffic</th>
 <td colspan="2">
 <select name="vpn_client_rgw" class="input_option" onChange="update_visibility();">
-<option value="0" <% nvram_match("vpn_client_rgw","0","selected"); %>>No</option>
-<option value="1" <% nvram_match("vpn_client_rgw","1","selected"); %>>All traffic</option>
-<option value="2" <% nvram_match("vpn_client_rgw","2","selected"); %>>Policy rules</option>
 </select>
 <label style="padding-left:3em;" id="client_gateway_label">Gateway:</label><input type="text" maxlength="15" class="input_15_table" id="vpn_client_gw" name="vpn_client_gw" onkeypress="return validator.isIPAddr(this, event);" value="<% nvram_get("vpn_client_gw"); %>">
 </td>
@@ -1129,23 +1141,23 @@ switch_on_container_path: '/switcherplugin/iphone_switch_container_off.png'
 <tr id="client_enforce">
 <th>Block routed clients if tunnel goes down</th>
 <td>
-<input type="radio" name="vpn_client_enforce" class="input" value="1" <% nvram_match_x("", "vpn_client_enforce", "1", "checked"); %>><#65#>
-<input type="radio" name="vpn_client_enforce" class="input" value="0" <% nvram_match_x("", "vpn_client_enforce", "0", "checked"); %>><#64#>
+<input type="radio" name="vpn_client_enforce" class="input" value="1" <% nvram_match_x("", "vpn_client_enforce", "1", "checked"); %>><#66#>
+<input type="radio" name="vpn_client_enforce" class="input" value="0" <% nvram_match_x("", "vpn_client_enforce", "0", "checked"); %>><#65#>
 </td>
 </tr>
 </table>
 <table id="selectiveTable" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable_table" style="margin-top:8px;">
 <thead>
 <tr>
-<td colspan="5">Rules for routing client traffic through the tunnel (<#1435#>&nbsp;100)</td>
+<td colspan="5">Rules for routing client traffic through the tunnel (<#1473#>&nbsp;100)</td>
 </tr>
 </thead>
 <tr>
-<th><#1259#></th>
+<th><#1297#></th>
 <th>Source IP</th>
 <th>Destination IP</th>
 <th>Iface</th>
-<th><#1434#></th>
+<th><#1472#></th>
 </tr>
 <tr>
 <td width="24%">
@@ -1153,7 +1165,7 @@ switch_on_container_path: '/switcherplugin/iphone_switch_container_off.png'
 </td>
 <td width="29%">
 <input type="text" class="input_18_table" maxlength="18" name="clientlist_ipAddr">
-<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" style="position:absolute;*margin-left:-3px;*margin-top:1px;" onclick="pullLANIPList(this);" title="<#1766#>" onmouseover="over_var=1;" onmouseout="over_var=0;">
+<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" style="position:absolute;*margin-left:-3px;*margin-top:1px;" onclick="pullLANIPList(this);" title="<#1808#>" onmouseover="over_var=1;" onmouseout="over_var=0;">
 <div id="ClientList_Block_PC" class="ClientList_Block_PC"></div>
 </td>
 <td width="25%">
@@ -1176,7 +1188,7 @@ switch_on_container_path: '/switcherplugin/iphone_switch_container_off.png'
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable_table" style="margin-top:8px;">
 <thead>
 <tr>
-<td><#2094#></td>
+<td><#2147#></td>
 </tr>
 </thead>
 <tr>
@@ -1186,8 +1198,8 @@ switch_on_container_path: '/switcherplugin/iphone_switch_container_off.png'
 </tr>
 </table>
 <div class="apply_gen">
-<input type="button" id="restoreButton" class="button_gen" value="<#1785#>" onclick="defaultSettings();">
-<input name="button" type="button" class="button_gen" onclick="applyRule();" value="<#72#>"/>
+<input type="button" id="restoreButton" class="button_gen" value="<#1827#>" onclick="defaultSettings();">
+<input name="button" type="button" class="button_gen" onclick="applyRule();" value="<#73#>"/>
 </div>
 </td></tr>
 </tbody>

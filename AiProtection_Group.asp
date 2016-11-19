@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
-<title><#533#> - Group</title>
+<title><#548#> - Group</title>
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
 <link rel="stylesheet" type="text/css" href="ParentalControl.css">
@@ -62,7 +62,7 @@ show_footer();
 <table width="730px">
 <tr>
 <td align="left">
-<span class="formfonttitle"><#726#> - Group</span>
+<span class="formfonttitle"><#742#> - Group</span>
 </td>
 <td>
 <img onclick="go_setting('/AiProtection_HomeSecurity.asp')" align="right" style="cursor:pointer;position:absolute;margin-left:-20px;margin-top:-30px;" title="AiProtection" src="/images/backprev.png" onMouseOver="this.src='/images/backprevclick.png'" onMouseOut="this.src='/images/backprev.png'">

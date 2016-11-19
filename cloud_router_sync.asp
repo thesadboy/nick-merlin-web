@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#533#> - AiCloud 2.0</title>
+<title><#548#> - AiCloud 2.0</title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <script type="text/javascript" src="/state.js"></script>
@@ -16,10 +16,11 @@
 <script type="text/javascript" src="/help.js"></script>
 <script type="text/javascript" src="/general.js"></script>
 <script type="text/javascript" src="/validator.js"></script>
+<script type="text/javascript" src="/disk_functions.js"></script>
 <script type="text/javascript" src="/js/jquery.js"></script>
 <script type="text/javascript" src="/switcherplugin/jquery.iphone-switch.js"></script>
-<script type="text/javascript" src="/disk_functions.js"></script>
 <script language="JavaScript" type="text/javascript" src="/md5.js"></script>
+<script type="text/javascript" src="/disk_functions.js"></script>
 <script language="JavaScript" type="text/javascript" src="/form.js"></script>
 <style type="text/css">
 /* folder tree */
@@ -203,7 +204,7 @@ function addRow_Group(upper){
 var rule_num = document.getElementById('cloud_synclist_table').rows.length;
 var item_num = document.getElementById('cloud_synclist_table').rows[0].cells.length;
 if(rule_num >= upper){
-alert("<#1331#> " + upper + " <#1332#>");
+alert("<#1369#> " + upper + " <#1370#>");
 return false;
 }
 Do_addRow_Group();
@@ -256,7 +257,7 @@ var cloud_synclist_row = cloud_synclist_array.split('&#60');
 var code = "";
 code +='<table width="99%" cellspacing="0" cellpadding="4" align="center" class="list_table" id="cloud_synclist_table">';
 if(cloud_synclist_array == "")
-code +='<tr height="55px"><td style="color:#FFCC00;" colspan="6"><#1286#></td>';
+code +='<tr height="55px"><td style="color:#FFCC00;" colspan="6"><#1324#></td>';
 else{
 for(var i = 0; i < cloud_synclist_row.length; i++){
 rulenum++;
@@ -305,17 +306,17 @@ function validform(){
 if(!Block_chars(document.form.cloud_username, ["<", ">"]))
 return false;
 if(document.form.cloud_username.value == ''){
-alert("<#98#>");
+alert("<#100#>");
 return false;
 }
 if(!Block_chars(document.form.cloud_password, ["<", ">"]))
 return false;
 if(document.form.cloud_password.value == ''){
-alert("<#102#>");
+alert("<#104#>");
 return false;
 }
 if(document.form.cloud_dir.value.split("/").length < 4 || document.form.cloud_dir.value == ''){
-alert("<#743#>");
+alert("<#759#>");
 return false;
 }
 return true;
@@ -323,7 +324,7 @@ return true;
 var folderlist = new Array();
 function get_disk_tree(){
 if(disk_flag == 1){
-alert('<#1606#>');
+alert('<#1646#>');
 return false;
 }
 cal_panel_block("folderTree_panel", 0.25);
@@ -593,7 +594,7 @@ $("#folderTree_panel").fadeOut(300);
 function show_invitation(share_link_url){
 var invite_content = "";
 var sync_rule_desc = "";
-document.getElementById('invite_desc').innerHTML = "<#1871#>: "+document.form.router_sync_desc.value;
+document.getElementById('invite_desc').innerHTML = "<#1917#>: "+document.form.router_sync_desc.value;
 document.getElementById('invite_path').innerHTML = document.form.cloud_dir.value;
 if(document.form.router_sync_rule.value == 0)
 sync_rule_desc = "Two way sync";
@@ -601,7 +602,7 @@ else if(document.form.router_sync_rule.value == 1)
 sync_rule_desc = "Host to client";
 else
 sync_rule_desc = "Client to host";
-document.getElementById('invite_rule').innerHTML = "<#1873#>: "+sync_rule_desc;
+document.getElementById('invite_rule').innerHTML = "<#1919#>: "+sync_rule_desc;
 document.getElementById('invite_share').innerHTML = "http://"+ theUrl +"/" + share_link_url;
 document.getElementById("mailto").innerHTML = appendMailTo();
 cal_panel_block("invitation_block", 0.25);
@@ -609,16 +610,16 @@ cal_panel_block("invitation_block", 0.25);
 function show_captcha_style(captcha){ // captcha display style
 if( document.getElementById('captcha_rule').value == 2){
 var graph_content = "";
-graph_content = "<#1751#>: ";
+graph_content = "<#1793#>: ";
 for(i=0;i<4;i++){
 graph_content += '<img style="height:30px;" src="/images/cloudsync/captcha/'+captcha.charAt(i)+'.jpg">';
 }
 document.getElementById('invite_captcha').innerHTML = graph_content;
 }
 else if( document.getElementById('captcha_rule').value == 0)
-document.getElementById('invite_captcha').innerHTML = "<#1751#>: None";
+document.getElementById('invite_captcha').innerHTML = "<#1793#>: None";
 else
-document.getElementById('invite_captcha').innerHTML = "<#1751#>: "+captcha;
+document.getElementById('invite_captcha').innerHTML = "<#1793#>: "+captcha;
 }
 function close_invitation_block(){
 $("#invitation_block").fadeOut(300);
@@ -662,12 +663,12 @@ function domain_name_select(){
 if(!Block_chars(document.form.router_sync_desc, ["<", ">"]))
 return false;
 if(ip_flag == 1 && document.getElementById('host_name').value == ""){
-alert("<#137#>");
+alert("<#140#>");
 document.getElementById('host_name').focus();
 return false;
 }
 if(document.form.cloud_dir.value == ""){
-alert("<#137#>");
+alert("<#140#>");
 document.form.cloud_dir.focus();
 return false;
 }
@@ -785,7 +786,7 @@ sharelink_folder = temp[i];
 }
 hash_url = router_synclist_desc[j] + ">" + router_synclist_sharelink[j] + "/" + sharelink_folder + ">" + router_synclist_rule[j] + ">" + router_synclist_captcha[j];
 share_link_hashed = f23.s52e(hash_url);
-document.getElementById('invite_desc').innerHTML = "<#1871#>: "+router_synclist_desc[j];
+document.getElementById('invite_desc').innerHTML = "<#1917#>: "+router_synclist_desc[j];
 document.getElementById('invite_path').innerHTML = router_synclist_localfolder[j];
 if(router_synclist_rule[j] == 0)
 sync_rule_desc = "Two way sync";
@@ -793,9 +794,9 @@ else if(router_synclist_rule[j] == 1)
 sync_rule_desc = "Host to client";
 else
 sync_rule_desc = "Client to host";
-document.getElementById('invite_rule').innerHTML = "<#1873#>: "+sync_rule_desc;
+document.getElementById('invite_rule').innerHTML = "<#1919#>: "+sync_rule_desc;
 document.getElementById('invite_share').innerHTML = "http://"+ theUrl +"/"+share_link_hashed;
-document.getElementById('invite_captcha').innerHTML = "<#1751#>: "+ router_synclist_captcha[j];
+document.getElementById('invite_captcha').innerHTML = "<#1793#>: "+ router_synclist_captcha[j];
 document.getElementById('invite_captcha').innerHTML += "<br><br>We strongly suggest you giving this code separately to your friends.";
 document.getElementById("mailto").innerHTML = appendMailTo();
 cal_panel_block("invitation_block", 0.25);
@@ -803,14 +804,14 @@ $('#invitation_block').fadeIn(300);
 }
 function appendMailTo(){
 var mailtoCode = '<a href="mailto:?subject=Router%20Sync%20Invitation&body=';
-mailtoCode += "<#1870#>";
+mailtoCode += "<#1916#>";
 mailtoCode += "%0D%0A%0D%0A";
 mailtoCode += document.getElementById('invite_desc').innerHTML.replace(/ /g, "%20") + "%0D%0A";
 mailtoCode += "Sync%20path:%20" + document.getElementById('invite_path').innerHTML.replace(/ /g, "%20") + "%0D%0A";
 mailtoCode += document.getElementById('invite_rule').innerHTML.replace(/ /g, "%20") + "%0D%0A%0D%0A";
-mailtoCode += "<#1874#>%0D%0A".replace(/ /g, "%20");
+mailtoCode += "<#1920#>%0D%0A".replace(/ /g, "%20");
 mailtoCode += document.getElementById('invite_share').innerHTML.replace(/ /g, "%20") + "%0D%0A";
-mailtoCode += '"><div onmouseover="" style="margin-right:15px;background-image:url(images/cloudsync/mail_send.png);background-repeat:no-repeat;width:64px;height:64px;"></div><div style="font-size:12px;margin-top:3px;margin-right:17px;"><#1773#></div></a>';
+mailtoCode += '"><div onmouseover="" style="margin-right:15px;background-image:url(images/cloudsync/mail_send.png);background-repeat:no-repeat;width:64px;height:64px;"></div><div style="font-size:12px;margin-top:3px;margin-right:17px;"><#1815#></div></a>';
 return mailtoCode;
 }
 function captcha_style(){
@@ -865,9 +866,9 @@ document.getElementById('aicloud_enable_hint').style.display = "none";
 }
 }
 var hint_string = "";
-hint_string += "<#1745#><br><br>";
-hint_string += "<#1747#><br><br>";
-hint_string += "<#1746#>";
+hint_string += "<#1787#><br><br>";
+hint_string += "<#1789#><br><br>";
+hint_string += "<#1788#>";
 function checkDDNSReturnCode(){
 $.ajax({
 url: '/ajax_ddnscode.asp',
@@ -904,15 +905,15 @@ refreshpage();
 <div id="folderTree_panel" class="panel_folder">
 <table><tr>
 <td>
-<div class="machineName" style="width:200px;font-family:Microsoft JhengHei;font-size:12pt;font-weight:bolder; margin-top:15px;margin-left:30px;"><#534#></div>
+<div class="machineName" style="width:200px;font-family:Microsoft JhengHei;font-size:12pt;font-weight:bolder; margin-top:15px;margin-left:30px;"><#549#></div>
 </td>
 <td>
 <div style="width:240px;margin-top:14px;margin-left:135px;">
 <table >
 <tr>
-<td><div id="createFolderBtn" class="createFolderBtn" title="<#579#>"></div></td>
-<td><div id="deleteFolderBtn" class="deleteFolderBtn" title="<#910#>"></div></td>
-<td><div id="modifyFolderBtn" class="modifyFolderBtn" title="<#1556#>"></div></td>
+<td><div id="createFolderBtn" class="createFolderBtn" title="<#595#>"></div></td>
+<td><div id="deleteFolderBtn" class="deleteFolderBtn" title="<#928#>"></div></td>
+<td><div id="modifyFolderBtn" class="modifyFolderBtn" title="<#1594#>"></div></td>
 </tr>
 </table>
 </div>
@@ -920,25 +921,25 @@ refreshpage();
 </tr></table>
 <div id="e0" class="folder_tree"></div>
 <div style="background-image:url(images/Tree/bg_02.png);background-repeat:no-repeat;height:90px;margin-top:5px;">
-<input class="button_gen" type="button" style="margin-left:27%;margin-top:18px;" onclick="cancel_folderTree();" value="<#74#>">
-<input class="button_gen" type="button" onclick="confirm_folderTree();" value="<#879#>">
+<input class="button_gen" type="button" style="margin-left:27%;margin-top:18px;" onclick="cancel_folderTree();" value="<#75#>">
+<input class="button_gen" type="button" onclick="confirm_folderTree();" value="<#896#>">
 </div>
 </div>
 <div id="invitation_block" class="panel_folder" >
 <table><tr><td>
-<div class="machineName" style="width:200px;font-family:Microsoft JhengHei;font-size:12pt;font-weight:bolder; margin-top:20px;margin-left:30px;"><#1255#></div>
+<div class="machineName" style="width:200px;font-family:Microsoft JhengHei;font-size:12pt;font-weight:bolder; margin-top:20px;margin-left:30px;"><#1293#></div>
 </td></tr></table>
 <div style="overflow:auto;margin-top:0px;height:311px;padding:10px;width:485px;">
 <table style="margin-left:20px;word-break:break-all;word-wrap:break-word;">
 <tr >
 <td>
-<div><#1870#></div>
+<div><#1916#></div>
 </td>
 </tr>
 <tr>
 <td>
 <div id="invite_desc" style="margin-top:10px;width:440px;"></div>
-<div><#1872#>:
+<div><#1918#>:
 <span id="invite_path" style="text-decoration:underline;width:440px;"></span>
 </div>
 <div id="invite_rule"></div>
@@ -946,7 +947,7 @@ refreshpage();
 </tr>
 <tr>
 <td>
-<div style="margin-top:10px;width:440px;"><#1874#></div>
+<div style="margin-top:10px;width:440px;"><#1920#></div>
 </td>
 </tr>
 <tr>
@@ -965,7 +966,7 @@ refreshpage();
 </table>
 </div>
 <div style="background-image:url(images/Tree/bg_02.png);background-repeat:no-repeat;height:90px;">
-<input class="button_gen" type="button" onclick="close_invitation_block();" value="<#866#>" style="margin-top:15px;margin-left:200px">
+<input class="button_gen" type="button" onclick="close_invitation_block();" value="<#884#>" style="margin-top:15px;margin-left:200px">
 </div>
 </div>
 <div id="DM_mask_floder" class="mask_floder_bg"></div>
@@ -998,16 +999,16 @@ refreshpage();
 <a href="cloud_main.asp"><div class="tab"><span>AiCloud 2.0</span></div></a>
 </td>
 <td>
-<a href="cloud_sync.asp"><div class="tab"><span><#1829#></span></div></a>
+<a href="cloud_sync.asp"><div class="tab"><span><#1871#></span></div></a>
 </td>
 <td>
-<div class="tabclick"><span><#1776#></span></div>
+<div class="tabclick"><span><#1818#></span></div>
 </td>
 <td>
-<a href="cloud_settings.asp"><div class="tab"><span><#1792#></span></div></a>
+<a href="cloud_settings.asp"><div class="tab"><span><#1834#></span></div></a>
 </td>
 <td>
-<a href="cloud_syslog.asp"><div class="tab"><span><#1437#></span></div></a>
+<a href="cloud_syslog.asp"><div class="tab"><span><#1475#></span></div></a>
 </td>
 </tr>
 </tbody>
@@ -1021,7 +1022,7 @@ refreshpage();
 <tr>
 <td bgcolor="#4D595D" valign="top">
 <div>&nbsp;</div>
-<div class="formfonttitle">AiCloud 2.0 - <#1776#></div>
+<div class="formfonttitle">AiCloud 2.0 - <#1818#></div>
 <div style="margin-left:5px;margin-top:10px;margin-bottom:10px;"><img src="/images/New_ui/export/line_export.png"></div>
 <div id="title_desc_block" style="display:none;">
 <table width="700px" style="margin-left:25px;">
@@ -1032,12 +1033,12 @@ refreshpage();
 <td>&nbsp;&nbsp;</td>
 <td>
 <div style="padding:10px;width:95%;font-style:italic;font-size:14px;word-break:break-all;">
-<#1862#><br>
-1. <#1863#><br>
-2. <#1864#><br>
-3. <#1865#><br>
-4. <#1866#><br>
-<span class="formfontdesc" id="wan_ip_hide2" style="color:#FFCC00;display:none;margin-left:0px;">5. <#1867#></span>
+<#1908#><br>
+1. <#1909#><br>
+2. <#1910#><br>
+3. <#1911#><br>
+4. <#1912#><br>
+<span class="formfontdesc" id="wan_ip_hide2" style="color:#FFCC00;display:none;margin-left:0px;">5. <#1913#></span>
 </div>
 </td>
 </tr>
@@ -1048,7 +1049,7 @@ refreshpage();
 <table>
 <tr>
 <td>
-<div style="margin-left:15px;margin-top:3px;"><#1869#></div>
+<div style="margin-left:15px;margin-top:3px;"><#1915#></div>
 </td>
 </tr>
 </table>
@@ -1057,13 +1058,13 @@ refreshpage();
 <img src="images/New_ui/midup_bg.png" width="751px;">
 <table width="736px" height="200px;" style="text-align:left;margin-left:15px;position:absolute;margin-top:-130px;*margin-left:-740px;*margin-top:0px;">
 <tr style="height:40px;">
-<th width="25%"><#1259#></th>
+<th width="25%"><#1297#></th>
 <td>
 <input name="router_sync_desc" type="text" class="input_32_table" maxlength="64" style="height:25px;font-size:13px;" value="My new sync" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr id="host_name_tr">
-<th width="25%"><#1388#></th>
+<th width="25%"><#1426#></th>
 <td>
 <select id="protocol_type" class="input_option" style="height:27px;">
 <option value="0">Http</option>
@@ -1075,23 +1076,23 @@ refreshpage();
 </tr>
 <tr style="height:40px;">
 <th>
-<div style="margin-top:5px;"><#1876#></div>
+<div style="margin-top:5px;"><#1922#></div>
 </th>
 <td>
 <input type="text" id="PATH" class="input_25_table" style="height: 25px;" name="cloud_dir" value="" autocorrect="off" autocapitalize="off">
-<input name="button" type="button" class="button_gen_short" onclick="get_disk_tree();" value="<#836#>"/>
-<div id="noUSB" style="color:#FC0;display:none;margin-left:3px;font-size:12px;line-height:140%;"><#1606#></div>
+<input name="button" type="button" class="button_gen_short" onclick="get_disk_tree();" value="<#854#>"/>
+<div id="noUSB" style="color:#FC0;display:none;margin-left:3px;font-size:12px;line-height:140%;"><#1646#></div>
 </td>
 </tr>
 <tr style="height:40px;">
 <th>
-<div style="margin-top:5px;"><#839#></div>
+<div style="margin-top:5px;"><#857#></div>
 </th>
 <td>
 <select name="router_sync_rule" class="input_option" style="height:27px;">
-<option value="0"><#1748#></option>
-<option value="1"><#1750#></option>
-<option value="2"><#1749#></option>
+<option value="0"><#1790#></option>
+<option value="1"><#1792#></option>
+<option value="2"><#1791#></option>
 </select>
 <span>
 <img align="center" style="cursor:pointer;margin-top:-14px\9;" src="/images/New_ui/helpicon.png" onclick="overlib(hint_string)" onmouseout="return nd();">
@@ -1099,13 +1100,13 @@ refreshpage();
 </td>
 </tr>
 <tr style="height:40px;">
-<th><#1751#></th>
+<th><#1793#></th>
 <td>
 <div >
 <select id="captcha_rule" class="input_option" onchange="captcha_style()" style="height:27px;">
-<option value="0"><#538#></option>
-<option value="1"><#1446#></option>
-<option value="2"><#1868#></option>
+<option value="0"><#553#></option>
+<option value="1"><#1484#></option>
+<option value="2"><#1914#></option>
 </select>
 <span id="captcha_input" style="display:none;">
 <input id="captcha_inputfield" type="text" class="input_6_table" style="margin-left:10px;" maxlength="4" value="" onclick="" onkeypress="return validator.isNumber(this,event);" autocorrect="off" autocapitalize="off">
@@ -1116,7 +1117,7 @@ refreshpage();
 <tr style="height:40px;">
 <td colspan="2">
 <div style="text-align:center;margin-top:10px;margin-bottom:10px;">
-<input type="button" id="applyButton" class="button_gen" value="<#874#>" onclick="domain_name_select();">
+<input type="button" id="applyButton" class="button_gen" value="<#891#>" onclick="domain_name_select();">
 <img id="update_scan" style="display:none;" src="images/InternetScan.gif" />
 </div>
 </td>
@@ -1132,7 +1133,7 @@ refreshpage();
 <tr>
 <td>
 <div style="width:90%;margin:0px auto;">
-<a href="cloud_main.asp"><span style="font-family:Lucida Console;text-decoration:underline;color:#FC0"><#1742#></span></a><br><#1743#>
+<a href="cloud_main.asp"><span style="font-family:Lucida Console;text-decoration:underline;color:#FC0"><#1784#></span></a><br><#1785#>
 </div>
 </td>
 </tr>
@@ -1142,21 +1143,21 @@ refreshpage();
 <table width="99%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable_table" id="cloudlistTable" style="margin-top:20px;">
 <thead>
 <tr>
-<td colspan="6" id="cloud_synclist"><#1875#></td>
+<td colspan="6" id="cloud_synclist"><#1921#></td>
 </tr>
 </thead>
 <tr>
-<th width="10%"><#1694#></th>
-<th width="25%"><#1259#></a></th>
-<th width="10%"><#839#></a></th>
-<th width="30%"><#1876#></th>
-<th width="15%"><#1255#></th>
-<th width="10%"><#867#></th>
+<th width="10%"><#1736#></th>
+<th width="25%"><#1297#></a></th>
+<th width="10%"><#857#></a></th>
+<th width="30%"><#1922#></th>
+<th width="15%"><#1293#></th>
+<th width="10%"><#885#></th>
 </tr>
 </table>
 <div id="cloud_synclist_Block"></div>
 <div class="apply_gen" id="creatBtn" style="margin-top:30px;">
-<input name="applybutton" id="applybutton" type="button" class="button_gen" onclick="location.href='cloud_syslog.asp'" value="<#864#>" style="word-wrap:break-word;word-break:normal;">
+<input name="applybutton" id="applybutton" type="button" class="button_gen" onclick="location.href='cloud_syslog.asp'" value="<#882#>" style="word-wrap:break-word;word-break:normal;">
 </div>
 </div>
 </td>

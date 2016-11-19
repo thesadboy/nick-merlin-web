@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#533#> - Other Settings</title>
+<title><#548#> - Other Settings</title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <script language="JavaScript" type="text/javascript" src="/state.js"></script>
@@ -99,7 +99,7 @@ if (document.form.usb_idle_exclude.value.indexOf("h") != -1)
 document.form.usb_idle_exclude_h.checked = true;
 if (document.form.usb_idle_exclude.value.indexOf("i") != -1)
 document.form.usb_idle_exclude_i.checked = true;
-if ((productid == "RT-AC56U") || (productid == "RT-AC68U") || (productid == "RT-AC87U") ||
+if ((productid == "RT-AC56U") || (productid == "RT-AC68U") || (productid == "EA6900")|| (productid == "R6300V2") || (productid == "R6400") || (productid == "R7000") || (productid == "WS880") || (productid == "RT-AC87U") ||
 (productid == "RT-AC3200") || (productid == "RT-AC88U") || (productid == "RT-AC3100") || (productid == "RT-AC5300")) {
 document.getElementById("ct_established_default").innerHTML = "Default: 2400";
 showhide("memory_mgmt_tr" ,1);
@@ -128,7 +128,7 @@ var WH_INT=0,Floder_WH_INT=0,General_WH_INT=0;
 var folderlist = new Array();
 function get_disk_tree(){
 if(disk_flag == 1){
-alert('<#1606#>');
+alert('<#1646#>');
 return false;
 }
 cal_panel_block();
@@ -547,23 +547,23 @@ refreshpage();
 <div id="DM_mask" class="mask_bg"></div>
 <div id="folderTree_panel" class="panel_folder" >
 <table><tr><td>
-<div class="machineName" style="width:200px;font-family:Microsoft JhengHei;font-size:12pt;font-weight:bolder; margin-top:15px;margin-left:30px;"><#534#></div>
+<div class="machineName" style="width:200px;font-family:Microsoft JhengHei;font-size:12pt;font-weight:bolder; margin-top:15px;margin-left:30px;"><#549#></div>
 </td>
 <td>
 <div style="width:240px;margin-top:17px;margin-left:125px;">
 <table>
 <tr>
-<td><div id="createFolderBtn" class="createFolderBtn" title="<#579#>"></div></td>
-<td><div id="deleteFolderBtn" class="deleteFolderBtn" title="<#910#>"></div></td>
-<td><div id="modifyFolderBtn" class="modifyFolderBtn" title="<#1556#>"></div></td>
+<td><div id="createFolderBtn" class="createFolderBtn" title="<#595#>"></div></td>
+<td><div id="deleteFolderBtn" class="deleteFolderBtn" title="<#928#>"></div></td>
+<td><div id="modifyFolderBtn" class="modifyFolderBtn" title="<#1594#>"></div></td>
 </tr>
 </table>
 </div>
 </td></tr></table>
 <div id="e0" class="folder_tree"></div>
 <div style="background-image:url(images/Tree/bg_02.png);background-repeat:no-repeat;height:90px;">
-<input class="button_gen" type="button" style="margin-left:27%;margin-top:18px;" onclick="cancel_folderTree();" value="<#74#>">
-<input class="button_gen" type="button" onclick="confirm_folderTree();" value="<#879#>">
+<input class="button_gen" type="button" style="margin-left:27%;margin-top:18px;" onclick="cancel_folderTree();" value="<#75#>">
+<input class="button_gen" type="button" onclick="confirm_folderTree();" value="<#896#>">
 </div>
 </div>
 <div id="DM_mask_floder" class="mask_floder_bg"></div>
@@ -645,8 +645,8 @@ refreshpage();
 <tr id="rstats_new_tr">
 <th>Create or reset data files:<br><i>Enable if using a new location</i></th>
 <td>
-<input type="radio" name="rstats_new" class="input" value="1" <% nvram_match_x("", "rstats_new", "1", "checked"); %>><#65#>
-<input type="radio" name="rstats_new" class="input" value="0" <% nvram_match_x("", "rstats_new", "0", "checked"); %>><#64#>
+<input type="radio" name="rstats_new" class="input" value="1" <% nvram_match_x("", "rstats_new", "1", "checked"); %>><#66#>
+<input type="radio" name="rstats_new" class="input" value="0" <% nvram_match_x("", "rstats_new", "0", "checked"); %>><#65#>
 </td>
 </tr>
 <tr>
@@ -656,22 +656,22 @@ refreshpage();
 <tr id="cstats_enable_tr">
 <th>Enable IPTraffic (per IP monitoring)</i></th>
 <td>
-<input type="radio" name="cstats_enable" class="input" value="1" <% nvram_match_x("", "cstats_enable", "1", "checked"); %> onclick="hide_cstats(this.value);"><#65#>
-<input type="radio" name="cstats_enable" class="input" value="0" <% nvram_match_x("", "cstats_enable", "0", "checked"); %> onclick="hide_cstats(this.value);"><#64#>
+<input type="radio" name="cstats_enable" class="input" value="1" <% nvram_match_x("", "cstats_enable", "1", "checked"); %> onclick="hide_cstats(this.value);"><#66#>
+<input type="radio" name="cstats_enable" class="input" value="0" <% nvram_match_x("", "cstats_enable", "0", "checked"); %> onclick="hide_cstats(this.value);"><#65#>
 </td>
 </tr>
 <tr id="cstats_1_tr">
 <th>Create or reset IPTraffic data files</th>
 <td>
-<input type="radio" name="cstats_new" class="input" value="1" <% nvram_match_x("", "cstats_new", "1", "checked"); %>><#65#>
-<input type="radio" name="cstats_new" class="input" value="0" <% nvram_match_x("", "cstats_new", "0", "checked"); %>><#64#>
+<input type="radio" name="cstats_new" class="input" value="1" <% nvram_match_x("", "cstats_new", "1", "checked"); %>><#66#>
+<input type="radio" name="cstats_new" class="input" value="0" <% nvram_match_x("", "cstats_new", "0", "checked"); %>><#65#>
 </td>
 </tr>
 <tr id="cstats_2_tr">
 <th>Monitor all IPs by default</th>
 <td>
-<input type="radio" name="cstats_all" class="input" value="1" <% nvram_match_x("", "cstats_all", "1", "checked"); %> onclick="hide_cstats_ip(this.value);"><#65#>
-<input type="radio" name="cstats_all" class="input" value="0" <% nvram_match_x("", "cstats_all", "0", "checked"); %> onclick="hide_cstats_ip(this.value);"><#64#>
+<input type="radio" name="cstats_all" class="input" value="1" <% nvram_match_x("", "cstats_all", "1", "checked"); %> onclick="hide_cstats_ip(this.value);"><#66#>
+<input type="radio" name="cstats_all" class="input" value="0" <% nvram_match_x("", "cstats_all", "0", "checked"); %> onclick="hide_cstats_ip(this.value);"><#65#>
 </td>
 </tr>
 <tr id="cstats_inc_tr">
@@ -696,8 +696,8 @@ refreshpage();
 <tr>
 <th>Resolve IPs on active connections list:<br><i>Can considerably slow down the display</i></th>
 <td>
-<input type="radio" name="webui_resolve_conn" class="input" value="1" <% nvram_match_x("", "webui_resolve_conn", "1", "checked"); %>><#65#>
-<input type="radio" name="webui_resolve_conn" class="input" value="0" <% nvram_match_x("", "webui_resolve_conn", "0", "checked"); %>><#64#>
+<input type="radio" name="webui_resolve_conn" class="input" value="1" <% nvram_match_x("", "webui_resolve_conn", "1", "checked"); %>><#66#>
+<input type="radio" name="webui_resolve_conn" class="input" value="0" <% nvram_match_x("", "webui_resolve_conn", "0", "checked"); %>><#65#>
 </td>
 </tr>
 <tr>
@@ -723,8 +723,8 @@ refreshpage();
 <tr>
 <th>Stealth Mode (disable all LEDs)</th>
 <td>
-<input type="radio" name="led_disable" class="input" value="1" <% nvram_match_x("", "led_disable", "1", "checked"); %>><#65#>
-<input type="radio" name="led_disable" class="input" value="0" <% nvram_match_x("", "led_disable", "0", "checked"); %>><#64#>
+<input type="radio" name="led_disable" class="input" value="1" <% nvram_match_x("", "led_disable", "1", "checked"); %>><#66#>
+<input type="radio" name="led_disable" class="input" value="0" <% nvram_match_x("", "led_disable", "0", "checked"); %>><#65#>
 </td>
 </tr>
 </table>
@@ -818,50 +818,43 @@ refreshpage();
 </tr>
 </thead>
 <tr>
-<th>Networkmap: Hourly full network rescans (default: Yes)</th>
-<td>
-<input type="radio" name="nmap_hm_scan" class="input" value="1" <% nvram_match_x("", "nmap_hm_scan", "1", "checked"); %>><#65#>
-<input type="radio" name="nmap_hm_scan" class="input" value="0" <% nvram_match_x("", "nmap_hm_scan", "0", "checked"); %>><#64#>
-</td>
-</tr>
-<tr>
 <th>Samba: Enable SMB2 protocol (default: No)</th>
 <td>
-<input type="radio" name="smbd_enable_smb2" class="input" value="1" <% nvram_match_x("", "smbd_enable_smb2", "1", "checked"); %>><#65#>
-<input type="radio" name="smbd_enable_smb2" class="input" value="0" <% nvram_match_x("", "smbd_enable_smb2", "0", "checked"); %>><#64#>
+<input type="radio" name="smbd_enable_smb2" class="input" value="1" <% nvram_match_x("", "smbd_enable_smb2", "1", "checked"); %>><#66#>
+<input type="radio" name="smbd_enable_smb2" class="input" value="0" <% nvram_match_x("", "smbd_enable_smb2", "0", "checked"); %>><#65#>
 </td>
 </tr>
 <tr id="memory_mgmt_tr" style="display:none;">
 <th>Memory Management: Regularly flush caches (default: Yes)</th>
 <td>
-<input type="radio" name="drop_caches" class="input" value="1" <% nvram_match_x("", "drop_caches", "1", "checked"); %>><#65#>
-<input type="radio" name="drop_caches" class="input" value="0" <% nvram_match_x("", "drop_caches", "0", "checked"); %>><#64#>
+<input type="radio" name="drop_caches" class="input" value="1" <% nvram_match_x("", "drop_caches", "1", "checked"); %>><#66#>
+<input type="radio" name="drop_caches" class="input" value="0" <% nvram_match_x("", "drop_caches", "0", "checked"); %>><#65#>
 </td>
 </tr>
 <tr>
 <th>Miniupnp: Enable secure mode (default: Yes)</th>
 <td>
-<input type="radio" name="upnp_secure" class="input" value="1" <% nvram_match_x("", "upnp_secure", "1", "checked"); %>><#65#>
-<input type="radio" name="upnp_secure" class="input" value="0" <% nvram_match_x("", "upnp_secure", "0", "checked"); %>><#64#>
+<input type="radio" name="upnp_secure" class="input" value="1" <% nvram_match_x("", "upnp_secure", "1", "checked"); %>><#66#>
+<input type="radio" name="upnp_secure" class="input" value="0" <% nvram_match_x("", "upnp_secure", "0", "checked"); %>><#65#>
 </td>
 </tr>
 <tr>
 <th>DLNA: Rebuild entire database at start (default: No)</th>
 <td>
-<input type="radio" name="dms_rebuild" class="input" value="1" <% nvram_match_x("", "dms_rebuild", "1", "checked"); %>><#65#>
-<input type="radio" name="dms_rebuild" class="input" value="0" <% nvram_match_x("", "dms_rebuild", "0", "checked"); %>><#64#>
+<input type="radio" name="dms_rebuild" class="input" value="1" <% nvram_match_x("", "dms_rebuild", "1", "checked"); %>><#66#>
+<input type="radio" name="dms_rebuild" class="input" value="0" <% nvram_match_x("", "dms_rebuild", "0", "checked"); %>><#65#>
 </td>
 </tr>
 <tr>
 <th>Firewall: Drop IPv6 neighbour solicitation broadcasts (Comcast fix) (default: No)</th>
 <td>
-<input type="radio" name="ipv6_ns_drop" class="input" value="1" <% nvram_match_x("", "ipv6_ns_drop", "1", "checked"); %>><#65#>
-<input type="radio" name="ipv6_ns_drop" class="input" value="0" <% nvram_match_x("", "ipv6_ns_drop", "0", "checked"); %>><#64#>
+<input type="radio" name="ipv6_ns_drop" class="input" value="1" <% nvram_match_x("", "ipv6_ns_drop", "1", "checked"); %>><#66#>
+<input type="radio" name="ipv6_ns_drop" class="input" value="0" <% nvram_match_x("", "ipv6_ns_drop", "0", "checked"); %>><#65#>
 </td>
 </tr>
 </table>
 <div class="apply_gen">
-<input name="button" type="button" class="button_gen" onclick="validate();" value="<#72#>"/>
+<input name="button" type="button" class="button_gen" onclick="validate();" value="<#73#>"/>
 </div>
 </td></tr>
 </tbody>

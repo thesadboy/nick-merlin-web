@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#533#> - <#210#></title>
+<title><#548#> - <#213#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <script language="JavaScript" type="text/javascript" src="/state.js"></script>
@@ -28,7 +28,7 @@ var keyword_rulelist_row = decodeURIComponent(keyword_rulelist_array).split('<')
 var code = "";
 code +='<table width="100%" border="1" cellspacing="0" cellpadding="4" align="center" class="list_table" id="keyword_rulelist_table">';
 if(keyword_rulelist_row.length == 1)
-code +='<tr><td style="color:#FFCC00;"><#1286#></td>';
+code +='<tr><td style="color:#FFCC00;"><#1324#></td>';
 else{
 for(var i =1; i < keyword_rulelist_row.length; i++){
 code +='<tr id="row'+i+'">';
@@ -61,7 +61,7 @@ var item_num = document.getElementById('keyword_rulelist_table').rows[0].cells.l
 for(i=0; i<rule_num; i++){
 for(j=0; j<item_num-1; j++){ //only 1 value column
 if(obj.value == document.getElementById('keyword_rulelist_table').rows[i].cells[j].innerHTML){
-alert("<#1325#>");
+alert("<#1363#>");
 return;
 }
 }
@@ -84,7 +84,7 @@ if(j != item_num-2)
 tmp_value += ">";
 }
 }
-if(tmp_value == "<"+"<#1286#>" || tmp_value == "<")
+if(tmp_value == "<"+"<#1324#>" || tmp_value == "<")
 tmp_value = "";
 document.form.keyword_rulelist.value = tmp_value;
 showLoading();
@@ -92,7 +92,7 @@ document.form.submit();
 }
 function validForm(obj){
 if(obj.value==""){
-alert("<#137#>");
+alert("<#140#>");
 obj.focus();
 obj.select();
 return false;
@@ -137,33 +137,33 @@ refreshpage();
 <tr>
 <td bgcolor="#4D595D" valign="top" >
 <div>&nbsp;</div>
-<div class="formfonttitle"><#206#> - <#210#></div>
+<div class="formfonttitle"><#209#> - <#213#></div>
 <div style="margin-left:5px;margin-top:10px;margin-bottom:10px"><img src="/images/New_ui/export/line_export.png"></div>
-<div class="formfontdesc"><#1114#></div>
-<div class="formfontdesc"><#1115#></div>
+<div class="formfontdesc"><#1150#></div>
+<div class="formfontdesc"><#1151#></div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <thead>
 <tr>
-<td colspan="2"><#1878#></td>
+<td colspan="2"><#1924#></td>
 </tr>
 </thead>
 <tr>
-<th><#1113#></th>
+<th><#1149#></th>
 <td>
-<input type="radio" value="1" name="keyword_enable_x" <% nvram_match("keyword_enable_x", "1", "checked"); %>><#872#>
-<input type="radio" value="0" name="keyword_enable_x" <% nvram_match("keyword_enable_x", "0", "checked"); %>><#869#>
+<input type="radio" value="1" name="keyword_enable_x" <% nvram_match("keyword_enable_x", "1", "checked"); %>><#889#>
+<input type="radio" value="0" name="keyword_enable_x" <% nvram_match("keyword_enable_x", "0", "checked"); %>><#886#>
 </td>
 </tr>
 </table>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable_table">
 <thead>
 <tr>
-<td colspan="2"><#1116#></td>
+<td colspan="2"><#1152#></td>
 </tr>
 </thead>
 <tr>
-<th width="80%"><#1116#></th>
-<th width="20%"><#1434#></th>
+<th width="80%"><#1152#></th>
+<th width="20%"><#1472#></th>
 </tr>
 <tr>
 <td width="80%">
@@ -176,7 +176,7 @@ refreshpage();
 </table>
 <div id="keyword_rulelist_Block"></div>
 <div class="apply_gen">
-<input type="button" class="button_gen" onclick="applyRule()" value="<#72#>"/>
+<input type="button" class="button_gen" onclick="applyRule()" value="<#73#>"/>
 </div>
 </td>
 </tr>

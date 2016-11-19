@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
-<title><#533#> - Web Protector</title>
+<title><#548#> - Web Protector</title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="device-map/device-map.css">
@@ -64,7 +64,7 @@ var apps_id_array = [["22", "", ""],
 var curState = '<% nvram_get("wrs_enable"); %>';
 function initial(){
 show_menu();
-document.getElementById("_AiProtection_HomeSecurity").innerHTML = '<table><tbody><tr><td><div class="_AiProtection_HomeSecurity"></div></td><td><div style="width:120px;"><#726#></div></td></tr></tbody></table>';
+document.getElementById("_AiProtection_HomeSecurity").innerHTML = '<table><tbody><tr><td><div class="_AiProtection_HomeSecurity"></div></td><td><div style="width:120px;"><#742#></div></td></tr></tbody></table>';
 document.getElementById("_AiProtection_HomeSecurity").className = "menu_clicked";
 translate_category_id();
 genMain_table();
@@ -183,7 +183,7 @@ var childsel=document.createElement("div");
 childsel.setAttribute("id","check_mac");
 childsel.style.color="#FFCC00";
 obj.parentNode.appendChild(childsel);
-document.getElementById("check_mac").innerHTML="<#162#>";
+document.getElementById("check_mac").innerHTML="<#165#>";
 document.getElementById("check_mac").style.display = "";
 return false;
 }else if(flag ==2){
@@ -191,7 +191,7 @@ var childsel=document.createElement("div");
 childsel.setAttribute("id","check_mac");
 childsel.style.color="#FFCC00";
 obj.parentNode.appendChild(childsel);
-document.getElementById("check_mac").innerHTML="<#131#>";
+document.getElementById("check_mac").innerHTML="<#134#>";
 document.getElementById("check_mac").style.display = "";
 return false;
 }else{
@@ -210,7 +210,7 @@ var blank_category = 0;
 var apps_filter_row = apps_filter.split("<");
 var apps_filter_col = "";
 if(document.form.PC_devicename.value == ""){
-alert("<#137#>");
+alert("<#140#>");
 document.form.PC_devicename.focus();
 return false;
 }
@@ -231,7 +231,7 @@ for(i=0;i<apps_filter_row.length;i++){
 if(apps_filter_row[i] != "") {
 apps_filter_col = apps_filter_row[i].split(">");
 if(apps_filter_col[1].toUpperCase() == document.form.PC_devicename.value.toUpperCase()){
-alert("<#1325#>");
+alert("<#1363#>");
 document.form.PC_devicename.value = "";
 return false;
 }
@@ -273,37 +273,37 @@ document.form.PC_devicename.value = "";
 genMain_table();
 }
 function genMain_table(){
-var category_name = ["<#665#>", "<#680#>", "<#683#>", "<#687#>"];
-var sub_category_name = [["<#667#>", "<#668#>", "<#669#>"],
-["<#670#>", "<#671#>", "<#672#>", "<#673#>", "<#674#>"],
-["<#685#>", "<#686#>"],
-["<#688#>", "<#689#>", "<#690#>"]];
-var category_desc = ["<#666#>",
-"<#681#>",
-"<#684#>",
-"<#691#>"];
+var category_name = ["<#681#>", "<#696#>", "<#699#>", "<#703#>"];
+var sub_category_name = [["<#683#>", "<#684#>", "<#685#>"],
+["<#686#>", "<#687#>", "<#688#>", "<#689#>", "<#690#>"],
+["<#701#>", "<#702#>"],
+["<#704#>", "<#705#>", "<#706#>"]];
+var category_desc = ["<#682#>",
+"<#697#>",
+"<#700#>",
+"<#707#>"];
 var apps_filter_row = apps_filter.split("<");
 var code = "";
 code += '<table width="100%" border="1" cellspacing="0" cellpadding="4" align="center" class="FormTable_table" id="mainTable_table">';
 code += '<thead><tr>';
-code += '<td colspan="5"><#854#>&nbsp;(<#1435#>&nbsp;16)</td>';
+code += '<td colspan="5"><#872#>&nbsp;(<#1473#>&nbsp;16)</td>';
 code += '</tr></thead>';
 code += '<tbody>';
 code += '<tr>';
-code += '<th width="5%" height="30px" title="<#1762#>">';
+code += '<th width="5%" height="30px" title="<#1804#>">';
 code += '<input id="selAll" type="checkbox" onclick="selectAll(this, 0);" value="">';
 code += '</th>';
 code += '<th width="40%">Client Name (MAC address)</th>';/*untranslated*/
-code += '<th width="40%"><#675#></th>';
-code += '<th width="10%"><#1434#></th>';
+code += '<th width="40%"><#691#></th>';
+code += '<th width="10%"><#1472#></th>';
 code += '</tr>';
 code += '<tr id="main_element">';
-code += '<td style="border-bottom:2px solid #000;" title="<#2229#>/<#822#>">';
+code += '<td style="border-bottom:2px solid #000;" title="<#2279#>/<#839#>">';
 code += '<input type="checkbox" checked="">';
 code += '</td>';
 code += '<td style="border-bottom:2px solid #000;">';
 code += '<input type="text" maxlength="17" style="margin-left:10px;float:left;width:255px;" class="input_20_table" name="PC_devicename" onkeypress="return validator.isHWAddr(this,event)" onclick="hideClients_Block();" placeholder="ex: <% nvram_get("lan_hwaddr"); %>" autocorrect="off" autocapitalize="off">';
-code += '<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" onclick="pullLANIPList(this);" title="<#1765#>">';
+code += '<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" onclick="pullLANIPList(this);" title="<#1807#>">';
 code += '<div id="ClientList_Block_PC" class="clientlist_dropdown" style="margin-top:25px;margin-left:10px;"></div>';
 code += '</td>';
 code += '<td style="border-bottom:2px solid #000;text-align:left;">';
@@ -323,7 +323,7 @@ code += '</td>';
 code += '<td style="border-bottom:2px solid #000;"><input class="add_btn" type="button" onclick="addRow_main(this, 16)" value=""></td>';
 code += '</tr>';
 if(apps_filter == ""){
-code += '<tr><td style="color:#FFCC00;" colspan="10"><#1286#></td></tr>';
+code += '<tr><td style="color:#FFCC00;" colspan="10"><#1324#></td></tr>';
 }
 else{
 for(k=0;k< apps_filter_row.length;k++){
@@ -345,7 +345,7 @@ deviceType = 0;
 deviceVender = "";
 }
 code += '<tr>';
-code += '<td title="<#2229#>/<#822#>">';
+code += '<td title="<#2279#>/<#839#>">';
 if(apps_filter_col[0] == 1)
 code += '<input type="checkbox" checked>';
 else
@@ -618,14 +618,14 @@ var code = "";
 if(document.form.current_page.value == "ParentalControl.asp"){
 code += '<span class="clicked">Time Limits</span>';
 code += '<a href="AiProtection_WebProtector.asp">';
-code += "<span style=\"margin-left:10px\" class=\"click\"><#664#></span>";
+code += "<span style=\"margin-left:10px\" class=\"click\"><#680#></span>";
 code += '</a>';
 }
 else{
 code += '<a href="ParentalControl.asp">';
 code += '<span class="click">Time Limits</span>';
 code += '</a>';
-code += "<span style=\"margin-left:10px\" class=\"clicked\"><#664#></span>";
+code += "<span style=\"margin-left:10px\" class=\"clicked\"><#680#></span>";
 }
 document.getElementById('switch_menu').innerHTML = code;
 }
@@ -664,7 +664,7 @@ applyRule();
 <div id="agreement_panel" class="panel_folder" style="margin-top: -100px;"></div>
 <div id="hiddenMask" class="popup_bg" style="z-index:999;">
 <table cellpadding="5" cellspacing="0" id="dr_sweet_advise" class="dr_sweet_advise" align="center"></table>
-<!--[if lte IE 6.5]><script>alert("<#772#>");</script><![endif]-->
+<!--[if lte IE 6.5]><script>alert("<#788#>");</script><![endif]-->
 </div>
 <iframe name="hidden_frame" id="hidden_frame" width="0" height="0" frameborder="0"></iframe>
 <form method="post" name="form" action="/start_apply.htm" target="hidden_frame">
@@ -703,16 +703,16 @@ applyRule();
 <table width="730px">
 <tr>
 <td align="left">
-<div class="formfonttitle" style="width:400px"><#726#> - <#664#></div>
+<div class="formfonttitle" style="width:400px"><#742#> - <#680#></div>
 </td>
 <td>
 <div id="switch_menu" style="margin:-20px 0px 0px -20px;">
 <div style="width:173px;height:30px;border-top-left-radius:8px;border-bottom-left-radius:8px;" class="block_filter_pressed">
-<table class="block_filter_name_table_pressed"><tr><td style="line-height:13px;"><#664#></td></tr></table>
+<table class="block_filter_name_table_pressed"><tr><td style="line-height:13px;"><#680#></td></tr></table>
 </div>
 <a href="ParentalControl.asp">
 <div style="width:172px;height:30px;margin:-32px 0px 0px 173px;border-top-right-radius:8px;border-bottom-right-radius:8px;" class="block_filter">
-<table class="block_filter_name_table"><tr><td style="line-height:13px;"><#1883#></td></tr></table>
+<table class="block_filter_name_table"><tr><td style="line-height:13px;"><#1929#></td></tr></table>
 </div>
 </a>
 </div>
@@ -729,14 +729,14 @@ applyRule();
 </td>
 <td>&nbsp;&nbsp;</td>
 <td style="font-style: italic;font-size: 14px;">
-<span><#676#></span>
+<span><#692#></span>
 <ol>
-<li><#677#></li>
-<li><#678#></li>
-<li><#679#></li>
+<li><#693#></li>
+<li><#694#></li>
+<li><#695#></li>
 </ol>
-<span><#682#></span>
-<div><a style="text-decoration:underline;" href="http://www.asus.com/us/support/FAQ/1008720/" target="_blank"><#256#> FAQ</a></div>
+<span><#698#></span>
+<div><a style="text-decoration:underline;" href="http://www.asus.com/support/FAQ/1008720/" target="_blank"><#259#> FAQ</a></div>
 </td>
 </tr>
 </table>
@@ -744,7 +744,7 @@ applyRule();
 <br>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <tr>
-<th><#664#></th>
+<th><#680#></th>
 <td>
 <div align="center" class="left" style="width:94px; float:left; cursor:pointer;" id="radio_web_restrict_enable"></div>
 <div class="iphone_switch_container" style="height:32px; width:74px; position: relative; overflow: hidden">
@@ -800,7 +800,7 @@ function(){
 <td valign="top" align="center">
 <div id="mainTable" style="margin-top:10px;"></div>
 <div id="ctrlBtn" style="text-align:center;margin-top:20px;">
-<input class="button_gen" type="button" onclick="applyRule();" value="<#72#>">
+<input class="button_gen" type="button" onclick="applyRule();" value="<#73#>">
 <div style="width:135px;height:55px;position:absolute;bottom:5px;right:5px;background-image:url('images/New_ui/tm_logo_power.png');"></div>
 </div>
 </td>

@@ -8,7 +8,7 @@
 <meta name="svg.render.forceflash" content="false" />
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#533#> - Performance tuning</title>
+<title><#548#> - Performance tuning</title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <script src='svg.js' data-path="/svghtc/" data-debug="false"></script>
@@ -113,7 +113,7 @@ refreshpage();
 <tr bgcolor="#4D595D" style="height:10px">
 <td valign="top">
 <div>&nbsp;</div>
-<div class="formfonttitle"><#212#> - Performance tuning</div>
+<div class="formfonttitle"><#215#> - Performance tuning</div>
 <div style="margin-left:5px;margin-top:10px;margin-bottom:10px"><img src="/images/New_ui/export/line_export.png"></div>
 <!--div class="formfontdesc"><#*** not_found_dict : PerformaceTuning_desc***#></div-->
 </td>
@@ -168,7 +168,7 @@ refreshpage();
 <tr valign="top" style="height:10px">
 <td bgcolor="#4D595D" valign="top">
 <div class="apply_gen">
-<input class="button_gen" onclick="applyRule();" type="button" value="<#72#>"/>
+<input class="button_gen" onclick="applyRule();" type="button" value="<#73#>"/>
 </div>
 </td>
 </tr>

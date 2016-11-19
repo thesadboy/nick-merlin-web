@@ -9,6 +9,7 @@
 <script type="text/JavaScript" src="/js/jquery.js"></script>
 <script type="text/javascript">
 var now_flag = '<% get_parameter("flag"); %>';
+var odmpid = '<% nvram_get("odmpid"); %>';
 function initial(){
 if(parent.ISMOBILE){
 parent.set_step("internet_type");
@@ -20,6 +21,8 @@ else{
 parent.set_step("t1");
 document.getElementById("button1").focus();
 }
+if(odmpid == "RT-AC66U_B1")
+document.getElementById("modem_unplug_img").src = "/images/RT-AC66U_V2/modem_unplug.png";
 parent.doResetModem();
 setTimeout("gotoPage('/qis/QIS_resetModem2.htm', now_flag, 0);", 2*60*1000);
 }
@@ -59,39 +62,39 @@ return true;
 <table width="730px">
 <tr>
 <td align="left">
-<div class="description_down"><#349#></div>
+<div class="description_down"><#354#></div>
 </td>
 </tr>
 </table>
 </div>
 <div style="margin:5px;" id="splitLine"><img style="width: 720px; *width: 710px; height: 2px;" src="/images/New_ui/export/line_export.png"></div>
 </div>
-<p class="QISGeneralFont"><#350#></p>
-<p class="QISGeneralFont"><#351#></p>
+<p class="QISGeneralFont"><#355#></p>
+<p class="QISGeneralFont"><#356#></p>
 <table id="tblsetting_1" class="QISform" width="400" border=0 align="center" cellpadding="3" cellspacing="0" style="margin-top:-25px;">
 <tr>
 <td align="center" colspan="2">
-<br/><br/><img src="/images/modem_unplug.png"></span>
+<br/><br/><img id="modem_unplug_img" src="/images/modem_unplug.png"></span>
 </td>
 </tr>
 </table>
 <br/>
-<p class="QISGeneralFont"><#352#><br/><#353#></p>
+<p class="QISGeneralFont"><#357#><br/><#358#></p>
 <div class='apply_gen'>
 <div id="fresharea">
-<input type="button" id="nextButton" value="<#69#>" onclick="redirect_page('internet_type');" class="button_gen_long">
-<input type="button" id="button1" class="button_gen" onclick="gotoPage('/qis/QIS_resetModem2.htm', now_flag, 0);" value="<#77#>">
+<input type="button" id="nextButton" value="<#70#>" onclick="redirect_page('internet_type');" class="button_gen_long">
+<input type="button" id="button1" class="button_gen" onclick="gotoPage('/qis/QIS_resetModem2.htm', now_flag, 0);" value="<#79#>">
 </div>
 </div>
 </div>
 </div>
 <div id="QISmain_m" style="display:none;">
-<div><#349#></div><br>
-<div><#350#></div><br>
-<div><#351#></div><br>
+<div><#354#></div><br>
+<div><#355#></div><br>
+<div><#356#></div><br>
 <fieldset class="theFieldset">
 <div class="row_end">
-<a class="iuiA" onclick="gotoPage('/qis/QIS_resetModem2.htm', now_flag, 0);"><#77#></a>
+<a class="iuiA" onclick="gotoPage('/qis/QIS_resetModem2.htm', now_flag, 0);"><#79#></a>
 </div>
 </fieldset>
 </div>

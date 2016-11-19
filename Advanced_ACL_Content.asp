@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#533#> - <#188#></title>
+<title><#548#> - <#191#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="/device-map/device-map.css">
@@ -77,7 +77,7 @@ function show_wl_maclist_x(){
 var code = "";
 code +='<table width="100%" border="1" cellspacing="0" cellpadding="4" align="center" class="list_table" id="wl_maclist_x_table">';
 if(Object.keys(manually_maclist_list_array).length == 0)
-code +='<tr><td style="color:#FFCC00;"><#1286#></td>';
+code +='<tr><td style="color:#FFCC00;"><#1324#></td>';
 else{
 var userIconBase64 = "NoIcon";
 var clientName, deviceType, deviceVender;
@@ -97,25 +97,25 @@ code +='<tr id="row_'+clientMac+'">';
 code +='<td width="80%" align="center">';
 code += '<table style="width:100%;"><tr><td style="width:35%;height:56px;border:0px;float:right;">';
 if(clientList[clientMac] == undefined) {
-code += '<div class="clientIcon type0" onClick="popClientListEditTable(\'' + clientMac + '\', this, \'\', \'\', \'ACL\')"></div>';
+code += '<div class="clientIcon type0" onClick="popClientListEditTable(&quot;' + clientMac + '&quot;, this, &quot;&quot;, &quot;&quot;, &quot;ACL&quot;)"></div>';
 }
 else {
 if(usericon_support) {
 userIconBase64 = getUploadIcon(clientMac.replace(/\:/g, ""));
 }
 if(userIconBase64 != "NoIcon") {
-code += '<div style="text-align:center;" onClick="popClientListEditTable(\'' + clientMac + '\', this, \'\', \'\', \'ACL\')"><img class="imgUserIcon_card" src="' + userIconBase64 + '"></div>';
+code += '<div style="text-align:center;" onClick="popClientListEditTable(&quot;' + clientMac + '&quot;, this, &quot;&quot;, &quot;&quot;, &quot;ACL&quot;)"><img class="imgUserIcon_card" src="' + userIconBase64 + '"></div>';
 }
 else if(deviceType != "0" || deviceVender == "") {
-code += '<div class="clientIcon type' + deviceType + '" onClick="popClientListEditTable(\'' +clientMac + '\', this, \'\', \'\', \'ACL\')"></div>';
+code += '<div class="clientIcon type' + deviceType + '" onClick="popClientListEditTable(&quot;' +clientMac + '&quot;, this, &quot;&quot;, &quot;&quot;, &quot;ACL&quot;)"></div>';
 }
 else if(deviceVender != "" ) {
 var venderIconClassName = getVenderIconClassName(deviceVender.toLowerCase());
 if(venderIconClassName != "" && !downsize_4m_support) {
-code += '<div class="venderIcon ' + venderIconClassName + '" onClick="popClientListEditTable(\'' + clientMac + '\', this, \'\', \'\', \'ACL\')"></div>';
+code += '<div class="venderIcon ' + venderIconClassName + '" onClick="popClientListEditTable(&quot;' + clientMac + '&quot;, this, &quot;&quot;, &quot;&quot;, &quot;ACL&quot;)"></div>';
 }
 else {
-code += '<div class="clientIcon type' + deviceType + '" onClick="popClientListEditTable(\'' + clientMac + '\', this, \'\', \'\', \'ACL\')"></div>';
+code += '<div class="clientIcon type' + deviceType + '" onClick="popClientListEditTable(&quot;' + clientMac + '&quot;, this, &quot;&quot;, &quot;&quot;, &quot;ACL&quot;)"></div>';
 }
 }
 }
@@ -124,7 +124,7 @@ code += '<div>' + clientName + '</div>';
 code += '<div>' + clientMac + '</div>';
 code += '</td></tr></table>';
 code += '</td>';
-code +='<td width="20%"><input type="button" class=\"remove_btn\" onclick=\"deleteRow(this, \'' + clientMac + '\');\" value=\"\"/></td></tr>';
+code +='<td width="20%"><input type="button" class=\"remove_btn\" onclick=\"deleteRow(this, &quot;' + clientMac + '&quot;);\" value=\"\"/></td></tr>';
 });
 }
 code +='</tr></table>';
@@ -142,11 +142,11 @@ var rule_num = document.getElementById('wl_maclist_x_table').rows.length;
 var item_num = document.getElementById('wl_maclist_x_table').rows[0].cells.length;
 var mac = obj.value.toUpperCase();
 if(rule_num >= upper){
-alert("<#1331#> " + upper + " <#1332#>");
+alert("<#1369#> " + upper + " <#1370#>");
 return false;
 }
 if(mac==""){
-alert("<#137#>");
+alert("<#140#>");
 obj.focus();
 obj.select();
 return false;
@@ -158,7 +158,7 @@ return false;
 for(i=0; i<rule_num; i++){
 for(j=0; j<item_num-1; j++){
 if(manually_maclist_list_array[mac] != null){
-alert("<#1325#>");
+alert("<#1363#>");
 return false;
 }
 }
@@ -179,7 +179,7 @@ var tmp_value = "";
 Object.keys(manually_maclist_list_array).forEach(function(key) {
 tmp_value += "<" + key;
 });
-if(tmp_value == "<"+"<#1286#>" || tmp_value == "<")
+if(tmp_value == "<"+"<#1324#>" || tmp_value == "<")
 tmp_value = "";
 if(document.form.enable_mac[1].checked)
 document.form.wl_macmode.value = "disabled";
@@ -196,7 +196,7 @@ refreshpage();
 }
 function prevent_lock(rule_num){
 if(document.form.wl_macmode.value == "allow" && rule_num == ""){
-alert("<#1131#>");
+alert("<#1167#>");
 return false;
 }
 return true;
@@ -212,7 +212,7 @@ var childsel=document.createElement("div");
 childsel.setAttribute("id","check_mac");
 childsel.style.color="#FFCC00";
 obj.parentNode.appendChild(childsel);
-document.getElementById("check_mac").innerHTML="<#162#>";
+document.getElementById("check_mac").innerHTML="<#165#>";
 document.getElementById("check_mac").style.display = "";
 return false;
 }else if(flag ==2){
@@ -220,7 +220,7 @@ var childsel=document.createElement("div");
 childsel.setAttribute("id","check_mac");
 childsel.style.color="#FFCC00";
 obj.parentNode.appendChild(childsel);
-document.getElementById("check_mac").innerHTML="<#131#>";
+document.getElementById("check_mac").innerHTML="<#134#>";
 document.getElementById("check_mac").style.display = "";
 return false;
 }else{
@@ -305,17 +305,17 @@ document.form.wl_maclist_x.disabled = true;
 <tr>
 <td bgcolor="#4D595D" valign="top">
 <div>&nbsp;</div>
-<div class="formfonttitle"><#184#> - <#188#></div>
+<div class="formfonttitle"><#187#> - <#191#></div>
 <div style="margin-left:5px;margin-top:10px;margin-bottom:10px"><img src="/images/New_ui/export/line_export.png"></div>
-<div class="formfontdesc"><#923#></div>
+<div class="formfontdesc"><#941#></div>
 <table id="MainTable1" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <thead>
 <tr>
-<td colspan="2"><#1878#></td>
+<td colspan="2"><#1924#></td>
 </tr>
 </thead>
 <tr id="wl_unit_field">
-<th><#1251#></th>
+<th><#1288#></th>
 <td>
 <select name="wl_unit" class="input_option" onChange="change_wl_unit();">
 <option class="content_input_fd" value="0" <% nvram_match("wl_unit", "0","selected"); %>>2.4GHz</option>
@@ -324,23 +324,23 @@ document.form.wl_maclist_x.disabled = true;
 </td>
 </tr>
 <tr id="repeaterModeHint" style="display:none;">
-<td colspan="2" style="color:#FFCC00;height:30px;" align="center"><#255#></td>
+<td colspan="2" style="color:#FFCC00;height:30px;" align="center"><#258#></td>
 </tr>
 <tr>
-<th width="30%"><#1034#></th>
+<th width="30%"><#1052#></th>
 <td>
-<input type="radio" name="enable_mac" value="0" onclick="enable_macMode();"><#65#>
-<input type="radio" name="enable_mac" value="1" onclick="enable_macMode();"><#64#>
+<input type="radio" name="enable_mac" value="0" onclick="enable_macMode();"><#66#>
+<input type="radio" name="enable_mac" value="1" onclick="enable_macMode();"><#65#>
 </td>
 </tr>
 <tr id="mac_filter_mode">
 <th width="30%" >
-<a class="hintstyle" href="javascript:void(0);" onClick="openHint(18,1);"><#1136#></a>
+<a class="hintstyle" href="javascript:void(0);" onClick="openHint(18,1);"><#1172#></a>
 </th>
 <td>
 <select name="wl_macmode_show" class="input_option">
-<option class="content_input_fd" value="allow" <% nvram_match("wl_macmode", "allow","selected"); %>><#1133#></option>
-<option class="content_input_fd" value="deny" <% nvram_match("wl_macmode", "deny","selected"); %>><#1134#></option>
+<option class="content_input_fd" value="allow" <% nvram_match("wl_macmode", "allow","selected"); %>><#1169#></option>
+<option class="content_input_fd" value="deny" <% nvram_match("wl_macmode", "deny","selected"); %>><#1170#></option>
 </select>
 </td>
 </tr>
@@ -348,17 +348,17 @@ document.form.wl_maclist_x.disabled = true;
 <table id="MainTable2" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable_table">
 <thead>
 <tr>
-<td colspan="2"><#1132#>&nbsp;(<#1435#>&nbsp;64)</td>
+<td colspan="2"><#1168#>&nbsp;(<#1473#>&nbsp;64)</td>
 </tr>
 </thead>
 <tr>
 <th width="80%"><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,10);">Client Name (MAC address)</th>
-<th width="20%"><#1434#></th>
+<th width="20%"><#1472#></th>
 </tr>
 <tr>
 <td width="80%">
 <input type="text" maxlength="17" class="input_macaddr_table" name="wl_maclist_x_0" onKeyPress="return validator.isHWAddr(this,event)" onClick="hideClients_Block();" autocorrect="off" autocapitalize="off" placeholder="ex: <% nvram_get("lan_hwaddr"); %>" style="width:255px;">
-<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" style="position:absolute;" onclick="pullWLMACList(this);" title="<#1772#>">
+<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" style="position:absolute;" onclick="pullWLMACList(this);" title="<#1814#>">
 <div id="WL_MAC_List_Block" class="clientlist_dropdown" style="margin-left:167px;"></div>
 </td>
 <td width="20%">
@@ -368,7 +368,7 @@ document.form.wl_maclist_x.disabled = true;
 </table>
 <div id="wl_maclist_x_Block"></div>
 <div id="submitBtn" class="apply_gen">
-<input class="button_gen" onclick="applyRule()" type="button" value="<#72#>"/>
+<input class="button_gen" onclick="applyRule()" type="button" value="<#73#>"/>
 </div>
 </td>
 </tr>

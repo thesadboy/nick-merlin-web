@@ -9,7 +9,7 @@ winH = document.documentElement.scrollHeight;
 }
 }
 function LoadingTime(seconds, flag){
-showtext(document.getElementById("proceeding_main_txt"), "<#171#>...");
+showtext(document.getElementById("proceeding_main_txt"), "<#174#>...");
 document.getElementById("Loading").style.visibility = "visible";
 y = y+progress;
 if(typeof(seconds) == "number" && seconds >= 0){
@@ -20,13 +20,13 @@ var childsel=document.createElement("span");
 document.body.appendChild(childsel);
 document.body.removeChild(document.body.lastChild);
 }
-showtext(document.getElementById("proceeding_main_txt"), "<#174#>");
-showtext(document.getElementById("proceeding_txt"), Math.round(y)+"% <#171#>");
+showtext(document.getElementById("proceeding_main_txt"), "<#177#>");
+showtext(document.getElementById("proceeding_txt"), Math.round(y)+"% <#174#>");
 --seconds;
 setTimeout("LoadingTime("+seconds+", '"+flag+"');", 1000);
 }
 else{
-showtext(document.getElementById("proceeding_main_txt"), translate("<#173#>"));
+showtext(document.getElementById("proceeding_main_txt"), translate("<#176#>"));
 showtext(document.getElementById("proceeding_txt"), "");
 y = 0;
 if(flag != "waiting")
@@ -49,7 +49,7 @@ document.getElementById("proceeding_img_text").style.marginLeft = "175px";
 setTimeout("LoadingProgress("+seconds+");", 1000);
 }
 else{
-document.getElementById("proceeding_img_text").innerHTML = "<#173#>";
+document.getElementById("proceeding_img_text").innerHTML = "<#176#>";
 y = 0;
 if(location.pathname.indexOf("Advanced_MobileBroadband_Content") > 0){
 setTimeout("hideLoadingBar();",1000);

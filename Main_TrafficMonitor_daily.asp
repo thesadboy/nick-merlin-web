@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
-<title><#533#> - <#1469#></title>
+<title><#548#> - <#1507#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="tmmenu.css">
@@ -44,10 +44,10 @@ rows = 0;
 block = '';
 gn = 0;
 grid = '<table width="730px" class="FormTable_NWM">';
-grid += "<tr><th style=\"height:30px;\"><#892#></th>";
-grid += "<th><#1898#></th>";
-grid += "<th><#1905#></th>";
-grid += "<th><#1908#></th></tr>";
+grid += "<tr><th style=\"height:30px;\"><#910#></th>";
+grid += "<th><#1944#></th>";
+grid += "<th><#1951#></th>";
+grid += "<th><#1954#></th></tr>";
 for (i = 0; i < daily_history.length; ++i) {
 h = daily_history[i];
 ymd = getYMD(h[0]);
@@ -59,7 +59,7 @@ lastu += h[2];
 }
 }
 if(rows == 0)
-grid +='<tr><td style="color:#FFCC00;" colspan="4"><#1286#></td></tr>';
+grid +='<tr><td style="color:#FFCC00;" colspan="4"><#1324#></td></tr>';
 E('bwm-daily-grid').innerHTML = grid + '</table>';
 E('last-dn').innerHTML = rescale(lastd);
 E('last-up').innerHTML = rescale(lastu);
@@ -72,11 +72,11 @@ selGroup = E('page_select');
 optGroup = document.createElement('OPTGROUP');
 optGroup.label = "Per device";
 opt = document.createElement('option');
-opt.innerHTML = "<#1467#>";
+opt.innerHTML = "<#1505#>";
 opt.value = "5";
 optGroup.appendChild(opt);
 opt = document.createElement('option');
-opt.innerHTML = "<#1469#>";
+opt.innerHTML = "<#1507#>";
 opt.value = "6";
 optGroup.appendChild(opt);
 opt = document.createElement('option');
@@ -96,7 +96,7 @@ initDate('ymd');
 daily_history.sort(cmpHist);
 redraw();
 if(bwdpi_support){
-document.getElementById('content_title').innerHTML = "<#1470#> - <#493#>";
+document.getElementById('content_title').innerHTML = "<#1508#> - <#494#>";
 }
 }
 function switchPage(page){
@@ -152,16 +152,16 @@ return false;
 <tr><td><table width="100%" >
 <tr>
 <td class="formfonttitle" align="left">
-<div id="content_title" style="margin-top:5px;"><#180#> - <#493#></div>
+<div id="content_title" style="margin-top:5px;"><#183#> - <#494#></div>
 </td>
 <td>
 <div align="right">
 <select id="page_select" class="input_option" style="width:120px" onchange="switchPage(this.options[this.selectedIndex].value)">
-<!--option><#1861#></option-->
+<!--option><#1907#></option-->
 <optgroup label="Global">
-<option value="1"><#1467#></option>
-<option value="2"><#1468#></option>
-<option value="3" selected><#1469#></option>
+<option value="1"><#1505#></option>
+<option value="2"><#1506#></option>
+<option value="3" selected><#1507#></option>
 <option value="4">Monthly</option>
 </optgroup>
 </select>
@@ -177,12 +177,12 @@ return false;
 <table width="730" border="1" align="left" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <thead>
 <tr>
-<td colspan="2"><#1878#></td>
+<td colspan="2"><#1924#></td>
 </tr>
 </thead>
 <tbody>
 <tr class='even'>
-<th width="40%"><#892#></th>
+<th width="40%"><#910#></th>
 <td>
 <select class="input_option" style="width:130px" onchange='changeDate(this, "ymd")' id='dafm'>
 <option value=0>yyyy-mm-dd</option>
@@ -193,7 +193,7 @@ return false;
 </td>
 </tr>
 <tr class='even'>
-<th width="40%"><#1759#></th>
+<th width="40%"><#1801#></th>
 <td>
 <select style="width:70px" class="input_option" onchange='changeScale(this)' id='scale'>
 <option value=0>KB</option>
@@ -216,13 +216,13 @@ return false;
 <table width="730" border="1" align="left" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable" >
 <thead>
 <tr>
-<td colspan="2" id="TriggerList" style="text-align:left;"><#1417#> <span style="color:#FFF;background-color:transparent;" id='last-dates'></span></td>
+<td colspan="2" id="TriggerList" style="text-align:left;"><#1455#> <span style="color:#FFF;background-color:transparent;" id='last-dates'></span></td>
 </tr>
 </thead>
 <tbody>
-<tr class='even'><th width="40%"><#1898#></th><td id='last-dn'>-</td></tr>
-<tr class='odd'><th width="40%"><#1905#></th><td id='last-up'>-</td></tr>
-<tr class='footer'><th width="40%"><#1908#></th><td id='last-total'>-</td></tr>
+<tr class='even'><th width="40%"><#1944#></th><td id='last-dn'>-</td></tr>
+<tr class='odd'><th width="40%"><#1951#></th><td id='last-up'>-</td></tr>
+<tr class='footer'><th width="40%"><#1954#></th><td id='last-total'>-</td></tr>
 </tbody>
 </table>
 </td>

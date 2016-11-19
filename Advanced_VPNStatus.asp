@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#533#> - VPN Status</title>
+<title><#548#> - VPN Status</title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <script language="JavaScript" type="text/javascript" src="/state.js"></script>
@@ -28,7 +28,7 @@ vpnc_clientlist_array = decodeURIComponent('<% nvram_char_to_ascii("","vpnc_clie
 function initial(){
 show_menu();
 if (openvpnd_support) {
-setTimeout("refreshState()",3000);
+setTimeout("refreshState()",1000);
 } else {
 showhide("server1", 0);
 showhide("server2", 0);
@@ -105,9 +105,9 @@ break;
 case "-1":
 code = state_clnt_err;
 if (client_errno == 1 || client_errno == 2 || client_errno == 3)
-code += " - <#2093#>";
+code += " - <#2146#>";
 else if(client_errno == 4 || client_errno == 5 || client_errno == 6)
-code += " - <#315#>";
+code += " - <#320#>";
 document.getElementById("client"+unit+"_Block_Running").innerHTML = code;
 break;
 }
@@ -133,7 +133,6 @@ show_vpnc_rulelist();
 } else {
 showhide("vpnc", 0);
 }
-showhide("waitmsg", 0);
 }
 function applyRule(){
 showLoading();
@@ -224,6 +223,8 @@ for (i = 0; i < (clientTableHeaders.length - 2); ++i)
 {
 if (i == 0) {
 code +='<th style="text-align:left;">' + clientTableHeaders[i] + '<br><span style="color: cyan; background: transparent;">' + clientTableHeaders[clientTableHeaders.length-2] + '</span></th>';
+} else if (clientTableHeaders[i].search("Bytes") != -1 ) {
+code +='<th style="text-align:left;">' + clientTableHeaders[i].replace("Bytes","MBytes") + '</th>';
 } else {
 code +='<th style="text-align:left;">' + clientTableHeaders[i] + '</th>';
 }
@@ -237,7 +238,7 @@ for (j = 0; j < (clientTableEntries[i].length-2); ++j)
 if (j == 0) {
 code += '<td style="white-space:nowrap; text-align:left;">' + clientTableEntries[i][j] + '<br><span style="color: cyan; background: transparent;">' + clientTableEntries[i][clientTableEntries[i].length-2] +'</span></td>';
 } else if ((j == 3) || (j == 4)) {
-code += '<td style="vertical-align:top; text-align:left;">' + Number(clientTableEntries[i][j]).toLocaleString() + '</td>';
+code += '<td style="vertical-align:top; text-align:left;">' + Number(clientTableEntries[i][j]/1024/1024).toFixed(2).toLocaleString() + '</td>';
 } else {
 code += '<td style="vertical-align:top; text-align:left;">' + clientTableEntries[i][j] + '</td>';
 }
@@ -303,10 +304,10 @@ var vpnc_clientlist_row = vpnc_clientlist_array.split('<');
 var code = "";
 code +='<table style="margin-bottom:30px;" width="70%" border="1" align="left" cellpadding="4" cellspacing="0" class="list_table" id="vpnc_clientlist_table">';
 code +='<tr><th style="height:30px; width:20%;">Status</th>';
-code +='<th style="width:65%;"><div><#1259#></div></th>';
-code +='<th style="width:15%;"><div><#345#></div></th></tr>';
+code +='<th style="width:65%;"><div><#1297#></div></th>';
+code +='<th style="width:15%;"><div><#350#></div></th></tr>';
 if(vpnc_clientlist_array == "")
-code +='<tr><td style="color:#FFCC00;" colspan="6"><#1286#></td></tr>';
+code +='<tr><td style="color:#FFCC00;" colspan="6"><#1324#></td></tr>';
 else{
 for(var i=0; i<vpnc_clientlist_row.length; i++){
 overlib_str0[i] = "";
@@ -391,7 +392,6 @@ document.getElementById("vpnc_clientlist_Block").innerHTML = code;
 <div>&nbsp;</div>
 <div class="formfonttitle">VPN - Status</div>
 <div style="margin-left:5px;margin-top:10px;margin-bottom:10px"><img src="/images/New_ui/export/line_export.png"></div>
-<div class="formfontdesc" style="height:15px;"><span id="waitmsg" style="color:#FC0;">Updating, please wait...</span></div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" id="pptpserver" class="FormTable"></br>
 <thead>
 <tr>
@@ -509,7 +509,7 @@ document.getElementById("vpnc_clientlist_Block").innerHTML = code;
 </tr>
 </table>
 <div class="apply_gen">
-<input name="button" type="button" class="button_gen" onclick="applyRule();" value="<#882#>"/>
+<input name="button" type="button" class="button_gen" onclick="applyRule();" value="<#899#>"/>
 </div>
 </td></tr>
 </tbody>

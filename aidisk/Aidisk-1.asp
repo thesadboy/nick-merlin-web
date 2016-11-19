@@ -38,7 +38,7 @@ return;
 else if(dummyShareway != ""){ // Ever config aidisk wizard
 document.getElementById("AiDiskWelcome_desp").style.display = 'none';
 document.getElementById("linkdiskbox").style.display = 'block';
-document.getElementById("settingBtn").innerHTML = "<#883#>";
+document.getElementById("settingBtn").innerHTML = "<#900#>";
 show_share_link();
 }
 else{
@@ -115,9 +115,9 @@ showtext(document.getElementById("ddnslink2_LAN"), 'LAN FTP address: <a id="ddns
 else{
 document.getElementById("noWAN_link").style.display = "";
 if(FTP_status != 1)
-showtext(document.getElementById("noWAN_link"), '<#1431#>');
+showtext(document.getElementById("noWAN_link"), '<#1469#>');
 else if(ddns_enable != 1){
-showtext(document.getElementById("noWAN_link"), "<#1432#>");
+showtext(document.getElementById("noWAN_link"), "<#1470#>");
 document.getElementById("desc_2").style.display = "";
 document.getElementById("ddnslink1_LAN").style.display = "";
 if(FTP_mode == 1){
@@ -126,7 +126,7 @@ showtext(document.getElementById("ddnslink1_LAN"), 'LAN FTP address: <a id="ddns
 showtext(document.getElementById("ddnslink1_LAN"), 'LAN FTP address: <a id="ddnslink1_LAN_link" target="_blank" style="text-decoration: underline; font-family:Lucida Console;">ftp://<% nvram_get("lan_ipaddr"); %></a>');
 }
 }else if(ddns_hostname.length <= 0){
-showtext(document.getElementById("noWAN_link"), "<#1433#>");
+showtext(document.getElementById("noWAN_link"), "<#1471#>");
 }else
 alert("FTP and ddns exception");
 }
@@ -150,8 +150,8 @@ document.redirectForm.submit();
 <table width="740" height="125" border="0">
 <tr>
 <td class="formfonttitle">
-<span style="margin-left:3px;"><#657#></span>
-<img onclick="go_setting_parent('/APP_Installation.asp')" align="right" style="cursor:pointer;margin-right:20px;margin-top:-20px;" title="<#181#>" src="/images/backprev.png" onMouseOver="this.src='/images/backprevclick.png'" onMouseOut="this.src='/images/backprev.png'">
+<span style="margin-left:3px;"><#673#></span>
+<img onclick="go_setting_parent('/APP_Installation.asp')" align="right" style="cursor:pointer;margin-right:20px;margin-top:-20px;" title="<#184#>" src="/images/backprev.png" onMouseOver="this.src='/images/backprevclick.png'" onMouseOut="this.src='/images/backprev.png'">
 </td>
 </tr>
 <tr>
@@ -162,26 +162,26 @@ document.redirectForm.submit();
 <tr>
 <td>
 <div style="width:660px;line-height:180%;font-size:16px;margin-left:30px;">
-<div id="Nodisk_hint" class="alert_string" style="display:none;"><#1606#></div>
+<div id="Nodisk_hint" class="alert_string" style="display:none;"><#1646#></div>
 <div id="AiDiskWelcome_desp">
-<#654#>
+<#670#>
 <ul>
-<li><#655#></li>
-<li><#656#></li>
-<li><#633#></li>
-<li><#1615#></li>
+<li><#671#></li>
+<li><#672#></li>
+<li><#649#></li>
+<li><#1655#></li>
 <li>
 <a id="tosLink" style="cursor:pointer;font-family:Lucida Console;text-decoration:underline;" target="_blank" href="">
-<#902#>
+<#920#>
 </a>
 </li>
 </ul>
 </div>
 <div id="linkdiskbox" >
-<span style="margin-left:5px;"><#652#></span><br/>
+<span style="margin-left:5px;"><#668#></span><br/>
 <ul>
 <li id="noFTP_Hint" style="display:none;">
-<span><#639#></span>
+<span><#655#></span>
 </li>
 <li>
 <span id="noWAN_link" style="display:none;"></span>
@@ -192,12 +192,12 @@ document.redirectForm.submit();
 <span id="ddnslink1_LAN" style="display:none;"></span>
 <span id="ddnslink2_LAN" style="display:none;"></span>
 </li>
-<li><#633#></li>
-<li><#628#></li>
-<li><#1615#></li>
+<li><#649#></li>
+<li><#644#></li>
+<li><#1655#></li>
 <li>
 <a id="tosLink2" style="cursor:pointer;font-family:Lucida Console;text-decoration:underline;" target="_blank" href="">
-<#902#>
+<#920#>
 </a>
 </li>
 </ul>
@@ -208,7 +208,7 @@ document.redirectForm.submit();
 <tr>
 <td align="center" width="740px" height="60px">
 <div id="gotonext">
-<a href="javascript:go_next_page();"><div class="titlebtn" style="margin-left:300px;_margin-left:150px;" align="center"><span id="settingBtn" style="*width:190px;"><#826#></span></div></a>
+<a href="javascript:go_next_page();"><div class="titlebtn" style="margin-left:300px;_margin-left:150px;" align="center"><span id="settingBtn" style="*width:190px;"><#843#></span></div></a>
 </div>
 </td>
 </tr>

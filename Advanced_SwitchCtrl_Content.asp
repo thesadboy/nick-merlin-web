@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#533#> - <#1859#></title>
+<title><#548#> - <#1905#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="other.css">
@@ -23,13 +23,13 @@ var ctf_disable = '<% nvram_get("ctf_disable"); %>';
 var ctf_fa_mode = '<% nvram_get("ctf_fa_mode"); %>';
 show_menu();
 if(ctf_disable == 1){
-document.getElementById("ctfLevelDesc").innerHTML = "<#1562#>";
+document.getElementById("ctfLevelDesc").innerHTML = "<#1600#>";
 }
 else{
 if(ctf_fa_mode == '2')
-document.getElementById("ctfLevelDesc").innerHTML = "<#1564#>";
+document.getElementById("ctfLevelDesc").innerHTML = "<#1602#>";
 else
-document.getElementById("ctfLevelDesc").innerHTML = "<#1563#>";
+document.getElementById("ctfLevelDesc").innerHTML = "<#1601#>";
 }
 if(lacp_support){
 document.getElementById("lacp_tr").style.display = "";
@@ -55,7 +55,7 @@ document.form.submit();
 <table cellpadding="5" cellspacing="0" id="dr_sweet_advise" class="dr_sweet_advise" align="center">
 <tr>
 <td>
-<div class="drword" id="drword" style="height:110px;"><#174#> <#171#>...
+<div class="drword" id="drword" style="height:110px;"><#177#> <#174#>...
 <br/>
 <br/>
 </div>
@@ -95,24 +95,24 @@ document.form.submit();
 <tr>
 <td bgcolor="#4D595D" valign="top">
 <div>&nbsp;</div>
-<div class="formfonttitle"><#191#> - <#1859#></div>
+<div class="formfonttitle"><#194#> - <#1905#></div>
 <div style="margin-left:5px;margin-top:10px;margin-bottom:10px"><img src="/images/New_ui/export/line_export.png"></div>
-<div class="formfontdesc"><#1860#></div>
+<div class="formfontdesc"><#1906#></div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <tr>
-<th><#1337#></th>
+<th><#1375#></th>
 <td>
 <select name="jumbo_frame_enable" class="input_option">
-<option class="content_input_fd" value="0" <% nvram_match("jumbo_frame_enable", "0","selected"); %>><#2230#></option>
-<option class="content_input_fd" value="1" <% nvram_match("jumbo_frame_enable", "1","selected"); %>><#2229#></option>
+<option class="content_input_fd" value="0" <% nvram_match("jumbo_frame_enable", "0","selected"); %>><#2280#></option>
+<option class="content_input_fd" value="1" <% nvram_match("jumbo_frame_enable", "1","selected"); %>><#2279#></option>
 </select>
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(29,2);"><#1561#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(29,2);"><#1599#></a></th>
 <td>
 <select name="ctf_disable_force" class="input_option">
-<option class="content_input_fd" value="1" <% nvram_match("ctf_disable", "1","selected"); %>><#2230#></option>
+<option class="content_input_fd" value="1" <% nvram_match("ctf_disable", "1","selected"); %>><#2280#></option>
 <option class="content_input_fd" value="0" <% nvram_match("ctf_disable", "0","selected"); %>><#40#></option>
 </select>
 &nbsp
@@ -122,31 +122,33 @@ document.form.submit();
 <tr style="display:none">
 <th>Enable GRO(Generic Receive Offload)</th>
 <td>
-<input type="radio" name="gro_disable_force" value="0" <% nvram_match("gro_disable_force", "0", "checked"); %>><#65#>
-<input type="radio" name="gro_disable_force" value="1" <% nvram_match("gro_disable_force", "1", "checked"); %>><#64#>
+<input type="radio" name="gro_disable_force" value="0" <% nvram_match("gro_disable_force", "0", "checked"); %>><#66#>
+<input type="radio" name="gro_disable_force" value="1" <% nvram_match("gro_disable_force", "1", "checked"); %>><#65#>
 </td>
 </tr>
 <tr>
 <th>Spanning-Tree Protocol</th>
 <td>
 <select name="lan_stp" class="input_option">
-<option class="content_input_fd" value="0" <% nvram_match("lan_stp", "0","selected"); %>><#2230#></option>
-<option class="content_input_fd" value="1" <% nvram_match("lan_stp", "1","selected"); %>><#2229#></option>
+<option class="content_input_fd" value="0" <% nvram_match("lan_stp", "0","selected"); %>><#2280#></option>
+<option class="content_input_fd" value="1" <% nvram_match("lan_stp", "1","selected"); %>><#2279#></option>
 </select>
 </td>
 </tr>
 <tr id="lacp_tr" style="display:none;">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(29,1);">Bonding/ Link aggregation</a></th><td>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(29,1);"><#1607#></a></th>
+<td>
 <select name="lacp_enabled" class="input_option">
-<option class="content_input_fd" value="0" <% nvram_match("lacp_enabled", "0","selected"); %>><#2230#></option>
-<option class="content_input_fd" value="1" <% nvram_match("lacp_enabled", "1","selected"); %>><#2229#></option>
+<option class="content_input_fd" value="0" <% nvram_match("lacp_enabled", "0","selected"); %>><#2280#></option>
+<option class="content_input_fd" value="1" <% nvram_match("lacp_enabled", "1","selected"); %>><#2279#></option>
 </select>
 &nbsp
-<div id="lacp_desc"><span id="lacp_note">Please enable Bonding (802.3ad) support of your wired client and connect it to Router LAN1 and LAN2.</span><div></td>
+<div id="lacp_desc"><span id="lacp_note"><#1608#></span><div>
+</td>
 </tr>
 </table>
 <div class="apply_gen">
-<input class="button_gen" onclick="applyRule()" type="button" value="<#72#>"/>
+<input class="button_gen" onclick="applyRule()" type="button" value="<#73#>"/>
 </div>
 </td>
 </tr>

@@ -36,7 +36,7 @@ var wans_dualwan = '<% nvram_get("wans_dualwan"); %>'.split(" ");
 var based_modelid = '<% nvram_get("productid"); %>';
 function QKDetect_load_body(){
 parent.set_step("t1");
-parent.document.title = "<#533#> - <#434#>";
+parent.document.title = "<#548#> - <#435#>";
 setTimeout("getWANStatus();", 3000);
 if(parent.ISMOBILE){
 hideObjs();
@@ -82,7 +82,7 @@ dataType: 'script',
 error: function(xhr){
 --RetryCountDown_fail;
 if(RetryCountDown_fail < 1){
-alert("<#87#>!");
+alert("<#89#>!");
 refreshpage();
 }
 else
@@ -99,7 +99,7 @@ return true;
 }
 if(wanstate == -1 || wanstate == 0 || wanstate == 1){
 if(wanauxstate == 3 && wanstate == 1){ // PPP_AUTH_FAIL
-alert("<#448#>");
+alert("<#449#>");
 redirect_page("internet_account");
 return true;
 }
@@ -111,7 +111,7 @@ document.getElementById("QISmain").style.display = "none";
 document.getElementById("QISmain_m").style.display = "";
 }
 else{
-if(confirm("<#296#>")){
+if(confirm("<#301#>")){
 RetryCountDown = 5;
 getWANStatus();
 }
@@ -129,7 +129,24 @@ else
 setTimeout("getWANStatus();", 2000);
 }
 else if(wanstate == 4 && wansbstate == 4){
-parent.location.href = "/error_page.htm?flag=6";
+parent.changeSubnet = true;
+if(based_modelid == "4G-AC55U")
+{
+if(usb_wanstate == 2 && usb_wansbstate == 0 && usb_wanauxstate == 0){
+redirect_page("wireless");
+}
+else{
+redirect_page("dualconnect_status");
+}
+}
+else{
+if(parent.hadPlugged("modem")){
+redirect_page("modem");
+}
+else{
+redirect_page("wireless");
+}
+}
 }
 else{
 if(wanauxstate != 1 && wanstate == 2){ //success case
@@ -204,7 +221,7 @@ document.redirectForm.submit();
 <table width="100%">
 <tr>
 <td align="left">
-<div class="description_down"><#432#></div>
+<div class="description_down"><#433#></div>
 </td>
 <td align="right">
 </td>
@@ -220,20 +237,20 @@ document.redirectForm.submit();
 <img src="/images/InternetScan.gif"></span>
 </td>
 <td class="test_css">
-<strong><span><#435#></span></strong>
+<strong><span><#436#></span></strong>
 </td>
 </tr>
 </table>
 </div>
 </form>
 <div style="display:none;" id="QISmain_m">
-<div><#296#></div><br>
+<div><#301#></div><br>
 <fieldset class="theFieldset">
 <div class="row">
-<a class="iuiA" onclick="rescan_m();"><#433#></a>
+<a class="iuiA" onclick="rescan_m();"><#434#></a>
 </div>
 <div class="row_end" id="siteSurvey">
-<a class="iuiA" onclick="redirect_page('fail');"><#77#></a>
+<a class="iuiA" onclick="redirect_page('fail');"><#79#></a>
 </div>
 </fieldset>
 </div>

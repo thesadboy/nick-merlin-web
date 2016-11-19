@@ -40,14 +40,13 @@ var based_modelid = '<% nvram_get("productid"); %>';
 function initial(){
 parent.set_step("t1");
 if(wanstate == 4 && wansbstate == 4){
-gotoPage("/error_page.htm", "6", 1);
-return;
+parent.changeSubnet = true;
 }
-$("#string_obj1")[0].innerHTML = "<#282#>";
-$("#string_obj2")[0].innerHTML = "<#284#>";
-$("#string_obj3")[0].innerHTML = "<#297#>";
-$("#string_obj4")[0].innerHTML = "<#282#>";
-$("#string_obj5")[0].innerHTML = "<#299#>";
+$("#string_obj1")[0].innerHTML = "<#285#>";
+$("#string_obj2")[0].innerHTML = "<#287#>";
+$("#string_obj3")[0].innerHTML = "<#302#>";
+$("#string_obj4")[0].innerHTML = "<#285#>";
+$("#string_obj5")[0].innerHTML = "<#304#>";
 if(parent.ifResetModem()){
 $("#img_obj1")[0].src = "/images/button-close.gif";
 $("#img_obj1")[0].style.width = 30;
@@ -118,8 +117,7 @@ check_changed_status();
 }
 function check_changed_status(){
 if(wanstate == 4 && wansbstate == 4){
-gotoPage("/error_page.htm", "6", 1);
-return;
+parent.changeSubnet = true;
 }
 else if(wanstate != 2 || wanauxstate == 1){
 if(run_times < MAX_RUN_TIMES){
@@ -176,7 +174,7 @@ document.redirectForm.submit();
 <table width="730px">
 <tr>
 <td align="left">
-<div class="description_down"><#298#></div>
+<div class="description_down"><#303#></div>
 </td>
 </tr>
 </table>
@@ -227,8 +225,8 @@ document.redirectForm.submit();
 </table>
 <div class='apply_gen'>
 <div id="fresharea" style="display:none">
-<input type="button" class="button_gen" width="72" onclick="gotoPage('/qis/QIS_detect.htm', '', 0);" value="<#433#>">
-<input type="button" class="button_gen" width="72" onclick="parent.location.href='/index.asp';" value="<#80#>">
+<input type="button" class="button_gen" width="72" onclick="gotoPage('/qis/QIS_detect.htm', '', 0);" value="<#434#>">
+<input type="button" class="button_gen" width="72" onclick="parent.location.href='/index.asp';" value="<#82#>">
 </div>
 </div>
 </div>

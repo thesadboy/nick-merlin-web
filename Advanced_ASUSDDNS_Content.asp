@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#533#> - <#200#></title>
+<title><#548#> - <#203#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <script language="JavaScript" type="text/javascript" src="/state.js"></script>
@@ -59,7 +59,7 @@ showLoading();
 }
 }
 function force_update() {
-var r = confirm("<#1380#>");
+var r = confirm("<#1418#>");
 if(r == false)
 return false
 document.form.submit();
@@ -116,6 +116,7 @@ document.getElementById("ddns_hostname_x").value = ddns_hostname_x_t;
 else
 document.getElementById("ddns_hostname_x").value = "<#39#>";
 }
+inputCtrl(document.form.ddns_refresh_x, 1);
 change_ddns_setting(document.form.ddns_server_x.value);
 if(document.form.ddns_server_x.value == "WWW.ORAY.COM"){
 if(ddns_updated_t == "1"){
@@ -131,6 +132,7 @@ inputCtrl(document.form.ddns_username_x, 0);
 inputCtrl(document.form.ddns_passwd_x, 0);
 document.form.ddns_wildcard_x[0].disabled= 1;
 document.form.ddns_wildcard_x[1].disabled= 1;
+inputCtrl(document.form.ddns_refresh_x, 0);
 showhide("wildcard_field",0);
 }
 hideLoading();
@@ -155,7 +157,7 @@ function validForm(){
 if(document.form.ddns_enable_x[0].checked){ //ddns enable
 if(document.form.ddns_server_x.selectedIndex == 0){ //WWW.ASUS.COM
 if(document.form.DDNSName.value == ""){
-alert("<#1368#>");
+alert("<#1406#>");
 document.form.DDNSName.focus();
 document.form.DDNSName.select();
 return false;
@@ -171,7 +173,7 @@ return true;
 if(!validator.numberRange(document.form.ddns_refresh_x, 0, 365))
 return false;
 if(document.form.ddns_server_x.value != "WWW.ORAY.COM" && document.form.ddns_hostname_x.value == ""){
-alert("<#1368#>");
+alert("<#1406#>");
 document.form.ddns_hostname_x.focus();
 document.form.ddns_hostname_x.select();
 return false;
@@ -180,7 +182,7 @@ return false;
 }
 if(document.form.ddns_server_x.value != "CUSTOM"){ // Not CUSTOM
 if(document.form.ddns_username_x.value == ""){
-alert("<#427#>");
+alert("<#428#>");
 document.form.ddns_username_x.focus();
 document.form.ddns_username_x.select();
 return false;
@@ -188,7 +190,7 @@ return false;
 return false;
 }
 if(document.form.ddns_passwd_x.value == ""){
-alert("<#102#>");
+alert("<#104#>");
 document.form.ddns_passwd_x.focus();
 document.form.ddns_passwd_x.select();
 return false;
@@ -227,12 +229,12 @@ function validate_ddns_hostname(o){
 dot=0;
 s=o.value;
 if(s == ""){
-show_alert_block("<#427#>");
+show_alert_block("<#428#>");
 return false;
 }
 var unvalid_start=new RegExp("^[0-9].*", "gi");
 if(unvalid_start.test(s) ){
-show_alert_block("<#1374#>");
+show_alert_block("<#1412#>");
 return false;
 }
 if (!validator.string(o)){
@@ -243,12 +245,12 @@ c = s.charCodeAt(i);
 if (c==46){
 dot++;
 if(dot>0){
-show_alert_block("<#1374#>");
+show_alert_block("<#1412#>");
 return false;
 }
 }
 if (!validator.hostNameChar(c)){
-show_alert_block("<#1367#> '" + s.charAt(i) +"' !");
+show_alert_block("<#1405#> '" + s.charAt(i) +"' !");
 return false;
 }
 }
@@ -307,24 +309,24 @@ return true;
 <tr>
 <td bgcolor="#4D595D" valign="top" >
 <div>&nbsp;</div>
-<div class="formfonttitle"><#195#> - <#200#></div>
+<div class="formfonttitle"><#198#> - <#203#></div>
 <div style="margin-left:5px;margin-top:10px;margin-bottom:10px"><img src="/images/New_ui/export/line_export.png"></div>
-<div class="formfontdesc"><#1382#></div>
-<div class="formfontdesc" style="margin-top:-8px;"><#1615#></div>
-<div class="formfontdesc" id="wan_ip_hide2" style="color:#FFCC00;"><#1383#></div>
-<div class="formfontdesc" id="wan_ip_hide3" style="color:#FFCC00;"><#1384#></div>
-<div class="formfontdesc" id="lb_note" style="color:#FFCC00; display:none;"><#1422#></div>
+<div class="formfontdesc"><#1420#></div>
+<div class="formfontdesc" style="margin-top:-8px;"><#1655#></div>
+<div class="formfontdesc" id="wan_ip_hide2" style="color:#FFCC00;"><#1421#></div>
+<div class="formfontdesc" id="wan_ip_hide3" style="color:#FFCC00;"><#1422#></div>
+<div class="formfontdesc" id="lb_note" style="color:#FFCC00; display:none;"><#1460#></div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <input type="hidden" name="wl_gmode_protection_x" value="<% nvram_get("wl_gmode_protection_x"); %>">
 <tr>
-<th><#1381#></th>
+<th><#1419#></th>
 <td>
-<input type="radio" value="1" name="ddns_enable_x"onClick="return change_common_radio(this, 'LANHostConfig', 'ddns_enable_x', '1')" <% nvram_match("ddns_enable_x", "1", "checked"); %>><#65#>
-<input type="radio" value="0" name="ddns_enable_x"onClick="return change_common_radio(this, 'LANHostConfig', 'ddns_enable_x', '0')" <% nvram_match("ddns_enable_x", "0", "checked"); %>><#64#>
+<input type="radio" value="1" name="ddns_enable_x"onClick="return change_common_radio(this, 'LANHostConfig', 'ddns_enable_x', '1')" <% nvram_match("ddns_enable_x", "1", "checked"); %>><#66#>
+<input type="radio" value="0" name="ddns_enable_x"onClick="return change_common_radio(this, 'LANHostConfig', 'ddns_enable_x', '0')" <% nvram_match("ddns_enable_x", "0", "checked"); %>><#65#>
 </td>
 </tr>
 <tr>
-<th><#1391#></th>
+<th><#1429#></th>
 <td>
 <select name="ddns_server_x"class="input_option" onchange="change_ddns_setting(this.value)">
 <option value="WWW.ASUS.COM" <% nvram_match("ddns_server_x", "WWW.ASUS.COM","selected"); %>>WWW.ASUS.COM</option>
@@ -337,20 +339,20 @@ return true;
 <option value="WWW.DNSOMATIC.COM" <% nvram_match("ddns_server_x", "WWW.DNSOMATIC.COM","selected"); %>>WWW.DNSOMATIC.COM</option>
 <option value="WWW.TUNNELBROKER.NET" <% nvram_match("ddns_server_x", "WWW.TUNNELBROKER.NET","selected"); %>>WWW.TUNNELBROKER.NET</option>
 <option value="WWW.NO-IP.COM" <% nvram_match("ddns_server_x", "WWW.NO-IP.COM","selected"); %>>WWW.NO-IP.COM</option>
-<option value="WWW.ORAY.COM" <% nvram_match("ddns_server_x", "WWW.ORAY.COM","selected"); %>>WWW.ORAY.COM(花生壳公网版)</option> <option value="WWW.NAMECHEAP.COM" <% nvram_match("ddns_server_x", "WWW.NAMECHEAP.COM","selected"); %>>WWW.NAMECHEAP.COM</option>
+<option value="WWW.ORAY.COM" <% nvram_match("ddns_server_x", "WWW.ORAY.COM","selected"); %>>WWW.ORAY.COM(花生壳)</option> <option value="WWW.NAMECHEAP.COM" <% nvram_match("ddns_server_x", "WWW.NAMECHEAP.COM","selected"); %>>WWW.NAMECHEAP.COM</option>
 <option value="3322" <% nvram_match("ddns_server_x", "3322","selected"); %>>3322</option>
 <option value="oray" <% nvram_match("ddns_server_x", "oray","selected"); %>>花生壳</option>
 <option value="changeip" <% nvram_match("ddns_server_x", "changeip","selected"); %>>ChangeIP</option>
 <option value="CUSTOM" <% nvram_match("ddns_server_x", "CUSTOM","selected"); %>>Custom</option>
 </select>
-<a id="link" href="javascript:openLink('x_DDNSServer')" style=" margin-left:5px; text-decoration: underline;"><#1392#></a>
-<a id="linkToHome" href="javascript:openLink('x_DDNSServer')" style=" margin-left:5px; text-decoration: underline;"><#901#></a>
+<a id="link" href="javascript:openLink('x_DDNSServer')" style=" margin-left:5px; text-decoration: underline;"><#1430#></a>
+<a id="linkToHome" href="javascript:openLink('x_DDNSServer')" style=" margin-left:5px; text-decoration: underline;"><#919#></a>
 <div id="customnote" style="display:none;"><span>For the Custom DDNS you must manually create a ddns-start script that handles your custom notification.</span></div>
 <div id="need_custom_scripts" style="display:none;"><span>WARNING: you must enable both the JFFS2 partition and custom scripts support!<br>Click <a href="Advanced_System_Content.asp" style="text-decoration: underline;">HERE</a> to proceed.</span></div>
 </td>
 </tr>
 <tr id="ddns_hostname_tr">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,13);"><#1388#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,13);"><#1426#></a></th>
 <td>
 <div id="ddnsname_input" style="display:none;">
 <input type="text" maxlength="64" class="input_25_table" name="ddns_hostname_x" id="ddns_hostname_x" value="<% nvram_get("ddns_hostname_x"); %>" onKeyPress="return validator.isString(this, event)" autocorrect="off" autocapitalize="off">
@@ -364,52 +366,52 @@ return true;
 </td>
 </tr>
 <tr id="ddns_hostname_info_tr" style="display:none;">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,13);"><#1388#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,13);"><#1426#></a></th>
 <td id="ddns_hostname_x_value"><% nvram_get("ddns_hostname_x"); %></td>
 </tr>
 <tr>
-<th id="ddns_username_th"><#1397#></th>
+<th id="ddns_username_th"><#1435#></th>
 <td><input type="text" maxlength="32" class="input_25_table" name="ddns_username_x" value="<% nvram_get("ddns_username_x"); %>" onKeyPress="return validator.isString(this, event)" autocomplete="off" autocorrect="off" autocapitalize="off"></td>
 </tr>
 <tr>
-<th><#1390#></th>
-<td><input type="password" autocapitalization="off" maxlength="64" class="input_25_table" name="ddns_passwd_x" value="<% nvram_get("ddns_passwd_x"); %>" autocomplete="off" autocorrect="off" autocapitalize="off"></td>
+<th><#1428#></th>
+<td><input type="password" maxlength="64" class="input_25_table" name="ddns_passwd_x" value="<% nvram_get("ddns_passwd_x"); %>" autocomplete="new-password" autocorrect="off" autocapitalize="off"></td>
 </tr>
 <tr id="wildcard_field">
-<th><#1399#></th>
+<th><#1437#></th>
 <td>
-<input type="radio" value="1" name="ddns_wildcard_x" onClick="return change_common_radio(this, 'LANHostConfig', 'ddns_wildcard_x', '1')" <% nvram_match("ddns_wildcard_x", "1", "checked"); %>><#65#>
-<input type="radio" value="0" name="ddns_wildcard_x" onClick="return change_common_radio(this, 'LANHostConfig', 'ddns_wildcard_x', '0')" <% nvram_match("ddns_wildcard_x", "0", "checked"); %>><#64#>
+<input type="radio" value="1" name="ddns_wildcard_x" onClick="return change_common_radio(this, 'LANHostConfig', 'ddns_wildcard_x', '1')" <% nvram_match("ddns_wildcard_x", "1", "checked"); %>><#66#>
+<input type="radio" value="0" name="ddns_wildcard_x" onClick="return change_common_radio(this, 'LANHostConfig', 'ddns_wildcard_x', '0')" <% nvram_match("ddns_wildcard_x", "0", "checked"); %>><#65#>
 </td>
 </tr>
-<tr>
+<tr style="display:none;">
 <th>Forced refresh interval (in days)</th>
 <td>
 <input type="text" maxlength="3" name="ddns_refresh_x" class="input_3_table" value="<% nvram_get("ddns_refresh_x"); %>" onKeyPress="return validator.isNumber(this,event)">
 </td>
 </tr>
 <tr id="check_ddns_field" style="display:none;">
-<th><#903#></th>
+<th><#921#></th>
 <td>
-<input type="radio" value="1" name="ddns_regular_check" onClick="change_ddns_setting(document.form.ddns_server_x.value);" <% nvram_match("ddns_regular_check", "1", "checked"); %>><#65#>
-<input type="radio" value="0" name="ddns_regular_check" onClick="change_ddns_setting(document.form.ddns_server_x.value);" <% nvram_match("ddns_regular_check", "0", "checked"); %>><#64#>
+<input type="radio" value="1" name="ddns_regular_check" onClick="change_ddns_setting(document.form.ddns_server_x.value);" <% nvram_match("ddns_regular_check", "1", "checked"); %>><#66#>
+<input type="radio" value="0" name="ddns_regular_check" onClick="change_ddns_setting(document.form.ddns_server_x.value);" <% nvram_match("ddns_regular_check", "0", "checked"); %>><#65#>
 </td>
 </tr>
 <tr style="display:none;">
-<th><#904#></th>
+<th><#922#></th>
 <td>
-<input type="text" class="input_3_table" name="ddns_regular_period" value="<% nvram_get("ddns_regular_period"); %>" autocorrect="off" autocapitalize="off"> <#1476#>
+<input type="text" class="input_3_table" name="ddns_regular_period" value="<% nvram_get("ddns_regular_period"); %>" autocorrect="off" autocapitalize="off"> <#1514#>
 </td>
 </tr>
 <tr style="display:none;">
-<th><#1395#></th>
+<th><#1433#></th>
 <td>
 <input type="hidden" maxlength="15" class="button_gen" size="12" name="" value="<% nvram_get("DDNSStatus"); %>">
-<input type="submit" maxlength="15" class="button_gen" onclick="showLoading();return onSubmitApply('ddnsclient');" size="12" name="LANHostConfig_x_DDNSStatus_button" value="<#1393#>" /></td>
+<input type="submit" maxlength="15" class="button_gen" onclick="showLoading();return onSubmitApply('ddnsclient');" size="12" name="LANHostConfig_x_DDNSStatus_button" value="<#1431#>" /></td>
 </tr>
 </table>
 <div class="apply_gen">
-<input class="button_gen" onclick="applyRule();" type="button" value="<#72#>" />
+<input class="button_gen" onclick="applyRule();" type="button" value="<#73#>" />
 </div>
 </td>
 </tr>

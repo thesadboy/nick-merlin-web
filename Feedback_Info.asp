@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="/images/favicon.png">
 <link rel="icon" href="/images/favicon.png">
-<title><#533#> - <#1465#></title>
+<title><#548#> - <#1503#></title>
 <link rel="stylesheet" type="text/css" href="/index_style.css">
 <link rel="stylesheet" type="text/css" href="/form_style.css">
 <link rel="stylesheet" type="text/css" href="/other.css">
@@ -114,30 +114,30 @@ font-family: Arial, Helvetica, sans-serif;
 <tr>
 <td bgcolor="#4D595D" valign="top">
 <div>&nbsp;</div>
-<div class="formfonttitle"><#212#> - <#1465#></div>
+<div class="formfonttitle"><#215#> - <#1503#></div>
 <div style="margin-left:5px;margin-top:10px;margin-bottom:10px"><img src="/images/New_ui/export/line_export.png"></div>
 <div id="fb_success_dsl_0" style="display:none;">
 <br>
 <br>
-<div class="feedback_info_0"><#1094#></div>
+<div class="feedback_info_0"><#1129#></div>
 <br>
 </div>
 <div id="fb_success_router_0" style="display:none;">
 <br>
 <br>
-<div class="feedback_info_0"><#1094#></div>
+<div class="feedback_info_0"><#1129#></div>
 <br>
 </div>
 <div id="fb_fail_dsl" style="display:none;" class="feedback_info_1">
-<#1075#>
+<#1110#>
 <br>
-<#1076#> : ( <a href="mailto:xdsl_feedback@asus.com?Subject=<%nvram_get("productid");%>" target="_top" style="color:#FFCC00;">xdsl_feedback@asus.com </a>) <#1077#>
+<#1111#> : ( <a href="mailto:xdsl_feedback@asus.com?Subject=<%nvram_get("productid");%>" target="_top" style="color:#FFCC00;">xdsl_feedback@asus.com </a>) <#1112#>
 <br>
 </div>
 <div id="fb_fail_router" style="display:none;" class="feedback_info_1">
-<#1075#>
+<#1110#>
 <br>
-<#1076#> : ( <a href="mailto:router_feedback@asus.com?Subject=<%nvram_get("productid");%>" target="_top" style="color:#FFCC00;">router_feedback@asus.com </a>) <#1077#>
+<#1111#> : ( <a href="mailto:router_feedback@asus.com?Subject=<%nvram_get("productid");%>" target="_top" style="color:#FFCC00;">router_feedback@asus.com </a>) <#1112#>
 <br>
 </div>
 <div id="fb_fail_textarea" style="display:none;">
@@ -146,17 +146,13 @@ font-family: Arial, Helvetica, sans-serif;
 </div>
 <div id="fb_success_dsl_1" style="display:none;">
 <br>
-<div class="feedback_info_1">We are working hard to improve the firmware of <#534#> and your feedback is very important to us. We will use your feedbacks and comments to strive to improve your ASUS experience.</div>
-<br>
-<br>
-<div class="feedback_info_1">To get help from other users, you could post your question in the <a href="http://vip.asus.com/forum/topic.aspx?board_id=11&SLanguage=en-us" style="color:#FFCC00;" target="_blank">ASUS VIP Forum</a>.</div>
-<br>
+<div class="feedback_info_1">We are working hard to improve the firmware of <#549#> and your feedback is very important to us. We will use your feedbacks and comments to strive to improve your ASUS experience.</div>
 <br>
 </div>
 <div id="fb_success_router_1" style="display:none;">
 <br>
 <div class="feedback_info_1">
-<#1093#>
+<#1128#>
 </div>
 <br>
 <br>
@@ -174,7 +170,7 @@ font-family: Arial, Helvetica, sans-serif;
 </div>
 <div id="fb_deny" style="display:none;">
 </div> <div class="apply_gen">
-<input class="button_gen" onclick="redirect();" type="button" value="<#173#>"/>
+<input class="button_gen" onclick="redirect();" type="button" value="<#176#>"/>
 </div>
 </td>
 </tr>

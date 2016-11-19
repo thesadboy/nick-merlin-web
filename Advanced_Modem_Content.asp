@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#533#> - <#205#></title>
+<title><#548#> - <#208#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="other.css">
@@ -156,7 +156,7 @@ hide_usb_settings();
 }
 );
 if(!dualWAN_support){
-document.getElementById("_APP_Installation").innerHTML = '<table><tbody><tr><td><div class="_APP_Installation"></div></td><td><div style="width:120px;"><#181#></div></td></tr></tbody></table>';
+document.getElementById("_APP_Installation").innerHTML = '<table><tbody><tr><td><div class="_APP_Installation"></div></td><td><div style="width:120px;"><#184#></div></td></tr></tbody></table>';
 document.getElementById("_APP_Installation").className = "menu_clicked";
 }
 if(!wimax_support){
@@ -329,7 +329,7 @@ document.form.modem_isp.options.length = document.form.modem_isp.options.length 
 if(document.form.modem_isp.options.length > 0)
 continue;
 else{
-alert("<#1227#>");
+alert("<#1264#>");
 document.form.modem_country.focus();
 document.form.modem_country.selectedIndex = countrylist.length-1;
 break;
@@ -433,7 +433,7 @@ function applyRule(){
 var mode = document.form.modem_enable.value;
 if(pin_opt && document.form.modem_pincode.value != ""){
 if(document.form.modem_pincode.value.search(/^\d{4,8}$/)==-1) {
-alert("<#1328#>");
+alert("<#1366#>");
 return;
 }
 }
@@ -572,7 +572,7 @@ document.getElementById("modem_dialnum_div_tr").style.display = "";
 document.getElementById("modem_user_div_tr").style.display = "";
 document.getElementById("modem_pass_div_tr").style.display = "";
 if(document.form.modem_enable.value == "1")
-mdoem_enable_str = "WCDMA (UMTS)";
+mdoem_enable_str = "WCDMA (UMTS) / LTE";
 else if(document.form.modem_enable.value == "2")
 mdoem_enable_str = "CDMA2000 (EVDO)";
 else if(document.form.modem_enable.value == "3")
@@ -614,7 +614,7 @@ document.getElementById("modem_pass_div_tr").style.display = "none";
 <table cellpadding="5" cellspacing="0" id="dr_sweet_advise" class="dr_sweet_advise" align="center">
 <tr>
 <td>
-<div class="drword" id="drword" style="height:110px;"><#174#> <#171#>...
+<div class="drword" id="drword" style="height:110px;"><#177#> <#174#>...
 <br/>
 <br/>
 </div>
@@ -660,24 +660,24 @@ document.getElementById("modem_pass_div_tr").style.display = "none";
 <table width="730px">
 <tr>
 <td align="left">
-<span class="formfonttitle"><#205#> / <#2049#></span>
+<span class="formfonttitle"><#208#> / <#2104#></span>
 </td>
 <td align="right">
-<img onclick="go_setting('/APP_Installation.asp')" align="right" style="cursor:pointer;position:absolute;margin-left:-20px;margin-top:-30px;" title="<#181#>" src="/images/backprev.png" onMouseOver="this.src='/images/backprevclick.png'" onMouseOut="this.src='/images/backprev.png'">
+<img onclick="go_setting('/APP_Installation.asp')" align="right" style="cursor:pointer;position:absolute;margin-left:-20px;margin-top:-30px;" title="<#184#>" src="/images/backprev.png" onMouseOver="this.src='/images/backprevclick.png'" onMouseOut="this.src='/images/backprev.png'">
 </td>
 </tr>
 </table>
 </div>
 <div style="margin:5px;"><img src="/images/New_ui/export/line_export.png"></div>
-<div class="formfontdesc"><#1231#></div>
+<div class="formfontdesc"><#1268#></div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable" id="WANscap">
 <thead>
 <tr>
-<td colspan="2"><#2146#></td>
+<td colspan="2"><#2199#></td>
 </tr>
 </thead>
 <tr>
-<th><#2158#></th>
+<th><#2211#></th>
 <td align="left">
 <select class="input_option" name="wan_unit" onchange="change_wan_unit(this);"></select>
 </td>
@@ -686,29 +686,29 @@ document.getElementById("modem_pass_div_tr").style.display = "none";
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable" style="margin-top:8px">
 <thead>
 <tr>
-<td colspan="2"><#1878#></td>
+<td colspan="2"><#1924#></td>
 </tr>
 </thead>
 <tr>
-<th><#1044#></th>
+<th><#1062#></th>
 <td>
 <div class="left" style="width:94px; float:left; cursor:pointer;" id="usb_modem_switch"></div>
 <div class="clear" style="height:32px; width:74px; position: relative; overflow: hidden"></div>
 </td>
 </tr>
 <tr id="modem_android_tr" style="display:none;">
-<th><#1771#></th>
+<th><#1813#></th>
 <td align="left">
 <select id="modem_android" name="modem_android" class="input_option" onChange="select_usb_device(this);">
-<option value="0" <% nvram_match("modem_android", "0", "selected"); %>><#205#></option>
-<option value="1" <% nvram_match("modem_android", "1", "selected"); %>><#774#></option>
+<option value="0" <% nvram_match("modem_android", "0", "selected"); %>><#208#></option>
+<option value="1" <% nvram_match("modem_android", "1", "selected"); %>><#790#></option>
 </select>
 <div class="formfontdesc" id="android_desc" style="display:none; color:#FFCC00;margin-top:5px;">
-<#2050#>
+<#2105#>
 <ol style="margin-top: 0px;">
-<li><#2051#></li>
-<li><#2052#></li>
-<li><#2053#></li>
+<li><#2106#></li>
+<li><#2107#></li>
+<li><#2108#></li>
 </ol>
 </div>
 </td>
@@ -716,34 +716,34 @@ document.getElementById("modem_pass_div_tr").style.display = "none";
 <tr>
 <th width="40%">APN Configuration</th><td>
 <select name="modem_autoapn" id="modem_autoapn" class="input_option" onchange="change_apn_mode();">
-<option value="1" <% nvram_match("modem_autoapn", "1","selected"); %>>Automatic</option><option value="0" <% nvram_match("modem_autoapn", "0","selected"); %>><#177#></option>
+<option value="1" <% nvram_match("modem_autoapn", "1","selected"); %>>Automatic</option><option value="0" <% nvram_match("modem_autoapn", "0","selected"); %>><#180#></option>
 </select>
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(21,9);"><#1226#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(21,9);"><#1263#></a></th>
 <td>
 <select name="modem_country" class="input_option" onchange="switch_modem_mode(document.form.modem_enable_option.value);reloadProfile();"></select>
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(21,8);"><#1237#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(21,8);"><#1274#></a></th>
 <td>
 <select name="modem_isp" class="input_option" onchange="show_APN_list();"></select>
 </td>
 </tr>
 <tr>
 <th width="40%">
-<a class="hintstyle" href="javascript:void(0);" onclick="openHint(21,1);"><#1881#></a>
+<a class="hintstyle" href="javascript:void(0);" onclick="openHint(21,1);"><#1927#></a>
 </th>
 <td>
 <select name="modem_enable_option" id="modem_enable_option" class="input_option" onchange="switch_modem_mode(this.value);reloadProfile();">
-<option value="1" <% nvram_match("modem_enable", "1", "selected"); %>>WCDMA (UMTS)</option>
+<option value="1" <% nvram_match("modem_enable", "1", "selected"); %>>WCDMA (UMTS) / LTE</option>
 <option value="2" <% nvram_match("modem_enable", "2", "selected"); %>>CDMA2000 (EVDO)</option>
 <option value="3" <% nvram_match("modem_enable", "3", "selected"); %>>TD-SCDMA</option>
 <option value="4" <% nvram_match("modem_enable", "4", "selected"); %>>WiMAX</option>
 </select>
-<br/><span id="hsdpa_hint" style="display:none;"><#1232#></span>
+<br/><span id="hsdpa_hint" style="display:none;"><#1269#></span>
 </td>
 </tr>
 <tr id="modem_enable_div_tr" style="display:none;">
@@ -753,60 +753,60 @@ document.getElementById("modem_pass_div_tr").style.display = "none";
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(21,3);"><#1242#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(21,3);"><#1279#></a></th>
 <td>
 <input id="modem_apn" name="modem_apn" class="input_20_table" maxlength="32" type="text" value="" autocorrect="off" autocapitalize="off"/>
-<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" style="position:absolute;*margin-left:-3px;*margin-top:1px;" onclick="pullLANIPList(this);" title="<#1764#>" onmouseover="over_var=1;" onmouseout="over_var=0;">
+<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" style="position:absolute;*margin-left:-3px;*margin-top:1px;" onclick="pullLANIPList(this);" title="<#1806#>" onmouseover="over_var=1;" onmouseout="over_var=0;">
 <div id="ClientList_Block_PC" class="ClientList_Block_PC"></div>
 </td>
 </tr>
 <tr id="modem_apn_div_tr" style="display:none;">
-<th><#1242#></th>
+<th><#1279#></th>
 <td>
 <div id="modem_apn_div" style="color:#FFFFFF; margin-left:1px;"></div>
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(21,10);"><#1229#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(21,10);"><#1266#></a></th>
 <td>
 <input id="modem_dialnum" name="modem_dialnum" class="input_20_table" maxlength="32" type="text" value="" autocorrect="off" autocapitalize="off"/>
 </td>
 </tr>
 <tr id="modem_dialnum_div_tr" style="display:none;">
-<th><#1229#></th>
+<th><#1266#></th>
 <td>
 <div id="modem_dialnum_div" style="color:#FFFFFF; margin-left:1px;"></div>
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(21,11);"><#1246#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(21,11);"><#1283#></a></th>
 <td>
 <input id="modem_user" name="modem_user" class="input_20_table" maxlength="32" type="text" value="<% nvram_get("modem_user"); %>" autocorrect="off" autocapitalize="off"/>
 </td>
 </tr>
 <tr id="modem_user_div_tr" style="display:none;">
-<th><#1246#></th>
+<th><#1283#></th>
 <td>
 <div id="modem_user_div" style="color:#FFFFFF; margin-left:1px;"></div>
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(21,12);"><#265#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(21,12);"><#268#></a></th>
 <td>
 <input id="modem_pass" name="modem_pass" class="input_20_table" maxlength="32" type="password" value="<% nvram_get("modem_pass"); %>" autocorrect="off" autocapitalize="off"/>
 </td>
 </tr>
 <tr id="modem_pass_div_tr" style="display:none;">
-<th><#265#></th>
+<th><#268#></th>
 <td>
 <div id="modem_pass_div" style="color:#FFFFFF; margin-left:1px;"></div>
 </td>
 </tr>
 <tr>
-<th><#1651#></th>
+<th><#1694#></th>
 <td>
 <select name="modem_authmode" id="modem_authmode" class="input_option">
-<option value="0" <% nvram_match("modem_authmode", "0", "selected"); %>><#538#></option>
+<option value="0" <% nvram_match("modem_authmode", "0", "selected"); %>><#553#></option>
 <option value="1" <% nvram_match("modem_authmode", "1", "selected"); %>>PAP</option>
 <option value="2" <% nvram_match("modem_authmode", "2", "selected"); %>>CHAP</option>
 <option value="3" <% nvram_match("modem_authmode", "3", "selected"); %>>PAP / CHAP</option>
@@ -814,10 +814,10 @@ document.getElementById("modem_pass_div_tr").style.display = "none";
 </td>
 </tr>
 <tr style="display:none;">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(21,2);"><#1638#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(21,2);"><#1681#></a></th>
 <td>
 <input id="modem_pincode" name="modem_pincode" class="input_20_table" style="margin-left:0px;" type="password" maxLength="8" value="<% nvram_get("modem_pincode"); %>" autocorrect="off" autocapitalize="off"/>
-<br><span id="pincode_status" style="display:none;"><#264#></span>
+<br><span id="pincode_status" style="display:none;"><#267#></span>
 </td>
 </tr>
 <tr>
@@ -827,7 +827,7 @@ document.getElementById("modem_pass_div_tr").style.display = "none";
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(21,13);"><#1243#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(21,13);"><#1280#></a></th>
 <td>
 <select name="Dev3G" id="shown_modems" class="input_option" disabled="disabled"></select>
 </td>
@@ -839,8 +839,29 @@ document.getElementById("modem_pass_div_tr").style.display = "none";
 </td>
 </tr>
 </table>
+<table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable" style="margin-top:8px">
+<thead>
+<tr>
+<td colspan="2"><#272#></td>
+</tr>
+</thead>
+<tr>
+<th><a class="hintstyle" href="javascript:void(0);" onClick=""><#1067#></a></th>
+<td>
+<input type="radio" name="ttl_inc_enable" class="input" value="1" <% nvram_match("ttl_inc_enable", "1", "checked"); %>><#66#>
+<input type="radio" name="ttl_inc_enable" class="input" value="0" <% nvram_match("ttl_inc_enable", "0", "checked"); %>><#65#>
+</td>
+</tr>
+<tr>
+<th><a class="hintstyle" href="javascript:void(0);" onClick=""><#1880#></a></th>
+<td>
+<input type="radio" name="ttl_spoof_enable" class="input" value="1" <% nvram_match("ttl_spoof_enable", "1", "checked"); %>><#66#>
+<input type="radio" name="ttl_spoof_enable" class="input" value="0" <% nvram_match("ttl_spoof_enable", "0", "checked"); %>><#65#>
+</td>
+</tr>
+</table>
 <div class="apply_gen">
-<input class="button_gen" onclick="applyRule()" type="button" value="<#72#>"/>
+<input class="button_gen" onclick="applyRule()" type="button" value="<#73#>"/>
 </div>
 </td>
 </tr>

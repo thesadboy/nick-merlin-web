@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#533#> - APP List</title>
+<title><#548#> - APP List</title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="other.css">
@@ -28,7 +28,7 @@ code += '<table width="100%" border="1" align="center" cellpadding="4" cellspaci
 code += '<thead><tr><td colspan="3">IPKG List</td></tr></thead>';
 code += '<th style="width:20%">Name and Hyperlink</th><th style="width:10%">Version</th><th>Description</th>';
 if(apps_array.length == 0)
-code +='<tr><td style="color:#FFCC00;"><#1286#></td>';
+code +='<tr><td style="color:#FFCC00;"><#1324#></td>';
 else{
 for(var i =0; i < apps_array.length; i++){
 code +='<tr style="height:40px;">';
@@ -49,7 +49,7 @@ document.getElementById("apps_table").innerHTML = code;
 <table cellpadding="5" cellspacing="0" id="dr_sweet_advise" class="dr_sweet_advise" align="center">
 <tr>
 <td>
-<div class="drword" id="drword" style="height:110px;"><#174#> <#171#>...
+<div class="drword" id="drword" style="height:110px;"><#177#> <#174#>...
 <br/>
 <br/>
 </div>

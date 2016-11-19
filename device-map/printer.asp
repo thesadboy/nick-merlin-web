@@ -20,12 +20,12 @@ showtext(document.getElementById("printerModel"), parent.usbPorts[parent.current
 if(parent.usbPorts[parent.currentUsbPort].deviceName != ""
 && parent.usbPorts[parent.currentUsbPort].serialNum == "<% nvram_get("u2ec_serial"); %>")
 {
-showtext(document.getElementById("printerStatus"), '<#872#>');
+showtext(document.getElementById("printerStatus"), '<#889#>');
 document.getElementById("printer_button").style.display = "";
 document.getElementById("button_descrition").style.display = "";
 }
 else{
-showtext(document.getElementById("printerStatus"), '<#869#>');
+showtext(document.getElementById("printerStatus"), '<#886#>');
 document.getElementById("printer_button").style.display = "none";
 document.getElementById("button_descrition").style.display = "none";
 }
@@ -61,22 +61,22 @@ document.form.submit();
 <table width="95%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="table1px">
 <tr>
 <td style="padding:5px 10px 5px 15px;">
-<p class="formfonttitle_nwm"><#1682#></p>
+<p class="formfonttitle_nwm"><#1724#></p>
 <p style="padding-left:10px; margin-top:3px; background-color:#444f53; line-height:20px;" id="printerModel"></p>
 <img style="margin-top:5px;" src="/images/New_ui/networkmap/linetwo2.png">
 </td>
 </tr>
 <tr>
 <td style="padding:5px 10px 5px 15px;">
-<p class="formfonttitle_nwm"><#1688#></p>
+<p class="formfonttitle_nwm"><#1730#></p>
 <p style="padding-left:10px; margin-top:3px; background-color:#444f53; line-height:20px;" id="printerStatus"></p>
 <img style="margin-top:5px;" src="/images/New_ui/networkmap/linetwo2.png">
 </td>
 </tr>
 <tr id="printer_button" style="display:none;">
 <td style="padding:5px 10px 5px 15px;">
-<p class="formfonttitle_nwm" id="monoP" style="width:138px;"><#1687#></p>
-<input id="monoBtn" type="button" class="button_gen" value="<#2229#>" onclick="cleanTask();">
+<p class="formfonttitle_nwm" id="monoP" style="width:138px;"><#1729#></p>
+<input id="monoBtn" type="button" class="button_gen" value="<#2279#>" onclick="cleanTask();">
 <p id="monoDesc" style="padding-left:10px; margin-top:3px; background-color:#444f53; line-height:20px;"><% nvram_get("mfp_ip_monopoly"); %></p>
 <img style="margin-top:5px;" src="/images/New_ui/networkmap/linetwo2.png">
 </td>
@@ -84,9 +84,9 @@ document.form.submit();
 </table>
 <div id="button_descrition" style="display:none;padding:5px 0px 5px 25px;">
 <ul style="font-size:11px; font-family:Arial; color:#FFF; padding:0px; margin:0px; list-style:outside; line-height:150%;">
-<li><#1680#></li>
+<li><#1722#></li>
 <li>
-<a id="faq" href="" target="_blank" style="text-decoration:underline;"><#1687#> FAQ</a>
+<a id="faq" href="" target="_blank" style="text-decoration:underline;"><#1729#> FAQ</a>
 </li>
 </ul>
 </div>

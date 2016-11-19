@@ -7,7 +7,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#533#> - <#222#></title>
+<title><#548#> - <#225#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <script language="JavaScript" type="text/javascript" src="/state.js"></script>
@@ -118,9 +118,9 @@ document.getElementById("routev6block").innerHTML = code;
 <tr bgcolor="#4D595D">
 <td valign="top">
 <div>&nbsp;</div>
-<div class="formfonttitle"><#488#> - <#222#></div>
+<div class="formfonttitle"><#489#> - <#225#></div>
 <div style="margin-left:5px;margin-top:10px;margin-bottom:10px"><img src="/images/New_ui/export/line_export.png"></div>
-<div class="formfontdesc"><#1723#></div>
+<div class="formfontdesc"><#1765#></div>
 <div style="margin-top:8px">
 <div id="routev4block"></div>
 </div>
@@ -129,7 +129,7 @@ document.getElementById("routev6block").innerHTML = code;
 <div id="routev6block"></div>
 </div>
 <div class="apply_gen">
-<input type="button" onClick="location.href=location.href" value="<#882#>" class="button_gen">
+<input type="button" onClick="location.href=location.href" value="<#899#>" class="button_gen">
 </div>
 </td>
 </tr>

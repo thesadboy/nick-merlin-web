@@ -7,7 +7,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#533#> - Visible Wifi</title>
+<title><#548#> - Visible Wifi</title>
 <link rel="stylesheet" type="text/css" href="/form_style.css">
 <link rel="stylesheet" type="text/css" href="qis/qis_style.css">
 <link rel="stylesheet" type="text/css" href="index_style.css">
@@ -132,7 +132,7 @@ if(aplist[i][1] == null)
 continue;
 else if(aplist[i][1].search("%FFFF") != -1)
 continue;
-overlib_str = "<p><#170#>:</p>" + aplist[i][6];
+overlib_str = "<p><#173#>:</p>" + aplist[i][6];
 htmlCode += '<tr>';
 ssid_str=decodeURI(handle_show_str(aplist[i][1]));
 htmlCode += '<td id="ssid" onclick="oui_query_full_vendor(\'' + aplist[i][6].toUpperCase() +'\');overlib_str_tmp=\''+ overlib_str +'\';return overlib(\''+ overlib_str +'\');" onmouseout="nd();" style="cursor:pointer; text-decoration:underline;">' + ssid_str + '</td>';
@@ -227,14 +227,14 @@ document.form.submit();
 </tr>
 </table>
 <div class="apply_gen" valign="top">
-<input disabled type="button" id="rescanButton" value="<#370#>" onclick="rescan();" class="button_gen_dis">
+<input disabled type="button" id="rescanButton" value="<#375#>" onclick="rescan();" class="button_gen_dis">
 <img id="SearchingIcon" style="display:none;" src="/images/InternetScan.gif">
 </div>
 <div style="margin-left:18px;margin-top:8px;">
 <table style="width:670px;" border="0" cellspacing="0" cellpadding="4" align="center" class="QIS_survey">
-<th onclick="doSorter(1, 'str', true);addBorder(this);" style="cursor:pointer;"><#536#></th>
-<th onclick="doSorter(2, 'num', true);addBorder(this);" width="15%" style="text-align:center;cursor:pointer;line-height:120%;"><#539#></th>
-<th onclick="doSorter(3, 'str', true);addBorder(this);" width="27%" style="cursor:pointer;"><#331#></th>
+<th onclick="doSorter(1, 'str', true);addBorder(this);" style="cursor:pointer;"><#551#></th>
+<th onclick="doSorter(2, 'num', true);addBorder(this);" width="15%" style="text-align:center;cursor:pointer;line-height:120%;"><#554#></th>
+<th onclick="doSorter(3, 'str', true);addBorder(this);" width="27%" style="cursor:pointer;"><#336#></th>
 <th onclick="doSorter(0, 'str', true);addBorder(this);" width="10%" style="text-align:center;cursor:pointer;line-height:120%;;">Band</th>
 <th onclick="doSorter(5, 'num', true);addBorder(this);" width="10%" id="sigTh" style="border-bottom: 1px solid #FC0;text-align:center;cursor:pointer;">Radio</th>
 </table>

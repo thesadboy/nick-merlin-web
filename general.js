@@ -236,7 +236,7 @@ dr_advise();
 document.form.submit();
 }
 else{
-alert("<#143#>");
+alert("<#146#>");
 document.form.file.focus();
 }
 }
@@ -339,9 +339,9 @@ showhide("customnote", 0);
 showhide("need_custom_scripts", 0);
 }
 if(v == "WWW.NAMECHEAP.COM")
-document.getElementById("ddns_username_th").innerHTML = Untranslated.namecheap_username_title;
+document.getElementById("ddns_username_th").innerHTML = "Domain Name";
 else
-document.getElementById("ddns_username_th").innerHTML = "<#1397#>";
+document.getElementById("ddns_username_th").innerHTML = "<#1435#>";
 }
 function change_common_radio(o, s, v, r){
 if(v == "ddns_enable_x"){
@@ -374,6 +374,7 @@ inputCtrl(document.form.ddns_passwd_x, 1);
 showhide("wildcard_field",1);
 }
 change_ddns_setting(document.form.ddns_server_x.value);
+inputCtrl(document.form.ddns_refresh_x, 1);
 }else{
 if(document.form.ddns_server_x.value == "WWW.ASUS.COM"){
 document.form.DDNSName.parentNode.parentNode.parentNode.style.display = "none";
@@ -392,6 +393,7 @@ showhide("wildcard_field",0);
 document.form.ddns_regular_check.value = 0;
 showhide("check_ddns_field", 0);
 inputCtrl(document.form.ddns_regular_period, 0);
+inputCtrl(document.form.ddns_refresh_x, 0);
 }
 }
 else if(v == "wan_dnsenable_x"){
@@ -489,7 +491,7 @@ tourl = "http://www.no-ip.com/newUser.php";
 else if (document.form.ddns_server_x.value == 'WWW.NAMECHEAP.COM')
 tourl = "https://www.namecheap.com";
 else if (document.form.ddns_server_x.value == 'WWW.ORAY.COM')
-tourl = "http://www.oray.com/";
+tourl = "http://www.oray.com/"
 else if (document.form.ddns_server_x.value == '3322')
 tourl = "http://www.pubyun.com/";
 else if (document.form.ddns_server_x.value == 'oray')
@@ -512,7 +514,7 @@ var wep_key = new Array(5);
 var valid_WPAPSK = function(o){
 if(o.value.length >= 64){
 o.value = o.value.substring(0, 63);
-alert("<#156#>");
+alert("<#159#>");
 return false;
 }
 return true;
@@ -1247,7 +1249,7 @@ var childsel=document.createElement("div");
 childsel.setAttribute("id","check_port_input");
 childsel.style.color="#FFCC00";
 obj.parentNode.appendChild(childsel);
-document.getElementById("check_port_input").innerHTML="<#44#> 1 <#45#> 65535";
+document.getElementById("check_port_input").innerHTML="<#45#> 1 <#46#> 65535";
 document.getElementById("check_port_input").style.display = "";
 obj.value = obj.parentNode.childNodes[0].innerHTML;
 obj.focus();
@@ -1264,7 +1266,7 @@ var childsel=document.createElement("div");
 childsel.setAttribute("id","check_mac_input");
 childsel.style.color="#FFCC00";
 obj.parentNode.appendChild(childsel);
-document.getElementById("check_mac_input").innerHTML="<#162#>";
+document.getElementById("check_mac_input").innerHTML="<#165#>";
 document.getElementById("check_mac_input").style.display = "";
 obj.value = obj.parentNode.childNodes[0].innerHTML;
 obj.focus();
@@ -1303,9 +1305,9 @@ var objs = getElementsByName_iefix("span", "key_des");
 var wep_type = document.form.wl_wep_x.value;
 var str = "";
 if(wep_type == "1")
-str = "(<#542#>)";
+str = "(<#557#>)";
 else if(wep_type == "2")
-str = "(<#543#>)";
+str = "(<#558#>)";
 for(var i = 0; i < objs.length; ++i)
 showtext(objs[i], str);
 }
@@ -1351,7 +1353,9 @@ check_NOnly_to_GN();
 function limit_auth_method(g_unit){
 var auth_method_array = document.form.wl_auth_mode_x.value;
 if(sw_mode == 2){
-if(based_modelid == "RT-AC87U" && g_unit)
+if(based_modelid.search("RP-AC66") != -1)
+var auth_array = [["Open System", "open"], ["WPA-Personal", "psk"], ["WPA2-Personal", "psk2"], ["WPA-Auto-Personal", "pskpsk2"]];
+else if(based_modelid == "RT-AC87U" && g_unit)
 var auth_array = [["Open System", "open"], ["WPA2-Personal", "psk2"], ["WPA-Auto-Personal", "pskpsk2"]];
 else if(based_modelid == "RT-AC87U" && g_unit =='0')
 var auth_array = [["Open System", "open"], ["Shared Key", "shared"], ["WPA-Personal", "psk"], ["WPA2-Personal", "psk2"], ["WPA-Auto-Personal", "pskpsk2"]];
@@ -1406,55 +1410,55 @@ function getDDNSState(ddns_return_code, ddns_hostname, ddns_old_hostname)
 {
 var ddnsStateHint = "";
 if(ddns_return_code.indexOf('-1')!=-1)
-ddnsStateHint = "<#1369#>";
+ddnsStateHint = "<#1407#>";
 else if(ddns_return_code.indexOf('200')!=-1)
-ddnsStateHint = "<#1370#>";
+ddnsStateHint = "<#1408#>";
 else if(ddns_return_code.indexOf('203')!=-1)
-ddnsStateHint = "<#1376#> '"+ddns_hostname+"' <#1378#>";
+ddnsStateHint = "<#1414#> '"+ddns_hostname+"' <#1416#>";
 else if(ddns_return_code.indexOf('220')!=-1)
-ddnsStateHint = "<#1371#>";
+ddnsStateHint = "<#1409#>";
 else if(ddns_return_code.indexOf('230')!=-1)
-ddnsStateHint = "<#1372#>";
+ddnsStateHint = "<#1410#>";
 else if(ddns_return_code.indexOf('233')!=-1)
-ddnsStateHint = "<#1376#> '"+ddns_hostname+"' <#1379#> '"+ddns_old_hostname+"'";
+ddnsStateHint = "<#1414#> '"+ddns_hostname+"' <#1417#> '"+ddns_old_hostname+"'";
 else if(ddns_return_code.indexOf('296')!=-1)
-ddnsStateHint = "<#1373#>";
+ddnsStateHint = "<#1411#>";
 else if(ddns_return_code.indexOf('297')!=-1)
-ddnsStateHint = "<#1374#>";
+ddnsStateHint = "<#1412#>";
 else if(ddns_return_code.indexOf('298')!=-1)
-ddnsStateHint = "<#1375#>";
+ddnsStateHint = "<#1413#>";
 else if(ddns_return_code.indexOf('299')!=-1)
-ddnsStateHint = "<#164#>";
+ddnsStateHint = "<#167#>";
 else if(ddns_return_code.indexOf('401')!=-1)
-ddnsStateHint = "<#1364#>";
+ddnsStateHint = "<#1402#>";
 else if(ddns_return_code.indexOf('407')!=-1)
-ddnsStateHint = "<#1365#>";
+ddnsStateHint = "<#1403#>";
 else if(ddns_return_code == 'Time-out')
-ddnsStateHint = "<#1363#>";
+ddnsStateHint = "<#1401#>";
 else if(ddns_return_code =='unknown_error')
-ddnsStateHint = "<#1369#>";
+ddnsStateHint = "<#1407#>";
 else if(ddns_return_code =='connect_fail')
-ddnsStateHint = "<#321#>";
+ddnsStateHint = "<#326#>";
 else if(ddns_return_code =='no_change')
-ddnsStateHint = "<#1377#>";
+ddnsStateHint = "<#1415#>";
 /*else if(ddns_return_code =='ddns_query')
-ddnsStateHint = "<#1386#>";*/
+ddnsStateHint = "<#1424#>";*/
 else if(ddns_return_code =='auth_fail')
-ddnsStateHint = "<#315#>";
+ddnsStateHint = "<#320#>";
 else if(ddns_return_code !='')
-ddnsStateHint = "<#1369#>";
+ddnsStateHint = "<#1407#>";
 return ddnsStateHint;
 }
 function get_yadns_modedesc(mode)
 {
 if (mode == 0)
-return "<#2357#>";
+return "<#2407#>";
 else if(mode == 1)
-return "<#2359#>";
+return "<#2409#>";
 else if(mode == 2)
-return "<#2361#>";
+return "<#2411#>";
 else if(mode == -1)
-return "<#823#>";
+return "<#840#>";
 return "";
 }
 

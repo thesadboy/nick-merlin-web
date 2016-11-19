@@ -23,7 +23,7 @@ var got_ntp = result_of_detectWAN&0x1;
 var got_wan_dns = (result_of_detectWAN&0x2)>>1;
 var got_more_dns = (result_of_detectWAN&0x4)>>2;
 function QKfinish_load_body(){
-parent.document.title = "<#533#>";
+parent.document.title = "<#548#>";
 parent.set_step("t3");
 if(orig_x_Setting != "1"){
 set_x_Setting("1", "/qis/QIS_internet_success.htm");
@@ -32,13 +32,13 @@ if(now_flag.length > 0){
 document.getElementById("fail_to_connect").style.display = "";
 document.getElementById("succeed_to_connect").style.display = "none";
 show_fail_response();
-showtext(document.getElementById("title_item"), "<#272#>");
+showtext(document.getElementById("title_item"), "<#275#>");
 }
 else{
 document.getElementById("fail_to_connect").style.display = "none";
 document.getElementById("succeed_to_connect").style.display = "";
 document.getElementById("li_of_wireless").style.display = "";
-showtext(document.getElementById("title_item"), "<#437#>");
+showtext(document.getElementById("title_item"), "<#438#>");
 }
 }
 function show_fail_response(){
@@ -47,36 +47,36 @@ if(now_flag.indexOf("dhcp_wrong_") >= 0){
 document.getElementById("link_id").onclick = function(){
 gotoDetect();
 };
-showtext(document.getElementById("link_str"), "<#445#>");
+showtext(document.getElementById("link_str"), "<#446#>");
 html_code += "<br>\n";
 if(wan_ip.length > 0){
 if(got_wan_dns){
-html_code += "(1) <#337#>: <b>"+wan_ip+"</b><br>\n";
-html_code += "(2) <#338#>: <b>"+wan_dns+"</b><br>\n";
-html_code += "<b>(3) <#341#>:<br>";
+html_code += "(1) <#342#>: <b>"+wan_ip+"</b><br>\n";
+html_code += "(2) <#343#>: <b>"+wan_dns+"</b><br>\n";
+html_code += "<b>(3) <#346#>:<br>";
 html_code += "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 html_code += "8.8.8.8, 208.67.220.220</b><br>\n";
-html_code += "<#333#>\n";
+html_code += "<#338#>\n";
 }
 else if(got_more_dns){
-html_code += "(1) <#337#>: <b>"+wan_ip+"</b><br>\n";
-html_code += "<b>(2) <#339#>: "+wan_dns+"</b><br>\n";
-html_code += "(3) <#340#>:<br>";
+html_code += "(1) <#342#>: <b>"+wan_ip+"</b><br>\n";
+html_code += "<b>(2) <#344#>: "+wan_dns+"</b><br>\n";
+html_code += "(3) <#345#>:<br>";
 html_code += "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 html_code += "<b>8.8.8.8, 208.67.220.220</b><br>\n";
-html_code += "<#334#>\n";
+html_code += "<#339#>\n";
 }
 else{
-html_code += "(1) <#337#>: <b>"+wan_ip+"</b><br>\n";
-html_code += "<b>(2) <#339#>: "+wan_dns+"<br>\n";
-html_code += "(3) <#341#>:<br>";
+html_code += "(1) <#342#>: <b>"+wan_ip+"</b><br>\n";
+html_code += "<b>(2) <#344#>: "+wan_dns+"<br>\n";
+html_code += "(3) <#346#>:<br>";
 html_code += "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 html_code += "8.8.8.8, 208.67.220.220</b><br>\n";
-html_code += "<#335#>\n";
+html_code += "<#340#>\n";
 }
 }
 else{
-html_code += "<#336#>\n";
+html_code += "<#341#>\n";
 }
 document.getElementById("link_reason").innerHTML = html_code;
 }
@@ -85,43 +85,43 @@ if(now_flag == "pppoe_wrong_input"){
 document.getElementById("link_id").onclick = function(){
 gotoPPPoE();
 };
-showtext(document.getElementById("link_str"), "<#446#>");
-showtext(document.getElementById("link_reason"), "<#448#>");
+showtext(document.getElementById("link_str"), "<#447#>");
+showtext(document.getElementById("link_reason"), "<#449#>");
 }
 else{
 document.getElementById("link_id").onclick = function(){
 gotoDetect();
 };
-showtext(document.getElementById("link_str"), "<#445#>");
+showtext(document.getElementById("link_str"), "<#446#>");
 html_code += "<br>\n";
 if(wan_ip.length > 0){
 if(got_wan_dns){
-html_code += "(1) <#337#>: <b>"+wan_ip+"</b><br>\n";
-html_code += "(2) <#338#>: <b>"+wan_dns+"</b><br>\n";
-html_code += "<b>(3) <#341#>:<br>";
+html_code += "(1) <#342#>: <b>"+wan_ip+"</b><br>\n";
+html_code += "(2) <#343#>: <b>"+wan_dns+"</b><br>\n";
+html_code += "<b>(3) <#346#>:<br>";
 html_code += "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 html_code += "8.8.8.8, 208.67.220.220</b><br>\n";
-html_code += "<#333#>\n";
+html_code += "<#338#>\n";
 }
 else if(got_more_dns){
-html_code += "(1) <#337#>: <b>"+wan_ip+"</b><br>\n";
-html_code += "<b>(2) <#339#>: "+wan_dns+"</b><br>\n";
-html_code += "(3) <#340#>:<br>";
+html_code += "(1) <#342#>: <b>"+wan_ip+"</b><br>\n";
+html_code += "<b>(2) <#344#>: "+wan_dns+"</b><br>\n";
+html_code += "(3) <#345#>:<br>";
 html_code += "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 html_code += "<b>8.8.8.8, 208.67.220.220</b><br>\n";
-html_code += "<#334#>\n";
+html_code += "<#339#>\n";
 }
 else{
-html_code += "(1) <#337#>: <b>"+wan_ip+"</b><br>\n";
-html_code += "<b>(2) <#339#>: "+wan_dns+"<br>\n";
-html_code += "(3) <#341#>:<br>";
+html_code += "(1) <#342#>: <b>"+wan_ip+"</b><br>\n";
+html_code += "<b>(2) <#344#>: "+wan_dns+"<br>\n";
+html_code += "(3) <#346#>:<br>";
 html_code += "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 html_code += "8.8.8.8, 208.67.220.220</b><br>\n";
-html_code += "<#335#>\n";
+html_code += "<#340#>\n";
 }
 }
 else{
-html_code += "<#336#>\n";
+html_code += "<#341#>\n";
 }
 document.getElementById("link_reason").innerHTML = html_code;
 }
@@ -131,43 +131,43 @@ if(now_flag == "pptp_wrong_input"){
 document.getElementById("link_id").onclick = function(){
 gotoPPTP();
 };
-showtext(document.getElementById("link_str"), "<#446#>");
-showtext(document.getElementById("link_reason"), "<#448#>");
+showtext(document.getElementById("link_str"), "<#447#>");
+showtext(document.getElementById("link_reason"), "<#449#>");
 }
 else{
 document.getElementById("link_id").onclick = function(){
 gotoDetect();
 };
-showtext(document.getElementById("link_str"), "<#445#>");
+showtext(document.getElementById("link_str"), "<#446#>");
 html_code += "<br>\n";
 if(wan_ip.length > 0){
 if(got_wan_dns){
-html_code += "(1) <#337#>: <b>"+wan_ip+"</b><br>\n";
-html_code += "(2) <#338#>: <b>"+wan_dns+"</b><br>\n";
-html_code += "<b>(3) <#341#>:<br>";
+html_code += "(1) <#342#>: <b>"+wan_ip+"</b><br>\n";
+html_code += "(2) <#343#>: <b>"+wan_dns+"</b><br>\n";
+html_code += "<b>(3) <#346#>:<br>";
 html_code += "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 html_code += "8.8.8.8, 208.67.220.220</b><br>\n";
-html_code += "<#333#>\n";
+html_code += "<#338#>\n";
 }
 else if(got_more_dns){
-html_code += "(1) <#337#>: <b>"+wan_ip+"</b><br>\n";
-html_code += "<b>(2) <#339#>: "+wan_dns+"</b><br>\n";
-html_code += "(3) <#340#>:<br>";
+html_code += "(1) <#342#>: <b>"+wan_ip+"</b><br>\n";
+html_code += "<b>(2) <#344#>: "+wan_dns+"</b><br>\n";
+html_code += "(3) <#345#>:<br>";
 html_code += "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 html_code += "<b>8.8.8.8, 208.67.220.220</b><br>\n";
-html_code += "<#334#>\n";
+html_code += "<#339#>\n";
 }
 else{
-html_code += "(1) <#337#>: <b>"+wan_ip+"</b><br>\n";
-html_code += "<b>(2) <#339#>: "+wan_dns+"<br>\n";
-html_code += "(3) <#341#>:<br>";
+html_code += "(1) <#342#>: <b>"+wan_ip+"</b><br>\n";
+html_code += "<b>(2) <#344#>: "+wan_dns+"<br>\n";
+html_code += "(3) <#346#>:<br>";
 html_code += "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 html_code += "8.8.8.8, 208.67.220.220</b><br>\n";
-html_code += "<#335#>\n";
+html_code += "<#340#>\n";
 }
 }
 else{
-html_code += "<#336#>\n";
+html_code += "<#341#>\n";
 }
 document.getElementById("link_reason").innerHTML = html_code;
 }
@@ -177,43 +177,43 @@ if(now_flag == "l2tp_wrong_input"){
 document.getElementById("link_id").onclick = function(){
 gotoL2TP();
 };
-showtext(document.getElementById("link_str"), "<#446#>");
-showtext(document.getElementById("link_reason"), "<#448#>");
+showtext(document.getElementById("link_str"), "<#447#>");
+showtext(document.getElementById("link_reason"), "<#449#>");
 }
 else{
 document.getElementById("link_id").onclick = function(){
 gotoDetect();
 };
-showtext(document.getElementById("link_str"), "<#445#>");
+showtext(document.getElementById("link_str"), "<#446#>");
 html_code += "<br>\n";
 if(wan_ip.length > 0){
 if(got_wan_dns){
-html_code += "(1) <#337#>: <b>"+wan_ip+"</b><br>\n";
-html_code += "(2) <#338#>: <b>"+wan_dns+"</b><br>\n";
-html_code += "<b>(3) <#341#>:<br>";
+html_code += "(1) <#342#>: <b>"+wan_ip+"</b><br>\n";
+html_code += "(2) <#343#>: <b>"+wan_dns+"</b><br>\n";
+html_code += "<b>(3) <#346#>:<br>";
 html_code += "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 html_code += "8.8.8.8, 208.67.220.220</b><br>\n";
-html_code += "<#333#>\n";
+html_code += "<#338#>\n";
 }
 else if(got_more_dns){
-html_code += "(1) <#337#>: <b>"+wan_ip+"</b><br>\n";
-html_code += "<b>(2) <#339#>: "+wan_dns+"</b><br>\n";
-html_code += "(3) <#340#>:<br>";
+html_code += "(1) <#342#>: <b>"+wan_ip+"</b><br>\n";
+html_code += "<b>(2) <#344#>: "+wan_dns+"</b><br>\n";
+html_code += "(3) <#345#>:<br>";
 html_code += "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 html_code += "<b>8.8.8.8, 208.67.220.220</b><br>\n";
-html_code += "<#334#>\n";
+html_code += "<#339#>\n";
 }
 else{
-html_code += "(1) <#337#>: <b>"+wan_ip+"</b><br>\n";
-html_code += "<b>(2) <#339#>: "+wan_dns+"<br>\n";
-html_code += "(3) <#341#>:<br>";
+html_code += "(1) <#342#>: <b>"+wan_ip+"</b><br>\n";
+html_code += "<b>(2) <#344#>: "+wan_dns+"<br>\n";
+html_code += "(3) <#346#>:<br>";
 html_code += "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 html_code += "8.8.8.8, 208.67.220.220</b><br>\n";
-html_code += "<#335#>\n";
+html_code += "<#340#>\n";
 }
 }
 else{
-html_code += "<#336#>\n";
+html_code += "<#341#>\n";
 }
 document.getElementById("link_reason").innerHTML = html_code;
 }
@@ -222,36 +222,36 @@ else if(now_flag.indexOf("static_wrong_") >= 0){
 document.getElementById("link_id").onclick = function(){
 gotoDetect();
 };
-showtext(document.getElementById("link_str"), "<#445#>");
+showtext(document.getElementById("link_str"), "<#446#>");
 html_code += "<br>\n";
 if(wan_ip.length > 0){
 if(got_wan_dns){
-html_code += "(1) <#337#>: <b>"+wan_ip+"</b><br>\n";
-html_code += "(2) <#338#>: <b>"+wan_dns+"</b><br>\n";
-html_code += "<b>(3) <#341#>:<br>";
+html_code += "(1) <#342#>: <b>"+wan_ip+"</b><br>\n";
+html_code += "(2) <#343#>: <b>"+wan_dns+"</b><br>\n";
+html_code += "<b>(3) <#346#>:<br>";
 html_code += "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 html_code += "8.8.8.8, 208.67.220.220</b><br>\n";
-html_code += "<#333#>\n";
+html_code += "<#338#>\n";
 }
 else if(got_more_dns){
-html_code += "(1) <#337#>: <b>"+wan_ip+"</b><br>\n";
-html_code += "<b>(2) <#339#>: "+wan_dns+"</b><br>\n";
-html_code += "(3) <#340#>:<br>";
+html_code += "(1) <#342#>: <b>"+wan_ip+"</b><br>\n";
+html_code += "<b>(2) <#344#>: "+wan_dns+"</b><br>\n";
+html_code += "(3) <#345#>:<br>";
 html_code += "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 html_code += "<b>8.8.8.8, 208.67.220.220</b><br>\n";
-html_code += "<#334#>\n";
+html_code += "<#339#>\n";
 }
 else{
-html_code += "(1) <#337#>: <b>"+wan_ip+"</b><br>\n";
-html_code += "<b>(2) <#339#>: "+wan_dns+"<br>\n";
-html_code += "(3) <#341#>:<br>";
+html_code += "(1) <#342#>: <b>"+wan_ip+"</b><br>\n";
+html_code += "<b>(2) <#344#>: "+wan_dns+"<br>\n";
+html_code += "(3) <#346#>:<br>";
 html_code += "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 html_code += "8.8.8.8, 208.67.220.220</b><br>\n";
-html_code += "<#335#>\n";
+html_code += "<#340#>\n";
 }
 }
 else{
-html_code += "<#336#>\n";
+html_code += "<#341#>\n";
 }
 document.getElementById("link_reason").innerHTML = html_code;
 }
@@ -330,7 +330,7 @@ window.sidebar.addPanel(sTitle, 'http://'+reIP, "");
 }
 else {
 addBookmarkForBrowser = function() {
-alert("<#62#>");
+alert("<#63#>");
 }
 }
 }
@@ -343,7 +343,7 @@ alert("<#62#>");
 <table width="730px">
 <tr>
 <td align="left">
-<div class="description_down"><#437#></div>
+<div class="description_down"><#438#></div>
 </td>
 </tr>
 </table>
@@ -358,27 +358,27 @@ alert("<#62#>");
 <a id="link_id" href="javascript:;"><span id="link_str"></span></a>: <span id="link_reason"></span>
 </li>
 <li id="succeed_to_connect" style="display:none;">
-<a href="javascript:gotoASUS();"><#438#></a><br/>
-<span class="hint_word"><#443#></span>
+<a href="javascript:gotoASUS();"><#439#></a><br/>
+<span class="hint_word"><#444#></span>
 </li>
 <li id="li_of_wireless" style="display:none;">
-<a href="javascript:gotoWireless();"><#439#></a>:
-<#440#>
+<a href="javascript:gotoWireless();"><#440#></a>:
+<#441#>
 </li>
 <li style="display:;">
-<a href="javascript:gotoAdvSetting();"><#441#></a>:
-<#442#>
+<a href="javascript:gotoAdvSetting();"><#442#></a>:
+<#443#>
 </li>
 <li>
-<a href="javascript:addBookmarkForBrowser('<#533#>');"><#59#></a>:
-<#61#>
+<a href="javascript:addBookmarkForBrowser('<#548#>');"><#60#></a>:
+<#62#>
 </li>
 </ol>
 </td>
 </tr>
 </table>
 <div class="apply_gen" style="margin-top:30px">
-<input type="button" id="nextButton" value="<#465#>" onclick="location.href='QIS_wireless.htm';" class="button_gen_long">
+<input type="button" id="nextButton" value="<#466#>" onclick="location.href='QIS_wireless.htm';" class="button_gen_long">
 </div>
 </div>
 <br>

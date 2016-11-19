@@ -7,7 +7,7 @@
 <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
-<link rel="icon" href="images/favicon.png"><title><#533#> - <#1585#></title>
+<link rel="icon" href="images/favicon.png"><title><#548#> - <#1625#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="usp_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
@@ -68,7 +68,7 @@ box-shadow: 15px 15px 10px #333;
 <script>
 function initial(){
 show_menu();
-document.getElementById("_APP_Installation").innerHTML = '<table><tbody><tr><td><div class="_APP_Installation"></div></td><td><div style="width:120px;"><#181#></div></td></tr></tbody></table>';
+document.getElementById("_APP_Installation").innerHTML = '<table><tbody><tr><td><div class="_APP_Installation"></div></td><td><div style="width:120px;"><#184#></div></td></tr></tbody></table>';
 document.getElementById("_APP_Installation").className = "menu_clicked";
 addOnlineHelp(document.getElementById("faq1"), ["ASUSWRT", "ez","printer"]);
 addOnlineHelp(document.getElementById("faq2"), ["ASUSWRT", "lpr"]);
@@ -117,15 +117,15 @@ document.getElementById("help2").style.color = "#FFF";
 <div class="printerServer_table" id="printerServer_table">
 <table>
 <tr>
-<td class="formfonttitle"><#1585#>
-<img onclick="go_setting('/APP_Installation.asp')" align="right" style="cursor:pointer;margin-right:10px;margin-top:-10px" title="<#181#>" src="/images/backprev.png" onMouseOver="this.src='/images/backprevclick.png'" onMouseOut="this.src='/images/backprev.png'">
+<td class="formfonttitle"><#1625#>
+<img onclick="go_setting('/APP_Installation.asp')" align="right" style="cursor:pointer;margin-right:10px;margin-top:-10px" title="<#184#>" src="/images/backprev.png" onMouseOver="this.src='/images/backprevclick.png'" onMouseOut="this.src='/images/backprev.png'">
 </td>
 </tr>
 <tr>
 <td class="line_export"><img src="images/New_ui/export/line_export.png" /></td>
 </tr>
 <tr>
-<td><div class="formfontdesc"><#1584#></div></td>
+<td><div class="formfontdesc"><#1624#></div></td>
 </tr>
 <tr>
 <td>
@@ -140,14 +140,14 @@ document.getElementById("help2").style.color = "#FFF";
 <div class="">
 <ul class="">
 <li>
-<a id="faq1" href="" target="_blank" style="text-decoration:underline;font-size:14px;font-weight:bolder;color:#FFF"><#781#> FAQ</a>&nbsp;&nbsp;
+<a id="faq1" href="" target="_blank" style="text-decoration:underline;font-size:14px;font-weight:bolder;color:#FFF"><#798#> FAQ</a>&nbsp;&nbsp;
 <a href="http://dlcdnet.asus.com/pub/ASUS/LiveUpdate/Release/Wireless/Printer.zip" style="text-decoration:underline;font-size:14px;font-weight:bolder;color:#FC0"">Download Now!</a>
 </li>
 <li style="margin-top:10px;">
-<a id="faq2" href="" target="_blank" style="text-decoration:underline;font-size:14px;font-weight:bolder;color:#FFF"><#1443#> FAQ (Windows)</a>&nbsp;&nbsp;
+<a id="faq2" href="" target="_blank" style="text-decoration:underline;font-size:14px;font-weight:bolder;color:#FFF"><#1481#> FAQ (Windows)</a>&nbsp;&nbsp;
 </li>
 <li style="margin-top:10px;">
-<a id="faq3" href="" target="_blank" style="text-decoration:underline;font-size:14px;font-weight:bolder;color:#FFF"><#1443#> FAQ (MAC)</a>&nbsp;&nbsp;
+<a id="faq3" href="" target="_blank" style="text-decoration:underline;font-size:14px;font-weight:bolder;color:#FFF"><#1481#> FAQ (MAC)</a>&nbsp;&nbsp;
 </li>
 </ul>
 </div>

@@ -22,9 +22,9 @@ color: white;
 var based_modelid = '<% nvram_get("productid"); %>';
 function QKInternet_load_body(){
 if(parent.document.QKform.sw_mode.value == 4) {
-document.getElementById("nextButton").value = "<#72#>";
+document.getElementById("nextButton").value = "<#73#>";
 }
-parent.document.title = "<#533#> - <#456#>";
+parent.document.title = "<#548#> - <#457#>";
 if(parent.ISMOBILE){
 parent.set_step("manual");
 hideObjs();
@@ -190,7 +190,7 @@ ip_class = 'B';
 else if(ip_num > C_class_start && ip_num < C_class_end)
 ip_class = 'C';
 else{
-alert(ip_obj.value+" <#146#>");
+alert(ip_obj.value+" <#149#>");
 ip_obj.value = "";
 ip_obj.focus();
 ip_obj.select();
@@ -218,7 +218,7 @@ break;
 }
 }
 if(wrong_netmask == 1){
-alert(netmask_obj.value+" <#146#>");
+alert(netmask_obj.value+" <#149#>");
 netmask_obj.value = default_netmask;
 netmask_obj.focus();
 netmask_obj.select();
@@ -227,7 +227,7 @@ return false;
 var subnet_head = getSubnet(ip_obj.value, netmask_obj.value, "head");
 var subnet_end = getSubnet(ip_obj.value, netmask_obj.value, "end");
 if(ip_num == subnet_head || ip_num == subnet_end){
-alert(ip_obj.value+" <#146#>");
+alert(ip_obj.value+" <#149#>");
 ip_obj.value = "";
 ip_obj.focus();
 ip_obj.select();
@@ -404,7 +404,7 @@ return false;
 <table width="100%">
 <tr>
 <td align="left">
-<div class="description_down"><#160#></div>
+<div class="description_down"><#163#></div>
 </td>
 </tr>
 </table>
@@ -414,15 +414,15 @@ return false;
 <br/>
 <table id="tblsetting_1" class="QISform" width="400" border=0 align="center" cellpadding="5" cellspacing="0" style="padding-left:100px;">
 <tr>
-<th width="50%"><#165#></th>
+<th width="50%"><#168#></th>
 <td>
-<input type="radio" name="lan_proto_radio" tabindex="1" class="input" onclick="change_ip_setting('dhcp')" value="dhcp"><#65#>
-<input type="radio" name="lan_proto_radio" tabindex="2" class="input" onclick="change_ip_setting('static')" value="static"><#64#>
+<input type="radio" name="lan_proto_radio" tabindex="1" class="input" onclick="change_ip_setting('dhcp')" value="dhcp"><#66#>
+<input type="radio" name="lan_proto_radio" tabindex="2" class="input" onclick="change_ip_setting('static')" value="static"><#65#>
 </td>
 </tr>
 <tr>
 <th>
-<a class="hintstyle" href="javascript:void(0);" onClick="openHint(4,1);"><#119#></a>
+<a class="hintstyle" href="javascript:void(0);" onClick="openHint(4,1);"><#122#></a>
 </th>
 <td>
 <input type="text" id="lan_ipaddr" name="lan_ipaddr" value="<% nvram_get("lan_ipaddr"); %>" tabindex="3" onKeyPress="return validator.isIPAddr(this, event);" maxlength="15" class="input_15_table" autocorrect="off" autocapitalize="off">
@@ -430,7 +430,7 @@ return false;
 </tr>
 <tr>
 <th>
-<a class="hintstyle" href="javascript:void(0);" onClick="openHint(4,2);"><#130#></a>
+<a class="hintstyle" href="javascript:void(0);" onClick="openHint(4,2);"><#133#></a>
 </th>
 <td>
 <input type="text" name="lan_netmask" value="<% nvram_get("lan_netmask"); %>" tabindex="4" onkeypress="return validator.isIPAddr(this, event);" maxlength="15" class="input_15_table" autocorrect="off" autocapitalize="off">
@@ -439,21 +439,21 @@ return false;
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,3);"><#128#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,3);"><#131#></a></th>
 <td>
 <input type="text" name="lan_gateway" value="<% nvram_get("lan_gateway"); %>" tabindex="5" onKeyPress="return validator.isIPAddr(this, event);" maxlength="15" class="input_15_table" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,12);"><#126#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,12);"><#129#></a></th>
 <td>
-<input type="radio" name="lan_dnsenable_x_radio" value="1" tabindex="6" onclick="display_lan_dns(1)"><#65#>
-<input type="radio" name="lan_dnsenable_x_radio" value="0" tabindex="7" onclick="display_lan_dns(0)"><#64#>
+<input type="radio" name="lan_dnsenable_x_radio" value="1" tabindex="6" onclick="display_lan_dns(1)"><#66#>
+<input type="radio" name="lan_dnsenable_x_radio" value="0" tabindex="7" onclick="display_lan_dns(0)"><#65#>
 </td>
 </tr>
 <tr>
 <th>
-<a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,13);"><#122#></a>
+<a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,13);"><#125#></a>
 </th>
 <td>
 <input type="text" name="lan_dns1_x" value="<% nvram_get("lan_dns1_x"); %>" tabindex="8" onkeypress="return validator.isIPAddr(this, event)" maxlength="15" class="input_15_table" autocorrect="off" autocapitalize="off">
@@ -461,7 +461,7 @@ return false;
 </tr>
 <tr>
 <th>
-<a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,14);"><#124#></a>
+<a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,14);"><#127#></a>
 </th>
 <td>
 <input type="text" name="lan_dns2_x" value="<% nvram_get("lan_dns2_x"); %>" tabindex="9" onkeypress="return validator.isIPAddr(this, event)" maxlength="15" class="input_15_table" autocorrect="off" autocapitalize="off">
@@ -469,54 +469,54 @@ return false;
 </tr>
 </table>
 <div id="applyBtn" class="apply_gen" style="margin-top:30px">
-<!--input type="button" id="prevButton" value="<#78#>" onclick="back_to_Adv();" class="button_gen"-->
-<!--input type="submit" id="nextButton" value="<#77#>" class="button_gen"-->
-<input type="button" id="nextButton" value="<#77#>" tabindex="10" class="button_gen" onclick="submitForm();">
+<!--input type="button" id="prevButton" value="<#80#>" onclick="back_to_Adv();" class="button_gen"-->
+<!--input type="submit" id="nextButton" value="<#79#>" class="button_gen"-->
+<input type="button" id="nextButton" value="<#79#>" tabindex="10" class="button_gen" onclick="submitForm();">
 </div>
 <div style="display:none;margin-top:-20px;" id="field_mobile">
-<div class="itemTitle"><#160#></div>
+<div class="itemTitle"><#163#></div>
 <fieldset>
 <div class="row">
 <label><#40#></label>
 <div id="toggleLANIP" class="toggle" onclick="displayLANIPCtrl();" toggled="true">
 <span class="thumb"></span>
-<span class="toggleOn"><#65#></span>
-<span class="toggleOff"><#64#></span>
+<span class="toggleOn"><#66#></span>
+<span class="toggleOff"><#65#></span>
 </div>
 </div>
 <div id="LANIPDiv" style="display:none">
 <div class="row">
-<label><#119#></label>
+<label><#122#></label>
 <input type="text" name="lan_ipaddr_m" placeholder="" maxlength="32" value="" autocorrect="off" autocapitalize="off"/>
 </div>
 <div class="row">
-<label><#130#></label>
+<label><#133#></label>
 <input name="lan_netmask_m" type="text" placeholder="" autocapitalize="off" maxlength="65" autocorrect="off" autocapitalize="off">
 </div>
 <div class="row_end">
-<label><#128#></label>
+<label><#131#></label>
 <input name="lan_gateway_m" type="text" placeholder="" autocapitalize="off" maxlength="65" autocorrect="off" autocapitalize="off">
 </div>
 </div>
 </fieldset>
 <br />
-<div class="itemTitle"><#271#></div>
+<div class="itemTitle"><#274#></div>
 <fieldset>
 <div class="row" id="DNSautoDiv">
 <label><#40#></label>
 <div id="toggleDNS" class="toggle" onclick="displayDNSCtrl();" toggled="true">
 <span class="thumb"></span>
-<span class="toggleOn"><#65#></span>
-<span class="toggleOff"><#64#></span>
+<span class="toggleOn"><#66#></span>
+<span class="toggleOff"><#65#></span>
 </div>
 </div>
 <div id="DNSDiv" style="display:none">
 <div class="row">
-<label><#122#></label>
+<label><#125#></label>
 <input type="text" name="lan_dns1_x_m" placeholder="" maxlength="32" value="" autocorrect="off" autocapitalize="off"/>
 </div>
 <div class="row_end">
-<label><#124#></label>
+<label><#127#></label>
 <input name="lan_dns2_x_m" type="text" placeholder="" autocapitalize="off" maxlength="65" autocorrect="off" autocapitalize="off">
 </div>
 </div>
@@ -525,7 +525,7 @@ return false;
 </div>
 <fieldset class="theFieldset" id="theFieldset" style="display:none;">
 <div class="row_end">
-<a id="loadingIcon_iui" class="iuiA" onclick="submitForm();"><#77#></a>
+<a id="loadingIcon_iui" class="iuiA" onclick="submitForm();"><#79#></a>
 </div>
 </fieldset>
 </div>

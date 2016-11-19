@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#533#> - ROG First</title>
+<title><#548#> - ROG First</title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="usp_style.css">
@@ -103,7 +103,7 @@ appCode += '</table></div></td>';
 appCode += '</tr></table></div>';
 }
 if(appCode == '')
-appCode = '<div class="appTraffic erHint dots"><#800#></div>';
+appCode = '<div class="appTraffic erHint dots"><#817#></div>';
 return $(appCode);
 }
 function drawClient(){
@@ -335,7 +335,7 @@ if(console.log) console.log(msg);
 <tr>
 <td bgcolor="#4D595D" colspan="3" valign="top">
 <div>&nbsp;</div>
-<div class="formfonttitle"><#180#> - ROG First</div>
+<div class="formfonttitle"><#183#> - ROG First</div>
 <div style="margin-left:5px;margin-top:10px;margin-bottom:10px"><img src="/images/New_ui/export/line_export.png"></div>
 <div>
 <table style="width:99%;">
@@ -362,7 +362,7 @@ if(console.log) console.log(msg);
 </div>
 <br>
 <div class="formfonttitle" style="font-size:14px;display:none">
-<#1837#>
+<#1879#>
 <select class="input_option" id="refreshFreq">
 <option class="content_input_fd" value="0.5">ASAP</option>
 <option class="content_input_fd" value="1">1</option>

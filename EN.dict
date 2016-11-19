@@ -27,18 +27,19 @@ The Parent-AP might be turned off. Please check again.
 Connection failed. Password is not correct. Please click [Rescan] to select another network.
 Successfully established the wireless connection.
 Relaunch the browser. In the URL address bar, key in "http://router.asus.com/" to access the repeater connection status.
-Successfully updated the IP settings. You will be redirected to R6900\'s web GUI.
+Successfully updated the IP settings. You will be redirected to R7000\'s web GUI.
 Select another network
-Change the network that R6900 will connect to.
+Change the network that R7000 will connect to.
 Searching for available networks, please wait...
 Failed to detect any networks.
 Select the network and click [Connect].
 You are trying to connect to an unsecured network. The information transmitted in the network is not encrypted.
 You have already connected to this AP.
 Authentication method is not supported.
-Please wait, the R6900 is connecting to
+Please wait, the R7000 is connecting to
 Key in the name
 Auto
+Automatic Setting
 Bandwidth Limiter
 Bandwidth Limiter helps control the maximum download and upload speed of your client devices.
 is invalid IP address.
@@ -58,8 +59,8 @@ MAC Address(optional)
 MAC Clone
 VPN Server List
 Add to Favorites
-The R6900\'s IP address is changed to
-Hence, we recommend that you add this URL to your Favorites list for quick access to the R6900's web GUI.
+The R7000\'s IP address is changed to
+Hence, we recommend that you add this URL to your Favorites list for quick access to the R7000's web GUI.
 Your browser does not support this function.
 Reboot
 No
@@ -73,6 +74,7 @@ Connect
 Apply
 Apply all settings
 Cancel
+Detect Again
 Use factory default
 Modify
 Next
@@ -88,13 +90,13 @@ MBytes per month
 Disconnected
 You have changed SSID or security setting. This will result in wireless clients disconnecting. Please adjust client's setting for connecting again.
 Connection is reestablished.
-You may not enter setting page of R6900 because DHCP function is disabled after switching to AP mode.<p>We recommend you to use ASUS Utility / Device Discovery and search IP of AP for enter setting page again.</p>
+You may not enter setting page of R7000 because DHCP function is disabled after switching to AP mode.<p>We recommend you to use ASUS Utility / Device Discovery and search IP of AP for enter setting page again.</p>
 Dual WAN
 Dual WAN setting
 Enable User-Defined Target
 The IP address is being renewed. If this process takes more than two minutes, please follow these three steps to renew the IP manually: (1) unplug the network cable; (2) wait for about ten seconds; and (3) plug it back again to get a new IP address.
 Error message
-The latest firmware is available now. To get the best experience, ASUS highly recommend that you update your router to the latest firmware version. Do you want to update firmware now?
+The latest firmware is available now. To improve the system, ASUS highly recommend that update to the latest version.
 The WAN IP is not the external IP. External IP-based services will not work.
 Username cannot be blank.
 Username cannot be less than two characters.
@@ -104,7 +106,8 @@ Password cannot be blank.
 Password should be matched.
 Firmware upgrade unsuccessful. This may result from incorrect image or error transmission. Please check the version of firmware and try again.
 Firmware is upgrading. Please wait about 3 minutes.
-Firmware upgrade is done. Please reboot R6900 manually.
+Firmware upgrade is done. Please reboot R7000 manually.
+To comply with regulatory amendments, we have modified our certification rule to ensure better firmware quality. This version is not compatible with all previously released ASUS firmware and uncertified third party firmware. Please check our official websites for the certified firmware.
 2016 ASUSTeK Computer Inc. All rights reserved.
 For a configuration parameter existing both in the old and new firmware, its setting will be kept during the upgrade process.
 Firmware Version:
@@ -118,10 +121,10 @@ We recommend an upgrade to latest version of Internet Explorer.
 Please refer to <a style="font-weight: bolder;text-decoration: underline;" href="https://www.microsoft.com/en-us/WindowsForBusiness/End-of-IE-support" target="_blank">Microsoft® announce</a> for more detail.
 If your WAN connection requires a static IP address, key in the IP address in this field.
 IP Address
-You have set WAN IP as R6900's Gateway, and R6900 maybe could not connect to Internet. Please set Gateway with correct value.
-This field indicates the IP address of DNS that R6900 contact to.
+You have set WAN IP as R7000's Gateway, and R7000 maybe could not connect to Internet. Please set Gateway with correct value.
+This field indicates the IP address of DNS that R7000 contact to.
 DNS Server1
-This field indicates the IP address of DNS that R6900 contact to.
+This field indicates the IP address of DNS that R7000 contact to.
 DNS Server2
 Allows this router to get the DNS IP address from the ISP automatically.
 Connect to DNS Server automatically
@@ -131,7 +134,7 @@ If your WAN connection requires a static IP address, key in the subnet mask in t
 Subnet Mask
 MAC address is not valid.
 The router's current firmware is the latest version.
-We suggest you to try a mix of letters, numbers, and symbols. Do you want to change now?
+We suggest you to try a mix of letters, numbers, and symbols. Do you want to continue?
 The default subnet mask is automatically filled in.
 is kept for localhost address, please input value between 1 to 233.
 Please input the value between 1 to 233.
@@ -155,13 +158,13 @@ This string cannot start with:
 This string cannot contain:
 Please enter the correct WEP key.
 Pre-shared key should be less than 64 characters!
-The LAN IP of R6900 is
+The LAN IP of R7000 is
 .If you can't get back setting page later, please renew IP configuration of your computer.
 The IP address for your router has been changed. Please use the Device Discovery utility to search for your router's new IP address.
 LAN IP Setting
-The LAN IP address of R6900. The default value is 192.168.1.1. In IP-based networks, data packets are sent to the network devices' specific IP addresses.
+The LAN IP address of R7000. The default value is 192.168.1.1. In IP-based networks, data packets are sent to the network devices' specific IP addresses.
 The format for the MAC address is six groups of two hexadecimal digits, separated by colons (:), in transmission order (e.g. 12:34:56:aa:bc:ef)
-The LAN subnet mask of R6900. The default value is 255.255.255.0
+The LAN subnet mask of R7000. The default value is 255.255.255.0
 Invalid IP Address!
 Get LAN IP Automatically?
 Password cannot be greater than 16 characters.
@@ -169,11 +172,11 @@ A secure password must be at least 8 characters and contain a combination of upp
 WAN Connection Type
 Use the following IP address:
 MAC address
-applying settings
+Applying Settings
 This may interrupt your internet connection.
-Complete!
+Complete
 Please wait,
-Do not power off R6900 while upgrade in progress.
+Do not power off R7000 while upgrade in progress.
 Rebooting the router takes about 60 seconds. Are you sure you want to reboot the router now?
 Manual Setting
 DSL Log
@@ -226,32 +229,32 @@ Please wait about 1 minutes.
 NAT Passthrough
 Network Key
 New firmware will not be installed automatically. Go to <b>Administration</b> > <b>Firmware Upgrade</b> to download the latest firmware version and update your wireless router's firmware version.
-Your browser does not support JavaScript. Choose a browser that supports JavaScript, or enable it to use the multi-functional router, ASUS R6900.
+Your browser does not support JavaScript. Choose a browser that supports JavaScript, or enable it to use the multi-functional router, R7000.
 Settings have been updated. Web page will now refresh.
-Changes have been made to the IP address or port number. You will now be disconnected from R6900.
-To access the settings of R6900, reconnect to the wireless network and use the updated IP address and port number.
-In Access Point (AP) mode, R6900 connects to a wireless router through an Ethernet cable to extend the wireless signal coverage to other network clients. In this mode, the firewall, IP sharing, and NAT functions are disabled by default.
+Changes have been made to the IP address or port number. You will now be disconnected from R7000.
+To access the settings of R7000, reconnect to the wireless network and use the updated IP address and port number.
+In Access Point (AP) mode, R7000 connects to a wireless router through an Ethernet cable to extend the wireless signal coverage to other network clients. In this mode, the firewall, IP sharing, and NAT functions are disabled by default.
 You can also go to <a href=\"http://findasus.local\" style=\"font-family:Lucida Console;text-decoration:underline;color:#FC0;\">http://findasus.local</a> to search and enter device configuration page.
 Access Point(AP) mode
-R6900 supports several operation modes to meet different requirements. Please select the mode that match your situation.
-In wireless router/ IP sharing mode, R6900 connects to the Internet via PPPoE, DHCP, PPTP, L2TP, or Static IP and shares the wireless network to LAN clients or devices. In this mode, NAT, firewall, and DHCP server are enabled by default. UPnP and Dynamic DNS are supported for SOHO and home users. Select this mode if you are a first-time user or you are not currently using any wired/wireless routers.
+R7000 supports several operation modes to meet different requirements. Please select the mode that match your situation.
+In wireless router/ IP sharing mode, R7000 connects to the Internet via PPPoE, DHCP, PPTP, L2TP, or Static IP and shares the wireless network to LAN clients or devices. In this mode, NAT, firewall, and DHCP server are enabled by default. UPnP and Dynamic DNS are supported for SOHO and home users. Select this mode if you are a first-time user or you are not currently using any wired/wireless routers.
 Wireless router mode (Default)
 Media Bridge
-R6900 can be configured in Media Bridge mode.
+R7000 can be configured in Media Bridge mode.
 The Media Bridge mode provides the fastest 802.11ac Wi-Fi connection for multiple media devices simultaneously.
-To set up the Media Bridge mode, you need two R6900: one configured as the Media station and the other as a router.
-Configure one R6900 as a router and another R6900 as an 802.11ac Media Bridge to provide a simultaneous 802.11ac Wi-Fi connection for your media devices such as computer, Smart TV, game console, DVR, or media player via Ethernet cable.
+To set up the Media Bridge mode, you need two R7000: one configured as the Media station and the other as a router.
+Configure one R7000 as a router and another R7000 as an 802.11ac Media Bridge to provide a simultaneous 802.11ac Wi-Fi connection for your media devices such as computer, Smart TV, game console, DVR, or media player via Ethernet cable.
 Change to Media Bridge mode to provide a simultaneous 802.11ac Wi-Fi connection for your media devices.
 In Media Bridge mode, only wireless devices connect to the P-AP. Client devices need to be connected to the Media Bridge with a network cable.
-R6900 in Media Bridge mode. IP address has been changed.
+R7000 in Media Bridge mode. IP address has been changed.
 Please download the <a href='http://dlcdnet.asus.com/pub/ASUS/LiveUpdate/Release/Wireless/Discovery.zip' target='_blank' style='font-family:Lucida Console;text-decoration:underline;color:#FC0;'>Device Discovery Utility</a> to identify the Media Bridge IP address.
 Please check if you have unplugged the network cable from the WAN port.
-In Repeater mode, R6900 wirelessly connects to an existing wireless network to extend the wireless coverage. In this mode, the firewall, IP sharing, and NAT functions are disabled.
-The LAN IP address of R6900 may have changed.
+In Repeater mode, R7000 wirelessly connects to an existing wireless network to extend the wireless coverage. In this mode, the firewall, IP sharing, and NAT functions are disabled.
+The LAN IP address of R7000 may have changed.
 Close this window and access http://router.asus.com again.
 Repeater mode
 WISP mode
-R6900 wirelessly connects to your main router, AP or public hot spot, and shares internet with your wired / wireless clients. In this mode, NAT, firewall, and DHCP server are enabled by default.
+R7000 wirelessly connects to your main router, AP or public hot spot, and shares internet with your wired / wireless clients. In this mode, NAT, firewall, and DHCP server are enabled by default.
 Please make sure you are authorized to access internet if you are connecting to public hot spots service.
 This function is disabled.
 Parental Controls
@@ -266,7 +269,7 @@ PIN code is not correct. Please key in the correct PIN code and reconnect the US
 Password
 PPP Username
 Account Settings
-This field allows you to provide a host name for R6900. It is usually requested by your ISP.
+This field allows you to provide a host name for R7000. It is usually requested by your ISP.
 Special Requirement from ISP
 MAC (Media Access Control) address is a unique identifier that identifies your computer or device in the network. ISPs monitor the MAC addresses of devices that connect to their services, and would disallow Internet connection for new MAC addresses. To fix this issue, you can do either of the following:<p>* Contact your ISP and request to update the MAC address associated with your ISP subscription.<p>* Clone or change the MAC address of the new device to match the MAC address of the original device.<p>
 DNS Server
@@ -287,13 +290,15 @@ Select which ANNEX mode your DSL service uses. Incorrect settings will prevent c
 If you are not sure which ANNEX mode to use, please contact your ISP for assistance.
 ANNEX mode is not selected.
 We strongly recommend that you set the wireless security settings first, do you want to continue?
+Please plug in the cable to WAN port. System will detect your network setting automatically.
+Expert mode, offline settings
 PPPoE/DSL connection is detected.
 The Setup Wizard detected that your Internet connection type is PPPoE/DSL.
 Click "Next" to enter the account name and password that your Internet Service Provider (ISP) has provided.
 If the connection type is not PPPoE/DSL, please click "Connection Type".
-R6900 is checking the link status, please wait...
-R6900 is detecting the connection type, please wait...
-R6900 cannot find the connection type. Please click [Manual Setting].
+R7000 is checking the link status, please wait...
+R7000 is detecting the connection type, please wait...
+R7000 cannot find the connection type. Please click [Manual Setting].
 Detecting the Internet connection type timed out. Do you want to try again ?
 The modem has been reset manually.
 Check the WAN connection type.
@@ -312,7 +317,7 @@ Edit the existing WAN settings, please click <a href="" onclick="gotoWANSetting(
 Add the new WAN setting, please click <a href="QIS_manual_setting.htm">here</a>.
 You have already configured the WAN settings.
 Do you want to use the default wireless security settings?
-R6900 cannot find the connection type. Your ADSL type may be one of the following modes: MER Static IP, IPoA or Bridge. Please click Manual Setting to configure the WAN settings manually.
+R7000 cannot find the connection type. Your ADSL type may be one of the following modes: MER Static IP, IPoA or Bridge. Please click Manual Setting to configure the WAN settings manually.
 Authentication failed.
 The account name and password are not correct.
 If you set the router offline, click <b>Wireless Setting</b> to skip Internet connection detection and go to next step to setup wireless name and password.
@@ -326,7 +331,7 @@ Failed to connect to the mobile broadband network.
 Detection Failure
 Router admin account
 Router Admin password
-R6900 is set up with these Internet and wireless settings.
+R7000 is set up with these Internet and wireless settings.
 Completed Network Configuration Summary
 Network Name (SSID)
 Wireless Security
@@ -357,15 +362,15 @@ Wait for about two minutes then replug the modem's power cord into a power outle
 When the modem's LED starts blinking, click "Detect again" to auto-detect the connection type.
 Please ensure that the phone cable is connected to the DSL port.
 Phone line is not connected.
-Change the router password to prevent unauthorized access to your ASUS wireless router.
+Change the router password to prevent unauthorized access to your wireless router.
 Username and password are case sensitive.
 Your router login information is used for accessing your router's administration settings.
-Router login information is also used to access additional features like FTP and AiCloud 2.0.
 The default username and password is :
 Login Information Setup
 Please enter the required information below.
 Obtain the account name and password from your ISP.
 If you subscribe to PPPoE, PPTP or L2TP connection type, your ISP would give you a card or document that contains the account name and password on it. The account name and password that your ISP provided are used to connect to the Internet. These are not the same as the username and password used for router administration.
+Enable PPTP or L2TP client (optional)
 Do you want to use the previous wireless security settings?
 We strongly recommend that you set the wireless security settings first.
 Rescan
@@ -374,14 +379,14 @@ Show password
 (Recommended)
 Your ISP should give you a card or document with user name and password. *This sample document is an example for purpose of illustration only.
 Enter the user name and password for your Internet connection information.These settings were given by your Internet Service Provider (ISP) .
-HiNet user's client number is <span style="color:#FC0;">HNxxxxxxxx@hinet.net</span>
+HiNet user's client number is <span style="color:#FC0;">xxxxxxxx@hinet.net</span>
 Connection Scenario 1
 Connection Scenario 2
 Your ISP should give you the information about IP, subnet mask, gateway, and DNS address. If not, please contact your ISP.
 Does your Internet connection require user name and password?
 My Internet connection type is Automatic IP (Cable modem, Dynamic IP, DHCP) or Static IP
-The type allows your R6900 to obtain IP address automatically. This connection type is often used by cable service providers.
-My Internet connection type is PPPoE, L2TP or PPTP
+The type allows your R7000 to obtain IP address automatically. This connection type is often used by cable service providers.
+My Internet connection type is PPPoE
 * If you do not know the Internet connection type, please contact your ISP.
 Copy 2.4 GHz to 5 GHz settings
 Copy 2.4 GHz to 5 GHz-1 settings
@@ -413,13 +418,9 @@ Network Cable Status
 SIM Card Status
 Please enter your username and password.
 Enable VPN client
-Click "Next" to start the Quick Internet Setup Wizard for your R6900.
-Concurrent 2.4 and 5 GHz 450 Mbps Dual Band Router.
-High Speed and High Powered USB Ports for network Storage and Multifunction printer support.
-High Performance Gigabit Switch with Turbo NAT.
-High level current usage for superior download, gaming performance and multi client connections.
-To reach up to 600 Mbps / 2.4 GHz, pair the R6900 with a TurboQAM compatible client, such as the PCE-AC68 or another R6900 in Media Bridge / repeater mode.
-Welcome to the ASUS Networking Family!
+Click "Next" to start the Quick Internet Setup Wizard for your R7000.
+To reach up to 600 Mbps / 2.4 GHz, pair the R7000 with a TurboQAM compatible client, such as the PCE-AC68 or another R7000 in Media Bridge / repeater mode.
+Welcome to the XWRT Networking Family!
 The network name or SSID is a unique name that identifies the wireless network. WiFi devices automatically detect all networks within range.
 A security key is the password that is assigned to secure a wireless network from unauthorized access. To access a secured network, the user will be asked to enter the security key.
 Assign a unique name or SSID (Service Set Identifier) to help identify your wireless network.
@@ -443,7 +444,7 @@ Advanced Setting page
 Manual configuration and fine-tuning.
 Please close this window and finish configuring the settings. Open a new window to connect to the Internet.
 Finish
-Please check you are connecting to R6900 then refresh this page manually.
+Please check you are connecting to R7000 then refresh this page manually.
 Enter account or password again
 DHCP connection failed.
 Invalid account or password, click the link to modify it.
@@ -458,7 +459,7 @@ ISP Information Setting
 Click <a><label for="upload_setting_profile" style="text-decoration:underline;cursor:pointer;font-weight:bold;color:#FC0;" onclick="">Restore setting</label></a> to load saved configuration settings.
 Click <a><label for="upload_setting_profile" style="text-decoration:underline;cursor:pointer;font-weight:bold;color:#FC0;" onclick="">Restore setting</label></a> to restore the configuration if you have backed up the configuration settings before resetting the router.
 Click <a><label style="text-decoration:underline;cursor:pointer;font-weight:bold;color:#FC0;" onclick="submitForm(0)">Manual Setting</label></a> to manually set up your wireless network if you know your ISP connection type.
-Click <a><label style="text-decoration:underline;cursor:pointer;font-weight:bold;color:#FC0;" onclick="submitForm(0)">Manual Setting</label></a> to manually set up advanced router settings or set up R6900 to work in
+Click <a><label style="text-decoration:underline;cursor:pointer;font-weight:bold;color:#FC0;" onclick="submitForm(0)">Manual Setting</label></a> to manually set up advanced router settings or set up R7000 to work in
 You are a wireless networking expert and want to skip the internet setup wizard?
 Please select the Internet connection type that your ISP provided.
 Internet WAN connection type
@@ -472,17 +473,17 @@ Security
 Select
 Select ISP Profile
 Please select
-Sign in with your ASUS router account
-Sign in with your ASUS router account
+Sign in with your router account
 Sign in with your NETGEAR router account
 Sign in with your LINKSYS router account
+Sign in with your HUAWEI router account
 Standard Setup
 Active
 Inactive
 Standby
 Status
 Access Point status
-ASUS R6900
+R7000
 Active Connections
 Auto Logout
 Change the time zone
@@ -499,11 +500,25 @@ Media Server
 User's account cannot be 'root', 'guest' or 'anonymous'! Please enter a valid account.
 VPN Details
 Enter username and password.
-Click (Next) to have the router automatically get a new IP address. The new IP address is:
-Please ensure that you configure each services, such as Port Forwarding or DMZ, to use the new IP address.
+Please ensure that the cable is plugged between R7000 WAN port and the modem.
+Please check if you need to change the <a style='color:#FFF' href='/Advanced_OperationMode_Content.asp'>Operation Mode</a>.
+Your PPPoE account or password is not accepted, please <a style='color:#FFF' href='/Advanced_WAN_Content.asp'>check</a>.
+PPPoE Authentication Failure
+Change WAN type
+Please check the <a style='color:#FFF' href='/Advanced_WAN_Content.asp'>connection settings</a> is correct.
+We suggest you turn on the <a style='color:#FFF' href='/index.asp'>WAN connection button</a>.
+Please check USB modem is power on.
+Change <a style='color:#FFF' href='/Advanced_Modem_Content.asp'>USB modem setting</a>.
+The WAN cnnection is turned off
+USB modem is not ready
+Click (Next) to get a new IP address. The new IP address is:
+Please confirm that related services using the new IP address, such as Port Forwarding or DMZ.
+Please confirm Parent AP can connect to Internet.
+<a style='color:#FFF' href='/QIS_wizard.htm?flag=manual'>Change the connection setting</a>.
+Unable to connect to Parent AP
 Reason for failed connection
 You failed to access to the web page that you want to view.
-The network cable is not connected.
+The network cable is unplugged.
 Your PPPoE or VPN authentification failed.
 Connecting to remote server now.
 Your ISP's DHCP does not function properly.
@@ -518,21 +533,21 @@ If a problem still persists, manually change the connection settings.
 Turn on the WAN.
 We suggest you
 Need account and password of administrator.
-Please ensure that the cable is properly connected between R6900 WAN port and the modem.
+Please ensure that the cable is properly connected between R7000 WAN port and the modem.
 Go to Account Setting page
  and check your account and password again.
 Go to the Quick Internet Setup page to automatically detect the connection type.
- and R6900 will detect your WAN type automatically.
+ and R7000 will detect your WAN type automatically.
 Please contact your ISP(Internet Service Provider) to find out the root cause of DHCP failure.
 Please reconfigure the router's IP address and ensure that it is different from the gateway IP address.
 Please build the WAN connection manually.
 Please check that the IP and DNS settings are correct.
-Plese reconfigure the local IP address for your R6900, and ensure that it is different from your WAN's gateway.Ex: 192.168.X.X; X is the number between 2 to 254.
+Plese reconfigure the local IP address for your R7000, and ensure that it is different from your WAN's gateway.Ex: 192.168.X.X; X is the number between 2 to 254.
 After connecting the router to the modem, click "GO" to launch the Quick Setup Wizard.
 To set up the WAN connection offline or change the operation mode to Access Point, click Manual Setting.
 In the next step, set up the login name and password for security.
-ASUS Wireless Router R6900
-R6900
+Wireless Router R7000
+R7000
 Configured
 Wireless name
 Wireless router
@@ -544,12 +559,13 @@ WEP Key
 13 ASCII digits or 26 hex digits
 WPA Encryption
 Connect to APs in list
-R6900 will change WEP or TKIP encryption to AES in [n Only] mode to ensure that clients to get the proper connection.
+R7000 will change WEP or TKIP encryption to AES in [n Only] mode to ensure that clients to get the proper connection.
 Succeed to build connection.
 UTF-8
+English
 Access Intranet
 Allow guest to access intranet.
-You can now access your USB storage device and Network place (Samba) enabled devices connected to R6900.
+You can now access your USB storage device and Network place (Samba) enabled devices connected to R7000.
 Access time
 The time allow guest to access internet.
 Only 6 accounts allowed.
@@ -567,11 +583,11 @@ Gaming
 Web History
 Web History shows clients Web Surfing history.
 VoIP and Instant Messaging
-Enabling Adaptive QoS may take several minutes.
 Others
 Adaptive QoS
 QoS to configuration
 In the QoS Adaptive type, the APPs with higher priority will be get better bandwidth over another when the APPs are competing for limited bandwidth, Drag and drop APPs category to upper level for higher priority
+Please select priority mode depending on your networking environment. You can also choice customize mode to prioritize app category.
 Video and Audio Streaming
 Web Surfing
 New account has no read/write access rights.
@@ -581,8 +597,8 @@ Add new folder
 Follow instructions listed below:
 Download a proper version to your local machine.
 Specify the path and name of the downloaded file in the New Driver File.
-Click [Upload] to upload the file to R6900. Uploading process takes about one minutes.
-After receiving a correct driver file, R6900 will automatically start to install the new DSL driver. The system reboots after the upgrading process is finished.
+Click [Upload] to upload the file to R7000. Uploading process takes about one minutes.
+After receiving a correct driver file, R7000 will automatically start to install the new DSL driver. The system reboots after the upgrading process is finished.
 New DSL Driver File
 If the DSL driver upgrade fails, you can install the driver again from this web page.
 Note:
@@ -596,7 +612,7 @@ You need a broadband Internet connection for the best viewing and listening expe
 5 Mbps or faster is recommended SD video.
 15 Mbps or faster is recommended for 720p video.
 30 Mbps or faster is recommended for 1080p HD video streaming.
-Internet upload speeds may vary depending on your ISP and other factors. If you are not sure what your Internet speed is, you can contact your ISP, or use an online bandwidth test from a computer connected to the ASUS Router.
+Internet upload speeds may vary depending on your ISP and other factors. If you are not sure what your Internet speed is, you can contact your ISP, or use an online bandwidth test from a computer connected to the Router.
 Cloud List
 Access the Cloud Disk from <a id="cloud_url" style="font-weight: bolder;text-decoration: underline;" href="https://router.asus.com" target="_blank">https://router.asus.com</a>.
 You can access the Cloud Disk via this URL :
@@ -638,7 +654,7 @@ By enabling [ Allow guest login ],  any user in local network can access your ne
 Username and password is necessary to log in network place(Samba)
 By enabling [ Allow guest login ],  any user in local network can access your network place(Samba) without authentication!  Are you sure you want to enable it?
 By using limitless access rights, any user can access your FTP service without authentication!
-R6900 provides you with these three types of access rights to the shared resources:<p> a) limitless access rights, in which anyone can access your USB disk in the FTP server.</p> <p>b) limited access rights, in which access to your USB disk is limited to those you have assigned access rights. For this type, the R6900 creates the \"admin/Family\" accounts. </p> <p>c) admin rights in which the R6900 creates the \"admin\" account for full access rights.</p><p>Note: The permission settings will clear your original set of accounts.</p>
+R7000 provides you with these three types of access rights to the shared resources:<p> a) limitless access rights, in which anyone can access your USB disk in the FTP server.</p> <p>b) limited access rights, in which access to your USB disk is limited to those you have assigned access rights. For this type, the R7000 creates the \"admin/Family\" accounts. </p> <p>c) admin rights in which the R7000 creates the \"admin\" account for full access rights.</p><p>Note: The permission settings will clear your original set of accounts.</p>
 PS. Account management function cannot work on NTFS partition.
 Creating the access rights
 ASUS DDNS creates a domain name with a dynamic IP address. <p>If you need to configure other DDNS service settings, please refer to <a href='/Advanced_ASUSDDNS_Content.asp' target='_top'>Advanced DDNS</a></p>
@@ -687,7 +703,7 @@ File transfer
 Peer to Peer
 Streaming and Entertainment
 Games
-Streaming media
+Media Streaming
 Internet Radio and TV
 Block Streaming and Entertainment content can prevent child from spending long time on Internet entertainment.
 Network Protection
@@ -770,18 +786,19 @@ System error: Cannot read out the disk's data!
 System error: The disk is busy!
 System Error.
 There should not be any space in the first and last character.
-R6900  detected that you are using IE6. Please Try Google Chrome, IE7 or higher for the best browsing experience.
+R7000  detected that you are using IE6. Please Try Google Chrome, IE7 or higher for the best browsing experience.
 All
 Android phone
 Failed to get the IP information.
 AP IP address
 AP Survey
+Apps
 APN Configuration
 Loading APP list...
 Failed to authenticate the WPA key. Please enter the WPA key again.
 ASUS EZ printer sharing (Windows OS only)
 Your network login name and password are still the default settings. We strongly recommend that you change this to avoid security risks.
-A new firmware update is now available for your router. Please update to increase system stability, get new and improved features, and avoid security risks.
+A new firmware is now available.
 Your Wi-Fi network has not been encrypted yet and is at risk. We recommend that you create a password for your network to avoid security risks.
 Your current AiDisk FTP permission allows unauthorized users to log in. We recommend that you disable [ Allow anonymous login ] to avoid security risks.
 The FTP was at risk and therefore [ Allow anonymous login ] has been automatically disabled. You can use router login name and password to login FTP. If you want to change permission setting
@@ -818,7 +835,7 @@ Destination Port
 Priority
 Host Name provided by ISP:
 If your WAN connection type is PPTP or L2TP, Please enter the server name or server ip of the VPN server.
-This field allows you to provide a host name for R6900. It is usually requested by your ISP.
+This field allows you to provide a host name for R7000. It is usually requested by your ISP.
 Set the maximum download bandwidth limit. 0 means no bandwidth limit.
 Disable
 Disabled
@@ -826,6 +843,7 @@ Enabled
 Export
 GO
 Remove
+Send
 WAN setting
 Captcha
 Please enter the captcha.
@@ -851,7 +869,7 @@ Are you sure you want to share the disk in the Network Neighborhood?
 Are you sure you want to share the disk by via the FTP server?
 Retype password
 The router cannot connect to ASUS server to check for the firmware update. After reconnecting to the Internet, go back to this page and click Check to check for the latest firmware updates.
-Connect your iOS or Android devices to R6900 through WiFi. The AiCloud 2.0 app will automatically guide you through the setup process.
+Connect your iOS or Android devices to R7000 through WiFi. The AiCloud 2.0 app will automatically guide you through the setup process.
 Client List
 Connecting...
 Connection Time
@@ -866,7 +884,6 @@ Check log
 Clear
 Close
 Delete
-Detect Again
 Disabled
 Disagree
 Disconnected
@@ -890,6 +907,7 @@ Current
 Current Frequency
 Current Settings
 Custom
+Customize
 Date
 Fri
 Mon
@@ -972,13 +990,13 @@ PC-free download manager.
 Please select the USB storage device that you want to access
 Download Master installation successful!
 Launch Download Master now
-R6900 does not support this format for the first partition. It supports FAT32, MS-DOS, and ext2/3.
+R7000 does not support this format for the first partition. It supports FAT32, MS-DOS, and ext2/3.
 Disk quota for the first partition is < 1GB.
 Please set up the DNS server on the client device.
 Download ASUS AiCloud 2.0 app to phone or pad from :
 Download Bandwidth
-Download Master is not installed in your R6900.
-Download Master is not supported in your R6900.
+Download Master is not installed in your R7000.
+Download Master is not supported in your R7000.
 Download Priority
 Data Received/Sec
 Data Received
@@ -998,7 +1016,7 @@ DSL Line Configuration
 Share PVC
 SRA (Seamless Rate Adaptation)
 Stability Adjustment
-R6900 provides Dual WAN support. Select Failover mode to use a secondary WAN for backup network access. Select Load Balance mode to optimize bandwidth, maximize throughput, minimize response time, and prevent data overload for both WAN connections.
+R7000 provides Dual WAN support. Select Failover mode to use a secondary WAN for backup network access. Select Load Balance mode to optimize bandwidth, maximize throughput, minimize response time, and prevent data overload for both WAN connections.
 Enable Dual WAN
 Allow failback
 The time period criteria to trigger failback mechanism. When you change to the secondary WAN, the router will check how long primary WAN is connected. If the primary WAN connection is stable (longer than failback deteck time), the connection will change to primary WAN.
@@ -1012,7 +1030,7 @@ Fail Over
 Load Balance
 Load Balance Configuration
 Time delay before the first ping packet is sent out when the router is restarted.
-You can enable Ping Time Watchdog to continuously monitor the primary WAN connection between R6900 and the remote host. The router will continuously ping a user defined target in this setting. If the router fails to ping the target IP address, the router will automatically do a failover.
+You can enable Ping Time Watchdog to continuously monitor the primary WAN connection between R7000 and the remote host. The router will continuously ping a user defined target in this setting. If the router fails to ping the target IP address, the router will automatically do a failover.
 Failover Detection Time
 Failover Execution Time
 Maximum Continous Failures Allowed
@@ -1043,17 +1061,21 @@ Enable FTP
 Enable QoS
 Enable WAN down browser redirect notice
 Enable USB Mode
-R6900 provides two modes for encapsulating or transporting LAN and WAN protocols via ATM. Please select the appropriate Encapsulation Mode.
+R7000 provides two modes for encapsulating or transporting LAN and WAN protocols via ATM. Please select the appropriate Encapsulation Mode.
 Ethernet WAN
 Installing...
 External only
 Extend the TTL value
 EZQoS Bandwidth Management
+Get the bandwidth information from ISP or go to <a href="http://speedtest.net" target="_blank" style="text-decoration:underline;color:#FC0">Speedtest</a> to check bandwidth
+The default is 0, which means unlimited bandwidth
 Quality of Service (QoS) ensures bandwidth for prioritized tasks and applications.
 <span style="font-weight:bolder;font-size:14px;">Adaptive QoS</span> ensures inbound and outbound bandwidth on both wired and wireless connections for prioritized applications and tasks via pre-defined, drag-and-drop presets: gaming, media streaming, VoIP, web surfing and file transferring.
-To enable QoS function, click the QoS slide switch and fill in the upload and download. Get the bandwidth information from ISP or go to <a href="http://speedtest.net" target="_blank" style="text-decoration:underline;">http://speedtest.net</a> to check bandwidth.
+<span style="font-size:14px;font-weight:bolder">Bandwidth Limiter</span> helps you to control download and upload max speed of your client devices.
+To enable QoS function, click the QoS slide switch and fill in the upload and download.
 <span style="font-weight:bolder;font-size:14px;">Traditional QoS</span> ensures inbound and outbound bandwidth on both wired and wireless connections for prioritized applications and tasks via manual user-defined parameters.
 About EzQoS
+Enabling QoS may take several minutes.
 Enable Smart QoS
 Adaptive QoS type supports you to modify apps category priority based on router stream. QoS type switching will only keep priority configuration for each client.
 Traditional QoS
@@ -1062,13 +1084,26 @@ The Quality of Service (QoS) ensures the network's speed performance. The defaul
 For more professional and detailed configuration, please enter
 Fail Over Retry Count
 Find FAQs
+3G/4G log
 Comments / Suggestions
 Compatibility Problem
+On OS or Application
+With external hardware disk
+With modem
+With other network devices
+With other router
+With printer
+With USB modem
 Connection/Speed Problem
+Slow wireless speed
+Slow wired speed
+Router reboot automatically
+Unstable connection problem
 Choose which option best describes the performance of your DSL service.
 Your Country
 We welcome your feedbacks, comments, suggestions, and feature ideas about ASUS products.
-Your feedback is very important to us and will help to improve the firmware of R6900. If you have any comments, suggestions or connection issue, complete the form below, these information along with current DSL logs will be send to ASUS Support Team. In order to allow us to respond to your feedback, kindly ensure that you have entered your e-mail correctly.
+Your feedback is very important to us and will help to improve the firmware of R7000. If you have any comments, suggestions or connection issue, complete the form below, these information along with current DSL logs will be send to ASUS Support Team. In order to allow us to respond to your feedback, kindly ensure that you have entered your e-mail correctly.
+Now this function can't work, because your Router isn't connected to the Internet. Please send your Feedback to this email address :
 Your e-mail Address
 E-mail address format is not valid.
 E-mail address field is empty. Are you sure you want to proceed?
@@ -1080,9 +1115,9 @@ Frequent interruptions
 iptable setting
 Your ISP / Internet Service Provider
 Maximum of 2000 characters - characters left
-Now this function can't work, because your ASUS Router isn't connected to the Internet. Please send your Feedback to this email address :
+Now this function can't work, because your Router isn't connected to the Internet. Please send your Feedback to this email address :
 The Firmware Version will be submitted in addition to any info you choose to include above.
-Feedback will be used to diagnose problems and help to improve the firmware of R6900, any personal information you submitted, whether explicitly or incidentally will be protected in accordance with our <a style="font-weight: bolder;text-decoration:underline;cursor:pointer;" href="http://www.asus.com/Terms_of_Use_Notice_Privacy_Policy/Privacy_Policy/" target="_blank">privacy policy</a>.
+Feedback will be used to diagnose problems and help to improve the firmware of R7000, any personal information you submitted, whether explicitly or incidentally will be protected in accordance with our <a style="font-weight: bolder;text-decoration:underline;cursor:pointer;" href="http://www.asus.com/Terms_of_Use_Notice_Privacy_Policy/Privacy_Policy/" target="_blank">privacy policy</a>.
 By submitting this Feedback, you agree that ASUS may use feedback that you provided to improve ASUS Networking & Wireless product.
 Occasional interruptions
 * Optional
@@ -1094,6 +1129,7 @@ stable connection
 We value all feedbacks that we receive. We will use your feedbacks and comments to strive to improve your ASUS experience.
 Thanks for taking the time to submit your feedback.
 Your Suggested Translation
+Translated Suggestion
 Usually to always unavailable
 Creating a share with more than 12 characters may make it invisible in some WindowsR version.\nDo you want to continue?
 Share name cannot be blank.
@@ -1110,7 +1146,7 @@ A \"denial-of-service\" attack is an explicit attempt to deny legitimate users f
 Enable DoS protection
 Disabling the firewall will deactivate all the related functions.
 Enable Firewall
-When you set 20:21 as your FTP server's port range for your WAN setup, then your FTP server would be in conflict with R6900's native FTP server.
+When you set 20:21 as your FTP server's port range for your WAN setup, then your FTP server would be in conflict with R7000's native FTP server.
 Enable Keyword Filter
 Keyword Filter allows you to block the clients' access to webpages containing the specified keywords.
 Limitations of the filtering function :<ol><li>Compressed webpages that use HTTP compression technology cannot be filtered. <a href="http://en.wikipedia.org/wiki/HTTP_compression" target="_blank" style="text-decoration: underline; font-family:Lucida Console;">See here for more details.</a></li><li>Https webpages cannot be filtered.</li></ol>
@@ -1133,9 +1169,9 @@ There is at least one accept address in MAC filter list.\n Do you want to add th
 MAC filter list
 Accept
 Reject
-In Accept mode, R6900 only accept clients with MAC address in the list. In Reject mode, R6900 will reject clients with MAC address in the list.
+In Accept mode, R7000 only accept clients with MAC address in the list. In Reject mode, R7000 will reject clients with MAC address in the list.
 MAC Filter Mode
-When your network's firewall is disabled and you set 80 as the HTTP server's port range for your WAN setup, then your http server/web server would be in conflict with R6900's web user interface.
+When your network's firewall is disabled and you set 80 as the HTTP server's port range for your WAN setup, then your http server/web server would be in conflict with R7000's web user interface.
 This field defines the dates that URL filter will be enabled.
 Date to Enable URL Filter:
 This field defines the time interval that URL filter will be enabled. Please enter different start and end time.
@@ -1148,13 +1184,13 @@ Key in the keywords for the sites that you want to block.<p>For example, enter "
 URL Filter List:
 This field indicates the kind of packets logged between LAN and WAN.
 Logged packets type
-Allows R6900 to respond LPR request from WAN.
+Allows R7000 to respond LPR request from WAN.
 Respond LPR Request from WAN?
 This feature allows you to respond to ping request from WAN.
 Respond Ping Request from WAN
 This feature allows you to configure the wireless router via the Internet. The default port is 8080 and you can use http://[WAN IP]:8080 or http://[DDNS name]:8080 to launch the wireless router's web user interface.
 Enable Web Access from WAN
-To specify the port used to config R6900 from the Internet( 1024:65535 ). The default port is 8080.
+To specify the port used to config R7000 from the Internet( 1024:65535 ). The default port is 8080.
 Port of Web Access from WAN
 Enable IPv6 Firewall
 All outbound traffic coming from IPv6 hosts on your LAN is allowed, as well as related inbound traffic. Any other inbound traffic must be specifically allowed here.
@@ -1170,16 +1206,17 @@ Product ID
 Firmware Version
 New Firmware File
 The latest firmware version include updates on the previous version.
-In case the upgrade process fails, R6900 enters the emergency mode automatically. The LED signals at the front of R6900 will indicate such a situation. Use the Firmware Restoration utility on the CD to do system recovery.
+In case the upgrade process fails, R7000 enters the emergency mode automatically. The LED signals at the front of R7000 will indicate such a situation. Use the Firmware Restoration utility on the CD to do system recovery.
 Note:
 Please decompress the file first.
 Game Boost
 Real-Time Network Protection
-AiProtection, incorporating state-of-the-art, three-pronged security from Trend Micro™, gives you enterprise-level security in the home — making ASUS routers equipped with this feature the most secure home routers you can buy! It constantly monitors the health and safety of your network for total peace of mind. You can temporally turn off anti-virus on your PCs to reserve system resources for gaming.
-Benefits to enable Game Boost on ASUS router
+AiProtection, incorporating state-of-the-art, three-pronged security from Trend Micro™, gives you enterprise-level security in the home — making routers equipped with this feature the most secure home routers you can buy! It constantly monitors the health and safety of your network for total peace of mind. You can temporally turn off anti-virus on your PCs to reserve system resources for gaming.
+Benefits to enable Game Boost on router
 Reduce average ping time and variation.
 Reduce average packet loss rate.
 Cross platform supported.
+Windows, Macintosh, Linux, Mobile, Console game
 Utility free for your PCs, reserve CPU/RAM usage for game.
 Life time free of one device acceleration.
 Game Boost,an exclusive gamer private network(GPN) powered by WTFast automatically performs route optimization, choosing the most efficient route for your game packets. Life-Time free for one device, cross platforms supported.
@@ -1200,7 +1237,7 @@ You are now using router free basic account.
 * Check the latest supported games of router version <span><a id="link" href="javascript:open_link('')" style="text-decoration:underline;color:#008DE5;">here</a></span>.
 * GPN performance will be varied by your ISP or location. Please keep your firmware stay up to date.
 * How to choose a good GPN server? <span><a id="link" href="javascript:open_link('gpn1')" style="text-decoration:underline;color:#008DE5;">Here</a></span> And ensure best gaming experiences? <span><a id="link" href="javascript:open_link('gpn2')" style="text-decoration:underline;color:#008DE5;">Here</a></span>
-* How to use WTFast on ASUS Router? <span><a id="link" href="javascript:open_link('howto')" style="text-decoration:underline;color:#008DE5;">Here</a></span>
+* How to use WTFast on Router? <span><a id="link" href="javascript:open_link('howto')" style="text-decoration:underline;color:#008DE5;">Here</a></span>
 Game Boost Rules List
 Elapsed time since system boot
 Uptime
@@ -1217,7 +1254,7 @@ Help
 Help provides you with guidelines and information about using the router's functions. Click the
 hyperlinked words with yellow and blue underline.
 to get help.
-It is the group name of the R6900 in the Network Neighborhood, and standard input characters include letters(A-Z, a-z), digits(0-9). The hyphen (-) and under line ( _ ) and full-stop (.) characters may also be used, but not as the first character. Using a non-standard name results in other users cannot find your computer in LAN.
+It is the group name of the R7000 in the Network Neighborhood, and standard input characters include letters(A-Z, a-z), digits(0-9). The hyphen (-) and under line ( _ ) and full-stop (.) characters may also be used, but not as the first character. Using a non-standard name results in other users cannot find your computer in LAN.
 High
 Highest
 The Highest Priority packet
@@ -1233,7 +1270,7 @@ Switch to USB mode to use a 3G/4G USB wireless dongle or Android phone as a USB 
 If you want to change the connection type, please go to <a href="/Advanced_Modem_others.asp">USB Modem</a> to disable USB adapter.
 Enable USB Modem
 USB Modem mode
-Pluging the USB adapter into R6900 and make it become mobile router.
+Pluging the USB adapter into R7000 and make it become mobile router.
 Please select your internet service provider(ISP).
 ISP
 Please enter your password.
@@ -1253,6 +1290,7 @@ Band
 Target Band
 Internet
 Interval
+Introduce demo
 Invitation
 For source or destination IP address, you can : (a) enter a specific IP address, such as \"192.168.122.1\"; (b) enter IP addresses within one subnet or within the same IP pool, such as \"192.168.123.*\", or \"192.168.*.*\"; or (c) enter all IP addresses as \"*.*.*.*\".
 IP Sharing
@@ -1317,12 +1355,12 @@ IPv6 WAN Setting
 If you are GVT users, please key in the user name <b>turbonet@turbonet</b> and password <b>gvt25</b>. Otherwise, please key in the user name and password provided by your ISP.
 Select the ISP Profile to configure special ISP settings.
 iTunes Server Name
-The connection to R6900 has failed. Click OK to send request or Cancel to stop.
+The connection to R7000 has failed. Click OK to send request or Cancel to stop.
 This field allows you to enable or disable Download Master.
 This field allows you to share downloaded materials to Internet users.
 This field allows you to enable or disable UPnP.
-LAN IP address and subnet mask has changed. R6900 IP Pool of addresses should be updated. Would you like to update IP Pool of addresses automatically?
-The new IP Pool does not match the subnet mask. Would you like to allow R6900 to change the IP pool automatically?
+LAN IP address and subnet mask has changed. R7000 IP Pool of addresses should be updated. Would you like to update IP Pool of addresses automatically?
+The new IP Pool does not match the subnet mask. Would you like to allow R7000 to change the IP pool automatically?
 This entry has been in list.
 Please input the value between 1 to 2592000(Secondes).
 are invalid characters.
@@ -1340,16 +1378,16 @@ LAN IP
 Select Language
 Enable the DHCP server function to allow the router's DHCP server to automatically assign IP addresses to network clients. If this function is disabled, you need to manually assign the IP address settings on your LAN devices.
 Enable the DHCP Server
-DHCP (Dynamic Host Configuration Protocol) is a protocol for the automatic configuration used on IP networks. The DHCP server can assign each client an IP address and informs the client of the of DNS server IP and default gateway IP. R6900 supports up to 253 IP addresses for your local network.
-R6900 IP address:
-Configure the LAN setting of R6900.
+DHCP (Dynamic Host Configuration Protocol) is a protocol for the automatic configuration used on IP networks. The DHCP server can assign each client an IP address and informs the client of the of DNS server IP and default gateway IP. R7000 supports up to 253 IP addresses for your local network.
+R7000 IP address:
+Configure the LAN setting of R7000.
 LAN IP address is used by the VPN server. Please use another IP address for the LAN IP address.
-Configure the IPv6 Internet setting of R6900.
-Configure the IPTV setting of R6900.
+Configure the IPv6 Internet setting of R7000.
+Configure the IPTV setting of R7000.
 To watch IPTV, the WAN port must be connected to the Internet. Please go to <a href="/Advanced_WANPort_Content.asp" style="text-decoration: underline;">WAN - Dual WAN</a>  to confirm that WAN port is assigned to primary WAN.
 The Domain Name for clients who request IP Address from the DHCP Server.
 It can only contain alphanumeric characters and the dash symbol.
-R6900's Domain Name
+R7000's Domain Name
 Set the lease time that the network client is allowed to use its current IP address to connect to the wireless router. When the lease time expires, the network client should either renew or get a new IP address from the wireless router's DHCP server.
 Lease time
 Assign a fixed IP address for a specific client. The client's MAC address is required.
@@ -1399,14 +1437,14 @@ User Name or E-mail Address
 When enabled, the domain name with wildcard is redirected to your IP address.
 Enable wildcard
 This is the IP address of default gateway for Access Point
-This field indicates the IP address of DNS to provide to clients that request IP Address from DHCP Server. You can leave it blank, then the DNS request will be processed by R6900.
+This field indicates the IP address of DNS to provide to clients that request IP Address from DHCP Server. You can leave it blank, then the DNS request will be processed by R7000.
 DNS Server
 DNS and WINS Server Setting
-This field indicates the IP address of gateway in your LAN. If you leave it blank, the IP address of R6900 will be assigned.
+This field indicates the IP address of gateway in your LAN. If you leave it blank, the IP address of R7000 will be assigned.
 To synchronize your system time with NTP Server.
 NTP Server
 NTP Link
-This field allows to assign a remote server to record log messages of R6900. If you leave it blank, the system will record up to 1024 messages on R6900.
+This field allows to assign a remote server to record log messages of R7000. If you leave it blank, the system will record up to 1024 messages on R7000.
 Remote Log Server
 The standard time in your area or locality.
 Reminder: The System time zone is different from your locale setting.
@@ -1416,7 +1454,7 @@ DST time zone changes ends
 The Windows Internet Naming Service manages interaction of each PC with the Internet. If you use a WINS server, enter IP Address of server here.
 WINS Server
 Last 30 Days
-R6900 supports several connection types to WAN (wide area network).These types are selected from the dropdown menu beside WAN Connection Type. The setting fields differ depending on the connection type you selected.
+R7000 supports several connection types to WAN (wide area network).These types are selected from the dropdown menu beside WAN Connection Type. The setting fields differ depending on the connection type you selected.
 Get the WAN IP automatically
 Choose the LAN port to bridge to WAN port. If you have another device to connect to WAN but your ISP only provide one WAN link, you can specify some LAN port to receive packets from WAN port. For example, you can connect your IPTV Set-top box to the specified port and get the signal and IP address from your ISP directly.
 Choose IPTV STB Port
@@ -1448,13 +1486,13 @@ Manually assign
 City:
 Country:
 You might need the VLAN ID to set up the PTM connection. Do not change the VLAN ID unless your ISP instructs you to do so.
-This Quick Setup guides you to quickly configure the R6900 WAN settings, please select your country and ISP name from the dropdown list, click Next, and enter the necessary information. Contact your Internet Service Provider (ISP) for information about your DSL connection settings, if necessary.
+This Quick Setup guides you to quickly configure the R7000 WAN settings, please select your country and ISP name from the dropdown list, click Next, and enter the necessary information. Contact your Internet Service Provider (ISP) for information about your DSL connection settings, if necessary.
 You need the Virtual Path Identifier (VPI) and Virtual Channel Identifier (VCI) to set up the ATM PVC. Do not change the VPI and VCI numbers unless your ISP instructs you to do so.
 is invalid.
 is out of range
 Notice:
 Quick Manual Setting
-Refer to the R6900 WAN settings. If you want to add a new setting, follow the onscreen instructions. If you want to modify the previous setting, please go to [Advanced Setting] -> [WAN] -> [Internet Connection] page.
+Refer to the R7000 WAN settings. If you want to add a new setting, follow the onscreen instructions. If you want to modify the previous setting, please go to [Advanced Setting] -> [WAN] -> [Internet Connection] page.
 Manufacturer
 Maximum Bandwidth Limit
 Set the maximum upload bandwidth limit
@@ -1480,7 +1518,7 @@ Configuring...
 Confirm PIN
 * If APN setting is not automatically configured, you must manually configure it.
 Data Usage
-Configure the Mobile Broadband settings of R6900.
+Configure the Mobile Broadband settings of R7000.
 Hot-Standby will be disabled if Mobile Braodband is disabled. Are you sure you want to disable it?
 Mobile Broadband is disabled.
 Enable Mobile Broadband
@@ -1511,7 +1549,7 @@ PIN Modification
 PIN Verification
 PIN Unblocking Key (PUK)
 Please get the PIN unblocking code (PUK) from your service provider.
-The maximum number of SIM cards is reached. To save the data usage settings of the current SIM card, the oldest record will be deleted. Are you sure you want to delete it?   NOTE:  R6900 can keep the data usage records of up to ten (10) SIM cards.
+The maximum number of SIM cards is reached. To save the data usage settings of the current SIM card, the oldest record will be deleted. Are you sure you want to delete it?   NOTE:  R7000 can keep the data usage records of up to ten (10) SIM cards.
 Remaining Data
 Remaining Attempts
 The new reset day will take effect next month.
@@ -1567,6 +1605,8 @@ Enable NAT Accelerator
 H.323 Passthrough
 IPSec Passthrough
 L2TP Passthrough
+Bonding/ Link aggregation
+Please enable Bonding (802.3ad) support of your wired client and connect it to Router LAN1 and LAN2.
 Enable NAT Passthrough to allow a Virtual Private Network (VPN) connection to pass through the router to the network clients.
 PPTP Passthrough
 RTSP Passthrough
@@ -1615,6 +1655,9 @@ If you want to enable WPS, you need to disable hiding SSID first.
 Note: New patch will be updated regularly, please keep your firmware stay up to date.
 If you cannot use ASUS DDNS services, please go to <a href="http://iplookup.asus.com/nslookup.php" target="_blank" style="font-family:Lucida Console;text-decoration:underline;">http://iplookup.asus.com/nslookup.php</a> to reach your internet IP address to use this service.
 is already configured to this mode.
+Both
+Download
+Upload
 OTP Authentication
 Parent AP status
 Active Schedule
@@ -1645,10 +1688,10 @@ Enable Port Mapping
 LAN Port
 This port is for
 This page shows the port forwarding status. Some P2P programs use the UPnP protocol to open the port and the port number is shown on this page.
-R6900 has detected that the connection type is PPPoE. If yes, please key in the username/password and click Apply.<br>If not, please click Manual Setting to set again.
+R7000 has detected that the connection type is PPPoE. If yes, please key in the username/password and click Apply.<br>If not, please click Manual Setting to set again.
 Please key in the user name/password that your Internet Service Provider (ISP) has provided and click Next.
 This item may be specified by some ISPs. Check with your ISP and fill them in if required.
-Some Internet Service Providers block MAC addresses if the device makes DHCP queries too often. To prevent this, change the DHCP query frequency. <br/> In the default Aggressive mode, if R6900 does not get a response from the ISP, it sends another query after 20 seconds and makes three more attempts.<br/>In Normal mode, if R6900 does not get a response from the ISP, it makes a second query after 120 seconds and makes two more attempts.
+Some Internet Service Providers block MAC addresses if the device makes DHCP queries too often. To prevent this, change the DHCP query frequency. <br/> In the default Aggressive mode, if R7000 does not get a response from the ISP, it sends another query after 20 seconds and makes three more attempts.<br/>In Normal mode, if R7000 does not get a response from the ISP, it makes a second query after 120 seconds and makes two more attempts.
 Authentication
 Dial on demand<br>(with idle timeout timer)
 The Dial on Demand feature allows your network to establish a connection only when needed and to disconnect after the specified period of inactivity.
@@ -1674,12 +1717,11 @@ This field is optional and may be specified by some ISPs. Check with your ISP an
 Service Name
 Enable VPN + DHCP Connection
 The VPN server allows you to access your home network anytime, anywhere.
-To use the VPN server. Please follow these steps.<br>(1) Enable the PPTP VPN server<br>(2) Set the IP pool for client IP. (Maximum 10 clients)<br>(3) Set up the username and password for VPN client.<br>(4) Open the VPN connection program on your computer or smartphone.<br>(5) Add a new PPTP VPN connection and the VPN server address is
 (6) If your WAN IP address is dynamic, <a href="../Advanced_ASUSDDNS_Content.asp" target="_blank" style="text-decoration: underline; font-family:Lucida Console;">please click here to set the DDNS.</a>
 LAN Prefix Length
 Previous page
 Enabling Monopoly Mode allows you to temporarily have exclusive connection to the router for sending print requests.
-Printer model connect to R6900.
+Printer model connect to R7000.
 Printer Model:
 Current status of printer
 Printer Status:
@@ -1710,7 +1752,7 @@ Bandwidth limit is not valid.
 QoS Type
 User-defined priorities
 User-defined QoS rules
-Please reboot R6900 manually.
+Please reboot R7000 manually.
 Reconnect to the Internet
 To remove the hard disk from the router, click the USB icon at the upper right corner of your screen.
 To restore the system to its factory default settings and enable the auto-detection of your connection type, please click <a href="" onclick="gotoRestoreSetting();">here</a>.
@@ -1733,7 +1775,7 @@ Unknown unicast storm control(Mbps):
 Enable multicast routing
 Static Route List
 Enable static routes
-This function allows you to add routing rules into R6900. It is useful if you connect several routers behind R6900 to share the same connection to the Internet.
+This function allows you to add routing rules into R7000. It is useful if you connect several routers behind R7000 to share the same connection to the Internet.
 Gateway
 Network/Host IP
 Netmask
@@ -1756,7 +1798,7 @@ Do you really want to remove this disk?
 Safely Remove disk
 Set the account and permission of network place(samba) service.
 Duplicate or same VPI and VCI settings.
-System is restarting now! Please wait and we will redirect to home of R6900.
+System is restarting now! Please wait and we will redirect to home of R7000.
 Scale
 seconds
 Security level
@@ -1780,15 +1822,15 @@ Setting is uploading! Please wait about 60 seconds.
 Set up the Upload and Download rate limits
 All current settings are deleted and the router will be restored to its factory default settings.\n
 Are you sure you want to continue?
-The default LAN IP of R6900 is 192.168.1.1.\nIf you can't back setting page later, please renew IP configuration of your computer.
+The default LAN IP of R7000 is 192.168.1.1.\nIf you can't back setting page later, please renew IP configuration of your computer.
 Click [Restore] to restore the router to its factory default settings and delete all the current settings. Wait for a while until the router reboots.
 Factory default
 Default
-Click the [Save] button to save current setting of R6900 into a file. (Note: When you save current settings to a file, it will be saved to flash as well.)
+Click the [Save] button to save current setting of R7000 into a file. (Note: When you save current settings to a file, it will be saved to flash as well.)
 Save setting
-This function allows you to save current settings of R6900 to a file, or load settings from a file.
+This function allows you to save current settings of R7000 to a file, or load settings from a file.
 File format or path is invalid!
-Specify the path and name of setting file. Then click [Upload] to write the file to R6900. Please wait 60 seconds until R6900 reboots.
+Specify the path and name of setting file. Then click [Upload] to write the file to R7000. Please wait 60 seconds until R7000 reboots.
 Restore setting
 Settings
 Device Name
@@ -1802,7 +1844,7 @@ Czech
 Maximum number of concurrent connections
 Enter a value between 0 to 999. The default value is 0, which denotes that there is no upload limit.
 Maximum Upload Rate
-Allows you to enable or disable the seeding function. R6900 remains open until downloading process is completed.
+Allows you to enable or disable the seeding function. R7000 remains open until downloading process is completed.
 Seeding
 Work Group
 show all
@@ -1836,10 +1878,14 @@ For source or destination IP address, you can:<p>(a) enter a specific IP address
 The graph of signal-to-noise ratio shows the classic SNR (Signal-to-Noise Ratio), which can be useful in identifying the stability of DSL connection. Transmission / Reception shows how many bits per-carrier are transmitted / received.
 Gathering data, Spectrum graph will be displayed in(seconds):
 These graphs will be updated in(seconds):
+Spoof LAN TTL value
 Save/Reboot
 Hot-Standby
 When Hot-Standby mode is enabled, the system quickly switches connection to another interface when the primary interface is down or not accessible.
 System will keep the standby WAN in connected state and reduce the detection interval to
+Display for
+Last date
+Show by
 Retry Interval
 Detect Interval
 Retry Count
@@ -1858,7 +1904,7 @@ Configuration is successful.
 Support
 Switch Frequency
 Switch Control
-Setting R6900 switch control.
+Setting R7000 switch control.
 Switch Pages:
 Sync Server let you to sync your cloud disk with another AiCloud 2.0 account.  Fill in the form to generate an invitation for others.
 Fill in the invitation form below.
@@ -1872,7 +1918,7 @@ Hi, let's share our files with Smart Sync!
 Sync description
 Sync path
 Sync rule
-Please connect your device to ASUS router via wired or wireless connection, and click the link below to confirm this invitation.
+Please connect your device to router via wired or wireless connection, and click the link below to confirm this invitation.
 Sync List
 Local sync folder
 Change the router login password, time zone, and NTP server settings.
@@ -1914,6 +1960,15 @@ Traffic Monitor allows you to monitor the incoming or outgoing packets of the fo
 <b>NOTE:</b> Packets from the Internet are evenly transmitted to the wired and wireless devices.
 When NAT Acceleration is enabled, the wired network traffic bypasses the CPU, which may affect the accuracy of Traffic Monitor.
 Traffic Analyzer
+Current Traffic
+Daily Traffic
+Monthly Traffic
+You should turn on the Traffic Statistic to record the traffic information
+Top 5 Apps Used
+Top 5 Clients Used
+Used Percentage
+Used traffic
+Weekly Traffic
 Tunnel MTU
 Tunnel TTL
 Eniwetok, Kwajalein
@@ -2014,7 +2069,7 @@ Nuku'alofa
 Anadyr, Petropavlovsk-Kamchatsky
 Chokurdakh, Srednekolymsk
 No available updates
-Under the AP mode, R6900 disables Internet function.
+Under the AP mode, R7000 disables Internet function.
 Uninstalling
 An online update is available
 Updating...
@@ -2049,7 +2104,7 @@ Device is not found.
 Partitioning
 USB Tethering
 To use USB tethering, please complete the following steps:
-Connect your Android phone to ASUS router with a USB cable.
+Connect your Android phone to router with a USB cable.
 Select USB Device to [Android Phone] and click [Apply].
 Manually enable USB Tethering on your Android phone.
 Uninstalling app from the USB storage device...
@@ -2079,8 +2134,6 @@ Enable VPN Server
 Enable OpenVPN Server
 Enable PPTP VPN Server
 Export OpenVPN configuration file
-VPN server only allows max 10 clients!
-Maximum 10 clients
 Server mode
 Network Place (Samba) Support
 Advertise DNS to clients
@@ -2093,7 +2146,7 @@ Allow only specified clients
 Compression
 IP/Routing conflict
 Custom Configuration
-R6900 will automatically generate a .ovpn file with the Certification Authority key. You can provide the .ovpn file with a username and password to all users connecting to the OpenVPN server.
+R7000 will automatically generate a .ovpn file with the Certification Authority key. You can provide the .ovpn file with a username and password to all users connecting to the OpenVPN server.
 To change OpenVPN server settings, go to
 You can change the default settings of the OpenVPN server to provide a custom OPVN file for a specific connection type.
 Allocate from DHCP
@@ -2130,17 +2183,17 @@ Import CA file
 Import .ovpn file
 Import the CA file or edit the .ovpn file manually.
 The wireless router currently uses a private WAN IP address (192.168.x.x, 10.x.x.x, or 172.16.x.x). Please configure DDNS service before starting the VPN server.
-ASUSWRT only supports one VPN server connection at one time. If you enable the \"OpenVPN server\", the \"PPTP server\" is disabled automatically. Are you sure you want to enable the VPN server?
+XWRT only supports one VPN server connection at one time. If you enable the \"OpenVPN server\", the \"PPTP server\" is disabled automatically. Are you sure you want to enable the VPN server?
 VPN (Virtual Private Network) clients are often used to connect to a VPN server to access private resources securely over a public network.
 Some devices like set-top boxes, smart TVs and Blu-ray players do not support VPN software.
-The ASUSWRT VPN feature provides VPN access to all devices in a home network without having to install VPN software on each device.
+The XWRT VPN feature provides VPN access to all devices in a home network without having to install VPN software on each device.
 To start a VPN connection, please follow the steps below:
 Add profile
 Select a VPN connection type
 Enter VPN authentication information provided by your VPN provider then connect.
 VPN Client
 Barrier
-Configure the Ethernet WAN settings of R6900.
+Configure the Ethernet WAN settings of R7000.
 Default Route
 WAN is disabled.
 Ethernet
@@ -2151,7 +2204,7 @@ WAN IP
 IP Universal Settings
 IPv4 Setting
 IP version
-R6900 can establish Internet connection via Ethernet WAN, Mobile Broadband or LAN as WAN. Select the interface for your Internet connection from the WAN Interface dropdown list. You can enable the dual WAN connection and change the priorities of the WAN interfaces from the [Dual WAN] tab.
+R7000 can establish Internet connection via Ethernet WAN, Mobile Broadband or LAN as WAN. Select the interface for your Internet connection from the WAN Interface dropdown list. You can enable the dual WAN connection and change the priorities of the WAN interfaces from the [Dual WAN] tab.
 PPP Authentication
 PPP Setting
 Go to WAN Setting.
@@ -2196,13 +2249,10 @@ This field indicates the basic rates that wireless client must support.
 Basic Rate Set:
 This field allows you to select the transmission rate.[Auto] is recommended to maximize performance.
 Data Rate(Mbps):
-Bridge (or named WDS - Wireless Distribution System) function allows your R6900 to connect to an access point wirelessly. WDS may also be considered a repeater mode. But with this method, the devices connected to the access point will only be able to use half of the access point's original wireless speed.
-The function only support [Open System/NONE, Open System/WEP] security authentication method.
 To enable WDS to extend the wireless signal, please follow these steps :
 Select [WDS Only] or [Hybrid] mode and add MAC address of APs in Remote AP List.
 Ensure that this wireless router and the AP you want to connect to use the same channel.
 Key in the remote AP mac in the remote AP list and open the remote AP's WDS management interface, key in the this router's MAC address.
-To get the best performance, please go to Advanced Settings > Wireless > General and assign the same channel bandwidth, control channel, and extension channel to every router in the network.
 You are currently using the Auto channel bandwidth. Click <a style="font-size:13px;font-family: Lucida Console;color:#FC0;text-decoration:underline;" href="/Advanced_Wireless_Content.asp?af=wl_bw">Here</a> to modify.
 You are currently using the Auto channel. Click <a style="font-size:13px;font-family: Lucida Console;color:#FC0;text-decoration:underline;" href="/Advanced_Wireless_Content.asp?af=wl_channel">Here</a> to modify.
 Wireless Professional Setting allows you to set up additional parameters for wireless. But default values are recommended.
@@ -2246,9 +2296,9 @@ Airtime Fairness
 Wireless Mode must be set to Auto.
 Beacon Interval means the period of time between one beacon and the next one. The default value is 100 (the unit is millisecond, or 1/1000 second). Lower the Beacon Interval to improve transmission performance in unstable environment or for roaming clients, but it will be power consuming.
 Beacon Interval
-If [Yes] is selected, your SSID does not show in site surveys by wireless mobile clients and they can only connect to your ASUS Wireless Router with your SSID of AP.
+If [Yes] is selected, your SSID does not show in site surveys by wireless mobile clients and they can only connect to your Wireless Router with your SSID of AP.
 Hide SSID
-Select [Yes] to connect R6900 to other APs listed in the Remote AP List.
+Select [Yes] to connect R7000 to other APs listed in the Remote AP List.
 Connect to APs in list
 Key in the router's PIN code in the client's WPS utility and configure the network name and security settings.
 AP PIN Code
@@ -2277,18 +2327,18 @@ Set the capability for transmission power. The maximum value is
 Protected Management Frames
 Capable
 Required
-This item allows you to select any of these options for the Wireless Mode of your 802.11n interface. <p>[Auto]: Allows 802.11n, 802.11g, and 802.11b devices to connect to R6900.</p><p>[Legacy]: Allows 802.11b/g/n devices to connect to R6900, but 802.11n devices only run at a speed of 54Mbps.</p><p>[N Only]: Maximizes performance, but does not allow 802.11g and 802.11b devices to connect to your device.</p><p>Tick b/g Protection to allow b/g devices to connect to R6900 without affecting 11n devices, but this increases the router's workload.</p>
-This item allows you to select any of these options for the Wireless Mode of your 802.11n interface. <p>[Auto]: Allows 802.11n and 802.11a devices to connect to R6900.</p><p>[Legacy]: Allows 802.11n/a devices to connect to R6900, but 802.11n devices only run at a speed of 54Mbps.</p><p>[N Only]: Maximizes performance, but does not allow 802.11a devices to connect to your device.</p>
-This item allows you to select any of these options for the Wireless Mode of your 802.11ac interface. <p>[Auto]: Allows 802.11ac, 802.11n and 802.11a devices to connect to R6900.</p><p>[Legacy]: Allows 802.11n/a devices to connect to R6900, but 802.11n devices only run at a speed of 54Mbps.</p><p>[N + AC]: Maximizes performance, but does not allow 802.11a devices to connect to your device.</p>
-This item allows you to select any of these options for the Wireless Mode of your 802.11ac interface. <p>[Auto]: Allows 802.11ac, 802.11n and 802.11a devices to connect to R6900.</p><p>[N Only]: 802.11n maximizes performance, but does not allow 802.11ac, 802.11a devices to connect to your device.</p>
-This item allows you to select any of these options for the Wireless Mode of your 802.11ac interface. <p>[Auto]: Allows 802.11ac, 802.11n and 802.11a devices to connect to R6900.</p><p>[Legacy]: Allows 802.11n/a devices to connect to R6900, but 802.11n devices only run at a speed of 54Mbps.</p><p>[N/AC mixed]: Maximizes performance, but does not allow 802.11a devices to connect to your device.</p><p>[N Only]: 802.11n maximizes performance, but does not allow 802.11ac, 802.11a devices to connect to your device.</p>
+This item allows you to select any of these options for the Wireless Mode of your 802.11n interface. <p>[Auto]: Allows 802.11n, 802.11g, and 802.11b devices to connect to R7000.</p><p>[Legacy]: Allows 802.11b/g/n devices to connect to R7000, but 802.11n devices only run at a speed of 54Mbps.</p><p>[N Only]: Maximizes performance, but does not allow 802.11g and 802.11b devices to connect to your device.</p><p>Tick b/g Protection to allow b/g devices to connect to R7000 without affecting 11n devices, but this increases the router's workload.</p>
+This item allows you to select any of these options for the Wireless Mode of your 802.11n interface. <p>[Auto]: Allows 802.11n and 802.11a devices to connect to R7000.</p><p>[Legacy]: Allows 802.11n/a devices to connect to R7000, but 802.11n devices only run at a speed of 54Mbps.</p><p>[N Only]: Maximizes performance, but does not allow 802.11a devices to connect to your device.</p>
+This item allows you to select any of these options for the Wireless Mode of your 802.11ac interface. <p>[Auto]: Allows 802.11ac, 802.11n and 802.11a devices to connect to R7000.</p><p>[Legacy]: Allows 802.11n/a devices to connect to R7000, but 802.11n devices only run at a speed of 54Mbps.</p><p>[N + AC]: Maximizes performance, but does not allow 802.11a devices to connect to your device.</p>
+This item allows you to select any of these options for the Wireless Mode of your 802.11ac interface. <p>[Auto]: Allows 802.11ac, 802.11n and 802.11a devices to connect to R7000.</p><p>[N Only]: 802.11n maximizes performance, but does not allow 802.11ac, 802.11a devices to connect to your device.</p>
+This item allows you to select any of these options for the Wireless Mode of your 802.11ac interface. <p>[Auto]: Allows 802.11ac, 802.11n and 802.11a devices to connect to R7000.</p><p>[Legacy]: Allows 802.11n/a devices to connect to R7000, but 802.11n devices only run at a speed of 54Mbps.</p><p>[N/AC mixed]: Maximizes performance, but does not allow 802.11a devices to connect to your device.</p><p>[N Only]: 802.11n maximizes performance, but does not allow 802.11ac, 802.11a devices to connect to your device.</p>
 Wireless Mode
 b/g Protection
 Optimized for Xbox
 [No-Acknowledgement] is the acknowledge policy at MAC level. When enabled, it results in more efficient throughput but higher error rates in a noisy Radio Frequency (RF) environment.
 Enable WMM No-Acknowledgement
 If you select WEP Encryption, you can key in some words in this field to generate WEP keys automatically.
-ASUS Passphrase:
+ Passphrase:
 Selecting [Enable] enables Packet Aggregation to increase the delivered bandwidth in your network.
 Enable Packet Aggregation
 This field requires a password of 8 and 63 characters(letters, numbers or a combination) or 64 hex digits to start the encryption process . If you leave this field blank, the default [00000000] will be assigned as your password.
@@ -2328,7 +2378,7 @@ WPS Method:
 Key in an eight-digit number for the client's PIN code.<p>
 Client PIN Code
 [Auto] is not compatible with current guest network authentication method(TKIP or WEP),  Please go to <a id="gn_link" href="/Guest_network.asp?af=wl_NOnly_note" target="_blank" style="color:#FFCC00;font-family:Lucida Console;text-decoration:underline;">Guest Network</a> and change the authentication method.
-Under Auto mode with WEP or TKIP encryption, R6900 supports the maximum transmission rate of 54Mbps.
+Under Auto mode with WEP or TKIP encryption, R7000 supports the maximum transmission rate of 54Mbps.
 Please change to WPA2-Personal.
 [N+AC] is not compatible with current guest network authentication method(TKIP or WEP),  Please go to <a id="gn_link" href="/Guest_network.asp?af=wl_NOnly_note" target="_blank" style="color:#FFCC00;font-family:Lucida Console;text-decoration:underline;">Guest Network</a> and change the authentication method.
 [N Only] is not compatible with current guest network authentication method(TKIP or WEP),  Please go to <a id="gn_link" href="/Guest_network.asp?af=wl_NOnly_note" target="_blank" style="color:#FFCC00;font-family:Lucida Console;text-decoration:underline;">Guest Network</a> and change the authentication method.
@@ -2366,3 +2416,37 @@ I want to use Yandex.DNS and agree to the <a class="link" href="http://legal.yan
 Clients are using Yandex.DNS regardless of the DNS setting.
 Your share folder setting is
 Disable : 0
+註：您正使用中華電信光世代，我們已幫您使用自動取得 IP 方式上網，若你想提高網路品質、取得公共 IP，建議使用 PPPoE 撥號上網。
+前往設定撥號連線( PPPoE )
+Page Setting
+Connecting to Facebook page...
+Facebook Wi-Fi kets customers check in to participating businesses on Facebok for free Wi-Fi access. When people check int to your Page, you can share offers and other announcements with them.
+Disclaimer:
+Term of use
+Please be noted to keep Facebook Wi-Fi enabled firmware stay up to date.
+Please be noted Facebook Wi-Fi service is provided by Facebook which will be terminated upon official announcement.
+Please be noted there will be a 1 year grace period upon termination where Facebook will continue supporting the service. After that period, this feature will cease to operate.
+Any non-certificated router is prohibited to use Facebook Wi-Fi enabled firmware.
+Unable to connect to Facebook page, please check your internet status.
+Enable Facebook Wi-Fi
+What is Facebook Wi-Fi?
+What benefit I can get by Facebook Wi-Fi?
+How to setup Facebook Wi-Fi?
+FAQs about Facebook Wi-Fi
+Facebook Page Settings
+Confugure Facebook page connection.
+Choose a Facebook page for this Wi-Fi network, and manage page settings here :
+All 2.4 GHz guest networks are used, if you want to use 2.4 GHz band for Facebook Wi-Fi, please remove one 2.4 GHz guest network<br>
+All 5 GHz guest networks are used, if you want to use 5 GHz band for Facebook Wi-Fi, please remove one 5 GHz guest network<br>
+All 5 GHz-2 guest networks are used, if you want to use 5 GHz band for Facebook Wi-Fi, please remove one 5 GHz-2 guest network
+All guest networks are used now, please remove at least one guest network then try to enable Facebook Wi-Fi again.
+802.11ac Concurrent Dual-band AC1900. ( 600Mbps / 2.4 GHz* + 1300Mbps / 5 GHz )
+Two high speed and high powered USB ports for network storage and multifunction printer support.
+4 x Gigabit Ethernet ports. 1 x USB 3.0 + 1 x USB 2.0 port for fast file and printer sharing.
+High level current usage for superior download, gaming performance and multi client connections.
+To use the VPN server. Please follow these steps.<br>(1) Enable the PPTP VPN server<br>(2) Set the IP pool for client IP. (Maximum 30 clients)<br>(3) Set up the username and password for VPN client.<br>(4) Open the VPN connection program on your computer or smartphone.<br>(5) Add a new PPTP VPN connection and the VPN server address is
+VPN server only allows max 30 clients!
+Maximum 30 clients
+Bridge (or named WDS - Wireless Distribution System) function allows your R7000 to connect to an access point wirelessly. WDS may also be considered a repeater mode.
+The function does not support [ WPA2-Enterprise, WPA-Auto-Enterprise ] security authentication method.
+To get the best performance, please go to Advanced Settings > Wireless > General and assign the same SSID, channel bandwidth, control channel, and extension channel to every router in the network.

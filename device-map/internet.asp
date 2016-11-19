@@ -87,13 +87,13 @@ var Minutes = total % 60; total = ~~(total / 60);
 var Hours = total % 24;
 var Days = ~~(total / 24);
 if (Days != 0)
-value += Days.toString() + " <#900#> ";
+value += Days.toString() + " <#918#> ";
 if (Hours != 0)
-value += Hours.toString() + " <#1223#> ";
+value += Hours.toString() + " <#1260#> ";
 if (Minutes != 0)
-value += Minutes.toString() + " <#1476#> ";
+value += Minutes.toString() + " <#1514#> ";
 if (Seconds != 0)
-value += Seconds.toString() + " <#1760#>";
+value += Seconds.toString() + " <#1802#>";
 return value;
 }
 function initial(){
@@ -119,11 +119,11 @@ showtext($("#dualwan_current")[0], pri_if);
 else {
 showtext($("#dualwan_current")[0], sec_if);
 }
-showtext(document.getElementById("dualwan_mode"), "<#1011#>");
+showtext(document.getElementById("dualwan_mode"), "<#1029#>");
 loadBalance_form(unit);
 }
 else{
-showtext(document.getElementById("dualwan_mode"), "<#1010#>");
+showtext(document.getElementById("dualwan_mode"), "<#1028#>");
 failover_form(unit, pri_if, sec_if);
 }
 }
@@ -167,10 +167,30 @@ showtext(document.getElementById("RemoteAP"), decodeURIComponent("<% nvram_char_
 document.getElementById("RemoteAPtd").title = decodeURIComponent("<% nvram_char_to_ascii("WLANConfig11b", "wlc_ssid"); %>");
 }else
 showtext(document.getElementById("RemoteAP"), decodeURIComponent("<% nvram_char_to_ascii("WLANConfig11b", "wlc_ssid"); %>"));
+if(parent.concurrent_pap){
+if(parent.pap_click_flag == 0){
+if(decodeURIComponent("<% nvram_char_to_ascii("WLANConfig11b", "wlc0_ssid"); %>").length >= 28){
+showtext(document.getElementById("RemoteAP"), decodeURIComponent("<% nvram_char_to_ascii("WLANConfig11b", "wlc0_ssid"); %>").substring(0, 26)+"...");
+document.getElementById("RemoteAPtd").title = decodeURIComponent("<% nvram_char_to_ascii("WLANConfig11b", "wlc0_ssid"); %>");
+}
+else{
+showtext(document.getElementById("RemoteAP"), decodeURIComponent("<% nvram_char_to_ascii("WLANConfig11b", "wlc0_ssid"); %>"));
+}
+}
+else{
+if(decodeURIComponent("<% nvram_char_to_ascii("WLANConfig11b", "wlc1_ssid"); %>").length >= 28){
+showtext(document.getElementById("RemoteAP"), decodeURIComponent("<% nvram_char_to_ascii("WLANConfig11b", "wlc1_ssid"); %>").substring(0, 26)+"...");
+document.getElementById("RemoteAPtd").title = decodeURIComponent("<% nvram_char_to_ascii("WLANConfig11b", "wlc1_ssid"); %>");
+}
+else{
+showtext(document.getElementById("RemoteAP"), decodeURIComponent("<% nvram_char_to_ascii("WLANConfig11b", "wlc1_ssid"); %>"));
+}
+}
+}
 if(lanproto == "static")
-showtext(document.getElementById("LanProto"), "<#52#>");
+showtext(document.getElementById("LanProto"), "<#53#>");
 else
-showtext(document.getElementById("LanProto"), "<#51#>");
+showtext(document.getElementById("LanProto"), "<#52#>");
 if(sw_mode == 2 || sw_mode == 4)
 document.getElementById('sitesurvey_tr').style.display = "";
 }
@@ -224,9 +244,9 @@ wanlink_type_conv = dslproto;
 }
 }
 if(wanlink_type_conv == "dhcp")
-wanlink_type_conv = "<#51#>";
-else if(wanlink_type_conv == "static")
 wanlink_type_conv = "<#52#>";
+else if(wanlink_type_conv == "static")
+wanlink_type_conv = "<#53#>";
 else if(wanlink_type_conv == "pppoe" || wanlink_type_conv == "PPPOE")
 wanlink_type_conv = "PPPoE";
 else if(wanlink_type_conv == "pptp")
@@ -583,7 +603,7 @@ return 0;
 </tr>
 <tr id="wan_enable_button">
 <td height="50" style="padding:10px 15px 0px 15px;">
-<p class="formfonttitle_nwm" style="float:left;width:98px;"><#196#></p>
+<p class="formfonttitle_nwm" style="float:left;width:98px;"><#199#></p>
 <div class="left" style="width:94px; float:right;" id="radio_wan_enable"></div>
 <div class="clear"></div>
 <script type="text/javascript">
@@ -617,7 +637,7 @@ return true;
 </tr>
 <tr id="dualwan_enable_button">
 <td height="50" style="padding:10px 15px 0px 15px;">
-<p class="formfonttitle_nwm" style="float:left;width:98px;"><#1001#></p>
+<p class="formfonttitle_nwm" style="float:left;width:98px;"><#1019#></p>
 <div class="left" style="width:94px; float:right;" id="radio_dualwan_enable"></div>
 <div class="clear"></div>
 <script type="text/javascript">
@@ -667,42 +687,42 @@ return true;
 </tr>
 <tr id=dualwan_row_primary style="display:none">
 <td style="padding:5px 10px 5px 15px;">
-<p class="formfonttitle_nwm"><#2158#></p>
+<p class="formfonttitle_nwm"><#2211#></p>
 <p style="padding-left:10px; margin-top:3px; background-color:#444f53; line-height:20px;" id="dualwan_primary_if"></p>
 <img style="margin-top:5px;" src="/images/New_ui/networkmap/linetwo2.png">
 </td>
 </tr>
 <tr id=dualwan_row_secondary style="display:none">
 <td style="padding:5px 10px 5px 15px;">
-<p class="formfonttitle_nwm"><#2158#></p>
+<p class="formfonttitle_nwm"><#2211#></p>
 <p style="padding-left:10px; margin-top:3px; background-color:#444f53; line-height:20px;" id="dualwan_secondary_if"></p>
 <img style="margin-top:5px;" src="/images/New_ui/networkmap/linetwo2.png">
 </td>
 </tr>
 <tr id="dualwan_mode_ctrl" style="display:none">
 <td style="padding:5px 10px 5px 15px;">
-<p class="formfonttitle_nwm"><#1009#></p>
+<p class="formfonttitle_nwm"><#1027#></p>
 <p style="padding-left:10px; margin-top:3px; background-color:#444f53; line-height:20px;" id="dualwan_mode"></p>
 <img style="margin-top:5px;" src="/images/New_ui/networkmap/linetwo2.png">
 </td>
 </tr>
 <tr id="loadbalance_config_ctrl" style="display:none">
 <td style="padding:5px 10px 5px 15px;">
-<p class="formfonttitle_nwm"><#1012#></p>
+<p class="formfonttitle_nwm"><#1030#></p>
 <p style="padding-left:10px; margin-top:3px; background-color:#444f53; line-height:20px;" id="loadbalance_config"></p>
 <img style="margin-top:5px;" src="/images/New_ui/networkmap/linetwo2.png">
 </td>
 </tr>
 <tr>
 <td style="padding:5px 10px 5px 15px;">
-<p class="formfonttitle_nwm" ><#69#></p>
+<p class="formfonttitle_nwm" ><#70#></p>
 <p style="padding-left:10px; margin-top:3px; background-color:#444f53; line-height:20px;" id="connectionType"></p>
 <img style="margin-top:5px;" src="/images/New_ui/networkmap/linetwo2.png">
 </td>
 </tr>
 <tr id="primary_WANIP_ctrl">
 <td style="padding:5px 10px 5px 15px;">
-<p class="formfonttitle_nwm"><#2149#></p>
+<p class="formfonttitle_nwm"><#2202#></p>
 <p style="padding-left:10px; margin-top:3px; background-color:#444f53; line-height:20px;" id="WANIP"></p>
 <p style="padding-left:10px; margin-top:3px; background-color:#444f53; line-height:20px;" id="xWANIP"></p>
 <span id="wan_status" style="display:none"></span>
@@ -711,7 +731,7 @@ return true;
 </tr>
 <tr id="primary_netmask_ctrl">
 <td style="padding:5px 10px 5px 15px;">
-<p class="formfonttitle_nwm"><#130#></p>
+<p class="formfonttitle_nwm"><#133#></p>
 <p style="padding-left:10px; margin-top:3px; background-color:#444f53; line-height:20px;" id="netmask"></p>
 <p style="padding-left:10px; margin-top:3px; background-color:#444f53; line-height:20px;" id="xnetmask"></p>
 <img style="margin-top:5px;" src="/images/New_ui/networkmap/linetwo2.png">
@@ -719,7 +739,7 @@ return true;
 </tr>
 <tr style="display:none;" id="secondary_WANIP_ctrl">
 <td style="padding:5px 10px 5px 15px;">
-<p class="formfonttitle_nwm"><#2149#></p>
+<p class="formfonttitle_nwm"><#2202#></p>
 <p style="padding-left:10px; margin-top:3px; background-color:#444f53; line-height:20px;" id="secondary_WANIP"></p>
 <p style="padding-left:10px; margin-top:3px; background-color:#444f53; line-height:20px;" id="secondary_xWANIP"></p>
 <span id="wan_status" style="display:none"></span>
@@ -728,7 +748,7 @@ return true;
 </tr>
 <tr style="display:none;" id="secondary_netmask_ctrl">
 <td style="padding:5px 10px 5px 15px;">
-<p class="formfonttitle_nwm"><#130#></p>
+<p class="formfonttitle_nwm"><#133#></p>
 <p style="padding-left:10px; margin-top:3px; background-color:#444f53; line-height:20px;" id="secondary_netmask"></p>
 <p style="padding-left:10px; margin-top:3px; background-color:#444f53; line-height:20px;" id="secondary_xnetmask"></p>
 <img style="margin-top:5px;" src="/images/New_ui/networkmap/linetwo2.png">
@@ -736,7 +756,7 @@ return true;
 </tr>
 <tr style="display:none;" id="yadns_ctrl">
 <td style="padding:5px 10px 5px 15px;">
-<p class="formfonttitle_nwm"><#2350#></p>
+<p class="formfonttitle_nwm"><#2400#></p>
 <a href="/YandexDNS.asp" target="_parent">
 <p style="padding-left:10px; margin-top:3px; background-color:#444f53; line-height:20px;" id="yadns_mode"></p>
 <p style="padding-left:10px; margin-top:3px; background-color:#444f53; line-height:20px;" id="yadns_DNS1"></p>
@@ -767,7 +787,7 @@ return true;
 </tr>
 <tr id="primary_gateway_ctrl">
 <td style="padding:5px 10px 5px 15px;">
-<p class="formfonttitle_nwm"><#1736#></p>
+<p class="formfonttitle_nwm"><#1778#></p>
 <p style="padding-left:10px; margin-top:3px; background-color:#444f53; line-height:20px;" id="gateway"></p>
 <p style="padding-left:10px; margin-top:3px; background-color:#444f53; line-height:20px;" id="xgateway"></p>
 <img style="margin-top:5px;" src="/images/New_ui/networkmap/linetwo2.png">
@@ -775,7 +795,7 @@ return true;
 </tr>
 <tr style="display:none;" id="secondary_gateway_ctrl">
 <td style="padding:5px 10px 5px 15px;">
-<p class="formfonttitle_nwm"><#1736#></p>
+<p class="formfonttitle_nwm"><#1778#></p>
 <p style="padding-left:10px; margin-top:3px; background-color:#444f53; line-height:20px;" id="secondary_gateway"></p>
 <p style="padding-left:10px; margin-top:3px; background-color:#444f53; line-height:20px;" id="secondary_xgateway"></p>
 <img style="margin-top:5px;" src="/images/New_ui/networkmap/linetwo2.png">
@@ -783,7 +803,7 @@ return true;
 </tr>
 <tr style="display:none;" id="primary_lease_ctrl">
 <td style="padding:5px 10px 5px 15px;">
-<p class="formfonttitle_nwm"><#1353#></p>
+<p class="formfonttitle_nwm"><#1391#></p>
 <p style="padding-left:10px; margin-top:3px; background-color:#444f53; line-height:20px;" id="lease"></p>
 <p style="padding-left:10px; margin-top:3px; background-color:#444f53; line-height:20px;" id="xlease"></p>
 <img style="margin-top:5px;" src="/images/New_ui/networkmap/linetwo2.png">
@@ -791,7 +811,7 @@ return true;
 </tr>
 <tr style="display:none;" id="primary_expires_ctrl">
 <td style="padding:5px 10px 5px 15px;">
-<p class="formfonttitle_nwm"><#1427#></p>
+<p class="formfonttitle_nwm"><#1465#></p>
 <p style="padding-left:10px; margin-top:3px; background-color:#444f53; line-height:20px;" id="expires"></p>
 <p style="padding-left:10px; margin-top:3px; background-color:#444f53; line-height:20px;" id="xexpires"></p>
 <img style="margin-top:5px;" src="/images/New_ui/networkmap/linetwo2.png">
@@ -799,7 +819,7 @@ return true;
 </tr>
 <tr style="display:none;" id="secondary_lease_ctrl">
 <td style="padding:5px 10px 5px 15px;">
-<p class="formfonttitle_nwm"><#1353#></p>
+<p class="formfonttitle_nwm"><#1391#></p>
 <p style="padding-left:10px; margin-top:3px; background-color:#444f53; line-height:20px;" id="secondary_lease"></p>
 <p style="padding-left:10px; margin-top:3px; background-color:#444f53; line-height:20px;" id="secondary_xlease"></p>
 <img style="margin-top:5px;" src="/images/New_ui/networkmap/linetwo2.png">
@@ -807,7 +827,7 @@ return true;
 </tr>
 <tr style="display:none;" id="secondary_expires_ctrl">
 <td style="padding:5px 10px 5px 15px;">
-<p class="formfonttitle_nwm"><#1427#></p>
+<p class="formfonttitle_nwm"><#1465#></p>
 <p style="padding-left:10px; margin-top:3px; background-color:#444f53; line-height:20px;" id="secondary_expires"></p>
 <p style="padding-left:10px; margin-top:3px; background-color:#444f53; line-height:20px;" id="secondary_xexpires"></p>
 <img style="margin-top:5px;" src="/images/New_ui/networkmap/linetwo2.png">
@@ -815,63 +835,63 @@ return true;
 </tr>
 <tr id="goDualWANSetting">
 <td height="50" style="padding:10px 15px 0px 15px;">
-<p class="formfonttitle_nwm" style="float:left;width:116px;"><#92#></p>
-<input type="button" class="button_gen_long" onclick="goToDualWAN();" value="<#826#>" style="position:absolute;right:25px;margin-top:-10px;margin-left:115px;">
+<p class="formfonttitle_nwm" style="float:left;width:116px;"><#94#></p>
+<input type="button" class="button_gen_long" onclick="goToDualWAN();" value="<#843#>" style="position:absolute;right:25px;margin-top:-10px;margin-left:115px;">
 <img style="margin-top:5px;" src="/images/New_ui/networkmap/linetwo2.png">
 </td>
 </tr>
 <tr id="goSetting" style="display:none">
 <td height="30" style="padding:10px 15px 0px 15px;">
-<p class="formfonttitle_nwm" style="float:left;width:116px;"><#828#></p>
-<input type="button" class="button_gen_long" onclick="goToWAN();" value="<#826#>" style="position:absolute;right:25px;margin-top:-10px;margin-left:115px;">
+<p class="formfonttitle_nwm" style="float:left;width:116px;"><#846#></p>
+<input type="button" class="button_gen_long" onclick="goToWAN();" value="<#843#>" style="position:absolute;right:25px;margin-top:-10px;margin-left:115px;">
 </td>
 </tr>
 <!--tr>
 <td height="50" style="padding:10px 15px 0px 15px;">
-<p class="formfonttitle_nwm" style="float:left;width:98px; "><#275#></p>
-<input type="button" class="button_gen" value="<#826#>" onclick="javascript:goQIS();">
+<p class="formfonttitle_nwm" style="float:left;width:98px; "><#278#></p>
+<input type="button" class="button_gen" value="<#843#>" onclick="javascript:goQIS();">
 </td>
 </tr-->
 </table>
 <table width="95%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="table1px" id="ap_table" style="display:none">
 <tr>
 <td style="padding:5px 10px 5px 15px;" id="RemoteAPtd">
-<p class="formfonttitle_nwm"><#483#></p>
+<p class="formfonttitle_nwm"><#484#></p>
 <p style="padding-left:10px; margin-top:3px; background-color:#444f53; line-height:20px;" id="RemoteAP"></p>
 <img style="margin-top:5px;" src="/images/New_ui/networkmap/linetwo2.png">
 </td>
 </tr>
 <tr>
 <td style="padding:5px 10px 5px 15px;">
-<p class="formfonttitle_nwm"><#69#></p>
+<p class="formfonttitle_nwm"><#70#></p>
 <p style="padding-left:10px; margin-top:3px; background-color:#444f53; line-height:20px;" id="LanProto"></p>
 <img style="margin-top:5px;" src="/images/New_ui/networkmap/linetwo2.png">
 </td>
 </tr>
 <tr>
 <td style="padding:5px 10px 5px 15px;">
-<p class="formfonttitle_nwm"><#1338#></p>
+<p class="formfonttitle_nwm"><#1376#></p>
 <p style="padding-left:10px; margin-top:3px; background-color:#444f53; line-height:20px;"><% nvram_get("lan_ipaddr"); %></p>
 <img style="margin-top:5px;" src="/images/New_ui/networkmap/linetwo2.png">
 </td>
 </tr>
 <tr>
 <td style="padding:5px 10px 5px 15px;">
-<p class="formfonttitle_nwm"><#130#></p>
+<p class="formfonttitle_nwm"><#133#></p>
 <p style="padding-left:10px; margin-top:3px; background-color:#444f53; line-height:20px;"><% nvram_get("lan_netmask"); %></p>
 <img style="margin-top:5px;" src="/images/New_ui/networkmap/linetwo2.png">
 </td>
 </tr>
 <tr>
 <td style="padding:5px 10px 5px 15px;">
-<p class="formfonttitle_nwm"><#128#></p>
+<p class="formfonttitle_nwm"><#131#></p>
 <p style="padding-left:10px; margin-top:3px; background-color:#444f53; line-height:20px;"><% nvram_get("lan_gateway"); %></p>
 <img style="margin-top:5px;" src="/images/New_ui/networkmap/linetwo2.png">
 </td>
 </tr>
 <tr>
 <td style="padding:5px 10px 5px 15px;">
-<p class="formfonttitle_nwm"><#1230#></p>
+<p class="formfonttitle_nwm"><#1267#></p>
 <p style="padding-left:10px; margin-top:3px; background-color:#444f53; line-height:20px;"><% nvram_get("lan_dns"); %></p>
 <img style="margin-top:5px;" src="/images/New_ui/networkmap/linetwo2.png">
 </td>
@@ -880,8 +900,8 @@ return true;
 <td height="50" style="padding:10px 15px 0px 15px;">
 <p class="formfonttitle_nwm" style="float:left;"><#31#></p>
 <br />
-<input type="button" class="button_gen" onclick="gotoSiteSurvey();" value="<#370#>" style="float:right;">
-<!--input type="button" class="button_gen" onclick="manualSetup();" value="<#177#>" style="float:right;"-->
+<input type="button" class="button_gen" onclick="gotoSiteSurvey();" value="<#375#>" style="float:right;">
+<!--input type="button" class="button_gen" onclick="manualSetup();" value="<#180#>" style="float:right;"-->
 <img style="margin-top:5px; *margin-top:-10px;" src="/images/New_ui/networkmap/linetwo2.png">
 </td>
 </tr>

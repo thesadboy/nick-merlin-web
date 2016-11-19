@@ -29,16 +29,17 @@ Parent-AP 可能已关闭。请确认。
 重新打开浏览器。在网址栏中输入 "http://router.asus.com/" 查看中继器连接状态。
 IP 设定更新成功，即将为您导回设定页面。
 重新选择
-变更 R6900 所联机的无线网络基地台。
-正在搜寻范围内的无线网络...
+更换 R6900 所连接的无线网源。
+正在搜寻无线网络...
 侦测不到任何基地台
 选择一组基地台后，按下「建立联机」。
-您正在联机到不安全的网络。在这个网络上传递的信息没有加密。
+您正在连接不安全的网络。在这个网络上传递的信息没有加密。
 您已经连上此基地台。
 不支持的验证方法。
 请稍候，R6900 正在联机到
 请输入名称
 自动
+自动设置
 带宽限制
 带宽限制有助于控制您客户端设备的最大下载速度和上传速度。
 是不合法的 IP 地址
@@ -73,6 +74,7 @@ MAC 地址(选填)
 应用本页面设置
 应用目前所有设置
 取消
+再次侦测
 使用出厂默认设定
 修改
 下一步
@@ -94,17 +96,18 @@ MB /每月
 开启用户自定义目标
 IP 地址被更新。若此步骤花费了超过两分钟的时间，请按照以下三个步骤手动更新 IP 地址：（1）拔掉网线； （2）等待约十秒钟；（3）重新插上网线以获取一个新的 IP 地址。
 错误信息
-最新版的固件现已可用。为了获得最好的体验，华硕强烈建议您更新路由器的最新固件版本。你想现在更新固件？
+最新版的固件现已可用。为了获得最好的体验，华硕强烈建议您更新路由器的最新固件版本。
 该广域网 IP 地址不是外网 IP 地址。 以外网 IP 为基础的服务将无法工作。
 账号名称不能空白!
 账号名称不能少于两个字!
 账号名称不能大于二十个字!
 这个账号已经存在。\n请输入不同的名称!
-密码不能空白!
-输入密码与确认密码不相符!
+密码不能为空!
+输入的密码与确认密码不相符。
 固件升级未完成。原因可能出自映像不实或传输出错。请确认固件版本后再做尝试。
 固件升级中，过程大约需要三分钟...
 固件升级完成。请手动重新启动 R6900。
+为了符合新法规修订，ASUS 调整验证规则以提供更好的韧体品质。您使用的韧体版本与先前发布的韧体及未经验证过的第三方韧体不相容，建议您至官方网站下载最新版韧体使用。
 2016 版权属于 华硕电脑股份有限公司
 针对同时存在于新旧固件中的配置参数，其设置值在整个升级的过程中会一直保留。
 固件版本：
@@ -131,7 +134,7 @@ DNS 服务器2
 子网掩码
 MAC 地址无效。
 路由器目前固件已为最新版本。
-常见的密码组合很容易让他人猜到, 要输入其他密码吗?
+常见的密码组合很容易让他人猜到，是否继续？
 将为您填入默认的子网掩码。
 被保留给回送地址，请输入 1~223 之间的其它值。
 请输入1~223之间的值。
@@ -142,7 +145,7 @@ WPA 密钥应为 8~63 个字符的字符串或 64 个十六进制字符。如果
 WPA 密钥应为 8~63 个字符的字符串或 64 个十六进制字符。
 WPA 密钥应为 8~63 个字符的字符串。
 您不能让本栏空白！
-您的密码长度太短啰! 这样很不安全。
+您的密码长度太短，这样不太安全！
 无效字符！
 不是有效的IP地址！
 不是有效的通信端口编号。
@@ -226,30 +229,30 @@ DHCP 租约
 NAT Passthrough
 网络金钥
 新固件不会自动安装。请进入「系统管理」 >「 固件升级」来下载最新的固件并进行更新。
-很抱歉，您的浏览器不支持 Java Script。<p>请选择支持 JavaScript 的浏览器或开启 JavaScript 功能，以体验 ASUS R6900 各种软件功能。
+很抱歉，您的浏览器不支持 Java Script。<p>请选择支持 JavaScript 的浏览器或开启 JavaScript 功能，以体验 R6900 各种软件功能。
 设置已更新。网页将进行刷新。
 IP 地址或端口已更改。您将断开与 R6900 的连接。
 要设置 R6900，重新连接至无线网络并使用新的 IP 地址和端口。
-在Access Point(无线存取点)模式中，R6900 通过以太网络线连接无线路由器以扩大无线信号覆盖面至其他网络客户。在此模式中，防火墙、IP 分享与 NAT 功能均被默认关闭。
+在无线访问点 (Access Point) 模式中，R6900 透过以太网口连接制无线路由器，以拓展无线信号覆盖范围。在此模式中，防火墙、IP 分享与 NAT 功能是禁用的。
 您也可以访问 <a href=\"http://findasus.local\" style=\"font-family:Lucida Console;text-decoration:underline;color:#FC0;\">http://findasus.local</a> 搜索和进入设备配置页面。
-Access Point(无线存取点)
-R6900 支持多种满足不同需求的操作模式。请选择能符合您现况的模式。
-在无线路由器模式中，R6900 透过 PPPoE、DHCP、PPTP、L2TP 或静态 IP 连接至网络，并且将无线网络分享至 LAN 客户端或设备。<p>在此模式中，NAT、防火墙与 DHCP 服务器被预设为开启。支持 UPnP 与动态 DNS 适用于 SOHO 与家庭使用者。<p>若您是第一次使用或您目前没有使用任何有线/无线路由器时，选择此模式。
+无线访问点 (Access Point)
+R6900 支持多种操作模式，以满足不同需求。请选择您所需的模式。
+在无线路由器模式中，R6900 透过 PPPoE、DHCP、PPTP、L2TP 或静态 IP 连接至网络，并且将无线网络分享至 LAN 客户端或设备。<p>在此模式中，NAT、防火墙与 DHCP 服务器默认为开启。支持 UPnP 与动态 DNS 适用于 SOHO 与家庭使用者。<p>若您是第一次使用，或您当前未使用任何有线/无线路由器时，选择此模式。
 无线路由器 (默认)
-Media Bridge
-R6900 可被设置为 Media Bridge 模式。
-Media Bridge 模式可以同时为多个媒体设备提供最快速的 802.11ac Wi-Fi 连接。
-要使用 Media Bridge 模式，您需要两台 R6900：一台作为 Media Bridge，另一台作为路由器。
-将一台 R6900 设置为路由器模式，另一台 R6900 设置为 802.11ac Media Bridge，为您的媒体设备，如电脑、智能电视、游戏终端、DVR 或媒体播放器，提供一个并行的 802.11ac Wi-Fi 连接。
-变更到 Media Bridge 模式为您的媒体设备提供一个并行的 802.11ac Wi-Fi 连接。
-在 Media Bridge 模式中，只有无线设备连接至 P-AP。客户端设备需使用网线连接至 Media Bridge。
-R6900 正处于 Media Bridge 模式。IP 地址已更改。
-请下载 <a href='http://dlcdnet.asus.com/pub/ASUS/LiveUpdate/Release/Wireless/Discovery.zip' target='_blank' style='font-family:Lucida Console;text-decoration:underline;color:#FC0;'>Device Discovery Utility</a> 来识别 Media Bridge 的 IP 地址。
+无线桥接 (Media Bridge)
+R6900 可被设置为无线桥接 (Media Bridge) 模式。
+无线桥接 (Media Bridge) 模式可同时为多个媒体设备提供快速的 802.11ac Wi-Fi 连接。
+要使用无线桥接 (Media Bridge) 模式，您需要两台 R6900：一台作为 Media Bridge，另一台作为路由器。
+将一台 R6900 设置为路由器模式，另一台 R6900 设置为 802.11ac 无线桥接 (Media Bridge)，为您的媒体设备，如电脑、智能电视、游戏终端、DVR 或媒体播放器，提供一个并行的 802.11ac Wi-Fi 连接。
+变更到无线桥接 (Media Bridge) 模式为您的媒体设备提供一个并行的 802.11ac Wi-Fi 连接。
+在无线桥接 (Media Bridge) 模式中，只有无线设备连接至 Parent-AP。客户端设备需使用网线连接至网桥。
+R6900 正处于无线桥接 (Media Bridge) 模式。IP 地址已更改。
+请下载 <a href='http://dlcdnet.asus.com/pub/ASUS/LiveUpdate/Release/Wireless/Discovery.zip' target='_blank' style='font-family:Lucida Console;text-decoration:underline;color:#FC0;'>Device Discovery Utility</a> 来识别无线桥接 (Media Bridge) 的 IP 地址。
 请检查是否已经从 WAN 口移除网线。
-在 Repeater mode (中继模式)下，R6900 可以延伸您使用环境内其他基地台的信号，以提供无线用户更好的信号品质。
+在无线桥接模式下，R6900 采用无线连接至一个已经存在的无线网络，以扩展无线覆盖范围。在这个模式下，防火墙、IP 分享以及 NAT 功能是禁用的。
 R6900 的 LAN  IP 地址可能已更改。
 关闭此窗口并重新访问 http://router.asus.com
-中继模式
+无线桥接模式
 WISP 模式
 R6900 通过无线网络连接至您的主要路由器、存取点或公共热点，并与您的有线/无线客户端共享网络。此模式下， NAT、防火墙和 DHCP 服务器默认为开启。
 连接至 Wi-Fi 热点前，请确认已允许您访问互联网。
@@ -267,15 +270,15 @@ PIN 码不正确。请输入正确的 PIN 码，并重新连接 3G/4G USB 无线
 PPP 用户名称
 账号设置
 本栏可让您提供 R6900 所使用的主机名称。通常是您ISP运营商要求的名称。
-来自 ISP 运营商的特别需求
+网络服务运营商 (ISP) 特殊需求
 MAC (Media Access Control) 地址是特定的标识符可识别网络中您的计算机或设备。ISP 监视与他们服务相连的设备的 MAC 地址，并且不允许新的 MAC 地址的网络联机。为了弥补这一缺憾，您可以执行以下任一项目：<p>* 联络您的 ISP 并且要求更新与您的 ISP 署名相关的 MAC 地址。<p>* 克隆或更改新装置的 MAC 地址以匹配原始设备的 MAC 地址。
 DNS 服务器
 连线状态
 当您的网络服务供应商提供了比您当前所选的更高级别的 MPPE 加密级别时， 出于更好的安全性考虑，将优先应用较高级别的加密方式。
 当您的虚拟服务器支持比您当前所选的更高级别的 MPPE 加密级别时， 出于更好的安全性考虑，将优先应用较高级别的加密方式。
 网络设置向导
-新密码与系统默认密码相同，强烈建议您设置一个更为复杂的密码。
-若不更改默认密码（admin），您的路由器易受到安全威胁，其他人能够很容易猜出登录密码。您确定继续使用此低安全性密码吗？
+新密码与系统默认密码相同，强烈建议您设置一个更严谨的密码。
+若不更改默认密码（admin），非授权用户很容易猜出登录密码，您的路由器将受到安全威胁。您确定继续使用此默认密码吗？
 使用初始设置（使用与目前基地台相同的密码）
 动态 IP 地址连接设置
 开始克隆电脑的 MAC 地址到路由器
@@ -287,6 +290,8 @@ DNS 服务器
 若您不确定使用哪种 ANNEX 模式，请咨询您的互联网服务供应商（ISP）。
 未选择 ANNEX 模式。
 强烈建议您首先设置无线网络安全设置，是否继续？
+请将网路线接上 WAN 接口。系统将会自动侦测你的网路设定。
+直接进行门店模式或设定专家模式
 侦测到 PPPoE/DSL 连接。
 设置向导侦测到您的网络连接类型为 PPPoE/DSL。
 点击「下一步」输入您的互联网服务供应商（ISP）提供的帐户名称与密码。
@@ -313,10 +318,10 @@ SIM 卡安装不正确。
 您已进行了 WAN 设置。
 是否要使用默认的无线安全设置？
 R6900 找不到连接类型。您的 ADSL 设置可能属于以下模式之一：MER 静态 IP，IPoA 或 Bridge。请点击 手动设置 以手动进行 WAN 设置。
-验证失败
-帐号名称与密码错误。
-如果您正离线设定路由器，您可选择<b>无线网路设置</b>跳过互联网连线侦测，进到下一阶段设定无线网路名称及密码。
-点选<b>选择网络类型</b>重新输入 ISP 提供的连线帐号密码。
+授权失败
+用户名或密码错误。
+若您的路由器离线，请点击<b>无线网路设置</b>跳过网络模式搜索，进行无线名称及密码设定。
+点选<b>选择网络类型</b>请再次输入网络服务运营商 (ISP) 所提供的用户名称与密码。
 无法连接到互联网。请与您的 ISP 再次确认您的帐户数据，或拨打华硕支持热线获得技术支持。
 帐号名称与密码已通过验证，但未能从网络服务供应商（ISP）处获取一个 IP 地址。请联系您的网络服务供应商（ISP）。
 无法连接到互联网
@@ -357,32 +362,32 @@ MAC（媒体访问控制）地址代表网络上的硬件（如：网卡）所�
 当调制解调器的 LED 指示灯开始闪烁时，点击「重新侦测」自动侦测连接类型。
 请确认电话线已连接到 DSL 接口。
 电话线未连接。
-变更路由器密码以阻止未授权的客户端访问您的华硕无线路由器。
-用户名与密码区分大小写。
-您的路由器登录信息用于访问路由器的管理设置。
-路由器的登录信息也可用于访问附加功能，如 FTP 和 AiCloud 2.0。
+更改路由器密码，以阻止未授权客户端访问您的华硕无线路由器。
+用户名与密码，区分大小写。
+您的路由器登录信息，用于访问路由器的管理设置。
 默认的用户名和密码为：
 设置路由器登录资讯
 请在下方输入必要的信息。
 从您的网络服务供应商（ISP）处获取帐号名称与密码。
 若您选择使用 PPPoE、PPTP 或 L2TP 连接类型，您的网络服务供应商（ISP）会给您一张卡片或文档，上面记录有您的帐号名称与密码。所提供的帐号名称与密码是用于连接互联网之用。此帐号与密码并非用于管理路由器的用户名与密码。
-您要继续使用之前的无线网络安全设置吗？
+启用 PPTP 或 L2TP 服务 (可选)
+您想用之前的无线网络安全设定吗？
 强烈建议您首先设置无线网络安全设置。
 重新扫描
 服务
 显示密码
 (建议设置)
 您的 ISP 应该给你一个带有用户名和密码的卡或文件。 *此示例仅用于说明目的的示例。
-输入用户名和密码，这些信息由 ISP（互联网服务提供商）提供。
-HINET 用户的客户号码为 <span style="color:#FC0;">HNxxxxxxxx@hinet.net</span>
+输入用户名称和密码，相关信息可洽询您的网络服务运营商 (ISP)。
+HiNet 用户的客户号码为 <span style="color:#FC0;">xxxxxxxx@hinet.net</span>
 连接情景 1
 连接情景 2
 您的 ISP 已经提供给您 IP 地址，子网掩码，网关和 DNS 地址的信息。如果没有，请联系您的 ISP。
-您的网络连接需要用户名和密码吗？
+您的网络连接，需要输入用户名和密码吗？
 我的网络连接类型是自动分配 IP (宽带猫, 动态 IP, DHCP)或静态 IP
-该类型允许您的 R6900 自动获取 IP 地址。这种连接类型通常用于有线服务提供商。
-我的网络连接类型是 PPPoE，L2TP 或 PPTP
-* 如果您不知道网络类型，请联系您的运营商。
+该类型允许您的 R6900 自动获取 IP 地址。这种连接类型通常用于网络服务提供商。
+我的网络连接类型是 PPPoE
+* 如果您不知道网络类型，请联系您的 ISP 网络提供商。
 5 GHz 与 2.4 GHz 设定相同
 5 GHz-1 与 2.4 GHz 设定相同
 5 GHz-2 与 5 GHz-1 设定相同
@@ -414,17 +419,13 @@ SIM 卡状态
 请输入您的用户名和密码
 启用 VPN 客户端
 点击「下一步」开启 R6900 的快速网络设置向导。
-450+450 同步双带宽无线网络。
-USB 2.0 x 2，可支持多功能打印机、UPnP、SAMBA 以及 FTP Server。
-Turbo NAT 加速引擎，提供千兆等级的网络传输速度。
-高水准的使用层级，包括极佳的下载和游戏性能，以及多客户端连接。
-要在 2.4 GHz 达到 600Mbps 最佳速度，R6900 必须连接支持 TurboQAM 的无线网卡，例如 ASUS PCE-AC68 或设定为 Media Bridge 的 R6900。
+要在 2.4 GHz 达到 600Mbps 最佳速度，R6900 必须连接支持 TurboQAM 的无线网卡，例如 ASUS PCE-AC68 或设定为无线桥接 (Media Bridge) 的 R6900。
 欢迎加入华硕网络产品！
 网络名称或 SSID 是一个用于辨识无线网络的名称。WiFi 设备默认自动侦测范围内的所有网络名称。
 安全密钥是连接一个已加密的无线网络的密码，防止未经授权的客户端访问无线网络。要访问加密的无线网络，用户需输入安全密钥。
-指定一个特殊的名称或 SSID（Service Set Identifier）以帮助辨识您的无线网络。
-输入 8~63 个字符（字母、数字或其组合）或64个十六进制字符组成的网络密钥。默认无线加密模式为 WPA2-Personal AES。若您不想设置网络加密。安全密钥栏位可以为空，但这会使您的网络被未经授权的客户端使用。
-输入 8~63 个字符（字母、数字或其组合）组成的网络密钥。默认无线加密模式为 WPA2-Personal AES。
+设定唯一的名称或 SSID（Service Set Identifier）方便辨识您的无线网络。
+输入一个网络密码，介于 8 到 63 个字符或 64 个十六进制数字的字母和数字组合。默认无线安全设定的是 WPA2-Personal AES。若您不想进行网络安全性设定,可将安全性设定字段清空，但这样未经授权的用户会轻易连接您的网络。
+输入一个网络密码，介于 8 到 63 个字符组合。默认无线安全设定的是 WPA2-Personal AES。
 用户名称不能空白！
 用户名称 / 密码区域不能为空。
 ISP账号设置
@@ -433,7 +434,7 @@ ISP账号设置
 重新侦测网络联机状态
 重新侦测
 自动侦测
-开始侦测互联网联机类型...
+开始搜索您的联网模式...
 侦测过程可能需要几分钟，请等待侦测完成。
 完成上网设置
 前往ASUS首页
@@ -456,11 +457,11 @@ L2TP 模式联机失败，按此链接可重新侦测联机。
 自动取得 IP 连线失败，您可由此设定以建立连线。
 ISP 数据设置
 点击 <a><label for="upload_setting_profile" style="text-decoration:underline;cursor:pointer;font-weight:bold;color:#FC0;" onclick="">恢复设置</label></a> 以载入已保存的设置。
-若您已备份了路由器设置，点击 <a><label for="upload_setting_profile" style="text-decoration:underline;cursor:pointer;font-weight:bold;color:#FC0;" onclick="">恢复设置</label></a> 可恢复至已保存的设置。
-若您了解您的 ISP 连接类型，可点击 <a><label style="text-decoration:underline;cursor:pointer;font-weight:bold;color:#FC0;" onclick="submitForm(0)">手动设置</label></a> 以手动设置您的无线网络。
+若您已备份了路由器的设置内容，点击 <a><label for="upload_setting_profile" style="text-decoration:underline;cursor:pointer;font-weight:bold;color:#FC0;" onclick="">恢复设置</label></a> 可恢复至已保存的设置。
+若您了解 ISP 的连接类型，可点击 <a><label style="text-decoration:underline;cursor:pointer;font-weight:bold;color:#FC0;" onclick="submitForm(0)">手动设置</label></a> 以手动设置您的无线网络。
 点击 <a><label style="text-decoration:underline;cursor:pointer;font-weight:bold;color:#FC0;" onclick="submitForm(0)">手动设置</label></a> 以手动设置路由器高级设置或将 R6900 设置为
-您有无线网络方面的专业知识，想要跳过网络设置向导？
-请选择您的 ISP 提供的互联网连接类型。
+您具备无线网络方面的专业知识，想要跳过网络设置向导？
+请选择您 ISP 提供的网络连接类型。
 互联网联机类型
 请选择互联网联机类型
 无线网络设置
@@ -473,16 +474,16 @@ ISP 数据设置
 选择 ISP 设置档
 请选择
 用华硕路由器帐号登录
-用华硕路由器帐号登录
 用网件路由器账号登录
 用思科路由器账号登录
+用华为路由器账号登录
 标准设置
 启用
 未启用
 待机
 状态
 远程基地台状态
-ASUS R6900
+R6900
 活动连接
 自动注销
 更换时区
@@ -499,8 +500,22 @@ ASUS R6900
 用户账号不能为'root','guest','anonymous' 请输入有效的账号名称！
 虚拟专用网 (VPN) 详细设置
 输入用户名与密码。
-点击【下一步】使路由器自动获得新的 IP 地址。新的 IP 地址为：
-请确认您已设置过的每项相关服务，设置为新的 IP 地址；如端口转发或 DMZ 等功能。
+请确认 R6900 的 WAN 端口与互联网之间的网路线已接上。
+请确认是否需要更改 <a style='color:#FFF' href='/Advanced_OperationMode_Content.asp'>操作模式</a>。
+您的 PPPoE 或是 VPN 的帐号、密码不被接受，请<a style='color:#FFF' href='/Advanced_WAN_Content.asp'>重新输入</a>。
+PPPoE 认证失败
+切换 WAN 类型
+请确认<a style='color:#FFF' href='/Advanced_WAN_Content.asp'>网路设置</a>内容正确。
+建议开启 WAN 连线。 <a style='color:#FFF' href='/index.asp'>更改设置。</a>
+请检查 USB 网卡是否已正常开机完成。
+更改您的 <a style='color:#FFF' href='/Advanced_Modem_Content.asp'>USB 网卡设置</a>。
+您已手动中断 WAN 连线
+USB 网卡正在重开机或关闭
+点击【下一步】更换成新的 IP 地址。新的 IP 地址为：
+更改 IP 地址后，请确认相关服务的 IP 设置是否需要调整，如端口转发或 DMZ 等功能。
+请确认前端基地台的网路连线正常。
+<a style='color:#FFF' href='/QIS_wizard.htm?flag=manual'>重新设置连线</a>。
+无法与 Parent-AP 连线
 联机失败原因
 您的网络联机出现问题，导致您无法前往您想要阅读的网页
 未连接网线。
@@ -528,10 +543,10 @@ ASUS R6900
 请手动重新对远程网络建立联机。
 请检查 IP 与 DNS 设置是否正确。
 请重新设置您的 R6900 的近端网络地址，并确定它与您远程的网关地址不同。如：192.168.X.X，X为2至254间之一数字。
-After connecting the router to the modem, click "前往设置" to launch the Quick Setup Wizard.
-To set up the WAN connection offline or change the operation mode to Access Point, click 手动设置.
-In the next step, set up the login name and password for security.
-ASUS Wireless Router R6900
+请插入网线，将宽带网线插入路由器 WAN 接口，并选择「自动设置」按钮。
+如果希望在没有连接网线的状况下完成配置，请选择「手动设置」按钮。
+下一步，请设定安全的路由器登录名称和密码。
+Wireless Router R6900
 R6900
 配置
 无线网络名称
@@ -547,6 +562,7 @@ WPA加密
 [n Only]模式下，原WEP或TKIP加密设定将自动调整为AES加密，以取得正确的联机。
 联机成功
 UTF-8
+简体中文
 访问内部网络
 允许访客使用内部网络。
 现在您可以访问您的 USB 存储设备以及连接到 R6900 并开启网络位置 (Samba) 功能的设备。
@@ -567,11 +583,11 @@ UTF-8
 网页浏览历史
 网页浏览历史显示用户的网页浏览历史。
 网络电话和即时通讯
-开启 Adaptive QoS 网络监控家的过程可能需要几分钟。
 其他
 Adaptive QoS 网络监控家
 带宽管理设置
 In the QoS Adaptive type, the APPs with higher priority will be get better bandwidth over another when the APPs are competing for limited bandwidth, Drag and drop APPs category to upper level for higher priority
+Please select priority mode depending on your networking environment. You can also choice customize mode to prioritize app category.
 视频和音频流媒体
 网上浏览
 新增账号的默认权限不可讀写。
@@ -776,12 +792,13 @@ R6900 检测到您正在使用 IE6。请尝试使用 Google Chrome、IE7 或更�
 无法取得 IP 地址信息
 基地台 IP 地址
 基地台搜寻
+Apps
 APN 设置
 正在载入 APP 列表…
 WPA 金钥认证失败，请重新输入。
 华硕 EZ 打印机共享（仅限 Windows 操作系统）
 您的网络登录名和密码仍然是默认设置。我们强烈建议您将其更改为避免安全性的风险。
-目前您的路由器有最新韧体可进行更新。建议您更新以增加系统的稳定性，得到新的和改进的功能，也可避免安全性的风险。
+有最新韧体可进行更新。
 您的无线网络尚未进行加密动作。我们建议您为您的网络创建一个密码，以避免安全性的风险。
 您当前的 AiDisk FTP 权限允许未授权用户登入。我们建议您关闭「允许匿名登入」，以避免安全性的风险。
 FTP 共享账号管理存在风险，已经自动关闭「允许匿名登入」。您可以使用路由器的账号和密码登陆；如果您想要更改权限设定
@@ -825,7 +842,8 @@ WAN / LAN 带宽监控
 已启用
 导出
 前往设置
-删除
+移除
+发送
 外部网络设置
 验证码
 请输入验证码
@@ -866,7 +884,6 @@ PPPoE、PPTP 或 L2TP 协议下不支持二级 CTF 加速。要更改为一级 C
 清除
 关闭
 删除
-再次侦测
 未启用
 不同意
 未联机
@@ -890,6 +907,7 @@ PPPoE、PPTP 或 L2TP 协议下不支持二级 CTF 加速。要更改为一级 C
 当前频率
 当前带宽设置范围
 自定义
+客制化
 日期
 五
 一
@@ -913,14 +931,14 @@ PPPoE、PPTP 或 L2TP 协议下不支持二级 CTF 加速。要更改为一级 C
 iTunes 共享:
 打印服务:
 个人电脑
-共享器/路由器
+路由器
 无线访问点
 网络存储服务器
 网络摄像头
 无法辨识的设备
-在中继模式中，DHCP 分配的 IP 地址将更改。安装并使用 <a href=\"http://dlcdnet.asus.com/pub/ASUS/LiveUpdate/Release/Wireless/Discovery.zip\" style=\"font-family:Lucida Console;text-decoration:underline;color:#FC0;\">Device Discovery Utility</a> 来获得无线路由器新的 IP 地址。
-在访问点（AP）模式中，由 DHCP 指派的 IP 地址将会更改。安装并使用 <a href=\"http://dlcdnet.asus.com/pub/ASUS/LiveUpdate/Release/Wireless/Discovery.zip\" target=\"_blank\" style=\"font-family:Lucida Console;text-decoration:underline;color:#FC0;\">Device Discovery 程序</a> 来侦测无线路由器的 IP 地址。
-在 Media Bridge 模式中，DHCP 分配的 IP 地址将更改。安装并使用 <a href=\"http://dlcdnet.asus.com/pub/ASUS/LiveUpdate/Release/Wireless/Discovery.zip\" style=\"font-family:Lucida Console;text-decoration:underline;color:#FC0;\">Device Discovery Utility</a> 来获得无线路由器新的 IP 地址。
+在无线桥接模式中，若由 DHCP 所分配的 IP 地址变动。请安装与使用 <a href=\"http://dlcdnet.asus.com/pub/ASUS/LiveUpdate/Release/Wireless/Discovery.zip\" style=\"font-family:Lucida Console;text-decoration:underline;color:#FC0;\">Device Discovery Utility</a> 以利获取无线路由器新的 IP 地址。
+在无线访问点 (AP) 模式中，若由 DHCP 所分配的 IP 地址变动，请安装与使用 <a href=\"http://dlcdnet.asus.com/pub/ASUS/LiveUpdate/Release/Wireless/Discovery.zip\" target=\"_blank\" style=\"font-family:Lucida Console;text-decoration:underline;color:#FC0;\">Device Discovery 程序</a> 以利获取无线路由器新的 IP 地址。
+在无线桥接 (Media Bridge) 模式中，DHCP 分配的 IP 地址将更改。安装并使用 <a href=\"http://dlcdnet.asus.com/pub/ASUS/LiveUpdate/Release/Wireless/Discovery.zip\" style=\"font-family:Lucida Console;text-decoration:underline;color:#FC0;\">Device Discovery Utility</a> 来获得无线路由器新的 IP 地址。
 此功能能够控制 R6900 无线内部网络中，特定网卡物理地址（MAC Address）的访问。
 DHCP 查询频率
 积极模式
@@ -1049,11 +1067,15 @@ R6900 provides two modes for encapsulating or transporting LAN and WAN protocols
 仅外部
 扩大 TTL 值
 EZQoS 带宽管理
+Get the bandwidth information from ISP or go to <a href="http://speedtest.net" target="_blank" style="text-decoration:underline;color:#FC0">Speedtest</a> to check bandwidth
+The default is 0, which means unlimited bandwidth
 带宽管理能够保证高优先级任务及应用的带宽。
 <span style="font-weight:bolder;font-size:14px;">Adaptive QoS 网络监控家</span>能够通过预先定义、拖放设置，在有线及无线连接时，保证高优先级应用及程序传入和传出的带宽：如游戏、流媒体、网络电话、网上浏览与文件传输。
-开启带宽管理功能，单击带宽管理滑动开关并填写上传和下载数据。 从 ISP 获取带宽的信息，或转至 <a href="http://speedtest.net" target="_blank" style="text-decoration:underline;">http://speedtest.net</a> 检查带宽。
+<span style="font-size:14px;font-weight:bolder">Bandwidth Limiter</span> helps you to control download and upload max speed of your client devices.
+开启带宽管理功能，单击带宽管理滑动开关并填写上传和下载数据。
 <span style="font-weight:bolder;font-size:14px;">传统带宽管理</span> 由用户手动自定义参数在有线及无线连接时，保证高优先级应用及程序传入和传出的带宽。
 关于 EZQoS 带宽管理
+开启 QoS 网络监控家的过程可能需要几分钟。
 启用 Smart QoS
 Adaptive QoS 网络监控家模式可基于自身喜好去修改应用程序的优先级类别。带宽管理的类型转换(网络监控家/传统)只保留每个客户端的优先级配置。
 传统带宽管理
@@ -1062,13 +1084,26 @@ EZQoS 带宽管理提供四种常用的网络应用类型，通过简易的设�
 若需要更专业详尽的设置，请选择
 故障转移重试次数
 查找常见问题解答
+3G/4G 纪录
 评论 / 建议
 兼容性问题
+On OS or Application
+With external hardware disk
+With modem
+With other network devices
+With other router
+With printer
+With USB modem
 连接 / 网速问题
+Slow wireless speed
+Slow wired speed
+Router reboot automatically
+Unstable connection problem
 选择最能描述您的 DSL 服务性能的项目。
 您的国家 / 地区
 我们期待您的反馈、意见和建议， 以及任何有关华硕产品的想法。
 您的回报信息对我们非常重要，可以帮助我们改善 R6900 的固件。若您有任何意见、建议或连接问题，请填写以下表格；送出回报信息会同时夹带目前的 DSL 记录，一并提供给华硕支援团队。为确保您能收到我们的答复，请正确输入您的 e-mail 地址。
+Now this function can't work, because your Router isn't connected to the Internet. Please send your Feedback to this email address :
 您的 e-mail 地址
 电子邮件地址的格式不正确。
 电子邮件地址域为空。您确定要继续吗？
@@ -1080,7 +1115,7 @@ EZQoS 带宽管理提供四种常用的网络应用类型，通过简易的设�
 iptables 设置
 您的互联网服务供应商（ISP）
 最多可输入 2000 字 - 还可以输入
-Now this function can't work, because your ASUS Router isn't connected to the Internet. Please send your Feedback to this email address :
+Now this function can't work, because your Router isn't connected to the Internet. Please send your Feedback to this email address :
 固件版本将会随您的信息及反馈一同提交。
 您的反馈将用于诊断问题及完善 R6900 固件。您提交的任何信息，无论是明确的还是出于偶然，都将根据 <a style="font-weight: bolder;text-decoration:underline;cursor:pointer;" href="http://www.asus.com/Terms_of_Use_Notice_Privacy_Policy/Privacy_Policy/" target="_blank">隐私政策</a>受到保护。
 通过提交您的反馈，您已同意华硕采纳您的意见以完善其网络及无线网络产品。
@@ -1094,6 +1129,7 @@ Now this function can't work, because your ASUS Router isn't connected to the In
 我们重视所收到的所有反馈。 我们会根据您的意见和建议提高您使用华硕产品的体验。
 感谢您抽出宝贵的时间来提交反馈。
 您所建议的翻译
+翻译建议
 经常无法使用
 新文件夹名称超过12字，有些操作系统可能无法兼容!\n要继续操作吗?
 文件夹名称不能空白!
@@ -1175,11 +1211,12 @@ URL过滤器列表：
 请先解压缩文件。
 Game Boost
 Real-Time Network Protection
-AiProtection, incorporating state-of-the-art, three-pronged security from Trend Micro™, gives you enterprise-level security in the home — making ASUS routers equipped with this feature the most secure home routers you can buy! It constantly monitors the health and safety of your network for total peace of mind. You can temporally turn off anti-virus on your PCs to reserve system resources for gaming.
-Benefits to enable Game Boost on ASUS router
+AiProtection, incorporating state-of-the-art, three-pronged security from Trend Micro™, gives you enterprise-level security in the home — making routers equipped with this feature the most secure home routers you can buy! It constantly monitors the health and safety of your network for total peace of mind. You can temporally turn off anti-virus on your PCs to reserve system resources for gaming.
+Benefits to enable Game Boost on router
 Reduce average ping time and variation.
 Reduce average packet loss rate.
 Cross platform supported.
+Windows, Macintosh, Linux, Mobile, Console game
 Utility free for your PCs, reserve CPU/RAM usage for game.
 Life time free of one device acceleration.
 Game Boost,an exclusive gamer private network(GPN) powered by WTFast automatically performs route optimization, choosing the most efficient route for your game packets. Life-Time free for one device, cross platforms supported.
@@ -1200,7 +1237,7 @@ You are now using router free basic account.
 * Check the latest supported games of router version <span><a id="link" href="javascript:open_link('')" style="text-decoration:underline;color:#008DE5;">here</a></span>.
 * GPN performance will be varied by your ISP or location. Please keep your firmware stay up to date.
 * How to choose a good GPN server? <span><a id="link" href="javascript:open_link('gpn1')" style="text-decoration:underline;color:#008DE5;">Here</a></span> And ensure best gaming experiences? <span><a id="link" href="javascript:open_link('gpn2')" style="text-decoration:underline;color:#008DE5;">Here</a></span>
-* How to use WTFast on ASUS Router? <span><a id="link" href="javascript:open_link('howto')" style="text-decoration:underline;color:#008DE5;">Here</a></span>
+* How to use WTFast on Router? <span><a id="link" href="javascript:open_link('howto')" style="text-decoration:underline;color:#008DE5;">Here</a></span>
 Game Boost Rules List
 系统开机至目前所耗费时间
 已开机时间
@@ -1253,6 +1290,7 @@ NAT ( 网络地址转换 )是使用在路由器中的一项进程以将网络封
 目标频段
 互联网
 区间
+Introduce demo
 邀请
 在来源或目的IP地址方面，您可输入一特定的IP地址，如「192.168.122.1」，或在子网络内的IP地址，如「192.168.123.*」、或「192.168.*.*」，或像是「*.*.*.*」这样所有的IP地址。
 IP 共享
@@ -1567,6 +1605,8 @@ CTF (Cut Through Forwarding) 及 FA (Flow Acceleration) 加速器已开启。
 H.323 Passthrough
 IPSec Passthrough
 L2TP Passthrough
+Bonding/ Link aggregation
+Please enable Bonding (802.3ad) support of your wired client and connect it to Router LAN1 and LAN2.
 启用 NAT Passthrough 功能，让虚拟专用网 Virtual Private Network (VPN) 服务所需要用到的协定允许通过。
 PPTP Passthrough
 RTSP Passthrough
@@ -1615,6 +1655,9 @@ If you want to enable WPS, you need to disable hiding SSID first.
 Note: New patch will be updated regularly, please keep your firmware stay up to date.
 如果您遇到华硕 DDNS 服务无法使用的问题，请前往 <a href="http://iplookup.asus.com/nslookup.php" target="_blank" style="font-family:Lucida Console;text-decoration:underline;">http://iplookup.asus.com/nslookup.php</a> 网站取得您的实体 IP 位置以进行使用
 已经设定为此模式。
+双向
+下载
+上传
 动态密码身份验证
 Parent-AP 状态
 实行计划表
@@ -1674,7 +1717,6 @@ PPTP 选项
 网络服务名称
 启用 VPN + DHCP 连接
 无论您在何处，都可以通过虚拟专用网 (VPN) 服务器来访问您家里的网络内容
-请按照以下步骤来使用虚拟专用网 (VPN) 服务器：<br>(1) 开启 PPTP VPN 服务器<br>(2) 为客户端设置 IP Pool（最多可设置 10 个客户端）<br>(3) 为 VPN 客户端设置帐号与密码<br>(4) 开启您个人电脑或智能手机上的 VPN 连接应用程序<br>(5) 添加一个 PPTP VPN 连接，VPN 服务器地址为
 (6) 如果您的外部网络为动态 IP，<a href="../Advanced_ASUSDDNS_Content.asp" target="_blank" style="text-decoration: underline; font-family:Lucida Console;">请点击这里来设置 DDNS</a>
 内部网络前缀长度
 上一页
@@ -1751,9 +1793,9 @@ UDP 代理（Udpxy）
 服务器至客户端
 安全代码
 对每个 AMPDU 使用 RTS
-可以放心删除硬盘
-您确定要删除所选的硬盘吗?
-安全地删除硬盘
+可以放心移除硬盘
+您确定要移除所选的硬盘吗?
+安全地移除硬盘
 设定网络（Samba）服务的账号与许可。
 VPI 与 VCI 设置相同。
 系统正在重新启动中！请稍候，我们将为您导至 R6900 的首页。
@@ -1761,7 +1803,7 @@ VPI 与 VCI 设置相同。
 秒
 无线安全层级
 全选
-选择AP﹝无线存取点﹞。
+选择无线访问点 (AP)。
 选择 APN 服务。
 选择 DHCP 客户端。
 选择设备名称。
@@ -1836,10 +1878,14 @@ STA 选取规则
 信噪比图表显示了信噪比（SNR）等级，可用来确定 DSL 连接的稳定性。Transmission(发送) / Reception(接收) 显示了已发送和已接收的比特数(bits/carrier)。
 收集数据中，频谱图表显示所需的时间（秒）：
 这些图表自动更新所需的时间（秒）：
+Spoof LAN TTL value
 保存/重新启动
 热备份保护
 当启用双线路热备份保护模式时， 一旦正常工作的线路中断或无法访问时，备份线路马上接替正常线路开始传送数据。
 系统将保持当前 WAN 待机状态，并将监测时间间隔缩短为
+统计类别
+统计最终日
+显示方式
 重试间隔
 Detect Interval
 重试次数
@@ -1914,6 +1960,15 @@ Enable Traffic Statistic allows you to record networking traffic information of 
 <b>注意：</b>来自互联网的数据封包会几乎相等于传送至有线与无线设备装置的封包总和。
 当开启 NAT 加速时，有线网络流量绕过 CPU，会影响流量监控的准确性。
 Traffic Analyzer 流量分析
+即时流量
+每日流量
+每月流量
+You should turn on the Traffic Statistic to record the traffic information
+前 5 个应用程序使用量
+前 5 个客户端使用量
+使用量(%)
+使用量
+每周流量
 通道 MTU
 通道 TTL
 国际日期变更线以西
@@ -2079,8 +2134,6 @@ VPN 客户端至 LAN
 开启虚拟专用网 (OpenVPN) 服务器
 开启虚拟专用网 (PPTP VPN) 服务器
 导出 OpenVPN 设置文件
-虚拟专用网 (VPN) 服务器最多仅支持 10 个客户端！
-最多 10 个客户
 服务器模式
 支持网上邻居共享（Samba）
 广告 DNS 至客户端
@@ -2130,10 +2183,10 @@ TLS 重协调时间
 导入 .ovpn 文件
 导入 CA 文件或手动编辑 .ovpn 文件。
 无线路由器当前使用私人 WAN IP 地址（192.168.x.x，10.x.x.x 或 172.16.x.x）。开启虚拟专用网 (VPN) 服务器之前，请先设置 DDNS 服务。
-ASUSWRT一次仅支持一个 VPN 服务器连接。若您启用了 \"OpenVPN 服务器\"，则 \"PPTP 服务器\" 将被自动禁用。您确定要启用 VPN 服务器吗？
+XWRT一次仅支持一个 VPN 服务器连接。若您启用了 \"OpenVPN 服务器\"，则 \"PPTP 服务器\" 将被自动禁用。您确定要启用 VPN 服务器吗？
 虚拟专用网 Virtual Private Network (VPN) 客户端通常用来连接到 VPN 服务器，以安全地通过公共网络访问私人资源。
 有些设备，如机顶盒、智能电视机与蓝光播放器等，不支持 VPN 软件。
-ASUSWRT 虚拟专用网 (VPN) 功能为家庭网络内的所有设备提供 VPN 访问，而无需在每台设备上安装 VPN 软件。
+XWRT 虚拟专用网 (VPN) 功能为家庭网络内的所有设备提供 VPN 访问，而无需在每台设备上安装 VPN 软件。
 要开启虚拟专用网 (VPN) 连接，请按照以下步骤操作：
 添加设置文件
 选择虚拟专用网 (VPN) 连接类型
@@ -2196,13 +2249,10 @@ VLAN ID
 基本速率设置：
 选择传输速率。建议您选择「Auto」以获得最大的性能。
 数据传输速率（Mbps）：
-无线桥接（又名 WDS）功能允许您的 R6900 无线连接至其他基地台。WDS 也可作为中继器模式。请注意，透过此方式延伸无线讯号会让无线网路速度会减一半。
-仅支持 Open System/NONE, Open System/WEP 加密方式。
 开启WDS 延伸无线讯号，请按以下步骤操作：
 选择 [WDS Only] 或 [Hybrid] 模式并在远程列表中添加存取点的 MAC 地址。
 确认此无线路由器与您想要连接的基地台使用相同的频道。
 在想连线的基地台WDS 管理介面中，输入本无线路由器 MAC 位址位址。
-要获得最佳性能，请进入「高级设置」>「无线网络」>「一般设置」为网络中的每台路由器设置相同的通道带宽、控制通道与延伸通道。
 当前您正在使用自动频道带宽。点击 <a style="font-size:13px;font-family: Lucida Console;color:#FC0;text-decoration:underline;" href="/Advanced_Wireless_Content.asp?af=wl_bw">这里</a> 进行修改。
 当前您正在使用自动频道。点击 <a style="font-size:13px;font-family: Lucida Console;color:#FC0;text-decoration:underline;" href="/Advanced_Wireless_Content.asp?af=wl_channel">这里</a> 进行修改。
 无线专业设置提供您无线网络传输与效率方面的设置。若您没有选择适合的设置，建议采用我们校调好的默认值。
@@ -2236,7 +2286,7 @@ WEP加密
 优化 AMPDU 聚集
 AMPDU 为 mpdu 优化的最大数量。
 选择「AP Only」时，无线桥接的功能会被关闭。选择「WDS Only」时，无线桥接功能会被启动，但系统不提供无线网络服务。选择「Hybrid」时，无线桥接的功能会被启动，同时您也可以通过无线网络连接到 R6900。
-AP模式
+AP 模式
 AP Only
 WDS Only
 Hybrid
@@ -2254,7 +2304,7 @@ Airtime Fairness
 访问点PIN码
 此选项可让您开启或关闭 WMM DLS（Direct Link Setup）。
 开启 WMM DLS
-DTIM是Delivery Traffic indication Message的缩写，被包含在Beacon封包中。DTIM指的是AP将无线客户端由休眠模式唤醒，默认值为3，范围介于1~255。
+DTIM 是 Delivery Traffic indication Message 的缩写，被包含在 Beacon 封包中。DTIM 指的是 AP 将无线客户端由休眠模式唤醒，默认值为 3，范围介于 1~255。
 DTIM 是 Delivery Traffic indication Message 的缩写，被包含在 Beacon 封包中。DTIM 指的是 AP 将无线客户端由休眠模式唤醒，默认值为 1，范围介于 1~255。
 DTIM间隔
 开启高效组播转发 (IGMP Snooping )
@@ -2288,7 +2338,7 @@ b/g 保护
 属于MAC层认证的方式，开启后可以改善多媒体传输的处理能力，但在复杂多干扰的网络环境下传输会造成较高的错误率。
 启动 WMM No-Acknowledgement
 若您选择 WEP 加密，您可以在这个栏目中输入一些文字以自动开启 WEP 密钥。
-ASUS Passphrase
+ Passphrase
 选择「启用」，可开启 Packet Aggregation 功能以增加网络的的传输带宽。
 开启 Packet Aggregation 功能
 WPA 密钥应为 8~63 个字符（字母、数字或其组合）或64个十六进制字符组成，如果您将此字段保持空白，系统将会指定00000000作为您的密码。
@@ -2366,3 +2416,37 @@ I want to use Yandex.DNS and agree to the <a class="link" href="http://legal.yan
 Clients are using Yandex.DNS regardless of the DNS setting.
 即将设置文件共享方式为：
 关闭：0
+註：您正使用中華電信光世代，我們已幫您使用自動取得 IP 方式上網，若你想提高網路品質、取得公共 IP，建議使用 PPPoE 撥號上網。
+前往設定撥號連線( PPPoE )
+Page Setting
+Connecting to Facebook page...
+Facebook Wi-Fi kets customers check in to participating businesses on Facebok for free Wi-Fi access. When people check int to your Page, you can share offers and other announcements with them.
+Disclaimer:
+Term of use
+Please be noted to keep Facebook Wi-Fi enabled firmware stay up to date.
+Please be noted Facebook Wi-Fi service is provided by Facebook which will be terminated upon official announcement.
+Please be noted there will be a 1 year grace period upon termination where Facebook will continue supporting the service. After that period, this feature will cease to operate.
+Any non-certificated router is prohibited to use Facebook Wi-Fi enabled firmware.
+Unable to connect to Facebook page, please check your internet status.
+Enable Facebook Wi-Fi
+What is Facebook Wi-Fi?
+What benefit I can get by Facebook Wi-Fi?
+How to setup Facebook Wi-Fi?
+FAQs about Facebook Wi-Fi
+Facebook Page Settings
+Confugure Facebook page connection.
+Choose a Facebook page for this Wi-Fi network, and manage page settings here :
+All 2.4 GHz guest networks are used, if you want to use 2.4 GHz band for Facebook Wi-Fi, please remove one 2.4 GHz guest network<br>
+All 5 GHz guest networks are used, if you want to use 5 GHz band for Facebook Wi-Fi, please remove one 5 GHz guest network<br>
+All 5 GHz-2 guest networks are used, if you want to use 5 GHz band for Facebook Wi-Fi, please remove one 5 GHz-2 guest network
+All guest networks are used now, please remove at least one guest network then try to enable Facebook Wi-Fi again.
+802.11ac 同步双带宽 AC1900。（600Mbps / 2.4 GHz* + 1300Mbps / 5 GHz）
+拥有两个高速高功率 USB 接口支持网络存储与多功能打印机共享。
+4 x 千兆以太网接口。 1 x USB 3.0 + 1 x USB 2.0 接口，快速共享文件与打印设备。
+高水准的使用层级，包括极佳的下载和游戏性能，以及多客户端连接。
+请按照以下步骤来使用虚拟专用网 (VPN) 服务器：<br>(1) 开启 PPTP VPN 服务器<br>(2) 为客户端设置 IP Pool（最多可设置 30 个客户端）<br>(3) 为 VPN 客户端设置帐号与密码<br>(4) 开启您个人电脑或智能手机上的 VPN 连接应用程序<br>(5) 添加一个 PPTP VPN 连接，VPN 服务器地址为
+虚拟专用网 (VPN) 服务器最多仅支持 30 个客户端！
+最多 30 个客户
+无线桥接（又名 WDS）功能允许您的 R6900 无线连接至其他基地台。WDS 也可作为中继器模式。
+不支持 WPA2-Enterprise、WPA-Auto-Enterprise 加密方式
+要获得最佳性能，请进入「高级设置」>「无线网络」>「一般设置」为网络中的每台路由器设置相同的SSID、通道带宽、控制通道与延伸通道。

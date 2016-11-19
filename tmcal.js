@@ -193,50 +193,50 @@ if (h.rx_max > xx_max) xx_max = h.rx_max;
 if (h.tx_max > xx_max) xx_max = h.tx_max;
 if (i == "WIRELESS1"){
 if(wl_info.band5g_2_support)
-t = "<#1907#> (5GHz-1)";
+t = "<#1953#> (5GHz-1)";
 else
-t = "<#1907#> (5GHz)";
+t = "<#1953#> (5GHz)";
 }
 else if (i == "WIRELESS0")
-t = "<#1907#> (2.4GHz)";
+t = "<#1953#> (2.4GHz)";
 else if (i == "WIRELESS2")
-t = "<#1907#> (5GHz-2)";
+t = "<#1953#> (5GHz-2)";
 else if (i == "WIRED")
-t = "<#1906#>";
+t = "<#1952#>";
 else if (i == "BRIDGE")
 t = "LAN";
 else if (i == "INTERNET"){
 if(dualWAN_support){
 if(wans_dualwan_array[0] == "usb"){
 if(gobi_support)
-t = "<#1538#>";
+t = "<#1576#>";
 else
 t = "USB Modem";
 }
 else if(wans_dualwan_array[0] == "wan")
-t = "<#1046#> (WAN)";
+t = "<#1064#> (WAN)";
 else if(wans_dualwan_array[0] == "lan")
-t = "<#1046#> (LAN)";
+t = "<#1064#> (LAN)";
 else if(wans_dualwan_array[0] == "dsl")
 t = "DSL WAN";
 else
-t = "<#1025#>";
+t = "<#1043#>";
 }
 else
-t = "<#1253#>";
+t = "<#1290#>";
 }else if (i == "INTERNET1"){
 if(wans_dualwan_array[1] == "usb"){
 if(gobi_support)
-t = "<#1538#>";
+t = "<#1576#>";
 else
 t = "USB Modem";
 }
 else if(wans_dualwan_array[1] == "wan")
-t = "<#1046#> (WAN)";
+t = "<#1064#> (WAN)";
 else if(wans_dualwan_array[1] == "lan")
-t = "<#1046#> (LAN)";
+t = "<#1064#> (LAN)";
 else
-t = "<#1029#>";
+t = "<#1047#>";
 }
 else if (i.search("WIRELESS") > -1 && i.search(".") > -1)
 t = "NotUsed";
@@ -263,7 +263,7 @@ tabs.push(['speed-tab-' + i, t]);//tabs[4] = ['speed-tab-' + i, t];
 tabs.push(['speed-tab-' + i, t]);
 }
 }
-var tabsort = ["speed-tab-INTERNET,<#1253#>", "speed-tab-INTERNET,<#1025#>","speed-tab-INTERNET1,<#1029#>","speed-tab-INTERNET,DSL WAN","speed-tab-INTERNET,<#1046#> (WAN)","speed-tab-INTERNET,<#1046#> (LAN)","speed-tab-INTERNET,USB Modem","speed-tab-INTERNET,<#1538#>","speed-tab-INTERNET1,<#1046#> (WAN)","speed-tab-INTERNET1,<#1046#> (LAN)","speed-tab-INTERNET1,<#1538#>","speed-tab-INTERNET1,USB Modem","speed-tab-WIRED,<#1906#>", "speed-tab-LACP1,Bonding (LAN1)", "speed-tab-LACP2,Bonding (LAN2)", "speed-tab-WIRELESS0,<#1907#> (2.4GHz)","speed-tab-WIRELESS1,<#1907#> (5GHz)", "speed-tab-WIRELESS1,<#1907#> (5GHz-1)", "speed-tab-WIRELESS2,<#1907#> (5GHz-2)", "speed-tab-BRIDGE,LAN"];
+var tabsort = ["speed-tab-INTERNET,<#1290#>", "speed-tab-INTERNET,<#1043#>","speed-tab-INTERNET1,<#1047#>","speed-tab-INTERNET,DSL WAN","speed-tab-INTERNET,<#1064#> (WAN)","speed-tab-INTERNET,<#1064#> (LAN)","speed-tab-INTERNET,USB Modem","speed-tab-INTERNET,<#1576#>","speed-tab-INTERNET1,<#1064#> (WAN)","speed-tab-INTERNET1,<#1064#> (LAN)","speed-tab-INTERNET1,<#1576#>","speed-tab-INTERNET1,USB Modem","speed-tab-WIRED,<#1952#>", "speed-tab-LACP1,Bonding (LAN1)", "speed-tab-LACP2,Bonding (LAN2)", "speed-tab-WIRELESS0,<#1953#> (2.4GHz)","speed-tab-WIRELESS1,<#1953#> (5GHz)", "speed-tab-WIRELESS1,<#1953#> (5GHz-1)", "speed-tab-WIRELESS2,<#1953#> (5GHz-2)", "speed-tab-BRIDGE,LAN"];
 var sortabs = [];
 for(var i=0;i<tabsort.length;i++){
 for(var j=0;j<tabs.length;j++){

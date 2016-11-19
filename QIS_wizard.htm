@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#533#> - Quickly Internet Setup</title>
+<title><#548#> - Quickly Internet Setup</title>
 <link rel="stylesheet" type="text/css" href="/other.css">
 <link rel="stylesheet" type="text/css" href="/qis/qis_style.css">
 <link rel="stylesheet" type="text/css" href="index_style.css">
@@ -80,6 +80,17 @@ background:#C0D1D3 url(/images/proceeding_img.gif);
 <script type="text/javascript" src="/popup.js"></script>
 <script language="JavaScript" type="text/javascript" src="/js/jquery.js"></script>
 <script>
+var isFirst = ('<% nvram_get("x_Setting"); %>' == '1') ? false : true;;
+var ROUTERHOSTNAME = '<% nvram_get("local_domain"); %>';
+var iAmAlive = function(ret){if(ret.isdomain) top.location.href="http://" + ROUTERHOSTNAME + "/QIS_default.cgi?flag=welcome";};
+(function(){
+var locationOrigin = window.location.protocol + "//" + ROUTERHOSTNAME + (window.location.port ? ':' + window.location.port : '');
+if(location.hostname !== ROUTERHOSTNAME && ROUTERHOSTNAME != "" && isFirst){
+setTimeout(function(){
+var s=document.createElement("script");s.type="text/javascript";s.src=locationOrigin+"/httpd_check.json?hostname="+location.hostname;var h=document.getElementsByTagName("script")[0];h.parentNode.insertBefore(s,h);
+}, 1);
+}
+})();
 var sw_mode = '<% nvram_get("sw_mode"); %>';
 var based_modelid = '<% nvram_get("productid"); %>';
 if(((sw_mode == 2 || sw_mode == 3) && '<% nvram_get("wlc_psta"); %>' == 1) || (sw_mode == 3 && '<% nvram_get("wlc_psta"); %>' == 3))
@@ -87,6 +98,7 @@ sw_mode = 4;
 if(sw_mode == 3 && '<% nvram_get("wlc_psta"); %>' == 2)
 sw_mode = 2;
 var qisFlag = '<% get_parameter("flag"); %>'.toLowerCase();
+var pppoe_failed_flag = false;
 if(isMobile() && tmo_support && sw_mode != 2 && qisFlag != "sitesurvey_rep" && qisFlag != "sitesurvey_mb")
 location.href = "MobileQIS_Login.asp";
 if(isMobile() && (based_modelid == "RT-AC88U" || based_modelid == "RT-AC3100" || based_modelid == "RT-AC5300" || based_modelid == "RT-AC5300R"))
@@ -102,7 +114,6 @@ var flag_manual = 0;
 var isSubmit = false;
 var isrescan = 0;
 var getBand = '<% get_parameter("band"); %>';
-var isFirst = ('<% nvram_get("x_Setting"); %>' == '1') ? false : true;;
 var ISMOBILE = false;
 var isPassChanged = false;
 var yadns_stage = 0;
@@ -123,6 +134,7 @@ var new_FW = false;
 var retry = 0;
 var isStatic = false;
 var staticIP = false;
+var changeSubnet = false;
 var restartTime = false;
 var restartWireless = false;
 var sysReboot = false;
@@ -156,8 +168,8 @@ setTimeout("detect_firmware();", 1000);
 retry++;
 }
 else{
-if(webs_state_error != 1){
-var Latest_firmver = webs_state_info.split("_");
+if(webs_state_error == 0){
+/*var Latest_firmver = webs_state_info.split("_");
 var Latest_firm = parseInt(Latest_firmver[0]);
 var Latest_buildno = parseInt(Latest_firmver[1]);
 var Latest_extendno = Latest_firmver[2];
@@ -175,6 +187,9 @@ if((current_buildno < Latest_buildno) ||
 {
 new_FW = true;
 }
+}*/
+if(isNewFW(webs_state_info, 0, current_firmware_path) && exist_firmver[0] != 9){
+new_FW = true;
 }
 }
 liveUpdateFinish = true;
@@ -400,7 +415,7 @@ function gotoIndex(){
 if('<% check_asus_model(); %>' == '0')
 return;
 if(w_Setting_tmp == '0'){
-alert("<#369#>");
+alert("<#374#>");
 location.href = '/QIS_wizard.htm?flag=wireless';
 }
 else
@@ -432,9 +447,9 @@ document.getElementById('loading_block1').style.display = "none";
 document.getElementById('loading_block2').style.display = "none";
 document.getElementById('loading_block3').style.display = "";
 if(findasus_support){
-document.getElementById('loading_block3').innerHTML = "<div><#233#></div>";
+document.getElementById('loading_block3').innerHTML = "<div><#236#></div>";
 }else{
-document.getElementById('loading_block3').innerHTML = "<div><#173#>.<#159#></div>";
+document.getElementById('loading_block3').innerHTML = "<div><#176#>.<#162#></div>";
 }
 }
 },
@@ -449,7 +464,7 @@ location.href = "index.asp";
 <body class="LevelQIS" onload="QIS_load_body();">
 <noscript>
 <div class="popup_bg" style="visibility:visible; z-index:999;">
-<div style="margin:200px auto; width:300px; background-color:#006699; color:#FFFFFF; line-height:150%; border:3px solid #FFF; padding:5px;"><#228#></p></div>
+<div style="margin:200px auto; width:300px; background-color:#006699; color:#FFFFFF; line-height:150%; border:3px solid #FFF; padding:5px;"><#231#></p></div>
 </div>
 </noscript>
 <div id="LoadingBar" class="popup_bar_bg">
@@ -470,7 +485,7 @@ location.href = "index.asp";
 <table cellpadding="5" cellspacing="0" id="loadingBlock" class="loadingBlock" align="center">
 <tr>
 <td width="20%" height="80" align="center"><img src="/images/loading.gif"></td>
-<td><span id="proceeding_main_txt"><#174#></span><span id="proceeding_txt" style="color:#FFFFCC;"></span></td>
+<td><span id="proceeding_main_txt"><#177#></span><span id="proceeding_txt" style="color:#FFFFCC;"></span></td>
 </tr>
 </table>
 <!--[if lte IE 6.5]><iframe class="hackiframe"></iframe><![endif]-->
@@ -479,14 +494,14 @@ location.href = "index.asp";
 <table cellpadding="5" cellspacing="0" id="dr_sweet_advise" class="dr_sweet_advise" align="center">
 <tr>
 <td>
-<div class="drword" id="drword"><#174#> <#171#>...
+<div class="drword" id="drword"><#177#> <#174#>...
 <br/>
-<div id="disconnect_hint" style="display:none;"><#172#></div>
+<div id="disconnect_hint" style="display:none;"><#175#></div>
 <br/>
 </div>
 <div id="wireless_client_detect" style="margin-left:10px;position:absolute;display:none;width:400px;">
 <img src="images/loading.gif">
-<div style="margin:-55px 0 0 75px;"><#445#></div>
+<div style="margin:-55px 0 0 75px;"><#446#></div>
 </div>
 <div id="alertImg" class="drImg"><img src="images/alertImg.png"></div>
 <div style="height:100px; "></div>
@@ -497,14 +512,14 @@ location.href = "index.asp";
 <!--[if !lte IE 6]>-->
 <div class="banner1" align="center">
 <img src="images/New_ui/asustitle.png" width="218" height="54" align="left">
-<span class="modelName_top" style="margin-top:20px;"><#534#></span>
+<span class="modelName_top" style="margin-top:20px;"><#549#></span>
 <ul id="language_menu" class="navigation"></ul>
 </div>
 <!--<![endif]-->
 <!--[if lte IE 6]>
 <div class="banner1" align="center">
 <img src="images/New_ui/asustitle_ie6.png" width="218" height="54" align="left">
-<span class="modelName_top" style="margin-top:20px;"><#534#></span>
+<span class="modelName_top" style="margin-top:20px;"><#549#></span>
 </div>
 <![endif]-->
 <table width="998px" border="0" align="center" cellpadding="0" cellspacing="0">
@@ -514,12 +529,12 @@ location.href = "index.asp";
 </table>
 <table width="998px" border="0" align="center" cellpadding="0" cellspacing="0" background="/images/New_ui/middown_bg.png">
 <tr>
-<td style="width:218px;*width:263px;" valign="top">
-<div class="m_qis_r" id="btn_gotoindex" style="margin-left: 15px;margin-top: -160px;cursor:pointer;" onclick="gotoIndex();"><table><tbody><tr><td><div class="_index"></div></td><td><div><#80#></div></td></tr></tbody></table></div>
-<div class="lefttabhead" style="margin-left:15px;" id="option0"><table width="192px" height="37px"><tbody><tr><td><#391#></td></tr></tbody></table></div>
-<div class="lefttabmid" id="t1" style="margin-left:15px;"><table height="52px"><tbody><tr><td><img style="margin-left:3px;" border="0" src="/images/qis/qisStep1.png"></td><td><div class="qismenu"><#388#></div></td></tr></tbody></table></div>
-<div class="lefttabmid" id="t2" style="margin-left:15px;"><table height="52px"><tbody><tr><td><img style="margin-left:3px;" border="0" src="/images/qis/qisStep2.png"></td><td><div class="qismenu"><#389#></div></td></tr></tbody></table></div>
-<div class="lefttabmid" id="t3" style="margin-left:15px;"><table height="52px"><tbody><tr><td><img style="margin-left:3px;" border="0" src="/images/qis/qisStep3.png"></td><td><div class="qismenu"><#390#></div></td></tr></tbody></table></div>
+<td style="width:210px;*width:263px;" valign="top">
+<div class="m_qis_r" id="btn_gotoindex" style="margin-left: 15px;margin-top: -160px;cursor:pointer;" onclick="gotoIndex();"><table><tbody><tr><td><div class="_index"></div></td><td><div><#82#></div></td></tr></tbody></table></div>
+<div class="lefttabhead" style="margin-left:15px;" id="option0"><table width="192px" height="37px"><tbody><tr><td><#396#></td></tr></tbody></table></div>
+<div class="lefttabmid" id="t1" style="margin-left:15px;"><table height="52px"><tbody><tr><td><img style="margin-left:3px;" border="0" src="/images/qis/qisStep1.png"></td><td><div class="qismenu"><#393#></div></td></tr></tbody></table></div>
+<div class="lefttabmid" id="t2" style="margin-left:15px;"><table height="52px"><tbody><tr><td><img style="margin-left:3px;" border="0" src="/images/qis/qisStep2.png"></td><td><div class="qismenu"><#394#></div></td></tr></tbody></table></div>
+<div class="lefttabmid" id="t3" style="margin-left:15px;"><table height="52px"><tbody><tr><td><img style="margin-left:3px;" border="0" src="/images/qis/qisStep3.png"></td><td><div class="qismenu"><#395#></div></td></tr></tbody></table></div>
 <div id="apn_div" style="margin-left:15px; margin-top: 50px; display:none">
 <div style="margin-left:31px; font-size:12px; font-weight:bold; text-shadow:1px 1px 0px black;">Auto APN Progressing</div>
 <div id="apn_bar_container">
@@ -620,7 +635,7 @@ location.href = "index.asp";
 <input type="hidden" name="action_mode" value="apply">
 <input type="hidden" name="action_script" value="">
 <input type="hidden" name="action_wait" value="3">
-<input type="hidden" name="x_Setting" value="1">
+<input type="hidden" name="x_Setting" value="1" disabled>
 </form>
 <form method="post" name="titleForm" id="titleForm" action="/start_apply.htm" target="hidden_frame">
 <input type="hidden" name="next_page" value="">

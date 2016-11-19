@@ -119,7 +119,7 @@ document.smartForm.submit();
 }
 function checkPasswdValid(obj){
 if(obj.value.length <= 0){
-alert("<#102#>");
+alert("<#104#>");
 obj.focus();
 obj.select();
 return false;
@@ -161,31 +161,31 @@ return true;
 </td>
 </tr>
 <tr>
-<td align="left" class="formfonttitle" style="padding-left:20px;" height="72"><#1852#>: <#1850#></td>
+<td align="left" class="formfonttitle" style="padding-left:20px;" height="72"><#1898#>: <#1896#></td>
 </tr>
 <tr>
 <td valign="top">
 <div style="margin-left:20px;">
 <br/><p><input type="radio" id="d3" name="dummyoption" value="2" width="10" onclick="showTextinWizard(this.value);"/>
-<label for="d3"><#1855#></label>
+<label for="d3"><#1901#></label>
 </p>
 <br/><p><input type="radio" id="d2" name="dummyoption" value="1" width="10" onclick="showTextinWizard(this.value);"/>
-<label for="d2"><#1854#></label>
+<label for="d2"><#1900#></label>
 </p>
 <br/><p><input type="radio" id="d1" name="dummyoption" value="0" width="10" onclick="showTextinWizard(this.value);"/>
-<label for="d1" id="d1_desc"><#1853#></label>
+<label for="d1" id="d1_desc"><#1899#></label>
 </p>
 </div>
 <div id="share0_Hint" style="margin-top:10px;color:#FC0;margin-left:45px;">
-<span><#639#></span>
+<span><#655#></span>
 </div>
 <div id="share1" style="margin-top:30px;">
 <table width="80%" border="1" align="center" cellpadding="2" cellspacing="0" bordercolor="#7ea7bd" class="FormTable_table">
 <tr>
-<th width="100"><#626#></th>
-<th><#1239#></th>
-<th width="50" ><#635#></th>
-<th width="50" ><#653#></th>
+<th width="100"><#642#></th>
+<th><#1276#></th>
+<th width="50" ><#651#></th>
+<th width="50" ><#669#></th>
 </tr>
 <tr id="target1">
 <td height="35"><span id="user1" style="color:#FFFFFF;"></span></td>
@@ -211,8 +211,8 @@ return true;
 <tr valign="bottom" align="center">
 <td width="20%">
 <div class="apply_gen" style="margin-top:30px">
-<input type="button" id="prevButton" value="<#78#>" onclick="go_pre_page();" class="button_gen">
-<input type="submit" id="nextButton" value="<#77#>" class="button_gen">
+<input type="button" id="prevButton" value="<#80#>" onclick="go_pre_page();" class="button_gen">
+<input type="submit" id="nextButton" value="<#79#>" class="button_gen">
 </div>
 </td>
 </tr>

@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#533#> - SNMP</title>
+<title><#548#> - SNMP</title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <script language="JavaScript" type="text/javascript" src="/state.js"></script>
@@ -125,22 +125,22 @@ inputCtrl(document.form.v3_priv_passwd, 1);
 <tr>
 <td bgcolor="#4D595D" valign="top" >
 <div>&nbsp;</div>
-<div class="formfonttitle"><#212#> - SNMP</div>
+<div class="formfonttitle"><#215#> - SNMP</div>
 <div style="margin-left:5px;margin-top:10px;margin-bottom:10px"><img src="/images/New_ui/export/line_export.png"></div>
 <div class="formfontdesc"></div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <tr>
 <th>Enable SNMP</th>
 <td>
-<input type="radio" name="snmpd_enable" class="input" value="1" onclick="change_snmpd_enable(1);" <% nvram_match_x("", "snmpd_enable", "1", "checked"); %>><#65#>
-<input type="radio" name="snmpd_enable" class="input" value="0" onclick="change_snmpd_enable(0);" <% nvram_match_x("", "snmpd_enable", "0", "checked"); %>><#64#>
+<input type="radio" name="snmpd_enable" class="input" value="1" onclick="change_snmpd_enable(1);" <% nvram_match_x("", "snmpd_enable", "1", "checked"); %>><#66#>
+<input type="radio" name="snmpd_enable" class="input" value="0" onclick="change_snmpd_enable(0);" <% nvram_match_x("", "snmpd_enable", "0", "checked"); %>><#65#>
 </td>
 </tr>
 <tr>
 <th>Allow access from WAN</th>
 <td>
-<input type="radio" name="snmpd_wan" class="input" value="1" <% nvram_match_x("", "snmpd_wan", "1", "checked"); %>><#65#>
-<input type="radio" name="snmpd_wan" class="input" value="0" <% nvram_match_x("", "snmpd_wan", "0", "checked"); %>><#64#>
+<input type="radio" name="snmpd_wan" class="input" value="1" <% nvram_match_x("", "snmpd_wan", "1", "checked"); %>><#66#>
+<input type="radio" name="snmpd_wan" class="input" value="0" <% nvram_match_x("", "snmpd_wan", "0", "checked"); %>><#65#>
 </td>
 </tr>
 <tr>
@@ -193,7 +193,7 @@ inputCtrl(document.form.v3_priv_passwd, 1);
 </tr>
 </table>
 <div class="apply_gen">
-<input name="button" type="button" class="button_gen" onclick="applyRule()" value="<#72#>"/>
+<input name="button" type="button" class="button_gen" onclick="applyRule()" value="<#73#>"/>
 </div>
 </td>
 </tr>

@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#533#> - <#197#></title>
+<title><#548#> - <#200#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <script language="JavaScript" type="text/javascript" src="/state.js"></script>
@@ -33,7 +33,7 @@ addOnlineHelp(document.getElementById("faq"), ["ASUSWRT", "port", "trigger"]);
 function well_known_apps(){
 wItem = new Array(new Array("Quicktime 4 Client", "554", "TCP", "6970:32000", "UDP"),new Array("Real Audio", "7070", "TCP", "6970:7170", "UDP"));
 free_options(document.form.TriggerKnownApps);
-add_option(document.form.TriggerKnownApps, "<#473#>", "User Defined", 1);
+add_option(document.form.TriggerKnownApps, "<#474#>", "User Defined", 1);
 for (i = 0; i < wItem.length; i++){
 add_option(document.form.TriggerKnownApps, wItem[i][0], wItem[i][0], 0);
 }
@@ -51,7 +51,7 @@ if(j != item_num-2)
 tmp_value += ">";
 }
 }
-if(tmp_value == "<"+"<#1286#>" || tmp_value == "<")
+if(tmp_value == "<"+"<#1324#>" || tmp_value == "<")
 tmp_value = "";
 document.form.autofw_rulelist.value = tmp_value;
 showLoading();
@@ -87,13 +87,13 @@ if(!Block_chars(document.form.autofw_desc_x_0, ["<" ,">"])){
 return false;
 }
 if(document.form.autofw_outport_x_0.value==""){
-alert("<#137#>");
+alert("<#140#>");
 document.form.autofw_outport_x_0.focus();
 document.form.autofw_outport_x_0.select();
 return false;
 }
 if(document.form.autofw_inport_x_0.value==""){
-alert("<#137#>");
+alert("<#140#>");
 document.form.autofw_inport_x_0.focus();
 document.form.autofw_inport_x_0.select();
 return false;
@@ -111,7 +111,7 @@ document.form.autofw_enable_x[0].checked = true;
 var rule_num = document.getElementById('autofw_rulelist_table').rows.length;
 var item_num = document.getElementById('autofw_rulelist_table').rows[0].cells.length;
 if(rule_num >= upper){
-alert("<#1331#> " + upper + " <#1332#>");
+alert("<#1369#> " + upper + " <#1370#>");
 return;
 }
 if(item_num >=2){
@@ -120,7 +120,7 @@ if(document.form.autofw_outport_x_0.value == document.getElementById('autofw_rul
 && document.form.autofw_outproto_x_0.value == document.getElementById('autofw_rulelist_table').rows[i].cells[2].innerHTML
 && document.form.autofw_inport_x_0.value == document.getElementById('autofw_rulelist_table').rows[i].cells[3].innerHTML
 && document.form.autofw_inproto_x_0.value == document.getElementById('autofw_rulelist_table').rows[i].cells[4].innerHTML){
-alert("<#1325#>");
+alert("<#1363#>");
 document.form.autofw_outport_x_0.focus();
 document.form.autofw_outport_x_0.select();
 return;
@@ -193,7 +193,7 @@ var autofw_rulelist_row = decodeURIComponent(autofw_rulelist_array).split('<');
 var code = "";
 code +='<table width="100%" cellspacing="0" cellpadding="4" align="center" class="list_table" id="autofw_rulelist_table">';
 if(autofw_rulelist_row.length == 1)
-code +='<tr><td style="color:#FFCC00;" colspan="6"><#1286#></td></tr>';
+code +='<tr><td style="color:#FFCC00;" colspan="6"><#1324#></td></tr>';
 else{
 for(var i = 1; i < autofw_rulelist_row.length; i++){
 code +='<tr id="row'+i+'">';
@@ -228,7 +228,7 @@ function trigger_validate_duplicate(o, v, l, off){
 for(var i = 0; i < o.length; i++)
 {
 if(entry_cmp(o[i][1].toLowerCase(), v.toLowerCase(), l) == 0){
-alert("<#1325#>");
+alert("<#1363#>");
 return false;
 }
 }
@@ -269,31 +269,31 @@ return true;
 <tr>
 <td bgcolor="#4D595D" valign="top" >
 <div>&nbsp;</div>
-<div class="formfonttitle"><#195#> - <#197#></div>
+<div class="formfonttitle"><#198#> - <#200#></div>
 <div style="margin-left:5px;margin-top:10px;margin-bottom:10px"><img src="/images/New_ui/export/line_export.png"></div>
-<div class="formfontdesc"><#1273#></div>
+<div class="formfontdesc"><#1311#></div>
 <div class="formfontdesc" style="margin-top:-10px;">
-<a id="faq" href="" target="_blank" style="font-family:Lucida Console;text-decoration:underline;"><#197#>&nbspFAQ</a>
+<a id="faq" href="" target="_blank" style="font-family:Lucida Console;text-decoration:underline;"><#200#>&nbspFAQ</a>
 </div>
-<div class="formfontdesc" id="lb_note" style="color:#FFCC00; display:none;"><#1425#></div>
+<div class="formfontdesc" id="lb_note" style="color:#FFCC00; display:none;"><#1463#></div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable">
 <thead>
 <tr>
-<td colspan="6"><#1878#></td>
+<td colspan="6"><#1924#></td>
 </tr>
 </thead>
 <tr>
-<th colspan="2"><#1260#></th>
+<th colspan="2"><#1298#></th>
 <td colspan="4">
-<input type="radio" value="1" name="autofw_enable_x" class="content_input_fd" onClick="return change_common_radio(this, 'IPConnection', 'autofw_enable_x', '1')" <% nvram_match("autofw_enable_x", "1", "checked"); %>><#65#>
-<input type="radio" value="0" name="autofw_enable_x" class="content_input_fd" onClick="return change_common_radio(this, 'IPConnection', 'autofw_enable_x', '0')" <% nvram_match("autofw_enable_x", "0", "checked"); %>><#64#>
+<input type="radio" value="1" name="autofw_enable_x" class="content_input_fd" onClick="return change_common_radio(this, 'IPConnection', 'autofw_enable_x', '1')" <% nvram_match("autofw_enable_x", "1", "checked"); %>><#66#>
+<input type="radio" value="0" name="autofw_enable_x" class="content_input_fd" onClick="return change_common_radio(this, 'IPConnection', 'autofw_enable_x', '0')" <% nvram_match("autofw_enable_x", "0", "checked"); %>><#65#>
 </td>
 </tr>
 <tr>
-<th colspan="2"align="right" id="autofw_rulelist"><#1276#></th>
+<th colspan="2"align="right" id="autofw_rulelist"><#1314#></th>
 <td colspan="4">
 <select name="TriggerKnownApps" class="input_option" onChange="change_wizard(this);">
-<option value="User Defined"><#473#></option>
+<option value="User Defined"><#474#></option>
 </select>
 </td>
 </tr>
@@ -301,16 +301,16 @@ return true;
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable_table">
 <thead>
 <tr>
-<td colspan="6" id="autofw_rulelist"><#1274#>&nbsp;(<#1435#>&nbsp;128)</td>
+<td colspan="6" id="autofw_rulelist"><#1312#>&nbsp;(<#1473#>&nbsp;128)</td>
 </tr>
 </thead>
 <tr>
-<th><#1259#></th>
-<th><#1262#></th>
-<th><#1282#></th>
-<th><#1261#></th>
-<th><#1282#></th>
-<th><#1434#></th>
+<th><#1297#></th>
+<th><#1300#></th>
+<th><#1320#></th>
+<th><#1299#></th>
+<th><#1320#></th>
+<th><#1472#></th>
 </tr>
 <tr>
 <td width="22%">
@@ -342,7 +342,7 @@ return true;
 </table>
 <div id="autofw_rulelist_Block"></div>
 <div class="apply_gen">
-<input name="button" type="button" class="button_gen" onclick="applyRule();" value="<#72#>"/>
+<input name="button" type="button" class="button_gen" onclick="applyRule();" value="<#73#>"/>
 </div>
 </td>
 </tr>

@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#533#> - <#204#></title>
+<title><#548#> - <#207#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <script type="text/javascript" src="/state.js"></script>
@@ -19,7 +19,7 @@
 <script>
 function initial(){
 show_menu();
-document.getElementById("_APP_Installation").innerHTML = '<table><tbody><tr><td><div class="_APP_Installation"></div></td><td><div style="width:120px;"><#181#></div></td></tr></tbody></table>';
+document.getElementById("_APP_Installation").innerHTML = '<table><tbody><tr><td><div class="_APP_Installation"></div></td><td><div style="width:120px;"><#184#></div></td></tr></tbody></table>';
 document.getElementById("_APP_Installation").className = "menu_clicked";
 hideAll(document.form.enable_webdav.value);
 }
@@ -89,23 +89,23 @@ document.form.submit();
 <table width="730px">
 <tr>
 <td align="left">
-<span class="formfonttitle"><#201#> - <#204#></span>
+<span class="formfonttitle"><#204#> - <#207#></span>
 </td>
 <td align="right">
-<img onclick="go_setting('/APP_Installation.asp')" align="right" style="cursor:pointer;position:absolute;margin-left:-20px;margin-top:-30px;" title="<#181#>" src="/images/backprev.png" onMouseOver="this.src='/images/backprevclick.png'" onMouseOut="this.src='/images/backprev.png'">
+<img onclick="go_setting('/APP_Installation.asp')" align="right" style="cursor:pointer;position:absolute;margin-left:-20px;margin-top:-30px;" title="<#184#>" src="/images/backprev.png" onMouseOver="this.src='/images/backprevclick.png'" onMouseOut="this.src='/images/backprev.png'">
 </td>
 </tr>
 </table>
 </div>
 <div style="margin:5px;"><img src="/images/New_ui/export/line_export.png"></div>
-<div class="formfontdesc"><#2029#></div>
+<div class="formfontdesc"><#2084#></div>
 <table width="98%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <tr>
 <th width="40%">WebDav to Samba</th>
 <td>
 <select name="enable_webdav" class="input_option" onChange="hideAll(this.value);">
-<option value="0" <% nvram_match("enable_webdav", "0","selected"); %> ><#2230#></option>
-<option value="1" <% nvram_match("enable_webdav", "1","selected"); %> ><#2229#></option>
+<option value="0" <% nvram_match("enable_webdav", "0","selected"); %> ><#2280#></option>
+<option value="1" <% nvram_match("enable_webdav", "1","selected"); %> ><#2279#></option>
 </select>
 </td>
 </tr>
@@ -133,7 +133,7 @@ document.form.submit();
 </tr>
 </table>
 <div class="apply_gen">
-<input type="button" class="button_gen" value="<#72#>" onclick="applyRule();">
+<input type="button" class="button_gen" value="<#73#>" onclick="applyRule();">
 </div>
 </td>
 </tr>

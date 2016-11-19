@@ -45,10 +45,13 @@ document.getElementById("nextButton").focus();
 }
 function setScenerion(mode){
 if(mode == '2'){
-var pstaDesc = "<#248#>";
-pstaDesc += "<br/><span style=\"color:#FC0\"><#920#></span>";
+var pstaDesc = "<#251#>";
+pstaDesc += "<br/><span style=\"color:#FC0\"><#938#></span>";
 parent.document.QKform.sw_mode.value = 2;
 parent.localAP_support = true;
+if(odmpid == "RT-AC66U_B1")
+$("#Senario").attr("src", "/images/RT-AC66U_V2/re.jpg");
+else
 $("#Senario").attr("src", "/images/New_ui/re.jpg");
 $("#Senario").attr("style", "height:");
 $("#mode_desc").html(pstaDesc);
@@ -57,23 +60,29 @@ document.form.sw_mode_radio[1].checked = true;
 }
 else if(mode == '3'){
 parent.document.QKform.sw_mode.value = 3;
+if(odmpid == "RT-AC66U_B1")
+$("#Senario").attr("src", "/images/RT-AC66U_V2/ap.jpg");
+else
 $("#Senario").attr("src", "/images/New_ui/ap.jpg");
 $("#Senario").attr("style", "height:");
-$("#mode_desc").html("<#232#><br><span style=\"color:#FC0\"><#921#></span>");
+$("#mode_desc").html("<#235#><br><span style=\"color:#FC0\"><#939#></span>");
 document.form.sw_mode_radio[2].focus();
 document.form.sw_mode_radio[2].checked = true;
 }
 else if(mode == '4'){
 var pstaDesc = "";
-pstaDesc += "<#239#>";
-pstaDesc += "<#240#>";
-pstaDesc += "<#241#>";
 pstaDesc += "<#242#>";
 pstaDesc += "<#243#>";
-pstaDesc += "<br><#244#>";
-pstaDesc += "<br/><span style=\"color:#FC0\"><#922#></span>";
+pstaDesc += "<#244#>";
+pstaDesc += "<#245#>";
+pstaDesc += "<#246#>";
+pstaDesc += "<br><#247#>";
+pstaDesc += "<br/><span style=\"color:#FC0\"><#940#></span>";
 parent.document.QKform.sw_mode.value = 4;
 parent.localAP_support = false;
+if(odmpid == "RT-AC66U_B1")
+$("#Senario").attr("src", "/images/RT-AC66U_V2/mb.jpg");
+else
 $("#Senario").attr("src", "/images/New_ui/mb.jpg");
 $("#Senario").attr("style", "height:170px");
 $("#mode_desc").html(pstaDesc);
@@ -82,9 +91,12 @@ document.form.sw_mode_radio[3].checked = true;
 }
 else{
 parent.document.QKform.sw_mode.value = 1;
+if(odmpid == "RT-AC66U_B1")
+$("#Senario").attr("src", "/images/RT-AC66U_V2/rt.jpg");
+else
 $("#Senario").attr("src", "/images/New_ui/rt.jpg");
 $("#Senario").attr("style", "height:");
-$("#mode_desc").html("<#236#>");
+$("#mode_desc").html("<#239#>");
 document.form.sw_mode_radio[0].focus();
 document.form.sw_mode_radio[0].checked = true;
 }
@@ -120,6 +132,9 @@ return false;
 else
 return true;
 }
+function back(){
+location.href = "QIS_welcome.htm";
+}
 </script>
 </head>
 <body onLoad="QKInternet_load_body();" onunload="" onKeyPress="submitenter(this,event)">
@@ -134,7 +149,7 @@ return true;
 <table width="100%">
 <tr>
 <td align="left">
-<div class="description_down"><#235#></div>
+<div class="description_down"><#238#></div>
 </td>
 </tr>
 </table>
@@ -144,27 +159,27 @@ return true;
 <div style="width:95%; margin:0 auto; padding-bottom:3px;" id="field_general">
 <span style="font-size:16px; font-weight:bold;color:white;text-shadow: 1px 1px 0px black">
 <span id="routerMode">
-<input type="radio" name="sw_mode_radio" class="input" value="1" onclick="setScenerion(1);" <% nvram_match("sw_mode", "1", "checked"); %>><#237#>
+<input type="radio" name="sw_mode_radio" class="input" value="1" onclick="setScenerion(1);" <% nvram_match("sw_mode", "1", "checked"); %>><#240#>
 </span>
 &nbsp;&nbsp;
 <span id="repeaterMode">
 <input type="radio" name="sw_mode_radio" class="input" value="2" onclick="setScenerion(2);" <% nvram_match("sw_mode", "2", "checked"); %>>
-<span id="repeaterMode_desc"><#251#></span>
+<span id="repeaterMode_desc"><#254#></span>
 </span>
 &nbsp;&nbsp;
 <span id="APMode">
-<input type="radio" name="sw_mode_radio" class="input" value="3" onclick="setScenerion(3);" <% nvram_match("sw_mode", "3", "checked"); %>><#234#>
+<input type="radio" name="sw_mode_radio" class="input" value="3" onclick="setScenerion(3);" <% nvram_match("sw_mode", "3", "checked"); %>><#237#>
 </span>
 &nbsp;&nbsp;
 <span id="MBMode">
-<input type="radio" name="sw_mode_radio" class="input" value="4" onclick="setScenerion(4);" <% nvram_match("sw_mode", "4", "checked"); %>><#238#>
+<input type="radio" name="sw_mode_radio" class="input" value="4" onclick="setScenerion(4);" <% nvram_match("sw_mode", "4", "checked"); %>><#241#>
 </span>
 </span>
 <table height="350px">
 <tr valign="top">
 <td>
 <div id="mode_desc" style="line-height: 18px;font-size:12px;font-family:Segoe UI, Arial, sans-serif;position:relative;display:block;margin-top:10px;margin-left:5px;z-index:90;">
-<#236#>
+<#239#>
 </div>
 </td>
 </tr>
@@ -176,23 +191,24 @@ return true;
 <tr>
 <td>
 <div id="applyBtn" class="apply_gen">
-<input type="submit" id="nextButton" value="<#77#>" class="button_gen" >
+<input type="button" id="prevButton" value="<#80#>" class="button_gen" onclick="back();">
+<input type="submit" id="nextButton" value="<#79#>" class="button_gen" >
 </div>
 </td>
 </tr>
 </table>
 </div>
 <div style="display:none;margin-top:-20px;" id="field_mobile">
-<span class="QISGeneralFont" style="margin-left:0px;"><#235#></span><br><br>
+<span class="QISGeneralFont" style="margin-left:0px;"><#238#></span><br><br>
 <fieldset class="theFieldset">
 <div class="row">
-<a class="iuiA" onclick="parent.document.QKform.sw_mode.value=1;submitForm();"><#237#></a>
+<a class="iuiA" onclick="parent.document.QKform.sw_mode.value=1;submitForm();"><#240#></a>
 </div>
 <!--div class="row" id="siteSurvey">
-<a class="iuiA" onclick="parent.document.QKform.sw_mode.value=3;submitForm();"><#251#></a>
+<a class="iuiA" onclick="parent.document.QKform.sw_mode.value=3;submitForm();"><#254#></a>
 </div-->
 <div class="row_end">
-<a class="iuiA" onclick="parent.document.QKform.sw_mode.value=3;submitForm();"><#234#></a>
+<a class="iuiA" onclick="parent.document.QKform.sw_mode.value=3;submitForm();"><#237#></a>
 </div>
 </fieldset>
 <div>

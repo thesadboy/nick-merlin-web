@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#533#> - <#190#></title>
+<title><#548#> - <#193#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <script type="text/javascript" src="/state.js"></script>
@@ -148,6 +148,8 @@ var sdk_7 = sdk_version_array[0] == "7" ? true:false
 var wl_user_rssi_onload = '<% nvram_get("wl_user_rssi"); %>';
 var reboot_needed_time = eval("<% get_default_reboot_time(); %>");
 var orig_region = '<% nvram_get("location_code"); %>';
+var machine_name = '<% get_machine_name(); %>';
+var machine_arm = (machine_name.search("arm") == -1) ? false : true;
 var array = new Array(7);
 var clock_type = "";
 var wifi_schedule_value = '<% nvram_get("wl_sched"); %>'.replace(/&#62/g, ">").replace(/&#60/g, "<");
@@ -185,7 +187,7 @@ inputCtrl(document.form.wl_noisemitigation, 0);
 }else{
 document.getElementById("DLSCapable").style.display = "none";
 document.getElementById("PktAggregate").style.display = "none";
-if('<% nvram_get("wl_unit"); %>' == '1' || sdk_version_array[0] >= 6 ){ // MODELDEP: for Broadcom SDK 6.x model
+if('<% nvram_get("wl_unit"); %>' == '1' || machine_arm){ // MODELDEP: for Broadcom SDK 6.x model
 inputCtrl(document.form.wl_noisemitigation, 0);
 }
 }
@@ -218,10 +220,10 @@ inputCtrl(document.form.wl_itxbf, 0);
 inputCtrl(document.form.usb_usb3, 0);
 inputCtrl(document.form.traffic_5g, 0);
 if('<% nvram_get("wl_unit"); %>' == '1' || '<% nvram_get("wl_unit"); %>' == '2'){ // 5GHz up
-if( based_modelid == "RT-AC3200" || based_modelid == "RT-AC69U" ||
+if( based_modelid == "RT-AC3200" ||
 based_modelid == "RT-AC56S" || based_modelid == "RT-AC56U" ||
-based_modelid == "RT-AC68U" || based_modelid == "RT-AC68U_V2" || based_modelid == "DSL-AC68U" ||
-based_modelid == "EA6200" || based_modelid == "EA6400" || based_modelid == "EA6700" || based_modelid == "EA6900" || based_modelid == "R6300V2" || based_modelid == "R7000" || based_modelid == "WS880" ||
+based_modelid == "RT-AC68U" || based_modelid == "RT-AC68A" || based_modelid == "DSL-AC68U" || based_modelid == "4G-AC68U" ||
+based_modelid == "EA6900" || based_modelid == "R6300V2" || based_modelid == "R6400" || based_modelid == "R7000" || based_modelid == "WS880" ||
 based_modelid == "RT-AC87U" || based_modelid == "EA-AC87" ||
 based_modelid == "RT-AC88U" || based_modelid == "RT-AC3100" ||
 based_modelid == "RT-AC5300" || based_modelid == "RT-AC5300R")
@@ -259,10 +261,9 @@ inputCtrl(document.form.usb_usb3, 1);
 }
 if( based_modelid == "RT-AC3200" ||
 based_modelid == "RT-N18U" ||
-based_modelid == "RT-AC69U" ||
 based_modelid == "RT-AC87U" ||
-based_modelid == "EA6200" || based_modelid == "EA6400" || based_modelid == "EA6700" || based_modelid == "EA6900" || based_modelid == "R6300V2" || based_modelid == "R7000" || based_modelid == "WS880" ||
-based_modelid == "RT-AC68U" || based_modelid == "RT-AC68U_V2" || based_modelid == "DSL-AC68U" ||
+based_modelid == "RT-AC68U" || based_modelid == "RT-AC68A" || based_modelid == "DSL-AC68U" || based_modelid == "4G-AC68U" ||
+based_modelid == "EA6900" || based_modelid == "R6300V2" || based_modelid == "R6400" || based_modelid == "R7000" || based_modelid == "WS880" ||
 based_modelid == "RT-AC88U" || based_modelid == "RT-AC3100" ||
 based_modelid == "RT-AC5300" || based_modelid == "RT-AC5300R")
 {
@@ -284,7 +285,7 @@ add_options_x2(document.form.wl_turbo_qam, desc, value, '<% nvram_get("wl_turbo_
 $('#turbo_qam_hint').click(function(){openHint(3,33);});
 }
 }
-document.getElementById('wl_txbf_desc').innerHTML = "<#2262#>";
+document.getElementById('wl_txbf_desc').innerHTML = "<#2312#>";
 inputCtrl(document.form.wl_txbf, 1);
 inputCtrl(document.form.wl_itxbf, 1);
 }
@@ -344,9 +345,9 @@ document.form.wl_mumimo.disabled = false;
 /*Airtime fairness, only for Broadcom ARM platform, except RT-AC87U 5 GHz*/
 if( based_modelid == "RT-N18U" ||
 based_modelid == "RT-AC56U" || based_modelid == "RT-AC56S" ||
-based_modelid == "RT-AC68U" || based_modelid == "RT-AC68U_V2" || based_modelid == "DSL-AC68U" ||
-based_modelid == "EA6200" || based_modelid == "EA6400" || based_modelid == "EA6700" || based_modelid == "EA6900" || based_modelid == "R6300V2" || based_modelid == "R7000" || based_modelid == "WS880" ||
-based_modelid == "RT-AC69U" || based_modelid == "RT-AC87U" || based_modelid == "RT-AC3200" ||
+based_modelid == "RT-AC68U" || based_modelid == "RT-AC68A" || based_modelid == "DSL-AC68U" || based_modelid == "4G-AC68U" ||
+based_modelid == "EA6900" || based_modelid == "R6300V2" || based_modelid == "R6400" || based_modelid == "R7000" || based_modelid == "WS880" ||
+based_modelid == "RT-AC87U" || based_modelid == "RT-AC3200" ||
 based_modelid == "RT-AC88U" || based_modelid == "RT-AC3100" || based_modelid == "RT-AC5300" ||
 based_modelid == "RT-AC5300R" || based_modelid == "RT-AC1200G" || based_modelid == "RT-AC1200G+"){
 inputCtrl(document.form.wl_atf, 1);
@@ -363,49 +364,17 @@ if(Rawifi_support || Qcawifi_support) //brcm : 3 ; else : 1
 document.getElementById("wl_dtim_th").onClick = function (){openHint(3, 4);}
 else
 document.getElementById("wl_dtim_th").onClick = function (){openHint(3, 11);}
+/* 2.4GHz Bluetooth Coexisistence mode, only for Broadcom platform */
+if (!Qcawifi_support && !Rawifi_support && '<% nvram_get("wl_unit"); %>' == '0')
+inputCtrl(document.form.wl_btc_mode, 1)
+else
+inputCtrl(document.form.wl_btc_mode, 0)
 /*location_code Setting*/
 if(location_list_support){
-kool_generate_region();
+document.getElementById('region_div').innerHTML = '<% generate_region(); %>';
 document.getElementById('region_tr').style.display = "";
 }
 control_TimeField();
-}
-/* MODELDEP by Territory Code */
-function kool_generate_region(){
-var region_name = ["Asia", "China", "Europe", "Korea", "Russia", "Singapore", "United States","All Area"]; //Viz mod 2015.06.15
-var region_value = ["AP", "CN", "EU", "KR", "RU", "SG", "US", "ALL"]; //Viz mod 2015.06.15
-var current_region = '<% nvram_get("location_code"); %>';
-var isUsing_AU_sku = (function(){
-if( based_modelid !== "RT-AC87U" && based_modelid !== "RT-AC68U" && based_modelid !== "RT-AC66U" &&
-based_modelid !== "RT-N66U" && based_modelid !== "RT-N18U" && based_modelid != "RT-AC51U" &&
-based_modelid !== "RT-N12+" && based_modelid !== "RT-N12D1" && based_modelid !== "RT-N12HP_B1" &&
-based_modelid !== "RT-N12HP" && based_modelid !== "RT-AC55U" && based_modelid !== "RT-AC1200" &&
-based_modelid != "RT-AC51U" && based_modelid !== "RT-AC88U" && based_modelid !== "RT-AC5300" &&
-based_modelid !== "RT-AC5300R" && based_modelid !== "RT-AC55U"
-) return false;
-if(ttc.search("CN") == 0 )
-return true;
-return false;
-})();
-if(current_region == '')
-current_region = ttc.split("/")[0];
-if(isUsing_AU_sku){
-region_name.push("Australia");
-region_value.push("AU");
-}
-if(based_modelid == "RT-AC51U"){ //remove US
-var idx = region_value.getIndexByValue("US");
-region_value.splice(idx, 1);
-region_name.splice(idx, 1);
-}
-if( region_value.indexOf(ttc.split("/")[0]) < 0 ) { //territory_code mismatch location_code list
-region_name.splice(0, 0, "Default");
-region_value.splice(0, 0, ttc.split("/")[0]);
-}
-else{
-region_name.splice(region_value.indexOf(ttc.split("/")[0]), 1, region_name[region_value.indexOf(ttc.split("/")[0])]+" (Default)")
-}
-add_options_x2(document.form.location_code, region_name, region_value, current_region);
 }
 function adjust_tx_power(){
 var power_value_old = document.form.wl_TxPower.value;
@@ -431,36 +400,6 @@ else{
 document.getElementById('slider').children[0].style.width = power_value_new + "%";
 document.getElementById('slider').children[1].style.left = power_value_new + "%";
 document.form.wl_txpower.value = power_value_new;
-}
-if(document.form.wl_txpower.value < 25){
-document.getElementById('slider').children[0].style.width = "0%";
-document.getElementById('slider').children[1].style.left = "0%";
-document.form.wl_txpower.value = 0;
-document.getElementById("tx_power_desc").innerHTML = power_table_desc[0];
-}
-else if(document.form.wl_txpower.value < 50){
-document.getElementById('slider').children[0].style.width = "25%";
-document.getElementById('slider').children[1].style.left = "25%";
-document.form.wl_txpower.value = 25;
-document.getElementById("tx_power_desc").innerHTML = power_table_desc[1];
-}
-else if(document.form.wl_txpower.value < 88){
-document.getElementById('slider').children[0].style.width = "50%";
-document.getElementById('slider').children[1].style.left = "50%";
-document.form.wl_txpower.value = 50;
-document.getElementById("tx_power_desc").innerHTML = power_table_desc[2];
-}
-else if(document.form.wl_txpower.value < 100){
-document.getElementById('slider').children[0].style.width = "75%";
-document.getElementById('slider').children[1].style.left = "75%";
-document.form.wl_txpower.value = 88;
-document.getElementById("tx_power_desc").innerHTML = power_table_desc[3];
-}
-else{
-document.getElementById('slider').children[0].style.width = "100%";
-document.getElementById('slider').children[1].style.left = "100%";
-document.form.wl_txpower.value = 100;
-document.getElementById("tx_power_desc").innerHTML = power_table_desc[4];
 }
 }
 }
@@ -531,7 +470,7 @@ if(power_support && !Rawifi_support && !Qcawifi_support){
 if(hw_ver.search("RTN12HP") != -1){
 FormActions("start_apply.htm", "apply", "set_wltxpower;reboot", "<% get_default_reboot_time(); %>");
 }
-else if(based_modelid == "RT-AC66U" || based_modelid == "RT-N66U" || based_modelid == "RT-N18U"){
+else if(based_modelid == "RT-AC66U" || based_modelid == "RT-N66U" || based_modelid == "RT-N18U" || based_modelid == "EA6900" || based_modelid == "R6300V2" || based_modelid == "R6400" || based_modelid == "R7000" || based_modelid == "WS880"){
 FormActions("start_apply.htm", "apply", "set_wltxpower;restart_wireless", "15");
 }
 }
@@ -589,17 +528,16 @@ document.form.wl_ampdu_rts.disabled = true;
 document.getElementById('ampdu_rts_tr').style.display = "none";
 }
 }
-power_table_desc = ["Power Saving", "Fair", "Balance", "Good", "Performance"];
 function register_event(){
 $(function() {
 $( "#slider" ).slider({
 orientation: "horizontal",
 range: "min",
 min:1,
-max: 5,
-value:5,
+max: 100,
+value:100,
 slide:function(event, ui){
-document.getElementById('tx_power_desc').innerHTML = power_table_desc[ui.value-1];
+document.getElementById('wl_txpower').value = ui.value;
 },
 stop:function(event, ui){
 set_power(ui.value);
@@ -669,8 +607,17 @@ unchecked = 0;
 });
 }
 function set_power(power_value){
-var power_table = [0, 25, 50, 88, 100];
-document.form.wl_txpower.value = power_table[power_value-1];
+if(power_value < 1){
+power_value = 1;
+alert("The minimun value of power is 1");
+}
+if(power_value > 100){
+power_value = 100;
+alert("The maximun value of power is 100");
+}
+document.getElementById('slider').children[0].style.width = power_value + "%";
+document.getElementById('slider').children[1].style.left = power_value + "%";
+document.form.wl_txpower.value = power_value;
 }
 function init_array(arr){
 for(i=0;i<7;i++){
@@ -904,7 +851,7 @@ time_temp += "<";
 time_temp += start_day.toString() + "0" + start_time.toString() + "00";
 }
 if(time_temp == ""){
-alert("If you want to deny WiFi radio all time, you should check the '<#2296#>' to No");
+alert("If you want to deny WiFi radio all time, you should check the '<#2346#>' to No");
 return false;
 }
 wifi_schedule_value = time_temp;
@@ -954,8 +901,8 @@ var code = "";
 wifi_schedule_row = wifi_schedule_value.split('<');
 code +='<div style="margin-bottom:10px;color: #003399;font-family: Verdana;" align="left">';
 code +='<table width="100%" border="1" cellspacing="0" cellpadding="4" align="center" class="FormTable">';
-code +='<thead><tr><td colspan="6" id="LWFilterList"><#1619#></td></tr></thead>';
-code +='<tr><th style="width:40%;height:20px;" align="right"><#111#></th>';
+code +='<thead><tr><td colspan="6" id="LWFilterList"><#1662#></td></tr></thead>';
+code +='<tr><th style="width:40%;height:20px;" align="right"><#114#></th>';
 code +='<td align="left" style="color:#FFF"><input type="text" id="system_time" name="system_time" class="devicepin" value="" readonly="1" style="font-size:12px;width:200px;"></td></tr>';
 code +='</table><table id="main_select_table">';
 code +='<table id="selectable" class="table_form" >';
@@ -981,7 +928,7 @@ register_event();
 redraw_selected_time(wifi_schedule_row);
 var code_temp = "";
 code_temp = '<table style="width:350px;margin-left:20px;"><tr>';
-code_temp += "<td><div style=\"width:95px;font-family:Arial,sans-serif,Helvetica;font-size:18px;\"><#833#></div></td>";
+code_temp += "<td><div style=\"width:95px;font-family:Arial,sans-serif,Helvetica;font-size:18px;\"><#851#></div></td>";
 code_temp += '<td><div>';
 code_temp += '<select id="clock_type_select" class="input_option" onchange="change_clock_type(this.value);">';
 code_temp += '<option value="0" >12-hour</option>';
@@ -996,8 +943,8 @@ code_temp += '</tr></table>';
 document.getElementById('hintBlock').innerHTML = code_temp;
 document.getElementById('hintBlock').style.marginTop = "10px";
 document.getElementById('hintBlock').style.display = "";
-document.getElementById("ctrlBtn").innerHTML = '<input class="button_gen" type="button" onClick="cancel_wifi_schedule();" value="<#74#>">';
-document.getElementById("ctrlBtn").innerHTML += '<input class="button_gen" type="button" onClick="save_wifi_schedule();" value="<#879#>">';
+document.getElementById("ctrlBtn").innerHTML = '<input class="button_gen" type="button" onClick="cancel_wifi_schedule();" value="<#75#>">';
+document.getElementById("ctrlBtn").innerHTML += '<input class="button_gen" type="button" onClick="save_wifi_schedule();" value="<#896#>">';
 document.getElementById('clock_type_select')[clock_type].selected = true; // set clock type by cookie
 document.getElementById("mainTable").style.display = "";
 $("#mainTable").fadeIn();
@@ -1072,7 +1019,6 @@ return false;
 <input type="hidden" name="acs_dfs" value="<% nvram_get("acs_dfs"); %>">
 <input type="hidden" name="w_Setting" value="1">
 <input type="hidden" name="wl_sched" value="<% nvram_get("wl_sched"); %>">
-<input type="hidden" name="wl_txpower" value="<% nvram_get("wl_txpower"); %>">
 <table class="content" align="center" cellpadding="0" cellspacing="0">
 <tr>
 <td width="17">&nbsp;</td>
@@ -1090,21 +1036,21 @@ return false;
 <tr>
 <td bgcolor="#4D595D" valign="top" >
 <div>&nbsp;</div>
-<div class="formfonttitle"><#184#> - <#190#></div>
+<div class="formfonttitle"><#187#> - <#193#></div>
 <div style="margin-left:5px;margin-top:10px;margin-bottom:10px"><img src="/images/New_ui/export/line_export.png"></div>
-<div id="titl_desc" class="formfontdesc"><#2207#></div>
-<div id="svc_hint_div" style="display:none;margin-left:5px;"><span onClick="location.href='Advanced_System_Content.asp?af=ntp_server0'" style="color:#FFCC00;text-decoration:underline;cursor:pointer;"><#112#></span></div>
+<div id="titl_desc" class="formfontdesc"><#2257#></div>
+<div id="svc_hint_div" style="display:none;margin-left:5px;"><span onClick="location.href='Advanced_System_Content.asp?af=ntp_server0'" style="color:#FFCC00;text-decoration:underline;cursor:pointer;"><#115#></span></div>
 <div id="timezone_hint_div" style="margin-left:5px;display:none;"><span id="timezone_hint" onclick="location.href='Advanced_System_Content.asp?af=time_zone_select'" style="color:#FFCC00;text-decoration:underline;cursor:pointer;"></span></div>
 <div id="schedule_block" style="display:none">
 <div id="hintBlock" style="width: 650px; margin-top: 10px;">
-<table style="width:350px;"><tbody><tr><td><div style="width:95px;font-family:Arial,sans-serif,Helvetica;font-size:18px;"><#833#></div></td><td><div><select id="clock_type_select" class="input_option" onchange="change_clock_type(this.value);"><option value="0">12-hour</option><option value="1">24-hour</option></select></div></td><td><div align="left" style="font-family:Arial,sans-serif,Helvetica;font-size:18px;margin:0px 5px 0px 30px;">Allow</div></td><td><div style="width:90px;height:20px;background:#9CB2BA;"></div></td><td><div align="left" style="font-family:Arial,sans-serif,Helvetica;font-size:18px;margin:0px 5px 0px 30px;">Deny</div></td><td><div style="width:90px;height:20px;border:solid 1px #000"></div></td></tr></tbody></table>
+<table style="width:350px;"><tbody><tr><td><div style="width:95px;font-family:Arial,sans-serif,Helvetica;font-size:18px;"><#851#></div></td><td><div><select id="clock_type_select" class="input_option" onchange="change_clock_type(this.value);"><option value="0">12-hour</option><option value="1">24-hour</option></select></div></td><td><div align="left" style="font-family:Arial,sans-serif,Helvetica;font-size:18px;margin:0px 5px 0px 30px;">Allow</div></td><td><div style="width:90px;height:20px;background:#9CB2BA;"></div></td><td><div align="left" style="font-family:Arial,sans-serif,Helvetica;font-size:18px;margin:0px 5px 0px 30px;">Deny</div></td><td><div style="width:90px;height:20px;border:solid 1px #000"></div></td></tr></tbody></table>
 </div>
 <div id="mainTable" style="padding:0 20px 20px 20px;"></div>
 <div id="ctrlBtn" style="text-align:center;"></div>
 </div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable" id="WAdvTable">
 <tr id="wl_unit_field" class="rept">
-<th><#1251#></th>
+<th><#1288#></th>
 <td>
 <select name="wl_unit" class="input_option" onChange="change_wl_unit();">
 <option class="content_input_fd" value="0" <% nvram_match("wl_unit", "0","selected"); %>>2.4GHz</option>
@@ -1113,29 +1059,29 @@ return false;
 </td>
 </tr>
 <tr id="wl_rf_enable">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(3, 1);"><#2296#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(3, 1);"><#2346#></a></th>
 <td>
-<input type="radio" value="1" name="wl_radio" class="input" onClick="control_TimeField();" <% nvram_match("wl_radio", "1", "checked"); %>><#65#>
-<input type="radio" value="0" name="wl_radio" class="input" onClick="control_TimeField();" <% nvram_match("wl_radio", "0", "checked"); %>><#64#>
+<input type="radio" value="1" name="wl_radio" class="input" onClick="control_TimeField();" <% nvram_match("wl_radio", "1", "checked"); %>><#66#>
+<input type="radio" value="0" name="wl_radio" class="input" onClick="control_TimeField();" <% nvram_match("wl_radio", "0", "checked"); %>><#65#>
 </td>
 </tr>
 <tr id="wl_sched_enable">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(3, 23);"><#2310#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(3, 23);"><#2360#></a></th>
 <td>
-<input type="radio" value="1" name="wl_timesched" class="input" onClick="control_TimeField();return change_common_radio(this, 'WLANConfig11b', 'wl_timesched', '1');" <% nvram_match("wl_timesched", "1", "checked"); %>><#65#>
-<input type="radio" value="0" name="wl_timesched" class="input" onClick="control_TimeField();return change_common_radio(this, 'WLANConfig11b', 'wl_timesched', '0')" <% nvram_match("wl_timesched", "0", "checked"); %>><#64#>
+<input type="radio" value="1" name="wl_timesched" class="input" onClick="control_TimeField();return change_common_radio(this, 'WLANConfig11b', 'wl_timesched', '1');" <% nvram_match("wl_timesched", "1", "checked"); %>><#66#>
+<input type="radio" value="0" name="wl_timesched" class="input" onClick="control_TimeField();return change_common_radio(this, 'WLANConfig11b', 'wl_timesched', '0')" <% nvram_match("wl_timesched", "0", "checked"); %>><#65#>
 <span id="time_setting" style="padding-left:20px;cursor:pointer;text-decoration:underline" onclick="show_wifi_schedule();">Time Setting</span>
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(3, 5);"><#2273#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(3, 5);"><#2323#></a></th>
 <td>
-<input type="radio" value="1" name="wl_ap_isolate" class="input" onClick="return change_common_radio(this, 'WLANConfig11b', 'wl_ap_isolate', '1')" <% nvram_match("wl_ap_isolate", "1", "checked"); %>><#65#>
-<input type="radio" value="0" name="wl_ap_isolate" class="input" onClick="return change_common_radio(this, 'WLANConfig11b', 'wl_ap_isolate', '0')" <% nvram_match("wl_ap_isolate", "0", "checked"); %>><#64#>
+<input type="radio" value="1" name="wl_ap_isolate" class="input" onClick="return change_common_radio(this, 'WLANConfig11b', 'wl_ap_isolate', '1')" <% nvram_match("wl_ap_isolate", "1", "checked"); %>><#66#>
+<input type="radio" value="0" name="wl_ap_isolate" class="input" onClick="return change_common_radio(this, 'WLANConfig11b', 'wl_ap_isolate', '0')" <% nvram_match("wl_ap_isolate", "0", "checked"); %>><#65#>
 </td>
 </tr>
 <tr id="wl_rate">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(3, 6);"><#2197#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(3, 6);"><#2250#></a></th>
 <td>
 <select name="wl_rate" class="input_option">
 <option value="0" <% nvram_match("wl_rate", "0","selected"); %>><#40#></option>
@@ -1155,11 +1101,11 @@ return false;
 </td>
 </tr>
 <tr id="rssiTr" class="rept">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(3, 31);"><#1722#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(3, 31);"><#1764#></a></th>
 <td>
 <select id="wl_user_rssi_option" class="input_option" onchange="changeRSSI(this.value);">
-<option value="1"><#2229#></option>
-<option value="0" <% nvram_match("wl_user_rssi", "0","selected"); %>><#2230#></option>
+<option value="1"><#2279#></option>
+<option value="0" <% nvram_match("wl_user_rssi", "0","selected"); %>><#2280#></option>
 </select>
 <span id="rssiDbm" style="color:#FFF">
 Disconnect clients with RSSI lower than
@@ -1169,16 +1115,26 @@ dBm
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(3, 22);"><#2269#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(3,34);">Bluetooth Coexistance</a></th>
+<td>
+<select name="wl_btc_mode" class="input_option">
+<option value="0" <% nvram_match("wl_btc_mode", "0","selected"); %> ><#2280#></option>
+<option value="1" <% nvram_match("wl_btc_mode", "1","selected"); %> ><#2279#></option>
+<option value="2" <% nvram_match("wl_btc_mode", "2","selected"); %> >Pre-emptive</option>
+</select>
+</td>
+</tr>
+<tr>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(3, 22);"><#2319#></a></th>
 <td>
 <select name="wl_igs" class="input_option">
-<option value="1" <% nvram_match("wl_igs", "1","selected"); %>><#2229#></option>
-<option value="0" <% nvram_match("wl_igs", "0","selected"); %>><#2230#></option>
+<option value="1" <% nvram_match("wl_igs", "1","selected"); %>><#2279#></option>
+<option value="0" <% nvram_match("wl_igs", "0","selected"); %>><#2280#></option>
 </select>
 </td>
 </tr>
 <tr id="wl_mrate_select">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(3, 7);"><#2214#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(3, 7);"><#2264#></a></th>
 <td>
 <select name="wl_mrate_x" class="input_option">
 <option value="0" <% nvram_match("wl_mrate_x", "0", "selected"); %>><#40#></option>
@@ -1186,21 +1142,21 @@ dBm
 </td>
 </tr>
 <tr style="display:none;">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(3, 8);"><#2195#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(3, 8);"><#2248#></a></th>
 <td>
 <select name="wl_rateset" class="input_option">
-<option value="default" <% nvram_match("wl_rateset", "default","selected"); %>><#1785#></option>
-<option value="all" <% nvram_match("wl_rateset", "all","selected"); %>><#773#></option>
+<option value="default" <% nvram_match("wl_rateset", "default","selected"); %>><#1827#></option>
+<option value="all" <% nvram_match("wl_rateset", "all","selected"); %>><#789#></option>
 <option value="12" <% nvram_match("wl_rateset", "12","selected"); %>>1, 2 Mbps</option>
 </select>
 </td>
 </tr>
 <tr id="wl_plcphdr_field">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(3,20);"><#2335#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(3,20);"><#2385#></a></th>
 <td>
 <select name="wl_plcphdr" class="input_option">
-<option value="long" <% nvram_match("wl_plcphdr", "long", "selected"); %>><#2336#></option>
-<option value="short" <% nvram_match("wl_plcphdr", "short", "selected"); %>><#2337#></option>
+<option value="long" <% nvram_match("wl_plcphdr", "long", "selected"); %>><#2386#></option>
+<option value="short" <% nvram_match("wl_plcphdr", "short", "selected"); %>><#2387#></option>
 <!-- auto mode applicable for STA only
 <option value="auto" <% nvram_match("wl_plcphdr", "auto", "selected"); %>><#40#></option>
 -->
@@ -1208,7 +1164,7 @@ dBm
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(3, 9);"><#2265#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(3, 9);"><#2315#></a></th>
 <td>
 <input type="text" maxlength="4" name="wl_frag" id="wl_frag" class="input_6_table" value="<% nvram_get("wl_frag"); %>" onKeyPress="return validator.isNumber(this,event)" autocorrect="off" autocapitalize="off">
 </td>
@@ -1216,192 +1172,192 @@ dBm
 <tr id='ampdu_rts_tr'>
 <th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(3,30);">AMPDU RTS</a></th> <td>
 <select name="wl_ampdu_rts" class="input_option" onchange="check_ampdu_rts();">
-<option value="1" <% nvram_match("wl_ampdu_rts", "1", "selected"); %>><#2229#></option>
-<option value="0" <% nvram_match("wl_ampdu_rts", "0", "selected"); %>><#2230#></option>
+<option value="1" <% nvram_match("wl_ampdu_rts", "1", "selected"); %>><#2279#></option>
+<option value="0" <% nvram_match("wl_ampdu_rts", "0", "selected"); %>><#2280#></option>
 </select>
 </td>
 </tr>
 <tr id="rts_threshold">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(3, 10);"><#2308#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(3, 10);"><#2358#></a></th>
 <td>
 <input type="text" maxlength="4" name="wl_rts" class="input_6_table" value="<% nvram_get("wl_rts"); %>" onKeyPress="return validator.isNumber(this,event)" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr id="wl_dtim_field">
-<th><a class="hintstyle" id="wl_dtim_th" href="javascript:void(0);" onClick=""><#2258#></a></th>
+<th><a class="hintstyle" id="wl_dtim_th" href="javascript:void(0);" onClick=""><#2308#></a></th>
 <td>
 <input type="text" maxlength="3" name="wl_dtim" class="input_6_table" value="<% nvram_get("wl_dtim"); %>" onKeyPress="return validator.isNumber(this,event)" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr id="wl_bcn_field">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(3, 12);"><#2247#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(3, 12);"><#2297#></a></th>
 <td>
 <input type="text" maxlength="4" name="wl_bcn" class="input_6_table" value="<% nvram_get("wl_bcn"); %>" onKeyPress="return validator.isNumber(this,event)" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr id="wl_frameburst_field">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(3, 13);"><#2315#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(3, 13);"><#2365#></a></th>
 <td>
 <select name="wl_frameburst" class="input_option">
-<option value="off" <% nvram_match("wl_frameburst", "off","selected"); %>><#2230#></option>
-<option value="on" <% nvram_match("wl_frameburst", "on","selected"); %>><#2229#></option>
+<option value="off" <% nvram_match("wl_frameburst", "off","selected"); %>><#2280#></option>
+<option value="on" <% nvram_match("wl_frameburst", "on","selected"); %>><#2279#></option>
 </select>
 </td>
 </tr>
-<tr id="PktAggregate"><th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(3, 16);"><#2292#></a></th>
+<tr id="PktAggregate"><th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(3, 16);"><#2342#></a></th>
 <td>
 <select name="wl_PktAggregate" class="input_option">
-<option value="0" <% nvram_match("wl_PktAggregate", "0","selected"); %>><#2230#></option>
-<option value="1" <% nvram_match("wl_PktAggregate", "1","selected"); %>><#2229#></option>
+<option value="0" <% nvram_match("wl_PktAggregate", "0","selected"); %>><#2280#></option>
+<option value="1" <% nvram_match("wl_PktAggregate", "1","selected"); %>><#2279#></option>
 </select>
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(3, 14);"><#2318#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(3, 14);"><#2368#></a></th>
 <td>
 <select name="wl_wme" id="wl_wme" class="input_option" onChange="enable_wme_check(this);">
 <option value="auto" <% nvram_match("wl_wme", "auto", "selected"); %>><#40#></option>
-<option value="on" <% nvram_match("wl_wme", "on", "selected"); %>><#2229#></option>
-<option value="off" <% nvram_match("wl_wme", "off", "selected"); %>><#2230#></option>
+<option value="on" <% nvram_match("wl_wme", "on", "selected"); %>><#2279#></option>
+<option value="off" <% nvram_match("wl_wme", "off", "selected"); %>><#2280#></option>
 </select>
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(3,15);"><#2288#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(3,15);"><#2338#></a></th>
 <td>
 <select name="wl_wme_no_ack" id="wl_wme_no_ack" class="input_option">
-<option value="off" <% nvram_match("wl_wme_no_ack", "off","selected"); %>><#2230#></option>
-<option value="on" <% nvram_match("wl_wme_no_ack", "on","selected"); %>><#2229#></option>
+<option value="off" <% nvram_match("wl_wme_no_ack", "off","selected"); %>><#2280#></option>
+<option value="on" <% nvram_match("wl_wme_no_ack", "on","selected"); %>><#2279#></option>
 </select>
 </td>
 </tr>
 <tr id="wl_wme_apsd_field">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(3,17);"><#2243#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(3,17);"><#2293#></a></th>
 <td>
 <select name="wl_wme_apsd" class="input_option">
-<option value="off" <% nvram_match("wl_wme_apsd", "off","selected"); %> ><#2230#></option>
-<option value="on" <% nvram_match("wl_wme_apsd", "on","selected"); %> ><#2229#></option>
+<option value="off" <% nvram_match("wl_wme_apsd", "off","selected"); %> ><#2280#></option>
+<option value="on" <% nvram_match("wl_wme_apsd", "on","selected"); %> ><#2279#></option>
 </select>
 </td>
 </tr>
-<tr id="DLSCapable"> <th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(3,18);"><#2255#></a></th>
+<tr id="DLSCapable"> <th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(3,18);"><#2305#></a></th>
 <td>
 <select name="wl_DLSCapable" class="input_option">
-<option value="0" <% nvram_match("wl_DLSCapable", "0","selected"); %>><#2230#></option>
-<option value="1" <% nvram_match("wl_DLSCapable", "1","selected"); %>><#2229#></option>
+<option value="0" <% nvram_match("wl_DLSCapable", "0","selected"); %>><#2280#></option>
+<option value="1" <% nvram_match("wl_DLSCapable", "1","selected"); %>><#2279#></option>
 </select>
 </td>
 </tr>
-<tr> <th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(3,21);"><#2261#></a></th>
+<tr> <th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(3,21);"><#2311#></a></th>
 <td>
 <select name="wl_noisemitigation" class="input_option" onChange="">
-<option value="0" <% nvram_match("wl_noisemitigation", "0","selected"); %>><#2230#></option>
-<option value="1" <% nvram_match("wl_noisemitigation", "1","selected"); %>><#2229#></option>
+<option value="0" <% nvram_match("wl_noisemitigation", "0","selected"); %>><#2280#></option>
+<option value="1" <% nvram_match("wl_noisemitigation", "1","selected"); %>><#2279#></option>
 </select>
 </td>
 </tr>
-<tr> <th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(3,29);"><#2301#></a></th>
+<tr> <th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(3,29);"><#2351#></a></th>
 <td>
 <select name="usb_usb3" class="input_option">
-<option value="1" <% nvram_match("usb_usb3", "1","selected"); %>><#2230#></option>
-<option value="0" <% nvram_match("usb_usb3", "0","selected"); %>><#2229#></option>
+<option value="1" <% nvram_match("usb_usb3", "1","selected"); %>><#2280#></option>
+<option value="0" <% nvram_match("usb_usb3", "0","selected"); %>><#2279#></option>
 </select>
 </td>
 </tr>
-<tr> <th><a class="hintstyle" href="javascript:void(0);"><#2311#></a></th>
+<tr> <th><a class="hintstyle" href="javascript:void(0);"><#2361#></a></th>
 <td>
 <select name="traffic_5g" class="input_option">
-<option value="1" <% nvram_match("traffic_5g", "1","selected"); %>><#2229#></option>
-<option value="0" <% nvram_match("traffic_5g", "0","selected"); %>><#2230#></option>
+<option value="1" <% nvram_match("traffic_5g", "1","selected"); %>><#2279#></option>
+<option value="0" <% nvram_match("traffic_5g", "0","selected"); %>><#2280#></option>
 </select>
 </td>
 </tr>
 <tr id="wl_ampdu_mpdu_field">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(3,26);"><#2235#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(3,26);"><#2285#></a></th>
 <td>
 <select name="wl_ampdu_mpdu" class="input_option">
-<option value="0" <% nvram_match("wl_ampdu_mpdu", "0","selected"); %> ><#2230#></option>
-<option value="1" <% nvram_match("wl_ampdu_mpdu", "1","selected"); %> ><#2229#></option>
+<option value="0" <% nvram_match("wl_ampdu_mpdu", "0","selected"); %> ><#2280#></option>
+<option value="1" <% nvram_match("wl_ampdu_mpdu", "1","selected"); %> ><#2279#></option>
 </select>
 </td>
 </tr>
 <tr id="wl_ack_ratio_field">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(3,27);"><#2233#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(3,27);"><#2283#></a></th>
 <td>
 <select name="wl_ack_ratio" class="input_option">
-<option value="0" <% nvram_match("wl_ack_ratio", "0","selected"); %> ><#2230#></option>
-<option value="1" <% nvram_match("wl_ack_ratio", "1","selected"); %> ><#2229#></option>
+<option value="0" <% nvram_match("wl_ack_ratio", "0","selected"); %> ><#2280#></option>
+<option value="1" <% nvram_match("wl_ack_ratio", "1","selected"); %> ><#2279#></option>
 </select>
 </td>
 </tr>
 <tr>
-<th id="turbo_qam_title"><a id="turbo_qam_hint" class="hintstyle" href="javascript:void(0);" onClick="openHint(3,28);"><#2312#></a></th>
+<th id="turbo_qam_title"><a id="turbo_qam_hint" class="hintstyle" href="javascript:void(0);" onClick="openHint(3,28);"><#2362#></a></th>
 <td>
 <select name="wl_turbo_qam" class="input_option">
-<option value="0" <% nvram_match("wl_turbo_qam", "0","selected"); %> ><#2230#></option>
-<option value="1" <% nvram_match("wl_turbo_qam", "1","selected"); %> ><#2229#></option>
+<option value="0" <% nvram_match("wl_turbo_qam", "0","selected"); %> ><#2280#></option>
+<option value="1" <% nvram_match("wl_turbo_qam", "1","selected"); %> ><#2279#></option>
 </select>
 </td>
 </tr>
 <tr id="wl_80211h_tr" style="display:none;">
-<th><a class="hintstyle" href="javascript:void(0);" onClick=""><#2232#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick=""><#2282#></a></th>
 <td>
 <select name="wl1_80211h" class="input_option">
-<option value="0" <% nvram_match("wl1_80211h", "0","selected"); %>><#2230#></option>
-<option value="1" <% nvram_match("wl1_80211h", "1","selected"); %>><#2229#></option>
+<option value="0" <% nvram_match("wl1_80211h", "0","selected"); %>><#2280#></option>
+<option value="1" <% nvram_match("wl1_80211h", "1","selected"); %>><#2279#></option>
 </select>
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(3,32);"><#2244#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(3,32);"><#2294#></a></th>
 <td>
 <select name="wl_atf" class="input_option">
-<option value="0" <% nvram_match("wl_atf", "0","selected"); %> ><#2230#></option>
-<option value="1" <% nvram_match("wl_atf", "1","selected"); %> ><#2229#></option>
+<option value="0" <% nvram_match("wl_atf", "0","selected"); %> ><#2280#></option>
+<option value="1" <% nvram_match("wl_atf", "1","selected"); %> ><#2279#></option>
 </select>
 </td>
 </tr>
 <tr id="wl_MU_MIMO_field" style="display:none">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="">Multi-User MIMO<sup id="mu_mimo_sup"> *BETA</sup</a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="">Multi-User MIMO<sup id="mu_mimo_sup"> *BETA</sup></a></th>
 <td>
 <div style="display:table-cell;vertical-align:middle">
 <select name="wl_mumimo" class="input_option" onchange="handle_mimo(this.value)" disabled>
-<option value="0" <% nvram_match("wl_mumimo", "0","selected"); %> ><#2230#></option>
-<option value="1" <% nvram_match("wl_mumimo", "1","selected"); %> ><#2229#></option>
+<option value="0" <% nvram_match("wl_mumimo", "0","selected"); %> ><#2280#></option>
+<option value="1" <% nvram_match("wl_mumimo", "1","selected"); %> ><#2279#></option>
 </select>
 </div>
 <div style="display:table-cell;padding:0 5px 0 10px;color:#FC0;line-height: 18px">Current MU-MIMO specification is still under Wi-Fi Alliance's testing and might have compatibility issues among different brands. Wi-Fi Alliance is estimated to announce certification program by Jun. 2016.</div>
 </td>
 </tr>
 <tr id="wl_txbf_field">
-<th><a id="wl_txbf_desc" class="hintstyle" href="javascript:void(0);" onClick="openHint(3,24);"><#2262#></a></th>
+<th><a id="wl_txbf_desc" class="hintstyle" href="javascript:void(0);" onClick="openHint(3,24);"><#2312#></a></th>
 <td>
 <select name="wl_txbf" class="input_option" onchange="handle_beamforming(this.value)">
-<option value="0" <% nvram_match("wl_txbf", "0","selected"); %> ><#2230#></option>
-<option value="1" <% nvram_match("wl_txbf", "1","selected"); %> ><#2229#></option>
+<option value="0" <% nvram_match("wl_txbf", "0","selected"); %> ><#2280#></option>
+<option value="1" <% nvram_match("wl_txbf", "1","selected"); %> ><#2279#></option>
 </select>
 </td>
 </tr>
 <tr id="wl_itxbf_field">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(3,25);"><#2316#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(3,25);"><#2366#></a></th>
 <td>
 <select name="wl_itxbf" class="input_option" disabled>
-<option value="0" <% nvram_match("wl_itxbf", "0","selected"); %> ><#2230#></option>
-<option value="1" <% nvram_match("wl_itxbf", "1","selected"); %> ><#2229#></option>
+<option value="0" <% nvram_match("wl_itxbf", "0","selected"); %> ><#2280#></option>
+<option value="1" <% nvram_match("wl_itxbf", "1","selected"); %> ><#2279#></option>
 </select>
 </td>
 </tr>
 <tr id="wl_txPower_field">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 16);"><#2220#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 16);"><#2270#></a></th>
 <td>
 <div>
 <table>
-<tr>
-<td style="border:0px;padding-left:0px;">
-<div id="slider" style="width:80px;"></div>
-</td>
+<tr >
 <td style="border:0px;width:60px;">
-<div id="tx_power_desc" style="width:150px;font-size:14px;"></div>
+<input id="wl_txpower" name="wl_txpower" type="text" maxlength="3" class="input_3_table" value="<% nvram_get("wl_txpower"); %>" style="margin-left:-10px;" onkeyup="set_power(this.value);" autocorrect="off" autocapitalize="off"> %
+</td>
+<td style="border:0px;">
+<div id="slider" style="width:200px;"></div>
 </td>
 </tr>
 </table>
@@ -1409,12 +1365,12 @@ dBm
 </td>
 </tr>
 <tr id="region_tr" style="display:none">
-<th><a class="hintstyle" href="javascript:void(0);" onClick=""><#2303#></a></th>
-<td><select name="location_code" class="input_option"></select></td>
+<th><a class="hintstyle" href="javascript:void(0);" onClick=""><#2353#></a></th>
+<td><div id="region_div"></div></td>
 </tr>
 </table>
 <div class="apply_gen" id="apply_btn">
-<input class="button_gen" onclick="applyRule();" type="button" value="<#72#>"/>
+<input class="button_gen" onclick="applyRule();" type="button" value="<#73#>"/>
 </div>
 </td>
 </tr>

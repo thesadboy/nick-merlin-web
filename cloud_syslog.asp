@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#533#> - <#1466#></title>
+<title><#548#> - AiCloud 2.0</title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <script type="text/javascript" src="/state.js"></script>
@@ -51,16 +51,16 @@ document.getElementById("rrsLink").style.display = "none";
 <a href="cloud_main.asp"><div class="tab"><span>AiCloud 2.0</span></div></a>
 </td>
 <td>
-<a id="smart_sync_link" href="cloud_sync.asp"><div class="tab"><span><#1829#></span></div></a>
+<a id="smart_sync_link" href="cloud_sync.asp"><div class="tab"><span><#1871#></span></div></a>
 </td>
 <td>
-<a id="rrsLink" href="cloud_router_sync.asp"><div class="tab"><span><#1776#></span></div></a>
+<a id="rrsLink" href="cloud_router_sync.asp"><div class="tab"><span><#1818#></span></div></a>
 </td>
 <td>
-<a href="cloud_settings.asp"><div class="tab"><span><#1792#></span></div></a>
+<a href="cloud_settings.asp"><div class="tab"><span><#1834#></span></div></a>
 </td>
 <td>
-<div class="tabclick"><span><#1437#></span></div>
+<div class="tabclick"><span><#1475#></span></div>
 </td>
 </tr>
 </tbody>
@@ -74,9 +74,9 @@ document.getElementById("rrsLink").style.display = "none";
 <tr>
 <td bgcolor="#4D595D" valign="top">
 <div>&nbsp;</div>
-<div class="formfonttitle">AiCloud 2.0 - <#1437#></div>
+<div class="formfonttitle">AiCloud 2.0 - <#1475#></div>
 <div style="margin-left:5px;margin-top:10px;margin-bottom:10px"><img src="/images/New_ui/export/line_export.png"></div>
-<div class="formfontdesc" style="font-style: italic;font-size: 14px;"><#613#></div>
+<div class="formfontdesc" style="font-style: italic;font-size: 14px;"><#629#></div>
 <table width="100%" style="border-collapse:collapse;">
 <tr>
 <td>
@@ -91,7 +91,7 @@ document.getElementById("rrsLink").style.display = "none";
 <tr class="apply_gen" valign="top">
 <td width="40%" align="center" >
 <form method="post" name="form3" action="apply.cgi">
-<input type="button" onClick="location.href=location.href" value="<#882#>" class="button_gen">
+<input type="button" onClick="location.href=location.href" value="<#899#>" class="button_gen">
 </form>
 </td>
 </tr>

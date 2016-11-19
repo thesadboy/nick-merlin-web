@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
-<title><#533#> - <#493#> : Realtime IPTraffic</title>
+<title><#548#> - <#494#> : Realtime IPTraffic</title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="tmmenu.css">
@@ -169,7 +169,7 @@ b[0]);
 ++rows;
 }
 if(rows == 0)
-grid +='<tr><td style="color:#FFCC00;" colspan="8"><#1286#></td></tr>';
+grid +='<tr><td style="color:#FFCC00;" colspan="8"><#1324#></td></tr>';
 if(rows > 1)
 grid += addrow("traffictable_footer",
 'Total: ' + ('<small><i>(' + ((hostslisted.length > 0) ? (hostslisted.length + ' hosts') : 'no data') + ')</i></small>'),
@@ -315,12 +315,12 @@ selGroup = E('page_select');
 optGroup = document.createElement('OPTGROUP');
 optGroup.label = "Per device";
 opt = document.createElement('option');
-opt.innerHTML = "<#1467#>";
+opt.innerHTML = "<#1505#>";
 opt.value = "5";
 opt.selected = true;
 optGroup.appendChild(opt);
 opt = document.createElement('option');
-opt.innerHTML = "<#1469#>";
+opt.innerHTML = "<#1507#>";
 opt.value = "6";
 optGroup.appendChild(opt);
 opt = document.createElement('option');
@@ -423,15 +423,15 @@ return false;
 <tr><td><table width="100%" >
 <tr>
 <td class="formfonttitle" align="left">
-<div style="margin-top:5px;"><#180#> - Traffic Monitor per device</div>
+<div style="margin-top:5px;"><#183#> - Traffic Monitor per device</div>
 </td>
 <td>
 <div align="right">
 <select id="page_select" class="input_option" style="width:120px" onchange="switchPage(this.options[this.selectedIndex].value)">
 <optgroup label="Global">
-<option value="1"><#1467#></option>
-<option value="2"><#1468#></option>
-<option value="3"><#1469#></option>
+<option value="1"><#1505#></option>
+<option value="2"><#1506#></option>
+<option value="3"><#1507#></option>
 <option value="4">Monthly</option>
 </optgroup>
 </select>
@@ -460,7 +460,7 @@ return false;
 </thead>
 <tbody>
 <tr>
-<th width="40%"><#1759#></th>
+<th width="40%"><#1801#></th>
 <td>
 <select style="width:70px" class="input_option" onchange='update_scale(this)' id='scale'>
 <option value=0>KB</option>
@@ -472,8 +472,8 @@ return false;
 <tr>
 <th>Display advanced filter options</th>
 <td>
-<input type="radio" name="_f_show_options" class="input" value="1" onclick="update_visibility();"><#65#>
-<input type="radio" name="_f_show_options" class="input" checked value="0" onclick="update_visibility();"><#64#>
+<input type="radio" name="_f_show_options" class="input" value="1" onclick="update_visibility();"><#66#>
+<input type="radio" name="_f_show_options" class="input" checked value="0" onclick="update_visibility();"><#65#>
 </td>
 </tr>
 <tr id="adv0">
@@ -491,15 +491,15 @@ return false;
 <tr id="adv2">
 <th>Display hostnames</th>
 <td>
-<input type="radio" name="_f_show_hostnames" class="input" value="1" checked onclick="update_display('hostnames',1);"><#65#>
-<input type="radio" name="_f_show_hostnames" class="input" value="0" onclick="update_display('hostnames',0);"><#64#>
+<input type="radio" name="_f_show_hostnames" class="input" value="1" checked onclick="update_display('hostnames',1);"><#66#>
+<input type="radio" name="_f_show_hostnames" class="input" value="0" onclick="update_display('hostnames',0);"><#65#>
 </td>
 </tr>
 <tr id="adv3">
 <th>Display IPs with no traffic</th>
 <td>
-<input type="radio" name="_f_show_zero" class="input" value="1" checked onclick="update_display('zero',1);"><#65#>
-<input type="radio" name="_f_show_zero" class="input" value="0" onclick="update_display('zero',0);"><#64#>
+<input type="radio" name="_f_show_zero" class="input" value="1" checked onclick="update_display('zero',1);"><#66#>
+<input type="radio" name="_f_show_zero" class="input" value="0" onclick="update_display('zero',0);"><#65#>
 </td>
 </tr>
 </tbody>

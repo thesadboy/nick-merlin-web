@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#533#> - <#1466#></title>
+<title><#548#> - AiCloud 2.0</title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <script type="text/javascript" src="/state.js"></script>
@@ -54,22 +54,22 @@ document.form.submit();
 }
 function isPortConflict_webdav(obj){
 if(obj.value == '<% nvram_get("login_port"); %>'){
-alert("<#1645#> HTTP LAN port.");
+alert("<#1688#> HTTP LAN port.");
 obj.focus();
 return false;
 }
 else if(obj.value == '<% nvram_get("dm_http_port"); %>'){
-alert("<#1645#> Download Master.");
+alert("<#1688#> Download Master.");
 obj.focus();
 return false;
 }
 else if(obj.value == '<% nvram_get("misc_httpsport_x"); %>'){
-alert("<#1645#> [<#1157#>(HTTPS)].");
+alert("<#1688#> [<#1193#>(HTTPS)].");
 obj.focus();
 return false;
 }
 else if(obj.value == '<% nvram_get("misc_httpport_x"); %>'){
-alert("<#1645#> [<#1157#>(HTTP)].");
+alert("<#1688#> [<#1193#>(HTTP)].");
 obj.focus();
 return false;
 }
@@ -112,16 +112,16 @@ document.form.submit();
 <a href="cloud_main.asp"><div class="tab"><span>AiCloud 2.0</span></div></a>
 </td>
 <td>
-<a id="smart_sync_link" href="cloud_sync.asp"><div class="tab"><span><#1829#></span></div></a>
+<a id="smart_sync_link" href="cloud_sync.asp"><div class="tab"><span><#1871#></span></div></a>
 </td>
 <td>
-<a id="rrsLink" href="cloud_router_sync.asp"><div class="tab"><span><#1776#></span></div></a>
+<a id="rrsLink" href="cloud_router_sync.asp"><div class="tab"><span><#1818#></span></div></a>
 </td>
 <td>
-<div class="tabclick"><span><#1792#></span></div>
+<div class="tabclick"><span><#1834#></span></div>
 </td>
 <td>
-<a href="cloud_syslog.asp"><div class="tab"><span><#1437#></span></div></a>
+<a href="cloud_syslog.asp"><div class="tab"><span><#1475#></span></div></a>
 </td>
 </tr>
 </tbody>
@@ -135,19 +135,19 @@ document.form.submit();
 <tr>
 <td bgcolor="#4D595D" valign="top">
 <div>&nbsp;</div>
-<div class="formfonttitle">AiCloud 2.0 - <#1792#></div>
+<div class="formfonttitle">AiCloud 2.0 - <#1834#></div>
 <div style="margin-left:5px;margin-top:10px;margin-bottom:10px"><img src="/images/New_ui/export/line_export.png"></div>
 <div class="formfontdesc" style="font-style: italic;font-size: 14px;">
-<#619#><br>
-<#620#><br>
-<#621#><br>
-<#622#><br>
+<#635#><br>
+<#636#><br>
+<#637#><br>
+<#638#><br>
 </div>
 <table width="100%" style="border-collapse:collapse;">
 <tr bgcolor="#444f53">
 <td colspan="5" class="cloud_main_radius">
 <div style="padding:30px;font-size:18px;word-break:break-all;border-style:dashed;border-radius:10px;border-width:1px;border-color:#999;">
-<div><#618#></div>
+<div><#634#></div>
 <div align="center" class="left" style="margin-top:-26px;margin-left:320px;width:94px; float:left; cursor:pointer;" id="radio_enable_webdav_lock"></div>
 <div class="iphone_switch_container" style="height:32px; width:74px; position: relative; overflow: hidden">
 <script type="text/javascript">
@@ -168,15 +168,15 @@ inputCtrl(document.form.webdav_lock_interval, 0);
 <div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <tr>
-<th style="white-space:normal;"><#612#></th>
+<th style="white-space:normal;"><#628#></th>
 <td style="text-align:left;">
 <input type="text" name="webdav_lock_times" class="input_3_table" maxlength="2" onblur="validator.numberRange(this, 1, 10);" value="<% nvram_get("webdav_lock_times"); %>" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr>
-<th><#611#></th>
+<th><#627#></th>
 <td style="text-align:left;">
-<input type="text" name="webdav_lock_interval" class="input_3_table" maxlength="2" onblur="validator.numberRange(this, 1, 60);" value="<% nvram_get("webdav_lock_interval"); %>" autocorrect="off" autocapitalize="off"> <#1476#>
+<input type="text" name="webdav_lock_interval" class="input_3_table" maxlength="2" onblur="validator.numberRange(this, 1, 60);" value="<% nvram_get("webdav_lock_interval"); %>" autocorrect="off" autocapitalize="off"> <#1514#>
 </td>
 </tr>
 </table>
@@ -185,12 +185,12 @@ inputCtrl(document.form.webdav_lock_interval, 0);
 <table>
 <tr>
 <td>
-<span><#591#></span>
+<span><#607#></span>
 <img style="margin-top:10px;margin-bottom:-15px" id="accIcon" width="40px" src="/images/cloudsync/account_icon.png">
 <span style="font-size:16px;font-weight:bolder;"><% nvram_get("http_username"); %></span>
 </td>
 <td>
-<input id="unlockBtn" style="margin-top:10px;display:none;" class="button_gen" onclick="unlockAcc();" type="button" value="<#592#>"/>
+<input id="unlockBtn" style="margin-top:10px;display:none;" class="button_gen" onclick="unlockAcc();" type="button" value="<#608#>"/>
 </td>
 </tr>
 </table>
@@ -205,16 +205,16 @@ inputCtrl(document.form.webdav_lock_interval, 0);
 <tr bgcolor="#444f53">
 <td colspan="5" class="cloud_main_radius">
 <div style="padding:30px;font-size:18px;word-break:break-all;border-style:dashed;border-radius:10px;border-width:1px;border-color:#999;">
-<#625#> <input type="text" name="webdav_https_port" class="input_6_table" maxlength="5" onKeyPress="return validator.isNumber(this,event);" value="<% nvram_get("webdav_https_port"); %>" autocorrect="off" autocapitalize="off">
+<#641#> <input type="text" name="webdav_https_port" class="input_6_table" maxlength="5" onKeyPress="return validator.isNumber(this,event);" value="<% nvram_get("webdav_https_port"); %>" autocorrect="off" autocapitalize="off">
 <br>
 <br>
-<#623#> <input type="text" name="webdav_http_port" class="input_6_table" maxlength="5" onKeyPress="return validator.isNumber(this,event);" value="<% nvram_get("webdav_http_port"); %>" autocorrect="off" autocapitalize="off">
+<#639#> <input type="text" name="webdav_http_port" class="input_6_table" maxlength="5" onKeyPress="return validator.isNumber(this,event);" value="<% nvram_get("webdav_http_port"); %>" autocorrect="off" autocapitalize="off">
 </div>
 </td>
 </tr>
 </table>
 <div class="apply_gen">
-<input class="button_gen" onclick="applyRule();" type="button" value="<#72#>"/>
+<input class="button_gen" onclick="applyRule();" type="button" value="<#73#>"/>
 </div>
 </td>
 </tr>

@@ -69,7 +69,7 @@ var passlist = new Array();
 var wans_dualwan = '<% nvram_get("wans_dualwan"); %>'.split(" ");
 var dualwan_set = 1;
 function QKInternet_load_body(){
-parent.document.title = "<#533#> - <#205#>";
+parent.document.title = "<#548#> - <#208#>";
 if(parent.ISMOBILE){
 parent.set_step("internet_type");
 hideObjs();
@@ -101,7 +101,7 @@ break;
 if(dualwan_set)
 document.form.action_script.disabled = true;
 if(gobi_support){
-document.getElementById("page_desc").innerHTML = "<#1477#>"
+document.getElementById("page_desc").innerHTML = "<#1515#>"
 document.getElementById("adapter_type").style.display = "none";
 }
 }
@@ -124,7 +124,7 @@ setTimeout("check_dongle_status();",5000);
 function submitForm(){
 if(pin_opt && document.form.modem_pincode.value != ""){
 if(document.form.modem_pincode.value.search(/^\d{4,8}$/)==-1) {
-alert("<#1328#>");
+alert("<#1366#>");
 return;
 }
 }
@@ -172,7 +172,7 @@ dataType: 'script',
 error: function(xhr, textStatus){
 --RetryCountDown_fail;
 if(RetryCountDown_fail < 1){
-alert("<#87#>!");
+alert("<#89#>!");
 refreshpage();
 }
 else
@@ -188,7 +188,7 @@ connVerify("3");
 else{
 --RetryCountDown_fail;
 if(RetryCountDown_fail < 1){
-document.getElementById("retryCount").innerHTML = '<input type="button" value="<#868#>" class="button_gen" onclick="RetryCountDown_fail=10;detect3GConn();">';
+document.getElementById("retryCount").innerHTML = '<input type="button" value="<#76#>" class="button_gen" onclick="RetryCountDown_fail=10;detect3GConn();">';
 connVerify("2");
 }
 else{
@@ -205,15 +205,10 @@ location.href = '/qis/QIS_wireless.htm';
 }
 function send_setting(){
 $.ajax({
-url: '/setting_lan.htm',
+url: '/updateSubnet.htm',
 dataType: 'script',
 error: function(xhr){
 setTimeout("send_setting();", 1000);
-},
-success: function(response){
-setTimeout(function(){
-parent.location.href = "http://" + get_new_lanip() + '/QIS_wizard.htm?flag=detect';
-}, 30000);
 }
 });
 }
@@ -448,7 +443,7 @@ document.form.modem_isp.options.length = document.form.modem_isp.options.length 
 if(document.form.modem_isp.options.length > 0)
 continue;
 else{
-alert("<#1227#>");
+alert("<#1264#>");
 document.form.modem_country.focus();
 document.form.modem_country.selectedIndex = countrylist.length-1;
 break;
@@ -660,7 +655,7 @@ return ip_str;
 <table width="100%">
 <tr>
 <td align="left">
-<div class="description_down" id="page_desc"><#205#></div>
+<div class="description_down" id="page_desc"><#208#></div>
 </td>
 </tr>
 </table>
@@ -669,27 +664,27 @@ return ip_str;
 </div>
 <table id="tblsetting_1" class="QISform" border=0 align="center" cellpadding="5" cellspacing="0">
 <tr style="display:none">
-<th><#1233#></th>
+<th><#1270#></th>
 <td>
-<input type="radio" value="1" tabindex="1" onclick="switch_modem_mode(document.form.modem_enable_option.value);reloadProfile();" name="modem_enable_radio" checked><#65#>
-<input type="radio" value="0" tabindex="2" onclick="switch_modem_mode(0);reloadProfile();" name="modem_enable_radio" <% nvram_match("modem_enable", "0", "checked"); %>><#64#>
+<input type="radio" value="1" tabindex="1" onclick="switch_modem_mode(document.form.modem_enable_option.value);reloadProfile();" name="modem_enable_radio" checked><#66#>
+<input type="radio" value="0" tabindex="2" onclick="switch_modem_mode(0);reloadProfile();" name="modem_enable_radio" <% nvram_match("modem_enable", "0", "checked"); %>><#65#>
 </td>
 </tr>
 <tr>
-<th style="width:40%"><a class="hintstyle" href="javascript:void(0);" onClick="openHint(21,9);"><#1226#></a></th>
+<th style="width:40%"><a class="hintstyle" href="javascript:void(0);" onClick="openHint(21,9);"><#1263#></a></th>
 <td>
 <select name="modem_country" class="input_option" tabindex="3" onchange="switch_modem_mode(document.form.modem_enable_option.value);reloadProfile();"></select>
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(21,8);"><#1237#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(21,8);"><#1274#></a></th>
 <td>
 <select name="modem_isp" class="input_option" tabindex="4" onchange="show_APN_list();"></select>
 </td>
 </tr>
 <tr>
 <th>
-<a class="hintstyle" href="javascript:void(0);" onclick="openHint(21,1);"><#205#></a>
+<a class="hintstyle" href="javascript:void(0);" onclick="openHint(21,1);"><#208#></a>
 </th>
 <td>
 <select name="modem_enable_option" id="modem_enable_option" tabindex="5" class="input_option" onchange="switch_modem_mode(this.value);reloadProfile();">
@@ -698,38 +693,38 @@ return ip_str;
 <option value="3" <% nvram_match("modem_enable", "3", "selected"); %>>TD-SCDMA</option>
 <option value="4" <% nvram_match("modem_enable", "4", "selected"); %>>WiMAX</option>
 </select>
-<br/><span id="hsdpa_hint" style="display:none;"><#1232#></span>
+<br/><span id="hsdpa_hint" style="display:none;"><#1269#></span>
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(21,3);"><#1242#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(21,3);"><#1279#></a></th>
 <td>
 <input id="modem_apn" type="text" value="" name="modem_apn" tabindex="6" class="input_20_table" autocorrect="off" autocapitalize="off"/>
-<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" style="display:none;position:absolute;*margin-left:-3px;*margin-top:1px;" onclick="pullLANIPList(this);" title="<#1766#>" onmouseover="over_var=1;" onmouseout="over_var=0;">
+<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" style="display:none;position:absolute;*margin-left:-3px;*margin-top:1px;" onclick="pullLANIPList(this);" title="<#1808#>" onmouseover="over_var=1;" onmouseout="over_var=0;">
 <div id="ClientList_Block_PC" class="ClientList_Block_PC"></div>
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(21,10);"><#1229#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(21,10);"><#1266#></a></th>
 <td>
 <input id="modem_dialnum" name="modem_dialnum" tabindex="7" class="input_20_table" type="text" value="" autocorrect="off" autocapitalize="off"/>
 </td>
 </tr>
 <tr style="display:none;">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(21,2);"><#1638#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(21,2);"><#1681#></a></th>
 <td>
 <input id="modem_pincode" name="modem_pincode" tabindex="8" class="input_20_table" type="password" maxLength="8" value="<% nvram_get("modem_pincode"); %>" autocomplete="off" autocorrect="off" autocapitalize="off"/>
-<br><span id="pincode_status" style="display:none;"><#264#></span>
+<br><span id="pincode_status" style="display:none;"><#267#></span>
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(21,11);"><#1246#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(21,11);"><#1283#></a></th>
 <td>
 <input id="modem_user" name="modem_user" tabindex="9" class="input_20_table" type="text" value="<% nvram_get("modem_user"); %>" autocomplete="off" autocorrect="off" autocapitalize="off"/>
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(21,12);"><#265#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(21,12);"><#268#></a></th>
 <td>
 <input id="modem_pass" name="modem_pass" tabindex="10" class="input_20_table" type="password" value="<% nvram_get("modem_pass"); %>" autocomplete="off" autocorrect="off" autocapitalize="off"/>
 </td>
@@ -741,32 +736,32 @@ return ip_str;
 </td>
 </tr>
 <tr id="adapter_type">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(21,13);"><#1243#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(21,13);"><#1280#></a></th>
 <td>
 <select name="Dev3G" id="shown_modems" class="input_option" disabled="disabled"></select>
 </td>
 </tr>
 </table>
 <div id="applyBtn" class="apply_gen" style="margin-top:20px">
-<input type="button" id="skipButton" value="<#82#>" class="button_gen" tabindex="13" onclick="goWireless();">
-<input type="button" id="nextButton" value="<#77#>" tabindex="12" class="button_gen" onclick="submitForm();">
+<input type="button" id="skipButton" value="<#84#>" class="button_gen" tabindex="13" onclick="goWireless();">
+<input type="button" id="nextButton" value="<#79#>" tabindex="12" class="button_gen" onclick="submitForm();">
 <img id="loadingIcon" style="display:none;" src="/images/InternetScan.gif">
-<span id="loadingNote" style="display:none;"><#223#></span>
-<span id="loadingNote1m" style="display:none;"><#224#></span>
+<span id="loadingNote" style="display:none;"><#226#></span>
+<span id="loadingNote1m" style="display:none;"><#227#></span>
 </div>
 <fieldset class="theFieldset" id="theFieldset_apply" style="display:none;margin-top:10px">
 <div class="row">
-<a id="loadingIcon_iui" class="iuiA" onclick="submitForm();"><#71#></a>
+<a id="loadingIcon_iui" class="iuiA" onclick="submitForm();"><#72#></a>
 </div>
 <div class="row_end">
-<a class="iuiA" onclick="goWireless();"><#82#></a>
+<a class="iuiA" onclick="goWireless();"><#84#></a>
 </div>
 </fieldset>
 </div>
 <div id="Conn3GRetry" style="display:none;">
 <div>
 <p class="QISGeneralFont" style="font-size:20px;line-height:30px;">
-<#432#>: <span id="retryCount" style="color:#FC0"></span>
+<#433#>: <span id="retryCount" style="color:#FC0"></span>
 </p>
 </div>
 <br>
@@ -774,34 +769,34 @@ return ip_str;
 <div id="Conn3GFail" style="display:none;">
 <div>
 <p class="QISGeneralFont" style="font-size:20px;line-height:30px;">
-<#1224#></p>
+<#1261#></p>
 </div>
 <div class="apply_gen" id="resetField" style="margin-top:30px">
-<input type="button" value="<#883#>" onclick="reset3G();" class="button_gen_long" >
-<input type="button" value="<#465#>" onclick="goWireless();" class="button_gen_long">
+<input type="button" value="<#900#>" onclick="reset3G();" class="button_gen_long" >
+<input type="button" value="<#466#>" onclick="goWireless();" class="button_gen_long">
 </div>
 <fieldset class="theFieldset" id="theFieldset" style="display:none;margin-top:10px">
 <div class="row">
-<a class="iuiA" onclick="reset3G();"><#883#></a>
+<a class="iuiA" onclick="reset3G();"><#900#></a>
 </div>
 <div class="row_end">
-<a class="iuiA" onclick="goWireless();"><#465#></a>
+<a class="iuiA" onclick="goWireless();"><#466#></a>
 </div>
 </fieldset>
 </div>
 <div id="IpConflict" style="display:none;">
 <div>
 <p class="QISGeneralFont" style="font-size:20px;line-height:30px;">
-<#513#>
+<#528#>
 <br>
-<#501#>&nbsp;<b id="newIp"></b>
+<#513#>&nbsp;<b id="newIp"></b>
 <br>
-<#502#>
+<#514#>
 </p>
 </div>
 <div class="apply_gen" style="margin-top:30px">
-<input type="button" value="<#82#>" class="button_gen" onclick="goWireless();">
-<input type="button" value="<#77#>" class="button_gen" onclick="document.getElementById('loadingIcon_IpConflict').style.display='';send_setting();">
+<input type="button" value="<#84#>" class="button_gen" onclick="goWireless();">
+<input type="button" value="<#79#>" class="button_gen" onclick="document.getElementById('loadingIcon_IpConflict').style.display='';send_setting();">
 <img id="loadingIcon_IpConflict" style="display:none;" src="/images/InternetScan.gif">
 </div>
 </div>

@@ -7,7 +7,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#1586#> - <#1583#></title>
+<title><#1626#> - <#1623#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <style>
@@ -93,15 +93,15 @@ setTimeout("checkCmdRet();", 500);
 function hideCNT(_val){
 if(_val == "ping"){
 document.getElementById("pingCNT_tr").style.display = "";
-document.getElementById("cmdDesc").innerHTML = "<#1596#>";
+document.getElementById("cmdDesc").innerHTML = "<#1636#>";
 }
 else if(_val == "traceroute"){
 document.getElementById("pingCNT_tr").style.display = "none";
-document.getElementById("cmdDesc").innerHTML = "<#1599#>";
+document.getElementById("cmdDesc").innerHTML = "<#1639#>";
 }
 else{
 document.getElementById("pingCNT_tr").style.display = "none";
-document.getElementById("cmdDesc").innerHTML = "<#1593#>";
+document.getElementById("cmdDesc").innerHTML = "<#1633#>";
 }
 }
 var _responseLen;
@@ -217,12 +217,12 @@ hideClients_Block();
 <tr>
 <td bgcolor="#4D595D" colspan="3" valign="top">
 <div>&nbsp;</div>
-<div class="formfonttitle"><#1586#> - <#1583#></div>
+<div class="formfonttitle"><#1626#> - <#1623#></div>
 <div style="margin-left:5px;margin-top:10px;margin-bottom:10px"><img src="/images/New_ui/export/line_export.png"></div>
-<div class="formfontdesc" id="cmdDesc"><#1596#></div>
+<div class="formfontdesc" id="cmdDesc"><#1636#></div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <tr>
-<th width="20%"><#1592#></th>
+<th width="20%"><#1632#></th>
 <td>
 <select id="cmdMethod" class="input_option" name="cmdMethod" onchange="hideCNT(this.value);">
 <option value="ping" selected>Ping</option>
@@ -232,22 +232,22 @@ hideClients_Block();
 </td>
 </tr>
 <tr>
-<th width="20%"><#1598#></th>
+<th width="20%"><#1638#></th>
 <td>
 <input type="text" class="input_32_table" name="destIP" maxlength="100" value="" placeholder="ex: www.google.com" autocorrect="off" autocapitalize="off">
-<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" style="position:absolute;*margin-left:-3px;*margin-top:1px;" onclick="pullLANIPList(this);" title="<#1769#>" onmouseover="over_var=1;" onmouseout="over_var=0;">
+<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" style="position:absolute;*margin-left:-3px;*margin-top:1px;" onclick="pullLANIPList(this);" title="<#1811#>" onmouseover="over_var=1;" onmouseout="over_var=0;">
 <div id="ClientList_Block_PC" class="ClientList_Block_PC"></div>
 </td>
 </tr>
 <tr id="pingCNT_tr">
-<th width="20%"><#1588#></th>
+<th width="20%"><#1628#></th>
 <td>
 <input type="text" name="pingCNT" class="input_3_table" maxlength="2" value="" onKeyPress="return validator.isNumber(this, event);" placeholder="5" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 </table>
 <div class="apply_gen">
-<span><input class="button_gen_long" id="cmdBtn" onClick="onSubmitCtrl(this, ' Refresh ')" type="button" value="<#1589#>"></span>
+<span><input class="button_gen_long" id="cmdBtn" onClick="onSubmitCtrl(this, ' Refresh ')" type="button" value="<#1629#>"></span>
 <img id="loadingIcon" style="display:none;" src="/images/InternetScan.gif">
 </div>
 <div style="margin-top:8px" id="logArea">

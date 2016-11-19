@@ -18,6 +18,9 @@ var wl2_ssid_orig = decodeURIComponent('<% nvram_char_to_ascii("", "wl2_ssid"); 
 var wl0_wpa_psk_orig = decodeURIComponent('<% nvram_char_to_ascii("", "wl0_wpa_psk"); %>');
 var wl1_wpa_psk_orig = decodeURIComponent('<% nvram_char_to_ascii("", "wl1_wpa_psk"); %>');
 var wl2_wpa_psk_orig = decodeURIComponent('<% nvram_char_to_ascii("", "wl2_wpa_psk"); %>');
+var ttc = '<% nvram_get("territory_code"); %>';
+var is_TW_sku = (ttc.search("TW") == -1) ? false : true;
+var is_CN_sku = (ttc.search("CN") == -1) ? false : true;
 if('<% nvram_get("x_Setting"); %>' == '0')
 var smart_connect_tmp = '1';
 else
@@ -38,111 +41,11 @@ var smart_connect_desc_flag = '0';
 var wlc_state = '0';
 var wlc_sbstate = '0';
 var wlc_scan_state = '0';
-var systime = new Date();
-Date.prototype.stdTimezoneOffset_if_dst = function() {
-var jan = new Date(this.getFullYear(), 0, 1);
-var jul = new Date(this.getFullYear(), 6, 1);
-if(jan != jul)
-return true; // w/ DST
-else
-return false; // w/o DST
-}
-Date.prototype.stdTimezoneOffset_withoutDST = function() {
-var jan = new Date(this.getFullYear(), 0, 1);
-var jul = new Date(this.getFullYear(), 6, 1);
-return Math.max(jan.getTimezoneOffset(), jul.getTimezoneOffset()); //DST w/o offset value
-}
-Date.prototype.dst = function() {
-if(this.stdTimezoneOffset_if_dst()){ // w/ DST
-if(this.getTimezoneOffset() == this.stdTimezoneOffset_withoutDST()){
-return 2; //is in not DST now
-}
-else if(this.getTimezoneOffset() < this.stdTimezoneOffset_withoutDST()){
-return 3; //is in DST now
-}
-else
-return 2;
-}
-else{ // w/o DST
-return 1;
-}
-}
 var isDefault = false;
-var timezones = {
-"720":"UTC12",
-"660":"UTC11",
-"600":"UTC10",
-"540":"NAST9DST",
-"480":"PST8DST",
-"420":"MST7_2",
-"360":"CST6_2",
-"300":"UTC5_1",
-"270":"UTC4.30",
-"240":"UTC4_1",
-"210":"NST3.30DST",
-"180":"UTC3",
-"120":"NORO2DST",
-"60":"UTC1",
-"0":"GMT0",
-"-60":"UTC-1_2",
-"-120":"UTC-2_1",
-"-180":"UTC-3_1",
-"-210":"UTC-3.30DST",
-"-240":"UTC-4_5",
-"-270":"UTC-4.30",
-"-300":"UTC-5",
-"-330":"UTC-5.30_1",
-"-345":"UTC-5.45",
-"-360":"UTC-6",
-"-390":"UTC-6.30",
-"-420":"UTC-7",
-"-480":"CCT-8",
-"-540":"JST",
-"-570":"CST-9.30",
-"-600":"UTC-10_2",
-"-660":"UTC-11",
-"-720":"UTC-12",
-"-780":"UTC-13"
-};
-var timezones_dst = {
-"720":"UTC12",
-"660":"UTC11",
-"600":"UTC10",
-"540":"NAST9DST",
-"480":"PST8DST",
-"420":"MST7DST_1",
-"360":"UTC6DST",
-"300":"EST5DST",
-"270":"UTC4.30",
-"240":"AST4DST",
-"210":"NST3.30DST",
-"180":"EBST3DST_1",
-"120":"NORO2DST",
-"60":"EUT1DST",
-"0":"GMT0DST_1",
-"-60":"UTC-1DST_1",
-"-120":"UTC-2DST",
-"-180":"IST-3",
-"-210":"UTC-3.30DST",
-"-240":"UTC-4DST_2",
-"-270":"UTC-4.30",
-"-300":"UTC-5",
-"-330":"UTC-5.30_1",
-"-345":"UTC-5.45",
-"-360":"RFT-6",
-"-390":"UTC-6.30",
-"-420":"UTC-7",
-"-480":"CCT-8",
-"-540":"JST",
-"-570":"UTC-9.30DST",
-"-600":"UTC-10DST_1",
-"-660":"UTC-11",
-"-720":"NZST-12DST",
-"-780":"UTC-13"
-};
 function QKWireless_load_body(){
-parent.document.title = "<#533#> - <#465#>";
+parent.document.title = "<#548#> - <#466#>";
 parent.set_step("t3");
+check_pppoe_state();
 /*To Handle copy, paste for mobile device*/
 if (document.getElementById("wl0_ssid").addEventListener){
 document.getElementById("wl0_ssid").addEventListener("paste", function(e){setTimeout(function(){Sync_2ghz(2);},100);});
@@ -160,7 +63,7 @@ document.getElementById("field_general").style.display = "none";
 document.getElementById("field_mobile").style.display = "";
 document.getElementById("theFieldset").style.display = "";
 if(is_KR_sku){ // MODELDEP by Territory_code
-document.getElementById("mobile_psk_desc").innerHTML = "<#426#>";
+document.getElementById("mobile_psk_desc").innerHTML = "<#427#>";
 }
 if(!band5g_support)
 document.getElementById("band5_mobile").style.display = "none";
@@ -182,7 +85,7 @@ hideLinkTag();
 flash_button();
 show_prev_button();
 if(is_KR_sku){ // MODELDEP by Territory_code
-document.getElementById("wl_psk_desc").innerHTML = "<#426#>";
+document.getElementById("wl_psk_desc").innerHTML = "<#427#>";
 }
 if(!band5g_support){
 document.getElementById("wl_unit_field_1").style.display = "none";
@@ -193,9 +96,9 @@ if(wl_info.band5g_2_support){
 document.getElementById("wl_unit_field_4").style.display = "";
 document.getElementById("wl_unit_field_5").style.display = "";
 document.getElementById("wl_unit_field_6").style.display = "";
-document.getElementById("wl_unit_field_1_1").innerHTML = '5 GHz-1 - <#470#>';
-document.getElementById("syncCheckbox").innerHTML = "<#386#>";
-document.getElementById("syncCheckbox_5_2").innerHTML = "<#387#>";
+document.getElementById("wl_unit_field_1_1").innerHTML = '5 GHz-1 - <#471#>';
+document.getElementById("syncCheckbox").innerHTML = "<#391#>";
+document.getElementById("syncCheckbox_5_2").innerHTML = "<#392#>";
 }
 if(parent.document.QKform.sw_mode.value == 2){
 document.getElementById('RP_UseParentSetting').style.display = "";
@@ -219,7 +122,7 @@ document.form.wl2_wpa_psk.value = wl2_wpa_psk_orig;
 }
 }
 if(parent.w_Setting_tmp == 1 && parent.document.QKform.sw_mode.value != "2" && !smart_connect_support){
-document.getElementById("Continued_PrevSetting").innerHTML = "<#368#>";
+document.getElementById("Continued_PrevSetting").innerHTML = "<#373#>";
 document.getElementById("Continued_PrevSetting").style.display = "";
 document.getElementById("radio_Continued_PrevSetting").style.display = "";
 document.form.Cont_PrevSetting[0].checked = true;
@@ -251,11 +154,46 @@ smartcon_desc_show();
 }else
 document.getElementById("field_general").style.display = "";
 }
+if((parent.document.QKform.sw_mode.value == 1) && (is_TW_sku || is_CN_sku)){
+check_wan_state();
+}
+if(parent.isFirst && !parent.swisscom_support){
+require(['/require/modules/timeZone.js'], function(timeZone) {
+var preferredLang = top.document.titleForm.preferred_lang.value;
+var timeZoneObj = new timeZone.get(preferredLang);
+document.form.time_zone.value = timeZoneObj.time_zone;
+document.form.time_zone.disabled = false;
+document.form.time_zone_dst.value = (timeZoneObj.hasDst) ? 1 : 0;
+document.form.time_zone_dst.disabled = !timeZoneObj.hasDst;
+parent.restartTime = true;
+});
+}
 setTimeout(function(){
 parent.document.start_update.action_script.value = "start_webs_update";
 parent.document.start_update.flag.value = "background";
 parent.document.start_update.submit();
 }, 100);
+}
+function check_wan_state(){
+$.ajax({
+url: '/result_of_get_changed_status_QIS.asp',
+dataType: 'script',
+error: function(xhr){
+setTimeout("check_wan_state();", 1000);
+},
+success: function(response){
+setTimeout("check_wan_state();", 1000);
+if((wanstate == 1 && wansbstate == 0 && wanauxstate == 0) || (wanstate == 6 && wansbstate == 0 && wanauxstate == 0) || (wanstate == 4 && wansbstate == 2 && wanauxstate == 0)){
+if(!parent.flag_manual)
+parent.pppoe_failed_flag = true;
+}
+else{
+if(wanstate == 2 && wansbstate == 0 && wanauxstate == 0){
+parent.pppoe_failed_flag = false;
+}
+}
+}
+});
 }
 function submitForm(){
 var wl_confirm = 0;
@@ -281,12 +219,12 @@ document.form.wl2_wpa_psk.value = document.form.wl2_wpa_psk_m.value;
 if(document.getElementById('wl0_ssid').disabled == false){
 if(document.form.wl0_wpa_psk.value == ""){
 if(is_KR_sku){ // MODELDEP by Territory_code
-alert("<#142#> <#148#>");
+alert("<#145#> <#151#>");
 document.form.wl0_wpa_psk.focus();
 changeiuiBackground(0);
 return false;
 }
-if(!confirm("<#288#>")){
+if(!confirm("<#291#>")){
 document.form.wl0_wpa_psk.focus();
 changeiuiBackground(0);
 return false;
@@ -296,7 +234,7 @@ if(document.form.wps_enable.value == 1){
 if(document.form.wps_band.value == 0
 || document.form.wps_dualband.value == 1 //RT-AC87U, dual band WPS
 || (!Rawifi_support && !Qcawifi_support && based_modelid != "RT-AC87U")){ //Broadcom
-if(!confirm("<#2175#>"))
+if(!confirm("<#2228#>"))
 return false;
 }
 }
@@ -323,7 +261,7 @@ return false;
 }
 var is_common_string0 = check_common_string(document.form.wl0_wpa_psk.value, "wpa_key");
 if(is_common_string0){
-if(confirm("<#133#>")){
+if(!confirm("<#136#>")){
 document.form.wl0_wpa_psk.focus();
 document.form.wl0_wpa_psk.select();
 return false;
@@ -362,12 +300,12 @@ if(band5g_support){
 if (document.getElementById('wl1_ssid').disabled == false){
 if(document.form.wl1_wpa_psk.value == "" && wl_confirm == 0){
 if(is_KR_sku){ // MODELDEP by Territory_code
-alert("<#142#> <#148#>");
+alert("<#145#> <#151#>");
 document.form.wl1_wpa_psk.focus();
 changeiuiBackground(0);
 return false;
 }
-if(!confirm("<#288#>")){
+if(!confirm("<#291#>")){
 document.form.wl1_wpa_psk.focus();
 document.form.wl1_wpa_psk.select();
 changeiuiBackground(0);
@@ -380,7 +318,7 @@ if(document.form.wps_band.value == "1"
 || document.form.wps_dualband.value == "1" //RT-AC87U dual band WPS
 || document.form.wps_multiband.value == "1" //MTK, QCA platform dual band WPS
 || (!Rawifi_support && !Qcawifi_support && based_modelid != "RT-AC87U")){
-if(!confirm("<#2175#>"))
+if(!confirm("<#2228#>"))
 return false;
 }
 }
@@ -405,7 +343,7 @@ return false;
 }
 var is_common_string1 = check_common_string(document.form.wl1_wpa_psk.value, "wpa_key");
 if(is_common_string1){
-if(confirm("<#133#>")){
+if(!confirm("<#136#>")){
 document.form.wl1_wpa_psk.focus();
 document.form.wl1_wpa_psk.select();
 return false;
@@ -444,13 +382,13 @@ document.form.wl1_wep_x.value = "<% nvram_get("wl1_wep_x"); %>";
 if(wl_info.band5g_2_support){
 if (document.getElementById('wl2_ssid').disabled == false){
 if(is_KR_sku){ // MODELDEP by Territory_code
-alert("<#142#> <#148#>");
+alert("<#145#> <#151#>");
 document.form.wl2_wpa_psk.focus();
 changeiuiBackground(0);
 return false;
 }
 if(document.form.wl2_wpa_psk.value == "" && wl_confirm == 0){
-if(!confirm("<#288#>")){
+if(!confirm("<#291#>")){
 document.form.wl2_wpa_psk.focus();
 document.form.wl2_wpa_psk.select();
 changeiuiBackground(0);
@@ -461,7 +399,7 @@ if(document.form.wl1_wpa_psk.value == ""){
 if((document.form.wps_enable.value == 1 && document.form.wps_band.value == 2)
 || (based_modelid == "RT-AC87U" && document.form.wps_dualband.value == 1)
 || (!Rawifi_support && !Qcawifi_support && based_modelid != "RT-AC87U")){
-if(!confirm("<#2175#>"))
+if(!confirm("<#2228#>"))
 return false;
 }
 }
@@ -485,7 +423,7 @@ return false;
 }
 var is_common_string2 = check_common_string(document.form.wl2_wpa_psk.value, "wpa_key");
 if(is_common_string2){
-if(confirm("<#133#>")){
+if(!confirm("<#136#>")){
 document.form.wl2_wpa_psk.focus();
 document.form.wl2_wpa_psk.select();
 return false;
@@ -715,38 +653,6 @@ document.form.wlc_ure_ssid.disabled = true;
 document.form.wlc_psta.disabled = true;
 }
 }
-/* Viz patched to set time_zone automatically 2014.06 start */
-if(timezones[systime.getTimezoneOffset()] != undefined
-&& timezones[systime.getTimezoneOffset()] != ""
-&& document.form.time_zone.value != timezones[systime.getTimezoneOffset()]
-&& parent.isFirst
-&& !parent.swisscom_support)
-{
-document.form.time_zone.disabled = false;
-if(systime.dst() == 2){ // w/ DST and is not in DST now
-if(timezones_dst[systime.getTimezoneOffset()] != "")
-document.form.time_zone.value = timezones_dst[systime.getTimezoneOffset()];
-else if(document.form.time_zone.value == "")
-document.form.time_zone.value = timezones_dst[0];
-}
-else if(systime.dst() == 3){ // w/ DST and is in DST now
-if(timezones_dst[systime.getTimezoneOffset()+60] != "")
-document.form.time_zone.value = timezones_dst[systime.getTimezoneOffset()+60];
-else if(document.form.time_zone.value == "")
-document.form.time_zone.value = timezones_dst[0];
-}
-else{ // w/o DST
-if(timezones[systime.getTimezoneOffset()] != "")
-document.form.time_zone.value = timezones[systime.getTimezoneOffset()];
-else if(document.form.time_zone.value == "")
-document.form.time_zone.value = timezones_dst[0];
-document.form.time_zone_dst.disabled = false;
-document.form.time_zone_dst.value = "0"; //Do disable manual dstoff
-}
-parent.restartTime = true;
-timezone_by_preferred_lang(document.form.time_zone.value);
-}
-/* Viz patched to set time_zone automatically 2014.06 end */
 child_macaddr = '';
 parent.w_Setting_tmp = document.form.w_Setting.value;
 document.getElementById("loadingIcon").style.display = "";
@@ -772,95 +678,22 @@ document.form.next_page.value = "/qis/QIS_finish.htm";
 if(document.form.action_script.value == "restart_wireless"){
 document.form.action_script.value = "saveNvram";
 document.form.action_wait.value = "0";
-if(document.form.sw_mode.value == "1" && !document.form.wl0_ssid.disabled) parent.restartWireless = true;
+if(document.form.sw_mode.value == "1" && !document.form.wl0_ssid.disabled)
+parent.restartWireless = true;
+}
+if(parent.pppoe_failed_flag && parent.document.QKform.sw_mode.value == 1 && !parent.flag_manual){
+document.form.action_script.value = "saveNvram";
+document.form.flag.value = "pppoe_failed";
+document.form.next_page.value = "/qis/QIS_internet_account.htm";
+}
+if(parent.document.QKform.wan_proto.value == "pppoe" && parent.flag_manual){
+document.form.action_script.value += "restart_wan_if";
 }
 document.form.submit();
-if(document.form.sw_mode.value == "1" || document.form.sw_mode.value == "3"){
+if((document.form.sw_mode.value == "1" || document.form.sw_mode.value == "3") && !parent.pppoe_failed_flag){
 setTimeout(function(){
 location.href = "/qis/QIS_finish.htm";
 }, 500)
-}
-}
-function timezone_by_preferred_lang(v){
-switch("<% nvram_get("preferred_lang"); %>"){
-case "BR": //"EBST3DST_1", #TZ21#"
-break;
-case "CN":
-if(v == "CCT-8")
-document.form.time_zone.value = "CST-8";
-break;
-case "CZ":
-if(v == "UTC-1DST_1")
-document.form.time_zone.value = "UTC-1DST_1_1";
-break;
-case "DA":
-if(v == "UTC-1DST_1")
-document.form.time_zone.value = "MET-1DST";
-break;
-case "DE":
-if(v == "UTC-1DST_1")
-document.form.time_zone.value = "MEZ-1DST";
-break;
-case "ES":
-if(v == "UTC-1DST_1")
-document.form.time_zone.value = "MET-1DST_1";
-break;
-case "FI":
-if(v == "UTC-2DST")
-document.form.time_zone.value = "UTC-2DST_3";
-break;
-case "FR":
-if(v == "UTC-1DST_1")
-document.form.time_zone.value = "MET-1DST_1";
-break;
-case "HU":
-break;
-case "IT":
-if(v == "UTC-1DST_1")
-document.form.time_zone.value = "MEZ-1DST_1";
-break;
-case "JP":
-break;
-case "KR":
-if(v == "JST")
-document.form.time_zone.value = "UTC-9_1";
-break;
-case "MS":
-if(v == "CCT-8")
-document.form.time_zone.value = "SST-8";
-break;
-case "NO":
-if(v == "UTC-1DST_1")
-document.form.time_zone.value = "MET-1DST";
-break;
-case "PL":
-if(v == "UTC-1DST_1")
-document.form.time_zone.value = "UTC-1DST_2";
-break;
-case "RO":
-break;
-case "RU":
-if(v == "UTC-3_1")
-document.form.time_zone.value = "UTC-3_4";
-break;
-case "SV":
-if(v == "UTC-1DST_1")
-document.form.time_zone.value = "MET-1DST";
-break;
-case "TH":
-break;
-case "TR":
-if(v == "UTC-2DST")
-document.form.time_zone.value = "UTC-2DST_2";
-break;
-case "TW":
-break;
-case "UK":
-if(v == "UTC-2DST")
-document.form.time_zone.value = "EET-2DST";
-break;
-default:
-break;
 }
 }
 function reset_wl_hwaddr(prefix){
@@ -872,7 +705,7 @@ document.form.appendChild(NewInput);
 }
 function show_prev_button(){
 if(parent.document.getElementById("flag").value == "wireless"){
-document.getElementById("prevButton").value = '<#183#>';
+document.getElementById("prevButton").value = '<#186#>';
 document.form.prev_page.value = "/Advanced_Wireless_Content.asp";
 }
 else if(parent.document.getElementById("flag").value == "adv_ap_mode")
@@ -944,7 +777,7 @@ document.form.sync_with_5ghz_m.checked = false;
 }
 function gotoIndex_wireless(){
 if(parent.w_Setting_tmp == '0'){
-alert("<#369#>");
+alert("<#374#>");
 return false;
 }
 else
@@ -1061,7 +894,7 @@ document.getElementById("field_general").style.display = "none";
 document.getElementById("smart_connect_desc").style.display = "";
 document.getElementById("btn_next_step").style.display = "none";
 document.getElementById("smartcon_desc_button").style.display = "";
-document.getElementById("smartcon_desc_button").value = "<#77#>";
+document.getElementById("smartcon_desc_button").value = "<#79#>";
 document.getElementById("field_general").style.border = "1px";
 smart_connect_desc_flag = '1';
 parent.document.getElementById("contentM").height = contentM_height_orig;
@@ -1075,7 +908,7 @@ if(!smart_connect_qis_support){
 document.getElementById("smart_connect_select_table").style.display = "none";
 }
 document.getElementById("btn_next_step").style.display = "";
-document.getElementById("smartcon_desc_button").value = "<#78#>";
+document.getElementById("smartcon_desc_button").value = "<#80#>";
 document.getElementById("field_general").style.border = "0px";
 smart_connect_desc_flag = '0';
 if(document.form.smart_connect_t[0].checked && smart_connect_qis_support)
@@ -1106,7 +939,7 @@ document.getElementById("wl_unit_field_4").style.display = "";
 document.getElementById("wl_unit_field_5").style.display = "";
 document.getElementById("wl_unit_field_6").style.display = "";
 }
-document.getElementById("wl0_desc_name").innerHTML = "2.4 GHz - <#470#>";
+document.getElementById("wl0_desc_name").innerHTML = "2.4 GHz - <#471#>";
 parent.document.getElementById("contentM").height = document.body.scrollHeight + 20;
 }
 }
@@ -1329,6 +1162,25 @@ setTimeout("detect_LANStatus('"+_flag+"');", 2000);
 }
 });
 }
+function check_pppoe_state(){
+$.ajax({
+url: '/result_of_get_changed_status_QIS.asp',
+dataType: 'script',
+error: function(xhr){
+check_pppoe_state();
+},
+success: function(response){
+setTimeout("check_pppoe_state();", 1000);
+if((wanstate == 1 && wansbstate == 0 && wanauxstate == 0) || (wanstate == 1 && wansbstate == 0 && wanauxstate == 1) || (wanstate == 6 && wansbstate == 0 && wanauxstate == 0) || (wanstate == 4 && wansbstate == 2 && wanauxstate == 0)){
+if(!parent.flag_manual)
+parent.pppoe_failed_flag = true;
+}
+else if(wanstate == 2 && wansbstate == 0 && wanauxstate == 0){
+parent.pppoe_failed_flag = false;
+}
+}
+});
+}
 </script>
 </head>
 <body onLoad="QKWireless_load_body();" onunload="" onKeyPress="submitenter(this,event)">
@@ -1340,6 +1192,7 @@ setTimeout("detect_LANStatus('"+_flag+"');", 2000);
 <input type="hidden" name="prev_page" value="QIS_internet_success.htm">
 <input type="hidden" name="flag" value="">
 <input type="hidden" name="wsc_config_state" value="1">
+<input type="hidden" name="wan_unit" value="0">
 <input type="hidden" name="action_mode" value="apply">
 <input type="hidden" name="action_wait" value="3">
 <input type="hidden" name="action_script" value="restart_wireless">
@@ -1392,7 +1245,7 @@ setTimeout("detect_LANStatus('"+_flag+"');", 2000);
 <input type="hidden" name="http_username" value="" disabled>
 <input type="hidden" name="http_passwd" value="" disabled>
 <input type="hidden" name="sw_mode" value="">
-<input type="hidden" name="x_Setting" value="1" disabled>
+<input type="hidden" name="x_Setting" value="1">
 <input type="hidden" name="w_Setting" value="1">
 <input type="hidden" name="wlc_ure_ssid_org" value="<% nvram_char_to_ascii("WLANConfig11b", "wlc_ure_ssid"); %>" disabled>
 <input type="hidden" name="wlc_psta" value="0">
@@ -1419,7 +1272,7 @@ setTimeout("detect_LANStatus('"+_flag+"');", 2000);
 <table width="100%">
 <tr>
 <td align="left">
-<div class="description_down"><#465#></div>
+<div class="description_down"><#466#></div>
 </td>
 </tr>
 </table>
@@ -1427,58 +1280,58 @@ setTimeout("detect_LANStatus('"+_flag+"');", 2000);
 <div style="margin:5px;" id="splitLine"><img style="width: 720px; *width: 710px; height: 2px;" src="/images/New_ui/export/line_export.png"></div>
 </div>
 <div style="display:none;" id="field_mobile">
-<span id="mobile_wireless_desc" class="QISGeneralFont" style="margin-left:0px;"><#424#></span><br><br>
-<div class="itemTitle">2.4 GHz - <#470#></div>
+<span id="mobile_wireless_desc" class="QISGeneralFont" style="margin-left:0px;"><#425#></span><br><br>
+<div class="itemTitle">2.4 GHz - <#471#></div>
 <fieldset>
 <div class="row">
 <label>SSID</label>
-<input type="text" name="wl0_ssid_m" placeholder="<#330#>" maxlength="32" value="" autocomplete="off" autocorrect="off" autocapitalize="off"/>
+<input type="text" name="wl0_ssid_m" placeholder="<#335#>" maxlength="32" value="" autocomplete="off" autocorrect="off" autocapitalize="off"/>
 </div>
 <div class="row_end">
 <label>Key</label>
-<input id="wl0_wpa_psk_m" name="wl0_wpa_psk_m" type="text" onBlur="switchType(this, false);" onFocus="switchType(this, true);" placeholder="<#226#>" maxlength="64" autocapitalize="off" autocomplete="off">
+<input id="wl0_wpa_psk_m" name="wl0_wpa_psk_m" type="text" onBlur="switchType(this, false);" onFocus="switchType(this, true);" placeholder="<#229#>" maxlength="64" autocapitalize="off" autocomplete="off">
 </div>
 </fieldset>
 <br />
 <div id="band5_mobile">
-<div class="itemTitle">5 GHz - <#470#>
-<span id="syncCheckbox_m"><input type="checkbox" id="sync_with_2ghz_m" name="sync_with_2ghz_m" class="input" onclick="setTimeout('Sync_2ghz_m(2);',0);"><#385#></span>
+<div class="itemTitle">5 GHz - <#471#>
+<span id="syncCheckbox_m"><input type="checkbox" id="sync_with_2ghz_m" name="sync_with_2ghz_m" class="input" onclick="setTimeout('Sync_2ghz_m(2);',0);"><#390#></span>
 </div>
 <fieldset>
 <div class="row">
 <label>SSID</label>
-<input type="text" name="wl1_ssid_m" placeholder="<#330#>" maxlength="32" value="" autocomplete="off" autocorrect="off" autocapitalize="off"/>
+<input type="text" name="wl1_ssid_m" placeholder="<#335#>" maxlength="32" value="" autocomplete="off" autocorrect="off" autocapitalize="off"/>
 </div>
 <div class="row_end">
 <label>Key</label>
-<input id="wl1_wpa_psk_m" name="wl1_wpa_psk_m" type="password" onBlur="switchType(this, false);" onFocus="switchType(this, true);" placeholder="<#226#>" maxlength="64" autocomplete="off" autocorrect="off" autocapitalize="off">
+<input id="wl1_wpa_psk_m" name="wl1_wpa_psk_m" type="password" onBlur="switchType(this, false);" onFocus="switchType(this, true);" placeholder="<#229#>" maxlength="64" autocomplete="off" autocorrect="off" autocapitalize="off">
 </div>
 </fieldset>
 </div>
 <br />
 <div id="band5_2_mobile">
-<div class="itemTitle">5 GHz-2 - <#470#>
-<span id="syncCheckbox_m"><input type="checkbox" id="sync_with_5ghz_m" name="sync_with_5ghz_m" class="input" onclick="setTimeout('Sync_5ghz_m(2);',0);"><#385#></span>
+<div class="itemTitle">5 GHz-2 - <#471#>
+<span id="syncCheckbox_m"><input type="checkbox" id="sync_with_5ghz_m" name="sync_with_5ghz_m" class="input" onclick="setTimeout('Sync_5ghz_m(2);',0);"><#390#></span>
 </div>
 <fieldset>
 <div class="row">
 <label>SSID</label>
-<input type="text" name="wl2_ssid_m" placeholder="<#330#>" maxlength="32" value="" autocomplete="off" autocorrect="off" autocapitalize="off"/>
+<input type="text" name="wl2_ssid_m" placeholder="<#335#>" maxlength="32" value="" autocomplete="off" autocorrect="off" autocapitalize="off"/>
 </div>
 <div class="row_end">
 <label>Key</label>
-<input id="wl2_wpa_psk_m" name="wl2_wpa_psk_m" type="password" onBlur="switchType(this, false);" onFocus="switchType(this, true);" placeholder="<#226#>" maxlength="64" autocomplete="off" autocorrect="off" autocapitalize="off">
+<input id="wl2_wpa_psk_m" name="wl2_wpa_psk_m" type="password" onBlur="switchType(this, false);" onFocus="switchType(this, true);" placeholder="<#229#>" maxlength="64" autocomplete="off" autocorrect="off" autocapitalize="off">
 </div>
 </fieldset>
 </div>
 <br />
-<div id="mobile_psk_desc" class="QISGeneralFont"><#425#></div>
+<div id="mobile_psk_desc" class="QISGeneralFont"><#426#></div>
 <br />
 </div>
 <fieldset id="smart_connect_desc" style="border:0; display:none">
 <table class="QISSmartCon_table">
 <tr><td>
-<span id="desc_title"><span style="font-weight:bold; font-style:italic;"><#495#></span> <#496#></span>
+<span id="desc_title"><span style="font-weight:bold; font-style:italic;"><#496#></span> <#497#></span>
 </td></tr>
 <tr>
 <td>
@@ -1491,11 +1344,11 @@ setTimeout("detect_LANStatus('"+_flag+"');", 2000);
 <legend id="Continued_legend">
 <span id="Continued_PrevSetting"></span>
 <span id="radio_Continued_PrevSetting">
-<input type="radio" id="Cont_PrevSetting0" name="Cont_PrevSetting" tabindex="1" class="input" value="0" onclick="PrevSetting(this.value);"><#65#>
-<input type="radio" id="Cont_PrevSetting1" name="Cont_PrevSetting" tabindex="2" class="input" value="1" onclick="PrevSetting(this.value);"><#64#>
+<input type="radio" id="Cont_PrevSetting0" name="Cont_PrevSetting" tabindex="1" class="input" value="0" onclick="PrevSetting(this.value);"><#66#>
+<input type="radio" id="Cont_PrevSetting1" name="Cont_PrevSetting" tabindex="2" class="input" value="1" onclick="PrevSetting(this.value);"><#65#>
 </span>
 <span id="RP_UseParentSetting" style="display:none;">
-<input type="checkbox" id="RP_parentSetting" checked="" onclick="RP_useParentSetting()"><#278#>
+<input type="checkbox" id="RP_parentSetting" checked="" onclick="RP_useParentSetting()"><#281#>
 </span>
 </legend>
 <table id="smart_connect_table" style="display:none;" class="QISSmartCon_table">
@@ -1506,12 +1359,12 @@ setTimeout("detect_LANStatus('"+_flag+"');", 2000);
 <td>
 <table id="smart_connect_select_table">
 <td style="font-style:normal;font-size:13px;font-weight:bold;" >
-<input type="radio" value="1" id="smart_connect_t" name="smart_connect_t" class="input" onclick="return change_smart_con(this.value)" <% nvram_match("smart_connect_x", "1", "checked"); %>><#495#>
+<input type="radio" value="1" id="smart_connect_t" name="smart_connect_t" class="input" onclick="return change_smart_con(this.value)" <% nvram_match("smart_connect_x", "1", "checked"); %>><#496#>
 </td>
 </tr>
 <tr>
 <td style="font-style:normal;font-size:13px;font-weight:bold;">
-<input type="radio" value="0" name="smart_connect_t" class="input" onclick="return change_smart_con(this.value)" <% nvram_match("smart_connect_x", "0", "checked"); %>><#478#>
+<input type="radio" value="0" name="smart_connect_t" class="input" onclick="return change_smart_con(this.value)" <% nvram_match("smart_connect_x", "0", "checked"); %>><#479#>
 </td>
 </tr>
 </table>
@@ -1519,73 +1372,72 @@ setTimeout("detect_LANStatus('"+_flag+"');", 2000);
 </tr>
 </table>
 <br/>
-<div class="QISWireless_DescSetting" align="left"><#424#></div>
-<br/>
+<div class="QISWireless_DescSetting" align="left"><#425#></div>
 <table class="QISform_wireless" width="400" border=0 align="center" cellpadding="4" cellspacing="0">
 <tr>
-<th colspan="2" id="wl0_desc_name" class="QISWireless_DescSecurity">2.4 GHz - <#470#> </th>
+<th colspan="2" id="wl0_desc_name" class="QISWireless_DescSecurity">2.4 GHz - <#471#> </th>
 </tr>
 <tr>
-<th width="160"><span onmouseout="return nd();" onclick="openHint(0, 22);" style="cursor:help;"><#330#><img align="right" style="cursor:pointer;margin-top:-14px\9;" src="/images/New_ui/helpicon.png"></span></th>
+<th width="160"><span onmouseout="return nd();" onclick="openHint(0, 22);" style="cursor:help;"><#335#><img align="right" style="cursor:pointer;margin-top:-14px\9;" src="/images/New_ui/helpicon.png"></span></th>
 <td class="QISformtd">
 <input type="text" id="wl0_ssid" name="wl0_ssid" tabindex="3" onkeypress="return validator.isString(this, event);" style="height:25px;" class="input_32_table" maxlength="32" value="default" autocomplete="off" autocorrect="off" autocapitalize="off" onkeyup="Sync_2ghz(2);"/>
 </td>
 </tr>
 <tr id="wl_unit_field_0">
-<th width="160"><span onmouseout="return nd();" onclick="openHint(0, 23);" style="cursor:help;"><#226#><img align="right" style="cursor:pointer;margin-top:-14px\9;" src="/images/New_ui/helpicon.png"></span></th>
+<th width="160"><span onmouseout="return nd();" onclick="openHint(0, 23);" style="cursor:help;"><#268#><img align="right" style="cursor:pointer;margin-top:-14px\9;" src="/images/New_ui/helpicon.png"></span></th>
 <td class="QISformtd">
 <input id="wl0_wpa_psk" name="wl0_wpa_psk" type="password" tabindex="4" onBlur="switchType(this, false);" onFocus="switchType(this, true);" value="<% nvram_char_to_ascii("WLANConfig11b", "wl0_wpa_psk"); %>" onkeyup="Sync_2ghz(2);" style="height:25px;" class="input_32_table" maxlength="64" autocomplete="off" autocorrect="off" autocapitalize="off"/>
 </td>
 </tr>
 <tr id="wl_unit_field_1">
-<th id="wl_unit_field_1_1" class="QISWireless_DescSecurity">5 GHz - <#470#> </th>
-<td class="QISformtd" id="wl_unit_field_1_2" style="padding-top:12px;">
-<input type="checkbox" id="sync_with_2ghz" name="sync_with_2ghz" tabindex="5" class="input" onclick="setTimeout('Sync_2ghz(2);',0);" checked="checked"><span id="syncCheckbox"><#385#></span>
+<th id="wl_unit_field_1_1" class="QISWireless_DescSecurity">5 GHz - <#471#> </th>
+<td class="QISformtd" id="wl_unit_field_1_2" style="padding-top:12px;display:none">
+<input type="checkbox" id="sync_with_2ghz" name="sync_with_2ghz" tabindex="5" class="input" onclick="setTimeout('Sync_2ghz(2);',0);" checked="checked"><span id="syncCheckbox"><#390#></span>
 </td>
 </tr>
 <tr id="wl_unit_field_2">
-<th width="160"><span onmouseout="return nd();" onclick="openHint(0, 22);" style="cursor:help;"><#330#><img align="right" style="cursor:pointer;margin-top:-14px\9;" src="/images/New_ui/helpicon.png"></span></th>
+<th width="160"><span onmouseout="return nd();" onclick="openHint(0, 22);" style="cursor:help;"><#335#><img align="right" style="cursor:pointer;margin-top:-14px\9;" src="/images/New_ui/helpicon.png"></span></th>
 <td class="QISformtd">
 <input type="text" id="wl1_ssid" name="wl1_ssid" tabindex="6" onkeypress="return validator.isString(this, event);" style="height:25px;" class="input_32_table" maxlength="32" value="default" autocomplete="off" autocorrect="off" autocapitalize="off" onkeyup="Sync_2ghz(5);"/>
 </td>
 </tr>
 <tr id="wl_unit_field_3">
-<th width="160"><span onmouseout="return nd();" onclick="openHint(0, 23);" style="cursor:help;"><#226#><img align="right" style="cursor:pointer;margin-top:-14px\9;" src="/images/New_ui/helpicon.png"></span></th>
+<th width="160"><span onmouseout="return nd();" onclick="openHint(0, 23);" style="cursor:help;"><#268#><img align="right" style="cursor:pointer;margin-top:-14px\9;" src="/images/New_ui/helpicon.png"></span></th>
 <td class="QISformtd">
 <input id="wl1_wpa_psk" name="wl1_wpa_psk" type="password" tabindex="7" onBlur="switchType(this, false);" onFocus="switchType(this, true);" value="<% nvram_char_to_ascii("WLANConfig11b", "wl1_wpa_psk"); %>" onkeyup="Sync_2ghz(5);" style="height:25px;" class="input_32_table" maxlength="64" autocomplete="off" autocorrect="off" autocapitalize="off"/>
 </td>
 </tr>
 <tr id="wl_unit_field_4" style="display:none;">
-<th class="QISWireless_DescSecurity">5 GHz-2 - <#470#> </th>
-<td class="QISformtd" id="wl_unit_field_4_2" style="padding-top:12px;">
-<input type="checkbox" id="sync_with_5ghz" name="sync_with_5ghz" tabindex="8" class="input" onclick="setTimeout('Sync_5ghz(2);',0);" checked="checked"><span id="syncCheckbox_5_2"><#385#></span>
+<th class="QISWireless_DescSecurity">5 GHz-2 - <#471#> </th>
+<td class="QISformtd" id="wl_unit_field_4_2" style="padding-top:12px;display:none">
+<input type="checkbox" id="sync_with_5ghz" name="sync_with_5ghz" tabindex="8" class="input" onclick="setTimeout('Sync_5ghz(2);',0);" checked="checked"><span id="syncCheckbox_5_2"><#390#></span>
 </td>
 </tr>
 <tr id="wl_unit_field_5" style="display:none;">
-<th width="160"><span onmouseout="return nd();" onclick="openHint(0, 22);" style="cursor:help;"><#330#><img align="right" style="cursor:pointer;margin-top:-14px\9;" src="/images/New_ui/helpicon.png"></span></th>
+<th width="160"><span onmouseout="return nd();" onclick="openHint(0, 22);" style="cursor:help;"><#335#><img align="right" style="cursor:pointer;margin-top:-14px\9;" src="/images/New_ui/helpicon.png"></span></th>
 <td class="QISformtd">
 <input type="text" id="wl2_ssid" name="wl2_ssid" tabindex="9" onkeypress="return validator.isString(this, event);" style="height:25px;" class="input_32_table" maxlength="32" value="default" autocomplete="off" autocorrect="off" autocapitalize="off" onkeyup="Sync_5ghz(5);"/>
 </td>
 </tr>
 <tr id="wl_unit_field_6" style="display:none;">
-<th width="160"><span onmouseout="return nd();" onclick="openHint(0, 23);" style="cursor:help;"><#226#><img align="right" style="cursor:pointer;margin-top:-14px\9;" src="/images/New_ui/helpicon.png"></span></th>
+<th width="160"><span onmouseout="return nd();" onclick="openHint(0, 23);" style="cursor:help;"><#268#><img align="right" style="cursor:pointer;margin-top:-14px\9;" src="/images/New_ui/helpicon.png"></span></th>
 <td class="QISformtd">
 <input id="wl2_wpa_psk" name="wl2_wpa_psk" tabindex="10" type="password" onBlur="switchType(this, false);" onFocus="switchType(this, true);" value="<% nvram_char_to_ascii("WLANConfig11b", "wl2_wpa_psk"); %>" onkeyup="Sync_5ghz(5);" style="height:25px;" class="input_32_table" maxlength="64" autocomplete="off" autocorrect="off" autocapitalize="off"/>
 </td>
 </tr>
 </table>
 <br/>
-<div id="wl_psk_desc" class="QISWireless_DescFont"><#425#></div>
+<div id="wl_psk_desc" class="QISWireless_DescFont"><#426#></div>
 <br/>
 </fieldset>
 <fieldset class="theFieldset" id="theFieldset" style="display:none;">
-<div class="row"><a id="loadingIcon_iui" class="iuiA" onclick="submitForm();"><#77#></a></div>
+<div class="row"><a id="loadingIcon_iui" class="iuiA" onclick="submitForm();"><#79#></a></div>
 </fieldset>
 <div id="applyBtn" class="apply_gen" style="margin-top:10px">
 <span>
-<input type="button" id="prevButton" value="<#78#>" tabindex="13" onclick="gotoprev(document.form);" style="display:none;" class="button_gen">
-<input type="button" id="smartcon_desc_button" value="<#78#>" tabindex="12" onclick="smartcon_desc_show();" style="display:none;" class="button_gen">
-<input type="button" id="btn_next_step" value="<#72#>" tabindex="11" onclick="submitForm();" class="button_gen">
+<input type="button" id="prevButton" value="<#80#>" tabindex="13" onclick="gotoprev(document.form);" style="display:none;" class="button_gen">
+<input type="button" id="smartcon_desc_button" value="<#80#>" tabindex="12" onclick="smartcon_desc_show();" style="display:none;" class="button_gen">
+<input type="button" id="btn_next_step" value="<#73#>" tabindex="11" onclick="submitForm();" class="button_gen">
 <img id="loadingIcon" style="display:none;" src="/images/InternetScan.gif">
 </span>
 </div>

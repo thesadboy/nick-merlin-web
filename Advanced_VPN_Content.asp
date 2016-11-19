@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#533#> - <#54#></title>
+<title><#548#> - <#55#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="menu_style.css">
@@ -73,15 +73,15 @@ username_status = "status"+ind;
 if(pptpd_connected_clients.length >0){
 for(var y=0; y<pptpd_connected_clients.length; y++){
 if(document.getElementById('pptpd_clientlist_table').rows[x].cells[1].title == pptpd_connected_clients[y].username){
-document.getElementById(username_status).innerHTML = '<a class="hintstyle2" href="javascript:void(0);" onClick="showPPTPClients(\''+pptpd_connected_clients[y].username+'\');"><#66#></a>';
+document.getElementById(username_status).innerHTML = '<a class="hintstyle2" href="javascript:void(0);" onClick="showPPTPClients(\''+pptpd_connected_clients[y].username+'\');"><#67#></a>';
 break;
 }
 }
 if(document.getElementById(username_status).innerHTML == ""){
-document.getElementById(username_status).innerHTML = '<#87#>';
+document.getElementById(username_status).innerHTML = '<#89#>';
 }
 }else if(document.getElementById(username_status)){
-document.getElementById(username_status).innerHTML = '<#87#>';
+document.getElementById(username_status).innerHTML = '<#89#>';
 }
 }
 }
@@ -94,15 +94,15 @@ username_status = "conn"+ind;
 if(openvpnd_connected_clients.length >0){
 for(var y=0; y<openvpnd_connected_clients.length; y++){
 if(document.getElementById("openvpnd_clientlist_table").rows[x].cells[1].title == openvpnd_connected_clients[y].username){
-document.getElementById(username_status).innerHTML = '<a class="hintstyle2" href="javascript:void(0);" onClick="showOpenVPNClients(\''+openvpnd_connected_clients[y].username+'\');"><#66#></a>';
+document.getElementById(username_status).innerHTML = '<a class="hintstyle2" href="javascript:void(0);" onClick="showOpenVPNClients(\''+openvpnd_connected_clients[y].username+'\');"><#67#></a>';
 break;
 }
 }
 if(document.getElementById(username_status).innerHTML == ""){
-document.getElementById(username_status).innerHTML = '<#87#>';
+document.getElementById(username_status).innerHTML = '<#89#>';
 }
 }else if(document.getElementById(username_status)){
-document.getElementById(username_status).innerHTML = '<#87#>';
+document.getElementById(username_status).innerHTML = '<#89#>';
 }
 }
 }
@@ -125,7 +125,7 @@ ip_class = 'C';
 else if(ip_num != 0){
 return;
 }
-document.getElementById("privateIP_notes").innerHTML = "<#2131#>"
+document.getElementById("privateIP_notes").innerHTML = "<#2184#>"
 document.getElementById("privateIP_notes").style.display = "";
 return;
 }
@@ -157,7 +157,7 @@ if(j != item_num-2)
 tmp_value += ">";
 }
 }
-if(tmp_value == "<"+"<#1286#>" || tmp_value == "<")
+if(tmp_value == "<"+"<#1324#>" || tmp_value == "<")
 tmp_value = "";
 return tmp_value;
 }
@@ -200,14 +200,14 @@ valid_username = document.form.vpn_server_clientlist_username;
 valid_password = document.form.vpn_server_clientlist_password;
 }
 if(valid_username.value==""){
-alert("<#137#>");
+alert("<#140#>");
 valid_username.focus();
 return false;
 }else if(!Block_chars(valid_username, [" ", "@", "*", "+", "|", ":", "?", "<", ">", ",", ".", "/", ";", "[", "]", "\\", "=", "\"", "&" ])){
 return false;
 }
 if(valid_password.value==""){
-alert("<#137#>");
+alert("<#140#>");
 valid_password.focus();
 return false;
 }else if(!Block_chars(valid_password, ["<", ">", "&"])){
@@ -223,7 +223,7 @@ password_obj = document.form.pptpd_clientlist_password;
 var rule_num = document.getElementById(table_id).rows.length;
 var item_num = document.getElementById(table_id).rows[0].cells.length;
 if(rule_num >= upper){
-alert("<#1331#> " + upper + " <#1332#>");
+alert("<#1369#> " + upper + " <#1370#>");
 return false;
 }
 }else{ // 'openvpnd'
@@ -233,7 +233,7 @@ password_obj = document.form.vpn_server_clientlist_password;
 var rule_num = document.getElementById(table_id).rows.length;
 var item_num = document.getElementById(table_id).rows[0].cells.length;
 if(rule_num >= upper+1){
-alert("<#1331#> " + upper + " <#1332#>");
+alert("<#1369#> " + upper + " <#1370#>");
 return false;
 }
 }
@@ -241,7 +241,7 @@ if(validForm(flag)){
 if(item_num >=2){
 for(i=0; i<rule_num; i++){
 if(username_obj.value == document.getElementById(table_id).rows[i].cells[1].title){
-alert("<#1325#>");
+alert("<#1363#>");
 username_obj.focus();
 username_obj.select();
 return false;
@@ -304,7 +304,7 @@ var pptpd_clientlist_row = pptpd_clientlist_array.split('<');
 var code = "";
 code +='<table width="100%" cellspacing="0" cellpadding="4" align="center" class="list_table" id="pptpd_clientlist_table">';
 if(pptpd_clientlist_row.length == 1)
-code +='<tr><td style="color:#FFCC00;" colspan="6"><#1286#></td></tr>';
+code +='<tr><td style="color:#FFCC00;" colspan="6"><#1324#></td></tr>';
 else{
 for(var i = 1; i < pptpd_clientlist_row.length; i++){
 overlib_str0[i] = "";
@@ -386,14 +386,14 @@ var C_class_end = inet_network("255.255.255.255");
 var ip_obj = obj_name;
 var ip_num = inet_network(ip_obj.value); //-1 means nothing
 if(obj_name.value.split(".")[3] < 1 || obj_name.value.split(".")[3] > 254){
-alert('<#149#> ' + 1 + ' <#150#> ' + 254);
+alert('<#152#> ' + 1 + ' <#153#> ' + 254);
 obj_name.focus();
 return false;
 }
 if(ip_num > A_class_start && ip_num < A_class_end)
 return true;
 else if(ip_num > B_class_start && ip_num < B_class_end){
-alert(ip_obj.value+" <#146#>");
+alert(ip_obj.value+" <#149#>");
 ip_obj.focus();
 ip_obj.select();
 return false;
@@ -401,7 +401,7 @@ return false;
 else if(ip_num > C_class_start && ip_num < C_class_end)
 return true;
 else{
-alert(ip_obj.value+" <#146#>");
+alert(ip_obj.value+" <#149#>");
 ip_obj.focus();
 ip_obj.select();
 return false;
@@ -639,7 +639,7 @@ document.form.vpn_serverx_start.value = tmp_value;
 <tr>
 <td bgcolor="#4D595D" valign="top">
 <div>&nbsp;</div>
-<div class="formfonttitle">VPN - <#54#></div>
+<div class="formfonttitle">VPN - <#55#></div>
 <div align="right" style="margin-top:-35px;">
 <select name="VPNServer_mode_select" class="input_option" onchange="change_mode(this);"></select>
 <select id="openvpn_unit" style="display:none;" name="vpn_server_unit" class="input_option" onChange="change_vpn_unit(this.value);">
@@ -651,11 +651,11 @@ document.form.vpn_serverx_start.value = tmp_value;
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <thead>
 <tr>
-<td colspan="3" id="GWStatic"><#1878#></td>
+<td colspan="3" id="GWStatic"><#1924#></td>
 </tr>
 </thead>
 <tr>
-<th><#2077#></th>
+<th><#2132#></th>
 <td id="pptpd_enable_switch" style="display:none;">
 <div align="center" class="left" style="width:94px; float:left; cursor:pointer;" id="pptp_service_enable"></div>
 <div class="iphone_switch_container" style="height:32px; width:74px; position: relative; overflow: hidden;">
@@ -708,17 +708,17 @@ switch_on_container_path: '/switcherplugin/iphone_switch_container_off.png'
 </td>
 </tr>
 <tr id="pptp_samba">
-<th><#2084#></th>
+<th><#2137#></th>
 <td>
-<input type="radio" value="1" name="pptpd_broadcast_ppp" onchange="set_pptpd_broadcast(this);"/><#65#>
-<input type="radio" value="0" name="pptpd_broadcast_ppp" onchange="set_pptpd_broadcast(this);"/><#64#>
+<input type="radio" value="1" name="pptpd_broadcast_ppp" onchange="set_pptpd_broadcast(this);"/><#66#>
+<input type="radio" value="0" name="pptpd_broadcast_ppp" onchange="set_pptpd_broadcast(this);"/><#65#>
 </td>
 </tr>
 <tr id="openvpn_export" style="display:none;">
-<th><#2080#></th>
+<th><#2135#></th>
 <td>
 <div id="export_div">
-<input id="exportToLocal" class="button_gen" type="button" value="<#825#>" />
+<input id="exportToLocal" class="button_gen" type="button" value="<#842#>" />
 <input id="exportViaEmail" class="button_gen" type="button" value="via Email" style="display:none;"/></div>
 <script type="text/javascript">
 document.getElementById("exportToLocal").onclick = function(){
@@ -748,28 +748,28 @@ Initializing the settings of the OpenVPN server, this may take a few minutes...
 <br>
 <div id="privateIP_notes" class="formfontdesc" style="display:none;color:#FFCC00;"></div>
 <div id="PPTP_setting" style="display:none;">
-<div class="formfontdesc"><#1675#></div>
-<div id="wan_ctrl" class="formfontdesc"><#1676#> <% nvram_get("wan0_ipaddr"); %></div>
-<div id="dualwan_ctrl" style="display:none;" class="formfontdesc"><#1676#> <span class="formfontdesc">Primary WAN IP : <% nvram_get("wan0_ipaddr"); %> </sapn><span class="formfontdesc">Secondary WAN IP : <% nvram_get("wan1_ipaddr"); %> </sapn></div>
-<div class="formfontdesc" style="margin-top:-10px;font-weight: bolder;"><#1677#></div>
+<div class="formfontdesc"><#1718#></div>
+<div id="wan_ctrl" class="formfontdesc"><#2446#> <% nvram_get("wan0_ipaddr"); %></div>
+<div id="dualwan_ctrl" style="display:none;" class="formfontdesc"><#2446#> <span class="formfontdesc">Primary WAN IP : <% nvram_get("wan0_ipaddr"); %> </sapn><span class="formfontdesc">Secondary WAN IP : <% nvram_get("wan1_ipaddr"); %> </sapn></div>
+<div class="formfontdesc" style="margin-top:-10px;font-weight: bolder;"><#1719#></div>
 <div class="formfontdesc" style="margin:-10px 0px 0px -15px;">
 <ul>
 <li>
-<a id="faq" href="" target="_blank" style="font-family:Lucida Console;text-decoration:underline;"><#54#> FAQ</a>
+<a id="faq" href="" target="_blank" style="font-family:Lucida Console;text-decoration:underline;"><#55#> FAQ</a>
 </li>
 </ul>
 </div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable_table" style="margin-top:8px;">
 <thead>
 <tr>
-<td colspan="4" id="GWStatic"><#2057#>&nbsp;(<#1435#>&nbsp;64)</td>
+<td colspan="4" id="GWStatic"><#2112#>&nbsp;(<#1473#>&nbsp;64)</td>
 </tr>
 </thead>
 <tr>
-<th><#272#></th>
-<th><#266#></th>
-<th><#265#></th>
-<th><#1434#></th>
+<th><#275#></th>
+<th><#269#></th>
+<th><#268#></th>
+<th><#1472#></th>
 </tr>
 <tr>
 <td width="15%" style="text-align:center;">-
@@ -789,7 +789,7 @@ Initializing the settings of the OpenVPN server, this may take a few minutes...
 </div>
 <div id="OpenVPN_setting" style="display:none;">
 <div class="formfontdesc">
-If you configure OpenVPN with username/password authentication, <#534#> can automatically generate a ovpn file including Certification Authority key. You can deliver this file with username and password to clients making them connect to your VPN server. If you need a more advanced authenticaton method (such as using signed certs), please go to VPN details. You will need to manually prepare and provide signed certificates then.<br>
+If you configure OpenVPN with username/password authentication, <#549#> can automatically generate a ovpn file including Certification Authority key. You can deliver this file with username and password to clients making them connect to your VPN server. If you need a more advanced authenticaton method (such as using signed certs), please go to VPN details. You will need to manually prepare and provide signed certificates then.<br>
 Please refer to below FAQ for your client side setting.
 <ol>
 <li><a href="http://www.asus.com/support/Knowledge-Detail/11/2/RTAC68U/1A935B95-C237-4281-AE86-C824737D11F9/" target="_blank" style="text-decoration:underline;">Windows</a>
@@ -802,14 +802,14 @@ Please refer to below FAQ for your client side setting.
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable_table" style="margin-top:8px;">
 <thead>
 <tr>
-<td colspan="4" id="GWStatic"><#2057#>&nbsp;(<#1435#>&nbsp;64)</td>
+<td colspan="4" id="GWStatic"><#2112#>&nbsp;(<#1473#>&nbsp;64)</td>
 </tr>
 </thead>
 <tr>
-<th><#272#></th>
-<th><#266#></th>
-<th><#265#></th>
-<th><#1434#></th>
+<th><#275#></th>
+<th><#269#></th>
+<th><#268#></th>
+<th><#1472#></th>
 </tr>
 <tr>
 <td width="15%" style="text-align:center;">-
@@ -828,7 +828,7 @@ Please refer to below FAQ for your client side setting.
 <div id="openvpnd_clientlist_Block"></div>
 </div>
 <div class="apply_gen">
-<input class="button_gen" onclick="applyRule()" type="button" value="<#72#>"/>
+<input class="button_gen" onclick="applyRule()" type="button" value="<#73#>"/>
 </div>
 </td>
 </tr>
@@ -865,7 +865,7 @@ Please refer to below FAQ for your client side setting.
 </tr>
 </table>
 <div class="panelSubmiter">
-<input id="mailSendPannelCancel" class="button_gen" type="button" value="<#74#>">
+<input id="mailSendPannelCancel" class="button_gen" type="button" value="<#75#>">
 <input id="mailSendPannelSubmiter" class="button_gen" type="button" value="Send">
 <img id="mailSendLoadingIcon" style="margin-left:5px;display:none;" src="/images/InternetScan.gif">
 <script>
@@ -958,8 +958,8 @@ document.mailConfigForm.PM_MY_EMAIL_TMP.value = this.value + "@" + smtpList[docu
 </tr>
 </table>
 <div class="panelSubmiter">
-<input id="mailConfigPannelCancel" class="button_gen" type="button" value="<#74#>">
-<input id="mailConfigPannelSubmiter" class="button_gen" type="button" value="<#880#>">
+<input id="mailConfigPannelCancel" class="button_gen" type="button" value="<#75#>">
+<input id="mailConfigPannelSubmiter" class="button_gen" type="button" value="<#897#>">
 <img id="mailConfigLoadingIcon" style="margin-left:5px;display:none;" src="/images/InternetScan.gif">
 <script>
 document.getElementById("mailConfigPannelCancel").onclick = function(){

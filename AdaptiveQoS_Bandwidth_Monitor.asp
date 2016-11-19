@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#533#> - <#801#></title>
+<title><#548#> - <#818#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="usp_style.css">
@@ -644,7 +644,7 @@ code +='</td>';
 code +='</tr>';
 }
 if(code == ""){
-code = "<tr><td colspan='3' style='text-align:center;color:#FFCC00'><div style='padding:5px 0px;border-top:solid 1px #333;'><#800#></div></td></tr>";
+code = "<tr><td colspan='3' style='text-align:center;color:#FFCC00'><div style='padding:5px 0px;border-top:solid 1px #333;'><#817#></div></td></tr>";
 }
 $(apps_field).empty();
 $(apps_field).append(code);
@@ -1120,14 +1120,14 @@ document.getElementById("hiddenMask").style.visibility = "hidden";
 <table width="100%">
 <tr>
 <td class="formfonttitle" align="left">
-<div><#1470#> - <#801#></div>
+<div><#1508#> - <#818#></div>
 </td>
 <td>
 <div>
 <table align="right">
 <tr>
 <td>
-<div class="formfonttitle" style="margin-bottom:0px;margin-left:50px;" title="<#797#>"><#799#></div>
+<div class="formfonttitle" style="margin-bottom:0px;margin-left:50px;" title="<#814#>"><#816#></div>
 </td>
 <td >
 <div align="center" class="left" style="width:94px; float:left; cursor:pointer;" id="apps_analysis_enable"></div>
@@ -1177,7 +1177,7 @@ applyRule();
 <table style="width:99%;">
 <tr>
 <td id="upload_unit" style="width:50%;">
-<div style="margin:-10px 0 5px 70px;font-size:16px;text-align:center;"><#2020#></div>
+<div style="margin:-10px 0 5px 70px;font-size:16px;text-align:center;"><#2075#></div>
 <div style="position:absolute;margin:12px 0px 0px 112px;font-size:16px;display:none;"></div>
 <div style="position:absolute;margin:-8px 0px 0px 222px;font-size:16px;display:none;"></div>
 <div style="position:absolute;margin:50px 0px 0px 300px;font-size:16px;display:none;"></div>
@@ -1188,7 +1188,7 @@ applyRule();
 <div id="indicator_upload" class="transition_style" style="background-image:url('images/New_ui/indicator.png');position:absolute;height:100px;width:50px;background-repeat:no-repeat;margin:-110px 0px 0px 194px;"></div>
 </td>
 <td id="download_unit">
-<div style="margin:-10px 0 5px -55px;font-size:16px;text-align:center;"><#978#></div>
+<div style="margin:-10px 0 5px -55px;font-size:16px;text-align:center;"><#996#></div>
 <div style="position:absolute;margin:12px 0px 0px 88px;font-size:16px;display:none;"></div>
 <div style="position:absolute;margin:-6px 0px 0px 203px;font-size:16px;display:none;"></div>
 <div style="position:absolute;margin:50px 0px 0px 275px;font-size:16px;display:none;"></div>
@@ -1212,7 +1212,7 @@ applyRule();
 <div style="cursor:pointer;background-color:#444F53;width:113px;border-radius:10px;text-align:center;box-shadow:0px 2px black;" onclick="show_clients()">
 <table>
 <tr>
-<td><div style="width:110px;"><#1807#></div></td>
+<td><div style="width:110px;"><#1849#></div></td>
 </tr>
 </table>
 </div>
@@ -1226,7 +1226,7 @@ applyRule();
 <table>
 <tr>
 <td style="width:25px;"><div style="width:12px;height:12px;border-radius:10px;background-color:#F01F09;margin-left:5px;"></div></td>
-<td><#1221#></td>
+<td><#1258#></td>
 </tr>
 </table>
 </div>
@@ -1236,7 +1236,7 @@ applyRule();
 <table>
 <tr>
 <td style="width:25px;"><div style="width:12px;height:12px;border-radius:10px;background-color:#F08C09;margin-left:5px;"></div></td>
-<td><#1220#></td>
+<td><#1257#></td>
 </tr>
 </table>
 </div>
@@ -1246,7 +1246,7 @@ applyRule();
 <table>
 <tr>
 <td style="width:25px;"><div style="width:12px;height:12px;border-radius:10px;background-color:#F3DD09;margin-left:5px;"></div></td>
-<td><#1463#></td>
+<td><#1501#></td>
 </tr>
 </table>
 </div>
@@ -1256,7 +1256,7 @@ applyRule();
 <table>
 <tr>
 <td style="width:25px;"><div style="width:12px;height:12px;border-radius:10px;background-color:#7A797A;margin-left:5px;"></div></td>
-<td><#1785#></td>
+<td><#1827#></td>
 </tr>
 </table>
 </div>
@@ -1266,7 +1266,7 @@ applyRule();
 <table>
 <tr>
 <td style="width:25px;"><div style="width:12px;height:12px;border-radius:10px;background-color:#58CCED;margin-left:5px;"></div></td>
-<td><#1442#></td>
+<td><#1480#></td>
 </tr>
 </table>
 </div>
@@ -1294,9 +1294,9 @@ applyRule();
 <tr>
 <td>
 <div style=" *width:136px;margin:5px 0px 0px 300px;" class="titlebtn" align="center">
-<span onClick="applyRule();"><#72#></span>
+<span onClick="applyRule();"><#73#></span>
 </div>
-<div style="margin: 60px 0 0px 500px;"><a style="text-decoration:underline;" href="http://www.asus.com/support/FAQ/1008717/" target="_blank"><#801#> FAQ</a></div>
+<div style="margin: 60px 0 0px 500px;"><a style="text-decoration:underline;" href="http://www.asus.com/support/FAQ/1008717/" target="_blank"><#818#> FAQ</a></div>
 </td>
 </tr>
 </table>

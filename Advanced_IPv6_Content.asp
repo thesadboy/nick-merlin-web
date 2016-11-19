@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#533#> - IPv6</title>
+<title><#548#> - IPv6</title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="other.css">
@@ -37,37 +37,21 @@ if(yadns_support){
 var yadns_enable = '<% nvram_get("yadns_enable_x"); %>';
 var yadns_mode = '<% nvram_get("yadns_mode"); %>';
 }
-var ipv6_service_opt = new Array( new Array("<#822#>", "disabled"),
-new Array("Native", "dhcp6"),
-new Array("<#1310#>", "other"),
-new Array("Tunnel 6to4", "6to4"),
-new Array("Tunnel 6in4", "6in4"),
-new Array("Tunnel 6rd", "6rd")
-);
-/*
-new Array("SLAAC", "slaac"),
-new Array("ICMPv6", "icmp6")
-*/
-function loadipv6serviceOptions(){
-free_options(document.form.ipv6_service);
-if(IPv6_Passthrough_support){
-ipv6_service_opt.splice(3,0, new Array("IPv6 Passthrough", "ipv6pt"));
-}
-for(var i = 0; i < ipv6_service_opt.length; i++)
-add_option(document.form.ipv6_service, ipv6_service_opt[i][0], ipv6_service_opt[i][1]);
-}
 function initial(){
 show_menu();
-loadipv6serviceOptions();
-if(ipv6_proto_orig == "static6"){ // legacy
-ipv6_proto_orig == "other";
+if(!IPv6_Passthrough_support){
+$("#ipv6_service option[value='ipv6pt']").remove();
+$("#ipv6_service option[value='flets']").remove();
 }
+if(ipv6_proto_orig == "static6"){ // legacy
+ipv6_proto_orig = "other";
 document.form.ipv6_service.value = ipv6_proto_orig;
+}
 showInputfield(ipv6_proto_orig);
 if(yadns_support){
 if(yadns_enable != 0 && yadns_mode != -1){
 document.getElementById("yadns_hint").style.display = "";
-document.getElementById("yadns_hint").innerHTML = "<span><#2365#></span>";
+document.getElementById("yadns_hint").innerHTML = "<span><#2415#></span>";
 }
 }
 addOnlineHelp(document.getElementById("faq"), ["ASUSWRT", "IPv6"]);
@@ -84,6 +68,8 @@ inputCtrl(document.form.ipv6_tun_v4end, 0);
 inputCtrl(document.form.ipv6_relay, 0);
 inputCtrl(document.form.ipv6_6rd_dhcp[0], 0);
 inputCtrl(document.form.ipv6_6rd_dhcp[1], 0);
+inputCtrl(document.form.ipv6_dhcp6c_release[0], 1);
+inputCtrl(document.form.ipv6_dhcp6c_release[1], 1);
 inputCtrl(document.form.ipv6_6rd_prefix, 0);
 inputCtrl(document.form.ipv6_6rd_prefixlen, 0);
 inputCtrl(document.form.ipv6_6rd_router, 0);
@@ -127,14 +113,58 @@ document.getElementById("ipv6_prefix_span").innerHTML = "<% nvram_get("ipv6_pref
 document.getElementById("ipv6_prefix_length_span").innerHTML = "<% nvram_get("ipv6_prefix_length"); %>";
 document.getElementById("ipv6_ipaddr_span").innerHTML = "<% nvram_get("ipv6_rtr_addr"); %>";
 }
+var enable_pd = (document.form.ipv6_dhcp_pd[1].checked) ? '0' : '1';
+showInputfield2('ipv6_dhcp_pd', enable_pd);
 document.getElementById("ipv6_dns_setting").style.display="";
 inputCtrl(document.form.ipv6_dnsenable[0], 1);
 inputCtrl(document.form.ipv6_dnsenable[1], 1);
-var enable_pd = (document.form.ipv6_dhcp_pd[1].checked) ? '0' : '1';
-showInputfield2('ipv6_dhcp_pd', enable_pd);
 var enable_dns = (document.form.ipv6_dnsenable[1].checked) ? '0' : '1';
 showInputfield2('ipv6_dnsenable', enable_dns);
 document.getElementById("auto_config").style.display="";
+}
+else if(IPv6_Passthrough_support && (v == "ipv6pt" || v == "flets")){
+if((wan_proto_orig == "l2tp" || wan_proto_orig == "pptp" || wan_proto_orig == "pppoe") && v == "ipv6pt")
+inputCtrl(document.form.ipv6_ifdev_select, 1);
+else
+inputCtrl(document.form.ipv6_ifdev_select, 0);
+inputCtrl(document.form.ipv6_dhcp_pd[0], 0);
+inputCtrl(document.form.ipv6_dhcp_pd[1], 0);
+inputCtrl(document.form.ipv6_tun_v4end, 0);
+inputCtrl(document.form.ipv6_relay, 0);
+inputCtrl(document.form.ipv6_6rd_dhcp[0], 0);
+inputCtrl(document.form.ipv6_6rd_dhcp[1], 0);
+inputCtrl(document.form.ipv6_dhcp6c_release[0], 1);
+inputCtrl(document.form.ipv6_dhcp6c_release[1], 1);
+inputCtrl(document.form.ipv6_6rd_prefix, 0);
+inputCtrl(document.form.ipv6_6rd_prefixlen, 0);
+inputCtrl(document.form.ipv6_6rd_router, 0);
+inputCtrl(document.form.ipv6_6rd_ip4size, 0);
+inputCtrl(document.form.ipv6_tun_addr, 0);
+inputCtrl(document.form.ipv6_tun_addrlen, 0);
+inputCtrl(document.form.ipv6_tun_peer, 0);
+inputCtrl(document.form.ipv6_tun_mtu, 0);
+inputCtrl(document.form.ipv6_tun_ttl, 0);
+document.getElementById("ipv6_wan_setting").style.display="none";
+inputCtrl(document.form.ipv6_ipaddr, 0);
+inputCtrl(document.form.ipv6_prefix_len_wan, 0);
+inputCtrl(document.form.ipv6_gateway, 0);
+document.getElementById("ipv6_lan_setting").style.display="none";
+inputCtrl(document.form.ipv6_prefix, 0);
+inputCtrl(document.form.ipv6_prefix_length, 0);
+document.getElementById("ipv6_prefix_r").style.display="none";
+document.getElementById("ipv6_prefix_length_r").style.display="none";
+inputCtrl(document.form.ipv6_autoconf_type[0], 0);
+inputCtrl(document.form.ipv6_autoconf_type[1], 0);
+inputCtrl(document.form.ipv6_dhcp_start_start, 0);
+inputCtrl(document.form.ipv6_dhcp_end_end, 0);
+inputCtrl(document.form.ipv6_dhcp_lifetime, 0);
+document.getElementById("ipv6_ipaddr_r").style.display="none";
+document.getElementById("ipv6_dns_setting").style.display="";
+inputCtrl(document.form.ipv6_dnsenable[0], 1);
+inputCtrl(document.form.ipv6_dnsenable[1], 1);
+var enable_dns = (document.form.ipv6_dnsenable[1].checked) ? '0' : '1';
+showInputfield2('ipv6_dnsenable', enable_dns);
+document.getElementById("auto_config").style.display="none";
 }
 else if(v == "6to4"){
 inputCtrl(document.form.ipv6_ifdev_select, 0);
@@ -144,6 +174,8 @@ inputCtrl(document.form.ipv6_tun_v4end, 0);
 inputCtrl(document.form.ipv6_relay, 1);
 inputCtrl(document.form.ipv6_6rd_dhcp[0], 0);
 inputCtrl(document.form.ipv6_6rd_dhcp[1], 0);
+inputCtrl(document.form.ipv6_dhcp6c_release[0], 0);
+inputCtrl(document.form.ipv6_dhcp6c_release[1], 0);
 inputCtrl(document.form.ipv6_6rd_prefix, 0);
 inputCtrl(document.form.ipv6_6rd_prefixlen, 0);
 inputCtrl(document.form.ipv6_6rd_router, 0);
@@ -180,9 +212,7 @@ document.getElementById("ipv6_ipaddr_span").innerHTML = "<% nvram_get("ipv6_rtr_
 document.getElementById("ipv6_dns_setting").style.display="";
 inputCtrl(document.form.ipv6_dnsenable[0], 0);
 inputCtrl(document.form.ipv6_dnsenable[1], 0);
-inputCtrl(document.form.ipv6_dns1, 1);
-inputCtrl(document.form.ipv6_dns2, 1);
-inputCtrl(document.form.ipv6_dns3, 1);
+showInputfield2('ipv6_dnsenable', '0');
 document.getElementById("auto_config").style.display="";
 }
 else if(v == "6in4"){
@@ -193,6 +223,8 @@ inputCtrl(document.form.ipv6_tun_v4end, 1);
 inputCtrl(document.form.ipv6_relay, 0);
 inputCtrl(document.form.ipv6_6rd_dhcp[0], 0);
 inputCtrl(document.form.ipv6_6rd_dhcp[1], 0);
+inputCtrl(document.form.ipv6_dhcp6c_release[0], 0);
+inputCtrl(document.form.ipv6_dhcp6c_release[1], 0);
 inputCtrl(document.form.ipv6_6rd_prefix, 0);
 inputCtrl(document.form.ipv6_6rd_prefixlen, 0);
 inputCtrl(document.form.ipv6_6rd_router, 0);
@@ -228,9 +260,7 @@ document.getElementById("ipv6_ipaddr_span").innerHTML = "<% nvram_get("ipv6_rtr_
 document.getElementById("ipv6_dns_setting").style.display="";
 inputCtrl(document.form.ipv6_dnsenable[0], 0);
 inputCtrl(document.form.ipv6_dnsenable[1], 0);
-inputCtrl(document.form.ipv6_dns1, 1);
-inputCtrl(document.form.ipv6_dns2, 1);
-inputCtrl(document.form.ipv6_dns3, 1);
+showInputfield2('ipv6_dnsenable', '0');
 document.getElementById("auto_config").style.display="";
 }
 else if(v == "6rd"){
@@ -242,6 +272,8 @@ inputCtrl(document.form.ipv6_relay, 0);
 inputCtrl(document.form.ipv6_6rd_dhcp[0], 1);
 inputCtrl(document.form.ipv6_6rd_dhcp[1], 1);
 var enable = (document.form.ipv6_6rd_dhcp[1].checked) ? 1 : 0;
+inputCtrl(document.form.ipv6_dhcp6c_release[0], 0);
+inputCtrl(document.form.ipv6_dhcp6c_release[1], 0);
 inputCtrl(document.form.ipv6_6rd_prefix, enable);
 inputCtrl(document.form.ipv6_6rd_prefixlen, enable);
 inputCtrl(document.form.ipv6_6rd_router, enable);
@@ -272,9 +304,7 @@ showInputfield2('ipv6_6rd_dhcp', enable);
 document.getElementById("ipv6_dns_setting").style.display="";
 inputCtrl(document.form.ipv6_dnsenable[0], 0);
 inputCtrl(document.form.ipv6_dnsenable[1], 0);
-inputCtrl(document.form.ipv6_dns1, 1);
-inputCtrl(document.form.ipv6_dns2, 1);
-inputCtrl(document.form.ipv6_dns3, 1);
+showInputfield2('ipv6_dnsenable', '0');
 document.getElementById("auto_config").style.display="";
 }
 else if(v == "other"){
@@ -284,6 +314,8 @@ else
 inputCtrl(document.form.ipv6_ifdev_select, 0);
 inputCtrl(document.form.ipv6_dhcp_pd[0], 0);
 inputCtrl(document.form.ipv6_dhcp_pd[1], 0);
+inputCtrl(document.form.ipv6_dhcp6c_release[0], 0);
+inputCtrl(document.form.ipv6_dhcp6c_release[1], 0);
 inputCtrl(document.form.ipv6_tun_v4end, 0);
 inputCtrl(document.form.ipv6_relay, 0);
 inputCtrl(document.form.ipv6_6rd_dhcp[0], 0);
@@ -335,12 +367,10 @@ document.getElementById("ipv6_ipaddr_r").style.display="none";
 document.getElementById("ipv6_dns_setting").style.display="";
 inputCtrl(document.form.ipv6_dnsenable[0], 0);
 inputCtrl(document.form.ipv6_dnsenable[1], 0);
-inputCtrl(document.form.ipv6_dns1, 1);
-inputCtrl(document.form.ipv6_dns2, 1);
-inputCtrl(document.form.ipv6_dns3, 1);
+showInputfield2('ipv6_dnsenable', '0');
 document.getElementById("auto_config").style.display="";
 }
-else{ // disabled & ipv6pt
+else{ // disabled
 inputCtrl(document.form.ipv6_ifdev_select, 0);
 inputCtrl(document.form.ipv6_dhcp_pd[0], 0);
 inputCtrl(document.form.ipv6_dhcp_pd[1], 0);
@@ -348,6 +378,8 @@ inputCtrl(document.form.ipv6_tun_v4end, 0);
 inputCtrl(document.form.ipv6_relay, 0);
 inputCtrl(document.form.ipv6_6rd_dhcp[0], 0);
 inputCtrl(document.form.ipv6_6rd_dhcp[1], 0);
+inputCtrl(document.form.ipv6_dhcp6c_release[0], 0);
+inputCtrl(document.form.ipv6_dhcp6c_release[1], 0);
 inputCtrl(document.form.ipv6_6rd_prefix, 0);
 inputCtrl(document.form.ipv6_6rd_prefixlen, 0);
 inputCtrl(document.form.ipv6_6rd_router, 0);
@@ -376,9 +408,7 @@ document.getElementById("ipv6_ipaddr_r").style.display="none";
 document.getElementById("ipv6_dns_setting").style.display="none";
 inputCtrl(document.form.ipv6_dnsenable[0], 0);
 inputCtrl(document.form.ipv6_dnsenable[1], 0);
-inputCtrl(document.form.ipv6_dns1, 0);
-inputCtrl(document.form.ipv6_dns2, 0);
-inputCtrl(document.form.ipv6_dns3, 0);
+showInputfield2('ipv6_dnsenable', '1');
 document.getElementById("auto_config").style.display="none";
 }
 if(v != ipv6_proto_orig){
@@ -409,11 +439,13 @@ inputCtrl(document.form.ipv6_dns2, enable);
 inputCtrl(document.form.ipv6_dns3, enable);
 }else if(s=='ipv6_dhcp_pd'){
 inputCtrl(document.form.ipv6_rtr_addr, enable);
-if(v == "0"){
+inputCtrl(document.form.ipv6_prefix_length, enable);
+if(enable){
 document.getElementById("ipv6_ipaddr_r").style.display = "none";
-document.getElementById("ipv6_prefix_length_span").innerHTML = "64";
+document.getElementById("ipv6_prefix_length_r").style.display = "none";
 }else{
 document.getElementById("ipv6_ipaddr_r").style.display = "";
+document.getElementById("ipv6_prefix_length_r").style.display = "";
 document.getElementById("ipv6_prefix_length_span").innerHTML = "";
 }
 if(document.form.ipv6_autoconf_type[0].checked == true){
@@ -489,7 +521,7 @@ obj_name.value = ipFilterZero(ip_obj.value);
 return true;
 }
 else if(ip_num > B_class_start && ip_num < B_class_end){
-alert(ip_obj.value+" <#146#>");
+alert(ip_obj.value+" <#149#>");
 ip_obj.value = "";
 ip_obj.focus();
 ip_obj.select();
@@ -500,7 +532,7 @@ obj_name.value = ipFilterZero(ip_obj.value);
 return true;
 }
 else{
-alert(ip_obj.value+" <#146#>");
+alert(ip_obj.value+" <#149#>");
 ip_obj.value = "";
 ip_obj.focus();
 ip_obj.select();
@@ -512,7 +544,7 @@ var rangere=new RegExp("^((([0-9A-Fa-f]{1,4}:){7}[0-9A-Fa-f]{1,4})|(([0-9A-Fa-f]
 if(rangere.test(obj.value)){
 return true;
 }else{
-alert(obj.value+" <#146#>");
+alert(obj.value+" <#149#>");
 obj.focus();
 obj.select();
 return false;
@@ -547,7 +579,7 @@ return return_prefix;
 function validIPv6_dhcp(obj){
 var dhcpre=new RegExp("^([0-9A-Fa-f]{1,4})$", "gi");
 if(!dhcpre.test(obj.value)){
-alert(obj.value +" <#146#>");
+alert(obj.value +" <#149#>");
 obj.focus();
 obj.select();
 return false;
@@ -575,11 +607,12 @@ return Calc_hex;
 function validForm(){
 if(document.form.ipv6_service.value=="other"){
 if(!ipv6_valid(document.form.ipv6_ipaddr) ||
-!validator.range(document.form.ipv6_prefix_len_wan, 3, 64) ||
+!validator.range(document.form.ipv6_prefix_len_wan, 3, 128) ||
 !ipv6_valid(document.form.ipv6_gateway)){
 return false;
 }
-if( !validator.range(document.form.ipv6_prefix_length, 3, 64) ||
+if(!validator.range(document.form.ipv6_prefix_length, 3,
+document.form.ipv6_autoconf_type[1].checked ? 112 : 126) ||
 !ipv6_valid(document.form.ipv6_rtr_addr)){
 return false;
 }
@@ -589,7 +622,7 @@ return false;
 if(!validIPv6_dhcp(document.form.ipv6_dhcp_end_end))
 return false;
 if(parseInt("0x"+document.form.ipv6_dhcp_start_start.value) > parseInt("0x"+document.form.ipv6_dhcp_end_end.value)){
-alert("<#2067#> "+document.form.ipv6_dhcp_start_start.value);
+alert("<#2122#> "+document.form.ipv6_dhcp_start_start.value);
 document.form.ipv6_dhcp_end_end.focus();
 document.form.ipv6_dhcp_end_end.select();
 return false;
@@ -600,18 +633,11 @@ document.form.ipv6_dhcp_lifetime.select();
 return false;
 }
 }
-if(document.form.ipv6_dns1.value != ""){
-if(!ipv6_valid(document.form.ipv6_dns1)) return false;
-}
-if(document.form.ipv6_dns2.value != ""){
-if(!ipv6_valid(document.form.ipv6_dns2)) return false;
-}
-if(document.form.ipv6_dns3.value != ""){
-if(!ipv6_valid(document.form.ipv6_dns3)) return false;
-}
 }else if(document.form.ipv6_service.value=="dhcp6"){
 if(document.form.ipv6_dhcp_pd[1].checked){
-if(!ipv6_valid(document.form.ipv6_rtr_addr)){
+if(!validator.range(document.form.ipv6_prefix_length, 3,
+document.form.ipv6_autoconf_type[1].checked ? 112 : 126) ||
+!ipv6_valid(document.form.ipv6_rtr_addr)){
 return false;
 }
 }
@@ -621,7 +647,7 @@ return false;
 if(!validIPv6_dhcp(document.form.ipv6_dhcp_end_end))
 return false;
 if(parseInt("0x"+document.form.ipv6_dhcp_start_start.value) > parseInt("0x"+document.form.ipv6_dhcp_end_end.value)){
-alert("<#2067#> "+document.form.ipv6_dhcp_start_start.value);
+alert("<#2122#> "+document.form.ipv6_dhcp_start_start.value);
 document.form.ipv6_dhcp_end_end.focus();
 document.form.ipv6_dhcp_end_end.select();
 return false;
@@ -632,35 +658,21 @@ document.form.ipv6_dhcp_lifetime.select();
 return false;
 }
 }
-if(document.form.ipv6_dnsenable[1].checked){
-if(document.form.ipv6_dns1.value=="" && document.form.ipv6_dns2.value=="" && document.form.ipv6_dns3.value==""){
-alert("<#137#>");
-document.form.ipv6_dns1.focus();
-document.form.ipv6_dns1.select();
-return false;
-}
-if(document.form.ipv6_dns1.value != ""){
-if(!ipv6_valid(document.form.ipv6_dns1)) return false;
-}
-if(document.form.ipv6_dns2.value != ""){
-if(!ipv6_valid(document.form.ipv6_dns2)) return false;
-}
-if(document.form.ipv6_dns3.value != ""){
-if(!ipv6_valid(document.form.ipv6_dns3)) return false;
-}
-}
 }else if(document.form.ipv6_service.value=="6to4" ||document.form.ipv6_service.value=="6in4" ||document.form.ipv6_service.value=="6rd" ){
 if(!validator.rangeAllowZero(document.form.ipv6_tun_mtu,1280,1480,0)) return false; //MTU
 if(!validator.rangeAllowZero(document.form.ipv6_tun_ttl,0,255,255)) return false; //TTL
-if(document.form.ipv6_dns1.value != ""){
+}
+if((document.form.ipv6_service.value=="dhcp6" && document.form.ipv6_dnsenable[1].checked) ||
+(IPv6_Passthrough_support &&
+(document.form.ipv6_service.value=="ipv6pt" || document.form.ipv6_service.value=="flets") && document.form.ipv6_dnsenable[1].checked) ||
+document.form.ipv6_service.value=="other" ||
+document.form.ipv6_service.value=="6to4" || document.form.ipv6_service.value=="6in4" || document.form.ipv6_service.value=="6rd"){
+if(document.form.ipv6_dns1.value != "")
 if(!ipv6_valid(document.form.ipv6_dns1)) return false;
-}
-if(document.form.ipv6_dns2.value != ""){
+if(document.form.ipv6_dns2.value != "")
 if(!ipv6_valid(document.form.ipv6_dns2)) return false;
-}
-if(document.form.ipv6_dns3.value != ""){
+if(document.form.ipv6_dns3.value != "")
 if(!ipv6_valid(document.form.ipv6_dns3)) return false;
-}
 }
 if(document.form.ipv6_service.value=="6to4"){
 if(!valid_IP(document.form.ipv6_relay, "")) return false; //6to4 tun relay
@@ -668,16 +680,21 @@ if(!valid_IP(document.form.ipv6_relay, "")) return false; //6to4 tun relay
 if(document.form.ipv6_service.value=="6in4"){
 if(!validator.ipRange(document.form.ipv6_tun_v4end, "")) return false; //6in4 tun endpoint
 if(!ipv6_valid(document.form.ipv6_tun_addr)) return false; //6in4 Client IPv6 Address
-if(!validator.range(document.form.ipv6_tun_addrlen, 3, 64)) return false;
+if(!validator.range(document.form.ipv6_tun_addrlen, 3, 128)) return false;
 if(document.form.ipv6_tun_peer.value != "" && !ipv6_valid(document.form.ipv6_tun_peer)) return false;
-}
-if(document.form.ipv6_service.value=="6rd" && document.form.ipv6_6rd_dhcp[1].checked){
-if(!ipv6_valid(document.form.ipv6_6rd_prefix) ||
-!validator.range(document.form.ipv6_6rd_prefixlen, 3, 64)){
+if(!validator.range(document.form.ipv6_prefix_length, 3, 126) ||
+!ipv6_valid(document.form.ipv6_prefix)){
 return false;
 }
+}
+if(document.form.ipv6_service.value=="6rd" && document.form.ipv6_6rd_dhcp[1].checked){
 if(!validator.ipRange(document.form.ipv6_6rd_router, "")) return false; //6rd ip4 router
 if(!validator.range(document.form.ipv6_6rd_ip4size, 0, 32)) return false; //6rd ip4 router mask length
+if(!ipv6_valid(document.form.ipv6_6rd_prefix) ||
+!validator.range(document.form.ipv6_6rd_prefixlen, 3,
+126 - (32 - document.form.ipv6_6rd_ip4size.value))){
+return false;
+}
 }
 return true;
 }
@@ -686,7 +703,6 @@ if(validForm()){
 if(document.form.ipv6_service.value=="dhcp6"){
 if(document.form.ipv6_dhcp_pd[1].checked){
 document.form.ipv6_prefix_length.disabled = false;
-document.form.ipv6_prefix_length.value = "64";
 document.form.ipv6_prefix.disabled = false;
 }
 if(document.form.ipv6_autoconf_type[1].checked){
@@ -696,8 +712,11 @@ document.form.ipv6_dhcp_end.disabled = false;
 document.form.ipv6_dhcp_end.value = document.form.ipv6_prefix_span_for_end.value +"::"+document.form.ipv6_dhcp_end_end.value;
 }
 }
-if(document.form.ipv6_ifdev_select.disabled){ // set ipv6_ifdev="eth" while interface is disabled.
+if(document.form.ipv6_service.value=="flets"){
+inputCtrl(document.form.ipv6_ifdev_select, 1);
 document.form.ipv6_ifdev.value = "eth";
+}else if(document.form.ipv6_ifdev_select.disabled){ // set ipv6_ifdev="ppp" while interface is disabled.
+document.form.ipv6_ifdev.value = "ppp";
 }else{
 document.form.ipv6_ifdev.value = document.form.ipv6_ifdev_select.value;
 }
@@ -775,7 +794,7 @@ setTimeout("update_info();", 1500);
 <table cellpadding="5" cellspacing="0" id="dr_sweet_advise" class="dr_sweet_advise" align="center">
 <tr>
 <td>
-<div class="drword" id="drword" style="height:110px;"><#174#> <#171#>...
+<div class="drword" id="drword" style="height:110px;"><#177#> <#174#>...
 <br/>
 <br/>
 </div>
@@ -825,107 +844,122 @@ setTimeout("update_info();", 1500);
 <div>&nbsp;</div>
 <div class="formfonttitle">IPv6</div>
 <div style="margin-left:5px;margin-top:10px;margin-bottom:10px"><img src="/images/New_ui/export/line_export.png"></div>
-<div class="formfontdesc"><#1346#></div>
+<div class="formfontdesc"><#1384#></div>
 <div class="formfontdesc" style="margin-top:-10px;">
 <a id="faq" href="" target="_blank" style="font-family:Lucida Console;text-decoration:underline;">IPv6 FAQ</a>
 </div>
 <table id="basic_config" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <thead>
 <tr>
-<td colspan="2"><#1878#></td>
+<td colspan="2"><#1924#></td>
 </tr>
 </thead>
 <tr>
-<th><#69#></th>
+<th><#70#></th>
 <td>
-<select name="ipv6_service" class="input_option" onchange="showInputfield(this.value);">
+<select id="ipv6_service" name="ipv6_service" class="input_option" onchange="showInputfield(this.value);">
+<option value="disabled" <% nvram_match("ipv6_service", "disabled", "selected"); %>><#839#></option>
+<option value="dhcp6" <% nvram_match("ipv6_service", "dhcp6", "selected"); %>>Native</option>
+<option value="other" <% nvram_match("ipv6_service", "other", "selected"); %>><#1348#></option>
+<option value="ipv6pt" <% nvram_match("ipv6_service", "ipv6pt", "selected"); %>>Passthrough</option>
+<option value="flets" <% nvram_match("ipv6_service", "flets", "selected"); %>>FLET'S IPv6 service</option>
+<option value="6to4" <% nvram_match("ipv6_service", "6to4", "selected"); %>>Tunnel 6to4</option>
+<option value="6in4" <% nvram_match("ipv6_service", "6in4", "selected"); %>>Tunnel 6in4</option>
+<option value="6rd" <% nvram_match("ipv6_service", "6rd", "selected"); %>>Tunnel 6rd</option>
 </select>
 </td>
 </tr>
 <tr>
-<th><#2147#></th>
+<th><#2200#></th>
 <td>
 <select name="ipv6_ifdev_select" class="input_option">
 <option class="content_input_fd" value="ppp" <% nvram_match("ipv6_ifdev", "ppp","selected"); %>>PPP</option>
-<option class="content_input_fd" value="eth" <% nvram_match("ipv6_ifdev", "eth","selected"); %>><#2145#></option>
+<option class="content_input_fd" value="eth" <% nvram_match("ipv6_ifdev", "eth","selected"); %>><#2198#></option>
 </select>
 </td>
 </tr>
 <tr style="display:none;"><th>DHCP-PD</th>
 <td>
-<input type="radio" name="ipv6_dhcp_pd" class="input" value="1" onclick="showInputfield2('ipv6_dhcp_pd', this.value);" <% nvram_match("ipv6_dhcp_pd", "1","checked"); %>><#2229#>
-<input type="radio" name="ipv6_dhcp_pd" class="input" value="0" onclick="showInputfield2('ipv6_dhcp_pd', this.value);" <% nvram_match("ipv6_dhcp_pd", "0","checked"); %>><#822#>
+<input type="radio" name="ipv6_dhcp_pd" class="input" value="1" onclick="showInputfield2('ipv6_dhcp_pd', this.value);" <% nvram_match("ipv6_dhcp_pd", "1","checked"); %>><#2279#>
+<input type="radio" name="ipv6_dhcp_pd" class="input" value="0" onclick="showInputfield2('ipv6_dhcp_pd', this.value);" <% nvram_match("ipv6_dhcp_pd", "0","checked"); %>><#839#>
 </td>
 </tr>
 <tr style="display:none;">
-<th><#1311#></th>
+<th>Release prefix on exit</th>
+<td>
+<input type="radio" name="ipv6_dhcp6c_release" class="input" value="1" <% nvram_match("ipv6_dhcp6c_release", "1","checked"); %>><#2279#>
+<input type="radio" name="ipv6_dhcp6c_release" class="input" value="0" <% nvram_match("ipv6_dhcp6c_release", "0","checked"); %>><#839#>
+</td>
+</tr>
+<tr style="display:none;">
+<th><#1349#></th>
 <td>
 <input type="text" maxlength="15" class="input_15_table" name="ipv6_tun_v4end" value="<% nvram_get("ipv6_tun_v4end"); %>" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr style="display:none;">
-<th><#1309#></th>
+<th><#1347#></th>
 <td>
 <input type="text" maxlength="15" class="input_15_table" name="ipv6_relay" value="<% nvram_get("ipv6_relay"); %>" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr style="display:none;">
-<th><#1294#></th>
+<th><#1332#></th>
 <td>
-<input type="radio" name="ipv6_6rd_dhcp" class="input" value="1" onclick="showInputfield2('ipv6_6rd_dhcp', this.value);" <% nvram_match("ipv6_6rd_dhcp", "1","checked"); %>><#2229#>
-<input type="radio" name="ipv6_6rd_dhcp" class="input" value="0" onclick="showInputfield2('ipv6_6rd_dhcp', this.value);" <% nvram_match("ipv6_6rd_dhcp", "0","checked"); %>><#822#>
+<input type="radio" name="ipv6_6rd_dhcp" class="input" value="1" onclick="showInputfield2('ipv6_6rd_dhcp', this.value);" <% nvram_match("ipv6_6rd_dhcp", "1","checked"); %>><#2279#>
+<input type="radio" name="ipv6_6rd_dhcp" class="input" value="0" onclick="showInputfield2('ipv6_6rd_dhcp', this.value);" <% nvram_match("ipv6_6rd_dhcp", "0","checked"); %>><#839#>
 </td>
 </tr>
 <tr style="display:none;">
-<th><#1296#></th>
+<th><#1334#></th>
 <td>
 <input type="text" maxlength="39" class="input_32_table" name="ipv6_6rd_prefix" value="<% nvram_get("ipv6_6rd_prefix"); %>" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr style="display:none;">
-<th><#1308#></th>
+<th><#1346#></th>
 <td>
-<input type="text" maxlength="2" class="input_3_table" name="ipv6_6rd_prefixlen" value="<% nvram_get("ipv6_6rd_prefixlen"); %>" autocorrect="off" autocapitalize="off">
+<input type="text" maxlength="3" class="input_3_table" name="ipv6_6rd_prefixlen" value="<% nvram_get("ipv6_6rd_prefixlen"); %>" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr style="display:none;">
-<th><#1297#></th>
+<th><#1335#></th>
 <td>
 <input type="text" maxlength="15" class="input_15_table" name="ipv6_6rd_router" value="<% nvram_get("ipv6_6rd_router"); %>" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr style="display:none;">
-<th><#1295#></th>
+<th><#1333#></th>
 <td>
 <input type="text" maxlength="2" class="input_3_table" name="ipv6_6rd_ip4size" value="<% nvram_get("ipv6_6rd_ip4size"); %>" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr style="display:none;">
-<th><#1299#></th>
+<th><#1337#></th>
 <td>
 <input type="text" maxlength="39" class="input_32_table" name="ipv6_tun_addr" value="<% nvram_get("ipv6_tun_addr"); %>" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr style="display:none;">
-<th><#1308#></th>
+<th><#1346#></th>
 <td>
-<input type="text" maxlength="2" class="input_3_table" name="ipv6_tun_addrlen" value="<% nvram_get("ipv6_tun_addrlen"); %>" autocorrect="off" autocapitalize="off">
+<input type="text" maxlength="3" class="input_3_table" name="ipv6_tun_addrlen" value="<% nvram_get("ipv6_tun_addrlen"); %>" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr style="display:none;">
-<th><#1300#></th>
+<th><#1338#></th>
 <td>
 <input type="text" maxlength="39" class="input_32_table" name="ipv6_tun_peer" value="<% nvram_get("ipv6_tun_peer"); %>" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr style="display:none;">
-<th><#1916#></th>
+<th><#1971#></th>
 <td>
 <input type="text" maxlength="4" class="input_6_table" name="ipv6_tun_mtu" value="<% nvram_get("ipv6_tun_mtu"); %>" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr style="display:none;">
-<th><#1917#></th>
+<th><#1972#></th>
 <td>
 <input type="text" maxlength="3" class="input_6_table" name="ipv6_tun_ttl" value="<% nvram_get("ipv6_tun_ttl"); %>" autocorrect="off" autocapitalize="off">
 </td>
@@ -934,23 +968,23 @@ setTimeout("update_info();", 1500);
 <table id="ipv6_wan_setting" style="margin-top:8px;" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <thead>
 <tr>
-<td colspan="2"><#1315#></td>
+<td colspan="2"><#1353#></td>
 </tr>
 </thead>
 <tr>
-<th><#1312#></th>
+<th><#1350#></th>
 <td>
 <input type="text" maxlength="39" class="input_32_table" name="ipv6_ipaddr" value="<% nvram_get("ipv6_ipaddr"); %>" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr>
-<th><#1314#></th>
+<th><#1352#></th>
 <td>
-<input type="text" maxlength="2" class="input_3_table" name="ipv6_prefix_len_wan" value="<% nvram_get("ipv6_prefix_len_wan"); %>" autocorrect="off" autocapitalize="off">
+<input type="text" maxlength="3" class="input_3_table" name="ipv6_prefix_len_wan" value="<% nvram_get("ipv6_prefix_len_wan"); %>" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr>
-<th><#1313#></th>
+<th><#1351#></th>
 <td>
 <input type="text" maxlength="39" class="input_32_table" name="ipv6_gateway" value="<% nvram_get("ipv6_gateway"); %>" autocorrect="off" autocapitalize="off">
 </td>
@@ -959,66 +993,66 @@ setTimeout("update_info();", 1500);
 <table id="ipv6_lan_setting" style="margin-top:8px;" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <thead>
 <tr>
-<td colspan="2"><#1307#></td>
+<td colspan="2"><#1345#></td>
 </tr>
 </thead>
 <tr style="display:none;">
-<th><#1305#></th> <td>
+<th><#1343#></th> <td>
 <input type="text" maxlength="39" class="input_32_table" name="ipv6_rtr_addr" value="<% nvram_get("ipv6_rtr_addr"); %>" onBlur="if(document.form.ipv6_autoconf_type[1].checked){showInputfield2('ipv6_autoconf_type', '1');}else{showInputfield2('ipv6_autoconf_type', '0');}" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr id="ipv6_ipaddr_r">
-<th><#1305#></th> <td>
+<th><#1343#></th> <td>
 <div id="ipv6_ipaddr_span" name="ipv6_ipaddr_span" style="color:#FFFFFF;margin-left:8px;"></div>
 </td>
 </tr>
 <tr>
-<th><#1678#></th>
+<th><#1720#></th>
 <td>
-<input type="text" maxlength="2" class="input_3_table" name="ipv6_prefix_length" value="<% nvram_get("ipv6_prefix_length"); %>" autocorrect="off" autocapitalize="off">
+<input type="text" maxlength="3" class="input_3_table" name="ipv6_prefix_length" value="<% nvram_get("ipv6_prefix_length"); %>" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr id="ipv6_prefix_length_r">
-<th><#1678#></th>
+<th><#1720#></th>
 <td>
 <div id="ipv6_prefix_length_span" name="ipv6_prefix_length_span" style="color:#FFFFFF;margin-left:8px;"></div>
 </td>
 </tr>
 <tr>
-<th><#1306#></th>
+<th><#1344#></th>
 <td>
 <input type="text" maxlength="39" class="input_32_table" name="ipv6_prefix" value="<% nvram_get("ipv6_prefix"); %>" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr id="ipv6_prefix_r">
-<th><#1306#></th>
+<th><#1344#></th>
 <td>
 <div id="ipv6_prefix_span" name="ipv6_prefix_span" style="color:#FFFFFF;margin-left:8px;"></div>
 </td>
 </tr>
 <tr>
-<th><#1298#></th>
+<th><#1336#></th>
 <td>
 <input type="radio" name="ipv6_autoconf_type" class="input" value="0" onclick="showInputfield2('ipv6_autoconf_type', '0');" <% nvram_match("ipv6_autoconf_type", "0","checked"); %>>Stateless
 <input type="radio" name="ipv6_autoconf_type" class="input" value="1" onclick="showInputfield2('ipv6_autoconf_type', '1');" <% nvram_match("ipv6_autoconf_type", "1","checked"); %>>Stateful
 </td>
 </tr>
 <tr>
-<th><#1362#></th> <td>
+<th><#1400#></th> <td>
 <input type="text" maxlength="19" class="input_20_table" name="ipv6_prefix_span_for_start" style="color:#BBBBBB" readonly autocorrect="off" autocapitalize="off">
 ::
 <input type="text" maxlength="4" class="input_6_table" name="ipv6_dhcp_start_start" autocorrect="off" autocapitalize="off" >
 </td>
 </tr>
 <tr>
-<th><#1360#></th> <td>
+<th><#1398#></th> <td>
 <input type="text" maxlength="19" class="input_20_table" name="ipv6_prefix_span_for_end" style="color:#BBBBBB" readonly autocorrect="off" autocapitalize="off">
 ::
 <input type="text" maxlength="4" class="input_6_table" name="ipv6_dhcp_end_end" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr>
-<th><#1353#></th>
+<th><#1391#></th>
 <td>
 <input type="text" maxlength="6" class="input_6_table" name="ipv6_dhcp_lifetime" value="<% nvram_get("ipv6_dhcp_lifetime"); %>" onkeypress="return validator.isNumber(this,event)" autocorrect="off" autocapitalize="off">
 </td>
@@ -1027,31 +1061,31 @@ setTimeout("update_info();", 1500);
 <table id="ipv6_dns_setting" style="margin-top:8px;" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <thead>
 <tr>
-<td colspan="2"><#1302#></td>
+<td colspan="2"><#1340#></td>
 </tr>
 </thead>
 <tr style="display:none;">
-<th><#126#></th>
+<th><#129#></th>
 <td>
-<input type="radio" name="ipv6_dnsenable" class="input" value="1" onclick="showInputfield2('ipv6_dnsenable', this.value);" <% nvram_match("ipv6_dnsenable", "1","checked"); %>><#2229#>
-<input type="radio" name="ipv6_dnsenable" class="input" value="0" onclick="showInputfield2('ipv6_dnsenable', this.value);" <% nvram_match("ipv6_dnsenable", "0","checked"); %>><#822#>
+<input type="radio" name="ipv6_dnsenable" class="input" value="1" onclick="showInputfield2('ipv6_dnsenable', this.value);" <% nvram_match("ipv6_dnsenable", "1","checked"); %>><#2279#>
+<input type="radio" name="ipv6_dnsenable" class="input" value="0" onclick="showInputfield2('ipv6_dnsenable', this.value);" <% nvram_match("ipv6_dnsenable", "0","checked"); %>><#839#>
 <div id="yadns_hint" style="display:none;"></div>
 </td>
 </tr>
 <tr style="display:none;">
-<th><#1301#> 1</th>
+<th><#1339#> 1</th>
 <td>
 <input type="text" maxlength="39" class="input_32_table" name="ipv6_dns1" value="<% nvram_get("ipv6_dns1"); %>" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr style="display:none;">
-<th><#1301#> 2</th>
+<th><#1339#> 2</th>
 <td>
 <input type="text" maxlength="39" class="input_32_table" name="ipv6_dns2" value="<% nvram_get("ipv6_dns2"); %>" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr style="display:none;">
-<th><#1301#> 3</th>
+<th><#1339#> 3</th>
 <td>
 <input type="text" maxlength="39" class="input_32_table" name="ipv6_dns3" value="<% nvram_get("ipv6_dns3"); %>" autocorrect="off" autocapitalize="off">
 </td>
@@ -1060,21 +1094,21 @@ setTimeout("update_info();", 1500);
 <table id="auto_config" style="margin-top:8px;display:none;" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <thead>
 <tr>
-<td colspan="2"><#1298#></td>
+<td colspan="2"><#1336#></td>
 </tr>
 </thead>
 <tr>
-<th><#1036#></th>
+<th><#1054#></th>
 <td>
 <select name="ipv6_radvd" class="input_option">
-<option class="content_input_fd" value="1" <% nvram_match("ipv6_radvd", "1","selected"); %>><#2229#></option>
-<option class="content_input_fd" value="0" <% nvram_match("ipv6_radvd", "0","selected"); %>><#822#></option>
+<option class="content_input_fd" value="1" <% nvram_match("ipv6_radvd", "1","selected"); %>><#2279#></option>
+<option class="content_input_fd" value="0" <% nvram_match("ipv6_radvd", "0","selected"); %>><#839#></option>
 </select>
 </td>
 </tr>
 </table>
 <div class="apply_gen">
-<input class="button_gen" onclick="applyRule()" type="button" value="<#72#>"/>
+<input class="button_gen" onclick="applyRule()" type="button" value="<#73#>"/>
 </div>
 </td>
 </tr>

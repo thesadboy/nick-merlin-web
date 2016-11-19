@@ -7,7 +7,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#533#> - <#547#></title>
+<title><#548#> - <#562#></title>
 <link rel="stylesheet" type="text/css" href="/qis/qis_style.css">
 <link rel="stylesheet" type="text/css" href="other.css">
 <link rel="stylesheet" type="text/css" href="survey.css">
@@ -19,7 +19,7 @@
 var remoteIP = '<% nvram_get("lan_gateway"); %>';
 var reIP = '<% nvram_get("lan_ipaddr"); %>';
 function initial(){
-document.getElementById("remoteIP").innerHTML = (remoteIP == "")?"<#83#>":remoteIP;
+document.getElementById("remoteIP").innerHTML = (remoteIP == "")?"<#85#>":remoteIP;
 document.getElementById("repeaterIP").innerHTML = reIP;
 document.getElementById("repeaterIP2").innerHTML = reIP;
 document.getElementById("clientIP").innerHTML = login_ip_str_now();
@@ -37,7 +37,7 @@ window.sidebar.addPanel(sTitle, 'http://'+reIP, "");
 }
 else {
 addBookmarkForBrowser = function() {
-alert("<#62#>");
+alert("<#63#>");
 }
 }
 }
@@ -49,18 +49,18 @@ var sw_mode = '<% nvram_get("sw_mode"); %>';
 if(((sw_mode == 2 ||sw_mode == 3) && '<% nvram_get("wlc_psta"); %>' == 1) || (sw_mode ==3 && '<% nvram_get("wlc_psta"); %>' == 3))
 sw_mode = 2;
 if(sw_mode != 2){
-alert("<#255#>");
+alert("<#258#>");
 location.href = "/index.asp";
 }
 </script>
 <noscript>
 <div class="popup_bg" style="display:block">
-<div style="margin:200px auto; width:300px; background-color:#006699; color:#FFFFFF; line-height:150%; border:3px solid #FFF; padding:5px;"><#228#></p></div>
+<div style="margin:200px auto; width:300px; background-color:#006699; color:#FFFFFF; line-height:150%; border:3px solid #FFF; padding:5px;"><#231#></p></div>
 </div>
 </noscript>
 <table width="705" border="0" align="center" cellpadding="0" cellspacing="0">
 <tr>
-<td colspan="3" height="55" valign="top" background="images/qis_title.gif"><div class="modelName" style="margin:28px 0px 0px 180px;"><#534#></div></td>
+<td colspan="3" height="55" valign="top" background="images/qis_title.gif"><div class="modelName" style="margin:28px 0px 0px 180px;"><#549#></div></td>
 </tr>
 </table>
 <table width="705" border="0" align="center" cellpadding="0" cellspacing="0">
@@ -76,10 +76,10 @@ location.href = "/index.asp";
 <br/>
 <ol>
 <li>
-<a href="javascript:gotoAdvSetting();"><#80#></a>: <#442#>
+<a href="javascript:gotoAdvSetting();"><#82#></a>: <#443#>
 </li>
 <li>
-<a href="javascript:addBookmarkForBrowser('ASUS <#534#>');"><#59#></a>: <#60#>&nbsp;<span id="repeaterIP2" class="iptag" style="position:relative;background-color:#FFCC00"></span>&nbsp;<#61#>
+<a href="javascript:addBookmarkForBrowser('ASUS <#549#>');"><#60#></a>: <#61#>&nbsp;<span id="repeaterIP2" class="iptag" style="position:relative;background-color:#FFCC00"></span>&nbsp;<#62#>
 </li>
 <li>
 <a href="survey.htm"><#30#></a>: <#31#>

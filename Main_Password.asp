@@ -99,9 +99,16 @@ var is_KR_sku = (function(){
 var ttc = '<% nvram_get("territory_code"); %>';
 return (ttc.search("KR") == -1) ? false : true;
 })();
+var isIE8 = navigator.userAgent.search("MSIE 8") > -1;
+var isIE9 = navigator.userAgent.search("MSIE 9") > -1;
 function initial(){
 if(is_KR_sku)
 document.getElementById("KRHint").style.display = "";
+if(isIE8 || isIE9){
+document.getElementById("router_name_tr").style.display = "";
+document.getElementById("router_password_tr").style.display = "";
+document.getElementById("router_password_confirm_tr").style.display = "";
+}
 var windowHeight = (function(){
 if(window.innerHeight)
 return window.innerHeight;
@@ -178,14 +185,14 @@ if(!validator.chkLoginId(document.form.http_username_x)){
 return false;
 }
 if(document.form.http_passwd_x.value == ""){
-showError("<#102#>");
+showError("<#104#>");
 document.form.http_passwd_x.value = "";
 document.form.http_passwd_x.focus();
 document.form.http_passwd_x.select();
 return false;
 }
 if(document.form.http_passwd_x.value != document.form.http_passwd_2_x.value){
-showError("<#103#>");
+showError("<#105#>");
 document.form.http_passwd_x.value = "";
 document.form.http_passwd_x.focus();
 document.form.http_passwd_x.select();
@@ -202,7 +209,7 @@ return false;
 }
 }
 if(document.form.http_passwd_x.value == '<% nvram_default_get("http_passwd"); %>'){
-showError("<#276#>");
+showError("<#279#>");
 document.form.http_passwd_x.value = "";
 document.form.http_passwd_x.focus();
 document.form.http_passwd_x.select();
@@ -210,7 +217,7 @@ return false;
 }
 var is_common_string = check_common_string(document.form.http_passwd_x.value, "httpd_password");
 if(document.form.http_passwd_x.value.length > 0 && is_common_string){
-if(confirm("<#133#>")){
+if(!confirm("<#136#>")){
 document.form.http_passwd_x.focus();
 document.form.http_passwd_x.select();
 return false;
@@ -241,7 +248,7 @@ var validator = {
 chkLoginId: function(obj){
 var re = new RegExp("^[a-zA-Z0-9][a-zA-Z0-9\-\_]+$","gi");
 if(obj.value == ""){
-showError("<#98#>");
+showError("<#100#>");
 obj.value = "";
 obj.focus();
 obj.select();
@@ -249,7 +256,7 @@ return false;
 }
 else if(re.test(obj.value)){
 if(obj.value == "root" || obj.value == "guest" || obj.value == "anonymous"){
-showError("<#498#>");
+showError("<#499#>");
 obj.value = "";
 obj.focus();
 obj.select();
@@ -258,7 +265,7 @@ return false;
 return true;
 }
 else{
-showError("<#1335#>");
+showError("<#1373#>");
 obj.value = "";
 obj.focus();
 obj.select();
@@ -267,14 +274,14 @@ return false;
 },
 chkLoginPw: function(obj){
 if(obj.value.length > 0 && obj.value.length < 5){
-showError("<#144#>");
+showError("<#147#>");
 obj.value = "";
 obj.focus();
 obj.select();
 return false;
 }
 if(obj.value.charAt(0) == '"'){
-showError('<#153#> ["]');
+showError('<#156#> ["]');
 obj.value = "";
 obj.focus();
 obj.select();
@@ -288,7 +295,7 @@ invalid_char = invalid_char+obj.value.charAt(i);
 }
 }
 if(invalid_char != ""){
-showError("<#154#> '"+invalid_char+"' !");
+showError("<#157#> '"+invalid_char+"' !");
 obj.value = "";
 obj.focus();
 obj.select();
@@ -301,7 +308,7 @@ chkLoginPw_KR: function(obj){ //Alphabets, numbers, specialcharacters mixed
 var string_length = obj.value.length;
 if(!/[A-Za-z]/.test(obj.value) || !/[0-9]/.test(obj.value) || string_length < 8
 || !/[\!\"\#\$\%\&\'\(\)\*\+\,\-\.\/\:\;\<\=\>\?\@\[\\\]\^\_\`\{\|\}\~]/.test(obj.value)){
-showError("<#148#>");
+showError("<#151#>");
 obj.value = "";
 obj.focus();
 obj.select();
@@ -314,7 +321,7 @@ invalid_char = invalid_char+obj.value.charAt(i);
 }
 }
 if(invalid_char != ""){
-showError("<#154#> '"+invalid_char+"' !");
+showError("<#157#> '"+invalid_char+"' !");
 obj.value = "";
 obj.focus();
 obj.select();
@@ -353,42 +360,57 @@ document.getElementById("error_status_field").innerHTML = str;
 <div><img src="/images/New_ui/icon_titleName.png"></div>
 </td>
 <td align="left">
-<div class="title_name"><#1636#></div>
+<div class="title_name"><#1679#></div>
 </td>
 </tr>
 <tr>
 <td colspan="2">
 <div class="p1" style="margin:35px 0px 0px 78px;">
 <div style="margin-bottom:10px;">
-<#534#> is currently not protected and uses an unsafe default username and password.
+<#549#> is currently not protected and uses an unsafe default username and password.
 </div>
 <div style="margin-bottom:10px;">
-<#359#>
+<#364#>
 </div>
 <div id="KRHint" style="margin-bottom:10px;display:none">
-<#148#>
+<#151#>
 </div>
 </div>
+</td>
+</tr>
+<tr id="router_name_tr" style="display:none">
+<td colspan="2">
+<div style="color:#FFF;margin:20px 0px -10px 78px;"><#469#></div>
 </td>
 </tr>
 <tr style="height:72px;">
 <td colspan="2">
 <div style="margin:20px 0px 0px 78px;">
-<input type="text" name="http_username_x" tabindex="1" class="form_input" maxlength="20" value="" autocapitalize="off" autocomplete="off" placeholder="<#468#>">
+<input type="text" name="http_username_x" tabindex="1" class="form_input" maxlength="20" value="" autocapitalize="off" autocomplete="off" placeholder="<#469#>">
 </div>
+</td>
+</tr>
+<tr id="router_password_tr" style="display:none">
+<td colspan="2">
+<div style="color:#FFF;margin:20px 0px -20px 78px;"><#260#></div>
 </td>
 </tr>
 <tr style="height:72px;">
 <td colspan="2">
 <div style="margin:30px 0px 0px 78px;">
-<input type="password" autocapitalize="off" autocomplete="off" value="" name="http_passwd_x" tabindex="2" class="form_input" maxlength="16" onkeyup="" onpaste="return false;"/ onBlur="" placeholder="<#257#>">
+<input type="password" autocapitalize="off" autocomplete="off" value="" name="http_passwd_x" tabindex="2" class="form_input" maxlength="16" onkeyup="" onpaste="return false;"/ onBlur="" placeholder="<#260#>">
 </div>
+</td>
+</tr>
+<tr id="router_password_confirm_tr" style="display:none">
+<td colspan="2">
+<div style="color:#FFF;margin:20px 0px -20px 78px;"><#869#></div>
 </td>
 </tr>
 <tr style="height:72px;">
 <td colspan="2">
 <div style="margin:30px 0px 0px 78px;">
-<input type="password" autocapitalize="off" autocomplete="off" value="" name="http_passwd_2_x" tabindex="3" class="form_input" maxlength="16" onkeyup="" onpaste="return false;"/ onBlur="" placeholder="<#851#>">
+<input type="password" autocapitalize="off" autocomplete="off" value="" name="http_passwd_2_x" tabindex="3" class="form_input" maxlength="16" onkeyup="" onpaste="return false;"/ onBlur="" placeholder="<#869#>">
 </div>
 </td>
 </tr>
@@ -400,7 +422,7 @@ document.getElementById("error_status_field").innerHTML = str;
 <tr align="right" style="height:68px;">
 <td colspan="2">
 <div style="text-align: center;float:right; margin:50px 0px 0px 78px;">
-<input name="btn_modify" type="button" class="button" tabindex="4" onclick="submitForm();" value="<#76#>">
+<input name="btn_modify" type="button" class="button" tabindex="4" onclick="submitForm();" value="<#78#>">
 </div>
 <div id="loadingIcon" style="display:none; margin:50px 0px 0px 0px;">
 <img style="width:35px;height:35px;" src="/images/InternetScan.gif">

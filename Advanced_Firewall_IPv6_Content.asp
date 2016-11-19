@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#533#> - <#211#></title>
+<title><#548#> - <#214#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <script language="JavaScript" type="text/javascript" src="/state.js"></script>
@@ -65,7 +65,7 @@ if(j != item_num-2)
 tmp_value += ">";
 }
 }
-if(tmp_value == "<"+"<#1286#>" || tmp_value == "<")
+if(tmp_value == "<"+"<#1324#>" || tmp_value == "<")
 tmp_value = "";
 document.form.ipv6_fw_rulelist.value = tmp_value;
 showLoading();
@@ -73,7 +73,7 @@ document.form.submit();
 }
 function loadAppOptions(){
 free_options(document.form.KnownApps);
-add_option(document.form.KnownApps, "<#473#>", 0, 1);
+add_option(document.form.KnownApps, "<#474#>", 0, 1);
 for(var i = 1; i < wItem.length; i++)
 add_option(document.form.KnownApps, wItem[i][0], i, 0);
 }
@@ -117,7 +117,7 @@ if(!check_multi_range(document.form.ipv6_fw_port_x_0, 1, 65535, true)){
 return false;
 }
 if(document.form.ipv6_fw_port_x_0.value==""){
-alert("<#137#>");
+alert("<#140#>");
 document.form.ipv6_fw_port_x_0.focus();
 document.form.ipv6_fw_port_x_0.select();
 return false;
@@ -136,7 +136,7 @@ document.form.ipv6_fw_enable[0].checked = true;
 var rule_num = document.getElementById('ipv6_fw_rulelist_table').rows.length;
 var item_num = document.getElementById('ipv6_fw_rulelist_table').rows[0].cells.length;
 if(rule_num >= upper){
-alert("<#1331#> " + upper + " <#1332#>");
+alert("<#1369#> " + upper + " <#1370#>");
 return;
 }
 addRow(document.form.ipv6_fw_desc_x_0 ,1);
@@ -154,7 +154,7 @@ if(rangere.test(val)){
 if(!validator.eachPort(document.form.ipv6_fw_port_x_0, RegExp.$1, mini, maxi) || !validator.eachPort(document.form.ipv6_fw_port_x_0, RegExp.$2, mini, maxi)){
 return false;
 }else if(parseInt(RegExp.$1) >= parseInt(RegExp.$2)){
-alert("<#147#>");
+alert("<#150#>");
 return false;
 }else
 return true;
@@ -168,12 +168,12 @@ return true;
 function validate_single_range(val, min, max) {
 for(j=0; j<val.length; j++){ //is_number
 if (val.charAt(j)<'0' || val.charAt(j)>'9'){
-alert('<#149#> ' + min + ' <#150#> ' + max);
+alert('<#152#> ' + min + ' <#153#> ' + max);
 return false;
 }
 }
 if(val < min || val > max) { //is_in_range
-alert('<#149#> ' + min + ' <#150#> ' + max);
+alert('<#152#> ' + min + ' <#153#> ' + max);
 return false;
 }else
 return true;
@@ -186,7 +186,7 @@ for(i=0;i<PortSplit.length;i++){
 PortSplit[i] = PortSplit[i].replace(/(^\s*)|(\s*$)/g, ""); // "\space" to ""
 PortSplit[i] = PortSplit[i].replace(/(^0*)/g, ""); // "^0" to ""
 if(PortSplit[i] == "" ||PortSplit[i] == 0){
-alert("<#1330#>");
+alert("<#1368#>");
 obj.focus();
 obj.select();
 return false;
@@ -244,7 +244,7 @@ var ipv6_fw_rulelist_row = decodeURIComponent(ipv6_fw_rulelist_array).split('<')
 var code = "";
 code +='<table width="100%" cellspacing="0" cellpadding="4" align="center" class="list_table" id="ipv6_fw_rulelist_table">';
 if(ipv6_fw_rulelist_row.length == 1)
-code +='<tr><td style="color:#FFCC00;" colspan="6"><#1286#></td></tr>';
+code +='<tr><td style="color:#FFCC00;" colspan="6"><#1324#></td></tr>';
 else{
 for(var i = 1; i < ipv6_fw_rulelist_row.length; i++){
 overlib_str0[i] ="";
@@ -300,7 +300,7 @@ var rangere=new RegExp("^\s*((([0-9A-Fa-f]{1,4}:){7}([0-9A-Fa-f]{1,4}|:))|(([0-9
 if((rangere.test(obj.value)) || (cidr == 1 && rangere_cidr.test(obj.value))) {;
 return true;
 }else{
-alert(obj.value+" <#146#>");
+alert(obj.value+" <#149#>");
 obj.focus();
 obj.select();
 return false;
@@ -347,26 +347,26 @@ document.getElementById("row" + num).style.background='#FFF';
 <tr>
 <td bgcolor="#4D595D" valign="top" >
 <div>&nbsp;</div>
-<div class="formfonttitle"><#206#> - <#211#></div>
+<div class="formfonttitle"><#209#> - <#214#></div>
 <div style="margin-left:5px;margin-top:10px;margin-bottom:10px"><img src="/images/New_ui/export/line_export.png"></div>
 <div>
-<div class="formfontdesc"><#1159#></div>
-<div class="formfontdesc"><#1160#></div>
+<div class="formfontdesc"><#1195#></div>
+<div class="formfontdesc"><#1196#></div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable">
 <thead>
 <tr>
-<td colspan="4"><#1878#></td>
+<td colspan="4"><#1924#></td>
 </tr>
 </thead>
 <tr>
-<th><#1158#></th>
+<th><#1194#></th>
 <td>
-<input type="radio" value="1" name="ipv6_fw_enable" <% nvram_match("ipv6_fw_enable", "1", "checked"); %>><#65#>
-<input type="radio" value="0" name="ipv6_fw_enable" <% nvram_match("ipv6_fw_enable", "0", "checked"); %>><#64#>
+<input type="radio" value="1" name="ipv6_fw_enable" <% nvram_match("ipv6_fw_enable", "1", "checked"); %>><#66#>
+<input type="radio" value="0" name="ipv6_fw_enable" <% nvram_match("ipv6_fw_enable", "0", "checked"); %>><#65#>
 </td>
 </tr>
 <tr>
-<th><#1285#></th>
+<th><#1323#></th>
 <td id="ipv6_fw_rulelist">
 <select name="KnownApps" id="KnownApps" class="input_option" onchange="change_wizard(this, 'KnownApps');">
 </select>
@@ -376,16 +376,16 @@ document.getElementById("row" + num).style.background='#FFF';
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable_table">
 <thead>
 <tr>
-<td colspan="7"><#1161#>&nbsp;(<#1435#>&nbsp;128)</td>
+<td colspan="7"><#1197#>&nbsp;(<#1473#>&nbsp;128)</td>
 </tr>
 </thead>
 <tr>
-<th><#814#></th>
+<th><#831#></th>
 <th>Remote IP/CIDR</th>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,25);"><#1280#></a></th>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,24);"><#1129#></a></th>
-<th><#1282#></th>
-<th><#1434#></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,25);"><#1318#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,24);"><#1165#></a></th>
+<th><#1320#></th>
+<th><#1472#></th>
 </tr>
 <tr>
 <td width="15%">
@@ -415,7 +415,7 @@ document.getElementById("row" + num).style.background='#FFF';
 </table>
 <div id="ipv6_fw_rulelist_Block"></div>
 <div class="apply_gen">
-<input name="button" type="button" class="button_gen" onclick="applyRule();" value="<#72#>"/>
+<input name="button" type="button" class="button_gen" onclick="applyRule();" value="<#73#>"/>
 </div>
 </td>
 </tr>

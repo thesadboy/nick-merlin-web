@@ -13,7 +13,7 @@
 <script>
 var now_flag = '<% get_parameter("flag"); %>';
 function initial(){
-parent.document.title = "<#533#> - <#429#>";
+parent.document.title = "<#548#> - <#430#>";
 parent.set_step("t2");
 hideLinkTag();
 flash_button();
@@ -47,7 +47,7 @@ document.form.prev_page.value = "/qis/QIS_internet_type.htm";
 }
 function gotoAccount(){
 if(document.form.wan_heartbeat_x.value.length <= 0){
-alert("<#342#>");
+alert("<#347#>");
 document.form.wan_heartbeat_x.focus();
 document.form.wan_heartbeat_x.select();
 return false;
@@ -91,7 +91,7 @@ document.form.wan_proto[0].focus();
 <table width="730px">
 <tr>
 <td align="left">
-<div class="description_down"><#344#></div>
+<div class="description_down"><#349#></div>
 </td>
 </tr>
 </table>
@@ -100,24 +100,24 @@ document.form.wan_proto[0].focus();
 </div>
 <fieldset>
 <legend>
-<#345#>
+<#350#>
 <input type="radio" name="wan_proto" class="input" value="pptp" tabindex="1" onClick="focus_radio(this)" onKeyPress="return submitenter(this,event)">PPTP
 <input type="radio" name="wan_proto" class="input" value="l2tp" tabindex="2" onClick="focus_radio(this)" onKeyPress="return submitenter(this,event)">L2TP
 </legend>
 <table class="QISform" width="400" border="0" align="center" cellpadding="3" cellspacing="0">
 <tr>
 <th width="180">
-<span onmouseout="return nd();" onclick="overlib('<#53#>', FIXX, 270, FIXY, 30);" style="cursor:help;"><#54#><img align="right" style="cursor:pointer;margin-top:-14px\9;" src="/images/New_ui/helpicon.png"></span>
+<span onmouseout="return nd();" onclick="overlib('<#54#>', FIXX, 270, FIXY, 30);" style="cursor:help;"><#55#><img align="right" style="cursor:pointer;margin-top:-14px\9;" src="/images/New_ui/helpicon.png"></span>
 </th>
 <td class="QISformtd">
-<input type="text" id="wan_heartbeat_x" name="wan_heartbeat_x" tabindex="3" title="<#54#>" value="" size="36" maxlength="64" onkeypress="return validator.isString(this, event);" class="input_32_table" autocorrect="off" autocapitalize="off">
+<input type="text" id="wan_heartbeat_x" name="wan_heartbeat_x" tabindex="3" title="<#55#>" value="" size="36" maxlength="64" onkeypress="return validator.isString(this, event);" class="input_32_table" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 </table>
 </fieldset>
 <div class="apply_gen">
-<input type="button" id="prevButton" value="<#78#>" tabindex="5" onclick="gotoprev(document.form);" class="button_gen" width="70" align="center">
-<input type="submit" id="nextButton" value="<#77#>" tabindex="4" class="button_gen" width="70" align="center">
+<input type="button" id="prevButton" value="<#80#>" tabindex="5" onclick="gotoprev(document.form);" class="button_gen" width="70" align="center">
+<input type="submit" id="nextButton" value="<#79#>" tabindex="4" class="button_gen" width="70" align="center">
 </div>
 </div>
 </form>

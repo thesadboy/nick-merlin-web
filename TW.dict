@@ -29,16 +29,17 @@ Parent-AP 可能已關閉。請確認。
 重新開啟瀏覽器。在網址欄中輸入 "http://router.asus.com/" 檢視中繼器連線狀態。
 IP 設定更新成功，即將為您導回設定頁面。
 重新選擇
-變更 R6900 所連線的無線網路基地台。
-正在搜尋範圍內的無線網路...
+變更 R7000 所連線的無線網路基地台。
+正在搜尋無線網路...
 偵測不到任何基地台
 選擇一組基地台後，按下「建立連線」。
-您正在連線到不安全的網路。在這個網路上傳遞的資訊沒有加密。
+您正在連接不安全的網路。在這個網路上傳遞的資訊沒有加密。
 您已經連上此基地台。
 不支援的身份驗證方法。
-請稍候，R6900 正在連線到
+請稍候，R7000 正在連線到
 請輸入名稱
 自動
+自動設定
 頻寬限制
 頻寬限制功能有助於幫助你控制您的用戶端裝置的最大下載和上載速度。
 是不合法的 IP 位址
@@ -58,7 +59,7 @@ MAC 位址(選填)
 取得電腦 MAC 位址
 VPN 伺服器名單
 加入我的最愛
-由於 R6900 的位址已改變為
+由於 R7000 的位址已改變為
 提醒您加入我的最愛，方便下次進入設定頁面。
 很抱歉，您的瀏覽器不支援這個操作。
 重新開機
@@ -73,6 +74,7 @@ VPN 伺服器名單
 套用本頁面設定
 套用目前所有設定
 取消
+再次偵測
 使用出廠預設值
 修改
 下一步
@@ -88,23 +90,24 @@ MB /每月
 連線中斷
 如果你已更改了 SSID 或無線網路安全性設定，提醒您調整無線網路卡設定以重新取得連線。
 連線已恢復。
-切換成無線網路基地台模式後，將取消 R6900 的 DHCP功能，如此可能導致您無法連上設定頁面。<p>建議您可使用華碩共用程式的 Device Discovery 搜尋基地台的網路位址，以重新進入設定頁面。</p>
+切換成無線網路基地台模式後，將取消 R7000 的 DHCP功能，如此可能導致您無法連上設定頁面。<p>建議您可使用華碩共用程式的 Device Discovery 搜尋基地台的網路位址，以重新進入設定頁面。</p>
 雙 WAN
 雙 WAN 設定
 開啟使用者自訂目標
 IP 位址被更新。若此步驟花費了超過兩分鐘的時間，請按照以下三個步驟手動更新 IP 位址：（1）拔掉網線； （2）等待約十秒鐘；（3）重新插上網線以獲取一個新的 IP 位址。
 錯誤訊息
-最新版的韌體現已可用。為了獲得最好的體驗，華碩強烈建議您更新路由器的最新韌體版本。你想現在更新韌體？
+最新版的韌體現已可用。為了獲得最好的體驗，華碩強烈建議您更新路由器的最新韌體版本。
 目前的 WAN IP 位址不是外部 IP 位址。 外部 IP 相關的服務將無效。
 帳號名稱不能空白!
 帳號名稱不能少於兩個字!
 帳號名稱不能大於二十個字!
 這個帳號已經存在。\n請輸入不同的名稱!
 密碼不能空白!
-輸入密碼與確認密碼不相符!
+輸入的密碼與確認密碼不相符。
 韌體升級未完成。原因可能出自檔案不正確或傳輸出錯。請確認韌體版本後再做嘗試。
 韌體升級中，過程大約需要三分鐘...
-韌體更新完成。請手動重新啟動 R6900。
+韌體更新完成。請手動重新啟動 R7000。
+為了符合新法規修訂，ASUS 調整驗證規則以提供更好的韌體品質。您使用的韌體版本與先前發布的韌體及未經驗證過的第三方韌體不相容，建議您至官方網站下載最新版韌體使用。
 2016 版權屬於 華碩電腦股份有限公司
 針對同時存在於新舊韌體中的組態參數，其設定值在整個升級的過程中會一直保留。
 韌體版本：
@@ -118,8 +121,8 @@ IP 位址被更新。若此步驟花費了超過兩分鐘的時間，請按照�
 更多資訊可參考<a style="font-weight: bolder;text-decoration: underline;" href="https://www.microsoft.com/zh-tw/WindowsForBusiness/End-of-IE-support" target="_blank">微軟® 說明頁面</a>。
 若您的 WAN 連接需要一個固定的 IP 位址，請在此欄中輸入 IP 位址。
 IP 位址
-你已將網際網路 IP 設置為閘道器 IP，R6900 也許因此無法正確的連接到網際網路，請重新設定正確的閘道器IP。
-設定 R6900 第一組 DNS IP 位址。
+你已將網際網路 IP 設置為閘道器 IP，R7000 也許因此無法正確的連接到網際網路，請重新設定正確的閘道器IP。
+設定 R7000 第一組 DNS IP 位址。
 DNS 伺服器1
 手動設定的第二組 DNS IP 位址。
 DNS 伺服器2
@@ -131,7 +134,7 @@ DNS 伺服器2
 子網路遮罩
 MAC 位址無效。
 路由器目前韌體已為最新版本。
-常見的密碼組合很容易讓他人猜到, 要輸入其他密碼嗎?
+常見的密碼組合很容易讓他人猜到，是否繼續？
 將為您填入預設的子網路遮罩。
 被保留給回送位址，請輸入 1~223 之間的其他值。
 請輸入1~223之間的值。
@@ -142,7 +145,7 @@ WPA 金鑰應為 8~63 個字元的字串或 64 個十六進位字元；如果您
 WPA 金鑰應為 8~63 個字元的字串或 64 個十六進位字元。
 WPA 金鑰應為 8~63 個字元的字串。
 您不能讓本欄空白！
-您的密碼長度太短囉! 這樣很不安全。
+您的密碼長度太短，這樣不太安全。
 無效字元！
 不是有效的 IP 位址！
 不是有效的通訊埠編號。
@@ -159,9 +162,9 @@ WPA 金鑰不得超出 63 個字元！
 。若您無法連上此設定畫面，請更新您電腦的 IP 位址。
 建議您使用華碩公用程式的 Device Discovery 搜尋基地台的 IP 位址，以重新進入設定頁面。
 區域網路位址設定
-R6900 的 LAN IP 位址。預設值為 192.168.1.1。在 IP 為基礎的網路中，資料封包將被送至網路裝置的實體 IP 地址上。
+R7000 的 LAN IP 位址。預設值為 192.168.1.1。在 IP 為基礎的網路中，資料封包將被送至網路裝置的實體 IP 地址上。
 MAC 位址的格式為六組十六進制的數元，每組兩個，以冒號分隔。（例如，12:34:56:aa:bc:ef）
-R6900 的 LAN 子網路遮罩。預設值為 255.255.255.0。
+R7000 的 LAN 子網路遮罩。預設值為 255.255.255.0。
 註冊失敗(IP 位址格式不正確)。
 自動取得內網 IP 位址？
 密碼不能大於十六個字符。
@@ -173,8 +176,8 @@ MAC 位址
 你的網際網路連線可能會中斷。
 完成
 請稍候，
-韌體更新期間請不要關閉 R6900 電源。
-重新啟動 R6900 可能會耗費您約60秒的時間，您確定要現在重新啟動嗎?
+韌體更新期間請不要關閉 R7000 電源。
+重新啟動 R7000 可能會耗費您約60秒的時間，您確定要現在重新啟動嗎?
 手動設定
 DSL 記錄
 DSL 設定
@@ -226,32 +229,32 @@ DHCP租約
 NAT Passthrough
 網路金鑰
 新韌體不會自動安裝。請進入「系統管理」>「韌體更新」並下載最新的韌體進行更新。
-很抱歉，您的瀏覽器不支援Java Script。<p>請選擇支援JavaScript的瀏覽器或開啟JavaScript功能，以體驗ASUS R6900各種軟體功能。
+很抱歉，您的瀏覽器不支援Java Script。<p>請選擇支援JavaScript的瀏覽器或開啟JavaScript功能，以體驗R7000各種軟體功能。
 設定已更新。網頁將進行重置。
-IP 位址或埠已變更。您將結束與 R6900 的連線。
-欲設定 R6900，請重新連線至無線網路並使用新的 IP 位址和埠。
-在 Access Point(無線存取點)模式中，R6900 透過乙太網路線連接另一台無線路由器以擴大無線訊號覆蓋面至其他網路用戶端。在此模式中，防火牆、IP 分享與 NAT 功能均被預設關閉。
+IP 位址或埠已變更。您將結束與 R7000 的連線。
+欲設定 R7000，請重新連線至無線網路並使用新的 IP 位址和埠。
+在無線存取點 (Access Point) 模式中，R7000 透過乙太網路線連接另一台無線路由器，以擴大無線訊號覆蓋面至其他網路用戶端。在此模式中，防火牆、IP 分享與 NAT 功能是禁用的。
 您也可以造訪 <a href=\"http://findasus.local\" style=\"font-family:Lucida Console;text-decoration:underline;color:#FC0;\">http://findasus.local</a> 搜尋和進入裝置設定頁面。
-Access Point(無線存取點)
-R6900 支援多種可滿足不同需求的運作模式。請選擇能符合您現況的模式。
-在無線路由器模式中，R6900 透過 PPPoE、DHCP、PPTP、L2TP 或靜態 IP 連接至網際網路，並且將無線網路分享至 LAN 用戶端或裝置。在此模式中，NAT、防火牆與 DHCP 伺服器被預設為開啟。此模式適用於 SOHO 與一般家庭使用者。若您是第一次使用或您目前沒有使用任何有線/無線路由器時，請選擇此模式。
+無線存取點 (Access Point)
+R7000 支援多種運作模式，以滿足不同需求。請選擇您所需的模式。
+在無線路由器模式中，R7000 透過 PPPoE、DHCP、PPTP、L2TP 或靜態 IP 連接至網際網路，並且將無線網路分享至 LAN 用戶端或裝置。在此模式中，NAT、防火牆與 DHCP 伺服器預設為開啟。此模式適用於 SOHO 與一般家庭使用者。若您是第一次使用，或您目前未使用任何有線/無線路由器時，請選擇此模式。
 無線路由器(預設)
-Media Bridge
-R6900 可被設定為 Media Bridge 模式。
-Media Bridge 模式可以同時為多個媒體裝置提供最快速的 802.11ac Wi-Fi 連接。
-要使用 Media Bridge 模式，您需要兩台 R6900：一台作為 Media Bridge，另一台作為路由器。
-將一台 R6900 設定為路由器模式，另一台 R6900 設定為 802.11ac Media Bridge，為您的媒體裝置，像是電腦、智慧型電視、遊戲終端、DVR 或媒體播放器，提供一個並行的 802.11ac Wi-Fi 連接 。
+多媒體橋接器( Media Bridge )
+R7000 可被設定為多媒體橋接器 (Media Bridge) 模式。
+多媒體橋接器 (Media Bridge) 模式可以同時為多個媒體裝置提供最快速的 802.11ac Wi-Fi 連接。
+要使用多媒體橋接器 (Media Bridge) 模式，您需要兩台 R7000：一台作為多媒體橋接器，另一台作為路由器。
+將一台 R7000 設定為路由器模式，另一台 R7000 設定為 802.11ac Media Bridge，為您的媒體裝置，像是電腦、智慧型電視、遊戲終端、DVR 或媒體播放器，提供一個並行的 802.11ac Wi-Fi 連接 。
 變更到 Media Bridge 模式為您的媒體裝置提供一個平行的 802.11ac Wi-Fi 連線。
-在 Media Bridge 模式中，只有無線設備連接至 P-AP。客戶端設備需使用網線連接至 Media Bridge。
-R6900 正處於 Media Bridge 模式。 IP 地址已更改。
+變更到多媒體橋接器模式為您的媒體裝置提供一個平行的 802.11n Wi-Fi 連線。
+R7000 正處於多媒體橋接器模式。 IP 地址已更改。
 請下載 <a href='http://dlcdnet.asus.com/pub/ASUS/LiveUpdate/Release/Wireless/Discovery.zip' target='_blank' style='font-family:Lucida Console;text-decoration:underline;color:#FC0;'>Device Discovery Utility</a> 來識別 Media Bridge 的 IP 地址。
 請檢查是否已經從 WAN 移除網路線。
-在 Repeater mode(中繼模式)下，R6900 可以延伸您使用環境內其他基地台的訊號，以提供無線用戶更好的訊號品質。
-R6900 的 LAN  IP 地址可能已更改。
+在中繼模式( Repeater Mode )下，R7000 可以延伸您使用環境內其他基地台的訊號，以提供無線用戶更好的訊號品質。在此模式下，防火牆、IP 分享以及 NAT 功能是禁用的。
+R7000 的 LAN  IP 地址可能已更改。
 關閉此視窗並重新訪問 http://router.asus.com
 中繼模式
 WISP 模式
-R6900 透過無線網路連線至您的主要路由器、存取點或公共熱點，並與您的有線/無線用戶端共享網路。此模式下，NAT、防火墻和 DHCP 伺服器預設為開啟。
+R7000 透過無線網路連線至您的主要路由器、存取點或公共熱點，並與您的有線/無線用戶端共享網路。此模式下，NAT、防火墻和 DHCP 伺服器預設為開啟。
 連線至 Wi-Fi 熱點前，請確認已允許您存取網際網路。
 目前的運作模式不支援此頁面。
 家長電腦控制程式
@@ -266,8 +269,8 @@ PIN 碼不正確。請輸入正確的 PIN 碼，並重新連接3G/4G USB 無線�
 密碼
 PPP 用戶名稱
 帳號設定
-本欄可讓您提供 R6900 所使用的主機名稱。通常是您 ISP 業者要求的名稱。
-來自 ISP 業者的特別需求
+本欄可讓您提供 R7000 所使用的主機名稱。通常是您 ISP 業者要求的名稱。
+網路服務供應商 (ISP) 特別需求
 MAC (Media Access Control) 位址是特定的識別碼可用來識別網路中的電腦或裝置。部份ISP會監視與他們相連的裝置的 MAC 位址，並且不允許新的 MAC 位址的建立網路連線。爲了解決這個問題，您可以執行以下任一項目：<p>* 聯絡您的 ISP 並且要求把 MAC 位址更新為您這台無線路由器的 MAC 位址。<p>* 複製原始裝置的 MAC 位址，並用這個MAC 位址取代更改路由器的 MAC 位址。
 DNS 伺服器
 連線狀態
@@ -275,7 +278,7 @@ DNS 伺服器
 當您的 VPN 伺服器支援更高级别的 MPPE 加密方式時， 基於更高的安全性考量， 將優先使用高級別的加密方式。
 網路設定精靈
 新密碼與系統預設密碼相同，強烈建議您設定一個更為複雜的密碼。
-若不更改預設密碼（admin），您的路由器易受到安全威脅，其他人能夠很容易猜出登入密碼。您確定繼續使用此低安全性密碼嗎？
+若不更改預設密碼（admin），非授權用戶很容易猜出登錄密碼，您的路由器將受到安全威脅。您確定繼續使用此預設密碼嗎？
 使用預設設定（使用與目前基地台相同的密碼）。
 自動取得 IP 位址連線設定
 開始克隆電腦的 MAC 位址到路由器
@@ -287,13 +290,15 @@ DNS 伺服器
 若您不確定使用哪種 ANNEX 模式，請洽詢您的網路電信業者（ISP）。
 未選擇 ANNEX 模式。
 強烈建議您首先設定無線網路安全設定，是否繼續？
+請將網路線接上 WAN 埠。系統將會自動偵測你的網路設定。
+直接進行離線設定或設定進階功能
 偵測到 PPPoE/DSL 連線。
 設定精靈偵測到您的網路連線類型為 PPPoE/DSL。
 點選「下一步」輸入您的網際網路服務供應商（ISP）提供的帳戶名稱與密碼。
 若連線類型不是 PPPoE/DSL，請點選「連線類型」。
-R6900 正在檢查連線狀態，請稍候…
-R6900 正在檢查連線類型，請稍候
-R6900 找不到連線類型。請點選 手動設定 進行手動設定。
+R7000 正在檢查連線狀態，請稍候…
+R7000 正在檢查連線類型，請稍候
+R7000 找不到連線類型。請點選 手動設定 進行手動設定。
 偵測網際網路連線類型逾時。您要重試嗎？
 數據機已被手動重置。
 檢查 WAN 連線類型。
@@ -312,8 +317,8 @@ SIM 卡安裝不正確。
 若要增加新的 WAN 設定，請點選 <a href="QIS_manual_setting.htm">這裡</a>。
 您已進行了 WAN 設定。
 是否要使用預設的無線安全設定？
-R6900 找不到連線類型。您的 ADSL 設定可能屬於以下模式之一：MER 固定 IP、IPoA 或 Bridge。請點選 手動設定 以手動進行 WAN 設定。
-驗證失敗
+R7000 找不到連線類型。您的 ADSL 設定可能屬於以下模式之一：MER 固定 IP、IPoA 或 Bridge。請點選 手動設定 以手動進行 WAN 設定。
+認證失敗
 帳號名稱與密碼錯誤
 如果您正離線設定路由器，您可選擇<b>無線網路設定</b>跳過網際網路連線偵測，進到下一階段設定無線網路名稱及密碼。
 點選 <b>選擇網路類型</b>重新輸入ISP提供的連線帳號密碼。
@@ -326,7 +331,7 @@ PPPoE/DSL 連線失敗
 偵測失敗
 路由器管理員帳號
 路由器管理員密碼
-R6900 提供這些網路無線設定。
+R7000 提供這些網路無線設定。
 網路已設定
 網路名稱（SSID）
 無線加密
@@ -357,15 +362,15 @@ MAC（媒體存取控制）代表網路上的硬體 (如：網路卡) 所擁有�
 當數據機的 LED 指示燈開始閃爍時，點選「重新偵測」自動偵測連線類型。
 請確認電話線已連接到 DSL 連接埠。
 電話線未連接。
-變更路由器密碼以阻止未授權的用戶端存取您的華碩無線路由器。
-使用者名稱與密碼區分大小寫。
-您的路由器登入資訊用於存取路由器的管理設定。
-路由器的登入資訊也可用於存取附加功能，如 FTP 和 AiCloud 個人雲 2.0。
+變更路由器密碼，以阻止未授權用戶端存取您的華碩無線路由器。
+使用者名稱與密碼，區分大小寫。
+您的路由器登入資訊，用於存取路由器的管理設定。
 預設的使用者名稱和密碼為：
 設定路由器登入資訊
 請在下方輸入必要的資訊。
 由您的網路服務供應商（ISP）處獲取帳號名稱與密碼。
 若您選擇使用 PPPoE、PPTP 或 L2TP 連線類型，您的網路服務供應商（ISP）會給您一張卡片或文檔，上面記錄有您的帳號名稱與密碼。所提供的帳號名稱與密碼是用於連線網際網路之用。此帳號與密碼並非用於管理路由器的使用者名與密碼。
+啟用 PPTP 或 L2TP 服務  (選填)
 您要繼續使用之前的無線網路安全設定嗎？
 強烈建議您首先設定無線網路安全設定。
 重新掃描
@@ -373,15 +378,15 @@ MAC（媒體存取控制）代表網路上的硬體 (如：網路卡) 所擁有�
 顯示密碼
 (建議設定)
 您的 ISP 必需提供帶有用戶名稱及密碼的卡片或文件。＊此圖為示意圖，和實際情況會有所不用
-輸入 ISP 提供的用戶名稱及密碼。
-HINET 用戶的客戶號碼為 <span style="color:#FC0;">HNxxxxxxxx@hinet.net</span>
+輸入用戶名稱及密碼，相關訊息可洽詢您的網路服務供應商 (ISP)。
+HiNet 用戶的客戶號碼為 <span style="color:#FC0;">xxxxxxxx@hinet.net</span>
 連線方式 1
 連線方式 2
 您的 ISP 必需提供 IP, 子網路遮罩, 閘道, DNS 伺服器位址等資訊。如果沒有請詢問 ISP。
-您的 ISP 有要求上網時需要輸入帳號密碼嗎?
+您的網路連接，需要輸入用戶名和密碼嗎？
 我的網路連線類型為自動取得 IP (cable modem, DHCP) 或固定 IP
-此連線方式可讓 R6900 自動取得 IP，這種連線方式通常使用於 cable modem。
-我的網路連線類型是 PPPoE ， L2TP 或 PPTP
+此連線方式可讓 R7000 自動取得 IP，這種連線方式通常使用於 cable modem。
+我的網路連線類型是 PPPoE
 * 如果您不確定網路類型，請連絡 ISP 或網路管理員
 5 GHz 與 2.4 GHz 設定相同
 5 GHz-1 與 2.4 GHz 設定相同
@@ -413,18 +418,14 @@ HINET 用戶的客戶號碼為 <span style="color:#FC0;">HNxxxxxxxx@hinet.net</s
 SIM 卡狀態
 請輸入 ISP 指定的帳號密碼
 啟用 VPN 連線
-點選「下一步」開啟 R6900 的快速網路設定精靈。
-450+450同步雙頻無線網路。
-USB 2.0 x 2，可支援多功能事務機伺服器、UPnP、SAMBA 以及 FTP server。
-Turbo NAT 加速引擎，提供 Gigabit 等級的 Internet 傳輸速度。
-高水準的使用層級，包括極佳的下載和遊戲效能，以及多用戶端連接。
-要在 2.4 GHz 達到 600Mbps 最佳速度，R6900 必須連接支援 TurboQAM 的無線網卡，例如 ASUS PCE-AC68 或設定為 Media Bridge 的 R6900。
+點選「下一步」開啟 R7000 的快速網路設定精靈。
+要在 2.4 GHz 達到 600Mbps 最佳速度，R7000 必須連接支援 TurboQAM 的無線網卡，例如 ASUS PCE-AC68 或設定為多媒體橋接器的 R7000。
 歡迎加入華碩網路產品！
 網路名稱或 SSID 是一個用於辨識無線網路的名稱。WiFi 裝置預設自動偵測範圍內的所有網路名稱。
 安全金鑰是進入一個已加密無線網路的密碼，用來防止未經授權的用戶端使用無線網路。要進入加密的無線網路，使用者需輸入安全金鑰。
-指定一個特殊的名稱或 SSID（Service Set Identifier）以幫助辨識您的無線網路。
-輸入 8~63 個字元（字母、數字或其組合）或 64 個十六進位字元組成的網路金鑰。預設無線加密模式為 WPA2–Personal AES。若您不想設定網路加密，安全金鑰欄位可以留空，但這會使您的網路被未經授權的用戶端使用。
-輸入 8~63 個字元（字母、數字或其組合）組成的網路金鑰。預設無線加密模式為 WPA2–Personal AES。
+指定唯一的名稱或 SSID（Service Set Identifier）方便辨識您的無線網路。
+輸入一個網路金鑰，界於 8~63 個字元或 64 個十六進位字母與數字組合。 預設無線加密模式為 WPA2–Personal AES。 若您不想設定網路加密，安全金鑰欄位可以留空，但這樣未經授權的用戶端可輕易地使用您的網路。
+輸入一個網路金鑰，界於 8~63 個字元組合。 預設無線加密模式為 WPA2–Personal AES。
 用戶名稱不能空白！
 使用者名稱 / 密碼區域不能為空白。
 ISP 帳號設定
@@ -433,7 +434,7 @@ ISP 帳號設定
 重新偵測網路連線狀態
 重新偵測
 自動偵測
-開始偵測網際網路連線類型...
+開始偵測網路連線類型...
 偵測過程可能需要幾分鐘，請等待偵測完成。
 完成上網設定
 瀏覽網際網路
@@ -443,7 +444,7 @@ ISP 帳號設定
 手動進行設定或微調。
 請關閉視窗以完成設定，建議開啟新視窗連上網際網路。
 完成
-請確認您已經連接到 R6900 然後手動刷新此頁面。
+請確認您已經連接到 R7000 然後手動刷新此頁面。
 重新輸入帳號密碼
 DHCP 模式連線失敗
 PPPoE 帳號或密碼有誤，請重新輸入帳號密碼。
@@ -458,8 +459,8 @@ ISP 資料設定
 點選 <a><label for="upload_setting_profile" style="text-decoration:underline;cursor:pointer;font-weight:bold;color:#FC0;" onclick="">還原設定</label></a> 以載入已儲存的設定。
 若您已備份了路由器設定，點選 <a><label for="upload_setting_profile" style="text-decoration:underline;cursor:pointer;font-weight:bold;color:#FC0;" onclick="">還原設定</label></a> 可還原至已儲存的設定。
 若您瞭解您的 ISP 連線類型，可點選 <a><label style="text-decoration:underline;cursor:pointer;font-weight:bold;color:#FC0;" onclick="submitForm(0)">手動設定</label></a> 以手動設定您的無線網路。
-點選 <a><label style="text-decoration:underline;cursor:pointer;font-weight:bold;color:#FC0;" onclick="submitForm(0)">手動設定</label></a> 以手動設定路由器進階設定或將 R6900 設定為
-您有無線網路方面的專業知識，想要跳過網路設定精靈？
+點選 <a><label style="text-decoration:underline;cursor:pointer;font-weight:bold;color:#FC0;" onclick="submitForm(0)">手動設定</label></a> 以手動設定路由器進階設定或將 R7000 設定為
+您具備無線網路方面的專業知識，想要跳過網路設定精靈？
 請選擇你的 ISP 提供的網際網路連線類型。
 網際網路連線類型
 請選擇網際網路連線類型
@@ -473,16 +474,16 @@ ISP 資料設定
 選擇 ISP 設定檔
 請選擇
 用華碩路由器帳號登入
-用華碩路由器帳號登錄
 用網件路由器賬號登錄
 用思科路由器賬號登錄
+用華為路由器賬號登錄
 標準設定
 啟用
 未啟用
 待機
 狀態
 遠端基地台狀態
-ASUS R6900
+R7000
 活動中連線
 自動登出
 更改時區
@@ -499,8 +500,22 @@ ASUS R6900
 用戶帳號不能為'root'、'guest'、'anonymous'。請輸入有效的帳號名稱！
 VPN 詳細設定
 輸入使用者名称與密碼。
-點擊【下一步】使得路由器自動取得新的 IP 地址。新的 IP 地址為：
-請確認您設定過的每個相關服務，更新 IP 位址設定；如虛擬伺服器或 DMZ 等功能。
+請確認 R7000 的 WAN 埠與網際網路之間的網路線已接上。
+請確認是否需要更改<a style='color:#FFF' href='/Advanced_OperationMode_Content.asp'>運作模式</a>。
+您的 PPPoE 或是 VPN 的帳號、密碼不被接受，請<a style='color:#FFF' href='/Advanced_WAN_Content.asp'>重新輸入</a>。
+PPPoE 認證失敗
+切換 WAN 類型
+請確認<a style='color:#FFF' href='/Advanced_WAN_Content.asp'>網路設定</a>內容正確。
+建議開啟 WAN 連線。 <a style='color:#FFF' href='/index.asp'>更改設定</a>。
+請檢查 USB 網卡是否已正常開機完成。
+更改您的 <a style='color:#FFF' href='/Advanced_Modem_Content.asp'>USB 網卡設定</a>。
+您已手動中斷 WAN 連線
+USB 網卡正在重開機或關閉
+點擊【下一步】更換成新的 IP 地址。新的 IP 地址為：
+更改 IP 地址後，請確認相關服務的 IP 設定是否需要調整，如虛擬伺服器或 DMZ 等功能。
+請確認前端基地台的網路連線正常。
+<a style='color:#FFF' href='/QIS_wizard.htm?flag=manual'>重新設定連線</a>。
+無法與前端基地台連線
 連線失敗原因
 您的網路連線出現問題，導致您無法前往您想要瀏覽的網頁
 尚未接上網路線。
@@ -518,21 +533,21 @@ VPN 詳細設定
 恢復遠端連線。
 我們建議您
 此處動作需管理者帳號和密碼
-請確保 R6900 的 WAN 埠與網際網路之間的網路線已正確連接。
+請確保 R7000 的 WAN 埠與網際網路之間的網路線已正確連接。
 前往「帳號設定」
 ，重新輸入使用者帳號和密碼。
 前往網路設定精靈自動偵測連線類型。
-，讓 R6900 為您重新偵測您的網路連線模式。
+，讓 R7000 為您重新偵測您的網路連線模式。
 請與您的 ISP ( 網路服務供應商 ) 聯繫，以取得 DHCP 錯誤的原因。
 請再次設定路由器的 IP 地址，路由器 IP 地址需與閘道器 IP 地址不同。
 請手動重新對遠端網路建立連線。
 請檢查 IP 和 DNS 等設定是否正確。
-請重新設定您的 R6900 的近端網路位址，並確定它與您遠端的閘道器位址不同。如：192.168.X.X，X為2至254間之一數字。
-After connecting the router to the modem, click "前往設定" to launch the Quick Setup Wizard.
-To set up the WAN connection offline or change the operation mode to Access Point, click 手動設定.
-In the next step, set up the login name and password for security.
-ASUS Wireless Router R6900
-R6900
+請重新設定您的 R7000 的近端網路位址，並確定它與您遠端的閘道器位址不同。如：192.168.X.X，X為2至254間之一數字。
+請將網路線插入路由器 WAN 埠，並選擇「自動設定」按鈕。
+如果希望在沒有連接網路的情況下完成設定，請選擇「手動設定」按鈕。
+下一步，請設定安全的路由器登入名稱和密碼。
+Wireless Router R7000
+R7000
 配置
 無線網路名稱
 無線路由器
@@ -547,9 +562,10 @@ WPA 加密
 [n Only]模式下，原 WEP 或 TKIP 加密設定將自動調整為 AES 加密，以取得正確的連線。
 連線成功
 UTF-8
+繁體中文
 存取區域網路
 允許訪客存取區域網路
-現在您可以存取您的 USB 儲存裝置與連接到 R6900 並開啟網路芳鄰 (Samba) 功能的裝置。
+現在您可以存取您的 USB 儲存裝置與連接到 R7000 並開啟網路芳鄰 (Samba) 功能的裝置。
 存取時間
 允許訪客使用網際網路連線的時間。
 僅允許建立六個帳號
@@ -567,11 +583,11 @@ UTF-8
 網頁瀏覽歷史
 網頁瀏覽歷史顯示用戶的網路瀏覽歷史。
 網路電話和即時通訊
-開啟 Adaptive QoS 網路智慧流量管理的過程可能需要幾分鐘。
 其他
 Adaptive QoS 智慧流量管理
 頻寬管理設定
 In the QoS Adaptive type, the APPs with higher priority will be get better bandwidth over another when the APPs are competing for limited bandwidth, Drag and drop APPs category to upper level for higher priority
+Please select priority mode depending on your networking environment. You can also choice customize mode to prioritize app category.
 影音串流
 網上瀏覽
 新增帳號的預設權限不可讀寫。
@@ -581,8 +597,8 @@ In the QoS Adaptive type, the APPs with higher priority will be get better bandw
 請依照說明操作：
 下載適當的版本到您的本地裝置。
 在 新驅動程式檔案 欄位指定已下載檔案的路徑和名稱。
-點選 上載 以上載檔案到 R6900。上載過程可能需要幾分鐘時間。
-當接收到正確的驅動程式檔後，R6900 將自動開始安裝新的 DSL 驅動程式。更新過程結束後，系統將重新啟動。
+點選 上載 以上載檔案到 R7000。上載過程可能需要幾分鐘時間。
+當接收到正確的驅動程式檔後，R7000 將自動開始安裝新的 DSL 驅動程式。更新過程結束後，系統將重新啟動。
 新 DSL 驅動程式檔案
 若 DSL 驅動程式更新失敗，您可以從這個網頁重新安裝驅動程式。
 注意：
@@ -770,18 +786,19 @@ FLAG 項目值輸入錯誤!
 系統錯誤: 磁碟忙碌中!
 系統發生不預期的錯誤
 第一個和最後一個字元不能為空格。
-R6900 偵測到您正在使用 IE6。請嘗試使用 Google Chrome、IE7 或更高版本的瀏覽器以獲得最佳瀏覽體驗。
+R7000 偵測到您正在使用 IE6。請嘗試使用 Google Chrome、IE7 或更高版本的瀏覽器以獲得最佳瀏覽體驗。
 全部
 Android 手機
 無法取得 IP 位址資訊
 基地台 IP 位址
 基地台搜尋
+Apps
 APN 設定
 正在載入 APP 清單中...
 WPA 金鑰認證失敗，請重新輸入。
 華碩 EZ 印表機分享（僅限 Windows 作業系統）
 您的網絡登錄名稱和密碼仍然是原廠預設值，我們強烈建議您盡速更改以避免安全性的風險。
-目前您的路由器有最新韌體可進行更新，建議您更新以提升系統的穩定性，並取得新增或優化的內建功能，也可避免安全性的風險。
+有最新韌體可進行更新。
 您的無線網絡尚未進行加密動作，我們建議您為您的網絡設定一個密碼，以避免安全性的風險。
 目前的 AiDisk FTP 權限允許未授權用戶登入。我們建議您關閉「允許匿名登入」，以避免安全性的風險。
 FTP 帳號權限已經自動關閉「允許匿名登入」模式以避免可能存在的安全性風險。您可以使用路由器的帳號及密碼登入；若您希望變更登入設定
@@ -818,7 +835,7 @@ WAN / LAN 頻寬監控
 優先權
 您的 ISP 業者可能會需要以下資料以便確認您的帳號。如果沒有，就請按「下一步」省略。
 若您使用 PPTP 或 L2TP 連線，則需要輸入 VPN 伺服器的名稱或位址。
-本欄可讓您提供 R6900 所使用的主機名稱。通常是您 ISP 業者要求的名稱。
+本欄可讓您提供 R7000 所使用的主機名稱。通常是您 ISP 業者要求的名稱。
 設定單一使用者可以使用的最大頻寬。0代表對頻寬沒有限制。
 關閉
 未啟用
@@ -826,6 +843,7 @@ WAN / LAN 頻寬監控
 匯出
 前往設定
 移除
+發送
 外部網路設定
 驗證碼
 請輸入驗證碼
@@ -851,7 +869,7 @@ WAN / LAN 頻寬監控
 確定要開啟磁碟在 FTP 上的分享嗎？
 重新輸入密碼
 路由器無法連線至華碩伺服器檢查韌體更新。重新連線至網際網路後，返回此頁面，點選「檢查」檢查是否有韌體更新。
-將您的 iOS 或 Android 裝置透過 Wi-Fi 連線至 R6900。AiCloud 個人雲 2.0 應用程式將自動引導您進行設定。
+將您的 iOS 或 Android 裝置透過 Wi-Fi 連線至 R7000。AiCloud 個人雲 2.0 應用程式將自動引導您進行設定。
 用戶名單
 正在連接…
 連線時間
@@ -866,7 +884,6 @@ PPPoE、PPTP 或 L2TP 協定下不支援二級 CTF。要更改為一級 CTF，�
 清除
 關閉
 刪除
-再次偵測
 未啟用
 不同意
 未連線
@@ -890,6 +907,7 @@ PPPoE、PPTP 或 L2TP 協定下不支援二級 CTF。要更改為一級 CTF，�
 目前頻率
 目前頻寬設定範圍
 自訂
+客製化
 日期
 五
 一
@@ -913,15 +931,15 @@ PPPoE、PPTP 或 L2TP 協定下不支援二級 CTF。要更改為一級 CTF，�
 iTunes 分享:
 列印服務:
 個人電腦
-分享器/路由器
-無線基地台
+路由器
+無線存取點
 網路儲存伺服器
 網路攝影機
 無法辨識的裝置
-在中繼模式中，DHCP 指定的 IP 位址將變更。安裝並使用 <a href=\"http://dlcdnet.asus.com/pub/ASUS/LiveUpdate/Release/Wireless/Discovery.zip\" style=\"font-family:Lucida Console;text-decoration:underline;color:#FC0;\">Device Discovery Utility</a> 來獲得無線路由器新的 IP 位址。
-在基地台（AP）模式中，由 DHCP 指定的 IP 位址會發生變更。安裝並使用 <a href=\"http://dlcdnet.asus.com/pub/ASUS/LiveUpdate/Release/Wireless/Discovery.zip\" target=\"_blank\" style=\"font-family:Lucida Console;text-decoration:underline;color:#FC0;\">Device Discovery 程式</a> 來偵測無線路由器的 IP 位址。
-在 Media Bridge 模式中，DHCP 指定的 IP 位址將變更。安裝並使用 <a href=\"http://dlcdnet.asus.com/pub/ASUS/LiveUpdate/Release/Wireless/Discovery.zip\" style=\"font-family:Lucida Console;text-decoration:underline;color:#FC0;\">Device Discovery Utility</a> 來獲得無線路由器新的 IP 位址。
-此功能能夠控制 R6900 無線區域網路中，特定網路卡實體位址（MAC Address）的存取。
+在中繼模式中，若由 DHCP 指定的 IP 位址變更，請安裝並使用 <a href=\"http://dlcdnet.asus.com/pub/ASUS/LiveUpdate/Release/Wireless/Discovery.zip\" style=\"font-family:Lucida Console;text-decoration:underline;color:#FC0;\">Device Discovery Utility</a> 以便獲得無線路由器新的 IP 位址。
+在無線存取點 (AP) 模式中，若 DHCP 指定的 IP 位址變更，請安裝並使用 <a href=\"http://dlcdnet.asus.com/pub/ASUS/LiveUpdate/Release/Wireless/Discovery.zip\" target=\"_blank\" style=\"font-family:Lucida Console;text-decoration:underline;color:#FC0;\">Device Discovery 程式</a> 以便偵測無線路由器的 IP 位址。
+在多媒體橋接器( Media Bridge )模式中，DHCP 指定的 IP 位址將變更。安裝並使用 <a href=\"http://dlcdnet.asus.com/pub/ASUS/LiveUpdate/Release/Wireless/Discovery.zip\" style=\"font-family:Lucida Console;text-decoration:underline;color:#FC0;\">Device Discovery Utility</a> 來獲得無線路由器新的 IP 位址。
+此功能能夠控制 R7000 無線區域網路中，特定網路卡實體位址（MAC Address）的存取。
 DHCP 查詢頻率
 積極模式
 普通模式
@@ -952,7 +970,7 @@ DHCP 查詢頻率
 磁碟掃描將完成…
 時間
 正在移除磁碟…
-周
+週
 每週
 我已接上磁碟，
 更新
@@ -977,8 +995,8 @@ DHCP 查詢頻率
 請在用戶端裝置上設定 DNS 伺服器。
 先由以下兩處下載華碩 AiCloud 個人雲 2.0 應用程式至手機或平板電腦：
 下載頻寬
-您的 R6900 中未安裝下載大師。
-您的 R6900 不支援下載大師。
+您的 R7000 中未安裝下載大師。
+您的 R7000 不支援下載大師。
 下載優先順序
 資料接收量/秒
 已接收的資料
@@ -998,7 +1016,7 @@ DSL 線路設定
 共用 PVC
 SRA( 無縫式速率調整 )
 穩定性調整
-R6900 支持雙 WAN。選擇“故障轉移”模式設定第二 WAN 為備用網絡。選擇“負載平衡”模式可以同時為兩個網路頻寬優化，流量最大化，反應時間最小化，並防止數據溢出。
+R7000 支持雙 WAN。選擇“故障轉移”模式設定第二 WAN 為備用網絡。選擇“負載平衡”模式可以同時為兩個網路頻寬優化，流量最大化，反應時間最小化，並防止數據溢出。
 開啟雙 WAN
 允許故障恢復
 故障恢復連線機制的啟動時間（單位為秒）。當你切換到第二 WAN，路由器會檢查主要 WAN 已恢復連接多久。如果主要 WAN 連接是穩定的（比故障恢復連線偵測時間更長），將變回主要 WAN 連接。
@@ -1012,7 +1030,7 @@ R6900 支持雙 WAN。選擇“故障轉移”模式設定第二 WAN 為備用�
 負載平衡
 負載平衡設定
 路由器重新啟動後發出第一個 ping 封包前的延遲時間。
-您可以開啟 Ping Time Watchdog 來繼續監控 R6900 和遠程主機之間的主要 WAN 連接。在此設置中，路由器將繼續 ping 用戶自定義的目標。若路由器 ping 目標 IP 地址失敗，路由器將自動進行故障轉移。
+您可以開啟 Ping Time Watchdog 來繼續監控 R7000 和遠程主機之間的主要 WAN 連接。在此設置中，路由器將繼續 ping 用戶自定義的目標。若路由器 ping 目標 IP 地址失敗，路由器將自動進行故障轉移。
 故障轉移連線偵測時間
 故障轉移執行時機
 容許最大連續失敗次數
@@ -1043,17 +1061,21 @@ WAN 模組
 啟用 QoS
 開啟 WAN 中斷的瀏覽器導頁通知
 開啟 USB 模式
-R6900 provides two modes for encapsulating or transporting LAN and WAN protocols via ATM. Please select the appropriate Encapsulation Mode.
+R7000 provides two modes for encapsulating or transporting LAN and WAN protocols via ATM. Please select the appropriate Encapsulation Mode.
 乙太網路 WAN
 安裝中
 僅外部
 擴大 TTL 值
 EZQoS 頻寬管理
+Get the bandwidth information from ISP or go to <a href="http://speedtest.net" target="_blank" style="text-decoration:underline;color:#FC0">Speedtest</a> to check bandwidth
+The default is 0, which means unlimited bandwidth
 頻寬管理能夠保證高優先級任務及應用的頻寬。
 <span style="font-weight:bolder;font-size:14px;">Adaptive QoS 智慧流量管理</span> 能夠透過預先定義、拖放設定，在有線及無線連接時，保證高優先級應用及程式的傳入和傳出的頻寬：如遊戲、影音串流、網路電話、網上瀏覽與文件傳輸。
-啟用 QoS 功能，點擊 QoS 滑動開關並填寫上傳和下載數據。從 ISP 獲取頻寬的資訊，或轉至 <a href="http://speedtest.net" target="_blank" style="text-decoration:underline;">http://speedtest.net</a> 檢查頻寬。
+<span style="font-size:14px;font-weight:bolder">Bandwidth Limiter</span> helps you to control download and upload max speed of your client devices.
+啟用 QoS 功能，點擊 QoS 滑動開關並填寫上傳和下載數據。
 <span style="font-weight:bolder;font-size:14px;">傳統 QoS</span> 由用戶手動自定義參數在有線及無線連接時，保證高優先級應用及程式傳入和傳出的頻寬。
 關於 EZQoS 頻寬管理
+開啟 QoS 網路智慧流量管理的過程可能需要幾分鐘。
 啟用 Smart QoS
 Adaptive QoS 智慧流量管理模式可基於自身喜好去修改應用程式的優先級類別。 在 QoS 的類型轉換(智慧流量管理/傳統)後，會保留對每個客戶端的的優先級配置。
 傳統 QoS
@@ -1062,13 +1084,26 @@ EZQoS 頻寬管理提供四種常用的網路應用類型，透過簡易的設�
 若需要更專業詳盡的設定，請選擇
 故障轉移重試計數
 查找疑難排解
+3G/4G 紀錄
 評論 / 建議
 相容性問題
+On OS or Application
+With external hardware disk
+With modem
+With other network devices
+With other router
+With printer
+With USB modem
 連線 / 網速問題
+Slow wireless speed
+Slow wired speed
+Router reboot automatically
+Unstable connection problem
 選擇最能描述您的 DSL 服務效能的項目。
 您的國家 / 地區
 我們期待您的反饋、意見和建議，以及任何有關華碩產品的想法。
-您的回報資訊對我們非常重要，可以幫助我們改善 R6900 的韌體。若您有任何意見、建議或連線問題，請填寫以下表格；送出回報資訊會同時夾帶目前的 DSL 記錄，一併提供給華碩支援團隊。為確保您能收到我們的答覆，請正確輸入您的 e-mail 地址。
+您的回報資訊對我們非常重要，可以幫助我們改善 R7000 的韌體。若您有任何意見、建議或連線問題，請填寫以下表格；送出回報資訊會同時夾帶目前的 DSL 記錄，一併提供給華碩支援團隊。為確保您能收到我們的答覆，請正確輸入您的 e-mail 地址。
+Now this function can't work, because your Router isn't connected to the Internet. Please send your Feedback to this email address :
 您的 e-mail 地址
 電子郵件地址的格式不正確。
 電子郵件地址欄位為空。您確定要繼續嗎？
@@ -1080,9 +1115,9 @@ EZQoS 頻寬管理提供四種常用的網路應用類型，透過簡易的設�
 iptables 設定
 您的網路電信業者（ISP）
 最多可輸入 2000 字 - 還可以輸入
-Now this function can't work, because your ASUS Router isn't connected to the Internet. Please send your Feedback to this email address :
+Now this function can't work, because your Router isn't connected to the Internet. Please send your Feedback to this email address :
 韌體版本將會隨您的資訊及反饋一同提交。
-您的反饋將用於診斷問題及完善 R6900 韌體。您提交的任何資訊，無論是明確的還是出於偶然，都將根據 <a style="font-weight: bolder;text-decoration:underline;cursor:pointer;" href="http://www.asus.com/Terms_of_Use_Notice_Privacy_Policy/Privacy_Policy/" target="_blank">隱私政策</a>受到保護。
+您的反饋將用於診斷問題及完善 R7000 韌體。您提交的任何資訊，無論是明確的還是出於偶然，都將根據 <a style="font-weight: bolder;text-decoration:underline;cursor:pointer;" href="http://www.asus.com/Terms_of_Use_Notice_Privacy_Policy/Privacy_Policy/" target="_blank">隱私政策</a>受到保護。
 透過提交您的反饋，你已同意華碩採納您的意見以完善其網路及無線網路產品。
 偶爾中斷
 * 選填
@@ -1094,6 +1129,7 @@ Now this function can't work, because your ASUS Router isn't connected to the In
 我們重視所收到的所有回饋。我們將根據您的意見和建議提高華碩產品的使用體驗。
 感謝您抽出時間來提交回饋。
 您建議的翻譯
+翻譯建議
 經常無法使用
 新資料夾名稱超過12字，有些作業系統可能無法相容!\n要繼續操作嗎?
 資料夾名稱不能空白!
@@ -1110,7 +1146,7 @@ MAC 存取控制能夠控制網路中特定網路卡實體位址 MAC Address）�
 啟動 DoS 防護
 關閉防火牆會撤銷所有相關功能。
 啟用防火牆
-當使用 R6900 內建的 FTP 伺服器功能時，設定外網( WAN 端)通訊埠為20:21，會與 R6900 內建的 FTP 伺服器使用的通訊埠衝突.
+當使用 R7000 內建的 FTP 伺服器功能時，設定外網( WAN 端)通訊埠為20:21，會與 R7000 內建的 FTP 伺服器使用的通訊埠衝突.
 開啟關鍵字過濾器
 關鍵字過濾器可以為您阻止客戶端瀏灠符合特定關鍵字的網頁。
 過濾功能限制：<ol><li>使用 HTTP 壓縮技術的壓縮網頁無法被過濾。<a href="http://en.wikipedia.org/wiki/HTTP_compression" target="_blank" style="text-decoration: underline; font-family:Lucida Console;">點選這裡了解詳細資訊</a></li><li>Https 網頁無法被過濾。</li></ol>
@@ -1133,9 +1169,9 @@ MAC 存取控制清單中至少要有一筆允許的 MAC 資料。\n您可新增
 MAC 存取控制名單
 允許模式
 拒絕模式
-在「允許模式」下，R6900 僅允許控制名單中所列之網路卡的存取。在「拒絕模式」下，則會封鎖控制名單中之網路卡的存取。
+在「允許模式」下，R7000 僅允許控制名單中所列之網路卡的存取。在「拒絕模式」下，則會封鎖控制名單中之網路卡的存取。
 MAC 存取模式
-在關閉防火牆時設定 HTTP 伺服器，且設定外網 (WAN 端) 通訊埠為 80，會與 R6900 的管理介面伺服器使用的通訊埠衝突.
+在關閉防火牆時設定 HTTP 伺服器，且設定外網 (WAN 端) 通訊埠為 80，會與 R7000 的管理介面伺服器使用的通訊埠衝突.
 指定每週當中網址過濾器開啟的日期。
 網址過濾程式啟用日期：
 指定網址過濾程式啟用當日的時間。請設定不同的開始與結束時間。
@@ -1148,13 +1184,13 @@ MAC 存取模式
 URL過濾清單
 本欄位可指出 LAN 與 WAN 之間需要記錄的封包種類。
 紀錄的封包類型
-允許 R6900 回應來自外部網路的 LPR 要求（LPR request）。
+允許 R7000 回應來自外部網路的 LPR 要求（LPR request）。
 回應 LPR 要求？
-允許 R6900 回應來自外部網路的 Ping 要求（Ping request）。
+允許 R7000 回應來自外部網路的 Ping 要求（Ping request）。
 回應 PING 要求
 此功能允許您透過網際網路設定無線路由器。預設通訊埠為 8080。您可以使用 http://[WAN IP]:8080 或 http://[DDNS name]:8080 進入無線路由器網頁使用者介面。
-從網際網路設定 R6900
-指定透過網際網路設定 R6900 所使用的通訊埠( 1024:65535 )，預設為8080。
+從網際網路設定 R7000
+指定透過網際網路設定 R7000 所使用的通訊埠( 1024:65535 )，預設為8080。
 網際網路設定通訊埠
 啟動 IPv6 防火牆
 允許來自內部網路中 IPv6 主機的所有傳出流量及相關的傳入流量。任何其他傳入流量必須得到特別允許。
@@ -1170,16 +1206,17 @@ URL過濾清單
 韌體版本
 新韌體檔案
 最新版本韌體已包含上一版本的更新。
-當升級過程失敗，R6900 會自動進入緊急模式。而 R6900 正面上的 LED信號即會指示此種情況。請使用光碟上的「韌體修復」（Firmware Restoration）公用程式進行系統還原作業。
+當升級過程失敗，R7000 會自動進入緊急模式。而 R7000 正面上的 LED信號即會指示此種情況。請使用光碟上的「韌體修復」（Firmware Restoration）公用程式進行系統還原作業。
 註：
 請先解壓縮檔案。
 Game Boost
 Real-Time Network Protection
-AiProtection, incorporating state-of-the-art, three-pronged security from Trend Micro™, gives you enterprise-level security in the home — making ASUS routers equipped with this feature the most secure home routers you can buy! It constantly monitors the health and safety of your network for total peace of mind. You can temporally turn off anti-virus on your PCs to reserve system resources for gaming.
-Benefits to enable Game Boost on ASUS router
+AiProtection, incorporating state-of-the-art, three-pronged security from Trend Micro™, gives you enterprise-level security in the home — making routers equipped with this feature the most secure home routers you can buy! It constantly monitors the health and safety of your network for total peace of mind. You can temporally turn off anti-virus on your PCs to reserve system resources for gaming.
+Benefits to enable Game Boost on router
 Reduce average ping time and variation.
 Reduce average packet loss rate.
 Cross platform supported.
+Windows, Macintosh, Linux, Mobile, Console game
 Utility free for your PCs, reserve CPU/RAM usage for game.
 Life time free of one device acceleration.
 Game Boost,an exclusive gamer private network(GPN) powered by WTFast automatically performs route optimization, choosing the most efficient route for your game packets. Life-Time free for one device, cross platforms supported.
@@ -1200,7 +1237,7 @@ You are now using router free basic account.
 * Check the latest supported games of router version <span><a id="link" href="javascript:open_link('')" style="text-decoration:underline;color:#008DE5;">here</a></span>.
 * GPN performance will be varied by your ISP or location. Please keep your firmware stay up to date.
 * How to choose a good GPN server? <span><a id="link" href="javascript:open_link('gpn1')" style="text-decoration:underline;color:#008DE5;">Here</a></span> And ensure best gaming experiences? <span><a id="link" href="javascript:open_link('gpn2')" style="text-decoration:underline;color:#008DE5;">Here</a></span>
-* How to use WTFast on ASUS Router? <span><a id="link" href="javascript:open_link('howto')" style="text-decoration:underline;color:#008DE5;">Here</a></span>
+* How to use WTFast on Router? <span><a id="link" href="javascript:open_link('howto')" style="text-decoration:underline;color:#008DE5;">Here</a></span>
 Game Boost Rules List
 系統開機至目前所耗費時間
 已開機時間
@@ -1233,7 +1270,7 @@ DNS 伺服器
 若要更改連線類型，請先至<a href="/Advanced_Modem_others.asp"> USB Modem 設定</a>停用3G/4G USB 無線網路卡
 啟用USB Modem
 USB Modem 模式
-接上3G/4G USB 無線網路卡，讓你的 R6900 變身為行動網路基地台。
+接上3G/4G USB 無線網路卡，讓你的 R7000 變身為行動網路基地台。
 請選擇網路服務提供業者(ISP)。
 ISP
 請輸入您的密碼。
@@ -1253,6 +1290,7 @@ NAT ( 網路位址轉換 )能夠替換網路封包中的位址資訊讓 Internet
 目標頻段
 網際網路
 區間
+Introduce demo
 邀請
 在來源或目的 IP 位址方面，您可輸入一特定的IP位址，如「192.168.122.1」，或在子網路內的 IP 位址，如「192.168.123.*」、或「192.168.*.*」，或像是「*.*.*.*」這樣所有的 IP 位址。
 IP 分享
@@ -1297,7 +1335,7 @@ IPv4 路由器遮罩長度
 IPv6 前綴
 IPv4 邊界路由器
 自動設定
-IPv6 前綴長度
+客戶端 IPv6 位址
 伺服器 IPv6 位址
 IPv6 DNS 伺服器
 IPv6 DNS 設定
@@ -1317,11 +1355,11 @@ IPv6 外部網路設定
 若您是 GVT 使用者，請輸入使用者名稱 <b>turbonet@turbonet</b> 與密碼 <b>gvt25</b>。或者，輸入由您的網路電信業者提供的使用者名稱與密碼。
 選擇 ISP 設定檔來進行特定的 ISP 設定。
 iTunes 伺服器名稱
-您與 R6900 之間的連線有誤。\n要繼續嘗試連線嗎？
+您與 R7000 之間的連線有誤。\n要繼續嘗試連線嗎？
 本欄讓您選擇啟動或關閉下載大師。
 本欄讓您選擇啟動或關閉將您所下載的檔案分享至 Internet 上的使用者。
 本欄讓您選擇啟動或關閉 UPnP。
-LAN IP 地址和子網路遮罩已變更。R6900 IP pool 需要更新。是否要自動更新 IP pool？
+LAN IP 地址和子網路遮罩已變更。R7000 IP pool 需要更新。是否要自動更新 IP pool？
 新的 IP Pool 與子網路遮罩不符合，您希望其自動調整嗎?
 此項已納入清單中。
 請輸入 1~2592000 (秒)之間的值。
@@ -1340,16 +1378,16 @@ PIN 碼格式錯誤！
 選擇語系
 開啟 DHCP 伺服器功能允許路由器的 DHCP 伺服器自動為網路用 戶端分配 IP 位址。若此功能關閉，您需要在您的 LAN 裝置中手動進行分配 IP 位址設定。
 啟用DHCP伺服器
-DHCP 動態主機設定協議為使用在 IP 位址的自動設定所制定的協議。DHCP 伺服器會自動分配給每一個用戶端 IP 位址並指定DNS 伺服器 IP 與 預設閘道 IP給 用戶端。R6900 提供多達 253 個 IP 位址讓您的區域網路設備使用。
-R6900 的 IP 位置為:
-設定 R6900 區域網路。
+DHCP 動態主機設定協議為使用在 IP 位址的自動設定所制定的協議。DHCP 伺服器會自動分配給每一個用戶端 IP 位址並指定DNS 伺服器 IP 與 預設閘道 IP給 用戶端。R7000 提供多達 253 個 IP 位址讓您的區域網路設備使用。
+R7000 的 IP 位置為:
+設定 R7000 區域網路。
 區域網路 IP 已經被 VPN 伺服器所使用，請挑選其他區域網路 IP。
-設定 R6900 IPv6 網際網路。
-設定 R6900 IPTV
+設定 R7000 IPv6 網際網路。
+設定 R7000 IPTV
 若觀看 IPTV，WAN 埠接口必須連接至網際網路。請至 <a href="/Advanced_WANPort_Content.asp" style="text-decoration: underline;">WAN - Dual WAN</a> 以確認 WAN 埠接口是否設為主要 WAN 接口。
 DHCP 伺服器的網域名稱。
 只能包含英文字母、數字、破折號!
-R6900 的網域名稱
+R7000 的網域名稱
 設定允許網路用戶端使用當前 IP 位址的租約時間以連接無線路由器。當租約時間終止時，網路用戶需要更新或從無線路由器的 DHCP 伺服器中獲取新的 IP 位址。
 租約時間
 為特定的用戶端分配固定 IP 位址。需要用戶的 MAC 位址。
@@ -1357,9 +1395,9 @@ R6900 的網域名稱
 手動指定 IP 的 DHCP 清單
 允許無線路由器處理多播封包( multicast packet )。開啟多播傳送的同時也會開啟 RTP 與 RTSP 功能。
  IPTV 機頂盒連接的 LAN 通訊埠
-R6900 分配給區域網路的最後一個 IP 位址。
+R7000 分配給區域網路的最後一個 IP 位址。
 IP Pool 結束位址
-R6900 分配給區域網路的第一個 IP 位址。
+R7000 分配給區域網路的第一個 IP 位址。
 IP Pool 啟始位址
 DDNS 伺服器沒有回應，請再試一次。
 不合法的註冊請求。
@@ -1403,10 +1441,10 @@ DHCP 使用的 DNS 的網路位置。
 DNS 伺服器
 DNS 及 WINS 伺服器設定
 DHCP 使用的閘道器。
-R6900 可與 NTP 伺服器同步，維持系統時間的正確。
+R7000 可與 NTP 伺服器同步，維持系統時間的正確。
 NTP 伺服器
 NTP 連結
-本項功能為讓您指定一遠端伺服器來記載與 R6900 有關的記錄訊息。如果空著不填，系統僅會在 R6900 上記載最多為1024道的訊息。
+本項功能為讓您指定一遠端伺服器來記載與 R7000 有關的記錄訊息。如果空著不填，系統僅會在 R7000 上記載最多為1024道的訊息。
 遠端記錄伺服器
 您所在位置的時區。
 提醒：目前系統時區與您電腦設定不同，提醒您校正為當地時區。
@@ -1416,7 +1454,7 @@ DST 日光節約時間更改結束於
 「Windows網際網路名稱服務」（Windows Internet Naming Service）可管理每台PC與網際網路之間的互動關係。如果DHCP伺服器有使用WINS伺服器服務，請在此處輸入WINS伺服器的網路位置。
 WINS 伺服器
 過去30天
-R6900 可支援數種連結 WAN 的連線類型。這些類型可從 WAN 連線類型的下拉式選單中選取。設定欄位會視您是選取那種連線類型而做相對的變更。
+R7000 可支援數種連結 WAN 的連線類型。這些類型可從 WAN 連線類型的下拉式選單中選取。設定欄位會視您是選取那種連線類型而做相對的變更。
 自動取得遠端網路位址
 選擇某個 LAN 埠與WAN埠作橋接。若您有額外的裝置需要連接 WAN 端，但您的網際網路服務商只提供一條 WAN 端線路時，您可指定某個 LAN 埠轉接來自 WAN 端的封包。例如：可將網路電視機上盒連接上這個指定的埠，直接取得服務商提供的 IP 與訊號。
 選擇 IPTV STB 的連接埠
@@ -1448,13 +1486,13 @@ DDNS 已開啟，但網域名稱未註冊成功，無法由外部網路以網域
 城市：
 國家：
 您可能需要 VLAN ID 來設置 PTM 連接。若非您的網路電信業者（ISP）要求您變更 VLAN ID，請勿擅自變更。
-此快速設定可引導您快速進行 R6900 WAN 設定。請從清單中選擇您所在的國家與使用的網路服務業者，點選 下一步，並輸入必要的資訊。如有必要，諮詢您的網路服務業者以獲取有關 DSL 連線設定的相關資訊。
+此快速設定可引導您快速進行 R7000 WAN 設定。請從清單中選擇您所在的國家與使用的網路服務業者，點選 下一步，並輸入必要的資訊。如有必要，諮詢您的網路服務業者以獲取有關 DSL 連線設定的相關資訊。
 您需要虛擬路徑識別碼（VPI）與虛擬通道識別碼（VCI）來設定 ATM PVC。除非您的網路服務業者要求，否則請不要更改 VPI 與 VCI 號碼。
 是無效的。
 超出範圍
 注意：
 快速手動設定
-Refer to the R6900 WAN settings. If you want to add a new setting, follow the onscreen instructions. If you want to modify the previous setting, please go to [Advanced Setting] -> [WAN] -> [Internet Connection] page.
+Refer to the R7000 WAN settings. If you want to add a new setting, follow the onscreen instructions. If you want to modify the previous setting, please go to [Advanced Setting] -> [WAN] -> [Internet Connection] page.
 製造商
 最大頻寬限制
 設定單一使用者可以使用的最大頻寬。
@@ -1480,7 +1518,7 @@ APN 預設文件檔
 確認 PIN 碼
 * 如果 APN 設定不能進行自動設定，您必須進行手動設定。
 數據用量
-設定 R6900 的行動寬頻設置。
+設定 R7000 的行動寬頻設置。
 若行動寬頻網路被關閉，則熱備援功能將會被關閉。您確定要關閉它嗎?
 行動寬頻已關閉
 開啟行動寬頻
@@ -1511,7 +1549,7 @@ PIN 碼管理
 PIN 碼驗證
 PIN 解鎖密碼 (PUK)
 請從營運商處獲取PIN解鎖碼 (PUK)
-達到可添加的 SIM 卡數量的最大值。要保留目前 SIM 卡中的數據使用設定， 之前的記錄將被移除。你確定要移除嗎？ 注意：R6900 最多可以保留 10 張 SIM 卡的資料。
+達到可添加的 SIM 卡數量的最大值。要保留目前 SIM 卡中的數據使用設定， 之前的記錄將被移除。你確定要移除嗎？ 注意：R7000 最多可以保留 10 張 SIM 卡的資料。
 剩餘用量
 剩餘嘗試次數
 新設定的重置日將於下個月生效。
@@ -1567,6 +1605,8 @@ CTF (Cut Through Forwarding) 及 FA (Flow Acceleration) 加速器已開啟。
 H.323 Passthrough
 IPSec Passthrough
 L2TP Passthrough
+Bonding/ Link aggregation
+Please enable Bonding (802.3ad) support of your wired client and connect it to Router LAN1 and LAN2.
 啟用 NAT Passthrough 功能，讓 Virtual Private Network (VPN) 服務所需要用到的協定允許通過。
 PPTP Passthrough
 RTSP Passthrough
@@ -1615,6 +1655,9 @@ If you want to enable WPS, you need to disable hiding SSID first.
 Note: New patch will be updated regularly, please keep your firmware stay up to date.
 如果您遇到華碩 DDNS 服務無法使用的問題，請前往 <a href="http://iplookup.asus.com/nslookup.php" target="_blank" style="font-family:Lucida Console;text-decoration:underline;">http://iplookup.asus.com/nslookup.php</a> 網站取得您的實體 IP 位置以進行使用
 已經設定為此模式。
+雙向
+下載
+上傳
 動態密碼身份驗證
 Parent-AP 狀態
 實行計畫表
@@ -1645,10 +1688,10 @@ PIN 碼
 LAN 連接埠
 此連接埠用於
 此頁顯示虛擬伺服器通訊埠轉發狀態。一些 P2P 程式會使用 UPnP 協定以開啟通訊埠，並且通訊埠名稱在此頁上顯示。
-R6900 偵測到連線類型為 PPPoE。若是，請輸入使用者名稱/密碼並點選 套用。<br>若不是，請點選 手動設定 以重新設定。
+R7000 偵測到連線類型為 PPPoE。若是，請輸入使用者名稱/密碼並點選 套用。<br>若不是，請點選 手動設定 以重新設定。
 請輸入您的網際網路服務供應商（ISP）提供的使用者名稱 / 密碼並點選 下一步。
 本項或許某些 ISP 業者能夠指定。請向您的 ISP 業者確認並於需要時將它們填入。
-若裝置頻繁使用 DHCP 查詢，一些網際網路服務供應商會屏蔽 MAC 位址。為防止 MAC 位址被屏蔽，請更改 DHCP 查詢頻率。<br/>在預設的積極模式下，如果 R6900 沒有收到 ISP 的回應，將會在 20 秒后再一次發送查詢。<br/>在普通模式下，如果 R6900 沒有收到 ISP 的回應，將會在 120 秒后再一次發送查詢，並會嘗試 2 次以上。
+若裝置頻繁使用 DHCP 查詢，一些網際網路服務供應商會屏蔽 MAC 位址。為防止 MAC 位址被屏蔽，請更改 DHCP 查詢頻率。<br/>在預設的積極模式下，如果 R7000 沒有收到 ISP 的回應，將會在 20 秒后再一次發送查詢。<br/>在普通模式下，如果 R7000 沒有收到 ISP 的回應，將會在 120 秒后再一次發送查詢，並會嘗試 2 次以上。
 認證
 按需撥接<br>（具備空閒超時計時器）
 按需撥接功能(Dial on Demand)可讓您的網絡在需要時建立連線，在特定時間之外中斷連線。
@@ -1674,12 +1717,11 @@ PPTP 選項
 網路服務名稱
 開啟 VPN + DHCP 連線。
 無論你身在何處，都可以透過VPN 伺服器來存取您家裡的網路內容
-請依照下列步驟來使用 VPN 伺服器:<br>(1) 啟用 PPTP VPN 伺服器<br>(2) 為用戶端設定 IP Pool (最多可以設定 10 個用戶端)<br>(3) 為 VPN 用戶端設定帳號與密碼<br>(4) 開啟您個人電腦或是智慧型手機上的 VPN 連接應用程式<br>(5) 新增一個 PPTP VPN 連線，VPN 伺服器位址為
 (6) 如果您的外部網路為動態 IP，<a href="../Advanced_ASUSDDNS_Content.asp" target="_blank" style="text-decoration: underline; font-family:Lucida Console;">請點選這裡來設定 DDNS</a>
 區域網路前綴長度
 上一頁
 開啟獨佔模式可暫時建立專用連線到路由器以傳送列印請求。
-連接至 R6900 的印表機型號。
+連接至 R7000 的印表機型號。
 印表機型號：
 目前印表機狀態
 印表機狀態：
@@ -1710,7 +1752,7 @@ Service Category
 QoS 類型
 使用者自訂優先級
 使用者自訂頻寬管理規則
-請手動重新啟動 R6900。
+請手動重新啟動 R7000。
 重新連接到網際網路
 若需移除 USB 硬碟，請點選螢幕右上角的 USB 圖示。
 若要將系統設定還原為出廠預設值並開啟自動偵測連線類型功能，請點選 <a href="" onclick="gotoRestoreSetting();">這裡</a>。
@@ -1733,7 +1775,7 @@ QoS 類型
 啟動群播路由
 靜態路由清單
 啟動靜態路由清單
-本項功能可讓您將路由規則加到 R6900 之中。這對於如果您是連接在 R6900 之後的數個路由器以便分享同一條網際網路連線上來說，是相當有用的。
+本項功能可讓您將路由規則加到 R7000 之中。這對於如果您是連接在 R7000 之後的數個路由器以便分享同一條網際網路連線上來說，是相當有用的。
 閘道器
 網路 / 主機 IP
 網路遮罩
@@ -1756,12 +1798,12 @@ UDP 代理（Udpxy）
 安全地移除磁碟
 設定網路芳鄰共享（Samba）服務的帳號與權限。
 VPI 與 VCI 設定相同。
-系統正在重新啟動中！請稍候，我們將為您導至 R6900 的首頁。
+系統正在重新啟動中！請稍候，我們將為您導至 R7000 的首頁。
 標度
 秒
 無線安全層級
 全選
-選擇AP﹝無線存取點﹞。
+選擇無線存取點 (AP)。
 選擇 APN 服務。
 選擇 DHCP 用戶端。
 選擇裝置名稱。
@@ -1781,14 +1823,14 @@ VPI 與 VCI 設定相同。
 所有設定值將會還原成原廠預設狀態。\n
 您確定要繼續嗎？
 區域網路位址將還原為192.168.1.1。\n若您稍後無法連上此設定畫面，請更新您電腦的 IP 位址。
-點選「還原」鍵將清除目前的設定值並還原成原廠預設值。接著，請等待 R6900 重新開機。
+點選「還原」鍵將清除目前的設定值並還原成原廠預設值。接著，請等待 R7000 重新開機。
 原廠預設值
 預設值
-點選「儲存」，將目前 R6900 的設定值另存成檔案。（註：在您將目前的設定值存成檔案時，亦同樣會存入快閃記憶體內。）
+點選「儲存」，將目前 R7000 的設定值另存成檔案。（註：在您將目前的設定值存成檔案時，亦同樣會存入快閃記憶體內。）
 匯出設定
-本頁主要提供關於系統設定值的管理。您可將 R6900 設定還原為原廠預設值。或者將目前設定值存成檔案，當需要時便可重新載入您的設定值。
+本頁主要提供關於系統設定值的管理。您可將 R7000 設定還原為原廠預設值。或者將目前設定值存成檔案，當需要時便可重新載入您的設定值。
 檔案格式或路徑不正確！
-請將設定檔的路徑及名稱指定到此欄位，然後點選「上傳」將檔案寫入到 R6900 上。請等候約60秒的時間直到系統重新開機完畢。
+請將設定檔的路徑及名稱指定到此欄位，然後點選「上傳」將檔案寫入到 R7000 上。請等候約60秒的時間直到系統重新開機完畢。
 還原設定
 設定
 裝置名稱
@@ -1802,7 +1844,7 @@ FTP 伺服器的字元集
 允許建立的最大連接數量
 請輸入介於0到999的數值，預設值是0，代表沒有上傳速率的限制。
 最大上傳速率
-啟用允許作種，R6900 會在下載完成後維持種子，提供他人下載。
+啟用允許作種，R7000 會在下載完成後維持種子，提供他人下載。
 允許作種
 工作群組
 全顯示
@@ -1836,10 +1878,14 @@ STA 選取原則
 訊噪比圖表顯示了訊噪比（SNR）等級。Transmission(發送) / Reception(接收) 顯示了已發送和已接收的比特數(bits/carrier)。
 蒐集資料中，圖表內容顯示所需的時間(秒)
 這些圖表自動更新所需的時間(秒)：
+Spoof LAN TTL value
 儲存/重新啟動
 熱備份保護
 當雙 WAN 熱備份保護模式啟用時，一旦目前工作的線路發生故障或無法連線時， 備份線路馬上接管並開始工作。
 系統將保持目前 WAN 的待機狀態，並將監測時間間隔縮短為
+統計類別
+統計最終日
+顯示方式
 重試間隔
 偵測區間
 重試次數
@@ -1858,7 +1904,7 @@ STA 選取原則
 支援
 切換頻率
 Switch Control
-設定 R6900 switch control.
+設定 R7000 switch control.
 切換圖表:
 伺服器同步讓您能夠與其他 AiCloud 個人雲 2.0 帳戶同步您的雲端磁碟。填寫表格向其他人發出邀請。
 請填寫下面的邀請表格。
@@ -1914,6 +1960,15 @@ Enable Traffic Statistic allows you to record networking traffic information of 
 <b>注意：</b>來自網際網路的資料封包會幾乎相等於傳送至有線與無線裝置的封包總和。
 當開啟 NAT 加速時，有線網路的流量會繞過 CPU，影響流量監控的準確性。
 Traffic Analyzer 流量分析
+即時流量
+每日流量
+每月流量
+You should turn on the Traffic Statistic to record the traffic information
+Apps 前 5 名使用量
+客戶端前 5 名使用量
+使用量(%)
+使用量
+每週流量
 通道 MTU
 通道 TTL
 國際換日線以西
@@ -2079,8 +2134,6 @@ VPN 用戶端至 LAN
 開啟 OpenVPN 伺服器
 開啟 PPTP VPN 伺服器
 匯出 OpenVPN 設定檔
-VPN 伺服器最多僅支援 10 個用戶端！
-最多 10 個客戶
 伺服器模式
 支援網路芳鄰(Samba)分享
 廣告 DNS 至用戶端
@@ -2093,7 +2146,7 @@ VPN 伺服器最多僅支援 10 個用戶端！
 壓縮
 IP / 路由衝突
 自訂設定
-R6900 將自動生成一個帶有驗證金鑰的 .ovpn 檔案。您可以將使用者名稱和密碼伴隨.ovpn 檔案提供給所有連接到 .ovpn 伺服器的使用者。
+R7000 將自動生成一個帶有驗證金鑰的 .ovpn 檔案。您可以將使用者名稱和密碼伴隨.ovpn 檔案提供給所有連接到 .ovpn 伺服器的使用者。
 要更改 OpenVPN 伺服器設定，請進入
 您可以變更 OpenVPN 伺服器的預設設定，為特定的連接類型提供一個自訂 .ovpn 檔案。
 從 DHCP 指定
@@ -2130,17 +2183,17 @@ TLS 重協調時間
 匯入 .ovpn 檔案
 匯入 CA 檔案或手動編輯 .ovpn 檔案。
 無線路由器目前使用私人 WAN IP 位址（192.168.x.x，10.x.x.x 或 172.16.x.x）。開啟 VPN 伺服器之前，請先設定 DDNS 服務。
-ASUSWRT 一次僅支援一組 VPN 伺服器連接。若您啟用了 \"OpenVPN 伺服器\"，則 \"PPTP 伺服器\" 將被自動關閉。您確定要啟用 VPN 伺服器嗎？
+XWRT 一次僅支援一組 VPN 伺服器連接。若您啟用了 \"OpenVPN 伺服器\"，則 \"PPTP 伺服器\" 將被自動關閉。您確定要啟用 VPN 伺服器嗎？
 VPN（虛擬私人網路，Virtual Private Network）用戶端通常用來連接到 VPN 伺服器，以安全地透過公共網路存取私人資源。
 有些裝置，如機上盒、智慧型電視機與藍光播放機等，不支援 VPN 軟體。
-ASUSWRT VPN 功能為家用網路內的所有裝置提供 VPN 存取，而無需在每台裝置上安裝 VPN 軟體。
+XWRT VPN 功能為家用網路內的所有裝置提供 VPN 存取，而無需在每台裝置上安裝 VPN 軟體。
 要開啟 VPN 連接，請按照以下步驟操作：
 新增設定檔
 選擇 VPN 連接類型
 輸入由 VPN 提供商提供的 VPN 驗證資訊，然後連接。
 VPN 用戶端
 障礙
-設定 R6900 的乙太網路設定。
+設定 R7000 的乙太網路設定。
 預設路由器
 WAN已關閉
 乙太網絡
@@ -2151,7 +2204,7 @@ WAN 介面
 IP 通用設定
 IPv4 設定
 IP 版本
-R6900 可以透過廣域網路、行動寬頻、區域網路或 LAN as WAN 建立網路連線。從 WAN 介面的下拉選單中選擇相應的介面。您可以啟用雙線路連接，並從 [雙 WAN] 標籤頁中切換 WAN 介面的優先權。
+R7000 可以透過廣域網路、行動寬頻、區域網路或 LAN as WAN 建立網路連線。從 WAN 介面的下拉選單中選擇相應的介面。您可以啟用雙線路連接，並從 [雙 WAN] 標籤頁中切換 WAN 介面的優先權。
 PPP 驗證方式
 PPP 設定
 前往WAN設定頁
@@ -2196,13 +2249,10 @@ VLAN ID
 基本速率設定
 選擇傳輸速率。建議您選擇「Auto」以獲得最大的效能。
 資料傳輸速率(Mbps)：
-無線橋接（又名 WDS）功能允許您的 R6900 無線連接至其他基地台。WDS 也可作為中繼器模式。請注意，透過此方式延伸無線訊號會讓無線網路速度會減半。
-本功能僅支援 Open System/NONE, Open System/WEP加密方式。
 開啟 WDS 延伸無線訊號，請按以下步驟操作：
 選擇 [WDS Only] 或 [Hybrid] 模式並在清單中添加基地台的 MAC 位址。
-確認此無線路由器與您想要連接的基地台使用相同的頻道。
+確認此無線路由器與您想要連接的無線存取點使用相同的頻道。
 先在底下的基地台清單輸入待建立橋接的遠端基地台 MAC 位址，然後在遠端基地台 WDS 管理介面中，輸入本無線路由器 MAC 位址位址。
-要獲得最佳效能，請進入「進階設定」>「無線網路」>「一般設定」為網路中的每台路由器設定相同的頻道頻寬、控制頻道與延伸頻道。
 目前您正在使用自動頻道頻寬。點選  <a style="font-size:13px;font-family: Lucida Console;color:#FC0;text-decoration:underline;" href="/Advanced_Wireless_Content.asp?af=wl_bw">這裡</a>  進行修改。
 目前您正在使用自動頻道。點選  <a style="font-size:13px;font-family: Lucida Console;color:#FC0;text-decoration:underline;" href="/Advanced_Wireless_Content.asp?af=wl_channel">這裡</a>  進行修改。
 無線專業設定提供您無線網路傳輸與效率方面的設定。若您沒有選擇適合的設定，建議採用我們校調好的預設值。
@@ -2235,8 +2285,8 @@ WEP 加密
 優化壓縮的最大 ack 數量。
 優化 AMPDU 聚集
 AMPDU 為 mpdu 優化的最大數量。
-選擇「AP Only」時，無線橋接的功能會被關閉。選擇「WDS Only」時，無線橋接功能會被啟動，但系統不提供無線網路服務。選擇「Hybrid」時，無線橋接的功能會被啟動，同時您也可以透過無線網路連接到 R6900。
-AP模式
+選擇「AP Only」時，無線橋接的功能會被關閉。選擇「WDS Only」時，無線橋接功能會被啟動，但系統不提供無線網路服務。選擇「Hybrid」時，無線橋接的功能會被啟動，同時您也可以透過無線網路連接到 R7000。
+AP 模式
 AP Only
 WDS Only
 Hybrid
@@ -2246,15 +2296,15 @@ Airtime Fairness
 無線模式需設定為自動
 基地台每次廣播無線信號的時間間隔，單位為微秒(1/1000秒)，預設值為100微秒。在環境變動大，用戶端需要漫遊時，調低可讓用戶較快連上；反之則調高，也較節省電源。
 訊號間隔
-選擇「是」，會隱藏 R6900 的 SSID 以避免惡意用戶端查知 SSID 並盜用連線。開啟此功能後，使用者則必須事先知道您基地台的 SSID，才能建立無線連線。
+選擇「是」，會隱藏 R7000 的 SSID 以避免惡意用戶端查知 SSID 並盜用連線。開啟此功能後，使用者則必須事先知道您基地台的 SSID，才能建立無線連線。
 隱藏 SSID
-選擇「是」連接 R6900 至清單中的其他基地台。
+選擇「是」連接 R7000 至清單中的其他基地台。
 連接清單中的基地台
 在用戶端的 WPS 應用程式中輸入本路由器的 PIN 碼，即可在用戶端的 WPS 應用程式中設置路由器的網路名稱與加密設定。
 基地台 PIN 碼
 此選項讓您能夠啟動或關閉 WMM DLS (Direct Link Setup)。
 啟用 WMM DLS
-DTIM 是Delivery Traffic indication Message 的縮寫，被包含在Beacon封包中。DTIM 指的是 AP 將無線用戶端由休眠模式喚醒，預設值為3，範圍介於1~255。
+DTIM 是 Delivery Traffic indication Message 的縮寫，被包含在Beacon封包中。DTIM 指的是 AP 將無線用戶端由休眠模式喚醒，預設值為 3，範圍介於 1~255。
 DTIM 是 Delivery Traffic indication Message 的縮寫，被包含在 Beacon 封包中。DTIM 指的是 AP 將無線用戶端由休眠模式喚醒，預設值為 1，範圍介於1~255。
 DTIM 間隔
 啟用高效組播轉發 ( IGMP Snooping )
@@ -2277,18 +2327,18 @@ Implicit beamforming
 受保護的管理訊框
 啟用
 必須的
-此項目允許您為 802.11n介面的無線模式選擇以下任一選項。 <p>[自動]: 允許 802.11n、 802.11g 與 802.11b 裝置連接至 R6900。</p><p>[Legacy]: 允許 802.11b/g/n 裝置連接至 R6900，但是 802.11n 裝置的速度僅為 54Mbps。</p><p>[N Only]: 最佳效能，但是不允許 802.11g 與 802.11b 裝置連接至您的裝置。</p><p>點選 b/g Protection 允許 b/g 裝置連接至 R6900 且不影響 11n 裝置，但這會增強路由器工作負載。</p>
-此項目允許您為 802.11n 介面的無線模式選擇以下任一選項。 <p>[自動]: 允許 802.11n、 802.11g 與 802.11b 裝置連接至 R6900。</p><p>[Legacy]: 允許 802.11b/g/n 裝置連接至 R6900，但是 802.11n 裝置的速度僅為 54Mbps。</p><p>[N Only]: 最佳效能，但是不允許 802.11g 與 802.11b 裝置連接至您的裝置。</p><p>點選 b/g Protection 允許 b/g 裝置連接至 R6900 且不影響 11n 裝置，但這會增強路由器工作負載。</p>
-此項目允許您為 802.11ac 介面的無線模式選擇以下任一選項。 <p>[自動]: 允許 802.11ac、802.11n、 802.11a 裝置連接至 R6900。</p><p>[Legacy]: 允許 802.11n/a 裝置連接至 R6900，但是 802.11n 裝置的速度僅為 54Mbps。</p><p>[N + AC]: 最佳效能，但是不允許 802.11a 裝置連接至您的裝置。</p>
-此項目允許您為 802.11ac 介面的無線模式選擇以下任一選項。 <p>[自動]: 允許 802.11ac、802.11n、 802.11a 裝置連接至 R6900。</p><p>[N Only]: 802.11n 最佳效能，但是不允許 802.11ac、802.11a 裝置連接至您的裝置。</p>
-此項目允許您為 802.11ac 介面的無線模式選擇以下任一選項。 <p>[自動]: 允許 802.11ac、802.11n、 802.11a 裝置連接至 R6900。</p><p>[Legacy]: 允許 802.11n/a 裝置連接至 R6900，但是 802.11n 裝置的速度僅為 54Mbps。</p><p>[N/AC mixed]: 最佳效能，但是不允許 802.11a 裝置連接至您的裝置。</p><p>[N Only]: 802.11n 最佳效能，但是不允許 802.11ac、802.11a 裝置連接至您的裝置。</p>
+此項目允許您為 802.11n介面的無線模式選擇以下任一選項。 <p>[自動]: 允許 802.11n、 802.11g 與 802.11b 裝置連接至 R7000。</p><p>[Legacy]: 允許 802.11b/g/n 裝置連接至 R7000，但是 802.11n 裝置的速度僅為 54Mbps。</p><p>[N Only]: 最佳效能，但是不允許 802.11g 與 802.11b 裝置連接至您的裝置。</p><p>點選 b/g Protection 允許 b/g 裝置連接至 R7000 且不影響 11n 裝置，但這會增強路由器工作負載。</p>
+此項目允許您為 802.11n 介面的無線模式選擇以下任一選項。 <p>[自動]: 允許 802.11n、 802.11g 與 802.11b 裝置連接至 R7000。</p><p>[Legacy]: 允許 802.11b/g/n 裝置連接至 R7000，但是 802.11n 裝置的速度僅為 54Mbps。</p><p>[N Only]: 最佳效能，但是不允許 802.11g 與 802.11b 裝置連接至您的裝置。</p><p>點選 b/g Protection 允許 b/g 裝置連接至 R7000 且不影響 11n 裝置，但這會增強路由器工作負載。</p>
+此項目允許您為 802.11ac 介面的無線模式選擇以下任一選項。 <p>[自動]: 允許 802.11ac、802.11n、 802.11a 裝置連接至 R7000。</p><p>[Legacy]: 允許 802.11n/a 裝置連接至 R7000，但是 802.11n 裝置的速度僅為 54Mbps。</p><p>[N + AC]: 最佳效能，但是不允許 802.11a 裝置連接至您的裝置。</p>
+此項目允許您為 802.11ac 介面的無線模式選擇以下任一選項。 <p>[自動]: 允許 802.11ac、802.11n、 802.11a 裝置連接至 R7000。</p><p>[N Only]: 802.11n 最佳效能，但是不允許 802.11ac、802.11a 裝置連接至您的裝置。</p>
+此項目允許您為 802.11ac 介面的無線模式選擇以下任一選項。 <p>[自動]: 允許 802.11ac、802.11n、 802.11a 裝置連接至 R7000。</p><p>[Legacy]: 允許 802.11n/a 裝置連接至 R7000，但是 802.11n 裝置的速度僅為 54Mbps。</p><p>[N/AC mixed]: 最佳效能，但是不允許 802.11a 裝置連接至您的裝置。</p><p>[N Only]: 802.11n 最佳效能，但是不允許 802.11ac、802.11a 裝置連接至您的裝置。</p>
 無線模式
 b/g 保護
 為 Xbox 最佳化
 屬於 MAC 層認證的方式，開啟後可以改善多媒體傳輸的處理能力，但在複雜多干擾的網路環境下傳輸會造成較高的錯誤率。
 啟動 WMM No-Acknowledgement
 若您選擇 WEP 加密，您可以在這個欄目中輸入一些文字以自動產生 WEP 密碼。
-ASUS Passphrase
+ Passphrase
 選擇「Enable」，可啟用 Packet Aggregation 功能以增進網路的傳輸頻寬。
 啟用 Packet Aggregation 功能
 WPA 金鑰應為 8~63 個字元（字母、數字或其組合）或64個十六進位字元組成，如果您將此欄位保持空白，系統將會指定 00000000 做為您的密碼。
@@ -2366,3 +2416,37 @@ I want to use Yandex.DNS and agree to the <a class="link" href="http://legal.yan
 Clients are using Yandex.DNS regardless of the DNS setting.
 即將設定檔案分享方式為：
 關閉：0
+註：您正使用中華電信光世代，我們已幫您使用自動取得 IP 方式上網，若你想提高網路品質、取得公共 IP，建議使用 PPPoE 撥號上網。
+前往設定撥號連線( PPPoE )
+Page Setting
+Connecting to Facebook page...
+Facebook Wi-Fi kets customers check in to participating businesses on Facebok for free Wi-Fi access. When people check int to your Page, you can share offers and other announcements with them.
+Disclaimer:
+Term of use
+Please be noted to keep Facebook Wi-Fi enabled firmware stay up to date.
+Please be noted Facebook Wi-Fi service is provided by Facebook which will be terminated upon official announcement.
+Please be noted there will be a 1 year grace period upon termination where Facebook will continue supporting the service. After that period, this feature will cease to operate.
+Any non-certificated router is prohibited to use Facebook Wi-Fi enabled firmware.
+Unable to connect to Facebook page, please check your internet status.
+Enable Facebook Wi-Fi
+What is Facebook Wi-Fi?
+What benefit I can get by Facebook Wi-Fi?
+How to setup Facebook Wi-Fi?
+FAQs about Facebook Wi-Fi
+Facebook Page Settings
+Confugure Facebook page connection.
+Choose a Facebook page for this Wi-Fi network, and manage page settings here :
+All 2.4 GHz guest networks are used, if you want to use 2.4 GHz band for Facebook Wi-Fi, please remove one 2.4 GHz guest network<br>
+All 5 GHz guest networks are used, if you want to use 5 GHz band for Facebook Wi-Fi, please remove one 5 GHz guest network<br>
+All 5 GHz-2 guest networks are used, if you want to use 5 GHz band for Facebook Wi-Fi, please remove one 5 GHz-2 guest network
+All guest networks are used now, please remove at least one guest network then try to enable Facebook Wi-Fi again.
+802.11ac 同步雙頻 AC1900。（600Mbps / 2.4 GHz* + 1300Mbps / 5 GHz）
+擁有兩個高速高功率 USB 連接埠支援網路存儲與多功能印表機分享。
+4 x 千兆乙太網路連接埠。 1 x USB 3.0 + 1 x USB 2.0 連接埠，快速共用檔案與印表機。
+高水準的使用層級，包括極佳的下載和遊戲效能，以及多用戶端連接。
+請依照下列步驟來使用 VPN 伺服器:<br>(1) 啟用 PPTP VPN 伺服器<br>(2) 為用戶端設定 IP Pool (最多可以設定 30 個用戶端)<br>(3) 為 VPN 用戶端設定帳號與密碼<br>(4) 開啟您個人電腦或是智慧型手機上的 VPN 連接應用程式<br>(5) 新增一個 PPTP VPN 連線，VPN 伺服器位址為
+VPN 伺服器最多僅支援 30 個用戶端！
+最多 30 個客戶
+無線橋接（又名 WDS）功能允許您的 R7000 無線連接至其他無線存取點。WDS 也可作為中繼器模式。
+本功能不支援 WPA2-Enterprise、WPA-Auto-Enterprise 加密方式。
+要獲得最佳效能，請進入「進階設定」>「無線網路」>「一般設定」為網路中的每台路由器設定相同的 SSID、頻道頻寬、控制頻道與延伸頻道。

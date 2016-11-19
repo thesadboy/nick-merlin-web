@@ -35,18 +35,18 @@ parent.hidePop('OverlayMask');
 <table width="80%" class="popTable" border="0" align="center" cellpadding="0" cellspacing="0">
 <thead>
 <tr>
-<td><span style="color:#FFF"><#907#>: </span><span style="color:#FFF" id="selected_account"></span><img src="../images/button-close.gif" onClick="parent.hidePop('OverlayMask');"></td>
+<td><span style="color:#FFF"><#925#>: </span><span style="color:#FFF" id="selected_account"></span><img src="../images/button-close.gif" onClick="parent.hidePop('OverlayMask');"></td>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td height="80" class="hint_word"><#906#></td>
+<td height="80" class="hint_word"><#924#></td>
 </tr>
 </tbody>
 <tr>
 <td height="30" align="right" bgcolor="#E6E6E6">
-<input id="Submit" type="button" class="button_gen" value="<#867#>">
-<input id="Cancel" type="button" class="button_gen" value="<#74#>">
+<input id="Submit" type="button" class="button_gen" value="<#885#>">
+<input id="Cancel" type="button" class="button_gen" value="<#75#>">
 </td>
 </tr>
 </table>

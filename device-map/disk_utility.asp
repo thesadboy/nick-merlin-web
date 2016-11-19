@@ -142,7 +142,7 @@ document.getElementById('schedule_frequency').innerHTML = array_freq[document.fo
 }
 function apply_schedule(){
 if(progressBar >= 1 && progressBar <= 100 ){
-alert("<#949#>");
+alert("<#967#>");
 return false;
 }
 else{
@@ -164,7 +164,7 @@ document.form.submit();
 }
 function go_scan(){
 stopScan = 0;
-if(!confirm("<#947#>")){
+if(!confirm("<#965#>")){
 document.getElementById('scan_status_field').style.display = "";
 document.getElementById('progressBar').style.display = "none";
 return false;
@@ -197,14 +197,14 @@ document.getElementById("updateProgress").style.width = progressBar+"%";
 if( scan_status == 1 && stopScan == 0){ // To control message of scanning status
 if(progressBar >= 5)
 progressBar =5;
-document.getElementById('scan_message').innerHTML = "<#942#>";
+document.getElementById('scan_message').innerHTML = "<#960#>";
 }
 else if(scan_status == 2 && stopScan == 0){
 if(progressBar <= 5)
 progressBar = 6;
 else if (progressBar >= 15)
 progressBar = 15;
-document.getElementById('scan_message').innerHTML = "<#953#>";
+document.getElementById('scan_message').innerHTML = "<#971#>";
 }
 else if(scan_status == 3 && stopScan == 0){
 if(progressBar <= 15)
@@ -218,12 +218,12 @@ if(progressBar <= 40)
 progressBar = 41;
 else if (progressBar >= 90)
 progressBar = 90;
-document.getElementById('scan_message').innerHTML = "<#945#>";
+document.getElementById('scan_message').innerHTML = "<#963#>";
 }
 else if(scan_status == 5 && stopScan == 0){
 if(progressBar <= 90)
 progressBar = 91;
-document.getElementById('scan_message').innerHTML = "<#938#>";
+document.getElementById('scan_message').innerHTML = "<#956#>";
 }
 else{
 document.getElementById('scan_message').innerHTML = "Stop disk scanning force...";
@@ -245,7 +245,7 @@ if(stopScan == 0){
 document.getElementById('progress_bar_no').innerHTML = progressBar+"%";
 progressBar++;
 }
-timer = setTimeout("showLoadingUpdate();", 100);
+timer = setTimeout(showLoadingUpdate, 100);
 }
 });
 }
@@ -254,7 +254,7 @@ var progress_stop = 0;
 stopScan = 1;
 progress_stop = progressBar; // get progress value when press abort
 clearTimeout(timer);
-document.getElementById('scan_message').innerHTML = "<#951#>";
+document.getElementById('scan_message').innerHTML = "<#969#>";
 document.getElementById('progress_bar_no').innerHTML = progress_stop + "%";
 document.getElementById("updateProgress").style.width = progress_stop +"%";
 document.getElementById('loadingIcon').style.display = "";
@@ -264,11 +264,10 @@ document.getElementById('loadingIcon').style.display = "none";
 document.getElementById('progressBar').style.display = "none";
 stop_diskmon();
 reset_force_stop();
-setTimeout('disk_scan_status("")',1000);
+setTimeout(disk_scan_status, 1000);
 }
 function disk_scan_status(){
-require(['/require/modules/diskList.js'], function(diskList){
-diskList.update(function(){
+require(['/require/modules/diskList.js?hash=' + Math.random().toString()], function(diskList){
 $.each(parent.usbPorts, function(i, curPort){
 $.each(diskList.list(), function(j, usbDevice){
 if(curPort.node == usbDevice.node)
@@ -276,7 +275,6 @@ parent.usbPorts[i] = usbDevice;
 });
 });
 check_status(parent.usbPorts[diskOrder-1]);
-})
 });
 }
 function get_disk_log(){
@@ -390,12 +388,12 @@ document.form.submit();
 <table width="100px" border="0" align="left" style="margin-left:5px;" cellpadding="0" cellspacing="0">
 <td>
 <div id="t0" class="tabclick_NW" align="center" style="font-weight: bolder;margin-right:2px;" onclick="location.href='disk.asp'">
-<span style="cursor:pointer;font-weight: bolder;"><#940#></span>
+<span style="cursor:pointer;font-weight: bolder;"><#958#></span>
 </div>
 </td>
 <td>
 <div id="t1" class="tab_NW" align="center" style="font-weight: bolder;margin-right:2px;" onclick="location.href='disk_utility.asp'">
-<span style="cursor:pointer;font-weight: bolder;"><#933#></span>
+<span style="cursor:pointer;font-weight: bolder;"><#951#></span>
 </div>
 </td>
 </table>
@@ -412,13 +410,13 @@ document.form.submit();
 <img id="scan_status_image" src="/images/New_ui/networkmap/normal.png">
 </td>
 <td id="disk_init_status" >
-<#941#>
+<#959#>
 </td>
 <td id="problem_found" style="display:none;">
-<#944#>
+<#962#>
 </td>
 <td id="crash_found" style="display:none;">
-<#934#>
+<#952#>
 </td>
 </tr>
 </table>
@@ -433,7 +431,7 @@ document.form.submit();
 </div>
 </div>
 <img style="margin-top:5px;margin-left:9px; *margin-top:-10px; width:283px;" src="/images/New_ui/networkmap/linetwo2.png">
-<div class="font_style" style="margin-left:10px;margin-bottom:5px;margin-top:10px;"><#936#></div>
+<div class="font_style" style="margin-left:10px;margin-bottom:5px;margin-top:10px;"><#954#></div>
 <div >
 <table border="0" width="98%" align="center" height="100px;"><tr>
 <td style="vertical-align:top" height="100px;">
@@ -444,7 +442,7 @@ document.form.submit();
 </tr></table>
 </div>
 <div style="margin-top:20px;margin-bottom:10px;"align="center">
-<input id="btn_scan" type="button" class="button_gen" onclick="go_scan();" value="<#370#>">
+<input id="btn_scan" type="button" class="button_gen" onclick="go_scan();" value="<#375#>">
 <input id="btn_abort" type="button" class="button_gen" onclick="abort_scan();" value="Abort" style="display:none">
 <img id="loadingIcon" style="display:none;margin-right:10px;" src="/images/InternetScan.gif">
 </div>
@@ -452,18 +450,18 @@ document.form.submit();
 </tr>
 <tr>
 <td style="background-color:#4D595D;" >
-<div class="font_style" style="margin-left:12px;margin-top:10px;"><#950#></div>
+<div class="font_style" style="margin-left:12px;margin-top:10px;"><#968#></div>
 <img style="margin-top:5px;margin-left:10px; *margin-top:-5px;" src="/images/New_ui/networkmap/linetwo2.png">
 <div style="margin-left:10px;">
 <table>
 <tr class="font_style">
 <td style="width:100px;">
-<div style="margin-bottom:5px;" ><#939#></div>
+<div style="margin-bottom:5px;" ><#957#></div>
 <select name="diskmon_freq" onchange="freq_change();" class="input_option">
-<option value="0" <% nvram_match("diskmon_freq", "0", "selected"); %>><#822#></option>
-<option value="1" <% nvram_match("diskmon_freq", "1", "selected"); %>><#943#></option>
-<option value="2" <% nvram_match("diskmon_freq", "2", "selected"); %>><#955#></option>
-<option value="3" <% nvram_match("diskmon_freq", "3", "selected"); %>><#935#></option>
+<option value="0" <% nvram_match("diskmon_freq", "0", "selected"); %>><#839#></option>
+<option value="1" <% nvram_match("diskmon_freq", "1", "selected"); %>><#961#></option>
+<option value="2" <% nvram_match("diskmon_freq", "2", "selected"); %>><#973#></option>
+<option value="3" <% nvram_match("diskmon_freq", "3", "selected"); %>><#953#></option>
 </select>
 </td>
 <td >
@@ -506,7 +504,7 @@ document.form.submit();
 </td>
 <td>
 <div id="week_field">
-<div style="margin-bottom:5px"><#954#></div>
+<div style="margin-bottom:5px"><#972#></div>
 <select name="freq_week" class="input_option" onchange="freq_change();">
 <option value="0">Sun</option>
 <option value="1">Mon</option>
@@ -520,7 +518,7 @@ document.form.submit();
 </td>
 <td>
 <div id="time_field">
-<div style="margin-bottom:5px;"><#952#></div>
+<div style="margin-bottom:5px;"><#970#></div>
 <select name="freq_hour" class="input_option" onchange="freq_change();">
 <option value="0">0</option>
 <option value="1">1</option>
@@ -555,18 +553,18 @@ document.form.submit();
 <img style="margin-top:5px;margin-left:10px; *margin-top:-10px;" src="/images/New_ui/networkmap/linetwo2.png">
 <div id="schedule_desc">
 <div class="font_style" style="margin-top:5px;margin-left:13px;margin-right:10px;" >
-<#937#>
+<#955#>
 <span id="schedule_time" style="display:none;font-weight:bolder;"></span>&nbsp
 on&nbsp<span id="schedule_week" style="display:none;font-weight:bolder;"></span>
 <span id="schedule_date" style="display:none;font-weight:bolder;"></span>&nbsp
 <span id="schedule_frequency" style="display:none;font-weight:bolder;"></span>
 </div>
 <div class="font_style" style="margin-top:5px;margin-left:13px;margin-right:10px;">
-<#948#>
+<#966#>
 </div>
 </div>
 <div style="margin-top:20px;margin-bottom:10px;" align="center">
-<input type="button" class="button_gen" onclick="apply_schedule();" value="<#72#>">
+<input type="button" class="button_gen" onclick="apply_schedule();" value="<#73#>">
 <img id="loadingIcon_apply" style="display:none;margin-right:10px;" src="/images/InternetScan.gif">
 </div>
 </td>

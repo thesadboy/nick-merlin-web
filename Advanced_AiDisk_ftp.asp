@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#533#> - <#203#></title>
+<title><#548#> - <#206#></title>
 <link rel="stylesheet" type="text/css" href="/index_style.css">
 <link rel="stylesheet" type="text/css" href="/form_style.css">
 <link rel="stylesheet" type="text/css" href="/aidisk/AiDisk_style.css">
@@ -16,8 +16,8 @@
 <script type="text/javascript" src="/general.js"></script>
 <script type="text/javascript" src="/help.js"></script>
 <script type="text/javascript" src="/popup.js"></script>
-<script type="text/javascript" src="/disk_functions.js"></script>
 <script type="text/javascript" src="/validator.js"></script>
+<script type="text/javascript" src="/disk_functions.js"></script>
 <script type="text/javascript" src="/js/jquery.js"></script>
 <script type="text/javascript" src="/switcherplugin/jquery.iphone-switch.js"></script>
 <script type="text/javascript">
@@ -37,7 +37,7 @@ var folderlist = new Array();
 var ddns_enable = '<% nvram_get("ddns_enable_x"); %>';
 function initial(){
 show_menu();
-document.getElementById("_APP_Installation").innerHTML = '<table><tbody><tr><td><div class="_APP_Installation"></div></td><td><div style="width:120px;"><#181#></div></td></tr></tbody></table>';
+document.getElementById("_APP_Installation").innerHTML = '<table><tbody><tr><td><div class="_APP_Installation"></div></td><td><div style="width:120px;"><#184#></div></td></tr></tbody></table>';
 document.getElementById("_APP_Installation").className = "menu_clicked";
 document.aidiskForm.protocol.value = PROTOCOL;
 if(is_KR_sku){
@@ -48,13 +48,13 @@ showPermissionTitle();
 if("<% nvram_get("ddns_enable_x"); %>" == 1)
 document.getElementById("machine_name").innerHTML = "<% nvram_get("ddns_hostname_x"); %>";
 else
-document.getElementById("machine_name").innerHTML = "<#534#>";
+document.getElementById("machine_name").innerHTML = "<#549#>";
 if(get_manage_type(PROTOCOL)){
-document.getElementById("loginMethod").innerHTML = "<#630#>";
+document.getElementById("loginMethod").innerHTML = "<#646#>";
 document.getElementById("accountMask").style.display = "none";
 }
 else{
-document.getElementById("loginMethod").innerHTML = "<#629#>";
+document.getElementById("loginMethod").innerHTML = "<#645#>";
 document.getElementById("accountMask").style.display = "block";
 }
 setTimeout('get_disk_tree();', 1000);
@@ -81,7 +81,7 @@ if(protocol != "cifs" && protocol != "ftp" && protocol != "webdav")
 return;
 switch(get_manage_type(protocol)){
 case 1:
-if(confirm("<#631#>")){
+if(confirm("<#647#>")){
 document.aidiskForm.action = "/aidisk/switch_share_mode.asp";
 document.aidiskForm.protocol.value = protocol;
 document.aidiskForm.mode.value = "share";
@@ -109,13 +109,13 @@ var status;
 var confirm_str_on, confirm_str_off;
 if(protocol == "cifs"){
 status = this.NN_status;
-confirm_str_off= "<#845#>"; //"<#847#>"+ By Viz 2011.09
-confirm_str_on = "<#849#>";
+confirm_str_off= "<#863#>"; //"<#865#>"+ By Viz 2011.09
+confirm_str_on = "<#867#>";
 }
 else if(protocol == "ftp"){
 status = this.FTP_status;
-confirm_str_off = "<#846#>";
-confirm_str_on = "<#850#>";
+confirm_str_off = "<#864#>";
+confirm_str_on = "<#868#>";
 }
 switch(status){
 case 1:
@@ -147,7 +147,7 @@ break;
 function showAccountMenu(){
 var account_menu_code = "";
 if(this.accounts.length <= 0)
-account_menu_code += '<div class="noAccount" id="noAccount"><#1607#></div>\n'
+account_menu_code += '<div class="noAccount" id="noAccount"><#1647#></div>\n'
 else{
 for(var i = 0; i < this.accounts.length; ++i){
 account_menu_code += '<div class="userIcon" id="';
@@ -366,13 +366,13 @@ changeActionButton(document.getElementById("createAccountBtn"), 'User', 'Add');
 document.getElementById("createAccountBtn").onclick = function(){};
 document.getElementById("createAccountBtn").onmouseover = function(){};
 document.getElementById("createAccountBtn").onmouseout = function(){};
-document.getElementById("createAccountBtn").title = (accounts.length < 11)?"<#577#>":"<#554#>";
+document.getElementById("createAccountBtn").title = (accounts.length < 11)?"<#593#>":"<#570#>";
 }
 if(this.accounts.length > 0 && this.selectedAccount != null && this.selectedAccount.length > 0 && this.accounts[0] != this.selectedAccount){
 changeActionButton(document.getElementById("modifyAccountBtn"), 'User', 'Mod', 0);
 document.getElementById("modifyAccountBtn").onclick = function(){
 if(!selectedAccount){
-alert("<#647#>");
+alert("<#663#>");
 return;
 }
 popupWindow('OverlayMask','/aidisk/popModifyAccount.asp');
@@ -394,7 +394,7 @@ if(this.accounts.length > 1 && this.selectedAccount != null && this.selectedAcco
 changeActionButton(document.getElementById("deleteAccountBtn"), 'User', 'Del', 0);
 document.getElementById("deleteAccountBtn").onclick = function(){
 if(!selectedAccount){
-alert("<#647#>");
+alert("<#663#>");
 return;
 }
 popupWindow('OverlayMask','/aidisk/popDeleteAccount.asp');
@@ -416,11 +416,11 @@ if(this.selectedPoolOrder >= 0 && this.selectedFolderOrder < 0){
 changeActionButton(document.getElementById("createFolderBtn"), 'Folder', 'Add', 0);
 document.getElementById("createFolderBtn").onclick = function(){
 if(selectedDiskOrder < 0){
-alert("<#648#>");
+alert("<#664#>");
 return;
 }
 if(selectedPoolOrder < 0){
-alert("<#650#>");
+alert("<#666#>");
 return;
 }
 popupWindow('OverlayMask','/aidisk/popCreateFolder.asp');
@@ -443,7 +443,7 @@ changeActionButton(document.getElementById("deleteFolderBtn"), 'Folder', 'Del', 
 changeActionButton(document.getElementById("modifyFolderBtn"), 'Folder', 'Mod', 0);
 document.getElementById("deleteFolderBtn").onclick = function(){
 if(selectedFolderOrder < 0){
-alert("<#649#>");
+alert("<#665#>");
 return;
 }
 popupWindow('OverlayMask','/aidisk/popDeleteFolder.asp');
@@ -456,7 +456,7 @@ changeActionButton(this, 'Folder', 'Del', 0);
 };
 document.getElementById("modifyFolderBtn").onclick = function(){
 if(selectedFolderOrder < 0){
-alert("<#649#>");
+alert("<#665#>");
 return;
 }
 popupWindow('OverlayMask','/aidisk/popModifyFolder.asp');
@@ -564,19 +564,19 @@ return true;
 <table width="730px">
 <tr>
 <td align="left">
-<span class="formfonttitle"><#201#> - <#203#></span>
+<span class="formfonttitle"><#204#> - <#206#></span>
 </td>
 <td align="right">
-<img onclick="go_setting('/APP_Installation.asp')" align="right" style="cursor:pointer;position:absolute;margin-left:-20px;margin-top:-30px;" title="<#181#>" src="/images/backprev.png" onMouseOver="this.src='/images/backprevclick.png'" onMouseOut="this.src='/images/backprev.png'">
+<img onclick="go_setting('/APP_Installation.asp')" align="right" style="cursor:pointer;position:absolute;margin-left:-20px;margin-top:-30px;" title="<#184#>" src="/images/backprev.png" onMouseOver="this.src='/images/backprevclick.png'" onMouseOut="this.src='/images/backprev.png'">
 </td>
 </tr>
 </table>
 </div>
 <div style="margin:5px;"><img src="/images/New_ui/export/line_export.png"></div>
-<div class="formfontdesc"><#1163#></div>
+<div class="formfontdesc"><#1199#></div>
 <table width="740px" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <tr>
-<th><#1041#></th>
+<th><#1059#></th>
 <td>
 <div class="left" style="width:94px; float:left; cursor:pointer;" id="radio_ftp_enable"></div>
 <div class="iphone_switch_container" style="height:32px; width:74px; position: relative; overflow: hidden">
@@ -594,7 +594,7 @@ switchAppStatus(PROTOCOL);
 </td>
 </tr>
 <tr id="radio_anonymous_enable_tr" style="height: 60px;">
-<th><#627#></th>
+<th><#643#></th>
 <td>
 <div class="left" style="margin-top:5px;width:94px; float:left; cursor:pointer;" id="radio_anonymous_enable"></div>
 <div class="iphone_switch_container" style="display: table-cell;vertical-align: middle;height:45px; position: relative; overflow: hidden">
@@ -614,7 +614,7 @@ switchAccount(PROTOCOL);
 </tr>
 <tr>
 <th>
-<a class="hintstyle" href="javascript:void(0);" onClick="openHint(17,1);"><#1801#></a>
+<a class="hintstyle" href="javascript:void(0);" onClick="openHint(17,1);"><#1843#></a>
 </th>
 <td>
 <input type="text" name="st_max_user" class="input_3_table" maxlength="2" value="<% nvram_get("st_max_user"); %>" onKeyPress="return validator.isNumber(this, event);" autocorrect="off" autocapitalize="off">
@@ -622,15 +622,15 @@ switchAccount(PROTOCOL);
 </tr>
 <tr>
 <th>
-<a class="hintstyle" href="javascript:void(0);" onClick="openHint(17,9);"><#1795#></a>
+<a class="hintstyle" href="javascript:void(0);" onClick="openHint(17,9);"><#1837#></a>
 </th>
 <td>
 <select name="ftp_lang" class="input_option">
-<option value="CN" <% nvram_match("ftp_lang", "CN", "selected"); %>>GBK</option><!-- <#1798#> -->
-<option value="TW" <% nvram_match("ftp_lang", "TW", "selected"); %>>Big5</option><!-- <#1797#> -->
-<option value="EN" <% nvram_match("ftp_lang", "EN", "selected"); %>>UTF-8</option><!--<#1796#>-->
-<option value="RU" <% nvram_match("ftp_lang", "RU", "selected"); %>><#1799#></option>
-<option value="CZ" <% nvram_match("ftp_lang", "CZ", "selected"); %>><#1800#></option>
+<option value="CN" <% nvram_match("ftp_lang", "CN", "selected"); %>>GBK</option><!-- <#1840#> -->
+<option value="TW" <% nvram_match("ftp_lang", "TW", "selected"); %>>Big5</option><!-- <#1839#> -->
+<option value="EN" <% nvram_match("ftp_lang", "EN", "selected"); %>>UTF-8</option><!--<#1838#>-->
+<option value="RU" <% nvram_match("ftp_lang", "RU", "selected"); %>><#1841#></option>
+<option value="CZ" <% nvram_match("ftp_lang", "CZ", "selected"); %>><#1842#></option>
 </select>
 </td>
 </tr>
@@ -657,7 +657,7 @@ switch_on_container_path: '/switcherplugin/iphone_switch_container_off.png'
 </tr>
 </table>
 <div class="apply_gen">
-<input type="button" class="button_gen" value="<#72#>" onclick="applyRule();">
+<input type="button" class="button_gen" value="<#73#>" onclick="applyRule();">
 </div>
 <div id="shareStatus">
 <div id="tableMask"></div>
@@ -667,18 +667,18 @@ switch_on_container_path: '/switcherplugin/iphone_switch_container_off.png'
 <td width="25%" style="border: 1px solid #222;">
 <table align="right">
 <tr>
-<td><div id="createAccountBtn" title="<#577#>"></div></td>
-<td><div id="deleteAccountBtn" title="<#907#>"></div></td>
-<td><div id="modifyAccountBtn" title="<#1553#>"></div></td>
+<td><div id="createAccountBtn" title="<#593#>"></div></td>
+<td><div id="deleteAccountBtn" title="<#925#>"></div></td>
+<td><div id="modifyAccountBtn" title="<#1591#>"></div></td>
 </tr>
 </table>
 </td>
 <td width="75%">
 <table align="right">
 <tr>
-<td><div id="createFolderBtn" title="<#579#>"></div></td>
-<td><div id="deleteFolderBtn" title="<#910#>"></div></td>
-<td><div id="modifyFolderBtn" title="<#1556#>"></div></td>
+<td><div id="createFolderBtn" title="<#595#>"></div></td>
+<td><div id="deleteFolderBtn" title="<#928#>"></div></td>
+<td><div id="modifyFolderBtn" title="<#1594#>"></div></td>
 </tr>
 </table>
 </td>
@@ -703,7 +703,7 @@ switch_on_container_path: '/switcherplugin/iphone_switch_container_off.png'
 </table>
 <div id="e0" style="font-size:10pt; margin-top:2px;"></div>
 <div style="text-align:center; margin:10px auto; border-top:1px dotted #CCC; width:95%; padding:2px;">
-<input name="changePermissionBtn" id="changePermissionBtn" type="button" value="<#79#>" class="button_gen_long_dis" disabled="disabled">
+<input name="changePermissionBtn" id="changePermissionBtn" type="button" value="<#81#>" class="button_gen_long_dis" disabled="disabled">
 </div>
 </td>
 </tr>

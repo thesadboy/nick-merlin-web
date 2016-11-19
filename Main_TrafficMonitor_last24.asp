@@ -5,7 +5,7 @@
 <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-<title><#533#> - <#493#> : <#1468#></title>
+<title><#548#> - <#494#> : <#1506#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="tmmenu.css">
@@ -30,43 +30,43 @@ var debugTime = 0;
 var href_lang = get_supportsite_lang();
 switch("<% nvram_get("preferred_lang"); %>"){
 case "KR":
-href_lang = "/us/";
+href_lang = "/";
 break;
 case "RO":
-href_lang = "/us/";
+href_lang = "/";
 break;
 case "HU":
-href_lang = "/us/";
+href_lang = "/";
 break;
 case "IT":
-href_lang = "/us/";
+href_lang = "/";
 break;
 case "DA":
-href_lang = "/us/";
+href_lang = "/";
 break;
 case "BR":
-href_lang = "/us/";
+href_lang = "/";
 break;
 case "SV":
-href_lang = "/us/";
+href_lang = "/";
 break;
 case "FI":
-href_lang = "/us/";
+href_lang = "/";
 break;
 case "NO":
-href_lang = "/us/";
+href_lang = "/";
 break;
 case "TH":
-href_lang = "/us/";
+href_lang = "/";
 break;
 case "DE":
-href_lang = "/us/";
+href_lang = "/";
 break;
 case "PL":
-href_lang = "/us/";
+href_lang = "/";
 break;
 case "CZ":
-href_lang = "/us/";
+href_lang = "/";
 break;
 default:
 break;
@@ -137,11 +137,11 @@ selGroup = E('page_select');
 optGroup = document.createElement('OPTGROUP');
 optGroup.label = "Per device";
 opt = document.createElement('option');
-opt.innerHTML = "<#1467#>";
+opt.innerHTML = "<#1505#>";
 opt.value = "5";
 optGroup.appendChild(opt);
 opt = document.createElement('option');
-opt.innerHTML = "<#1469#>";
+opt.innerHTML = "<#1507#>";
 opt.value = "6";
 optGroup.appendChild(opt);
 opt = document.createElement('option');
@@ -168,7 +168,7 @@ initCommon(1, 0, 0, 1); //Viz 2010.09
 ref.initX();
 document.getElementById("faq0").href = "http://www.asus.com"+ href_lang +"support/Search-Result-Detail/69B50762-C9C0-15F1-A5B8-C7B652F50ACF/?keyword=ASUSWRT%20Traffic%20Monitor" ;
 if(bwdpi_support){
-document.getElementById('content_title').innerHTML = "<#1470#> - <#493#>";
+document.getElementById('content_title').innerHTML = "<#1508#> - <#494#>";
 }
 }
 function switchPage(page){
@@ -249,16 +249,16 @@ return false;
 <table width="100%" >
 <tr>
 <td class="formfonttitle" align="left">
-<div id="content_title" style="margin-top:5px;"><#180#> - <#493#></div>
+<div id="content_title" style="margin-top:5px;"><#183#> - <#494#></div>
 </td>
 <td>
 <div align="right">
 <select id="page_select" onchange="switchPage(this.options[this.selectedIndex].value)" class="input_option" style="margin-top:8px;">
-<!--option><#1861#></option-->
+<!--option><#1907#></option-->
 <optgroup label="Global">
-<option value="1"><#1467#></option>
-<option value="2" selected><#1468#></option>
-<option value="3"><#1469#></option>
+<option value="1"><#1505#></option>
+<option value="2" selected><#1506#></option>
+<option value="3"><#1507#></option>
 <option value="4">Monthly</option>
 </optgroup>
 </select>
@@ -271,22 +271,22 @@ return false;
 </tr>
 <tr>
 <td height="30" align="left" valign="middle" >
-<div class="formfontcontent"><p class="formfontcontent"><#1912#></p></div>
+<div class="formfontcontent"><p class="formfontcontent"><#1958#></p></div>
 </td>
 </tr>
 <tr>
 <td align="left" valign="middle">
 <table width="95%" border="1" align="left" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="DescTable" style="font-size:12px; font-family:Arial, Helvetica, sans-serif; border: 1px solid #000000; border-collapse: collapse;">
-<tr><th style=" font-family:Arial, Helvetica, sans-serif; background-color:#1F2D35; color:#FFFFFF; font-weight:normal; line-height:15px; height: 30px; text-align:left; font-size:12px; padding-left: 10px; border: 1px solid #222; border-collapse: collapse; background:#2F3A3E;" width="16%"></th><th style=" font-family:Arial, Helvetica, sans-serif; background-color:#1F2D35; color:#FFFFFF; font-weight:normal; line-height:15px; height: 30px; text-align:left; font-size:12px; padding-left: 10px; border: 1px solid #222; border-collapse: collapse; background:#2F3A3E;" width="26%"><#1253#></th><th style=" font-family:Arial, Helvetica, sans-serif; background-color:#1F2D35; color:#FFFFFF; font-weight:normal; line-height:15px; height: 30px; text-align:left; font-size:12px; padding-left: 10px; border: 1px solid #222; border-collapse: collapse; background:#2F3A3E;" width="29%"><#1906#></th><th style=" font-family:Arial, Helvetica, sans-serif; background-color:#1F2D35; color:#FFFFFF; font-weight:normal; line-height:15px; height: 30px; text-align:left; font-size:12px; padding-left: 10px; border: 1px solid #222; border-collapse: collapse; background:#2F3A3E;" width="29%"><#1907#></th></tr>
-<tr><th style=" font-family:Arial, Helvetica, sans-serif; background-color:#1F2D35; color:#FFFFFF; font-weight:normal; line-height:15px; height: 30px; text-align:left; font-size:12px; padding-left: 10px; border: 1px solid #222; border-collapse: collapse; background:#2F3A3E;"><#1898#></th><td style="color:#FF9000;padding-left: 10px; background-color:#475a5f; border: 1px solid #222;border-collapse: collapse;"><#1899#></td><td style="color:#3CF;padding-left: 10px; background-color:#475a5f; border: 1px solid #222;border-collapse: collapse;"><#1900#></td><td style="color:#3CF;padding-left: 10px; background-color:#475a5f; border: 1px solid #222;border-collapse: collapse;"><#1901#></td></tr>
-<tr><th style=" font-family:Arial, Helvetica, sans-serif; background-color:#1F2D35; color:#FFFFFF; font-weight:normal; line-height:15px; height: 30px; text-align:left; font-size:12px; padding-left: 10px; border: 1px solid #222; border-collapse: collapse; background:#2F3A3E;"><#1905#></th><td style="color:#3CF;padding-left: 10px; background-color:#475a5f; border: 1px solid #222;border-collapse: collapse;"><#1902#></td><td style="color:#FF9000;padding-left: 10px; background-color:#475a5f; border: 1px solid #222;border-collapse: collapse;"><#1903#></td><td style="color:#FF9000;padding-left: 10px; background-color:#475a5f; border: 1px solid #222;border-collapse: collapse;"><#1904#></td></tr>
+<tr><th style=" font-family:Arial, Helvetica, sans-serif; background-color:#1F2D35; color:#FFFFFF; font-weight:normal; line-height:15px; height: 30px; text-align:left; font-size:12px; padding-left: 10px; border: 1px solid #222; border-collapse: collapse; background:#2F3A3E;" width="16%"></th><th style=" font-family:Arial, Helvetica, sans-serif; background-color:#1F2D35; color:#FFFFFF; font-weight:normal; line-height:15px; height: 30px; text-align:left; font-size:12px; padding-left: 10px; border: 1px solid #222; border-collapse: collapse; background:#2F3A3E;" width="26%"><#1290#></th><th style=" font-family:Arial, Helvetica, sans-serif; background-color:#1F2D35; color:#FFFFFF; font-weight:normal; line-height:15px; height: 30px; text-align:left; font-size:12px; padding-left: 10px; border: 1px solid #222; border-collapse: collapse; background:#2F3A3E;" width="29%"><#1952#></th><th style=" font-family:Arial, Helvetica, sans-serif; background-color:#1F2D35; color:#FFFFFF; font-weight:normal; line-height:15px; height: 30px; text-align:left; font-size:12px; padding-left: 10px; border: 1px solid #222; border-collapse: collapse; background:#2F3A3E;" width="29%"><#1953#></th></tr>
+<tr><th style=" font-family:Arial, Helvetica, sans-serif; background-color:#1F2D35; color:#FFFFFF; font-weight:normal; line-height:15px; height: 30px; text-align:left; font-size:12px; padding-left: 10px; border: 1px solid #222; border-collapse: collapse; background:#2F3A3E;"><#1944#></th><td style="color:#FF9000;padding-left: 10px; background-color:#475a5f; border: 1px solid #222;border-collapse: collapse;"><#1945#></td><td style="color:#3CF;padding-left: 10px; background-color:#475a5f; border: 1px solid #222;border-collapse: collapse;"><#1946#></td><td style="color:#3CF;padding-left: 10px; background-color:#475a5f; border: 1px solid #222;border-collapse: collapse;"><#1947#></td></tr>
+<tr><th style=" font-family:Arial, Helvetica, sans-serif; background-color:#1F2D35; color:#FFFFFF; font-weight:normal; line-height:15px; height: 30px; text-align:left; font-size:12px; padding-left: 10px; border: 1px solid #222; border-collapse: collapse; background:#2F3A3E;"><#1951#></th><td style="color:#3CF;padding-left: 10px; background-color:#475a5f; border: 1px solid #222;border-collapse: collapse;"><#1948#></td><td style="color:#FF9000;padding-left: 10px; background-color:#475a5f; border: 1px solid #222;border-collapse: collapse;"><#1949#></td><td style="color:#FF9000;padding-left: 10px; background-color:#475a5f; border: 1px solid #222;border-collapse: collapse;"><#1950#></td></tr>
 </table>
 </td>
 </tr>
 <tr>
 <td height="30" align="left" valign="middle" >
-<div class="formfontcontent"><p><#1913#></p></div>
-<div class="formfontcontent"><p><a id="faq0" href="" target="_blank" style="font-weight: bolder;text-decoration:underline;"><#493#> FAQ</a></p></div>
+<div class="formfontcontent"><p><#1959#></p></div>
+<div class="formfontcontent"><p><a id="faq0" href="" target="_blank" style="font-weight: bolder;text-decoration:underline;"><#494#> FAQ</a></p></div>
 </td>
 </tr>
 <tr>
@@ -297,7 +297,7 @@ return false;
 <input title="Zoom out" type="button" onclick="Zoom('out');" class="zoomout_btn" name="button">
 </span>
 <!--[if IE]>
-<div id="svg-table" align="left">
+<div id="svg-table" align="left" class="IE8HACK">
 <object id="graph" src="tm.svg" classid="image/svg+xml" width="730" height="350">
 </div>
 <![endif]-->
@@ -309,12 +309,12 @@ return false;
 </tr>
 <tr>
 <td>
-<table width="730px" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable_NWM" style="margin-top:10px;margin-left:-1px;*margin-left:-10px;">
+<table width="730px" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable_NWM" style="margin-top:0px;margin-left:-1px;*margin-left:-10px;margin-left:-12px \9;">
 <tr>
-<th style="text-align:center;width:160px;height:25px;"><#888#></th>
-<th style="text-align:center;width:160px;height:25px;"><#796#></th>
-<th style="text-align:center;width:160px;height:25px;"><#1461#></th>
-<th style="text-align:center;width:160px;height:25px;"><#1908#></th>
+<th style="text-align:center;width:160px;"><#905#></th>
+<th style="text-align:center;width:160px;"><#813#></th>
+<th style="text-align:center;width:160px;"><#1499#></th>
+<th style="text-align:center;width:160px;"><#1954#></th>
 </tr>
 <tr>
 <td style="text-align:center;font-weight: bold; background-color:#111;"><div id="rx-current"></div></td>

@@ -31,13 +31,13 @@ document.getElementById("finish").focus();
 function show_dummyshareway(){
 switch(parent.document.getElementById("dummyShareway").value){
 case "0":
-showtext(document.getElementById("dummyShareStr"), "\"<#1853#>\"");
+showtext(document.getElementById("dummyShareStr"), "\"<#1899#>\"");
 break;
 case "1":
-showtext(document.getElementById("dummyShareStr"), "\"<#1854#>\"");
+showtext(document.getElementById("dummyShareStr"), "\"<#1900#>\"");
 break;
 case "2":
-showtext(document.getElementById("dummyShareStr"), "\"<#1855#>\"");
+showtext(document.getElementById("dummyShareStr"), "\"<#1901#>\"");
 break;
 }
 }
@@ -141,13 +141,13 @@ parent.initialAccount();
 </td>
 </tr>
 <tr>
-<td align="left" class="formfonttitle" style="padding-left:20px;" height="72"><#1856#></td>
+<td align="left" class="formfonttitle" style="padding-left:20px;" height="72"><#1902#></td>
 </tr>
 <tr>
 <td colspan="3" valign="top" align="left" class="">
 <div style="width:660px; line-height:180%;">
 <ul>
-<li><#2366#>
+<li><#2416#>
 <span id="dummyShareStr"></span>
 </li>
 <span id="haveDDNS">
@@ -156,13 +156,13 @@ Internet FTP address: <a target="_blank" style="text-decoration: underline; font
 </li>
 </span>
 <span id="priv_wan_ip" style="color:#FFCC00;">
-<li><#1383#></li>
+<li><#1421#></li>
 </span>
 <span id="noFTP" class="ServerClose">
-<li><#1431#></li>
+<li><#1469#></li>
 </span>
 <span id="noDDNS" class="ServerClose">
-<li><#1432#></li>
+<li><#1470#></li>
 </span>
 </ul>
 </div>
@@ -176,8 +176,8 @@ Internet FTP address: <a target="_blank" style="text-decoration: underline; font
 <tr valign="bottom">
 <td width="20%">
 <div class="apply_gen" style="margin-top:30px">
-<input type="button" id="prevButton" value="<#78#>" onclick="go_pre_page();" class="button_gen">
-<input type="button" id="finish" value="<#873#>" class="button_gen">
+<input type="button" id="prevButton" value="<#80#>" onclick="go_pre_page();" class="button_gen">
+<input type="button" id="finish" value="<#890#>" class="button_gen">
 </div>
 </td>
 </tr>

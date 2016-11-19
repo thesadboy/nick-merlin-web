@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#533#> - <#220#></title>
+<title><#548#> - <#223#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <script language="JavaScript" type="text/javascript" src="/state.js"></script>
@@ -76,23 +76,28 @@ function display_clients(clientsarray, obj) {
 var code, i, client, overlib_str;
 code = '<table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">';
 code += '<thead><tr>';
-code += '<td width="15%">MAC</td>';
-code += '<td width="16%">IP</td>';
-code += '<td width="16%">Name</td><td width="10%">RSSI</td><td width="16%">Rx / Tx Rate</td><td width="12%">Connected</td>';
+code += '<td width="25%">Device</td>';
+code += '<td width="37%">IP</td>';
+code += '<td width="16%">Rx/Tx & RSSI</td><td width="12%">Connected</td>';
 code += '<td width="10%">Flags</td>';
 code += '</tr></thead>';
 if (clientsarray.length > 1) {
 for (i = 0; i < clientsarray.length-1; ++i) {
 client = clientsarray[i];
 code += '<tr>';
-overlib_str = "<p><#170#>:</p>" + client[0];
-code += '<td><span style="margin-top:-15px; color: white;" class="link" onclick="oui_query_full_vendor(\'' + client[0] +'\');overlib_str_tmp=\''+ overlib_str +'\';return overlib(\''+ overlib_str +'\');" onmouseout="nd();" style="cursor:pointer; text-decoration:underline;">'+ client[0] +'</span></td>';
-code += '<td>' + client[1] + '</td>'; // IP
-code += '<td>' + client[2] + '</td>'; // Name
-code += '<td>' + client[3] + ' dBm</td>'; // RSSI
-code += '<td>' + client[4] + ' / ' + client[5] +' Mbps</td>'; // Rate
-code += '<td>' + client[6] + '</td>'; // Time
-code += '<td>' + client[7] + '</td>'; // Flags
+overlib_str = "<p><#173#>:</p>" + client[0];
+code += '<td><span style="margin-top:-15px; color: white;" class="link" onclick="oui_query_full_vendor(\'' + client[0] +'\');overlib_str_tmp=\''+ overlib_str +'\';return overlib(\''+ overlib_str +'\');" onmouseout="nd();" style="cursor:pointer; text-decoration:underline;">'+ client[0] +'</span>';
+if (client[2].length > 24) { // Name
+code +='<br><span style="margin-top:-15px; color: cyan;" title="' + client[2] + '">'+ client[2].substring(0,20) +'...</span></td>';
+} else {
+code +='<br><span style="margin-top:-15px; color: cyan;">'+ htmlEnDeCode.htmlEncode(client[2]) +'</span></td>';
+}
+code += '<td style="vertical-align: top;">' + htmlEnDeCode.htmlEncode(client[1]); // IPv4
+code += '<br><span style="margin-top:-15px; color: cyan;">'+ client[3] +'</span></td>'; // IPv6
+code += '<td style="text-align: right;">' + client[5] + ' / ' + client[6] +' Mbps'; // Rate
+code += '<br><span style="margin-top:-15px; color: cyan;">' + client[4] + ' dBm</td>'; // RSSI
+code += '<td style="text-align: right;">' + client[7] + '</td>'; // Time
+code += '<td>' + client[8] + '</td>'; // Flags
 code += '</tr>';
 }
 } else {
@@ -106,9 +111,13 @@ var code;
 code = '<table width="100%" style="border: none;">';
 code += '<thead><tr><span class="wifiheader" style="font-size: 125%;">' + title +'</span></tr></thead>';
 code += '<tr><td colspan="3"><span class="wifiheader">SSID: </span>' + dataarray[0] + '</td><td colspan="2"><span class="wifiheader">Mode: </span>' + dataarray[6] + '</td></tr>';
-code += '<tr><td><span class="wifiheader">RSSI: </span>' + dataarray[1] + ' dBm</td> <td><span class="wifiheader">SNR: </span>' + dataarray[2] +' dB</td> <td>';
-code += '<span class="wifiheader">Noise: </span>' + dataarray[3] + ' dBm</td><td><span class="wifiheader">Channel: </span>'+ dataarray[4] + '</td>';
-code += '<td><span class="wifiheader">BSSID: </span>' + dataarray[5] +'</td></tr></table>';
+if (dataarray[1] != 0)
+code += '<tr><td><span class="wifiheader">RSSI: </span>' + dataarray[1] + ' dBm</td>';
+if (dataarray[2] != 0)
+code += ' <td><span class="wifiheader">SNR: </span>' + dataarray[2] +' dB</td> <td>';
+if (dataarray[3] != 0)
+code += '<td><span class="wifiheader">Noise: </span>' + dataarray[3] + ' dBm</td>';
+code += '<td><span class="wifiheader">Channel: </span>'+ dataarray[4] + '</td> <td><span class="wifiheader">BSSID: </span>' + dataarray[5] +'</td></tr></table>';
 obj.innerHTML = code;
 }
 function get_wlclient_list() {
@@ -174,7 +183,7 @@ get_wlclient_list();
 <tr bgcolor="#4D595D">
 <td valign="top">
 <div>&nbsp;</div>
-<div class="formfonttitle"><#488#> - <#220#></div>
+<div class="formfonttitle"><#489#> - <#223#></div>
 <div style="margin-left:5px;margin-top:10px;margin-bottom:10px"><img src="/images/New_ui/export/line_export.png"></div>
 <div class="formfontdesc">List of connected Wireless clients</div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
@@ -204,7 +213,7 @@ get_wlclient_list();
 <div id="flags_div">Flags: <span class="wifiheader">P</span>=Powersave Mode, <span class="wifiheader">S</span>=Short GI, <span class="wifiheader">T</span>=STBC, <span class="wifiheader">A</span>=Associated, <span class="wifiheader">U</span>=Authenticated, <span class="wifiheader">G</span>=Guest</div>
 <br>
 <div class="apply_gen">
-<input type="button" onClick="location.href=location.href" value="<#882#>" class="button_gen" >
+<input type="button" onClick="location.href=location.href" value="<#899#>" class="button_gen" >
 </div>
 </td>
 </tr>

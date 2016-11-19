@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#533#> - NAT Pass-Through</title>
+<title><#548#> - NAT Pass-Through</title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <script language="JavaScript" type="text/javascript" src="/state.js"></script>
@@ -55,79 +55,79 @@ document.form.submit();
 <tr>
 <td bgcolor="#4D595D" valign="top" >
 <div>&nbsp;</div>
-<div class="formfonttitle"><#195#> - <#225#></div>
+<div class="formfonttitle"><#198#> - <#228#></div>
 <div style="margin-left:5px;margin-top:10px;margin-bottom:10px"><img src="/images/New_ui/export/line_export.png"></div>
-<div class="formfontdesc"><#1569#></div>
+<div class="formfontdesc"><#1609#></div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <tr>
-<th><#1570#></th>
+<th><#1610#></th>
 <td>
 <select name="fw_pt_pptp" class="input_option">
-<option class="content_input_fd" value="0" <% nvram_match("fw_pt_pptp", "0","selected"); %>><#822#></option>
-<option class="content_input_fd" value="1"<% nvram_match("fw_pt_pptp", "1","selected"); %>><#2229#></option>
+<option class="content_input_fd" value="0" <% nvram_match("fw_pt_pptp", "0","selected"); %>><#839#></option>
+<option class="content_input_fd" value="1"<% nvram_match("fw_pt_pptp", "1","selected"); %>><#2279#></option>
 </select>
 </td>
 </tr>
 <tr>
-<th><#1568#></th>
+<th><#1606#></th>
 <td>
 <select name="fw_pt_l2tp" class="input_option">
-<option class="content_input_fd" value="0" <% nvram_match("fw_pt_l2tp", "0","selected"); %>><#822#></option>
-<option class="content_input_fd" value="1"<% nvram_match("fw_pt_l2tp", "1","selected"); %>><#2229#></option>
+<option class="content_input_fd" value="0" <% nvram_match("fw_pt_l2tp", "0","selected"); %>><#839#></option>
+<option class="content_input_fd" value="1"<% nvram_match("fw_pt_l2tp", "1","selected"); %>><#2279#></option>
 </select>
 </td>
 </tr>
 <tr>
-<th><#1567#></th>
+<th><#1605#></th>
 <td>
 <select name="fw_pt_ipsec" class="input_option">
-<option class="content_input_fd" value="0" <% nvram_match("fw_pt_ipsec", "0","selected"); %>><#822#></option>
-<option class="content_input_fd" value="1"<% nvram_match("fw_pt_ipsec", "1","selected"); %>><#2229#></option>
+<option class="content_input_fd" value="0" <% nvram_match("fw_pt_ipsec", "0","selected"); %>><#839#></option>
+<option class="content_input_fd" value="1"<% nvram_match("fw_pt_ipsec", "1","selected"); %>><#2279#></option>
 </select>
 </td>
 </tr>
 <tr>
-<th><#1571#></th>
+<th><#1611#></th>
 <td>
 <select name="fw_pt_rtsp" class="input_option">
-<option class="content_input_fd" value="0" <% nvram_match("fw_pt_rtsp", "0","selected"); %>><#822#></option>
-<option class="content_input_fd" value="2"<% nvram_match("fw_pt_rtsp", "2","selected"); %>><#2229#></option>
+<option class="content_input_fd" value="0" <% nvram_match("fw_pt_rtsp", "0","selected"); %>><#839#></option>
+<option class="content_input_fd" value="2"<% nvram_match("fw_pt_rtsp", "2","selected"); %>><#2279#></option>
 <option class="content_input_fd" value="1"<% nvram_match("fw_pt_rtsp", "1","selected"); %>>Enabled + NAT helper</option>
 </select>
 </td>
 </tr>
 <tr>
-<th><#1566#></th>
+<th><#1604#></th>
 <td>
 <select name="fw_pt_h323" class="input_option">
-<option class="content_input_fd" value="0" <% nvram_match("fw_pt_h323", "0","selected"); %>><#822#></option>
-<option class="content_input_fd" value="2"<% nvram_match("fw_pt_h323", "2","selected"); %>><#2229#></option>
+<option class="content_input_fd" value="0" <% nvram_match("fw_pt_h323", "0","selected"); %>><#839#></option>
+<option class="content_input_fd" value="2"<% nvram_match("fw_pt_h323", "2","selected"); %>><#2279#></option>
 <option class="content_input_fd" value="1"<% nvram_match("fw_pt_h323", "1","selected"); %>>Enabled + NAT helper</option>
 </select>
 </td>
 </tr>
 <tr>
-<th><#1572#></th>
+<th><#1612#></th>
 <td>
 <select name="fw_pt_sip" class="input_option">
-<option class="content_input_fd" value="0" <% nvram_match("fw_pt_sip", "0","selected"); %>><#822#></option>
-<option class="content_input_fd" value="2"<% nvram_match("fw_pt_sip", "2","selected"); %>><#2229#></option>
+<option class="content_input_fd" value="0" <% nvram_match("fw_pt_sip", "0","selected"); %>><#839#></option>
+<option class="content_input_fd" value="2"<% nvram_match("fw_pt_sip", "2","selected"); %>><#2279#></option>
 <option class="content_input_fd" value="1"<% nvram_match("fw_pt_sip", "1","selected"); %>>Enabled + NAT helper</option>
 </select>
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,11);"><#1669#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,11);"><#1712#></a></th>
 <td>
 <select name="fw_pt_pppoerelay" class="input_option">
-<option class="content_input_fd" value="0" <% nvram_match("fw_pt_pppoerelay", "0","selected"); %>><#822#></option>
-<option class="content_input_fd" value="1"<% nvram_match("fw_pt_pppoerelay", "1","selected"); %>><#2229#></option>
+<option class="content_input_fd" value="0" <% nvram_match("fw_pt_pppoerelay", "0","selected"); %>><#839#></option>
+<option class="content_input_fd" value="1"<% nvram_match("fw_pt_pppoerelay", "1","selected"); %>><#2279#></option>
 </select>
 </td>
 </tr>
 </table>
 <div class="apply_gen">
-<input class="button_gen" onclick="applyRule()" type="button" value="<#72#>"/>
+<input class="button_gen" onclick="applyRule()" type="button" value="<#73#>"/>
 </div>
 </td>
 </tr>

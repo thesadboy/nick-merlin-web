@@ -196,13 +196,33 @@ callback.apply(this, [this[i], i, this]);
 }
 };
 }
+var isIE8 = navigator.userAgent.search("MSIE 8") > -1;
+var isIE9 = navigator.userAgent.search("MSIE 9") > -1;
 var lock_time = '<% get_parameter("lock_time"); %>';
-var remaining_time;
-remaining_time = 60 - lock_time;
+var remaining_time = 60 - lock_time;
 var countdownid, rtime_obj;
 var redirect_page = '<% get_parameter("page"); %>';
+var cloud_file = '<% get_parameter("file"); %>';
+if ('<% nvram_get("http_dut_redir"); %>' == '1') {
+var isRouterMode = ('<% nvram_get("sw_mode"); %>' == '1') ? true : false;
+var ROUTERHOSTNAME = '<% nvram_get("local_domain"); %>';
+var iAmAlive = function(ret){if(ret.isdomain) top.location.href=top.location.href.replace(location.hostname, ROUTERHOSTNAME)};
+(function(){
+var locationOrigin = window.location.protocol + "//" + ROUTERHOSTNAME + (window.location.port ? ':' + window.location.port : '');
+if(location.hostname !== ROUTERHOSTNAME && ROUTERHOSTNAME != "" && isRouterMode){
+setTimeout(function(){
+var s=document.createElement("script");s.type="text/javascript";s.src=locationOrigin+"/httpd_check.json?hostname="+location.hostname;;var h=document.getElementsByTagName("script")[0];h.parentNode.insertBefore(s,h);
+}, 1);
+}
+})();
+}
+<% login_state_hook(); %>
 function initial(){
 var flag = '<% get_parameter("error_status"); %>';
+if(isIE8 || isIE9){
+document.getElementById("name_title_ie").style.display ="";
+document.getElementById("password_title_ie").style.display ="";
+}
 if('<% check_asus_model(); %>' == '0'){
 document.getElementById("warming_field").style.display ="";
 disable_input(0);
@@ -210,8 +230,9 @@ disable_button(1);
 }
 if(flag != ""){
 document.getElementById("error_status_field").style.display ="";
-if(flag == 3)
+if(flag == 3){
 document.getElementById("error_status_field").innerHTML ="* Invalid username or password";
+}
 else if(flag == 7){
 document.getElementById("error_status_field").innerHTML ="You have entered an incorrect username or password 5 times. Please try again after "+"<span id='rtime'></span>"+" seconds.";
 document.getElementById("error_status_field").className = "error_hint error_hint1";
@@ -220,17 +241,18 @@ disable_button(1);
 rtime_obj=document.getElementById("rtime");
 rtime_obj.innerHTML=remaining_time;
 countdownid = window.setInterval(countdownfunc,1000);
-}else if(flag == 8){
+}
+else if(flag == 8){
 document.getElementById("login_filed").style.display ="none";
 document.getElementById("logout_field").style.display ="";
-}else if(flag == 9){
-<% login_state_hook(); %>
+}
+else if(flag == 9){
 var loginUserIp = (function(){
 return (typeof login_ip_str === "function") ? login_ip_str().replace("0.0.0.0", "") : "";
 })();
 var getLoginUser = function(){
 if(loginUserIp === "") return "";
-var dhcpLeaseInfo = <% IP_dhcpLeaseInfo(); %>
+var dhcpLeaseInfo = [];
 var hostName = "";
 dhcpLeaseInfo.forEach(function(elem){
 if(elem[0] === loginUserIp){
@@ -238,13 +260,15 @@ hostName = " (" + elem[1] + ")";
 return false;
 }
 })
-return "<div style='margin-top:15px;word-wrap:break-word;word-break:break-all'>* <#1438#> " + loginUserIp + hostName + "</div>";
+return "<div style='margin-top:15px;word-wrap:break-word;word-break:break-all'>* <#1476#> " + loginUserIp + hostName + "</div>";
 };
 document.getElementById("logined_ip_str").innerHTML = getLoginUser();
 document.getElementById("login_filed").style.display ="none";
 document.getElementById("nologin_field").style.display ="";
-}else
+}
+else{
 document.getElementById("error_status_field").style.display ="none";
+}
 }
 document.form.login_username.focus();
 /*register keyboard event*/
@@ -275,6 +299,25 @@ return false;
 };
 if(history.pushState != undefined) history.pushState("", document.title, window.location.pathname);
 document.getElementById("branchTitle").innerHTML = get_Brand();
+}
+function get_Brand()
+{
+var brand,tile;
+brand = '<% nvram_get("brand"); %>';
+tile = '<#475#>';
+if (brand == "LINKSYS")
+{
+tile = '<#477#>';
+}
+else if (brand == "NETGEAR")
+{
+tile = '<#476#>';
+}
+else if (brand == "HUAWEI")
+{
+tile = '<#478#>';
+}
+return tile;
 }
 function countdownfunc(){
 rtime_obj.innerHTML=remaining_time;
@@ -343,30 +386,27 @@ document.form.login_username.value = trim(document.form.login_username.value);
 document.form.login_authorization.value = btoa(document.form.login_username.value + ':' + document.form.login_passwd.value);
 document.form.login_username.disabled = true;
 document.form.login_passwd.disabled = true;
-if(redirect_page == "" || redirect_page == "Logout.asp" || redirect_page == "Main_Login.asp" || redirect_page.indexOf(" ") != -1 || (redirect_page.indexOf(".asp") == -1 && redirect_page.indexOf(".htm") == -1))
+try{
+if(redirect_page == ""
+|| redirect_page == "Logout.asp"
+|| redirect_page == "Main_Login.asp"
+|| redirect_page.indexOf(" ") != -1
+|| (redirect_page.indexOf(".asp") == -1 && redirect_page.indexOf(".htm") == -1)
+){
 document.form.next_page.value = "index.asp";
-else
+}
+else{
 document.form.next_page.value = redirect_page;
+}
+}
+catch(e){
+document.form.next_page.value = "index.asp";
+}
+if(document.form.next_page.value == "cloud_sync.asp"){
+document.form.cloud_file.disabled = false;
+document.form.cloud_file.value = cloud_file;
+}
 document.form.submit();
-}
-function get_Brand()
-{
-var brand,tile,select_lang;
-brand = '<% nvram_get("brand"); %>';
-select_lang = '<% nvram_get("preferred_lang"); %>';
-tile = '<#474#>';
-if (select_lang == "CN" || select_lang == "TW" || select_lang == "EN")
-{
-if (brand == "LINKSYS")
-{
-tile = '<#477#>';
-}
-else if (brand == "NETGEAR")
-{
-tile = '<#476#>';
-}
-}
-return tile;
 }
 function disable_input(val){
 var disable_input_x = document.getElementsByClassName('form_input');
@@ -387,6 +427,7 @@ document.getElementsByClassName('button')[0].style.display = "none";
 </head>
 <body class="wrapper" onload="initial();">
 <iframe name="hidden_frame" id="hidden_frame" width="0" height="0" frameborder="0"></iframe>
+<iframe id="dmRedirection" width="0" height="0" frameborder="0" scrolling="no" src=""></iframe>
 <form method="post" name="form" action="login.cgi" target="">
 <input type="hidden" name="group_id" value="">
 <input type="hidden" name="action_mode" value="">
@@ -395,6 +436,7 @@ document.getElementsByClassName('button')[0].style.display = "none";
 <input type="hidden" name="current_page" value="Main_Login.asp">
 <input type="hidden" name="next_page" value="Main_Login.asp">
 <input type="hidden" name="login_authorization" value="">
+<input type="hidden" name="cloud_file" value="" disabled>
 <div class="div_table main_field_gap">
 <div class="div_tr">
 <div id="warming_field" style="display:none;" class="warming_desc">Note: the router you are using is not an ASUS device or has not been authorised by ASUS. ASUSWRT might not work properly on this device.</div>
@@ -404,28 +446,30 @@ document.getElementsByClassName('button')[0].style.display = "none";
 </div>
 <div class="div_td">SIGN IN</div>
 </div>
-<div class="prod_madelName"><#534#></div>
+<div class="prod_madelName"><#549#></div>
 <div id="login_filed">
 <div id="branchTitle" class="p1 title_gap"></div>
+<div id="name_title_ie" style="display:none;margin:20px 0 -10px 78px;" class="p1 title_gap"><#1283#></div>
 <div class="title_gap">
-<input type="text" id="login_username" name="login_username" tabindex="1" class="form_input" maxlength="20" autocapitalize="off" autocomplete="off" placeholder="<#1246#>">
+<input type="text" id="login_username" name="login_username" tabindex="1" class="form_input" maxlength="20" autocapitalize="off" autocomplete="off" placeholder="<#1283#>">
 </div>
+<div id="password_title_ie" style="display:none;margin:20px 0 -20px 78px;" class="p1 title_gap"><#1276#></div>
 <div class="password_gap">
-<input type="password" name="login_passwd" tabindex="2" class="form_input" maxlength="16" placeholder="<#1239#>" autocapitalize="off" autocomplete="off">
+<input type="password" name="login_passwd" tabindex="2" class="form_input" maxlength="16" placeholder="<#1276#>" autocapitalize="off" autocomplete="off">
 </div>
 <div class="error_hint" style="display:none;" id="error_status_field"></div>
-<div class="button" onclick="login();"><#81#></div>
+<div class="button" onclick="login();"><#83#></div>
 </div>
 <div id="nologin_field" style="display:none;">
 <div class="p1 title_gap"></div>
 <div class="nologin">
-<#1439#>
+<#1477#>
 <div id="logined_ip_str"></div>
 </div>
 </div>
 <div id="logout_field" style="display:none;">
 <div class="p1 title_gap"></div>
-<div class="nologin"><#1440#>
+<div class="nologin"><#1478#>
 <br><br>Click <a style="color: #FFFFFF; font-weight: bolder;text-decoration:underline;" class="hyperlink" href="Main_Login.asp">here</a> to log back in.
 </div>
 </div>

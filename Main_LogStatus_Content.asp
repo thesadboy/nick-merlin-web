@@ -7,7 +7,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#533#> - <#218#></title>
+<title><#548#> - <#221#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <script language="JavaScript" type="text/javascript" src="/state.js"></script>
@@ -54,7 +54,7 @@ function showDST(){
 var system_timezone_dut = "<% nvram_get("time_zone"); %>";
 if(system_timezone_dut.search("DST") >= 0 && "<% nvram_get("time_zone_dst"); %>" == "1"){
 document.getElementById('dstzone').style.display = "";
-document.getElementById('dstzone').innerHTML = "<#110#>";
+document.getElementById('dstzone').innerHTML = "<#113#>";
 }
 }
 function initial(){
@@ -99,20 +99,20 @@ retArea.scrollTop = retArea.scrollHeight - retArea.clientHeight;
 <tr>
 <td bgcolor="#4D595D" colspan="3" valign="top">
 <div>&nbsp;</div>
-<div class="formfonttitle"><#488#> - <#218#></div>
+<div class="formfonttitle"><#489#> - <#221#></div>
 <div style="margin-left:5px;margin-top:10px;margin-bottom:10px"><img src="/images/New_ui/export/line_export.png"></div>
-<div class="formfontdesc"><#1206#></div>
+<div class="formfontdesc"><#1243#></div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <tr>
-<th width="20%"><#111#></th>
+<th width="20%"><#114#></th>
 <td>
 <input type="text" id="system_time" name="system_time" size="40" class="devicepin" value="" readonly="1" style="font-size:12px;" autocorrect="off" autocapitalize="off">
 <br><span id="dstzone" style="display:none;margin-left:5px;color:#FFFFFF;"></span>
 </td>
 </tr>
 <tr>
-<th><#1205#></a></th>
-<td><span id="boot_days"></span> <#900#> <span id="boot_hours"></span> <#1223#> <span id="boot_minutes"></span> <#1476#> <span id="boot_seconds"></span> <#1760#></td>
+<th><#1242#></a></th>
+<td><span id="boot_days"></span> <#918#> <span id="boot_hours"></span> <#1260#> <span id="boot_minutes"></span> <#1514#> <span id="boot_seconds"></span> <#1802#></td>
 </tr>
 </table>
 <div style="margin-top:8px">
@@ -125,19 +125,19 @@ retArea.scrollTop = retArea.scrollHeight - retArea.clientHeight;
 <form method="post" name="form1" action="apply.cgi">
 <input type="hidden" name="current_page" value="Main_LogStatus_Content.asp">
 <input type="hidden" name="action_mode" value=" Clear ">
-<input type="submit" onClick="onSubmitCtrl(this, ' Clear ')" value="<#865#>" class="button_gen">
+<input type="submit" onClick="onSubmitCtrl(this, ' Clear ')" value="<#883#>" class="button_gen">
 </form>
 </td>
 <td width="20%" align="center">
 <form method="post" name="form2" action="syslog.txt">
-<input type="submit" onClick="onSubmitCtrl(this, ' Save ');" value="<#880#>" class="button_gen">
+<input type="submit" onClick="onSubmitCtrl(this, ' Save ');" value="<#897#>" class="button_gen">
 </form>
 </td>
 <td width="40%" align="left" >
 <form method="post" name="form3" action="apply.cgi">
 <input type="hidden" name="current_page" value="Main_LogStatus_Content.asp">
 <input type="hidden" name="action_mode" value=" Refresh ">
-<input type="button" onClick="location.href=location.href" value="<#882#>" class="button_gen">
+<input type="button" onClick="location.href=location.href" value="<#899#>" class="button_gen">
 </form>
 </td>
 </tr>

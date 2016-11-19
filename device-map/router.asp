@@ -93,8 +93,30 @@ document.form.wl_subunit.value = -1;
 if(parent.sw_mode == 2 && parent.concurrep_support)
 document.form.wl_subunit.value = 1;
 if(smart_connect_support){
-if(based_modelid == "RT-AC5300"){
-if('<% nvram_get("smart_connect_x"); %>' !=0)
+var smart_connect_x = '<% nvram_get("smart_connect_x"); %>';
+if(based_modelid == "RT-AC5300" ||
+based_modelid == "RT-AC5300R" ||
+based_modelid == "RT-AC3200" ||
+based_modelid == "RT-AC88U" ||
+based_modelid == "RT-AC3100"){
+var value = new Array();
+var desc = new Array();
+if(based_modelid == "RT-AC5300" || based_modelid == "RT-AC5300R"){
+desc = ["none", "Tri-Band Smart Connect", "5GHz Smart Connect"];
+value = ["0", "1", "2"];
+add_options_x2(document.form.smart_connect_t, desc, value, smart_connect_x);
+}
+else if(based_modelid == "RT-AC3200"){
+desc = ["none", "Tri-Band Smart Connect"];
+value = ["0", "1"];
+add_options_x2(document.form.smart_connect_t, desc, value, smart_connect_x);
+}
+else if(based_modelid == "RT-AC88U" || based_modelid == "RT-AC3100"){
+desc = ["none", "Dual-Band Smart Connect"];
+value = ["0", "1"];
+add_options_x2(document.form.smart_connect_t, desc, value, smart_connect_x);
+}
+if(smart_connect_x !=0)
 document.getElementById("smart_connect_field").style.display = '';
 }else{
 document.getElementById("smartcon_enable_field").style.display = '';
@@ -112,7 +134,7 @@ document.form.wl_key3.value = decodeURIComponent('<% nvram_char_to_ascii("", "wl
 document.form.wl_key4.value = decodeURIComponent('<% nvram_char_to_ascii("", "wl_key4"); %>');
 /* Viz banned 2012.06
 if(document.form.wl_wpa_psk.value.length <= 0)
-document.form.wl_wpa_psk.value = "<#2176#>";
+document.form.wl_wpa_psk.value = "<#2229#>";
 */
 limit_auth_method();
 wl_auth_mode_change(1);
@@ -158,6 +180,9 @@ document.form.wl_subunit.value = 1;
 else if((parent.sw_mode == 2 || parent.sw_mode == 4) && '<% nvram_get("wlc_band"); %>' == wl_unit){
 document.form.wl_subunit.value = 1;
 }
+else if (parent.sw_mode == 2 && parent.concurrep_support){
+document.form.wl_subunit.value = 1;
+}
 else{
 document.form.wl_subunit.value = -1;
 }
@@ -165,8 +190,9 @@ document.form.wl_unit.value = wl_unit;
 if(smart_connect_support){
 var smart_connect_flag = document.form.smart_connect_x.value;
 document.form.current_page.value = "device-map/router.asp?flag=" + smart_connect_flag;
-}else
-document.form.current_page.value = "device-map/router.asp";
+}else{
+document.form.current_page.value = "device-map/router.asp?time=" + Math.round(new Date().getTime()/1000);
+}
 FormActions("/apply.cgi", "change_wl_unit", "", "");
 document.form.target = "hidden_frame";
 document.form.submit();
@@ -240,6 +266,11 @@ wep_type_array = new Array("WEP-64bits", "WEP-128bits");
 value_array = new Array("1", "2");
 show_wep_x = 1;
 }
+else if(based_modelid == "RP-AC66"){
+wep_type_array = new Array("None");
+value_array = new Array("0");
+cur_wep = "0";
+}
 else if(mode == "open" && (document.form.wl_nmode_x.value == 2 || sw_mode == 2)){
 wep_type_array = new Array("None", "WEP-64bits", "WEP-128bits");
 value_array = new Array("0", "1", "2");
@@ -298,12 +329,12 @@ if(lan_ipaddr_t != '')
 showtext(document.getElementById("LANIP"), lan_ipaddr_t);
 else
 showtext(document.getElementById("LANIP"), '<% nvram_get("lan_ipaddr"); %>');
-if(yadns_support){
+if(yadns_support && parent.sw_mode == 1){
 var mode = (yadns_enable != 0) ? yadns_mode : -1;
 showtext(document.getElementById("yadns_mode"), get_yadns_modedesc(mode));
 for(var i = 0; i < 3; i++){
 var visible = (yadns_enable != 0 && i != mode && yadns_clients[i]) ? true : false;
-var modedesc = visible ? get_yadns_modedesc(i) + ": <#1164#> " + yadns_clients[i] : "";
+var modedesc = visible ? get_yadns_modedesc(i) + ": <#1200#> " + yadns_clients[i] : "";
 showtext2(document.getElementById("yadns_mode" + i), modedesc, visible);
 }
 if (!yadns_hideqis || yadns_enable != 0)
@@ -370,7 +401,7 @@ document.form.submit();
 }
 function submitForm(){
 var auth_mode = document.form.wl_auth_mode_x.value;
-if(document.form.wl_wpa_psk.value == "<#2176#>")
+if(document.form.wl_wpa_psk.value == "<#2229#>")
 document.form.wl_wpa_psk.value = "";
 if(!validator.stringSSID(document.form.wl_ssid))
 return false;
@@ -388,7 +419,7 @@ return false;
 }
 var is_common_string = check_common_string(document.form.wl_wpa_psk.value, "wpa_key");
 if(is_common_string){
-if(confirm("<#133#>")){
+if(!confirm("<#136#>")){
 document.form.wl_wpa_psk.focus();
 document.form.wl_wpa_psk.select();
 return false;
@@ -421,7 +452,7 @@ document.form.submit();
 return true;
 }
 function clean_input(obj){
-if(obj.value == "<#2176#>")
+if(obj.value == "<#2229#>")
 obj.value = "";
 }
 function gotoSiteSurvey(){
@@ -463,10 +494,10 @@ document.getElementById("span1").innerHTML = "5GHz";
 document.getElementById("t2").style.display = "none";
 }
 }else if(v == 1){ //Smart Connect
-if(based_modelid == "RT-AC5300")
+if(based_modelid == "RT-AC5300" || based_modelid == "RT-AC3200" || based_modelid == "RT-AC5300R")
 document.getElementById("span0").innerHTML = "2.4GHz, 5GHz-1 and 5GHz-2";
-else
-document.getElementById("span0").innerHTML = "Tri-band Smart Connect";
+else if(based_modelid == "RT-AC88U" || based_modelid == "RT-AC3100")
+document.getElementById("span0").innerHTML = "2.4GHz and 5GHz";
 document.getElementById("t1").style.display = "none";
 document.getElementById("t2").style.display = "none";
 document.getElementById("t0").style.width = (tab_width*wl_info.wl_if_total+10) +'px';
@@ -556,7 +587,7 @@ break;
 </td>
 <td>
 <div id="t3" class="tab_NW" align="center" style="font-weight: bolder; margin-right:2px; width:90px;" onclick="tabclickhandler(3)">
-<span id="span3" style="cursor:pointer;font-weight: bolder;">状态</span>
+<span id="span3" style="cursor:pointer;font-weight: bolder;">Status</span>
 </div>
 </td>
 </table>
@@ -569,8 +600,8 @@ break;
 <td height="50" style="padding:10px 15px 0px 15px;">
 <p class="formfonttitle_nwm" style="float:left;"><#31#></p>
 <br />
-<input type="button" class="button_gen" onclick="gotoSiteSurvey();" value="<#370#>" style="float:right;">
-<!--input type="button" class="button_gen" onclick="manualSetup();" value="<#177#>" style="float:right;"-->
+<input type="button" class="button_gen" onclick="gotoSiteSurvey();" value="<#375#>" style="float:right;">
+<!--input type="button" class="button_gen" onclick="manualSetup();" value="<#180#>" style="float:right;"-->
 <img style="margin-top:5px; *margin-top:-10px; visibility:hidden;" src="/images/New_ui/networkmap/linetwo2.png">
 </td>
 </tr>
@@ -579,11 +610,7 @@ break;
 <tr id="smart_connect_field" style="display:none">
 <td style="padding:5px 10px 0px 10px; *padding:1px 10px 0px 10px;">
 <p class="formfonttitle_nwm" >Smart Connect</p>
-<select style="*margin-top:-7px;" name="smart_connect_t" class="input_option" onchange="change_smart_connect(this.value);">
-<option value="0" <% nvram_match("smart_connect_x", "0", "selected"); %>>none</option>
-<option value="1" <% nvram_match("smart_connect_x", "1", "selected"); %>>Tri-band Smart Connect</option>
-<option value="2" <% nvram_match("smart_connect_x", "2", "selected"); %>>5GHz Smart Connect</option>
-</select>
+<select style="*margin-top:-7px;" name="smart_connect_t" class="input_option" onchange="change_smart_connect(this.value);"></select>
 <img style="margin-top:5px; *margin-top:-10px;"src="/images/New_ui/networkmap/linetwo2.png">
 </td>
 </tr>
@@ -623,14 +650,14 @@ change_smart_connect('0');
 <tr id="smartcon_enable_line" style="display:none"><td><img style="margin-top:-2px; *margin-top:-10px;"src="/images/New_ui/networkmap/linetwo2.png"></td></tr>
 <tr>
 <td style="padding:5px 10px 0px 10px; ">
-<p class="formfonttitle_nwm" ><#330#></p>
+<p class="formfonttitle_nwm" ><#335#></p>
 <input style="*margin-top:-7px; width:260px;" id="wl_ssid" type="text" name="wl_ssid" value="<% nvram_get("wl_ssid"); %>" maxlength="32" size="22" class="input_25_table" autocomplete="off" autocorrect="off" autocapitalize="off">
 <img style="margin-top:5px; *margin-top:-10px;"src="/images/New_ui/networkmap/linetwo2.png">
 </td>
 </tr>
 <tr>
 <td style="padding:5px 10px 0px 10px; *padding:1px 10px 0px 10px;">
-<p class="formfonttitle_nwm" ><#2186#></p>
+<p class="formfonttitle_nwm" ><#2239#></p>
 <select style="*margin-top:-7px;" name="wl_auth_mode_x" class="input_option" onChange="authentication_method_change(this);">
 <option value="open" <% nvram_match("wl_auth_mode_x", "open", "selected"); %>>Open System</option>
 <option value="shared" <% nvram_match("wl_auth_mode_x", "shared", "selected"); %>>Shared Key</option>
@@ -648,9 +675,9 @@ change_smart_connect('0');
 </tr>
 <tr id='all_related_wep' style='display:none;'>
 <td style="padding:5px 10px 0px 10px; *padding:1px 10px 0px 10px;">
-<p class="formfonttitle_nwm" ><#2227#></p>
+<p class="formfonttitle_nwm" ><#2277#></p>
 <select style="*margin-top:-7px;" name="wl_wep_x" id="wl_wep_x" class="input_option" onchange="change_wlweptype(this);">
-<option value="0" <% nvram_match("wl_wep_x", "0", "selected"); %>><#538#></option>
+<option value="0" <% nvram_match("wl_wep_x", "0", "selected"); %>><#553#></option>
 <option value="1" <% nvram_match("wl_wep_x", "1", "selected"); %>>WEP-64bits</option>
 <option value="2" <% nvram_match("wl_wep_x", "2", "selected"); %>>WEP-128bits</option>
 </select>
@@ -659,7 +686,7 @@ change_smart_connect('0');
 </tr>
 <tr id='all_wep_key' style='display:none;'>
 <td style="padding:5px 10px 0px 10px; *padding:1px 10px 0px 10px;">
-<p class="formfonttitle_nwm" ><#540#></p>
+<p class="formfonttitle_nwm" ><#555#></p>
 <select style="*margin-top:-7px;" name="wl_key" class="input_option" onchange="show_key();">
 <option value="1" <% nvram_match("wl_key", "1", "selected"); %>>1</option>
 <option value="2" <% nvram_match("wl_key", "2", "selected"); %>>2</option>
@@ -671,7 +698,7 @@ change_smart_connect('0');
 </tr>
 <tr id='asus_wep_key'>
 <td style="padding:5px 10px 0px 10px; ">
-<p class="formfonttitle_nwm" ><#541#>
+<p class="formfonttitle_nwm" ><#556#>
 </p>
 <input id="wl_asuskey1" name="wl_asuskey1" style="width:260px;*margin-top:-7px;" type="password" onBlur="switchType(this, false);" onFocus="switchType(this, true);" onKeyUp="return change_wlkey(this, 'WLANConfig11b');" value="" maxlength="27" class="input_25_table" autocorrect="off" autocapitalize="off">
 <img style="margin-top:5px; *margin-top:-10px;"src="/images/New_ui/networkmap/linetwo2.png">
@@ -679,7 +706,7 @@ change_smart_connect('0');
 </tr>
 <tr id='wl_crypto' style='display:none;'>
 <td style="padding:5px 10px 0px 10px; *padding:1px 10px 0px 10px;">
-<p class="formfonttitle_nwm" ><#544#></p>
+<p class="formfonttitle_nwm" ><#559#></p>
 <select style="*margin-top:-7px;" name="wl_crypto" class="input_option" onchange="wl_auth_mode_change(0);">
 <option value="aes" <% nvram_match("wl_crypto", "aes", "selected"); %>>AES</option>
 <option value="tkip+aes" <% nvram_match("wl_crypto", "tkip+aes", "selected"); %>>TKIP+AES</option>
@@ -689,7 +716,7 @@ change_smart_connect('0');
 </tr>
 <tr id='wl_wpa_psk_tr' style='display:none'>
 <td style="padding:5px 10px 0px 10px;">
-<p class="formfonttitle_nwm" ><#2339#>
+<p class="formfonttitle_nwm" ><#2389#>
 </p>
 <input id="wl_wpa_psk" name="wl_wpa_psk" style="width:260px;*margin-top:-7px;" type="password" onBlur="switchType(this, false);" onFocus="switchType(this, true);" value="" maxlength="64" class="input_25_table" autocomplete="off" autocorrect="off" autocapitalize="off"/>
 <input style="display:none" type="password" name="fakepasswordremembered"/>
@@ -698,7 +725,7 @@ change_smart_connect('0');
 </tr>
 <tr id="wl_radio_tr" style="display:none">
 <td style="padding:5px 10px 0px 10px;">
-<p class="formfonttitle_nwm" style="float:left;"><#2177#></p>
+<p class="formfonttitle_nwm" style="float:left;"><#2230#></p>
 <div class="left" style="width:94px; float:right;" id="radio_wl_radio"></div>
 <div class="clear"></div>
 <script type="text/javascript">
@@ -742,26 +769,26 @@ return true;
 <table width="95%" border="1" align="center" cellpadding="4" cellspacing="0" class="table1px">
 <tr id="apply_tr">
 <td style="border-bottom:5px #2A3539 solid;padding:5px 10px 5px 10px;">
-<input id="applySecurity" type="button" class="button_gen" value="<#72#>" onclick="submitForm();" style="margin-left:90px;">
+<input id="applySecurity" type="button" class="button_gen" value="<#73#>" onclick="submitForm();" style="margin-left:90px;">
 </td>
 </tr>
 <tr>
 <td style="padding:10px 10px 0px 10px;">
-<p class="formfonttitle_nwm" ><#1338#></p>
+<p class="formfonttitle_nwm" ><#1376#></p>
 <p style="padding-left:10px; margin-top:3px; *margin-top:-5px; margin-right:10px; background-color:#444f53; line-height:20px;" id="LANIP"></p>
 <img style="margin-top:5px; *margin-top:-10px;" src="/images/New_ui/networkmap/linetwo2.png">
 </td>
 </tr>
 <tr>
 <td style="padding:5px 10px 0px 10px;">
-<p class="formfonttitle_nwm" ><#1638#></p>
+<p class="formfonttitle_nwm" ><#1681#></p>
 <p style="padding-left:10px; margin-top:3px; *margin-top:-5px; margin-right:10px; background-color:#444f53; line-height:20px;" id="PINCode"></p>
 <img style="margin-top:5px; *margin-top:-10px;" src="/images/New_ui/networkmap/linetwo2.png">
 </td>
 </tr>
 <tr id="yadns_status" style="display:none;">
 <td style="padding:5px 10px 0px 10px;">
-<p class="formfonttitle_nwm" ><#2350#></p>
+<p class="formfonttitle_nwm" ><#2400#></p>
 <a href="/YandexDNS.asp" target="_parent">
 <p style="padding-left:10px; margin-top:3px; *margin-top:-5px; margin-right:10px; background-color:#444f53; line-height:20px;" id="yadns_mode"></p>
 <p style="padding-left:10px; margin-top:3px; *margin-top:-5px; margin-right:10px; background-color:#444f53; line-height:20px;" id="yadns_mode0"></p>
@@ -773,26 +800,26 @@ return true;
 </tr>
 <tr>
 <td style="padding:5px 10px 0px 10px;">
-<p class="formfonttitle_nwm" >LAN <#170#></p>
+<p class="formfonttitle_nwm" >LAN <#173#></p>
 <p style="padding-left:10px; margin-top:3px; *margin-top:-5px; padding-bottom:3px; margin-right:10px; background-color:#444f53; line-height:20px;" id="MAC"></p>
 <img style="margin-top:5px; *margin-top:-10px;" src="/images/New_ui/networkmap/linetwo2.png">
 </td>
 </tr>
 <tr id="macaddr_wl2">
 <td style="padding:5px 10px 0px 10px;">
-<p class="formfonttitle_nwm" >Wireless <span id="macaddr_wl2_title">2.4GHz </span><#170#></p>
+<p class="formfonttitle_nwm" >Wireless <span id="macaddr_wl2_title">2.4GHz </span><#173#></p>
 <p style="padding-left:10px; margin-bottom:5px; margin-top:3px; *margin-top:-5px; padding-bottom:3px; margin-right:10px; background-color:#444f53; line-height:20px;" id="MAC_wl2"></p>
 </td>
 </tr>
 <tr id="macaddr_wl5">
 <td style="padding:5px 10px 0px 10px;">
-<p class="formfonttitle_nwm" >Wireless <span id="macaddr_wl5_title">5GHz </span><#170#></p>
+<p class="formfonttitle_nwm" >Wireless <span id="macaddr_wl5_title">5GHz </span><#173#></p>
 <p style="padding-left:10px; margin-bottom:5px; margin-top:3px; *margin-top:-5px; padding-bottom:3px; margin-right:10px; background-color:#444f53; line-height:20px;" id="MAC_wl5"></p>
 </td>
 </tr>
 <tr id="macaddr_wl5_2" style="display:none;">
 <td style="padding:5px 10px 0px 10px;">
-<p class="formfonttitle_nwm" >Wireless <span id="macaddr_wl5_2_title">5GHz-2 </span><#170#></p>
+<p class="formfonttitle_nwm" >Wireless <span id="macaddr_wl5_2_title">5GHz-2 </span><#173#></p>
 <p style="padding-left:10px; margin-bottom:5px; margin-top:3px; *margin-top:-5px; padding-bottom:3px; margin-right:10px; background-color:#444f53; line-height:20px;" id="MAC_wl5_2"></p>
 </td>
 </tr>

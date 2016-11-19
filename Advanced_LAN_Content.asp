@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#533#> - <#192#></title>
+<title><#548#> - <#195#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="other.css">
@@ -74,7 +74,7 @@ obj_name.value = ipFilterZero(ip_obj.value);
 return true;
 }
 else if(ip_num > B_class_start && ip_num < B_class_end){
-alert(ip_obj.value+" <#146#>");
+alert(ip_obj.value+" <#149#>");
 ip_obj.focus();
 ip_obj.select();
 return false;
@@ -84,7 +84,7 @@ obj_name.value = ipFilterZero(ip_obj.value);
 return true;
 }
 else{
-alert(ip_obj.value+" <#146#>");
+alert(ip_obj.value+" <#149#>");
 ip_obj.focus();
 ip_obj.select();
 return false;
@@ -93,7 +93,7 @@ return false;
 function validForm(){
 var computer_name_check = new RegExp('^[a-zA-Z0-9\-\_\.\][a-zA-Z0-9\-\_\.\ ]*[a-zA-Z0-9\-\_]$','gi');
 if(!computer_name_check.test(document.form.computer_name.value)){
-alert("<#145#>");
+alert("<#148#>");
 document.form.computer_name.focus();
 document.form.computer_name.select();
 return false;
@@ -112,7 +112,7 @@ document.form.lan_proto.value = "static";
 if(!valid_IP(document.form.lan_ipaddr, "")) return false; //AP LAN IP
 if(!valid_IP(document.form.lan_gateway, "GW"))return false; //AP Gateway IP
 if(document.form.lan_gateway.value == document.form.lan_ipaddr.value){
-alert("<#120#>");
+alert("<#123#>");
 document.form.lan_gateway.focus();
 document.form.lan_gateway.select();
 return false;
@@ -128,7 +128,7 @@ if(sw_mode == 1 && document.form.wan_ipaddr_x.value != "0.0.0.0" && document.for
 if(validator.matchSubnet2(document.form.wan_ipaddr_x.value, document.form.wan_netmask_x, document.form.lan_ipaddr.value, document.form.lan_netmask)){
 document.form.lan_ipaddr.focus();
 document.form.lan_ipaddr.select();
-alert("<#1290#>");
+alert("<#1328#>");
 return false;
 }
 }
@@ -159,7 +159,7 @@ break;
 }
 }
 if(wrong_netmask == 1){
-alert(netmask_obj.value+" <#146#>");
+alert(netmask_obj.value+" <#149#>");
 netmask_obj.value = default_netmask;
 netmask_obj.focus();
 netmask_obj.select();
@@ -168,7 +168,7 @@ return false;
 var subnet_head = getSubnet(ip_obj.value, netmask_obj.value, "head");
 var subnet_end = getSubnet(ip_obj.value, netmask_obj.value, "end");
 if(ip_num == subnet_head || ip_num == subnet_end){
-alert(ip_obj.value+" <#146#>");
+alert(ip_obj.value+" <#149#>");
 ip_obj.focus();
 ip_obj.select();
 return false;
@@ -240,7 +240,7 @@ break;
 var update_pool_start = subnetPostfix(document.form.dhcp_start.value, pool_start, 3);
 var update_pool_end = subnetPostfix(document.form.dhcp_end.value, pool_end, 3);
 if((document.form.dhcp_start.value != update_pool_start) || (document.form.dhcp_end.value != update_pool_end)){
-if(confirm("<#1323#>")){
+if(confirm("<#1361#>")){
 document.form.dhcp_start.value = update_pool_start;
 document.form.dhcp_end.value = update_pool_end;
 }else{
@@ -294,7 +294,7 @@ return false;
 <table cellpadding="5" cellspacing="0" id="dr_sweet_advise" class="dr_sweet_advise" align="center">
 <tr>
 <td>
-<div class="drword" id="drword" style="height:110px;"><#174#> <#171#>...
+<div class="drword" id="drword" style="height:110px;"><#177#> <#174#>...
 <br/>
 <br/>
 </div>
@@ -342,27 +342,27 @@ return false;
 <tr>
 <td bgcolor="#4D595D" valign="top">
 <div>&nbsp;</div>
-<div class="formfonttitle"><#191#> - <#192#></div>
+<div class="formfonttitle"><#194#> - <#195#></div>
 <div style="margin-left:5px;margin-top:10px;margin-bottom:10px"><img src="/images/New_ui/export/line_export.png"></div>
-<div class="formfontdesc"><#1344#></div>
-<div id="VPN_conflict" class="formfontdesc" style="color:#FFCC00;display:none;"><#1345#></div>
+<div class="formfontdesc"><#1382#></div>
+<div id="VPN_conflict" class="formfontdesc" style="color:#FFCC00;display:none;"><#1383#></div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <tr id="table_proto">
-<th width="30%"><#165#></th>
+<th width="30%"><#168#></th>
 <td>
-<input type="radio" name="lan_proto_radio" class="input" onclick="change_ip_setting('dhcp')" value="dhcp" <% nvram_match("lan_proto", "dhcp", "checked"); %>><#65#>
-<input type="radio" name="lan_proto_radio" class="input" onclick="change_ip_setting('static')" value="static" <% nvram_match("lan_proto", "static", "checked"); %>><#64#>
+<input type="radio" name="lan_proto_radio" class="input" onclick="change_ip_setting('dhcp')" value="dhcp" <% nvram_match("lan_proto", "dhcp", "checked"); %>><#66#>
+<input type="radio" name="lan_proto_radio" class="input" onclick="change_ip_setting('static')" value="static" <% nvram_match("lan_proto", "static", "checked"); %>><#65#>
 </td>
 </tr>
 <tr>
-<th><#1793#></a></th>
+<th><#1835#></a></th>
 <td>
 <input type="text" name="computer_name" id="computer_name" class="input_15_table" maxlength="15" value="<% nvram_get("computer_name"); %>">
 </td>
 </tr>
 <tr>
 <th width="30%">
-<a class="hintstyle" href="javascript:void(0);" onClick="openHint(4,1);"><#119#></a>
+<a class="hintstyle" href="javascript:void(0);" onClick="openHint(4,1);"><#122#></a>
 </th>
 <td>
 <input type="text" maxlength="15" class="input_15_table" id="lan_ipaddr" name="lan_ipaddr" value="<% nvram_get("lan_ipaddr"); %>" onKeyPress="return validator.isIPAddr(this, event);" autocorrect="off" autocapitalize="off">
@@ -370,7 +370,7 @@ return false;
 </tr>
 <tr>
 <th>
-<a class="hintstyle" href="javascript:void(0);" onClick="openHint(4,2);"><#130#></a>
+<a class="hintstyle" href="javascript:void(0);" onClick="openHint(4,2);"><#133#></a>
 </th>
 <td>
 <input type="text" maxlength="15" class="input_15_table" name="lan_netmask" value="<% nvram_get("lan_netmask"); %>" onkeypress="return validator.isIPAddr(this, event);" autocorrect="off" autocapitalize="off">
@@ -379,21 +379,21 @@ return false;
 </td>
 </tr>
 <tr id="table_gateway">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,3);"><#128#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,3);"><#131#></a></th>
 <td>
 <input type="text" name="lan_gateway" maxlength="15" class="input_15_table" value="<% nvram_get("lan_gateway"); %>" onKeyPress="return validator.isIPAddr(this, event);" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr id="table_dnsenable">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,12);"><#126#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,12);"><#129#></a></th>
 <td>
-<input type="radio" name="lan_dnsenable_x_radio" value="1" onclick="display_lan_dns(1)" <% nvram_match("lan_dnsenable_x", "1", "checked"); %> /><#65#>
-<input type="radio" name="lan_dnsenable_x_radio" value="0" onclick="display_lan_dns(0)" <% nvram_match("lan_dnsenable_x", "0", "checked"); %> /><#64#>
+<input type="radio" name="lan_dnsenable_x_radio" value="1" onclick="display_lan_dns(1)" <% nvram_match("lan_dnsenable_x", "1", "checked"); %> /><#66#>
+<input type="radio" name="lan_dnsenable_x_radio" value="0" onclick="display_lan_dns(0)" <% nvram_match("lan_dnsenable_x", "0", "checked"); %> /><#65#>
 </td>
 </tr>
 <tr id="table_dns1">
 <th>
-<a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,13);"><#122#></a>
+<a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,13);"><#125#></a>
 </th>
 <td>
 <input type="text" maxlength="15" class="input_15_table" name="lan_dns1_x" value="<% nvram_get("lan_dns1_x"); %>" onkeypress="return validator.isIPAddr(this, event)" autocorrect="off" autocapitalize="off">
@@ -401,7 +401,7 @@ return false;
 </tr>
 <tr id="table_dns2">
 <th>
-<a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,14);"><#124#></a>
+<a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,14);"><#127#></a>
 </th>
 <td>
 <input type="text" maxlength="15" class="input_15_table" name="lan_dns2_x" value="<% nvram_get("lan_dns2_x"); %>" onkeypress="return validator.isIPAddr(this, event)" autocorrect="off" autocapitalize="off" >
@@ -409,7 +409,7 @@ return false;
 </tr>
 </table>
 <div class="apply_gen">
-<input class="button_gen" onclick="applyRule()" type="button" value="<#72#>"/>
+<input class="button_gen" onclick="applyRule()" type="button" value="<#73#>"/>
 </div>
 </td>
 </tr>

@@ -111,20 +111,20 @@ return folder_name;
 <thead>
 <tr>
 <td>
-<span style="color:#FFF"><#910#></span><img src="../images/button-close.gif" onClick="parent.hidePop('OverlayMask');">
+<span style="color:#FFF"><#928#></span><img src="../images/button-close.gif" onClick="parent.hidePop('OverlayMask');">
 </td>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td height="70" valign="middle"><#909#>
+<td height="70" valign="middle"><#927#>
 <span id="selected_Folder" style="color:#333333;"></span>
 </td>
 </tr>
 <tr>
 <td height="30" align="right" bgcolor="#E6E6E6">
-<input name="Submit" id="Submit" type="button" class="button_gen" value="<#867#>" onclick="">
-<input name="Cancel" id="Cancel" type="button" class="button_gen" value="<#74#>" onClick="parent.hidePop('OverlayMask');">
+<input name="Submit" id="Submit" type="button" class="button_gen" value="<#885#>" onclick="">
+<input name="Cancel" id="Cancel" type="button" class="button_gen" value="<#75#>" onClick="parent.hidePop('OverlayMask');">
 </td>
 </tr>
 </tbody>

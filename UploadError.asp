@@ -9,7 +9,7 @@
 </head>
 <body>
 <script>
-alert("<#1777#>");
+alert("<#1819#>");
 </script>
 </body>
 </html>

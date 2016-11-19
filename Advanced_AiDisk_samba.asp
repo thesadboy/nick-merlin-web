@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#533#> - <#202#></title>
+<title><#548#> - <#205#></title>
 <link rel="stylesheet" type="text/css" href="/index_style.css">
 <link rel="stylesheet" type="text/css" href="/form_style.css">
 <link rel="stylesheet" type="text/css" href="/aidisk/AiDisk_style.css">
@@ -16,8 +16,8 @@
 <script type="text/javascript" src="/general.js"></script>
 <script type="text/javascript" src="/help.js"></script>
 <script type="text/javascript" src="/popup.js"></script>
-<script type="text/javascript" src="/disk_functions.js"></script>
 <script type="text/javascript" src="/validator.js"></script>
+<script type="text/javascript" src="/disk_functions.js"></script>
 <script type="text/javascript" src="/js/jquery.js"></script>
 <script type="text/javascript" src="/switcherplugin/jquery.iphone-switch.js"></script>
 <script type="text/javascript">
@@ -35,7 +35,7 @@ var changedPermissions = new Array();
 var folderlist = new Array();
 function initial(){
 show_menu();
-document.getElementById("_APP_Installation").innerHTML = '<table><tbody><tr><td><div class="_APP_Installation"></div></td><td><div style="width:120px;"><#181#></div></td></tr></tbody></table>';
+document.getElementById("_APP_Installation").innerHTML = '<table><tbody><tr><td><div class="_APP_Installation"></div></td><td><div style="width:120px;"><#184#></div></td></tr></tbody></table>';
 document.getElementById("_APP_Installation").className = "menu_clicked";
 document.aidiskForm.protocol.value = PROTOCOL;
 if(is_KR_sku){
@@ -50,11 +50,11 @@ document.getElementById('ntfs_sparse_files').style.display = "";
 showAccountMenu();
 showPermissionTitle();
 if(get_manage_type(PROTOCOL)){
-document.getElementById("loginMethod").innerHTML = "<#637#>";
+document.getElementById("loginMethod").innerHTML = "<#653#>";
 document.getElementById("accountMask").style.display = "none";
 }
 else{
-document.getElementById("loginMethod").innerHTML = "<#636#>";
+document.getElementById("loginMethod").innerHTML = "<#652#>";
 document.getElementById("accountMask").style.display = "block";
 }
 setTimeout('get_disk_tree();', 1000);
@@ -78,13 +78,13 @@ var status;
 var confirm_str_on, confirm_str_off;
 if(protocol == "cifs"){
 status = this.NN_status;
-confirm_str_off= "<#845#>"; //"<#847#>"+ By Viz 2011.09
-confirm_str_on = "<#849#>";
+confirm_str_off= "<#863#>"; //"<#865#>"+ By Viz 2011.09
+confirm_str_on = "<#867#>";
 }
 else if(protocol == "ftp"){
 status = this.FTP_status;
-confirm_str_off = "<#846#>";
-confirm_str_on = "<#850#>";
+confirm_str_off = "<#864#>";
+confirm_str_on = "<#868#>";
 }
 switch(status){
 case 1:
@@ -121,7 +121,7 @@ if(protocol != "cifs" && protocol != "ftp")
 return;
 switch(get_manage_type(protocol)){
 case 1:
-if(confirm("<#638#>")){
+if(confirm("<#654#>")){
 document.aidiskForm.action = "/aidisk/switch_share_mode.asp";
 document.aidiskForm.protocol.value = protocol;
 document.aidiskForm.mode.value = "share";
@@ -147,7 +147,7 @@ refreshpage();
 function showAccountMenu(){
 var account_menu_code = "";
 if(this.accounts.length <= 0)
-account_menu_code += '<div class="noAccount" id="noAccount"><#1607#></div>\n'
+account_menu_code += '<div class="noAccount" id="noAccount"><#1647#></div>\n'
 else{
 for(var i = 0; i < this.accounts.length; ++i){
 account_menu_code += '<div class="userIcon" id="';
@@ -353,13 +353,13 @@ changeActionButton(document.getElementById("createAccountBtn"), 'User', 'Add');
 document.getElementById("createAccountBtn").onclick = function(){};
 document.getElementById("createAccountBtn").onmouseover = function(){};
 document.getElementById("createAccountBtn").onmouseout = function(){};
-document.getElementById("createAccountBtn").title = (accounts.length < 11)?"<#577#>":"<#554#>";
+document.getElementById("createAccountBtn").title = (accounts.length < 11)?"<#593#>":"<#570#>";
 }
 if(this.accounts.length > 0 && this.selectedAccount != null && this.selectedAccount.length > 0 && this.accounts[0] != this.selectedAccount){
 changeActionButton(document.getElementById("modifyAccountBtn"), 'User', 'Mod', 0);
 document.getElementById("modifyAccountBtn").onclick = function(){
 if(!selectedAccount){
-alert("<#647#>");
+alert("<#663#>");
 return;
 }
 popupWindow('OverlayMask','/aidisk/popModifyAccount.asp');
@@ -381,7 +381,7 @@ if(this.accounts.length > 1 && this.selectedAccount != null && this.selectedAcco
 changeActionButton(document.getElementById("deleteAccountBtn"), 'User', 'Del', 0);
 document.getElementById("deleteAccountBtn").onclick = function(){
 if(!selectedAccount){
-alert("<#647#>");
+alert("<#663#>");
 return;
 }
 popupWindow('OverlayMask','/aidisk/popDeleteAccount.asp');
@@ -403,11 +403,11 @@ if(this.selectedPoolOrder >= 0 && this.selectedFolderOrder < 0){
 changeActionButton(document.getElementById("createFolderBtn"), 'Folder', 'Add', 0);
 document.getElementById("createFolderBtn").onclick = function(){
 if(selectedDiskOrder < 0){
-alert("<#648#>");
+alert("<#664#>");
 return;
 }
 if(selectedPoolOrder < 0){
-alert("<#650#>");
+alert("<#666#>");
 return;
 }
 popupWindow('OverlayMask','/aidisk/popCreateFolder.asp');
@@ -430,7 +430,7 @@ changeActionButton(document.getElementById("deleteFolderBtn"), 'Folder', 'Del', 
 changeActionButton(document.getElementById("modifyFolderBtn"), 'Folder', 'Mod', 0);
 document.getElementById("deleteFolderBtn").onclick = function(){
 if(selectedFolderOrder < 0){
-alert("<#649#>");
+alert("<#665#>");
 return;
 }
 popupWindow('OverlayMask','/aidisk/popDeleteFolder.asp');
@@ -443,7 +443,7 @@ changeActionButton(this, 'Folder', 'Del', 0);
 };
 document.getElementById("modifyFolderBtn").onclick = function(){
 if(selectedFolderOrder < 0){
-alert("<#649#>");
+alert("<#665#>");
 return;
 }
 popupWindow('OverlayMask','/aidisk/popModifyFolder.asp');
@@ -504,7 +504,7 @@ document.form.st_max_user.select();
 return false;
 }
 if(document.form.computer_name.value.length == 0){
-showtext(document.getElementById("alert_msg1"), "<#137#>");
+showtext(document.getElementById("alert_msg1"), "<#140#>");
 document.form.computer_name.focus();
 document.form.computer_name.select();
 return false;
@@ -523,7 +523,7 @@ document.getElementById("alert_msg1").style.display = "none";
 document.form.computer_name.value = trim(document.form.computer_name.value);
 }
 if(document.form.st_samba_workgroup.value.length == 0){
-alert("<#137#>");
+alert("<#140#>");
 document.form.st_samba_workgroup.focus();
 document.form.st_samba_workgroup.select();
 return false;
@@ -531,7 +531,7 @@ return false;
 else{
 var workgroup_check = new RegExp('^[a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9\-\_\.]+$','gi');
 if(!workgroup_check.test(document.form.st_samba_workgroup.value)){
-alert("<#145#>");
+alert("<#148#>");
 document.form.st_samba_workgroup.focus();
 document.form.st_samba_workgroup.select();
 return false;
@@ -585,19 +585,19 @@ return true;
 <table width="730px">
 <tr>
 <td align="left">
-<span class="formfonttitle"><#201#> - <#202#><span id="clouddiskstr"> / <#834#></span></span>
+<span class="formfonttitle"><#204#> - <#205#><span id="clouddiskstr"> / <#852#></span></span>
 </td>
 <td align="right">
-<img onclick="go_setting('/APP_Installation.asp')" align="right" style="cursor:pointer;position:absolute;margin-left:-20px;margin-top:-30px;" title="<#181#>" src="/images/backprev.png" onMouseOver="this.src='/images/backprevclick.png'" onMouseOut="this.src='/images/backprev.png'">
+<img onclick="go_setting('/APP_Installation.asp')" align="right" style="cursor:pointer;position:absolute;margin-left:-20px;margin-top:-30px;" title="<#184#>" src="/images/backprev.png" onMouseOver="this.src='/images/backprevclick.png'" onMouseOut="this.src='/images/backprev.png'">
 </td>
 </tr>
 </table>
 </div>
 <div style="margin:5px;"><img src="/images/New_ui/export/line_export.png"></div>
-<div class="formfontdesc"><#1756#></div>
+<div class="formfontdesc"><#1798#></div>
 <table width="740px" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <tr>
-<th><#1040#></th>
+<th><#1058#></th>
 <td>
 <div class="left" style="width:94px; float:left; cursor:pointer;" id="radio_samba_enable"></div>
 <div class="iphone_switch_container" style="height:32px; width:74px; position: relative; overflow: hidden">
@@ -615,7 +615,7 @@ switchAppStatus(PROTOCOL);
 </td>
 </tr>
 <tr id="radio_anonymous_enable_tr" style="height:60px;">
-<th><#632#></th>
+<th><#648#></th>
 <td>
 <div class="left" style="margin-top:5px;width:94px;float:left; cursor:pointer;" id="radio_anonymous_enable"></div>
 <div class="iphone_switch_container" style="display:table-cell;vertical-align:middle;height:45px;position:relative;overflow:hidden">
@@ -635,7 +635,7 @@ switchAccount(PROTOCOL);
 </tr>
 <tr>
 <th>
-<a class="hintstyle" href="javascript:void(0);" onClick="openHint(17,1);"><#1801#></a>
+<a class="hintstyle" href="javascript:void(0);" onClick="openHint(17,1);"><#1843#></a>
 </th>
 <td>
 <input type="text" name="st_max_user" class="input_3_table" maxlength="2" value="<% nvram_get("st_max_user"); %>" onKeyPress="return validator.isNumber(this, event);">
@@ -643,7 +643,7 @@ switchAccount(PROTOCOL);
 </tr>
 <tr>
 <th>
-<a class="hintstyle" href="javascript:void(0);" onClick="openHint(17,2);"><#1793#></a>
+<a class="hintstyle" href="javascript:void(0);" onClick="openHint(17,2);"><#1835#></a>
 </th>
 <td>
 <div><input type="text" name="computer_name" id="computer_name" class="input_20_table" maxlength="15" value="<% nvram_get("computer_name"); %>" autocorrect="off" autocapitalize="off"><br/><span id="alert_msg1" style="color:#FC0;"></span></div>
@@ -651,7 +651,7 @@ switchAccount(PROTOCOL);
 </tr>
 <tr>
 <th>
-<a class="hintstyle" href="javascript:void(0);" onClick="openHint(17,3);"><#1806#></a>
+<a class="hintstyle" href="javascript:void(0);" onClick="openHint(17,3);"><#1848#></a>
 </th>
 <td>
 <input type="text" name="st_samba_workgroup" class="input_20_table" maxlength="16" value="<% nvram_get("st_samba_workgroup"); %>" autocorrect="off" autocapitalize="off">
@@ -660,35 +660,35 @@ switchAccount(PROTOCOL);
 <tr>
 <th>Simpler share naming<br><i>(without the disk name)</i></th>
 <td>
-<input type="radio" name="smbd_simpler_naming" class="input" value="1" <% nvram_match_x("", "smbd_simpler_naming", "1", "checked"); %>><#65#>
-<input type="radio" name="smbd_simpler_naming" class="input" value="0" <% nvram_match_x("", "smbd_simpler_naming", "0", "checked"); %>><#64#>
+<input type="radio" name="smbd_simpler_naming" class="input" value="1" <% nvram_match_x("", "smbd_simpler_naming", "1", "checked"); %>><#66#>
+<input type="radio" name="smbd_simpler_naming" class="input" value="0" <% nvram_match_x("", "smbd_simpler_naming", "0", "checked"); %>><#65#>
 </td>
 </tr>
 <tr>
 <th>Force as Master Browser</i></th>
 <td>
-<input type="radio" name="smbd_master" class="input" value="1" <% nvram_match_x("", "smbd_master", "1", "checked"); %>><#65#>
-<input type="radio" name="smbd_master" class="input" value="0" <% nvram_match_x("", "smbd_master", "0", "checked"); %>><#64#>
+<input type="radio" name="smbd_master" class="input" value="1" <% nvram_match_x("", "smbd_master", "1", "checked"); %>><#66#>
+<input type="radio" name="smbd_master" class="input" value="0" <% nvram_match_x("", "smbd_master", "0", "checked"); %>><#65#>
 </td>
 </tr>
 <th>Set as WINS server</i></th>
 <td>
-<input type="radio" name="smbd_wins" class="input" value="1" <% nvram_match_x("", "smbd_wins", "1", "checked"); %>><#65#>
-<input type="radio" name="smbd_wins" class="input" value="0" <% nvram_match_x("", "smbd_wins", "0", "checked"); %>><#64#>
+<input type="radio" name="smbd_wins" class="input" value="1" <% nvram_match_x("", "smbd_wins", "1", "checked"); %>><#66#>
+<input type="radio" name="smbd_wins" class="input" value="0" <% nvram_match_x("", "smbd_wins", "0", "checked"); %>><#65#>
 </td>
 </tr>
 <tr id="ntfs_sparse_files" style="">
-<th><#634#></th>
+<th><#650#></th>
 <td>
 <select name="usb_fs_ntfs_sparse" class="input_option">
-<option class="content_input_fd" value="0" <% nvram_match("usb_fs_ntfs_sparse", "0","selected"); %>><#2230#></option>
-<option class="content_input_fd" value="1" <% nvram_match("usb_fs_ntfs_sparse", "1","selected"); %>><#2229#></option>
+<option class="content_input_fd" value="0" <% nvram_match("usb_fs_ntfs_sparse", "0","selected"); %>><#2280#></option>
+<option class="content_input_fd" value="1" <% nvram_match("usb_fs_ntfs_sparse", "1","selected"); %>><#2279#></option>
 </select>
 </td>
 </tr>
 </table>
 <div class="apply_gen">
-<input type="button" class="button_gen" value="<#72#>" onclick="applyRule();">
+<input type="button" class="button_gen" value="<#73#>" onclick="applyRule();">
 </div>
 <div id="shareStatus">
 <div id="tableMask"></div>
@@ -698,18 +698,18 @@ switchAccount(PROTOCOL);
 <td width="25%" style="border: 1px solid #222;">
 <table align="right">
 <tr>
-<td><div id="createAccountBtn" title="<#577#>"></div></td>
-<td><div id="deleteAccountBtn" title="<#907#>"></div></td>
-<td><div id="modifyAccountBtn" title="<#1553#>"></div></td>
+<td><div id="createAccountBtn" title="<#593#>"></div></td>
+<td><div id="deleteAccountBtn" title="<#925#>"></div></td>
+<td><div id="modifyAccountBtn" title="<#1591#>"></div></td>
 </tr>
 </table>
 </td>
 <td>
 <table align="right">
 <tr>
-<td><div id="createFolderBtn" title="<#579#>"></div></td>
-<td><div id="deleteFolderBtn" title="<#910#>"></div></td>
-<td><div id="modifyFolderBtn" title="<#1556#>"></div></td>
+<td><div id="createFolderBtn" title="<#595#>"></div></td>
+<td><div id="deleteFolderBtn" title="<#928#>"></div></td>
+<td><div id="modifyFolderBtn" title="<#1594#>"></div></td>
 </tr>
 </table>
 </td>
@@ -736,7 +736,7 @@ switchAccount(PROTOCOL);
 </table>
 <div id="e0" style="font-size:10pt; margin-top:2px;"></div>
 <div style="text-align:center; margin:10px auto; border-top:1px dotted #CCC; width:95%; padding:2px;">
-<input name="changePermissionBtn" id="changePermissionBtn" type="button" value="<#79#>" class="button_gen_long_dis" disabled="disabled">
+<input name="changePermissionBtn" id="changePermissionBtn" type="button" value="<#81#>" class="button_gen_long_dis" disabled="disabled">
 </div>
 </td>
 </tr>

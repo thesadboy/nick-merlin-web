@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
-<title><#533#> - DNS-based Filtering</title>
+<title><#548#> - DNS-based Filtering</title>
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
 <link rel="stylesheet" type="text/css" href="ParentalControl.css">
@@ -79,17 +79,17 @@ return code;
 function show_dnsfilter_list(){
 var code = "";
 code +='<table width="100%" border="1" cellspacing="0" cellpadding="4" align="center" class="FormTable_table" id="mainTable_table">';
-code +='<thead><tr><td colspan="3"><#854#>&nbsp;(<#1435#>&nbsp;64)</td></tr></thead>';
-code +='<tr><th width="65%"><#1635#></th>';
+code +='<thead><tr><td colspan="3"><#872#>&nbsp;(<#1473#>&nbsp;64)</td></tr></thead>';
+code +='<tr><th width="65%"><#1678#></th>';
 code +='<th width="20%">Filter Mode</th>';
-code +='<th width="15%"><#1434#></th></tr>';
+code +='<th width="15%"><#1472#></th></tr>';
 code +='<tr><td style="border-bottom:2px solid #000;"><input type="text" maxlength="17" style="margin-left:10px;width:255px;" class="input_macaddr_table" name="rule_mac" onClick="hideClients_Block();" onKeyPress="return validator.isHWAddr(this,event)">';
-code +='<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" style="position:absolute;" onclick="pullLANIPList(this);" title="<#1765#>">';
+code +='<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" style="position:absolute;" onclick="pullLANIPList(this);" title="<#1807#>">';
 code +='<div id="ClientList_Block_PC" style="margin:0 0 0 52px" class="clientlist_dropdown"></div></td>';
 code +='<td style="border-bottom:2px solid #000;">'+gen_modeselect("rule_mode", "-1", "")+'</td>';
 code +='<td style="border-bottom:2px solid #000;"><input class="url_btn" type="button" onClick="addRow_main(64)" value=""></td></tr>';
 if(dnsfilter_rule_list_row == "")
-code +='<tr><td style="color:#FFCC00;" colspan="3"><#1286#></td>';
+code +='<tr><td style="color:#FFCC00;" colspan="3"><#1324#></td>';
 else{
 var userIconBase64 = "NoIcon";
 var clientName, deviceType, deviceVender;
@@ -111,25 +111,25 @@ code +='<tr id="row'+i+'">';
 code +='<td title="'+clientName+'">';
 code += '<table width="100%"><tr><td style="width:35%;border:0;float:right;padding-right:30px;">';
 if(clientList[mac] == undefined) {
-code += '<div class="clientIcon type0" onClick="popClientListEditTable(\'' + mac + '\', this, \'' + clientName + '\', \'\', \'DNSFilter\')"></div>';
+code += '<div class="clientIcon type0" onClick="popClientListEditTable(&quot;' + mac + '&quot;, this, &quot;' + clientName + '&quot;, &quot;&quot;, &quot;DNSFilter&quot;)"></div>';
 }
 else {
 if(usericon_support) {
 userIconBase64 = getUploadIcon(mac.replace(/\:/g, ""));
 }
 if(userIconBase64 != "NoIcon") {
-code += '<div style="text-align:center;" onClick="popClientListEditTable(\'' + mac + '\', this, \'' + clientName + '\', \'\', \'DNSFilter\')"><img class="imgUserIcon_card" src="' + userIconBase64 + '"></div>';
+code += '<div style="text-align:center;" onClick="popClientListEditTable(&quot;' + mac + '&quot;, this, &quot;' + clientName + '&quot;, &quot;&quot;, &quot;DNSFilter&quot;)"><img class="imgUserIcon_card" src="' + userIconBase64 + '"></div>';
 }
 else if(deviceType != "0" || deviceVender == "") {
-code += '<div class="clientIcon type' + deviceType + '" onClick="popClientListEditTable(\'' + mac + '\', this, \'' + clientName + '\', \'\', \'DNSFilter\')"></div>';
+code += '<div class="clientIcon type' + deviceType + '" onClick="popClientListEditTable(&quot;' + mac + '&quot;, this, &quot;' + clientName + '&quot;, &quot;&quot;, &quot;DNSFilter&quot;)"></div>';
 }
 else if(deviceVender != "" ) {
 var venderIconClassName = getVenderIconClassName(deviceVender.toLowerCase());
 if(venderIconClassName != "") {
-code += '<div class="venderIcon ' + venderIconClassName + '" onClick="popClientListEditTable(\'' + mac + '\', this, \'' + clientName + '\', \'\', \'DNSFilter\')"></div>';
+code += '<div class="venderIcon ' + venderIconClassName + '" onClick="popClientListEditTable(&quot;' + mac + '&quot;, this, &quot;' + clientName + '&quot;, &quot;&quot;, &quot;DNSFilter&quot;)"></div>';
 }
 else {
-code += '<div class="clientIcon type' + deviceType + '" onClick="popClientListEditTable(\'' + mac + '\', this, \'' + clientName + '\', \'\', \'DNSFilter\')"></div>';
+code += '<div class="clientIcon type' + deviceType + '" onClick="popClientListEditTable(&quot;' + mac + '&quot;, this, &quot;' + clientName + '&quot;, &quot;&quot;, &quot;DNSFilter&quot;)"></div>';
 }
 }
 }
@@ -159,7 +159,7 @@ var childsel=document.createElement("div");
 childsel.setAttribute("id","check_mac");
 childsel.style.color="#FFCC00";
 obj.parentNode.appendChild(childsel);
-document.getElementById("check_mac").innerHTML="<#162#>";
+document.getElementById("check_mac").innerHTML="<#165#>";
 document.getElementById("check_mac").style.display = "";
 return false;
 }else if(flag == 2){
@@ -167,7 +167,7 @@ var childsel=document.createElement("div");
 childsel.setAttribute("id","check_mac");
 childsel.style.color="#FFCC00";
 obj.parentNode.appendChild(childsel);
-document.getElementById("check_mac").innerHTML="<#131#>";
+document.getElementById("check_mac").innerHTML="<#134#>";
 document.getElementById("check_mac").style.display = "";
 return false;
 }else{
@@ -179,11 +179,11 @@ function addRow_main(upper){
 var rule_num = document.getElementById('mainTable_table').rows.length;
 var item_num = document.getElementById('mainTable_table').rows[0].cells.length;
 if(rule_num >= upper){
-alert("<#1331#> " + upper + " <#1332#>");
+alert("<#1369#> " + upper + " <#1370#>");
 return false;
 }
 if(document.form.rule_mac.value == ""){
-alert("<#137#>");
+alert("<#140#>");
 document.form.rule_mac.focus();
 return false;
 }
@@ -275,6 +275,9 @@ show_dnsfilter_list();
 <div id="dnsfilter_desc" style="margin-bottom:10px;">
 <table width="700px" style="margin-left:25px;">
 <tr>
+<td>
+<img id="guest_image" src="/images/New_ui/DnsFiltering.png">
+</td>
 <td>&nbsp;&nbsp;</td>
 <td style="font-style: italic;font-size: 14px;">
 <div>
@@ -288,7 +291,7 @@ protection):
 <li>Family = Family Shield (pre-configured to block adult content)</ul>
 <li><a target="_blank" style="font-weight: bolder; cursor:pointer;text-decoration: underline;" href="https://dns.norton.com/">Norton Connect Safe</a> (for home usage only)
 <ul><li>Safe = Malicious content<li>Family = Malicious + Sexual content<li>Children = Malicious + Sexual + Mature content</ul>
-<li><a target="_blank" style="font-weight: bolder; cursor:pointer;text-decoration: underline;" href="http://dns.yandex.com"><#2350#></a>
+<li><a target="_blank" style="font-weight: bolder; cursor:pointer;text-decoration: underline;" href="http://dns.yandex.com"><#2400#></a>
 <ul><li>Safe = Malicious content<li>Family = Malicious + Sexual content</ul>
 <li><a target="_blank" style="font-weight: bolder; cursor:pointer;text-decoration: underline;" href="http://www.comodo.com/secure-dns/">Comodo Secure DNS</a>
 <ul><li>Protects against malicious content</ul>
@@ -380,7 +383,7 @@ switch_on_container_path: '/switcherplugin/iphone_switch_container_off.png'
 </tr>
 </table>
 <div class="apply_gen">
-<input name="button" type="button" class="button_gen" onclick="applyRule()" value="<#72#>"/>
+<input name="button" type="button" class="button_gen" onclick="applyRule()" value="<#73#>"/>
 </div>
 </td>
 </tr>

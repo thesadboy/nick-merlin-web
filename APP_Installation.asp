@@ -7,7 +7,7 @@
 <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
-<link rel="icon" href="images/favicon.png"><title><#533#> - <#181#></title>
+<link rel="icon" href="images/favicon.png"><title><#548#> - <#184#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="usp_style.css">
@@ -17,6 +17,7 @@
 <script type="text/javascript" src="/help.js"></script>
 <script type="text/javascript" src="/disk_functions.js"></script>
 <script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript" src="/disk_functions.js"></script>
 <style>
 #Aidisk_png{
 background: url(images/New_ui/USBExt/APP_list.png);
@@ -97,22 +98,22 @@ var webs_state_info;
 var wan_unit_orig = '<% nvram_get("wan_unit"); %>';
 function initial(){
 show_menu();
-default_apps_array = [["AiDisk", "aidisk.asp", "<#655#>", "Aidisk_png", ""],
-["<#1774#>", tablink[4][1], "<#2025#>", "server_png", ""],
-["<#1585#>", "PrinterServer.asp", "<#1584#>", "PrinterServer_png", ""],
-["3G/4G", "Advanced_Modem_Content.asp", "<#1231#>", "modem_png", ""],
-["<#1884#>", "Advanced_TimeMachine.asp", "<#1889#>", "TimeMachine_png", "1.0.0.1"]];
+default_apps_array = [["AiDisk", "aidisk.asp", "<#671#>", "Aidisk_png", ""],
+["<#1816#>", tablink[4][1], "<#2080#>", "server_png", ""],
+["<#1625#>", "PrinterServer.asp", "<#1624#>", "PrinterServer_png", ""],
+["3G/4G", "Advanced_Modem_Content.asp", "<#1268#>", "modem_png", ""],
+["<#1930#>", "Advanced_TimeMachine.asp", "<#1935#>", "TimeMachine_png", "1.0.0.1"]];
 if(!media_support){
-default_apps_array[1].splice(2,1,"<#1462#>");
+default_apps_array[1].splice(2,1,"<#1500#>");
 }
 if(sw_mode == 2 || sw_mode == 3 || sw_mode == 4 || noaidisk_support)
 default_apps_array = default_apps_array.del(default_apps_array.getIndexByValue2D("AiDisk")[0]);
 if(!printer_support)
-default_apps_array = default_apps_array.del(default_apps_array.getIndexByValue2D("<#1585#>")[0]);
+default_apps_array = default_apps_array.del(default_apps_array.getIndexByValue2D("<#1625#>")[0]);
 if(sw_mode == 2 || sw_mode == 3 || sw_mode == 4 || !modem_support || based_modelid == "4G-AC55U")
 default_apps_array = default_apps_array.del(default_apps_array.getIndexByValue2D("3G/4G")[0]);
 if(!timemachine_support)
-default_apps_array = default_apps_array.del(default_apps_array.getIndexByValue2D("<#1884#>")[0]);
+default_apps_array = default_apps_array.del(default_apps_array.getIndexByValue2D("<#1930#>")[0]);
 trNum = default_apps_array.length;
 calHeight(0);
 if(_apps_action == '' &&
@@ -212,21 +213,21 @@ var proceed = 0.6;
 if(apps_state_upgrade != 4 && apps_state_upgrade != ""){ // upgrade error handler
 errorcode = "apps_state_upgrade = " + apps_state_upgrade;
 if(apps_state_error == 1)
-document.getElementById("apps_state_desc").innerHTML = "<#2047#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2102#>";
 else if(apps_state_error == 2)
-document.getElementById("apps_state_desc").innerHTML = "<#2040#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2095#>";
 else if(apps_state_error == 4)
-document.getElementById("apps_state_desc").innerHTML = "<#2039#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2094#>";
 else if(apps_state_error == 6)
-document.getElementById("apps_state_desc").innerHTML = "<#2042#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2097#>";
 else if(apps_state_error == 7)
-document.getElementById("apps_state_desc").innerHTML = "<#2045#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2100#>";
 else if(apps_state_error == 9)
-document.getElementById("apps_state_desc").innerHTML = "<#2044#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2099#>";
 else if(apps_state_error == 10)
-document.getElementById("apps_state_desc").innerHTML = "<#2041#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2096#>";
 else if(apps_state_upgrade == 0)
-document.getElementById("apps_state_desc").innerHTML = "<#2046#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2101#>";
 else if(apps_state_upgrade == 1){
 if(apps_download_percent > 0 && apps_download_percent <= 100){
 document.getElementById("apps_state_desc").innerHTML = apps_download_file + " is downloading.. " + " <b>" + apps_download_percent + "</b> <span style='font-size: 16px;'>%</span>";
@@ -236,23 +237,23 @@ else if(apps_download_percent_done > 5){
 if(installPercent > 99)
 installPercent = 99;
 document.getElementById("loadingicon").style.display = "none";
-document.getElementById("apps_state_desc").innerHTML = "[" + cookie.get("apps_last") + "] " + "<#1047#> <b>" + Math.round(installPercent) +"</b> <span style='font-size: 16px;'>%</span>";
+document.getElementById("apps_state_desc").innerHTML = "[" + cookie.get("apps_last") + "] " + "<#1065#> <b>" + Math.round(installPercent) +"</b> <span style='font-size: 16px;'>%</span>";
 installPercent = installPercent + proceed;//*/
 }
 else{
-document.getElementById("apps_state_desc").innerHTML = "&nbsp;<#2046#>...";
+document.getElementById("apps_state_desc").innerHTML = "&nbsp;<#2101#>...";
 apps_download_percent_done++;
 }
 }
 else if(apps_state_upgrade == 2)
-document.getElementById("apps_state_desc").innerHTML = "<#2054#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2109#>";
 else{
 if(apps_depend_action_target != "terminated" && apps_depend_action_target != "error"){
 if(apps_depend_action_target == "")
-document.getElementById("apps_state_desc").innerHTML = "<b>[" + cookie.get("apps_last") + "] " + "<#1047#> </b>";
+document.getElementById("apps_state_desc").innerHTML = "<b>[" + cookie.get("apps_last") + "] " + "<#1065#> </b>";
 else
-document.getElementById("apps_state_desc").innerHTML = "<b>[" + cookie.get("apps_last") + "] " + "<#1047#> </b>"
-+"<br> <span style='font-size: 16px;'> <#1047#>："+apps_depend_do+"</span>"
+document.getElementById("apps_state_desc").innerHTML = "<b>[" + cookie.get("apps_last") + "] " + "<#1065#> </b>"
++"<br> <span style='font-size: 16px;'> <#1065#>："+apps_depend_do+"</span>"
 +"<br> <span style='font-size: 16px;'>"+apps_depend_action+" "+apps_depend_action_target+"</span>"
 ;
 }
@@ -260,7 +261,7 @@ else{
 if(installPercent > 99)
 installPercent = 99;
 document.getElementById("loadingicon").style.display = "none";
-document.getElementById("apps_state_desc").innerHTML = "[" + cookie.get("apps_last") + "] " + "<#1047#> <b>" + Math.round(installPercent) +"</b> <span style='font-size: 16px;'>%</span>";
+document.getElementById("apps_state_desc").innerHTML = "[" + cookie.get("apps_last") + "] " + "<#1065#> <b>" + Math.round(installPercent) +"</b> <span style='font-size: 16px;'>%</span>";
 installPercent = installPercent + proceed;
 }
 }
@@ -268,89 +269,89 @@ installPercent = installPercent + proceed;
 else if(apps_state_enable != 2 && apps_state_enable != ""){
 errorcode = "apps_state_enable = " + apps_state_enable;
 if(apps_state_error == 1)
-document.getElementById("apps_state_desc").innerHTML = "<#2043#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2098#>";
 else if(apps_state_error == 2)
-document.getElementById("apps_state_desc").innerHTML = "<#2040#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2095#>";
 else if(apps_state_error == 3)
-document.getElementById("apps_state_desc").innerHTML = "<#2038#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2093#>";
 else if(apps_state_error == 8)
 document.getElementById("apps_state_desc").innerHTML = "Enable error!";
 else{
 document.getElementById("loadingicon").style.display = "";
-document.getElementById("apps_state_desc").innerHTML = "<#281#>";
+document.getElementById("apps_state_desc").innerHTML = "<#284#>";
 }
 }
 else if(apps_state_update != 2 && apps_state_update != ""){
 errorcode = "apps_state_update = " + apps_state_update;
 if(apps_state_error == 1)
-document.getElementById("apps_state_desc").innerHTML = "<#2032#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2087#>";
 else if(apps_state_error == 2)
-document.getElementById("apps_state_desc").innerHTML = "<#2030#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2085#>";
 else
-document.getElementById("apps_state_desc").innerHTML = "<#2019#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2074#>";
 }
 else if(apps_state_remove != 2 && apps_state_remove != ""){
 errorcode = "apps_state_remove = " + apps_state_remove;
-document.getElementById("apps_state_desc").innerHTML = "<#2017#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2072#>";
 }
 else if(apps_state_switch != 4 && apps_state_switch != 5 && apps_state_switch != ""){
 errorcode = "apps_state_switch = " + apps_state_switch;
 if(apps_state_error == 1)
-document.getElementById("apps_state_desc").innerHTML = "<#2043#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2098#>";
 else if(apps_state_error == 2)
-document.getElementById("apps_state_desc").innerHTML = "<#2040#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2095#>";
 else if(apps_state_switch == 1)
-document.getElementById("apps_state_desc").innerHTML = "<#2033#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2088#>";
 else if(apps_state_switch == 2)
-document.getElementById("apps_state_desc").innerHTML = "<#2034#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2089#>";
 else if(apps_state_switch == 3)
-document.getElementById("apps_state_desc").innerHTML = "<#2031#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2086#>";
 else
-document.getElementById("apps_state_desc").innerHTML = "<#1047#>";
+document.getElementById("apps_state_desc").innerHTML = "<#1065#>";
 }
 else if(apps_state_autorun != 4 && apps_state_autorun != ""){
 errorcode = "apps_state_autorun = " + apps_state_autorun;
 if(apps_state_error == 1)
-document.getElementById("apps_state_desc").innerHTML = "<#2043#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2098#>";
 else if(apps_state_error == 2)
-document.getElementById("apps_state_desc").innerHTML = "<#2040#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2095#>";
 else if(apps_state_autorun == 1)
-document.getElementById("apps_state_desc").innerHTML = "<#2028#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2083#>";
 else if(apps_state_install == 2)
-document.getElementById("apps_state_desc").innerHTML = "<#2035#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2090#>";
 else
-document.getElementById("apps_state_desc").innerHTML = "<#793#>";
+document.getElementById("apps_state_desc").innerHTML = "<#810#>";
 }
 else if(apps_state_install != 5 && apps_state_error > 0){ // install error handler
 if(apps_state_error == 1)
-document.getElementById("apps_state_desc").innerHTML = "<#2047#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2102#>";
 else if(apps_state_error == 2)
-document.getElementById("apps_state_desc").innerHTML = "<#2040#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2095#>";
 else if(apps_state_error == 3)
-document.getElementById("apps_state_desc").innerHTML = "<#2038#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2093#>";
 else if(apps_state_error == 4)
-document.getElementById("apps_state_desc").innerHTML = "<#2039#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2094#>";
 else if(apps_state_error == 5)
-document.getElementById("apps_state_desc").innerHTML = "<#2037#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2092#>";
 else if(apps_state_error == 6)
-document.getElementById("apps_state_desc").innerHTML = "<#2042#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2097#>";
 else if(apps_state_error == 7)
-document.getElementById("apps_state_desc").innerHTML = "<#2045#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2100#>";
 else if(apps_state_error == 9)
-document.getElementById("apps_state_desc").innerHTML = "<#2044#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2099#>";
 else if(apps_state_error == 10)
-document.getElementById("apps_state_desc").innerHTML = "<#2041#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2096#>";
 isinstall = 0;
 }
 else if(apps_state_install != 5 && apps_state_install != ""){
 isinstall = 1;
 errorcode = "_apps_state_install = " + apps_state_install;
 if(apps_state_install == 0)
-document.getElementById("apps_state_desc").innerHTML = "<#2048#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2103#>";
 else if(apps_state_install == 1)
-document.getElementById("apps_state_desc").innerHTML = "<#2028#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2083#>";
 else if(apps_state_install == 2)
-document.getElementById("apps_state_desc").innerHTML = "<#2035#>";
+document.getElementById("apps_state_desc").innerHTML = "<#2090#>";
 else if(apps_state_install == 3){
 if(apps_download_percent > 0 && apps_download_percent <= 100){
 document.getElementById("apps_state_desc").innerHTML = apps_download_file + " is downloading.. " + " <b>" + apps_download_percent + "</b> <span style='font-size: 16px;'>%</span>";
@@ -360,11 +361,11 @@ else if(apps_download_percent_done > 5){
 if(installPercent > 99)
 installPercent = 99;
 document.getElementById("loadingicon").style.display = "none";
-document.getElementById("apps_state_desc").innerHTML = "[" + cookie.get("apps_last") + "] " + "<#1047#> <b>" + Math.round(installPercent) +"</b> <span style='font-size: 16px;'>%</span>";
+document.getElementById("apps_state_desc").innerHTML = "[" + cookie.get("apps_last") + "] " + "<#1065#> <b>" + Math.round(installPercent) +"</b> <span style='font-size: 16px;'>%</span>";
 installPercent = installPercent + proceed;//*/
 }
 else{
-document.getElementById("apps_state_desc").innerHTML = "&nbsp;<#2046#>...";
+document.getElementById("apps_state_desc").innerHTML = "&nbsp;<#2101#>...";
 apps_download_percent_done++;
 }
 }
@@ -374,13 +375,13 @@ if(apps_depend_action_target == ""){
 if(installPercent > 99)
 installPercent = 99;
 document.getElementById("loadingicon").style.display = "none";
-document.getElementById("apps_state_desc").innerHTML = "[" + cookie.get("apps_last") + "] " + "<#1047#> <b>" + Math.round(installPercent) +"</b> <span style='font-size: 16px;'>%</span>";
+document.getElementById("apps_state_desc").innerHTML = "[" + cookie.get("apps_last") + "] " + "<#1065#> <b>" + Math.round(installPercent) +"</b> <span style='font-size: 16px;'>%</span>";
 installPercent = installPercent + proceed;
 }
 else{
 var _apps_depend_do = apps_depend_do.replace(apps_depend_action, "<span style='color:#FC0'>"+apps_depend_action+"</span>");
-document.getElementById("apps_state_desc").innerHTML = "<b>[" + cookie.get("apps_last") + "] " + "<#1047#> </b>"
-+"<br> <span style='font-size: 16px;'> <#1047#>："+_apps_depend_do+"</span>"
+document.getElementById("apps_state_desc").innerHTML = "<b>[" + cookie.get("apps_last") + "] " + "<#1065#> </b>"
++"<br> <span style='font-size: 16px;'> <#1065#>："+_apps_depend_do+"</span>"
 +"<br><br> <span style='font-size: 18px;'>"+apps_depend_action+" "+apps_depend_action_target+"</span>"
 ;
 }
@@ -389,14 +390,14 @@ else{
 if(installPercent > 99)
 installPercent = 99;
 document.getElementById("loadingicon").style.display = "none";
-document.getElementById("apps_state_desc").innerHTML = "[" + cookie.get("apps_last") + "] " + "<#1047#> <b>" + Math.round(installPercent) +"</b> <span style='font-size: 16px;'>%</span>";
+document.getElementById("apps_state_desc").innerHTML = "[" + cookie.get("apps_last") + "] " + "<#1065#> <b>" + Math.round(installPercent) +"</b> <span style='font-size: 16px;'>%</span>";
 installPercent = installPercent + proceed;
 }
 }
 }
 else{
 document.getElementById("loadingicon").style.display = "";
-document.getElementById("apps_state_desc").innerHTML = "<#281#>";
+document.getElementById("apps_state_desc").innerHTML = "<#284#>";
 }
 if(apps_state_error != 0){
 document.getElementById("return_btn").style.display = "";
@@ -410,11 +411,11 @@ return false;
 }
 var trNum;
 function show_apps(){
-document.getElementById("usbHint").innerHTML = "<#1714#>";
+document.getElementById("usbHint").innerHTML = "<#1756#>";
 var counter = 0;
 appnum = 0;
 if(apps_array == "" && (appnet_support || appbase_support)){
-apps_array = [["downloadmaster", "", "", "no", "no", "", "", "<#970#>", "downloadmaster_png", "", "", ""],
+apps_array = [["downloadmaster", "", "", "no", "no", "", "", "<#988#>", "downloadmaster_png", "", "", ""],
 ["mediaserver", "", "", "no", "no", "", "", "", "mediaserver_png", "", "", ""]];
 if(nodm_support)
 apps_array[1][0] = "mediaserver2";
@@ -569,20 +570,20 @@ htmlcode += '<div style="margin-top:10px;">\n';
 if(apps_array[i][3] == "yes"){ //installed
 htmlcode += '<span class="app_action" onclick="apps_form(\'remove\',\''+ apps_array[i][0] +'\',\'\');">Uninstall</span>\n'; /* untranslated */
 if(apps_array[i][4] == "yes") //enable
-htmlcode += '<span class="app_action" onclick="apps_form(\'enable\',\''+ apps_array[i][0] +'\',\'no\');"><#2230#></span>\n';
+htmlcode += '<span class="app_action" onclick="apps_form(\'enable\',\''+ apps_array[i][0] +'\',\'no\');"><#2280#></span>\n';
 else
-htmlcode += '<span class="app_action" onclick="apps_form(\'enable\',\''+ apps_array[i][0] +'\',\'yes\');"><#2229#></span>\n';
+htmlcode += '<span class="app_action" onclick="apps_form(\'enable\',\''+ apps_array[i][0] +'\',\'yes\');"><#2279#></span>\n';
 if(sw_mode == 3 || document.getElementById("connect_status").className == "connectstatuson")
 htmlcode += '<span class="app_action" onclick="apps_form(\'update\',\''+ apps_array[i][0] +'\',\'\');">Check update</span>\n'; /* untranslated */
 if(apps_array[i][0] == "downloadmaster"){
-htmlcode += '<span class="app_action" onclick="divdisplayctrl(\'none\', \'none\', \'none\', \'\');"><#875#></span>\n';
+htmlcode += '<span class="app_action" onclick="divdisplayctrl(\'none\', \'none\', \'none\', \'\');"><#892#></span>\n';
 cookie.set("dm_install", apps_array[i][3], 1000);
 cookie.set("dm_enable", apps_array[i][4], 1000);
 }
 if( cookie.get("apps_last") == apps_array[i][0] &&
 hasNewVer(apps_array[i]) &&
 (sw_mode == 3 || document.getElementById("connect_status").className == "connectstatuson"))
-htmlcode += '</div><div style="color:#FC0;margin-top:10px;"><span class="app_action" onclick="apps_form(\'upgrade\',\''+ apps_array[i][0] +'\',\'\');"><#2018#></span>\n';
+htmlcode += '</div><div style="color:#FC0;margin-top:10px;"><span class="app_action" onclick="apps_form(\'upgrade\',\''+ apps_array[i][0] +'\',\'\');"><#2073#></span>\n';
 else if(cookie.get("apps_last") == apps_array[i][0])
 htmlcode += "</div><div style=\"color:#FC0;margin-top:10px;margin-left:10px;\"><span class=\"app_no_action\" onclick=\"\">The version is up-to-date.</span>\n"; /* untranslated */
 }
@@ -643,7 +644,7 @@ return false;
 }
 var partitions_array = [];
 function show_partition(){
-require(['/require/modules/diskList.js'], function(diskList){
+require(['/require/modules/diskList.js?hash=' + Math.random().toString()], function(diskList){
 var htmlcode = "";
 var mounted_partition = 0;
 partitions_array = [];
@@ -672,27 +673,20 @@ htmlcode += '<tr><td class="app_table_radius_left"><div class="iconUSBdisk_noquo
 htmlcode += '<div class="app_desc"><b>'+ usbDevicesList[i].partition[j].partName + '</b></div>';
 }
 if(accessableSize > 1)
-htmlcode += '<div class="app_desc"><#795#>: <b>'+ accessableSize+" GB" + '</b></div>';
+htmlcode += '<div class="app_desc"><#812#>: <b>'+ accessableSize+" GB" + '</b></div>';
 else
-htmlcode += '<div class="app_desc"><#795#>: <b>'+ accessableSize+" GB <span style=\'color:#FFCC00\'>(Disk quota can not less than 1GB)" + '</span></b></div>';
-htmlcode += '<div class="app_desc"><#1909#>: <b>'+ totalSize+" GB" + '</b></div>';
+htmlcode += '<div class="app_desc"><#812#>: <b>'+ accessableSize+" GB <span style=\'color:#FFCC00\'>(Disk quota can not less than 1GB)" + '</span></b></div>';
+htmlcode += '<div class="app_desc"><#1955#>: <b>'+ totalSize+" GB" + '</b></div>';
 htmlcode += '<div class="app_desc"><b>' + usbDevicesList[i].deviceName + '</b></div>';
 htmlcode += '</div><br/><br/></td></tr>\n';
 mounted_partition++;
 }
 }
 if(mounted_partition == 0)
-htmlcode += '<tr height="360px"><td colspan="2" class="nohover"><span class="app_name" style="line-height:100%"><#1606#></span></td></tr>\n';
+htmlcode += '<tr height="360px"><td colspan="2" class="nohover"><span class="app_name" style="line-height:100%"><#1646#></span></td></tr>\n';
 document.getElementById("partition_div").innerHTML = htmlcode;
-document.getElementById("usbHint").innerHTML = "<#971#> :";
+document.getElementById("usbHint").innerHTML = "<#989#> :";
 calHeight(1);
-});
-}
-function detectUSBStatusApp(){
-require(['/require/modules/diskList.js'], function(diskList){
-setInterval(function(){
-diskList.update(show_partition);
-}, 2000);
 });
 }
 function apps_form(_act, _name, _flag){
@@ -711,8 +705,8 @@ if(flag1 != "none"){ // app list
 document.getElementById("return_btn").style.display = "none";
 }
 else if(flag2 != "none"){ // partition list
-detectUSBStatusApp();
-show_partition();
+setInterval(show_partition, 2000);
+show_partition()
 document.getElementById("return_btn").style.display = "";
 calHeight(1);
 }
@@ -725,7 +719,7 @@ if(_dm_enable == "yes"){
 document.getElementById("realLink").href = _quick_dmlink;
 }
 else{
-document.getElementById("quick_dmlink").onclick = function(){alert("<#968#>");return false;}
+document.getElementById("quick_dmlink").onclick = function(){alert("<#986#>");return false;}
 }
 document.getElementById("return_btn").style.display = "";
 calHeight(1);
@@ -790,10 +784,10 @@ location.herf = default_apps_array[3][1];
 <table width="730px">
 <tr>
 <td align="left">
-<span class="formfonttitle"><#181#></span>
+<span class="formfonttitle"><#184#></span>
 </td>
 <td>
-<img id="return_btn" onclick="reloadAPP();" align="right" style="cursor:pointer;position:absolute;margin-left:-30px;margin-top:-25px;" title="<#181#>" src="/images/backprev.png" onMouseOver="this.src='/images/backprevclick.png'" onMouseOut="this.src='/images/backprev.png'">
+<img id="return_btn" onclick="reloadAPP();" align="right" style="cursor:pointer;position:absolute;margin-left:-30px;margin-top:-25px;" title="<#184#>" src="/images/backprev.png" onMouseOver="this.src='/images/backprevclick.png'" onMouseOut="this.src='/images/backprev.png'">
 </td>
 </tr>
 </table>
@@ -805,28 +799,28 @@ location.herf = default_apps_array[3][1];
 </tr>
 <tr>
 <td>
-<div class="formfontdesc" id="usbHint"><#1714#></div>
+<div class="formfontdesc" id="usbHint"><#1756#></div>
 </td>
 </tr>
 <tr>
 <td valign="top">
 <div id="partition_div"></div>
 <div id="app_state" class="app_state">
-<span style="margin-left:15px;" id="apps_state_desc"><#779#></span>
+<span style="margin-left:15px;" id="apps_state_desc"><#796#></span>
 <img id="loadingicon" style="margin-left:10px" src="/images/InternetScan.gif">
 <br>
 <br>
 <br>
 <div id="cancelBtn" style="display:none;">
-<input class="button_gen" onclick="apps_form('cancel','','');" type="button" value="<#74#>"/>
+<input class="button_gen" onclick="apps_form('cancel','','');" type="button" value="<#75#>"/>
 </div>
 </div>
 <div id="DMDesc" style="display:none;">
 <div style="margin-left:10px;" id="isInstallDesc">
-<h2><#972#></h2>
+<h2><#990#></h2>
 <table>
 <tr>
-<td><div class="top-heading" style="cursor:pointer;margin-top:10px;height:20px;" id="quick_dmlink"><a id="realLink" href="" target="_blank"><b style="text-decoration:underline;color:#FC0;font-size:16px;"><#973#></b></></a></div></td>
+<td><div class="top-heading" style="cursor:pointer;margin-top:10px;height:20px;" id="quick_dmlink"><a id="realLink" href="" target="_blank"><b style="text-decoration:underline;color:#FC0;font-size:16px;"><#991#></b></></a></div></td>
 <td><div style="margin-left:10px;"><img src="images/New_ui/aidisk/steparrow.png"></div></td>
 </tr>
 </table>
@@ -842,10 +836,10 @@ location.herf = default_apps_array[3][1];
 <a id="faq" href="http://www.asus.com/support/FAQ/1009773/" target="_blank" style="text-decoration:underline;font-size:14px;font-weight:bolder;color:#FFF">Download Master FAQ</a>
 </li>
 <li style="margin-top:10px;">
-<a id="faq2" href="http://www.asus.com/support/faq/114002/" target="_blank" style="text-decoration:underline;font-size:14px;font-weight:bolder;color:#FFF">Download Master Tool FAQ</a>
+<a id="faq2" href="http://www.asus.com/support/FAQ/1016385/" target="_blank" style="text-decoration:underline;font-size:14px;font-weight:bolder;color:#FFF">Download Master Tool FAQ</a>
 </li>
 <li style="margin-top:10px;">
-<a id="DMUtilityLink" href="http://dlcdnet.asus.com/pub/ASUS/wireless/ASUSWRT/DM2_2037.zip" style="text-decoration:underline;font-size:14px;font-weight:bolder;color:#FFF"><#969#></a>
+<a id="DMUtilityLink" href="http://dlcdnet.asus.com/pub/ASUS/wireless/RT-AC5300/UT_Download_Master_2228_Win.zip" style="text-decoration:underline;font-size:14px;font-weight:bolder;color:#FFF"><#987#></a>
 </li>
 </ul>
 </td>

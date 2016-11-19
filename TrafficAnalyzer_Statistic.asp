@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#533#> - <#1050#></title>
+<title><#548#> - <#1068#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="usp_style.css">
@@ -66,7 +66,6 @@ var flow_obj;
 var pie_obj;
 window.onresize = function(){
 cal_panel_block("client_all_info_block");
-cal_panel_block("demo_background");
 }
 function initial(){
 show_menu();
@@ -109,7 +108,7 @@ $('#datepicker').val(month + "/" + date + "/" + year);
 function cancel_demo(){
 clearTimeout(time_flag);
 document.getElementById("demo_image").style.background = "";
-document.getElementById("demo_background").style.display = "none";
+$("#demo_background").fadeOut(100);
 }
 var top5_client_array = new Array();
 var top5_app_array = new Array();
@@ -767,25 +766,25 @@ var info_type = "";
 if(obj.value == "monthly"){
 mode = "day";
 duration = "31";
-info_date = "Monthly";
+info_date = "<#961#>";
 }
 else if(obj.value == "weekly"){
 mode = "day";
 duration = "7";
-info_date = "Weekly";
+info_date = "<#973#>";
 }
 else{ //Daily
 mode = "hour";
 duration = "24";
-info_date = "Daily";
+info_date = "<#953#>";
 }
 if(document.getElementById('router').className == "block_filter_pressed"){
-info_type = "Clients";
+info_type = "<#1967#>";
 }
 else{
-info_type = "Apps";
+info_type = "<#1966#>";
 }
-document.getElementById('info_block_title').innerHTML = info_date + " Top 5 " + info_type + " Used"
+document.getElementById('info_block_title').innerHTML = info_date + " : " + info_type ;
 if(info_type == "Clients")
 get_every_client_data("all", "detail", duration, date_second, date_string);
 else
@@ -1216,16 +1215,16 @@ router_total_traffic += router_traffic_array[i][0];
 traffic_temp = translate_traffic(router_total_traffic);
 document.getElementById('total_traffic_field').innerHTML = traffic_temp[0] + " " + traffic_temp[1];
 if(document.getElementById('duration_option').value == "monthly"){
-document.getElementById('total_traffic_title').innerHTML = "Monthly Traffic";
+document.getElementById('total_traffic_title').innerHTML = "<#1964#>";
 }
 else if(document.getElementById('duration_option').value == "weekly"){
-document.getElementById('total_traffic_title').innerHTML = "Weekly Traffic";
+document.getElementById('total_traffic_title').innerHTML = "<#1970#>";
 }
 else{ //daily
-document.getElementById('total_traffic_title').innerHTML = "Daily Traffic";
+document.getElementById('total_traffic_title').innerHTML = "<#1963#>";
 }
-document.getElementById('current_traffic_title').innerHTML = "Current Traffic";
-document.getElementById('current_traffic_percent_title').innerHTML = "Used Percentage";
+document.getElementById('current_traffic_title').innerHTML = "<#1962#>";
+document.getElementById('current_traffic_percent_title').innerHTML = "<#1968#>";
 }
 function cal_panel_block(obj){
 var blockmarginLeft;
@@ -1297,11 +1296,9 @@ this.children[1].children[0].style.backgroundColor = "#FFF";
 }
 var time_flag;
 function introduce_demo(){
-cal_panel_block("demo_background");
-document.getElementById("demo_background").style.display = "";
 document.getElementById("demo_background").style.zIndex = "5";
-document.getElementById("demo_image").style.background = "url('http://toways-toways.stor.sinaapp.com/original/a46776cef1767fa88c1b56650498b007.gif') no-repeat"
-document.getElementById("demo_background").style.display = "";
+document.getElementById("demo_image").style.background = "url('/images/New_ui/TrafficAnalyzer.gif') no-repeat"
+$("#demo_background").fadeIn(300);
 time_flag = setTimeout(function(){cancel_demo();}, "41000");
 }
 function getClientCurrentName(_mac) {
@@ -1336,10 +1333,6 @@ return clientName;
 <input type="hidden" name="flag" value="">
 <input type="hidden" name="TM_EULA" value="<% nvram_get("TM_EULA"); %>">
 <input type="hidden" name="bwdpi_db_enable" value="<% nvram_get("bwdpi_db_enable"); %>">
-<div id="demo_background" style="background-color:#3E464A; width:760px;height:900px;position:absolute;z-index:5;margin: -100px 0 0 210px;opacity:0.9;display:none;border-radius:7px;display:none">
-<div style="background:url('images/New_ui/cancel.svg');width:40px;height:40px;z-index:12;position:absolute;top:10px;right:20px;cursor:pointer" onclick="cancel_demo();"></div>
-<div id="demo_image" style="width:750px;height:990px;background-size:88%;margin:10px 0 0 10px"></div>
-</div>
 <table class="content" align="center" cellpadding="0" cellspacing="0">
 <tr>
 <td width="17">&nbsp;</td>
@@ -1349,6 +1342,10 @@ return clientName;
 </td>
 <td valign="top">
 <div id="tabMenu" class="submenuBlock"></div>
+<div id="demo_background" style="background-color:#3E464A; width:760px;height:96%;position:absolute;z-index:5;opacity:0.9;display:none;display:none">
+<div style="background:url('images/New_ui/cancel.svg');width:40px;height:40px;z-index:12;position:absolute;top:10px;right:20px;cursor:pointer" onclick="cancel_demo();"></div>
+<div id="demo_image" style="width:750px;height:990px;background-size:88%;margin:10px 0 0 10px"></div>
+</div>
 <table width="98%" border="0" align="left" cellpadding="0" cellspacing="0">
 <tr>
 <td align="left" valign="top">
@@ -1360,15 +1357,15 @@ return clientName;
 <table width="100%">
 <tr>
 <td class="formfonttitle" align="left">
-<div><#1915#> - Statistic</div>
+<div><#1961#> - Statistic</div>
 </td>
 <td>
 <div>
 <table align="right">
 <tr>
-<td style="cursor:pointer;" onclick="introduce_demo();" id="introduce_demo"><div id="play_icon" class="icon_play" style="padding:1px;display:table-cell;width:22px;height:22px;"></div><div style="display:table-cell;font-size:16px;text-decoration:underline;padding-left:7px;" >Introduce demo</div></td>
+<td style="cursor:pointer;" onclick="introduce_demo();" id="introduce_demo"><div id="play_icon" class="icon_play" style="padding:1px;display:table-cell;width:22px;height:22px;"></div><div style="display:table-cell;font-size:16px;text-decoration:underline;padding-left:7px;" ><#1292#></div></td>
 <!--td>
-<div class="formfonttitle" style="margin-bottom:0px;margin-left:20px;" title="<#1911#>">Traffic Statistic</div>
+<div class="formfonttitle" style="margin-bottom:0px;margin-left:20px;" title="<#1957#>">Traffic Statistic</div>
 </td-->
 <td >
 <div align="center" class="left" style="width:94px; float:left; cursor:pointer;" id="traffic_analysis_enable"></div>
@@ -1410,9 +1407,9 @@ applyRule();
 </div>
 <div style="margin-left:5px;margin-bottom:10px"><img src="/images/New_ui/export/line_export.png"></div>
 <div style="margin-left:10px;">
-<label style="font-size:16px;">Last date:</label>
+<label style="font-size:16px;"><#1886#>:</label>
 <input class="input_12_table" id="datepicker" value="">
-<div id="statistic_hint" style="text-align:right;margin-top:-21px;padding-right:15px;color:#FC0;font-size:14px;">*Sample data - turn on the Traffic Statistic to record the traffic information</div>
+<div id="statistic_hint" style="text-align:right;margin-top:-21px;padding-right:15px;color:#FC0;font-size:14px;">* <#1965#></div>
 </div>
 <div style="margin:10px 0 10px 4px;">
 <table>
@@ -1422,13 +1419,13 @@ applyRule();
 <table>
 <tr>
 <td>
-<div style="font-size:16px;">Display for:</div>
+<div style="font-size:16px;"><#1885#>:</div>
 </td>
 <td>
-<div id="router" style="width:80px;text-align:center;font-size:14px;border-radius:5px" class="block_filter_pressed" onclick="switch_content(this);">Router</div>
+<div id="router" style="width:100px;text-align:center;font-size:14px;border-radius:5px" class="block_filter_pressed" onclick="switch_content(this);"><#933#></div>
 </td>
 <td>
-<div id="apps" style="width:80px;text-align:center;font-size:14px;border-radius:5px" class="block_filter" onclick="switch_content(this);">Apps</div>
+<div id="apps" style="width:100px;text-align:center;font-size:14px;border-radius:5px" class="block_filter" onclick="switch_content(this);"><#794#></div>
 </td>
 </tr>
 </table>
@@ -1443,16 +1440,16 @@ applyRule();
 </td>
 <td>
 <select class="input_option" id="traffic_option" onChange="change_traffic_direction(this);">
-<option value="both" selected>Both</option>
-<option value="down" >Download</option>
-<option value="up">Upload</option>
+<option value="both" selected><#1657#></option>
+<option value="down"><#1658#></option>
+<option value="up"><#1659#></option>
 </select>
 </td>
 <td>
 <select class="input_option" id="duration_option" onChange="switch_date_type(this);">
-<option value="monthly">Monthly</option>
-<option value="weekly">Weekly</option>
-<option value="daily" selected>Daily</option>
+<option value="monthly"><#961#></option>
+<option value="weekly"><#973#></option>
+<option value="daily" selected><#953#></option>
 </select>
 </td>
 </tr>
@@ -1495,11 +1492,11 @@ applyRule();
 <div id="top5_info_block" style="width:310px;min-height:330px;;background-color:#B3645B;border-bottom-right-radius:10px;border-bottom-left-radius:10px;border-top-right-radius:10px;box-shadow: 3px 5px 5px #2E3537;">
 <table style="width:99%;padding-top:20px">
 <tr>
-<th style="font-size:16px;text-align:left;padding-left:10px;width:140px;color:#ADADAD" id="top_client_title">Client:</th>
+<th style="font-size:16px;text-align:left;padding-left:10px;width:140px;color:#ADADAD" id="top_client_title"><#1678#>:</th>
 <td style="font-size:14px;" id="top_client_name"></td>
 </tr>
 <tr>
-<th style="font-size:16px;text-align:left;padding-left:10px;width:140px;color:#ADADAD">Used traffic:</th>
+<th style="font-size:16px;text-align:left;padding-left:10px;width:140px;color:#ADADAD"><#1969#>:</th>
 <td style="font-size:14px;" id="top_client_traffic"></td>
 </tr>
 <tr>

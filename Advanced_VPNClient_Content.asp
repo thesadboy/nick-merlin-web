@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#533#> - <#2140#></title>
+<title><#548#> - <#2193#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="usp_style.css">
@@ -128,7 +128,7 @@ duplicateCheck.saveToTmpStr(password_obj, 0);
 if(duplicateCheck.isDuplicate()){
 username_obj.focus();
 username_obj.select();
-alert("<#1325#>")
+alert("<#1363#>")
 return false;
 }
 vpnc_clientlist_row[idx] = description_obj.value+">"+type_obj.value+">"+server_obj.value+">"+username_obj.value+">"+password_obj.value;
@@ -187,7 +187,7 @@ else{ //Add Rule
 var rule_num = document.getElementById("vpnc_clientlist_table").rows.length;
 var item_num = document.getElementById("vpnc_clientlist_table").rows[0].cells.length;
 if(rule_num >= upper){
-alert("<#1331#> " + upper + " <#1332#>");
+alert("<#1369#> " + upper + " <#1370#>");
 return false;
 }
 type_obj = document.form.vpnc_type;
@@ -203,7 +203,7 @@ duplicateCheck.saveToTmpStr(server_obj, 0);
 duplicateCheck.saveToTmpStr(username_obj, 0);
 duplicateCheck.saveToTmpStr(password_obj, 0);
 if(duplicateCheck.isDuplicate()){
-alert("<#1325#>")
+alert("<#1363#>")
 return false;
 }
 addRow(description_obj ,1);
@@ -331,7 +331,7 @@ valid_server = document.form.vpnc_svr_edit;
 valid_username = document.form.vpnc_account_edit;
 valid_password = document.form.vpnc_pwd_edit;
 if(valid_des.value==""){
-alert("<#137#>");
+alert("<#140#>");
 valid_des.focus();
 return false;
 }
@@ -339,7 +339,7 @@ else if(!Block_chars(valid_des, ["*", "+", "|", ":", "?", "<", ">", ",", ".", "/
 return false;
 }
 if(valid_server.value==""){
-alert("<#137#>");
+alert("<#140#>");
 valid_server.focus();
 return false;
 }
@@ -358,14 +358,14 @@ return false;
 }
 }
 if(valid_username.value==""){
-alert("<#137#>");
+alert("<#140#>");
 valid_username.focus();
 return false;
 }else if(!Block_chars(valid_username, ["<", ">"])){
 return false;
 }
 if(valid_password.value==""){
-alert("<#137#>");
+alert("<#140#>");
 valid_password.focus();
 return false;
 }else if(!Block_chars(valid_password, ["<", ">"])){
@@ -395,7 +395,7 @@ var vpnc_clientlist_row = vpnc_clientlist_array.split('<');
 var code = "";
 code +='<table style="margin-bottom:30px;" width="98%" border="1" align="center" cellpadding="4" cellspacing="0" class="list_table" id="vpnc_clientlist_table">';
 if(vpnc_clientlist_array == "")
-code +='<tr><td style="color:#FC0;" colspan="6"><#1286#></td></tr>';
+code +='<tr><td style="color:#FC0;" colspan="6"><#1324#></td></tr>';
 else{
 for(var i=0; i<vpnc_clientlist_row.length; i++){
 overlib_str0[i] = "";
@@ -407,13 +407,13 @@ vpnc_clientlist_col[2] == document.form.vpnc_heartbeat_x.value &&
 vpnc_clientlist_col[3] == document.form.vpnc_pppoe_username.value)
 {
 if(vpnc_state_t == 0 || vpnc_state_t ==1) // Initial or Connecting
-code +='<td width="10%"><img title="<#71#>" src="/images/InternetScan.gif"></td>';
+code +='<td width="10%"><img title="<#72#>" src="/images/InternetScan.gif"></td>';
 else if(vpnc_state_t == 2) // Connected
-code +='<td width="10%"><img title="<#66#>" src="/images/checked_parentctrl.png" style="width:25px;"></td>';
+code +='<td width="10%"><img title="<#67#>" src="/images/checked_parentctrl.png" style="width:25px;"></td>';
 else if(vpnc_state_t == 4 && vpnc_sbstate_t == 2)
-code +="<td width=\"10%\"><img title=\"<#315#>\" src=\"/images/button-close2.png\" style=\"width:25px;\"></td>";
+code +="<td width=\"10%\"><img title=\"<#320#>\" src=\"/images/button-close2.png\" style=\"width:25px;\"></td>";
 else // Stop connection
-code +='<td width="10%"><img title="<#68#>" src="/images/button-close2.png" style="width:25px;"></td>';
+code +='<td width="10%"><img title="<#69#>" src="/images/button-close2.png" style="width:25px;"></td>';
 }
 else
 code +='<td width="10%">-</td>';
@@ -657,40 +657,40 @@ document.getElementById("pptpOptionHint").style.display = "";
 <div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable">
 <tr>
-<th><#1259#></th>
+<th><#1297#></th>
 <td>
 <input type="text" maxlength="64" name="vpnc_des_edit" value="" class="input_32_table" style="float:left;" autocorrect="off" autocapitalize="off"></input>
 </td>
 </tr>
 <tr>
-<th><#54#></th>
+<th><#55#></th>
 <td>
 <input type="text" maxlength="64" name="vpnc_svr_edit" value="" class="input_32_table" style="float:left;" autocorrect="off" autocapitalize="off"></input>
 </td>
 </tr>
 <tr>
-<th><#1246#></th>
+<th><#1283#></th>
 <td>
 <input type="text" maxlength="64" name="vpnc_account_edit" value="" class="input_32_table" style="float:left;" autocomplete="off" autocorrect="off" autocapitalize="off"></input>
 </td>
 </tr>
 <tr>
-<th><#1239#></th>
+<th><#1276#></th>
 <td>
 <input type="text" maxlength="64" name="vpnc_pwd_edit" value="" class="input_32_table" style="float:left;" autocomplete="off" autocorrect="off" autocapitalize="off"></input>
 </td>
 </tr>
 <tr id="trPPTPOptions">
-<th><#1671#></th>
+<th><#1714#></th>
 <td>
 <select name="selPPTPOption" class="input_option" onchange="pptpOptionChange();">
 <option value="auto"><#40#></option>
-<option value="-mppc"><#1604#></option>
+<option value="-mppc"><#1644#></option>
 <option value="+mppe-40">MPPE 40</option>
 <option value="+mppe-128">MPPE 128</option>
 </select>
 <div id="pptpOptionHint" style="display:none;">
-<span><#274#></span>
+<span><#277#></span>
 </div>
 </td>
 </tr>
@@ -700,8 +700,8 @@ document.getElementById("pptpOptionHint").style.display = "";
 </tr>
 </table>
 <div style="margin-top:5px;padding-bottom:10px;width:100%;text-align:center;">
-<input class="button_gen" type="button" onclick="cancel_add_rule();" id="cancelBtn" value="<#74#>">
-<input class="button_gen" type="button" onclick="addRow_Group(10,save_flag, idx_tmp);" value="<#879#>">
+<input class="button_gen" type="button" onclick="cancel_add_rule();" id="cancelBtn" value="<#75#>">
+<input class="button_gen" type="button" onclick="addRow_Group(10,save_flag, idx_tmp);" value="<#896#>">
 </div>
 </div>
 <table class="content" align="center" cellpadding="0" cellspacing="0">
@@ -720,17 +720,17 @@ document.getElementById("pptpOptionHint").style.display = "";
 <tr>
 <td bgcolor="#4D595D" valign="top">
 <div>&nbsp;</div>
-<div class="formfonttitle">VPN - <#2140#></div>
+<div class="formfonttitle">VPN - <#2193#></div>
 <div style="margin-left:5px;margin-top:10px;margin-bottom:10px"><img src="/images/New_ui/export/line_export.png"></div>
 <div class="formfontdesc">
-<#2133#><br>
-<#2134#><br>
-<#2135#><br><br>
-<#2136#>
+<#2186#><br>
+<#2187#><br>
+<#2188#><br><br>
+<#2189#>
 <ol>
-<li><#2137#>
-<li><#2138#>
-<li><#2139#>
+<li><#2190#>
+<li><#2191#>
+<li><#2192#>
 </ol>
 </div>
 </td>
@@ -740,21 +740,21 @@ document.getElementById("pptpOptionHint").style.display = "";
 <table width="98%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable_table">
 <thead>
 <tr>
-<td colspan="6" id="VPNServerList" style="border-right:none;height:22px;"><#58#> <span id="rules_limit" style="color:#FFFFFF"></span></td>
+<td colspan="6" id="VPNServerList" style="border-right:none;height:22px;"><#59#> <span id="rules_limit" style="color:#FFFFFF"></span></td>
 </tr>
 </thead>
 <tr>
-<th width="10%" style="height:30px;"><#272#></th>
-<th><div><#1259#></div></th>
-<th width="15%"><div><#345#></div></th>
-<th width="10%"><div><#1702#></div></th>
-<th width="10%"><div><#867#></div></th>
-<th width="25%"><div><#67#></div></th>
+<th width="10%" style="height:30px;"><#275#></th>
+<th><div><#1297#></div></th>
+<th width="15%"><div><#350#></div></th>
+<th width="10%"><div><#1744#></div></th>
+<th width="10%"><div><#885#></div></th>
+<th width="25%"><div><#68#></div></th>
 </tr>
 </table>
 <div id="vpnc_clientlist_Block"></div>
 <div class="apply_gen">
-<input class="button_gen_long" onclick="Add_profile()" type="button" value="<#2137#>">
+<input class="button_gen_long" onclick="Add_profile()" type="button" value="<#2190#>">
 </div>
 </td>
 </tr>

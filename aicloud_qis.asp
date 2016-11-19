@@ -56,7 +56,7 @@ if(tmo_support)
 var theUrl = "cellspot.router";
 else
 var theUrl = "router.asus.com";
-document.getElementById("aicloud_main_text").innerHTML = "<#615#>"+ theUrl +"<#616#>";
+document.getElementById("aicloud_main_text").innerHTML = "<#631#>"+ theUrl +"<#632#>";
 }
 }
 else{
@@ -180,10 +180,10 @@ restart_time = second;
 <div style="width:95%;height:500px;position:relative;padding:10px;font-style:italic;font-size:14px;background-color:#21333E;color:#fff">
 <div style="background-image:url('/images/aicloud_logo.png');width:250px;height:50px;left:110px;top:80px;position:absolute;"></div>
 <div id="aicloud_main_text" style="width:320px;position:absolute;top:150px;left:120px;font-size:18px;">
-<#614#>
+<#630#>
 </div>
 <div id="aicloud_learn_more" style="position:absolute;top:400px;left:370px">
-<a href="#" style="font-weight: bolder;text-decoration: underline;" target="_blank"><#1426#></a>
+<a href="#" style="font-weight: bolder;text-decoration: underline;" target="_blank"><#1464#></a>
 </div>
 <div id="process_status" style="position:absolute;top:250px;left:570px;font-size:24px;display:none">
 <table cellpadding="5" cellspacing="0" id="loadingBlock" class="loadingBlock" align="center">

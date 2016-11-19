@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#533#> - <#1470#></title>
+<title><#548#> - <#1508#></title>
 <link rel="stylesheet" type="text/css" href="/index_style.css">
 <link rel="stylesheet" type="text/css" href="/form_style.css">
 <link rel="stylesheet" type="text/css" href="device-map/device-map.css">
@@ -36,10 +36,10 @@ pullQoSList(document.getElementById("pull_arrow"));
 function initial(){
 show_menu();
 if(bwdpi_support){
-document.getElementById('content_title').innerHTML = "<#1470#> - <#1058#>";
+document.getElementById('content_title').innerHTML = "<#1508#> - <#1080#>";
 }
 else{
-document.getElementById('content_title').innerHTML = "<#180#> - QoS";
+document.getElementById('content_title').innerHTML = "<#183#> - QoS";
 }
 showqos_rulelist();
 load_QoS_rule();
@@ -73,7 +73,7 @@ if(j != item_num-2)
 tmp_value += ">";
 }
 }
-if(tmp_value == "<"+"<#1286#>" || tmp_value == "<")
+if(tmp_value == "<"+"<#1324#>" || tmp_value == "<")
 tmp_value = "";
 document.form.qos_rulelist.value = tmp_value;
 }
@@ -91,7 +91,7 @@ document.form.qos_min_transferred_x_0.value= "";
 document.form.qos_max_transferred_x_0.value= "";
 }
 function validForm(){
-if(document.form.qos_service_name_x_0.value == '<#473#>'){ // when service name is default "Please select", change it to null value. Jieming added at 2012/12/21
+if(document.form.qos_service_name_x_0.value == '<#474#>'){ // when service name is default "Please select", change it to null value. Jieming added at 2012/12/21
 document.form.qos_service_name_x_0.value = "";
 }
 if(!Block_chars(document.form.qos_service_name_x_0, ["<" ,">" ,"'" ,"%"])){
@@ -108,7 +108,7 @@ return false;
 if((document.form.qos_max_transferred_x_0.value.length > 0)
 && (parseInt(document.form.qos_max_transferred_x_0.value) < parseInt(document.form.qos_min_transferred_x_0.value))){
 document.form.qos_max_transferred_x_0.focus();
-alert("<#2067#> "+document.form.qos_min_transferred_x_0.value);
+alert("<#2122#> "+document.form.qos_min_transferred_x_0.value);
 return false;
 }
 return true;
@@ -118,7 +118,7 @@ if(validForm()){
 var rule_num = document.getElementById('qos_rulelist_table').rows.length;
 var item_num = document.getElementById('qos_rulelist_table').rows[0].cells.length;
 if(rule_num >= upper){
-alert("<#1331#> " + upper + " <#1332#>");
+alert("<#1369#> " + upper + " <#1370#>");
 return;
 }
 conv_to_transf();
@@ -131,7 +131,7 @@ if(document.form.qos_ip_x_0.value == document.getElementById('qos_rulelist_table
 if(document.form.qos_proto_x_0.value == document.getElementById('qos_rulelist_table').rows[i].cells[3].innerHTML
 || document.form.qos_proto_x_0.value == 'any'
 || document.getElementById('qos_rulelist_table').rows[i].cells[3].innerHTML == 'any'){
-alert("<#1325#>");
+alert("<#1363#>");
 parse_port="";
 document.form.qos_port_x_0.value =="";
 document.form.qos_ip_x_0.focus();
@@ -140,7 +140,7 @@ return;
 }else if(document.form.qos_proto_x_0.value == document.getElementById('qos_rulelist_table').rows[i].cells[3].innerHTML
 || (document.form.qos_proto_x_0.value == 'tcp/udp' && (document.getElementById('qos_rulelist_table').rows[i].cells[3].innerHTML == 'tcp' || document.getElementById('qos_rulelist_table').rows[i].cells[3].innerHTML == 'udp'))
 || (document.getElementById('qos_rulelist_table').rows[i].cells[3].innerHTML == 'tcp/udp' && (document.form.qos_proto_x_0.value == 'tcp' || document.form.qos_proto_x_0.value == 'udp'))){
-alert("<#1325#>");
+alert("<#1363#>");
 parse_port="";
 document.form.qos_port_x_0.value =="";
 document.form.qos_ip_x_0.focus();
@@ -155,7 +155,7 @@ if(document.form.qos_ip_x_0.value == document.getElementById('qos_rulelist_table
 if(document.form.qos_proto_x_0.value == document.getElementById('qos_rulelist_table').rows[i].cells[3].innerHTML
 || document.form.qos_proto_x_0.value == 'any'
 || document.getElementById('qos_rulelist_table').rows[i].cells[3].innerHTML == 'any'){
-alert("<#1325#>");
+alert("<#1363#>");
 parse_port="";
 document.form.qos_port_x_0.value =="";
 document.form.qos_ip_x_0.focus();
@@ -164,7 +164,7 @@ return;
 }else if(document.form.qos_proto_x_0.value == document.getElementById('qos_rulelist_table').rows[i].cells[3].innerHTML
 || (document.form.qos_proto_x_0.value == 'tcp/udp' && (document.getElementById('qos_rulelist_table').rows[i].cells[3].innerHTML == 'tcp' || document.getElementById('qos_rulelist_table').rows[i].cells[3].innerHTML == 'udp'))
 || (document.getElementById('qos_rulelist_table').rows[i].cells[3].innerHTML == 'tcp/udp' && (document.form.qos_proto_x_0.value == 'tcp' || document.form.qos_proto_x_0.value == 'udp'))){
-alert("<#1325#>");
+alert("<#1363#>");
 parse_port="";
 document.form.qos_port_x_0.value =="";
 document.form.qos_ip_x_0.focus();
@@ -217,7 +217,7 @@ qos_rulelist_row = decodeURIComponent(qos_rulelist_array).split('<');
 var code = "";
 code +='<table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="list_table" id="qos_rulelist_table">';
 if(qos_rulelist_row.length == 1) // no exist "<"
-code +='<tr><td style="color:#FFCC00;" colspan="10"><#1286#></td></tr>';
+code +='<tr><td style="color:#FFCC00;" colspan="10"><#1324#></td></tr>';
 else{
 for(var i = 1; i < qos_rulelist_row.length; i++){
 overlib_str0[i] ="";
@@ -245,25 +245,25 @@ code +='<td width="'+wid[j]+'%">'+ qos_rulelist_col[j] +'</td>';
 }else if(j==5){
 code += '<td width="'+wid[j]+'%"><select class="input_option" style="width:85px;">';
 if(qos_rulelist_col[5] =="0")
-code += '<option value="0" selected><#1221#></option>';
+code += '<option value="0" selected><#1258#></option>';
 else
-code += '<option value="0"><#1221#></option>';
+code += '<option value="0"><#1258#></option>';
 if(qos_rulelist_col[5] =="1")
-code += '<option value="1" selected><#1220#></option>';
+code += '<option value="1" selected><#1257#></option>';
 else
-code += '<option value="1"><#1220#></option>';
+code += '<option value="1"><#1257#></option>';
 if(qos_rulelist_col[5] =="2")
-code += '<option value="2" selected><#1463#></option>';
+code += '<option value="2" selected><#1501#></option>';
 else
-code += '<option value="2"><#1463#></option>';
+code += '<option value="2"><#1501#></option>';
 if(qos_rulelist_col[5] =="3")
-code += '<option value="3" selected><#1441#></option>';
+code += '<option value="3" selected><#1479#></option>';
 else
-code += '<option value="3"><#1441#></option>';
+code += '<option value="3"><#1479#></option>';
 if(qos_rulelist_col[5] =="4")
-code += '<option value="4" selected><#1442#></option>';
+code += '<option value="4" selected><#1480#></option>';
 else
-code += '<option value="4"><#1442#></option>';
+code += '<option value="4"><#1480#></option>';
 code += '</select></td>';
 }
 }
@@ -294,11 +294,11 @@ for(i=0; i<val.length; i++)
 {
 if (val.charAt(i)<'0' || val.charAt(i)>'9')
 {
-alert('<#149#> ' + min + ' <#150#> ' + max);
+alert('<#152#> ' + min + ' <#153#> ' + max);
 return false;
 }
 if(val<min || val>max) {
-alert('<#149#> ' + min + ' <#150#> ' + max);
+alert('<#152#> ' + min + ' <#153#> ' + max);
 return false;
 }else{
 val = str2val(val);
@@ -314,7 +314,7 @@ if(rangere.test(val)){
 if(!validator.eachPort(document.form.qos_port_x_0, RegExp.$1, mini, maxi) || !validator.eachPort(document.form.qos_port_x_0, RegExp.$2, mini, maxi)){
 return false;
 }else if(parseInt(RegExp.$1) >= parseInt(RegExp.$2)){
-alert("<#147#>");
+alert("<#150#>");
 return false;
 }else
 return true;
@@ -328,12 +328,12 @@ return true;
 function validate_single_range(val, min, max) {
 for(j=0; j<val.length; j++){ //is_number
 if (val.charAt(j)<'0' || val.charAt(j)>'9'){
-alert('<#149#> ' + min + ' <#150#> ' + max);
+alert('<#152#> ' + min + ' <#153#> ' + max);
 return false;
 }
 }
 if(val < min || val > max) { //is_in_range
-alert('<#149#> ' + min + ' <#150#> ' + max);
+alert('<#152#> ' + min + ' <#153#> ' + max);
 return false;
 }else
 return true;
@@ -452,15 +452,15 @@ else if(rule_proto[j] == "IGMP")
 document.form.qos_proto_x_0.options[4].selected = 1; */
 else
 document.form.qos_proto_x_0.options[0].selected = 1;
-if(rule_prio[j] == "<#1221#>")
+if(rule_prio[j] == "<#1258#>")
 document.form.qos_prio_x_0.options[0].selected = 1;
-else if(rule_prio[j] == "<#1220#>")
+else if(rule_prio[j] == "<#1257#>")
 document.form.qos_prio_x_0.options[1].selected = 1;
-else if(rule_prio[j] == "<#1463#>")
+else if(rule_prio[j] == "<#1501#>")
 document.form.qos_prio_x_0.options[2].selected = 1;
-else if(rule_prio[j] == "<#1441#>")
+else if(rule_prio[j] == "<#1479#>")
 document.form.qos_prio_x_0.options[3].selected = 1;
-else if(rule_prio[j] == "<#1442#>")
+else if(rule_prio[j] == "<#1480#>")
 document.form.qos_prio_x_0.options[4].selected = 1;
 else
 document.form.qos_prio_x_0.options[2].selected = 1;
@@ -579,11 +579,11 @@ var legal_hwaddr = new RegExp("(^([a-fA-F0-9][aAcCeE02468])(\:))", "gi"); // for
 if(obj.value.split(":").length >= 2){
 if(!hwaddr.test(obj.value)){
 obj.focus();
-alert("<#162#>");
+alert("<#165#>");
 return false;
 }else if(!legal_hwaddr.test(obj.value)){
 obj.focus();
-alert("<#131#>");
+alert("<#134#>");
 return false;
 }else
 return true;
@@ -673,10 +673,10 @@ document.form.qos_port_x_0.disabled = false;
 <td align="right" >
 <div style="margin-top:5px;">
 <select onchange="switchPage(this.options[this.selectedIndex].value)" class="input_option">
-<!--option><#1861#></option-->
-<option value="1"><#572#></option>
-<option value="2" selected><#1711#></option>
-<option value="3"><#1710#></option>
+<!--option><#1907#></option-->
+<option value="1"><#587#></option>
+<option value="2" selected><#1753#></option>
+<option value="3"><#1752#></option>
 </select>
 </div>
 </td>
@@ -691,8 +691,8 @@ document.form.qos_port_x_0.disabled = false;
 <td>
 <div class="formfontdesc" style="font-style: italic;font-size: 14px;color:#FFCC00;">
 <ul>
-<li><#2062#></li>
-<li><#2063#></li>
+<li><#2117#></li>
+<li><#2118#></li>
 </ul>
 </div>
 </td>
@@ -702,7 +702,7 @@ document.form.qos_port_x_0.disabled = false;
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable_table" style="margin-top:8px">
 <thead>
 <tr>
-<td colspan="4" id="TriggerList" style="border-right:none;"><#813#>&nbsp;(<#1435#>&nbsp;128)</td>
+<td colspan="4" id="TriggerList" style="border-right:none;"><#830#>&nbsp;(<#1473#>&nbsp;128)</td>
 <td colspan="3" id="TriggerList" style="border-left:none;">
 <div style="margin-top:0px;display:none" align="right">
 <select id='qos_default_sel' name='qos_default_sel' class="input_option" onchange="change_wizard(this);"></select>
@@ -711,23 +711,23 @@ document.form.qos_port_x_0.disabled = false;
 </tr>
 </thead>
 <tr>
-<th><#814#></th>
-<th><a href="javascript:void(0);" onClick="openHint(18,6);"><div class="table_text"><#815#></div></a></th>
-<th><a href="javascript:void(0);" onClick="openHint(18,4);"><div class="table_text"><#816#></div></a></th>
-<th><div class="table_text"><#1282#></div></th>
-<th><a href="javascript:void(0);" onClick="openHint(18,5);"><div class="table_text"><div class="table_text"><#2060#></div></a></th>
-<th><#817#></th>
-<th><#1434#></th>
+<th><#831#></th>
+<th><a href="javascript:void(0);" onClick="openHint(18,6);"><div class="table_text"><#832#></div></a></th>
+<th><a href="javascript:void(0);" onClick="openHint(18,4);"><div class="table_text"><#833#></div></a></th>
+<th><div class="table_text"><#1320#></div></th>
+<th><a href="javascript:void(0);" onClick="openHint(18,5);"><div class="table_text"><div class="table_text"><#2115#></div></a></th>
+<th><#834#></th>
+<th><#1472#></th>
 </tr>
 <tr>
 <td width="20%">
-<input type="text" maxlength="32" class="input_12_table" style="float:left;width:105px;" placeholder="<#473#>" name="qos_service_name_x_0" onKeyPress="return validator.isString(this, event)" autocorrect="off" autocapitalize="off">
-<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" onclick="pullQoSList(this);" title="<#1770#>">
+<input type="text" maxlength="32" class="input_12_table" style="float:left;width:105px;" placeholder="<#474#>" name="qos_service_name_x_0" onKeyPress="return validator.isString(this, event)" autocorrect="off" autocapitalize="off">
+<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" onclick="pullQoSList(this);" title="<#1812#>">
 <div id="QoSList_Block" class="QoSList_Block" onclick="hideClients_Block()"></div>
 </td>
 <td width="20%">
 <input type="text" maxlength="17" class="input_15_table" name="qos_ip_x_0" style="width:100px;float:left" autocorrect="off" autocapitalize="off">
-<img id="pull_arrow_mac" class="pull_arrow"height="14px;" src="/images/arrow-down.gif" onclick="pullLANIPList(this);" title="<#1765#>">
+<img id="pull_arrow_mac" class="pull_arrow"height="14px;" src="/images/arrow-down.gif" onclick="pullLANIPList(this);" title="<#1807#>">
 <div id="ClientList_Block_PC" class="clientlist_dropdown" style="margin-left:2px;margin-top: 25px;"></div>
 </td>
 <td width="10%"><input type="text" maxlength="32" class="input_6_table" name="qos_port_x_0" onKeyPress="return validator.isPortRange(this, event)" autocorrect="off" autocapitalize="off"></td>
@@ -745,11 +745,11 @@ document.form.qos_port_x_0.disabled = false;
 <input type="hidden" name="qos_transferred_x_0" value="">
 </td>
 <td width="15%">
-<select name='qos_prio_x_0' class="input_option" style="width:87px;"> <option value='0'><#1221#></option>
-<option value='1' selected><#1220#></option>
-<option value='2'><#1463#></option>
-<option value='3'><#1441#></option>
-<option value='4'><#1442#></option>
+<select name='qos_prio_x_0' class="input_option" style="width:87px;"> <option value='0'><#1258#></option>
+<option value='1' selected><#1257#></option>
+<option value='2'><#1501#></option>
+<option value='3'><#1479#></option>
+<option value='4'><#1480#></option>
 </select>
 </td>
 <td width="6%">
@@ -762,7 +762,7 @@ document.form.qos_port_x_0.disabled = false;
 </tr>
 <tr><td>
 <div class="apply_gen">
-<input name="button" type="button" class="button_gen" onClick="applyRule()" value="<#72#>"/>
+<input name="button" type="button" class="button_gen" onClick="applyRule()" value="<#73#>"/>
 </div>
 </td></tr>
 </table>

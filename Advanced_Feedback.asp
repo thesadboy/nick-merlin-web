@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#533#> - <#1465#></title>
+<title><#548#> - <#1503#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <script language="JavaScript" type="text/javascript" src="/state.js"></script>
@@ -98,12 +98,12 @@ setTimeout("check_wan_state();", 3000);
 }
 function gen_ptype_list(url){
 ptypelist = new Array();
-ptypelist.push(["<#473#> ...", "No_selected"]);
-ptypelist.push(["<#1091#>", "Setting_Problem"]);
-ptypelist.push(["<#1066#>", "Connection_or_Speed_Problem"]);
-ptypelist.push(["<#1065#>", "Compatibility_Problem"]);
-ptypelist.push(["<#1095#>", "Translated_Suggestion"]);
-ptypelist.push(["<#570#>", "Other_Problem"]);
+ptypelist.push(["<#474#> ...", "No_selected"]);
+ptypelist.push(["<#1126#>", "Setting_Problem"]);
+ptypelist.push(["<#1096#>", "Connection_or_Speed_Problem"]);
+ptypelist.push(["<#1088#>", "Compatibility_Problem"]);
+ptypelist.push(["<#1130#>", "Translated_Suggestion"]);
+ptypelist.push(["<#585#>", "Other_Problem"]);
 free_options(document.form.fb_ptype);
 document.form.fb_ptype.options.length = ptypelist.length;
 for(var i = 0; i < ptypelist.length; i++){
@@ -117,86 +117,86 @@ free_options(document.form.fb_pdesc);
 var ptype = obj.value;
 desclist = new Array();
 url_group = new Array();
-desclist.push(["<#473#> ...","No_selected"]);
+desclist.push(["<#474#> ...","No_selected"]);
 url_group.push(["select"]);//false value
 if(ptype == "Setting_Problem"){
-desclist.push(["<#275#>","QIS"]);
+desclist.push(["<#278#>","QIS"]);
 url_group.push(["QIS"]);
-desclist.push(["<#182#>","Network Map"]);
+desclist.push(["<#185#>","Network Map"]);
 url_group.push(["index"]);
-desclist.push(["<#113#>","Guest Network"]);
+desclist.push(["<#116#>","Guest Network"]);
 url_group.push(["Guest_network"]);
-desclist.push(["<#726#>","AiProtection"]);
+desclist.push(["<#742#>","AiProtection"]);
 url_group.push(["AiProtection"]);
-desclist.push(["<#571#>","Adaptive QoS"]); //5
+desclist.push(["<#586#>","Adaptive QoS"]); //5
 url_group.push(["AdaptiveQoS"]);
-desclist.push(["<#1058#>","Traditional QoS"]);
+desclist.push(["<#1080#>","Traditional QoS"]);
 url_group.push(["AiProtection"]);
-desclist.push(["<#180#>","<#1915#>"]); /* untranslated */
+desclist.push(["<#183#>","<#1961#>"]); /* untranslated */
 url_group.push(["TrafficMonitor"]);
-desclist.push(["<#256#>","Parental Ctrl"]);
+desclist.push(["<#259#>","Parental Ctrl"]);
 url_group.push(["ParentalControl"]);
-desclist.push(["<#181#>","USB Application"]);
+desclist.push(["<#184#>","USB Application"]);
 url_group.push(["APP_", "AiDisk", "aidisk", "mediaserver", "PrinterServer", "TimeMachine"]);
 desclist.push(["AiCloud","AiCloud"]); //10
 url_group.push(["cloud"]);
-desclist.push(["<#184#>","Wireless"]);
+desclist.push(["<#187#>","Wireless"]);
 url_group.push(["ACL", "WAdvanced", "Wireless", "WMode", "WSecurity", "WWPS"]);
-desclist.push(["<#195#>","WAN"]);
+desclist.push(["<#198#>","WAN"]);
 url_group.push(["WAN_", "PortTrigger", "VirtualServer", "Exposed", "NATPassThrough"]);
-desclist.push(["<#91#>","Dual WAN"]);
+desclist.push(["<#93#>","Dual WAN"]);
 url_group.push(["WANPort"]);
-desclist.push(["<#191#>","LAN"]);
+desclist.push(["<#194#>","LAN"]);
 url_group.push(["LAN", "DHCP", "GWStaticRoute", "IPTV", "SwitchCtrl"]);
-desclist.push(["<#205#>","USB dongle"]); //15
+desclist.push(["<#208#>","USB dongle"]); //15
 url_group.push(["Modem"]);
 desclist.push(["Download Master","DM"]);
 url_group.push(["DownloadMaster"]);//false value
-desclist.push(["<#200#>","DDNS"]);
+desclist.push(["<#203#>","DDNS"]);
 url_group.push(["DDNS"]);
 desclist.push(["IPv6","IPv6"]);
 url_group.push(["IPv6"]);
 desclist.push(["VPN","VPN"]);
 url_group.push(["VPN"]);
-desclist.push(["<#206#>","Firewall"]); //20
+desclist.push(["<#209#>","Firewall"]); //20
 url_group.push(["Firewall", "KeywordFilter", "URLFilter"]);
-desclist.push(["<#212#>","Administration"]);
+desclist.push(["<#215#>","Administration"]);
 url_group.push(["OperationMode", "System", "SettingBackup"]);
-desclist.push(["<#488#>","System Log"]);
+desclist.push(["<#489#>","System Log"]);
 url_group.push(["VPN"]);
-desclist.push(["<#1586#>","Network Tools"]);
+desclist.push(["<#1626#>","Network Tools"]);
 url_group.push(["Status_"]);
 desclist.push(["Rescue Mode","Rescue"]);
 url_group.push(["Rescue"]);//false value
-desclist.push(["With other network devices","Other Devices"]); //25
+desclist.push(["<#1092#>","Other Devices"]); //25
 url_group.push(["Other_Device"]);//false value
 desclist.push(["Cannot access firmware page","Fail to access"]);
 url_group.push(["GUI"]);//false value
-desclist.push(["<#216#>","FW update"]);
+desclist.push(["<#219#>","FW update"]);
 url_group.push(["FirmwareUpgrade"]);
 }
 else if(ptype == "Connection_or_Speed_Problem"){
-desclist.push(["Slow wireless speed","Wireless speed"]);
-desclist.push(["Slow wired speed","Wired speed"]);
-desclist.push(["Unstable connection problem","Unstable connection"]);
-desclist.push(["Router reboot automatically","Router reboot"]);
+desclist.push(["<#1097#>","Wireless speed"]);
+desclist.push(["<#1098#>","Wired speed"]);
+desclist.push(["<#1100#>","Unstable connection"]);
+desclist.push(["<#1099#>","Router reboot"]);
 }
 else if(ptype == "Compatibility_Problem"){
-desclist.push(["with modem","Compatible Problem"]);
-desclist.push(["with other router","Compatible Problem"]);
-desclist.push(["On OS or Application","Compatible Problem"]);
-desclist.push(["with printer","Compatible Problem"]);
-desclist.push(["with USB modem","Compatible Problem"]);
-desclist.push(["with external hardware disk","Compatible Problem"]);
-desclist.push(["with other network devices","Compatible Problem"]);
+desclist.push(["<#1091#>","Compatible Problem"]);
+desclist.push(["<#1093#>","Compatible Problem"]);
+desclist.push(["<#1089#>","Compatible Problem"]);
+desclist.push(["<#1094#>","Compatible Problem"]);
+desclist.push(["<#1095#>","Compatible Problem"]);
+desclist.push(["<#1090#>","Compatible Problem"]);
+desclist.push(["<#1092#>","Compatible Problem"]);
 }
 else if(ptype == "Translated_Suggestion"){
 desclist.splice(0,1);
-desclist.push(["Translated Suggestion","Translation"]);
+desclist.push(["<#1131#>","Translation"]);
 }
 else{ //Other_Problem
 desclist.splice(0,1);
-desclist.push(["<#570#>","others"]);
+desclist.push(["<#585#>","others"]);
 }
 document.form.fb_pdesc.options.length = desclist.length;
 if(obj.value == "Setting_Problem" && url){
@@ -230,7 +230,7 @@ document.location.href = "Feedback_Info.asp";
 }
 function applyRule(){
 if(sw_mode != 3 && document.getElementById("connect_status").className == "connectstatusoff"){
-alert("<#2030#>");
+alert("<#2085#>");
 return false;
 }
 else{
@@ -257,14 +257,14 @@ else
 document.form.PM_attach_iptables.value = 0;
 }
 if(document.form.fb_email.value == ""){
-if(!confirm("<#1073#>")){
+if(!confirm("<#1108#>")){
 document.form.fb_email.focus();
 return false;
 }
 }
 else{ //validate email
 if(!isEmail(document.form.fb_email.value)){
-alert("<#1072#>");
+alert("<#1107#>");
 document.form.fb_email.focus();
 return false;
 }
@@ -297,7 +297,7 @@ cnt.value = upper - field.value.length;
 function change_dsl_diag_enable(value) {
 if(value) {
 if(allUsbStatus.search("storage") == "-1"){
-alert("USB disk required in order to store the debug log, please plug-in a USB disk to <#534#> and Enable DSL Line Diagnostic again.");
+alert("USB disk required in order to store the debug log, please plug-in a USB disk to <#549#> and Enable DSL Line Diagnostic again.");
 document.form.dslx_diag_enable[1].checked = true;
 return;
 }
@@ -318,7 +318,7 @@ showhide("dslx_diag_duration",0);
 <table cellpadding="5" cellspacing="0" id="dr_sweet_advise" class="dr_sweet_advise" align="center">
 <tr>
 <td>
-<div class="drword" id="drword" style="height:110px;"><#174#> <#171#>...
+<div class="drword" id="drword" style="height:110px;"><#177#> <#174#>...
 <br/>
 <br/>
 </div>
@@ -360,19 +360,20 @@ showhide("dslx_diag_duration",0);
 <tr>
 <td bgcolor="#4D595D" valign="top" >
 <div>&nbsp;</div>
-<div class="formfonttitle"><#212#> - <#1465#></div>
+<div class="formfonttitle"><#215#> - <#1503#></div>
 <div style="margin-left:5px;margin-top:10px;margin-bottom:10px"><img src="/images/New_ui/export/line_export.png"></div>
-<div id="fb_desc0" class="formfontdesc" style="display:none;"><#1069#></div>
-<div id="fb_desc1" class="formfontdesc" style="display:none;"><#1070#></div>
-<div id="fb_desc_disconnect" class="formfontdesc" style="display:none;color:#FC0;">Now this function can't work, because your ASUS Router isn't connected to the Internet. Please send your Feedback to this email address : <a href="mailto:router_feedback@asus.com?Subject=<%nvram_get("productid");%>" target="_top" style="color:#FFCC00;">router_feedback@asus.com </a></div><table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
+<div id="fb_desc0" class="formfontdesc" style="display:none;"><#1103#></div>
+<div id="fb_desc1" class="formfontdesc" style="display:none;"><#1104#></div>
+<div id="fb_desc_disconnect" class="formfontdesc" style="display:none;color:#FC0;"><#1105#> <a href="mailto:router_feedback@asus.com?Subject=<%nvram_get("productid");%>" target="_top" style="color:#FFCC00;">router_feedback@asus.com</a></div>
+<table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <tr>
-<th width="30%"><#1068#> *</th>
+<th width="30%"><#1102#> *</th>
 <td>
 <input type="text" name="fb_country" maxlength="30" class="input_25_table" value="" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr>
-<th><#1080#> *</th>
+<th><#1115#> *</th>
 <td>
 <input type="text" name="fb_ISP" maxlength="40" class="input_25_table" value="" autocorrect="off" autocapitalize="off">
 </td>
@@ -383,25 +384,25 @@ showhide("dslx_diag_duration",0);
 </td>
 </tr>
 <tr>
-<th><#1071#> *</th>
+<th><#1106#> *</th>
 <td>
 <input type="text" name="fb_email" maxlength="50" class="input_25_table" value="" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr>
-<th><#1074#> *</th>
+<th><#1109#> *</th>
 <td>
-<input type="checkbox" class="input" name="attach_syslog" id="attach_syslog_id"><label for="attach_syslog_id"><#488#></label>&nbsp;&nbsp;&nbsp;
-<input type="checkbox" class="input" name="attach_cfgfile" id="attach_cfgfile_id"><label for="attach_cfgfile_id"><#1090#></label>&nbsp;&nbsp;&nbsp;
-<span id="attach_iptables_span" style="color:#FFFFFF;"><input type="checkbox" class="input" name="attach_iptables" id="attach_iptables_id"><label for="attach_iptables_id"><#1079#></label></span>
-<span id="attach_modem_span" style="color:#FFFFFF;"><input type="checkbox" class="input" name="attach_modemlog" id="attach_modemlog_id"><label for="attach_modemlog_id">3G/4G log</label></span>
+<input type="checkbox" class="input" name="attach_syslog" id="attach_syslog_id"><label for="attach_syslog_id"><#489#></label>&nbsp;&nbsp;&nbsp;
+<input type="checkbox" class="input" name="attach_cfgfile" id="attach_cfgfile_id"><label for="attach_cfgfile_id"><#1125#></label>&nbsp;&nbsp;&nbsp;
+<span id="attach_iptables_span" style="color:#FFFFFF;"><input type="checkbox" class="input" name="attach_iptables" id="attach_iptables_id"><label for="attach_iptables_id"><#1114#></label></span>
+<span id="attach_modem_span" style="color:#FFFFFF;"><input type="checkbox" class="input" name="attach_modemlog" id="attach_modemlog_id"><label for="attach_modemlog_id"><#1086#></label></span>
 </td>
 </tr>
 <tr>
 <th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(25,11);">Enable DSL Line Diagnostic *</a></th>
 <td>
-<input type="radio" name="dslx_diag_enable" class="input" value="1" onclick="change_dsl_diag_enable(1);"><#65#>
-<input type="radio" name="dslx_diag_enable" class="input" value="0" onclick="change_dsl_diag_enable(0);" checked><#64#>
+<input type="radio" name="dslx_diag_enable" class="input" value="1" onclick="change_dsl_diag_enable(1);"><#66#>
+<input type="radio" name="dslx_diag_enable" class="input" value="0" onclick="change_dsl_diag_enable(0);" checked><#65#>
 <br>
 <span id="storage_ready" style="display:none;color:#FC0">* USB disk is ready.</span>
 <span id="be_lack_storage" style="display:none;color:#FC0">* No USB disk plug-in.</span>
@@ -412,34 +413,34 @@ showhide("dslx_diag_duration",0);
 <td>
 <select id="" class="input_option" name="dslx_diag_duration">
 <option value="0" selected><#40#></option>
-<option value="3600">1 <#1223#></option>
-<option value="18000">5 <#1223#></option>
-<option value="43200">12 <#1223#></option>
-<option value="86400">24 <#1223#></option>
+<option value="3600">1 <#1260#></option>
+<option value="18000">5 <#1260#></option>
+<option value="43200">12 <#1260#></option>
+<option value="86400">24 <#1260#></option>
 </select>
 </td>
 </tr>
 <tr>
-<th><#1067#></th>
+<th><#1101#></th>
 <td>
 <select class="input_option" name="fb_availability">
-<option value="Not_selected"><#473#> ...</option>
-<option value="Stable_connection"><#1092#></option>
-<option value="Occasional_interruptions"><#1086#></option>
-<option value="Frequent_interruptions"><#1078#></option>
-<option value="Unavailable"><#1096#></option>
+<option value="Not_selected"><#474#> ...</option>
+<option value="Stable_connection"><#1127#></option>
+<option value="Occasional_interruptions"><#1121#></option>
+<option value="Frequent_interruptions"><#1113#></option>
+<option value="Unavailable"><#1132#></option>
 </select>
 </td>
 </tr>
 <tr>
-<th><#1089#></th>
+<th><#1124#></th>
 <td>
 <select class="input_option" name="fb_ptype" onChange="Reload_pdesc(this);">
 </select>
 </td>
 </tr>
 <tr>
-<th><#1088#></th>
+<th><#1123#></th>
 <td>
 <select class="input_option" name="fb_pdesc">
 </select>
@@ -447,27 +448,27 @@ showhide("dslx_diag_duration",0);
 </tr>
 <tr>
 <th>
-<#1064#> *
+<#1087#> *
 </th>
 <td>
 <textarea name="fb_comment" maxlength="2000" cols="55" rows="8" style="font-family:'Courier New', Courier, mono; font-size:13px;background:#475A5F;color:#FFFFFF;" onKeyDown="textCounter(this,document.form.msglength,2000);" onKeyUp="textCounter(this,document.form.msglength,2000)"></textarea>
-<span style="color:#FC0"><#1081#> : </span>
+<span style="color:#FC0"><#1116#> : </span>
 <input type="text" class="input_6_table" name="msglength" id="msglength" maxlength="4" value="2000" autocorrect="off" autocapitalize="off" readonly>
 </td>
 </tr>
 <tr>
 <td colspan="2">
-<div><#1087#></div>
-<input class="button_gen" style="margin-left: 305px;" name="btn_send" onclick="applyRule()" type="button" value="Send"/>
+<div><#1122#></div>
+<input class="button_gen" style="margin-left: 305px;" name="btn_send" onclick="applyRule()" type="button" value="<#845#>"/>
 </td>
 </tr>
 <tr>
 <td colspan="2">
-<strong><#1173#></strong>
+<strong><#1209#></strong>
 <ul>
-<li><#1083#></li>
-<li><#1084#></li>
-<li><#1085#></li>
+<li><#1118#></li>
+<li><#1119#></li>
+<li><#1120#></li>
 </ul>
 </td>
 </tr>

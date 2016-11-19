@@ -7,7 +7,7 @@
 <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
-<link rel="icon" href="images/favicon.png"><title><#533#> - <#497#></title>
+<link rel="icon" href="images/favicon.png"><title><#548#> - <#498#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="usp_style.css">
@@ -15,6 +15,7 @@
 <script type="text/javascript" src="/popup.js"></script>
 <script type="text/javascript" src="/help.js"></script>
 <script type="text/javascript" src="/validator.js"></script>
+<script type="text/javascript" src="/disk_functions.js"></script>
 <script type="text/javascript" src="/js/jquery.js"></script>
 <script type="text/javascript" src="/switcherplugin/jquery.iphone-switch.js"></script>
 <script type="text/javascript" src="/disk_functions.js"></script>
@@ -136,7 +137,7 @@ document.form.daapd_friendly_name.parentNode.parentNode.parentNode.style.display
 }
 function initial(){
 show_menu();
-document.getElementById("_APP_Installation").innerHTML = '<table><tbody><tr><td><div class="_APP_Installation"></div></td><td><div style="width:120px;"><#181#></div></td></tr></tbody></table>';
+document.getElementById("_APP_Installation").innerHTML = '<table><tbody><tr><td><div class="_APP_Installation"></div></td><td><div style="width:120px;"><#184#></div></td></tr></tbody></table>';
 document.getElementById("_APP_Installation").className = "menu_clicked";
 document.aidiskForm.protocol.value = PROTOCOL;
 initial_dir();
@@ -234,6 +235,7 @@ if(document.form.dms_dir_manual.value == 0){
 document.form.dms_dir_x.disabled = true;
 document.form.dms_dir_type_x.disabled = true;
 }
+document.form.dms_dir.disabled = true;
 showLoading();
 FormActions("start_apply.htm", "apply", "restart_media", "5");
 document.form.submit();
@@ -241,7 +243,7 @@ document.form.submit();
 function validForm(){
 if(document.form.daapd_enable.value == 1){
 if(document.form.daapd_friendly_name.value.length == 0){
-showtext(document.getElementById("alert_msg1"), "<#137#>");
+showtext(document.getElementById("alert_msg1"), "<#140#>");
 document.form.daapd_friendly_name.focus();
 document.form.daapd_friendly_name.select();
 return false;
@@ -262,7 +264,7 @@ document.form.daapd_friendly_name.value = trim(document.form.daapd_friendly_name
 }
 if(document.form.dms_enable.value == 1){
 if(document.form.dms_friendly_name.value.length == 0){
-showtext(document.getElementById("alert_msg2"), "<#137#>");
+showtext(document.getElementById("alert_msg2"), "<#140#>");
 document.form.dms_friendly_name.focus();
 document.form.dms_friendly_name.select();
 return false;
@@ -285,7 +287,7 @@ return true;
 }
 function get_disk_tree(){
 if(disk_flag == 1){
-alert('<#1606#>');
+alert('<#1646#>');
 return false;
 }
 cal_panel_block("folderTree_panel", 0.25);
@@ -579,16 +581,16 @@ var dms_dir_type_x_tmp = "";
 var rule_num = document.getElementById("dlna_path_table").rows.length;
 var item_num = document.getElementById("dlna_path_table").rows[0].cells.length;
 if(rule_num >= upper){
-alert("<#1331#> " + upper + " <#1332#>");
+alert("<#1369#> " + upper + " <#1370#>");
 return false;
 }
 if(document.getElementById("PATH").value==""){
-alert("<#137#>");
+alert("<#140#>");
 document.getElementById("PATH").focus();
 document.getElementById("PATH").select();
 return false;
 }else if(document.getElementById("PATH").value.indexOf("<") >= 0){
-alert("<#154#>&nbsp; <");
+alert("<#157#>&nbsp; <");
 document.getElementById("PATH").focus();
 document.getElementById("PATH").select();
 return false;
@@ -605,7 +607,7 @@ dms_dir_type_x_tmp += document.form.type_V_video.checked? "V" : "";
 if(item_num >=2){
 for(i=0; i<rule_num; i++){
 if(document.getElementById("PATH").value.toLowerCase() == document.getElementById("dlna_path_table").rows[i].cells[0].title.toLowerCase()){
-alert("<#1325#>");
+alert("<#1363#>");
 document.getElementById("PATH").focus();
 document.getElementById("PATH").select();
 return false;
@@ -634,7 +636,7 @@ var dms_dir_type_x_array_row = dms_dir_type_x_array.split('&#60');
 var code = "";
 code +='<table width="98%" cellspacing="0" cellpadding="4" align="center" class="list_table" id="dlna_path_table">';
 if(dms_dir_x_array_row.length == 1)
-code +='<tr><td style="color:#FFCC00;" colspan="6"><#1286#></td></tr>';
+code +='<tr><td style="color:#FFCC00;" colspan="6"><#1324#></td></tr>';
 else{
 for(var i = 1; i < dms_dir_x_array_row.length; i++){
 var tmp_type = "";
@@ -697,23 +699,23 @@ document.form.dms_dir_manual.value = 0;
 <div id="DM_mask" class="mask_bg"></div>
 <div id="folderTree_panel" class="panel_folder" >
 <table><tr><td>
-<div class="machineName" style="width:200px;font-family:Microsoft JhengHei;font-size:12pt;font-weight:bolder; margin-top:15px;margin-left:30px;"><#534#></div>
+<div class="machineName" style="width:200px;font-family:Microsoft JhengHei;font-size:12pt;font-weight:bolder; margin-top:15px;margin-left:30px;"><#549#></div>
 </td>
 <td>
 <div style="width:240px;margin-top:14px;margin-left:135px;">
 <table >
 <tr>
-<td><div id="createFolderBtn" class="createFolderBtn" title="<#579#>"></div></td>
-<td><div id="deleteFolderBtn" class="deleteFolderBtn" title="<#910#>"></div></td>
-<td><div id="modifyFolderBtn" class="modifyFolderBtn" title="<#1556#>"></div></td>
+<td><div id="createFolderBtn" class="createFolderBtn" title="<#595#>"></div></td>
+<td><div id="deleteFolderBtn" class="deleteFolderBtn" title="<#928#>"></div></td>
+<td><div id="modifyFolderBtn" class="modifyFolderBtn" title="<#1594#>"></div></td>
 </tr>
 </table>
 </div>
 </td></tr></table>
 <div id="e0" class="folder_tree"></div>
 <div style="background-image:url(images/Tree/bg_02.png);background-repeat:no-repeat;height:90px;">
-<input class="button_gen" type="button" style="margin-left:27%;margin-top:18px;" onclick="cancel_folderTree();" value="<#74#>">
-<input class="button_gen" type="button" onclick="confirm_folderTree();" value="<#879#>">
+<input class="button_gen" type="button" style="margin-left:27%;margin-top:18px;" onclick="cancel_folderTree();" value="<#75#>">
+<input class="button_gen" type="button" onclick="confirm_folderTree();" value="<#896#>">
 </div>
 </div>
 <div id="DM_mask_floder" class="mask_floder_bg"></div>
@@ -766,16 +768,16 @@ document.form.dms_dir_manual.value = 0;
 <table width="730px">
 <tr>
 <td align="left">
-<span class="formfonttitle"><#497#></span>
+<span class="formfonttitle"><#498#></span>
 </td>
 <td align="right">
-<img onclick="go_setting('/APP_Installation.asp')" align="right" style="cursor:pointer;position:absolute;margin-left:-20px;margin-top:-30px;" title="<#181#>" src="/images/backprev.png" onMouseOver="this.src='/images/backprevclick.png'" onMouseOut="this.src='/images/backprev.png'">
+<img onclick="go_setting('/APP_Installation.asp')" align="right" style="cursor:pointer;position:absolute;margin-left:-20px;margin-top:-30px;" title="<#184#>" src="/images/backprev.png" onMouseOver="this.src='/images/backprevclick.png'" onMouseOut="this.src='/images/backprev.png'">
 </td>
 </tr>
 </table>
 </div>
 <div style="margin:5px;"><img src="/images/New_ui/export/line_export.png"></div>
-<div id="upnp_desc_id" class="formfontdesc"><#2024#></div>
+<div id="upnp_desc_id" class="formfontdesc"><#2079#></div>
 </td>
 </tr>
 <tr>
@@ -786,7 +788,7 @@ document.form.dms_dir_manual.value = 0;
 <tr><td colspan="2">iTunes Server</td></tr>
 </thead>
 <tr>
-<th><#804#></th>
+<th><#821#></th>
 <td>
 <div class="left" style="width:94px; position:relative; left:3%;" id="radio_daapd_enable"></div>
 <div class="clear"></div>
@@ -806,7 +808,7 @@ do_get_friendly_name("daapd");
 </td>
 </tr>
 <tr>
-<th><#1318#></th>
+<th><#1356#></th>
 <td>
 <div><input name="daapd_friendly_name" type="text" style="margin-left:15px;" class="input_15_table" maxlength="32" value="" autocorrect="off" autocapitalize="off"><br/><div id="alert_msg1" style="color:#FC0;margin-left:10px;"></div></div>
 </td>
@@ -816,10 +818,10 @@ do_get_friendly_name("daapd");
 <div style="margin-top:10px;">
 <table id="dlna" width="98%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <thead>
-<tr><td colspan="2"><#497#></td></tr>
+<tr><td colspan="2"><#498#></td></tr>
 </thead>
 <tr>
-<th><#962#></th>
+<th><#980#></th>
 <td>
 <div class="left" style="width:94px; position:relative; left:3%;" id="radio_dms_enable"></div>
 <div class="clear"></div>
@@ -842,25 +844,25 @@ do_get_friendly_name("dms");
 }
 );
 </script>
-<div id="noUSB" style="color:#FC0;display:none;margin-left:17px;padding-top:2px;padding-bottom:2px;"><#1606#></div>
+<div id="noUSB" style="color:#FC0;display:none;margin-left:17px;padding-top:2px;padding-bottom:2px;"><#1646#></div>
 </td>
 </tr>
 <tr>
-<th><#963#></th>
+<th><#981#></th>
 <td>
 <div><input name="dms_friendly_name" type="text" style="margin-left:15px;" class="input_15_table" maxlength="32" value="" autocorrect="off" autocapitalize="off"><br/><div id="alert_msg2" style="color:#FC0;margin-left:10px;"></div></div>
 </td>
 </tr>
 <tr>
-<th><#967#></th>
+<th><#985#></th>
 <td><span id="dmsStatus" style="margin-left:15px">Idle</span>
 </td>
 </tr>
 <tr>
-<th><#965#></th>
+<th><#983#></th>
 <td>
-<input type="radio" value="0" name="dms_dir_manual_x" class="input" onClick="set_dms_dir(this);" <% nvram_match("dms_dir_manual", "0", "checked"); %>><#966#>
-<input type="radio" value="1" name="dms_dir_manual_x" class="input" onClick="set_dms_dir(this);" <% nvram_match("dms_dir_manual", "1", "checked"); %>><#964#>
+<input type="radio" value="0" name="dms_dir_manual_x" class="input" onClick="set_dms_dir(this);" <% nvram_match("dms_dir_manual", "0", "checked"); %>><#984#>
+<input type="radio" value="1" name="dms_dir_manual_x" class="input" onClick="set_dms_dir(this);" <% nvram_match("dms_dir_manual", "1", "checked"); %>><#982#>
 </td>
 </tr>
 </table>
@@ -869,17 +871,17 @@ do_get_friendly_name("dms");
 <table width="98%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable_table" style="margin-top:8px;">
 <thead>
 <tr>
-<td colspan="3" id="GWStatic"><#964#>&nbsp;(<#1435#>&nbsp;10)</td>
+<td colspan="3" id="GWStatic"><#982#>&nbsp;(<#1473#>&nbsp;10)</td>
 </tr>
 </thead>
 <tr>
-<th><#961#></th>
-<th><#960#></th>
-<th><#1434#></th>
+<th><#979#></th>
+<th><#978#></th>
+<th><#1472#></th>
 </tr>
 <tr>
 <td width="45%">
-<input id="PATH" type="text" class="input_30_table" value="" onclick="get_disk_tree();" autocorrect="off" autocapitalize="off" readonly="readonly"/" placeholder="<#473#>" >
+<input id="PATH" type="text" class="input_30_table" value="" onclick="get_disk_tree();" autocorrect="off" autocapitalize="off" readonly="readonly"/" placeholder="<#474#>" >
 </td>
 <td width="40%">
 <input type="checkbox" class="input" name="type_A_audio" checked>&nbsp;Audio&nbsp;&nbsp;
@@ -894,7 +896,7 @@ do_get_friendly_name("dms");
 <div id="dlna_path_Block"></div>
 </div>
 <div class="apply_gen">
-<input type="button" class="button_gen" onclick="applyRule()" value="<#72#>"/>
+<input type="button" class="button_gen" onclick="applyRule()" value="<#73#>"/>
 </div>
 </td>
 </tr>

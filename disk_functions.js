@@ -18,6 +18,7 @@ this.serialNum = "";
 this.hasErrPart = false;
 this.hasAppDev = false;
 this.hasTM = false;
+this.isBusy = false;
 this.partition = new Array(0);
 }
 var newPartition = function(){
@@ -396,7 +397,7 @@ else
 return 0;
 }
 else
-alert("<#753#>");
+alert("<#769#>");
 }
 function getPoolDevice(barCode){
 var layer = get_layer(barCode);

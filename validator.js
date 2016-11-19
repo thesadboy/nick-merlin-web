@@ -14,23 +14,23 @@ account: function(string_obj, flag){
 var invalid_char = "";
 if(string_obj.value.charAt(0) == ' '){
 if(flag != "noalert")
-alert('<#153#> [ ]');
+alert('<#156#> [ ]');
 string_obj.value = "";
 string_obj.focus();
 if(flag != "noalert")
 return false;
 else
-return '<#153#> [&nbsp;&nbsp;&nbsp;]';
+return '<#156#> [&nbsp;&nbsp;&nbsp;]';
 }
 else if(string_obj.value.charAt(0) == '-'){
 if(flag != "noalert")
-alert('<#153#> [-]');
+alert('<#156#> [-]');
 string_obj.value = "";
 string_obj.focus();
 if(flag != "noalert")
 return false;
 else
-return '<#153#> [-]';
+return '<#156#> [-]';
 }
 for(var i = 0; i < string_obj.value.length; ++i){
 if(this.ssidChar(string_obj.value.charCodeAt(i))){
@@ -59,13 +59,13 @@ invalid_char = invalid_char+string_obj.value.charAt(i);
 }
 if(invalid_char != ""){
 if(flag != "noalert")
-alert("<#154#> ' "+invalid_char+" ' !");
+alert("<#157#> ' "+invalid_char+" ' !");
 string_obj.value = "";
 string_obj.focus();
 if(flag != "noalert")
 return false;
 else
-return "<#154#> ' "+invalid_char+" ' !";
+return "<#157#> ' "+invalid_char+" ' !";
 }
 if(flag != "noalert")
 return true;
@@ -98,7 +98,7 @@ var childsel=document.createElement("div");
 childsel.setAttribute("id","check_ip_input");
 childsel.style.color="#FFCC00";
 obj.parentNode.appendChild(childsel);
-document.getElementById("check_ip_input").innerHTML="<#146#>";
+document.getElementById("check_ip_input").innerHTML="<#149#>";
 document.getElementById("check_ip_input").style.display = "";
 obj.value = obj.parentNode.childNodes[0].innerHTML;
 obj.focus();
@@ -130,7 +130,7 @@ return len;
 }
 var validateRange = function(v){
 if(v.value < 0 || v.value >= 256){
-alert(v.value+" <#43#>. \n<#44#> 0<#45#>255.");
+alert(v.value+" <#44#>. \n<#45#> 0<#46#>255.");
 v.focus();
 v.select();
 return false;
@@ -223,7 +223,7 @@ moveLeft_key = 0;
 }
 else{
 if(isNaN(s) && s.length >= 1 && sk != 13){
-alert("<#164#>");
+alert("<#167#>");
 o.focus();
 o.select();
 return false;
@@ -236,7 +236,7 @@ return false;
 },
 eachPort: function(o, num, min, max) {
 if(num<min || num>max) {
-alert("<#147#>");
+alert("<#150#>");
 return false;
 }else {
 if(o.value=="")
@@ -255,7 +255,7 @@ return true;
 haveFullWidthChar: function(obj) {
 var re = /[^\x00-\xff]/g;
 if (obj.value.match(re)) {
-alert('<#145#>');
+alert('<#148#>');
 obj.focus();
 obj.select();
 return false;
@@ -273,7 +273,7 @@ else if(location.pathname == "/" || location.pathname == "/index.asp"){
 return "Client device name only accept alphanumeric characters, under line and dash symbol. The first character cannot be dash \"-\" or under line \"_\".";
 }
 else{
-return "<#1335#>";
+return "<#1373#>";
 }
 },
 hostNameChar: function(ch){
@@ -526,7 +526,7 @@ obj_name.value = ipFilterZero(ip_obj.value);
 return true;
 }
 else if(ip_num > B_class_start && ip_num < B_class_end){
-alert(ip_obj.value+" <#146#>");
+alert(ip_obj.value+" <#149#>");
 ip_obj.focus();
 ip_obj.select();
 return false;
@@ -536,7 +536,7 @@ obj_name.value = ipFilterZero(ip_obj.value);
 return true;
 }
 else{
-alert(ip_obj.value+" <#146#>");
+alert(ip_obj.value+" <#149#>");
 ip_obj.focus();
 ip_obj.select();
 return false;
@@ -649,7 +649,7 @@ var keyPressed = event.keyCode ? event.keyCode : event.which;
 if(keyPressed >= 0 && keyPressed <= 126)
 return true;
 else{
-alert('<#145#>');
+alert('<#148#>');
 return false;
 }
 },
@@ -706,7 +706,7 @@ v4 = num;
 return true;
 }
 },
-ipAddrFinal: function(o, v){
+ipAddrFinal: function(o, v, noAlert){
 var num = -1;
 var pos = 0;
 var v1, v2, v3, v4;
@@ -717,7 +717,7 @@ v == 'dhcp1_start' || v=='dhcp1_end' ||
 v == 'lan_ipaddr' || v=='lan_netmask' ||
 v=='lan1_ipaddr' || v=='lan1_netmask' ||
 v == 'wl_radius_ipaddr' || v == 'hs_radius_ipaddr') {
-alert("<#137#>");
+alert("<#140#>");
 if(v == 'wan_ipaddr_x'){
 document.form.wan_ipaddr_x.value = "10.1.1.1";
 document.form.wan_netmask_x.value = "255.0.0.0";
@@ -755,11 +755,16 @@ num = num*10+(c-'0');
 }
 else{
 if(num < 0 || num > 255 || c != '.'){
-alert(o.value+" <#146#>");
+if(v == 'wl_radius_ipaddr' && typeof(noAlert) != undefined && noAlert == 1){
+return false;
+}
+else{
+alert(o.value+" <#149#>");
 o.value = "";
 o.focus();
 o.select();
 return false;
+}
 }
 if(pos == 0)
 v1 = num;
@@ -772,11 +777,16 @@ num = -1;
 }
 }
 if(pos!=3 || num<0 || num>255){
-alert(o.value + " <#146#>");
+if(v == 'wl_radius_ipaddr' && typeof(noAlert) != undefined && noAlert == 1){
+return false;
+}
+else{
+alert(o.value + " <#149#>");
 o.value = "";
 o.focus();
 o.select();
 return false;
+}
 }
 else
 v4 = num;
@@ -788,11 +798,16 @@ v == 'staticip' || v == 'wl_radius_ipaddr' ||
 v == 'dhcp_dns1_x' || v == 'dhcp_gateway_x' || v == 'dhcp_wins_x' ||
 v == 'sip_server'){
 if((v!='wan_ipaddr_x')&& (v1==255||v4==255||v1==0||v4==0||v1==127||v1==224)){
-alert(o.value + " <#146#>");
+if(v == 'wl_radius_ipaddr' && typeof(noAlert) != undefined && noAlert == 1){
+return false;
+}
+else{
+alert(o.value + " <#149#>");
 o.value = "";
 o.focus();
 o.select();
 return false;
+}
 }
 if(sw_mode == "2" || sw_mode == "3") // variables are defined in state.js
 ; // there is no WAN in AP mode, so it wouldn't be compared with the wan ip..., etc.
@@ -800,7 +815,7 @@ else if(this.requireWANIP(v) && (
 (v=='wan_ipaddr_x' && this.matchSubnet2(o.value, document.form.wan_netmask_x, document.form.lan_ipaddr.value, document.form.lan_netmask)) ||
 (v=='lan_ipaddr' && this.matchSubnet2(o.value, document.form.lan_netmask, document.form.wan_ipaddr_x.value, document.form.wan_netmask_x))
 )){
-alert(o.value + " <#146#>");
+alert(o.value + " <#149#>");
 if(v == 'wan_ipaddr_x'){
 document.form.wan_ipaddr_x.value = "10.1.1.1";
 document.form.wan_netmask_x.value = "255.0.0.0";
@@ -820,7 +835,7 @@ return false;
 }
 else if(v=='lan_netmask' || v=='lan1_netmask'){
 if(v1==255&&v2==255&&v3==255&&v4==255){
-alert(o.value + " <#146#>");
+alert(o.value + " <#149#>");
 o.value = "";
 o.focus();
 o.select();
@@ -833,7 +848,7 @@ else if(this.requireWANIP(v) && (
 (v=='wan_netmask_x' && this.matchSubnet2(document.form.wan_ipaddr_x.value, o, document.form.lan_ipaddr.value, document.form.lan_netmask)) ||
 (v=='lan_netmask' && this.matchSubnet2(document.form.lan_ipaddr.value, o, document.form.wan_ipaddr_x.value, document.form.wan_netmask_x))
 )){
-alert(o.value + " <#146#>");
+alert(o.value + " <#149#>");
 if (v=='wan_netmask_x'){
 document.form.wan_ipaddr_x.value = "10.1.1.1";
 document.form.wan_netmask_x.value = "255.0.0.0";
@@ -862,7 +877,7 @@ else if (v=='lan_ipaddr' && document.form.lan_netmask.value=="" ){
 document.form.lan_netmask.value = mask;
 }else if (v=='dhcp_start'){
 if (!this.matchSubnet(document.form.lan_ipaddr.value, document.form.dhcp_start.value, 3)){
-alert(o.value + " <#146#>");
+alert(o.value + " <#149#>");
 o.focus();
 o.select();
 return false;
@@ -870,7 +885,7 @@ return false;
 }
 else if (v=='dhcp_end'){
 if (!this.matchSubnet(document.form.lan_ipaddr.value, document.form.dhcp_end.value, 3)){
-alert(o.value + " <#146#>");
+alert(o.value + " <#149#>");
 o.focus();
 o.select();
 return false;
@@ -881,7 +896,7 @@ if(document.form.lan1_netmask.value=="") document.form.lan1_netmask.value = mask
 }
 else if (v=='dhcp1_start'){
 if (!this.matchSubnet(document.form.lan1_ipaddr.value, document.form.dhcp1_start.value, 3)){
-alert(o.value + " <#146#>");
+alert(o.value + " <#149#>");
 o.focus();
 o.select();
 return false;
@@ -889,7 +904,7 @@ return false;
 }
 else if (v=='dhcp1_end'){
 if (!this.matchSubnet(document.form.lan1_ipaddr.value, document.form.dhcp1_end.value, 3)){
-alert(o.value + " <#146#>");
+alert(o.value + " <#149#>");
 o.focus();
 o.select();
 return false;
@@ -919,32 +934,32 @@ j++;
 };
 if(v == 'wan_ipaddr_x'){
 if(o.value.length == 0){ /*Blank.*/
-alert(o.title+"<#137#>");
+alert(o.title+"<#140#>");
 document.getElementById(o.name+"_div").style.border = "2px solid #CE1E1E";
 document.form.wan_ipaddr_x1.focus();
 return false;
 }
 else if(o.value.indexOf("0") == 0){ /*首字不能為0*/
 document.getElementById(o.name+"_div").style.border = "2px solid #CE1E1E";
-alert(document.form.wan_ipaddr_x.value + " <#146#>");
+alert(document.form.wan_ipaddr_x.value + " <#149#>");
 document.form.wan_ipaddr_x1.focus();
 return false;
 }
 else if(!(IP_Validate(o))){ /*IP格式錯誤*/
 document.getElementById(o.name+"_div").style.border = "2px solid #CE1E1E";
-alert(document.form.wan_ipaddr_x.value + " <#146#>");
+alert(document.form.wan_ipaddr_x.value + " <#149#>");
 document.form.wan_ipaddr_x4.focus();
 return false;
 }
 else if(IP_Validate(o)){
 if(document.form.wan_ipaddr_x1.value >= 224){
-alert("<#136#>");
+alert("<#139#>");
 document.form.wan_ipaddr_x1.focus();
 document.form.wan_ipaddr_x1.select();
 return false;
 }
 else if(document.form.wan_ipaddr_x1.value == 127){
-alert(document.form.wan_ipaddr_x1.value + "<#135#>");
+alert(document.form.wan_ipaddr_x1.value + "<#138#>");
 document.form.wan_ipaddr_x1.focus();
 document.form.wan_ipaddr_x1.select();
 return false;
@@ -958,7 +973,7 @@ else if(v == 'wan_netmask_x'){
 var wan_ipaddr_x1 = document.form.wan_ipaddr_x1.value;
 if(o.value.length == 0){ /*Blank.*/
 document.getElementById(o.name+"_div").style.border = "2px solid #CE1E1E";
-if(confirm(o.title+"<#137#>\n<#134#>")){
+if(confirm(o.title+"<#140#>\n<#137#>")){
 if((wan_ipaddr_x1 > 0) && (wan_ipaddr_x1 < 127)) o.value = "255.0.0.0";
 else if ((wan_ipaddr_x1 > 127) && (wan_ipaddr_x1 < 192)) o.value = "255.255.0.0";
 else if ((wan_ipaddr_x1 > 191) && (wan_ipaddr_x1 < 224)) o.value = "255.255.255.0";
@@ -970,14 +985,14 @@ return false;
 }
 else if(!(IP_Validate(o))){ /*IP格式錯誤*/
 document.getElementById(o.name+"_div").style.border = "2px solid #CE1E1E";
-alert(o.value + " <#146#>");
+alert(o.value + " <#149#>");
 return false;
 }
 else if(IP_Validate(o)){
 if(this.requireWANIP(v) && (
 (this.matchSubnet2(document.form.wan_ipaddr_x.value, o, document.form.lan_ipaddr.value, document.form.lan_netmask))
 )){
-alert(o.value + " <#146#>");
+alert(o.value + " <#149#>");
 document.getElementById(o.name+"_div").style.border = "2px solid #CE1E1E";
 return false;
 }
@@ -990,11 +1005,11 @@ else if(v == 'wan_gateway_x'){
 if(o.value.length > 0){
 if(!(IP_Validate(o))){ /* IP格式錯誤*/
 document.getElementById(o.name+"_div").style.border = "2px solid #CE1E1E";
-alert(o.value + " <#146#>");
+alert(o.value + " <#149#>");
 return false;
 }
 else if(o.value == document.form.wan_ipaddr_x.value){
-alert("<#120#>");
+alert("<#123#>");
 document.getElementById(o.name+"_div").style.border = "2px solid #CE1E1E";
 return false;
 }
@@ -1005,14 +1020,14 @@ else if(v == 'wan_dns1_x' || v == 'wan_dns2_x'){
 var split_IP = o.value.split(".");
 if(!(IP_Validate(o))){
 document.getElementById(o.name+"_div").style.border = "2px solid #CE1E1E";
-alert(o.value + " <#146#>");
+alert(o.value + " <#149#>");
 return false;
 }
 return true;
 /*
 else if(IP_Validate(o)){
 if(split_IP[0]==255||split_IP[1]==255||split_IP[2]==255||split_IP[3]==255||split_IP[0]==0||split_IP[3]==0||split_IP[0]==127||split_IP[0]==224){
-alert(o.value +" <#146#>");
+alert(o.value +" <#149#>");
 document.getElementById(o.name+"_div").style.border = "2px solid #CE1E1E";
 return false;
 }
@@ -1058,7 +1073,7 @@ num = 0;
 }
 else{
 if ( num<0 || num>255 || (c!='.')){
-alert(o.value + " <#146#>");
+alert(o.value + " <#149#>");
 o.value = "";
 o.focus();
 o.select();
@@ -1069,7 +1084,7 @@ pos++;
 }
 }
 if (pos!=3 || num<0 || num>255){
-alert(o.value + " <#146#>");
+alert(o.value + " <#149#>");
 o.value = "";
 o.focus();
 o.select();
@@ -1090,12 +1105,12 @@ var ipPattern3 = new RegExp("(^([0-9]{1,3})\\.(\\*)\\.(\\*)\\.(\\*)$)", "gi");
 var ipPattern4 = new RegExp("(^(\\*)\\.(\\*)\\.(\\*)\\.(\\*)$)", "gi");
 var parts = obj.value.split(".");
 if(!ipPattern1.test(obj.value) && !ipPattern2.test(obj.value) && !ipPattern3.test(obj.value) && !ipPattern4.test(obj.value)){
-alert(obj.value + " <#146#>");
+alert(obj.value + " <#149#>");
 obj.focus();
 obj.select();
 return false;
 }else if(parts[0] == 0 || parts[0] > 255 || parts[1] > 255 || parts[2] > 255){
-alert(obj.value + " <#146#>");
+alert(obj.value + " <#149#>");
 obj.focus();
 obj.select();
 return false;
@@ -1159,7 +1174,7 @@ var PortRange = obj.value;
 var rangere=new RegExp("^([0-9]{1,5})\:([0-9]{1,5})$", "gi");
 if(rangere.test(PortRange)){
 if(parseInt(RegExp.$1) >= parseInt(RegExp.$2)){
-alert("<#147#>");
+alert("<#150#>");
 obj.focus();
 obj.select();
 return false;
@@ -1193,7 +1208,7 @@ num = num*10 + (c-'0');
 }
 else{
 if (num>255){
-alert(num + " <#147#>");
+alert(num + " <#150#>");
 o.focus();
 o.select();
 return false;
@@ -1202,7 +1217,7 @@ num = 0;
 }
 }
 if (num>255){
-alert(num + " <#147#>");
+alert(num + " <#150#>");
 o.focus();
 o.select();
 return false;
@@ -1212,26 +1227,26 @@ return true;
 psk: function(psk_obj, wl_unit){
 var psk_length = psk_obj.value.length;
 if(psk_length < 8){
-alert("<#140#>");
+alert("<#143#>");
 psk_obj.value = "00000000";
 psk_obj.focus();
 psk_obj.select();
 return false;
 }
 if(psk_length > 64){
-alert("<#141#>");
+alert("<#144#>");
 psk_obj.focus();
 psk_obj.select();
 return false;
 }
 if(psk_length >= 8 && psk_length <= 63 && !this.string(psk_obj)){
-alert("<#141#>");
+alert("<#144#>");
 psk_obj.focus();
 psk_obj.select();
 return false;
 }
 if(psk_length == 64 && !this.hex(psk_obj)){
-alert("<#141#>");
+alert("<#144#>");
 psk_obj.focus();
 psk_obj.select();
 return false;
@@ -1242,7 +1257,7 @@ psk_KR: function(psk_obj, flag){
 var psk_length = psk_obj.value.length;
 if(!/[A-Za-z]/.test(psk_obj.value) || !/[0-9]/.test(psk_obj.value) || psk_length < 8 || psk_length > 63
 || !/[\!\"\#\$\%\&\'\(\)\*\+\,\-\.\/\:\;\<\=\>\?\@\[\\\]\^\_\`\{\|\}\~]/.test(psk_obj.value)){
-alert("<#142#> <#148#>");
+alert("<#145#> <#151#>");
 psk_obj.value = "";
 psk_obj.focus();
 return false;
@@ -1255,7 +1270,7 @@ invalid_char = invalid_char+psk_obj.value.charAt(i);
 }
 if(invalid_char != ""){
 if(flag != "noalert")
-alert("<#154#> '"+invalid_char+"' !");
+alert("<#157#> '"+invalid_char+"' !");
 psk_obj.value = "";
 psk_obj.focus();
 return false;
@@ -1271,7 +1286,7 @@ break;
 return v.substring(i);
 };
 if(isNaN(o.value)){
-alert('<#149#> ' + _min + ' <#150#> ' + _max);
+alert('<#152#> ' + _min + ' <#153#> ' + _max);
 o.focus();
 o.select();
 return false;
@@ -1283,7 +1298,7 @@ _min = _max;
 _max = tmpNum;
 }
 if(o.value < _min || o.value > _max) {
-alert('<#149#> ' + _min + ' <#150#> ' + _max);
+alert('<#152#> ' + _min + ' <#153#> ' + _max);
 o.focus();
 o.select();
 return false;
@@ -1298,7 +1313,7 @@ return true;
 rangeNull: function(o, min, max, def) { //Viz add 2013.03 allow to set null
 if (o.value=="") return true;
 if(o.value<min || o.value>max) {
-alert('<#149#> ' + min + ' <#150#> ' + max + '.');
+alert('<#152#> ' + min + ' <#153#> ' + max + '.');
 o.value = def;
 o.focus();
 o.select();
@@ -1317,14 +1332,14 @@ return v.substring(i);
 if (o.value==0) return true;
 for(var i=0; i<o.value.length; i++){ //is_number
 if (o.value.charAt(i)<'0' || o.value.charAt(i)>'9'){
-alert('<#149#> ' + min + ' <#150#> ' + max);
+alert('<#152#> ' + min + ' <#153#> ' + max);
 o.focus();
 o.select();
 return false;
 }
 }
 if(o.value<min || o.value>max) {
-alert('<#149#> ' + min + ' <#150#> ' + max + '.');
+alert('<#152#> ' + min + ' <#153#> ' + max + '.');
 o.value = def;
 o.focus();
 o.select();
@@ -1345,7 +1360,7 @@ return true;
 string: function(string_obj, flag){
 if(string_obj.value.charAt(0) == '"'){
 if(flag != "noalert")
-alert('<#153#> ["]');
+alert('<#156#> ["]');
 string_obj.value = "";
 string_obj.focus();
 return false;
@@ -1359,7 +1374,7 @@ invalid_char = invalid_char+string_obj.value.charAt(i);
 }
 if(invalid_char != ""){
 if(flag != "noalert")
-alert("<#154#> '"+invalid_char+"' !");
+alert("<#157#> '"+invalid_char+"' !");
 string_obj.value = "";
 string_obj.focus();
 return false;
@@ -1371,7 +1386,7 @@ string_KR: function(string_obj, flag){ //Alphabets, numbers, specialcharacters m
 var string_length = string_obj.value.length;
 if(!/[A-Za-z]/.test(string_obj.value) || !/[0-9]/.test(string_obj.value) || string_length < 8
 || !/[\!\"\#\$\%\&\'\(\)\*\+\,\-\.\/\:\;\<\=\>\?\@\[\\\]\^\_\`\{\|\}\~]/.test(string_obj.value)){
-alert("<#148#>");
+alert("<#151#>");
 string_obj.value = "";
 string_obj.focus();
 return false;
@@ -1384,7 +1399,7 @@ invalid_char = invalid_char+string_obj.value.charAt(i);
 }
 if(invalid_char != ""){
 if(flag != "noalert")
-alert("<#154#> '"+invalid_char+"' !");
+alert("<#157#> '"+invalid_char+"' !");
 string_obj.value = "";
 string_obj.focus();
 return false;
@@ -1401,7 +1416,7 @@ var c; // character code
 for(var i = 0; i < o.value.length; ++i){
 c = o.value.charCodeAt(i);
 if(!groupChar(c)){
-alert('<#151#> '+o.value.charAt(i)+' <#152#>');
+alert('<#154#> '+o.value.charAt(i)+' <#155#>');
 o.focus();
 o.select();
 return false;
@@ -1413,14 +1428,14 @@ stringSSID: function(o){
 var c; // character code
 var flag=0; // notify valid characters of SSID except space
 if(o.value==""){ // to limit null SSID
-alert('<#137#>');
+alert('<#140#>');
 o.focus();
 return false;
 }
 for(var i = 0; i < o.value.length; ++i){
 c = o.value.charCodeAt(i);
 if(this.ssidChar(c)){
-alert('<#151#> '+o.value.charAt(i)+' <#152#>');
+alert('<#154#> '+o.value.charAt(i)+' <#155#>');
 o.value = "";
 o.focus();
 o.select();
@@ -1430,7 +1445,7 @@ if(c != 32)
 flag ++;
 }
 if(flag ==0){ // to limit SSID only include space
-alert('<#137#>');
+alert('<#140#>');
 return false;
 }
 return true;
@@ -1463,7 +1478,7 @@ o.value = "00";
 else if (p==0 || p==2)
 {
 if(o.value>23){
-alert('<#149#> 00 <#150#> 23');
+alert('<#152#> 00 <#153#> 23');
 o.value = "00";
 o.focus();
 o.select();
@@ -1474,7 +1489,7 @@ return true;
 else
 {
 if(o.value>59){
-alert('<#149#> 00 <#150#> 59');
+alert('<#152#> 00 <#153#> 59');
 o.value = "00";
 o.focus();
 o.select();
@@ -1541,14 +1556,14 @@ return false;
 return true;
 }else{ // IP plus netmask
 if(obj.value.split("/").length > 2){
-alert(obj.value + " <#146#>");
+alert(obj.value + " <#149#>");
 obj.value = "";
 obj.focus();
 obj.select();
 return false;
 }else{
 if(obj.value.split("/")[1] == "" || obj.value.split("/")[1] == 0 || obj.value.split("/")[1] > 32){
-alert(obj.value + " <#146#>");
+alert(obj.value + " <#149#>");
 obj.value = "";
 obj.focus();
 obj.select();
@@ -1573,7 +1588,7 @@ return false;
 wlKey: function(key_obj){
 var wep_type = document.form.wl_wep_x.value;
 var iscurrect = true;
-var str = "<#155#>";
+var str = "<#158#>";
 if(wep_type == "0")
 iscurrect = true; // do nothing
 else if(wep_type == "1"){
@@ -1586,7 +1601,7 @@ document.form.wl_key_type.value = 0; /*Lock Add 11.25 for ralink platform*/
 iscurrect = true;
 }
 else{
-str += "(<#542#>)";
+str += "(<#557#>)";
 iscurrect = false;
 }
 }
@@ -1600,7 +1615,7 @@ document.form.wl_key_type.value = 0; /*Lock Add 11.25 for ralink platform*/
 iscurrect = true;
 }
 else{
-str += "(<#543#>)";
+str += "(<#558#>)";
 iscurrect = false;
 }
 }
@@ -1618,7 +1633,7 @@ return iscurrect;
 WPAPSK: function(o){
 if(o.value.length >= 64){
 o.value = o.value.substring(0, 63);
-alert("<#156#>");
+alert("<#159#>");
 return false;
 }
 return true;

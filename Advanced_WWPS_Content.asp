@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#533#> - <#186#></title>
+<title><#548#> - <#189#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <script type="text/javascript" src="/state.js"></script>
@@ -85,7 +85,7 @@ document.form.wps_method[1].checked = true;
 changemethod(1);
 }
 loadXML();
-document.getElementById('WPS_hideSSID_hint').innerHTML = "<#1173#> <#2344#>";
+document.getElementById('WPS_hideSSID_hint').innerHTML = "<#1209#> <#2394#>";
 if("<% nvram_get("wl_closed"); %>" == 1){
 document.getElementById('WPS_hideSSID_hint').style.display = "";
 }
@@ -134,7 +134,7 @@ document.form.wps_band.value = 1;
 }
 }
 else{
-document.getElementById("wps_band_hint").innerHTML = "* <#2322#>";
+document.getElementById("wps_band_hint").innerHTML = "* <#2372#>";
 return false;
 }
 FormActions("apply.cgi", "change_wps_unit", "", "");
@@ -156,7 +156,7 @@ document.form.wps_band.value = 2;
 }
 }
 else{
-document.getElementById("wps_band_hint").innerHTML = "* <#2322#>";
+document.getElementById("wps_band_hint").innerHTML = "* <#2372#>";
 return false;
 }
 FormActions("apply.cgi", "change_wps_unit", "", "");
@@ -235,7 +235,7 @@ document.form.wps_sta_pin.value = array_temp[0] + array_temp[1];
 }
 if(document.form.wps_sta_pin.value.length != 4 || isNaN(document.form.wps_sta_pin.value/1)){ //new format, 4 digits and doesn't need to checksum
 if(document.form.wps_sta_pin.value.length != 8 || !ValidateChecksum(document.form.wps_sta_pin.value)){
-alert("<#1328#>");
+alert("<#1366#>");
 document.form.wps_sta_pin.focus();
 document.form.wps_sta_pin.select();
 return false;
@@ -290,7 +290,7 @@ function refresh_wpsinfo(xhr){
 if(xhr.responseText.search("Main_Login.asp") !== -1) top.location.href = "/index.asp";
 var wpss = xhr.responseXML.getElementsByTagName("wps");
 if(wpss == null || wpss[0] == null){
-if (confirm('<#1319#>'))
+if (confirm('<#1357#>'))
 ;
 else
 stopFlag=1;
@@ -322,8 +322,8 @@ wep = document.form.wl0_wep_x.value
 else
 wep = document.form.wl1_wep_x.value
 if(wps_enable_old == "1"){
-document.getElementById("wps_enable_word").innerHTML = "<#824#>";
-document.getElementById("enableWPSbtn").value = "<#822#>";
+document.getElementById("wps_enable_word").innerHTML = "<#841#>";
+document.getElementById("enableWPSbtn").value = "<#839#>";
 document.getElementById("switchWPSbtn").style.display = "none";
 if(wl_info.band5g_2_support){
 document.getElementById("wps_switch").style.display = "";
@@ -331,8 +331,8 @@ document.getElementById("wps_select").style.display = "none";
 }
 }
 else{
-document.getElementById("wps_enable_word").innerHTML = "<#823#>"
-document.getElementById("enableWPSbtn").value = "<#2229#>";
+document.getElementById("wps_enable_word").innerHTML = "<#840#>"
+document.getElementById("enableWPSbtn").value = "<#2279#>";
 document.getElementById("switchWPSbtn").style.display = "";
 }
 if(based_modelid == "RT-AC87U" || based_modelid == "RT-AC87R"){
@@ -366,23 +366,23 @@ if (wps_multiband_support)
 document.getElementById("wps_band_word").innerHTML = "<del>" + document.getElementById("wps_band_word").innerHTML + "</del>";
 };
 if(currentBand == 0 && radio_2 != "1") { //2.4GHz
-document.getElementById("wps_enable_hint").innerHTML = "* <#1611#> <a style='color:#FC0; text-decoration: underline; font-family:Lucida Console;cursor:pointer;' onclick=\"_change_wl_advanced_unit_status(" + wps_infos[12].firstChild.nodeValue + ");\"><#826#></a>"
+document.getElementById("wps_enable_hint").innerHTML = "* <#1651#> <a style='color:#FC0; text-decoration: underline; font-family:Lucida Console;cursor:pointer;' onclick=\"_change_wl_advanced_unit_status(" + wps_infos[12].firstChild.nodeValue + ");\"><#843#></a>"
 controlDisplayItem();
 return;
 }
 else if(currentBand == 1 && radio_5 != "1") { //5GHz
-document.getElementById("wps_enable_hint").innerHTML = "* <#1611#> <a style='color:#FC0; text-decoration: underline; font-family:Lucida Console;cursor:pointer;' onclick=\"_change_wl_advanced_unit_status(" + wps_infos[12].firstChild.nodeValue + ");\"><#826#></a>"
+document.getElementById("wps_enable_hint").innerHTML = "* <#1651#> <a style='color:#FC0; text-decoration: underline; font-family:Lucida Console;cursor:pointer;' onclick=\"_change_wl_advanced_unit_status(" + wps_infos[12].firstChild.nodeValue + ");\"><#843#></a>"
 controlDisplayItem();
 return;
 }
 else if (reject_wps(wps_infos[11].firstChild.nodeValue, wep)){ // Second filter the authentication method
-document.getElementById("wps_enable_hint").innerHTML = "<#2347#><br><#2348#> <a style='color:#FC0; text-decoration: underline; font-family:Lucida Console;cursor:pointer;' onclick=\"_change_wl_unit_status(" + wps_infos[12].firstChild.nodeValue + ");\"><#185#></a> <#2349#>"
+document.getElementById("wps_enable_hint").innerHTML = "<#2397#><br><#2398#> <a style='color:#FC0; text-decoration: underline; font-family:Lucida Console;cursor:pointer;' onclick=\"_change_wl_unit_status(" + wps_infos[12].firstChild.nodeValue + ");\"><#188#></a> <#2399#>"
 controlDisplayItem();
 return;
 }
 if(wps_enable_old == "0"){
 document.getElementById("wps_state_tr").style.display = "";
-document.getElementById("wps_state_td").innerHTML = "<#2346#>";
+document.getElementById("wps_state_td").innerHTML = "<#2396#>";
 document.getElementById("WPSConnTble").style.display = "none";
 document.getElementById("wpsDesc").style.display = "none";
 }
@@ -439,21 +439,21 @@ document.getElementById("wps_pin_hint").style.display = "inline";
 else
 document.getElementById("wps_pin_hint").style.display = "none";
 if(wps_infos[1].firstChild.nodeValue == "No")
-document.getElementById("wps_config_td").innerHTML = "<#64#>";
-else
 document.getElementById("wps_config_td").innerHTML = "<#65#>";
+else
+document.getElementById("wps_config_td").innerHTML = "<#66#>";
 }
 function show_wsc_status2(wps_infos0, wps_infos1){
 var rej0 = reject_wps(wps_infos0[11].firstChild.nodeValue, document.form.wl0_wep_x.value);
 var rej1 = reject_wps(wps_infos1[11].firstChild.nodeValue, document.form.wl1_wep_x.value);
 if(wps_enable_old == "1"){
-document.getElementById("wps_enable_word").innerHTML = "<#824#>";
-document.getElementById("enableWPSbtn").value = "<#822#>";
+document.getElementById("wps_enable_word").innerHTML = "<#841#>";
+document.getElementById("enableWPSbtn").value = "<#839#>";
 document.getElementById("switchWPSbtn").style.display = "none";
 }
 else{
-document.getElementById("wps_enable_word").innerHTML = "<#823#>"
-document.getElementById("enableWPSbtn").value = "<#2229#>";
+document.getElementById("wps_enable_word").innerHTML = "<#840#>"
+document.getElementById("enableWPSbtn").value = "<#2279#>";
 band0 = get_band_str(wps_infos0[12].firstChild.nodeValue);
 band1 = get_band_str(wps_infos1[12].firstChild.nodeValue);
 if (rej0)
@@ -466,12 +466,12 @@ document.getElementById("switchWPSbtn").style.display = "";
 var band_link = "";
 if(radio_2 !== "1" || radio_5 !== "1") { // First filter whether turn on Wi-Fi or not
 if(radio_2 !== "1") {
-band_link += " <a style='color:#FC0; text-decoration: underline; font-family:Lucida Console;cursor:pointer;' onclick=\"_change_wl_advanced_unit_status(0);\"><#826#> " + get_band_str(wps_infos0[12].firstChild.nodeValue) + "</a>"
+band_link += " <a style='color:#FC0; text-decoration: underline; font-family:Lucida Console;cursor:pointer;' onclick=\"_change_wl_advanced_unit_status(0);\"><#843#> " + get_band_str(wps_infos0[12].firstChild.nodeValue) + "</a>"
 }
 if(radio_5 !== "1") {
-band_link += " <a style='color:#FC0; text-decoration: underline; font-family:Lucida Console;cursor:pointer;' onclick=\"_change_wl_advanced_unit_status(1);\"><#826#> " + get_band_str(wps_infos1[12].firstChild.nodeValue) + "</a>"
+band_link += " <a style='color:#FC0; text-decoration: underline; font-family:Lucida Console;cursor:pointer;' onclick=\"_change_wl_advanced_unit_status(1);\"><#843#> " + get_band_str(wps_infos1[12].firstChild.nodeValue) + "</a>"
 }
-document.getElementById("wps_enable_hint").innerHTML = "* <#1611#>" + band_link + "";
+document.getElementById("wps_enable_hint").innerHTML = "* <#1651#>" + band_link + "";
 if(radio_2 !== "1" && radio_5 !== "1") {
 document.getElementById("wps_state_tr").style.display = "none";
 document.getElementById("devicePIN_tr").style.display = "none";
@@ -481,10 +481,10 @@ return;
 }
 else if(rej0 || rej1){ // Second filter the authentication method
 if(rej0)
-band_link += "<a style='color:#FC0; text-decoration: underline; font-family:Lucida Console;cursor:pointer;' onclick=\"_change_wl_unit_status(0);\"><#185#> " + get_band_str(wps_infos0[12].firstChild.nodeValue) + "</a> ";
+band_link += "<a style='color:#FC0; text-decoration: underline; font-family:Lucida Console;cursor:pointer;' onclick=\"_change_wl_unit_status(0);\"><#188#> " + get_band_str(wps_infos0[12].firstChild.nodeValue) + "</a> ";
 if(rej1)
-band_link += "<a style='color:#FC0; text-decoration: underline; font-family:Lucida Console;cursor:pointer;' onclick=\"_change_wl_unit_status(1);\"><#185#> " + get_band_str(wps_infos1[12].firstChild.nodeValue) + "</a> ";
-document.getElementById("wps_enable_hint").innerHTML = "<#2347#><br><#2348#> " + band_link + " <#2349#>";
+band_link += "<a style='color:#FC0; text-decoration: underline; font-family:Lucida Console;cursor:pointer;' onclick=\"_change_wl_unit_status(1);\"><#188#> " + get_band_str(wps_infos1[12].firstChild.nodeValue) + "</a> ";
+document.getElementById("wps_enable_hint").innerHTML = "<#2397#><br><#2398#> " + band_link + " <#2399#>";
 if (rej0 && rej1){
 document.getElementById("wps_state_tr").style.display = "none";
 document.getElementById("devicePIN_tr").style.display = "none";
@@ -495,9 +495,9 @@ return;
 if(wps_enable_old == "0"){
 document.getElementById("wps_state_tr").style.display = "";
 if (!wps_multiband_support || document.form.wps_multiband.value == "0")
-document.getElementById("wps_state_td").innerHTML = "<#2346#>";
+document.getElementById("wps_state_td").innerHTML = "<#2396#>";
 else
-document.getElementById("wps_state_td").innerHTML = "<#2346#> / <#2346#>";
+document.getElementById("wps_state_td").innerHTML = "<#2396#> / <#2396#>";
 document.getElementById("WPSConnTble").style.display = "none";
 document.getElementById("wpsDesc").style.display = "none";
 }
@@ -610,13 +610,13 @@ change_wl_unit_status(__unit);
 <tr>
 <td bgcolor="#4D595D" valign="top" >
 <div>&nbsp;</div>
-<div class="formfonttitle"><#184#> - <#186#></div>
+<div class="formfonttitle"><#187#> - <#189#></div>
 <div style="margin-left:5px;margin-top:10px;margin-bottom:10px"><img src="/images/New_ui/export/line_export.png"></div>
-<div class="formfontdesc"><#2208#></div>
+<div class="formfontdesc"><#2258#></div>
 <div id="WPS_hideSSID_hint" class="formfontdesc" style="display:none;color:#FFCC00;"></div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable">
 <tr>
-<th width="30%"><a class="hintstyle" href="javascript:void(0);" onClick="openHint(13,1);"><#2320#></a></th>
+<th width="30%"><a class="hintstyle" href="javascript:void(0);" onClick="openHint(13,1);"><#2370#></a></th>
 <td>
 <div id="wps_enable_block" style="display:none;">
 <span style="color:#FFF;" id="wps_enable_word">&nbsp;&nbsp;</span>
@@ -629,7 +629,7 @@ change_wl_unit_status(__unit);
 $('#radio_wps_enable').iphoneSwitch('<% nvram_get("wps_enable"); %>',
 function() {
 if(wl_ssid_closed == 1){
-alert(band_string + " : <#1613#>");
+alert(band_string + " : <#1653#>");
 $('#iphone_switch').animate({backgroundPosition: -37}, "slow", function() {});
 return false;
 }
@@ -640,7 +640,7 @@ if( document.form.wl0_auth_mode_x.value == "shared" || document.form.wl1_auth_mo
 || document.form.wl1_auth_mode_x.value == "psk" || document.form.wl1_auth_mode_x.value == "wpa"
 || document.form.wl0_auth_mode_x.value == "open" && (document.form.wl0_wep_x.value == "1" || document.form.wl0_wep_x.value == "2")
 || document.form.wl1_auth_mode_x.value == "open" && (document.form.wl1_wep_x.value == "1" || document.form.wl1_wep_x.value == "2")){
-alert("<#1612#>");
+alert("<#1652#>");
 $('#iphone_switch').animate({backgroundPosition: -37}, "slow", function() {});
 return false;
 }
@@ -650,12 +650,12 @@ if(document.form.wps_band.value == 0){
 if( document.form.wl0_auth_mode_x.value == "shared"
 || document.form.wl0_auth_mode_x.value == "psk" || document.form.wl0_auth_mode_x.value == "wpa"
 || document.form.wl0_auth_mode_x.value == "open" && (document.form.wl0_wep_x.value == "1" || document.form.wl0_wep_x.value == "2")){
-alert(band_string + " : <#1612#>");
+alert(band_string + " : <#1652#>");
 $('#iphone_switch').animate({backgroundPosition: -37}, "slow", function() {});
 return false;
 }
 if(document.form.wl0_radio.value == 0){
-alert("<#1611#>");
+alert("<#1651#>");
 $('#iphone_switch').animate({backgroundPosition: -37}, "slow", function() {});
 return false;
 }
@@ -664,12 +664,12 @@ else if(document.form.wps_band.value == 1){ //5G
 if( document.form.wl1_auth_mode_x.value == "shared"
 || document.form.wl1_auth_mode_x.value == "psk" || document.form.wl1_auth_mode_x.value == "wpa"
 || document.form.wl1_auth_mode_x.value == "open" && (document.form.wl1_wep_x.value == "1" || document.form.wl1_wep_x.value == "2")){
-alert(band_string + " : <#1612#>");
+alert(band_string + " : <#1652#>");
 $('#iphone_switch').animate({backgroundPosition: -37}, "slow", function() {});
 return false;
 }
 if(document.form.wl1_radio.value == 0){
-alert("<#1611#>");
+alert("<#1651#>");
 $('#iphone_switch').animate({backgroundPosition: -37}, "slow", function() {});
 return false;
 }
@@ -678,12 +678,12 @@ else if(document.form.wps_band.value == 2){ //5G-2
 if( document.form.wl2_auth_mode_x.value == "shared"
 || document.form.wl2_auth_mode_x.value == "psk" || document.form.wl2_auth_mode_x.value == "wpa"
 || document.form.wl2_auth_mode_x.value == "open" && (document.form.wl2_wep_x.value == "1" || document.form.wl2_wep_x.value == "2")){
-alert(band_string + " : <#1612#>");
+alert(band_string + " : <#1652#>");
 $('#iphone_switch').animate({backgroundPosition: -37}, "slow", function() {});
 return false;
 }
 if(document.form.wl2_radio.value == 0){
-alert("<#1611#>");
+alert("<#1651#>");
 $('#iphone_switch').animate({backgroundPosition: -37}, "slow", function() {});
 return false;
 }
@@ -702,10 +702,10 @@ enableWPS();
 </td>
 </tr>
 <tr id="wps_band_tr">
-<th width="30%"><a class="hintstyle" href="javascript:void(0);" onclick="openHint(13,5);"><#889#></th>
+<th width="30%"><a class="hintstyle" href="javascript:void(0);" onclick="openHint(13,5);"><#906#></th>
 <td id="wps_switch">
 <span class="devicepin" style="color:#FFF;" id="wps_band_word"></span>&nbsp;&nbsp;
-<input type="button" class="button_gen_long" name="switchWPSbtn" id="switchWPSbtn" value="<#1858#>" class="button" onClick="SwitchBand();">
+<input type="button" class="button_gen_long" name="switchWPSbtn" id="switchWPSbtn" value="<#1904#>" class="button" onClick="SwitchBand();">
 <br><span id="wps_band_hint"></span>
 </td>
 <td id="wps_select" style="display:none">
@@ -717,14 +717,14 @@ enableWPS();
 </td>
 </tr>
 <tr id="wps_state_tr">
-<th><#272#></th>
+<th><#275#></th>
 <td width="300">
 <span id="wps_state_td" style="margin-left:5px;"></span>
 <img id="wps_pin_hint" style="display:none;" src="images/InternetScan.gif" />
 </td>
 </tr>
 <tr>
-<th><#535#></th>
+<th><#550#></th>
 <td>
 <div style="margin-left:-10px">
 <table ><tr>
@@ -732,7 +732,7 @@ enableWPS();
 <div class="devicepin" style="color:#FFF;" id="wps_config_td"></div>
 </td>
 <td style="border:0px">
-<input class="button_gen" type="button" onClick="resetWPS();" id="Reset_OOB" name="Reset_OOB" value="<#883#>" style="padding:0 0.3em 0 0.3em;" >
+<input class="button_gen" type="button" onClick="resetWPS();" id="Reset_OOB" name="Reset_OOB" value="<#900#>" style="padding:0 0.3em 0 0.3em;" >
 </td>
 </tr></table>
 </div>
@@ -740,7 +740,7 @@ enableWPS();
 </tr>
 <tr id="devicePIN_tr">
 <th>
-<span id="devicePIN_name"><a class="hintstyle" href="javascript:void(0);" onclick="openHint(13,4);"><#2253#></a></span>
+<span id="devicePIN_name"><a class="hintstyle" href="javascript:void(0);" onclick="openHint(13,4);"><#2303#></a></span>
 </th>
 <td>
 <input type="text" name="devicePIN" id="devicePIN" value="" class="input_15_table" readonly="1" style="float:left;" autocorrect="off" autocapitalize="off"></input>
@@ -749,17 +749,17 @@ enableWPS();
 </table>
 <table id="WPSConnTble" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable" style="display:none;">
 <div class="formfontdesc" style="width:97%;padding-bottom:10px;padding-top:10px;display:none;" id="wpsDesc">
-<#2340#>
+<#2390#>
 </div>
 <tr id="wpsmethod_tr">
 <th>
-<span id="wps_method"><a class="hintstyle" href="javascript:void(0);" onclick="openHint(13,2);"><#2326#></a></span>
+<span id="wps_method"><a class="hintstyle" href="javascript:void(0);" onclick="openHint(13,2);"><#2376#></a></span>
 </th>
 <td>
-<input type="radio" name="wps_method" onclick="changemethod(0);" value="0"><#2321#>
-<input type="radio" name="wps_method" onclick="changemethod(1);" value="1"><#2328#>
+<input type="radio" name="wps_method" onclick="changemethod(0);" value="0"><#2371#>
+<input type="radio" name="wps_method" onclick="changemethod(1);" value="1"><#2378#>
 <input type="text" name="wps_sta_pin" id="wps_sta_pin" value="" size="9" maxlength="9" class="input_15_table" autocorrect="off" autocapitalize="off">
-<div id="starBtn" style="margin-top:10px;"><input class="button_gen" type="button" style="margin-left:5px;" onClick="configCommand();" id="addEnrolleebtn_client" name="addEnrolleebtn" value="<#2345#>"></div>
+<div id="starBtn" style="margin-top:10px;"><input class="button_gen" type="button" style="margin-left:5px;" onClick="configCommand();" id="addEnrolleebtn_client" name="addEnrolleebtn" value="<#2395#>"></div>
 </td>
 </tr>
 </table>

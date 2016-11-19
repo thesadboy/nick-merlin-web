@@ -74,7 +74,7 @@ if(this.ddns_return_code != 'no_change'){
 var ddnsHint = getDDNSState(this.ddns_return_code, this.ddns_hostname_x, this.ddns_old_name);
 if(ddnsHint != ""){
 if(this.ddns_return_code == 'Time_out')
-show_alert_block("<#1366#>");
+show_alert_block("<#1404#>");
 else
 show_alert_block(ddnsHint);
 }
@@ -118,13 +118,13 @@ function validate_ddns_hostname(o){
 dot = 0;
 s = o.value;
 if(s == ""){
-show_alert_block("<#427#>");
+show_alert_block("<#428#>");
 return false;
 }
 var unvalid_start=new RegExp("^[0-9].*", "gi");
 if(unvalid_start.test(s) )
 {
-show_alert_block("<#1374#>");
+show_alert_block("<#1412#>");
 return false;
 }
 if(!validator.string(o)){
@@ -135,12 +135,12 @@ c = s.charCodeAt(i);
 if(c == 46){
 ++dot;
 if(dot > 0){
-show_alert_block("<#1374#>");
+show_alert_block("<#1412#>");
 return false;
 }
 }
 if(!validator.hostNameChar(c)){
-show_alert_block("<#1367#> '"+s.charAt(i)+"' !");
+show_alert_block("<#1405#> '"+s.charAt(i)+"' !");
 return false;
 }
 }
@@ -221,13 +221,13 @@ document.form.DDNSName.value = "";
 </td>
 </tr>
 <tr>
-<td align="left" class="formfonttitle" style="padding-left:20px;" height="72"><#1851#></td>
+<td align="left" class="formfonttitle" style="padding-left:20px;" height="72"><#1897#></td>
 </tr>
 <tr>
 <td>
 <div style="margin-left:20px;">
 <p><input type="radio" name="check_asus_ddns" id="c1" onClick="switch_ddns();" checked>
-<label for="c1"><#905#></label>
+<label for="c1"><#923#></label>
 </p>
 <br/>
 <div id="ddnsname_input" class="aidiskdesc" style="display:none;">
@@ -238,7 +238,7 @@ document.form.DDNSName.value = "";
 </div>
 <br/>
 <p><input type="radio" name="check_asus_ddns" id="c2" onClick="switch_ddns();" >
-<label for="c2"><#1573#></label>
+<label for="c2"><#1613#></label>
 </p>
 </div>
 </td>
@@ -251,8 +251,8 @@ document.form.DDNSName.value = "";
 <tr valign="bottom">
 <td width="20%">
 <div class="apply_gen" style="margin-top:30px">
-<input type="button" id="prevButton" value="<#78#>" onclick="go_pre_page();" class="button_gen">
-<input type="submit" id="nextButton" value="<#77#>" class="button_gen">
+<input type="button" id="prevButton" value="<#80#>" onclick="go_pre_page();" class="button_gen">
+<input type="submit" id="nextButton" value="<#79#>" class="button_gen">
 <img id="loadingIcon" style="display:none;margin-top:7px" src="/images/InternetScan.gif"></span>
 </div>
 </td>

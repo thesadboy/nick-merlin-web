@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#533#> - <#54#></title>
+<title><#548#> - <#55#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="menu_style.css">
@@ -140,12 +140,12 @@ addOnlineHelp(document.getElementById("faq"), ["ASUSWRT", "VPN"]);
 formShowAndHide(vpn_server_enable, "openvpn");
 if(realip_support){
 if(!external_ip){
-document.getElementById("privateIP_notes").innerHTML = "<#2131#>"
+document.getElementById("privateIP_notes").innerHTML = "<#2184#>"
 document.getElementById("privateIP_notes").style.display = "";
 }
 }
 else if(validator.isPrivateIP(wanlink_ipaddr())){
-document.getElementById("privateIP_notes").innerHTML = "<#2131#>"
+document.getElementById("privateIP_notes").innerHTML = "<#2184#>"
 document.getElementById("privateIP_notes").style.display = "";
 }
 /*Advanced Setting start */
@@ -202,16 +202,16 @@ var ind = x;
 username_status = "conn"+ind;
 if(openvpnd_connected_clients.length >0){
 if(document.getElementById(username_status)) {
-document.getElementById(username_status).innerHTML = '<#87#>';
+document.getElementById(username_status).innerHTML = '<#89#>';
 }
 for(var y=0; y<openvpnd_connected_clients.length; y++){
 if(document.getElementById("openvpnd_clientlist_table").rows[x].cells[1].title == openvpnd_connected_clients[y].username){
-document.getElementById(username_status).innerHTML = '<a class="hintstyle2" href="javascript:void(0);" onClick="showOpenVPNClients(\''+openvpnd_connected_clients[y].username+'\');"><#66#></a>';
+document.getElementById(username_status).innerHTML = '<a class="hintstyle2" href="javascript:void(0);" onClick="showOpenVPNClients(\''+openvpnd_connected_clients[y].username+'\');"><#67#></a>';
 break;
 }
 }
 }else if(document.getElementById(username_status)){
-document.getElementById(username_status).innerHTML = '<#87#>';
+document.getElementById(username_status).innerHTML = '<#89#>';
 }
 }
 }
@@ -232,7 +232,7 @@ var pool_start = '<% nvram_get("dhcp_start"); %>';
 var pool_subnet = pool_start.split(".")[0]+"."+pool_start.split(".")[1]+"."+pool_start.split(".")[2]+".";
 if(document.form.vpn_server_if.value == 'tun'){
 if(vpnSubnet.value == ""){
-alert("<#137#>");
+alert("<#140#>");
 vpnSubnet.focus();
 vpnSubnet.select();
 return false;
@@ -247,13 +247,13 @@ var openvpn_server_subnet = vpnSubnet.value.split(".")[0]
 + "." + vpnSubnet.value.split(".")[2]
 + ".";
 if(origin_lan_ip == vpnSubnet.value) {
-alert("<#2076#> " + origin_lan_ip);
+alert("<#2131#> " + origin_lan_ip);
 vpnSubnet.focus();
 vpnSubnet.select();
 return false;
 }
 if(lan_ip_subnet == openvpn_server_subnet) {
-alert("<#2074#>"+pool_start+" ~ "+pool_end);
+alert("<#2129#>"+pool_start+" ~ "+pool_end);
 vpnSubnet.focus();
 vpnSubnet.select();
 return false;
@@ -278,7 +278,7 @@ document.form.vpn_server_r1.select();
 return false;
 }
 if(document.form.vpn_server_r1.value.split(".")[3] == 255){ //*.*.*.255 can't be IP in the IP pool
-alert(document.form.vpn_server_r1.value + " <#146#>");
+alert(document.form.vpn_server_r1.value + " <#149#>");
 document.form.vpn_server_r1.focus();
 document.form.vpn_server_r1.select();
 return false;
@@ -289,7 +289,7 @@ document.form.vpn_server_r2.select();
 return false;
 }
 if(document.form.vpn_server_r2.value.split(".")[3] == 255){ //*.*.*.255 can't be IP in the IP pool
-alert(document.form.vpn_server_r2.value + " <#146#>");
+alert(document.form.vpn_server_r2.value + " <#149#>");
 document.form.vpn_server_r2.focus();
 document.form.vpn_server_r2.select();
 return false;
@@ -304,25 +304,25 @@ var openvpn_clients_start_ip = parseInt(document.form.vpn_server_r1.value.split(
 var openvpn_clients_end_ip = parseInt(document.form.vpn_server_r2.value.split(".")[3]);
 if( (lan_ip_subnet == openvpn_clients_start_subnet || lan_ip_subnet == openvpn_clients_end_subnet)
 && (lan_ip_end >= openvpn_clients_start_ip && lan_ip_end <= openvpn_clients_end_ip)) {
-alert("<#2076#> "+origin_lan_ip);
+alert("<#2131#> "+origin_lan_ip);
 document.form.vpn_server_r1.focus();
 document.form.vpn_server_r1.select();
 return false;
 }
 if(openvpn_clients_end_ip < openvpn_clients_start_ip){
-alert(document.form.vpn_server_r2.value + " <#146#>");
+alert(document.form.vpn_server_r2.value + " <#149#>");
 document.form.vpn_server_r2.focus();
 document.form.vpn_server_r2.select();
 return false;
 }
 if(pool_subnet != openvpn_clients_start_subnet) {
-alert(document.form.vpn_server_r1.value + " <#146#>");
+alert(document.form.vpn_server_r1.value + " <#149#>");
 document.form.vpn_server_r1.focus();
 document.form.vpn_server_r1.select();
 return false;
 }
 if(pool_subnet != openvpn_clients_end_subnet) {
-alert(document.form.vpn_server_r2.value + " <#146#>");
+alert(document.form.vpn_server_r2.value + " <#149#>");
 document.form.vpn_server_r2.focus();
 document.form.vpn_server_r2.select();
 return false;
@@ -333,13 +333,13 @@ var static_ip = staticclist_row[i].split('&#62')[1];
 var static_subnet = static_ip.split(".")[0]+"."+static_ip.split(".")[1]+"."+static_ip.split(".")[2]+".";
 var static_end = parseInt(static_ip.split(".")[3]);
 if(static_subnet != openvpn_clients_start_subnet) {
-alert(document.form.vpn_server_r1.value + " <#146#>");
+alert(document.form.vpn_server_r1.value + " <#149#>");
 document.form.vpn_server_r1.focus();
 document.form.vpn_server_r1.select();
 return false;
 }
 if(static_subnet != openvpn_clients_end_subnet) {
-alert(document.form.vpn_server_r2.value + " <#146#>");
+alert(document.form.vpn_server_r2.value + " <#149#>");
 document.form.vpn_server_r2.focus();
 document.form.vpn_server_r2.select();
 return false;
@@ -372,7 +372,10 @@ var tmp_value = "";
 for(var i = 1; i < rule_num; i += 1) {
 tmp_value += "<"
 for(var j = 1; j < item_num - 1; j += 1) {
-if(document.getElementById("openvpnd_clientlist_table").rows[i].cells[j].innerHTML.lastIndexOf("...") < 0) {
+if (j == 2) { // Password
+tmp_value += overlib_str3[i];
+}
+else if(document.getElementById("openvpnd_clientlist_table").rows[i].cells[j].innerHTML.lastIndexOf("...") < 0) {
 tmp_value += document.getElementById("openvpnd_clientlist_table").rows[i].cells[j].innerHTML;
 }
 else {
@@ -382,7 +385,7 @@ if(j != item_num - 2)
 tmp_value += ">";
 }
 }
-if(tmp_value == "<"+"<#1286#>" || tmp_value == "<")
+if(tmp_value == "<"+"<#1324#>" || tmp_value == "<")
 tmp_value = "";
 return tmp_value;
 };
@@ -411,7 +414,7 @@ if(j != item_num - 2)
 tmp_value += ">";
 }
 }
-if(tmp_value == "<"+"<#1286#>" || tmp_value == "<1>")
+if(tmp_value == "<"+"<#1324#>" || tmp_value == "<1>")
 tmp_value = "";
 document.form.vpn_server_ccd_val.value = tmp_value;
 tmp_value = "";
@@ -451,7 +454,7 @@ function validForm(){
 var valid_username = document.form.vpn_server_clientlist_username;
 var valid_password = document.form.vpn_server_clientlist_password;
 if(valid_username.value == "") {
-alert("<#137#>");
+alert("<#140#>");
 valid_username.focus();
 return false;
 }
@@ -459,7 +462,7 @@ else if(!Block_chars(valid_username, [" ", "@", "*", "+", "|", ":", "?", "<", ">
 return false;
 }
 if(valid_password.value == "") {
-alert("<#137#>");
+alert("<#140#>");
 valid_password.focus();
 return false;
 }
@@ -474,14 +477,14 @@ var password_obj = document.form.vpn_server_clientlist_password;
 var rule_num = document.getElementById("openvpnd_clientlist_table").rows.length;
 var item_num = document.getElementById("openvpnd_clientlist_table").rows[0].cells.length;
 if(rule_num >= upper + 1) {
-alert("<#1331#> " + upper + " <#1332#>");
+alert("<#1369#> " + upper + " <#1370#>");
 return false;
 }
 if(validForm()){
 if(item_num >= 2) {
 for(var i = 0; i < rule_num; i += 1) {
 if(username_obj.value == document.getElementById("openvpnd_clientlist_table").rows[i].cells[1].title) {
-alert("<#1325#>");
+alert("<#1363#>");
 username_obj.focus();
 username_obj.select();
 return false;
@@ -497,13 +500,17 @@ openvpnd_connected_status();
 function del_Row(rowdata){
 var i = rowdata.parentNode.parentNode.rowIndex;
 document.getElementById("openvpnd_clientlist_table").deleteRow(i);
+overlib_str3.splice(i,1);
 var vpn_server_clientlist_value = "";
 var rowLength = document.getElementById("openvpnd_clientlist_table").rows.length;
 for(var k = 1; k < rowLength; k += 1){
 vpn_server_clientlist_value += "<";
+if (document.getElementById("openvpnd_clientlist_table").rows[k].cells[1].innerHTML.lastIndexOf("...") < 0)
 vpn_server_clientlist_value += document.getElementById("openvpnd_clientlist_table").rows[k].cells[1].innerHTML;
+else
+vpn_server_clientlist_value += document.getElementById("openvpnd_clientlist_table").rows[k].cells[1].title;
 vpn_server_clientlist_value += ">";
-vpn_server_clientlist_value += document.getElementById("openvpnd_clientlist_table").rows[k].cells[2].innerHTML;
+vpn_server_clientlist_value += overlib_str3[k];
 }
 vpn_server_clientlist_array = vpn_server_clientlist_value;
 if(vpn_server_clientlist_array == "") {
@@ -528,7 +535,7 @@ code +='<td width="15%" id="conn'+i+'"></td>';
 for(var j = 0; j < vpn_server_clientlist_col.length; j++){
 if(j == 0){
 if(vpn_server_clientlist_col[0].length >32){
-overlib_str2[i] += vpn_server_clientlist_col[0];
+overlib_str2[i] = vpn_server_clientlist_col[0];
 vpn_server_clientlist_col[0] = vpn_server_clientlist_col[0].substring(0, 30)+"...";
 code +='<td width="35%" title="'+overlib_str2[i]+'">'+ vpn_server_clientlist_col[0] +'</td>';
 }else{
@@ -536,8 +543,10 @@ code +='<td width="35%" title="'+vpn_server_clientlist_col[0]+'">'+ vpn_server_c
 }
 }
 else if(j ==1){
-if(vpn_server_clientlist_col[1].length >32){
-overlib_str3[i] += vpn_server_clientlist_col[1];
+overlib_str3[i] = vpn_server_clientlist_col[1];
+if (document.getElementById('show_pass').checked == false) {
+code +='<td width="35%">*****</td>';
+}else if(vpn_server_clientlist_col[1].length >32){
 vpn_server_clientlist_col[1] = vpn_server_clientlist_col[1].substring(0, 30)+"...";
 code +='<td width="35%" title="'+overlib_str3[i]+'">'+ vpn_server_clientlist_col[1] +'</td>';
 }else{
@@ -595,22 +604,22 @@ setTimeout("update_vpn_server_state();", 1000);
 success: function() {
 if(vpnd_state != '2' && (vpnd_errno == '1' || vpnd_errno == '2')){
 document.getElementById('openvpn_initial').style.display = "none";
-document.getElementById('openvpn_error_message').innerHTML = "<span><#2100#></span>";
+document.getElementById('openvpn_error_message').innerHTML = "<span><#2153#></span>";
 document.getElementById('openvpn_error_message').style.display = "";
 }
 else if(vpnd_state != '2' && vpnd_errno == '4'){
 document.getElementById('openvpn_initial').style.display = "none";
-document.getElementById('openvpn_error_message').innerHTML = "<span><#2101#></span>";
+document.getElementById('openvpn_error_message').innerHTML = "<span><#2154#></span>";
 document.getElementById('openvpn_error_message').style.display = "";
 }
 else if(vpnd_state != '2' && vpnd_errno == '5'){
 document.getElementById('openvpn_initial').style.display = "none";
-document.getElementById('openvpn_error_message').innerHTML = "<span><#2102#></span>";
+document.getElementById('openvpn_error_message').innerHTML = "<span><#2155#></span>";
 document.getElementById('openvpn_error_message').style.display = "";
 }
 else if(vpnd_state == '-1' && vpnd_errno == '0'){
 document.getElementById('openvpn_initial').style.display = "none";
-document.getElementById('openvpn_error_message').innerHTML = "<span><#2103#></span>";
+document.getElementById('openvpn_error_message').innerHTML = "<span><#2156#></span>";
 document.getElementById('openvpn_error_message').style.display = "";
 }
 else if(vpnd_state != '2'){
@@ -741,23 +750,23 @@ function addRow_Group_Advanced(upper){
 var client_num = document.getElementById("openvpn_clientlist_table").rows.length;
 var item_num = document.getElementById("openvpn_clientlist_table").rows[0].cells.length;
 if(client_num >= upper){
-alert("<#1331#> " + upper + " <#1332#>");
+alert("<#1369#> " + upper + " <#1370#>");
 return false;
 }
 if(document.form.vpn_clientlist_commonname_0.value==""){
-alert("<#137#>");
+alert("<#140#>");
 document.form.vpn_clientlist_commonname_0.focus();
 document.form.vpn_clientlist_commonname_0.select();
 return false;
 }
 if(document.form.vpn_clientlist_subnet_0.value==""){
-alert("<#137#>");
+alert("<#140#>");
 document.form.vpn_clientlist_subnet_0.focus();
 document.form.vpn_clientlist_subnet_0.select();
 return false;
 }
 if(document.form.vpn_clientlist_netmask_0.value==""){
-alert("<#137#>");
+alert("<#140#>");
 document.form.vpn_clientlist_netmask_0.focus();
 document.form.vpn_clientlist_netmask_0.select();
 return false;
@@ -767,7 +776,7 @@ for(i=0; i<client_num; i++){
 if(document.form.vpn_clientlist_commonname_0.value.toLowerCase() == document.getElementById("openvpn_clientlist_table").rows[i].cells[0].innerHTML.toLowerCase()
 && document.form.vpn_clientlist_subnet_0.value == document.getElementById("openvpn_clientlist_table").rows[i].cells[1].innerHTML
 && document.form.vpn_clientlist_netmask_0.value == document.getElementById("openvpn_clientlist_table").rows[i].cells[2].innerHTML){
-alert('<#1325#>');
+alert('<#1363#>');
 document.form.vpn_clientlist_commonname_0.focus();
 document.form.vpn_clientlist_commonname_0.select();
 return false;
@@ -797,7 +806,7 @@ var openvpn_clientlist_row = openvpn_clientlist_array.split('<');
 var code = "";
 code +='<table width="100%" cellspacing="0" cellpadding="4" align="center" class="list_table" id="openvpn_clientlist_table">';
 if(openvpn_clientlist_row.length == 1)
-code +='<tr><td style="color:#FFCC00;" colspan="6"><#1286#></td>';
+code +='<tr><td style="color:#FFCC00;" colspan="6"><#1324#></td>';
 else{
 for(var i = 1; i < openvpn_clientlist_row.length; i++){
 code +='<tr id="row'+i+'">';
@@ -931,11 +940,11 @@ return false;
 <input type="hidden" name="vpn_crt_server1_static" value="" disabled>
 <input type="hidden" name="vpn_crt_server2_static" value="" disabled>
 <tr>
-<div class="description_down"><#2117#></div>
+<div class="description_down"><#2170#></div>
 </tr>
 <tr>
 <div style="margin-left:30px; margin-top:10px;">
-<p><#2111#> <span style="color:#FFCC00;">----- BEGIN xxx ----- </span>/<span style="color:#FFCC00;"> ----- END xxx -----</span> <#2112#>
+<p><#2164#> <span style="color:#FFCC00;">----- BEGIN xxx ----- </span>/<span style="color:#FFCC00;"> ----- END xxx -----</span> <#2165#>
 <p>Limit: 3999 characters per field
 </div>
 <div style="margin:5px;*margin-left:-5px;"><img style="width: 730px; height: 2px;" src="/images/New_ui/export/line_export.png"></div>
@@ -948,31 +957,31 @@ return false;
 <td valign="top">
 <table width="100%" id="page1_tls" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable">
 <tr>
-<th><#2116#></th>
+<th><#2169#></th>
 <td>
 <textarea rows="8" class="textarea_ssh_table" id="edit_vpn_crt_server_static" name="edit_vpn_crt_server_static" cols="65" maxlength="3999"></textarea>
 </td>
 </tr>
 <tr id="edit_tls1">
-<th><#2109#></th>
+<th><#2162#></th>
 <td>
 <textarea rows="8" class="textarea_ssh_table" id="edit_vpn_crt_server_ca" name="edit_vpn_crt_server_ca" cols="65" maxlength="3999"></textarea>
 </td>
 </tr>
 <tr id="edit_tls2">
-<th><#2114#></th>
+<th><#2167#></th>
 <td>
 <textarea rows="8" class="textarea_ssh_table" id="edit_vpn_crt_server_crt" name="edit_vpn_crt_server_crt" cols="65" maxlength="3999"></textarea>
 </td>
 </tr>
 <tr id="edit_tls3">
-<th><#2115#></th>
+<th><#2168#></th>
 <td>
 <textarea rows="8" class="textarea_ssh_table" id="edit_vpn_crt_server_key" name="edit_vpn_crt_server_key" cols="65" maxlength="3999"></textarea>
 </td>
 </tr>
 <tr id="edit_tls4">
-<th><#2110#></th>
+<th><#2163#></th>
 <td>
 <textarea rows="8" class="textarea_ssh_table" id="edit_vpn_crt_server_dh" name="edit_vpn_crt_server_dh" cols="65" maxlength="3999"></textarea>
 </td>
@@ -994,8 +1003,8 @@ return false;
 </tbody>
 </table>
 <div style="margin-top:5px;width:100%;text-align:center;">
-<input class="button_gen" type="button" onclick="cancel_Key_panel();" value="<#74#>">
-<input class="button_gen" type="button" onclick="save_keys();" value="<#880#>">
+<input class="button_gen" type="button" onclick="cancel_Key_panel();" value="<#75#>">
+<input class="button_gen" type="button" onclick="save_keys();" value="<#897#>">
 </div>
 </td>
 </tr>
@@ -1037,13 +1046,13 @@ return false;
 <tr>
 <td bgcolor="#4D595D" valign="top">
 <div>&nbsp;</div>
-<div class="formfonttitle"><#54#> - OpenVPN</div>
+<div class="formfonttitle"><#55#> - OpenVPN</div>
 <div style="margin-left:5px;margin-top:10px;margin-bottom:10px"><img src="/images/New_ui/export/line_export.png"></div>
 <div id="privateIP_notes" class="formfontdesc" style="display:none;color:#FFCC00;"></div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <thead>
 <tr>
-<td colspan="2"><#1878#></td>
+<td colspan="2"><#1924#></td>
 </tr>
 </thead>
 <tr>
@@ -1056,7 +1065,7 @@ return false;
 </td>
 </tr>
 <tr>
-<th><#2078#></th>
+<th><#2133#></th>
 <td>
 <div align="center" class="left" style="width:94px; float:left; cursor:pointer;" id="radio_VPNServer_enable"></div>
 <script type="text/javascript">
@@ -1076,19 +1085,19 @@ formShowAndHide(0, "openvpn");
 </td>
 </tr>
 <tr id="trVPNServerMode">
-<th><#499#></th>
+<th><#500#></th>
 <td>
 <select id="selSwitchMode" onchange="switchMode(this.options[this.selectedIndex].value)" class="input_option">
-<option value="1" selected><#185#></option>
-<option value="2"><#183#></option>
+<option value="1" selected><#188#></option>
+<option value="2"><#186#></option>
 </select>
 </td>
 </tr>
 <tr id="openvpn_export" style="display:none;">
-<th><#2080#></th>
+<th><#2135#></th>
 <td>
 <div id="export_div">
-<input id="exportToLocal" class="button_gen" type="button" value="<#825#>" />
+<input id="exportToLocal" class="button_gen" type="button" value="<#842#>" />
 <input id="exportViaEmail" class="button_gen" type="button" value="via Email" style="display:none;"/></div>
 <script type="text/javascript">
 document.getElementById("exportToLocal").onclick = function(){
@@ -1100,7 +1109,7 @@ showMailPanel();
 </script>
 <div id="openvpn_initial" style="display:none;margin-left:5px;">
 <span>
-<#2107#>
+<#2160#>
 <img src="images/InternetScan.gif" />
 </span>
 </div>
@@ -1110,7 +1119,7 @@ showMailPanel();
 </table>
 <div id="OpenVPN_setting" style="display:none;margin-top:8px;">
 <div class="formfontdesc">
-<#2095#>&nbsp;<#2097#>&nbsp;<#2096#> <#183#>
+<#2148#>&nbsp;<#2150#>&nbsp;<#2149#> <#186#>
 <br />
 <ol>
 <li><a href="http://www.asus.com/support/Knowledge-Detail/11/2/RTAC68U/1A935B95-C237-4281-AE86-C824737D11F9/" target="_blank" style="text-decoration:underline;">Windows</a>
@@ -1119,17 +1128,18 @@ showMailPanel();
 <li><a href="http://www.asus.com/support/Knowledge-Detail/11/2/RTAC68U/8DCA7DA6-E5A0-40C2-8AED-B9361E89C844/" target="_blank" style="text-decoration:underline;">Android</a>
 <ol>
 </div>
+<div style="color:#FFCC00;"><input type="checkbox" name="show_pass" id="show_pass" onclick="showopenvpnd_clientlist();update_vpn_client_state();openvpnd_connected_status();">Show passwords</div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable_table" style="margin-top:8px;">
 <thead>
 <tr>
-<td colspan="4"><#2057#>&nbsp;(<#1435#>&nbsp;32)</td>
+<td colspan="4"><#2112#>&nbsp;(<#1473#>&nbsp;32)</td>
 </tr>
 </thead>
 <tr>
-<th><#272#></th>
-<th><#1246#></th>
-<th><#1239#></th>
-<th><#1434#></th>
+<th><#275#></th>
+<th><#1283#></th>
+<th><#1276#></th>
+<th><#1472#></th>
 </tr>
 <tr>
 <td width="15%" style="text-align:center;">-
@@ -1149,15 +1159,15 @@ showMailPanel();
 </div>
 <div id="divAdvanced" style="display:none;margin-top:8px;">
 <div class="formfontdesc">
-<p><#2097#><br />
-<p><#2104#><br />
-<p><#2105#><br />
-<p><#2106#>
+<p><#2150#><br />
+<p><#2157#><br />
+<p><#2158#><br />
+<p><#2159#>
 </div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable" style="margin-top:8px;">
 <thead>
 <tr>
-<td colspan="2"><#183#></td>
+<td colspan="2"><#186#></td>
 </tr>
 </thead>
 <tr style="display:none;">
@@ -1188,7 +1198,7 @@ document.form.submit();
 </td>
 </tr>
 <tr>
-<th><#2108#></th>
+<th><#2161#></th>
 <td>
 <select name="vpn_server_if" class="input_option" onChange="update_visibility();">
 <option value="tap" <% nvram_match("vpn_server_if","tap","selected"); %> >TAP</option>
@@ -1197,7 +1207,7 @@ document.form.submit();
 </td>
 </tr>
 <tr>
-<th><#1282#></th>
+<th><#1320#></th>
 <td>
 <select name="vpn_server_proto" class="input_option">
 <option value="tcp-server" <% nvram_match("vpn_server_proto","tcp-server","selected"); %> >TCP</option>
@@ -1209,50 +1219,50 @@ document.form.submit();
 <th>Server Port</th>
 <td>
 <input type="text" maxlength="5" class="input_6_table" name="vpn_server_port" onKeyPress="return validator.isNumber(this,event);" onblur="validator.numberRange(this, 1, 65535)" value="<% nvram_get("vpn_server_port"); %>" autocorrect="off" autocapitalize="off">
-<span style="color:#FC0">(<#1785#> : 1194)</span>
+<span style="color:#FC0">(<#1827#> : 1194)</span>
 </td>
 </tr>
 <tr>
-<th><#206#></th>
+<th><#209#></th>
 <td>
 <select name="vpn_server_firewall" class="input_option">
 <option value="auto" <% nvram_match("vpn_server_firewall","auto","selected"); %> ><#40#></option>
-<option value="external" <% nvram_match("vpn_server_firewall","external","selected"); %> ><#1048#></option>
-<option value="custom" <% nvram_match("vpn_server_firewall","custom","selected"); %> ><#891#></option>
+<option value="external" <% nvram_match("vpn_server_firewall","external","selected"); %> ><#1066#></option>
+<option value="custom" <% nvram_match("vpn_server_firewall","custom","selected"); %> ><#908#></option>
 </select>
 </td>
 </tr>
 <tr>
-<th><#2086#></th>
+<th><#2139#></th>
 <td>
 <select name="vpn_server_crypt" class="input_option" onChange="update_visibility();">
 <option value="tls" <% nvram_match("vpn_server_crypt","tls","selected"); %> >TLS</option>
 <option value="secret" <% nvram_match("vpn_server_crypt","secret","selected"); %> >Static Key</option>
 <option value="custom" <% nvram_match("vpn_server_crypt","custom","selected"); %> >Custom</option>
 </select>
-<span id="server_tls_crypto_text" onclick="set_Keys();" style="text-decoration:underline;cursor:pointer;"><#2120#></span>
-<span id="server_custom_crypto_text"><#2119#></span>
+<span id="server_tls_crypto_text" onclick="set_Keys();" style="text-decoration:underline;cursor:pointer;"><#2173#></span>
+<span id="server_custom_crypto_text"><#2172#></span>
 </td>
 </tr>
 <tr>
 <th>Username/Password Authentication</th>
 <td>
-<input type="radio" name="vpn_server_userpass_auth" class="input" value="1" onclick="update_visibility();" <% nvram_match_x("", "vpn_server_userpass_auth", "1", "checked"); %>><#65#>
-<input type="radio" name="vpn_server_userpass_auth" class="input" value="0" onclick="update_visibility();" <% nvram_match_x("", "vpn_server_userpass_auth", "0", "checked"); %>><#64#>
+<input type="radio" name="vpn_server_userpass_auth" class="input" value="1" onclick="update_visibility();" <% nvram_match_x("", "vpn_server_userpass_auth", "1", "checked"); %>><#66#>
+<input type="radio" name="vpn_server_userpass_auth" class="input" value="0" onclick="update_visibility();" <% nvram_match_x("", "vpn_server_userpass_auth", "0", "checked"); %>><#65#>
 </td>
 </tr>
 <tr id="server_igncrt">
-<th><#2087#></th>
+<th><#2140#></th>
 <td>
-<input type="radio" name="vpn_server_igncrt" class="input" value="1" <% nvram_match_x("", "vpn_server_igncrt", "1", "checked"); %>><#65#>
-<input type="radio" name="vpn_server_igncrt" class="input" value="0" <% nvram_match_x("", "vpn_server_igncrt", "0", "checked"); %>><#64#>
+<input type="radio" name="vpn_server_igncrt" class="input" value="1" <% nvram_match_x("", "vpn_server_igncrt", "1", "checked"); %>><#66#>
+<input type="radio" name="vpn_server_igncrt" class="input" value="0" <% nvram_match_x("", "vpn_server_igncrt", "0", "checked"); %>><#65#>
 </td>
 </tr>
 <tr id="server_authhmac">
-<th><#2088#></th>
+<th><#2141#></th>
 <td>
 <select name="vpn_server_hmac" class="input_option">
-<option value="-1" <% nvram_match("vpn_server_hmac","-1","selected"); %> ><#2230#></option>
+<option value="-1" <% nvram_match("vpn_server_hmac","-1","selected"); %> ><#2280#></option>
 <option value="2" <% nvram_match("vpn_server_hmac","2","selected"); %> >Bi-directional</option>
 <option value="0" <% nvram_match("vpn_server_hmac","0","selected"); %> >Incoming (0)</option>
 <option value="1" <% nvram_match("vpn_server_hmac","1","selected"); %> >Incoming (1)</option>
@@ -1267,90 +1277,90 @@ document.form.submit();
 </td>
 </tr>
 <tr id="server_snnm">
-<th><#2126#></th>
+<th><#2179#></th>
 <td>
 <input type="text" maxlength="15" class="input_15_table" name="vpn_server_sn" onkeypress="return validator.isIPAddr(this, event);" value="<% nvram_get("vpn_server_sn"); %>" autocorrect="off" autocapitalize="off">
 <input type="text" maxlength="15" class="input_15_table" name="vpn_server_nm" onkeypress="return validator.isIPAddr(this, event);" value="<% nvram_get("vpn_server_nm"); %>" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr id="server_dhcp">
-<th><#2098#></th>
+<th><#2151#></th>
 <td>
-<input type="radio" name="vpn_server_dhcp" class="input" value="1" onclick="update_visibility();" <% nvram_match_x("", "vpn_server_dhcp", "1", "checked"); %>><#65#>
-<input type="radio" name="vpn_server_dhcp" class="input" value="0" onclick="update_visibility();" <% nvram_match_x("", "vpn_server_dhcp", "0", "checked"); %>><#64#>
+<input type="radio" name="vpn_server_dhcp" class="input" value="1" onclick="update_visibility();" <% nvram_match_x("", "vpn_server_dhcp", "1", "checked"); %>><#66#>
+<input type="radio" name="vpn_server_dhcp" class="input" value="0" onclick="update_visibility();" <% nvram_match_x("", "vpn_server_dhcp", "0", "checked"); %>><#65#>
 </td>
 </tr>
 <tr id="server_range">
-<th><#2090#></th>
+<th><#2143#></th>
 <td>
 <input type="text" maxlength="15" class="input_15_table" name="vpn_server_r1" onkeypress="return validator.isIPAddr(this, event);" value="<% nvram_get("vpn_server_r1"); %>" autocorrect="off" autocapitalize="off">
 <input type="text" maxlength="15" class="input_15_table" name="vpn_server_r2" onkeypress="return validator.isIPAddr(this, event);" value="<% nvram_get("vpn_server_r2"); %>" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr id="server_local">
-<th><#2118#></th>
+<th><#2171#></th>
 <td>
 <input type="text" maxlength="15" class="input_15_table" name="vpn_server_local" onkeypress="return validator.isIPAddr(this, event);" value="<% nvram_get("vpn_server_local"); %>" autocorrect="off" autocapitalize="off">
 <input type="text" maxlength="15" class="input_15_table" name="vpn_server_remote" onkeypress="return validator.isIPAddr(this, event);" value="<% nvram_get("vpn_server_remote"); %>" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr>
-<th><#2121#></th>
+<th><#2174#></th>
 <td>
-<input type="text" maxlength="4" class="input_6_table" name="vpn_server_poll" onKeyPress="return validator.isNumber(this,event);" onblur="validator.numberRange(this, 0, 1440)" value="<% nvram_get("vpn_server_poll"); %>" autocorrect="off" autocapitalize="off"> <#1476#>
-<span style="color:#FC0">(<#2367#>)</span>
+<input type="text" maxlength="4" class="input_6_table" name="vpn_server_poll" onKeyPress="return validator.isNumber(this,event);" onblur="validator.numberRange(this, 0, 1440)" value="<% nvram_get("vpn_server_poll"); %>" autocorrect="off" autocapitalize="off"> <#1514#>
+<span style="color:#FC0">(<#2417#>)</span>
 </td>
 </tr>
 <tr id="server_plan">
-<th><#2122#></th>
+<th><#2175#></th>
 <td>
-<input type="radio" name="vpn_server_plan" class="input" value="1" <% nvram_match_x("", "vpn_server_plan", "1", "checked"); %>><#65#>
-<input type="radio" name="vpn_server_plan" class="input" value="0" <% nvram_match_x("", "vpn_server_plan", "0", "checked"); %>><#64#>
+<input type="radio" name="vpn_server_plan" class="input" value="1" <% nvram_match_x("", "vpn_server_plan", "1", "checked"); %>><#66#>
+<input type="radio" name="vpn_server_plan" class="input" value="0" <% nvram_match_x("", "vpn_server_plan", "0", "checked"); %>><#65#>
 </td>
 </tr>
 <tr>
-<th><#2123#></th>
+<th><#2176#></th>
 <td>
-<input type="radio" name="vpn_server_rgw" class="input" value="1" <% nvram_match_x("", "vpn_server_rgw", "1", "checked"); %>><#65#>
-<input type="radio" name="vpn_server_rgw" class="input" value="0" <% nvram_match_x("", "vpn_server_rgw", "0", "checked"); %>><#64#>
+<input type="radio" name="vpn_server_rgw" class="input" value="1" <% nvram_match_x("", "vpn_server_rgw", "1", "checked"); %>><#66#>
+<input type="radio" name="vpn_server_rgw" class="input" value="0" <% nvram_match_x("", "vpn_server_rgw", "0", "checked"); %>><#65#>
 </td>
 </tr>
 <tr>
-<th><#2124#></th>
+<th><#2177#></th>
 <td>
-<input type="radio" name="vpn_server_x_dns" class="input" value="1" onclick="update_visibility();"><#65#>
-<input type="radio" name="vpn_server_x_dns" class="input" value="0" onclick="update_visibility();"><#64#>
+<input type="radio" name="vpn_server_x_dns" class="input" value="1" onclick="update_visibility();"><#66#>
+<input type="radio" name="vpn_server_x_dns" class="input" value="0" onclick="update_visibility();"><#65#>
 </td>
 </tr>
 <tr id="server_pdns">
-<th><#2085#></th>
+<th><#2138#></th>
 <td>
-<input type="radio" name="vpn_server_pdns" class="input" value="1" <% nvram_match_x("", "vpn_server_pdns", "1", "checked"); %>><#65#>
-<input type="radio" name="vpn_server_pdns" class="input" value="0" <% nvram_match_x("", "vpn_server_pdns", "0", "checked"); %>><#64#>
+<input type="radio" name="vpn_server_pdns" class="input" value="1" <% nvram_match_x("", "vpn_server_pdns", "1", "checked"); %>><#66#>
+<input type="radio" name="vpn_server_pdns" class="input" value="0" <% nvram_match_x("", "vpn_server_pdns", "0", "checked"); %>><#65#>
 </td>
 </tr>
 <tr>
-<th><#2099#></th>
+<th><#2152#></th>
 <td>
 <select name="vpn_server_cipher" class="input_option"></select>
 </td>
 </tr>
 <tr>
-<th><#2092#></th>
+<th><#2145#></th>
 <td>
 <select name="vpn_server_comp" class="input_option">
-<option value="-1" <% nvram_match("vpn_server_comp","-1","selected"); %> ><#2230#></option>
-<option value="no" <% nvram_match("vpn_server_comp","no","selected"); %> ><#538#></option>
-<option value="yes" <% nvram_match("vpn_server_comp","yes","selected"); %> ><#2229#></option>
-<option value="adaptive" <% nvram_match("vpn_server_comp","adaptive","selected"); %> ><#557#></option>
+<option value="-1" <% nvram_match("vpn_server_comp","-1","selected"); %> ><#2280#></option>
+<option value="no" <% nvram_match("vpn_server_comp","no","selected"); %> ><#553#></option>
+<option value="yes" <% nvram_match("vpn_server_comp","yes","selected"); %> ><#2279#></option>
+<option value="adaptive" <% nvram_match("vpn_server_comp","adaptive","selected"); %> ><#573#></option>
 </select>
 </td>
 </tr>
 <tr id="server_reneg">
-<th><#2127#></th>
+<th><#2180#></th>
 <td>
-<input type="text" maxlength="5" class="input_6_table" name="vpn_server_reneg" onblur="validator.range(this, -1, 2147483647)" value="<% nvram_get("vpn_server_reneg"); %>" autocorrect="off" autocapitalize="off"> <#1760#>
-<span style="color:#FC0">(<#1785#> : -1)</span>
+<input type="text" maxlength="5" class="input_6_table" name="vpn_server_reneg" onblur="validator.range(this, -1, 2147483647)" value="<% nvram_get("vpn_server_reneg"); %>" autocorrect="off" autocapitalize="off"> <#1802#>
+<span style="color:#FC0">(<#1827#> : -1)</span>
 </td>
 </tr>
 <tr>
@@ -1361,24 +1371,24 @@ document.form.submit();
 </td>
 </tr>
 <tr id="server_ccd">
-<th><#2125#></th>
+<th><#2178#></th>
 <td>
-<input type="radio" name="vpn_server_ccd" class="input" value="1" onclick="update_visibility();" <% nvram_match_x("", "vpn_server_ccd", "1", "checked"); %>><#65#>
-<input type="radio" name="vpn_server_ccd" class="input" value="0" onclick="update_visibility();" <% nvram_match_x("", "vpn_server_ccd", "0", "checked"); %>><#64#>
+<input type="radio" name="vpn_server_ccd" class="input" value="1" onclick="update_visibility();" <% nvram_match_x("", "vpn_server_ccd", "1", "checked"); %>><#66#>
+<input type="radio" name="vpn_server_ccd" class="input" value="0" onclick="update_visibility();" <% nvram_match_x("", "vpn_server_ccd", "0", "checked"); %>><#65#>
 </td>
 </tr>
 <tr id="server_c2c">
-<th><#2089#></th>
+<th><#2142#></th>
 <td>
-<input type="radio" name="vpn_server_c2c" class="input" value="1" <% nvram_match_x("", "vpn_server_c2c", "1", "checked"); %>><#65#>
-<input type="radio" name="vpn_server_c2c" class="input" value="0" <% nvram_match_x("", "vpn_server_c2c", "0", "checked"); %>><#64#>
+<input type="radio" name="vpn_server_c2c" class="input" value="1" <% nvram_match_x("", "vpn_server_c2c", "1", "checked"); %>><#66#>
+<input type="radio" name="vpn_server_c2c" class="input" value="0" <% nvram_match_x("", "vpn_server_c2c", "0", "checked"); %>><#65#>
 </td>
 </tr>
 <tr id="server_ccd_excl">
-<th><#2091#></th>
+<th><#2144#></th>
 <td>
-<input type="radio" name="vpn_server_ccd_excl" class="input" value="1" onclick="update_visibility();" <% nvram_match_x("", "vpn_server_ccd_excl", "1", "checked"); %>><#65#>
-<input type="radio" name="vpn_server_ccd_excl" class="input" value="0" onclick="update_visibility();" <% nvram_match_x("", "vpn_server_ccd_excl", "0", "checked"); %>><#64#>
+<input type="radio" name="vpn_server_ccd_excl" class="input" value="1" onclick="update_visibility();" <% nvram_match_x("", "vpn_server_ccd_excl", "1", "checked"); %>><#66#>
+<input type="radio" name="vpn_server_ccd_excl" class="input" value="0" onclick="update_visibility();" <% nvram_match_x("", "vpn_server_ccd_excl", "0", "checked"); %>><#65#>
 </td>
 </tr>
 </table>
@@ -1389,11 +1399,11 @@ document.form.submit();
 </tr>
 </thead>
 <tr>
-<th width="36%"><#1246#></th>
-<th width="20%"><#119#></th>
-<th width="20%"><#130#></th>
-<th width="12%"><#1697#></th>
-<th width="12%"><#1434#></th>
+<th width="36%"><#1283#></th>
+<th width="20%"><#122#></th>
+<th width="20%"><#133#></th>
+<th width="12%"><#1739#></th>
+<th width="12%"><#1472#></th>
 </tr>
 <tr>
 <div id="VPNClientList_Block_PC" class="VPNClientList_Block_PC"></div>
@@ -1421,7 +1431,7 @@ document.form.submit();
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable_table">
 <thead>
 <tr>
-<td><#2094#></td>
+<td><#2147#></td>
 </tr>
 </thead>
 <tr>
@@ -1432,8 +1442,8 @@ document.form.submit();
 </table>
 </div>
 <div id="divApply" class="apply_gen" style="display:none;">
-<input type="button" id="restoreButton" class="button_gen" value="<#1785#>" onclick="defaultSettings();">
-<input class="button_gen" onclick="applyRule()" type="button" value="<#72#>"/>
+<input type="button" id="restoreButton" class="button_gen" value="<#1827#>" onclick="defaultSettings();">
+<input class="button_gen" onclick="applyRule()" type="button" value="<#73#>"/>
 </div>
 </td>
 </tr>
@@ -1469,7 +1479,7 @@ document.form.submit();
 </tr>
 </table>
 <div class="panelSubmiter">
-<input id="mailSendPannelCancel" class="button_gen" type="button" value="<#74#>">
+<input id="mailSendPannelCancel" class="button_gen" type="button" value="<#75#>">
 <input id="mailSendPannelSubmiter" class="button_gen" type="button" value="Send">
 <img id="mailSendLoadingIcon" style="margin-left:5px;display:none;" src="/images/InternetScan.gif">
 <script>
@@ -1562,8 +1572,8 @@ document.mailConfigForm.PM_MY_EMAIL_TMP.value = this.value + "@" + smtpList[docu
 </tr>
 </table>
 <div class="panelSubmiter">
-<input id="mailConfigPannelCancel" class="button_gen" type="button" value="<#74#>">
-<input id="mailConfigPannelSubmiter" class="button_gen" type="button" value="<#880#>">
+<input id="mailConfigPannelCancel" class="button_gen" type="button" value="<#75#>">
+<input id="mailConfigPannelSubmiter" class="button_gen" type="button" value="<#897#>">
 <img id="mailConfigLoadingIcon" style="margin-left:5px;display:none;" src="/images/InternetScan.gif">
 <script>
 document.getElementById("mailConfigPannelCancel").onclick = function(){

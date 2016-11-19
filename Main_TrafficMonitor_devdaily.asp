@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
-<title><#533#> - Daily per IP</title>
+<title><#548#> - Daily per IP</title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="tmmenu.css">
@@ -45,11 +45,11 @@ rows = 0;
 filtered = 0;
 genClientList();
 grid = '<table width="730px" class="FormTable_NWM">';
-grid += "<tr><th style=\"height:30px;\"><#892#></th>";
+grid += "<tr><th style=\"height:30px;\"><#910#></th>";
 grid += "<th>Host</th>";
 grid += "<th>Download</th>";
 grid += "<th>Upload</th>";
-grid += "<th><#1908#></th></tr>";
+grid += "<th><#1954#></th></tr>";
 if (daily_history.length > 0) {
 for (i = 0; i < daily_history.length; ++i) {
 fskip=0;
@@ -122,7 +122,7 @@ if(filtered > 0) {
 grid +='<tr><td style="color:#FFCC00;" colspan="5">'+ filtered +' entries filtered out.</td></tr>';
 }
 if(rows == 0)
-grid +='<tr><td style="color:#FFCC00;" colspan="5"><#1286#></td></tr>';
+grid +='<tr><td style="color:#FFCC00;" colspan="5"><#1324#></td></tr>';
 E('bwm-daily-grid').innerHTML = grid + '</table>';
 }
 function update_display(option, value) {
@@ -206,11 +206,11 @@ selGroup = E('page_select');
 optGroup = document.createElement('OPTGROUP');
 optGroup.label = "Per device";
 opt = document.createElement('option');
-opt.innerHTML = "<#1467#>";
+opt.innerHTML = "<#1505#>";
 opt.value = "5";
 optGroup.appendChild(opt);
 opt = document.createElement('option');
-opt.innerHTML = "<#1469#>";
+opt.innerHTML = "<#1507#>";
 opt.value = "6";
 opt.selected = true;
 optGroup.appendChild(opt);
@@ -376,15 +376,15 @@ setTimeout("updateClientList();", 3000);
 <tr><td><table width="100%" >
 <tr>
 <td class="formfonttitle" align="left">
-<div style="margin-top:5px;"><#180#> - Traffic Monitor per device</div>
+<div style="margin-top:5px;"><#183#> - Traffic Monitor per device</div>
 </td>
 <td>
 <div align="right">
 <select id="page_select" class="input_option" style="width:120px" onchange="switchPage(this.options[this.selectedIndex].value)">
 <optgroup label="Global">
-<option value="1"><#1467#></option>
-<option value="2"><#1468#></option>
-<option value="3"><#1469#></option>
+<option value="1"><#1505#></option>
+<option value="2"><#1506#></option>
+<option value="3"><#1507#></option>
 <option value="4">Monthly</option>
 </optgroup>
 </select>
@@ -412,7 +412,7 @@ setTimeout("updateClientList();", 3000);
 </thead>
 <tbody>
 <tr class='even'>
-<th width="40%"><#892#></th>
+<th width="40%"><#910#></th>
 <td>
 <select class="input_option" style="width:130px" onchange='update_date_format(this, "ymd")' id='dafm'>
 <option value=0>yyyy-mm-dd</option>
@@ -423,7 +423,7 @@ setTimeout("updateClientList();", 3000);
 </td>
 </tr>
 <tr class='even'>
-<th width="40%"><#1759#></th>
+<th width="40%"><#1801#></th>
 <td>
 <select style="width:70px" class="input_option" onchange='update_scale(this)' id='scale'>
 <option value=0>KB</option>
@@ -448,8 +448,8 @@ setTimeout("updateClientList();", 3000);
 <tr>
 <th>Display advanced filter options</th>
 <td>
-<input type="radio" name="_f_show_options" class="input" value="1" onclick="update_visibility();"><#65#>
-<input type="radio" name="_f_show_options" class="input" checked value="0" onclick="update_visibility();"><#64#>
+<input type="radio" name="_f_show_options" class="input" value="1" onclick="update_visibility();"><#66#>
+<input type="radio" name="_f_show_options" class="input" checked value="0" onclick="update_visibility();"><#65#>
 </td>
 </tr>
 <tr id="adv0">
@@ -467,22 +467,22 @@ setTimeout("updateClientList();", 3000);
 <tr id="adv2">
 <th>Display hostnames</th>
 <td>
-<input type="radio" name="_f_show_hostnames" class="input" value="1" checked onclick="update_display('hostnames',1);"><#65#>
-<input type="radio" name="_f_show_hostnames" class="input" value="0" onclick="update_display('hostnames',0);"><#64#>
+<input type="radio" name="_f_show_hostnames" class="input" value="1" checked onclick="update_display('hostnames',1);"><#66#>
+<input type="radio" name="_f_show_hostnames" class="input" value="0" onclick="update_display('hostnames',0);"><#65#>
 </td>
 </tr>
 <tr id="adv3">
 <th>Display IPs with no traffic</th>
 <td>
-<input type="radio" name="_f_show_zero" class="input" value="1" onclick="update_display('zero',1);"><#65#>
-<input type="radio" name="_f_show_zero" class="input" value="0" checked onclick="update_display('zero',0);"><#64#>
+<input type="radio" name="_f_show_zero" class="input" value="1" onclick="update_display('zero',1);"><#66#>
+<input type="radio" name="_f_show_zero" class="input" value="0" checked onclick="update_display('zero',0);"><#65#>
 </td>
 </tr>
 <tr id="adv4">
 <th>Show subnet totals</th>
 <td>
-<input type="radio" name="_f_show_subnet" class="input" value="1" onclick="update_display('subnet',1);"><#65#>
-<input type="radio" name="_f_show_subnet" class="input" value="0" checked onclick="update_display('subnet',0);"><#64#>
+<input type="radio" name="_f_show_subnet" class="input" value="1" onclick="update_display('subnet',1);"><#66#>
+<input type="radio" name="_f_show_subnet" class="input" value="0" checked onclick="update_display('subnet',0);"><#65#>
 </td>
 </tr>
 </tbody>

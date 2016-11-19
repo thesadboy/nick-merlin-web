@@ -20,7 +20,7 @@ setTimeout("redirect1();", reboot_needed_time*1000);
 }
 function redirect1(){
 if(action_mode == "Restore"){
-parent.document.getElementById('drword').innerHTML = "<#1782#><br/>".replace("192.168.1.1", '<% nvram_default_get("lan_ipaddr"); %>');
+parent.document.getElementById('drword').innerHTML = "<#1824#><br/>".replace("192.168.1.1", '<% nvram_default_get("lan_ipaddr"); %>');
 setTimeout("parent.hideLoading()",1000);
 setTimeout("parent.dr_advise();",1000);
 if((!parent.tmo_support && parent.location.hostname.search('router.asus') != -1)

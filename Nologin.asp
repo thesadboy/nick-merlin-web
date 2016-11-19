@@ -12,7 +12,7 @@ return (typeof login_ip_str === "function") ? login_ip_str().replace("0.0.0.0", 
 })();
 var loginUser = (function(){
 if(loginUserIp === "") return "";
-var dhcpLeaseInfo = <% IP_dhcpLeaseInfo(); %>
+var dhcpLeaseInfo = [];
 var hostName = "";
 dhcpLeaseInfo.forEach(function(elem){
 if(elem[0] === loginUserIp){
@@ -20,7 +20,7 @@ hostName = " (" + elem[1] + ")";
 return false;
 }
 })
-return '<#1438#> ' + loginUserIp + hostName;
+return '<#1476#> ' + loginUserIp + hostName;
 })();
 top.document.body.style.background = "#DDD";
 top.document.body.style.textAlign = "center";
@@ -35,7 +35,7 @@ top.document.body.innerHTML = ""
 + 'font-family:Segoe UI, Arial, sans-serif;'
 + 'color:#000;'
 + 'text-align:center;'
-+ '"><span><#1439#><br>'
++ '"><span><#1477#><br>'
 + loginUser
 + '</span></div>';
 })()

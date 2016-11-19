@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#533#> - TOR Settings</title>
+<title><#548#> - TOR Settings</title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="device-map/device-map.css">
@@ -43,7 +43,7 @@ var tor_redir_array = Tor_redir_list_str.split('&#60');
 var code = "";
 code +='<table width="100%" border="1" cellspacing="0" cellpadding="4" align="center" class="list_table" id="tor_redir_list_table">';
 if(tor_redir_array.length == 1){
-code +='<tr><td style="color:#FFCC00;"><#1286#></td>';
+code +='<tr><td style="color:#FFCC00;"><#1324#></td>';
 }
 else{
 for(var i = 1; i < tor_redir_array.length; i++){
@@ -70,7 +70,7 @@ show_tor_redir_list();
 function addRow(obj){
 var device_num = document.getElementById('tor_redir_list_table').rows.length;
 if(obj.value == ""){
-alert("<#137#>");
+alert("<#140#>");
 obj.focus();
 obj.select();
 return false;
@@ -81,7 +81,7 @@ return false;
 }
 for(i = 0; i < device_num; i++){
 if(obj.value.toLowerCase() == document.getElementById('tor_redir_list_table').rows[i].cells[0].innerHTML.toLowerCase()){
-alert("<#1325#>");
+alert("<#1363#>");
 return false;
 }
 }
@@ -97,7 +97,7 @@ for(i = 0; i < device_num; i++){
 value += "<"
 value += document.getElementById('tor_redir_list_table').rows[i].cells[0].innerHTML;
 }
-if(value == "<"+"<#1286#>" || value == "<"){
+if(value == "<"+"<#1324#>" || value == "<"){
 value = "";
 }
 if(document.form.redirect_rule.selectedIndex == 0)
@@ -113,7 +113,7 @@ var childsel=document.createElement("div");
 childsel.setAttribute("id","check_mac");
 childsel.style.color="#FFCC00";
 obj.parentNode.appendChild(childsel);
-document.getElementById("check_mac").innerHTML="<#162#>";
+document.getElementById("check_mac").innerHTML="<#165#>";
 document.getElementById("check_mac").style.display = "";
 return false;
 }else if(flag ==2){
@@ -121,7 +121,7 @@ var childsel=document.createElement("div");
 childsel.setAttribute("id","check_mac");
 childsel.style.color="#FFCC00";
 obj.parentNode.appendChild(childsel);
-document.getElementById("check_mac").innerHTML="<#131#>";
+document.getElementById("check_mac").innerHTML="<#134#>";
 document.getElementById("check_mac").style.display = "";
 return false;
 }else{
@@ -154,7 +154,7 @@ var childsel=document.createElement("div");
 childsel.setAttribute("id","check_mac");
 childsel.style.color="#FFCC00";
 obj.parentNode.appendChild(childsel);
-document.getElementById("check_mac").innerHTML="<br><br><#162#>";
+document.getElementById("check_mac").innerHTML="<br><br><#165#>";
 document.getElementById("check_mac").style.display = "";
 return false;
 }else if(flag == 2){
@@ -162,7 +162,7 @@ var childsel=document.createElement("div");
 childsel.setAttribute("id","check_mac");
 childsel.style.color="#FFCC00";
 obj.parentNode.appendChild(childsel);
-document.getElementById("check_mac").innerHTML="<br><br><#131#>";
+document.getElementById("check_mac").innerHTML="<br><br><#134#>";
 document.getElementById("check_mac").style.display = "";
 return false;
 }else{
@@ -242,15 +242,15 @@ showMacTable("0");
 <table id="MainTable1" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <thead>
 <tr>
-<td colspan="2"><#1878#></td>
+<td colspan="2"><#1924#></td>
 </tr>
 </thead>
 <tr>
 <th>TOR</th>
 <td>
 <select id="tor_enable_select" name="Tor_enable" class="input_option" onchange="show_tor_settings(this.value);">
-<option value="1" <% nvram_match("Tor_enable", "1","selected"); %>><#2229#></option>
-<option value="0" <% nvram_match("Tor_enable", "0","selected"); %>><#2230#></option>
+<option value="1" <% nvram_match("Tor_enable", "1","selected"); %>><#2279#></option>
+<option value="0" <% nvram_match("Tor_enable", "0","selected"); %>><#2280#></option>
 </select>
 </td>
 </tr>
@@ -290,7 +290,7 @@ showMacTable("0");
 </thead>
 <tr>
 <th width="80%"><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,10);">MAC</th>
-<th class="edit_table" width="20%"><#1434#></th>
+<th class="edit_table" width="20%"><#1472#></th>
 </tr>
 <tr>
 <td width="80%">
@@ -306,7 +306,7 @@ showMacTable("0");
 </table>
 <div id="tor_maclist_Block"></div>
 <div id="submitBtn" class="apply_gen">
-<input class="button_gen" onclick="applyRule()" type="button" value="<#72#>"/>
+<input class="button_gen" onclick="applyRule()" type="button" value="<#73#>"/>
 </div>
 </td>
 </tr>

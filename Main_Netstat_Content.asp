@@ -7,7 +7,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#1586#> - Netstat</title>
+<title><#1626#> - Netstat</title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="device-map/device-map.css">
@@ -19,9 +19,9 @@
 <script language="JavaScript" type="text/javascript" src="/js/jquery.js"></script>
 <script language="JavaScript" type="text/javascript" src="/client_function.js"></script>
 <script>
-option_netstat = new Array("<#1808#>","<#1811#>","<#1812#>","<#1810#>","<#1813#>","<#1809#>","<#959#>");
+option_netstat = new Array("<#1850#>","<#1853#>","<#1854#>","<#1852#>","<#1855#>","<#1851#>","<#977#>");
 optval_netstat = new Array("-a","-t","-u","-w","-x","-l","-r");
-option_netstat_nat = new Array("<#1574#>", "<#1575#>", "<#1576#>");
+option_netstat_nat = new Array("<#1614#>", "<#1615#>", "<#1616#>");
 optval_netstat_nat = new Array("-L","-s","-S");
 function onSubmitCtrl(o, s) {
 if(validForm()){
@@ -114,7 +114,7 @@ document.getElementById('ExtOption_tr').style.display = "";
 document.getElementById('resolvename').style.display = "none";
 }
 else{
-document.getElementById("cmdDesc").innerHTML = "<#1591#>";
+document.getElementById("cmdDesc").innerHTML = "<#1631#>";
 addNetOption(document.form.NetOption, option_netstat, optval_netstat);
 document.getElementById('ExtOption_tr').style.display = "none";
 document.getElementById('resolvename').style.display = "";
@@ -164,7 +164,7 @@ hideClients_Block();
 }
 function validForm(){
 if(document.form.NetOption.value == "-s" && document.form.targetip.value == ""){
-alert("<#137#>");
+alert("<#140#>");
 document.form.targetip.focus();
 document.form.targetip.select();
 return false;
@@ -206,12 +206,12 @@ return true;
 <tr>
 <td bgcolor="#4D595D" colspan="3" valign="top">
 <div>&nbsp;</div>
-<div class="formfonttitle"><#1586#> - Netstat</div>
+<div class="formfonttitle"><#1626#> - Netstat</div>
 <div style="margin-left:5px;margin-top:10px;margin-bottom:10px"><img src="/images/New_ui/export/line_export.png"></div>
-<div class="formfontdesc" id="cmdDesc"><#1591#></div>
+<div class="formfontdesc" id="cmdDesc"><#1631#></div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <tr>
-<th width="20%"><#1592#></th>
+<th width="20%"><#1632#></th>
 <td>
 <select id="cmdMethod" class="input_option" name="cmdMethod" onchange="hideCNT(this);">
 <option value="netstat" selected>Netstat</option>
@@ -220,41 +220,41 @@ return true;
 </td>
 </tr>
 <tr>
-<th width="20%"><#1595#></th>
+<th width="20%"><#1635#></th>
 <td>
 <select id="NetOption" class="input_option" name="NetOption" onChange="append_value(this);">
-<option value="-a"><#1808#></option>
-<option value="-ta"><#1811#></option>
-<option value="-ua"><#1812#></option>
-<option value="-w"><#1810#></option>
-<option value="-xa"><#1813#></option>
-<option value="-l"><#1809#></option>
-<option value="-r"><#959#></option>
+<option value="-a"><#1850#></option>
+<option value="-ta"><#1853#></option>
+<option value="-ua"><#1854#></option>
+<option value="-w"><#1852#></option>
+<option value="-xa"><#1855#></option>
+<option value="-l"><#1851#></option>
+<option value="-r"><#977#></option>
 </select>
 </td>
 </tr>
 <tr id="targetip_tr" style="display:none;">
-<th width="20%"><#1598#> IP</th>
+<th width="20%"><#1638#> IP</th>
 <td>
 <input type="text" id="targetip" class="input_15_table" maxlength="15" name="targetip" onKeyPress="return validator.isIPAddr(this,event)" onClick="hideClients_Block();" autocorrect="off" autocapitalize="off">
-<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" style="position:absolute;*margin-left:-3px;*margin-top:1px;" onclick="pullLANIPList(this);" title="<#1766#>">
+<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" style="position:absolute;*margin-left:-3px;*margin-top:1px;" onclick="pullLANIPList(this);" title="<#1808#>">
 <div id="ClientList_Block_PC" class="clientlist_dropdown" style="margin-left:2px;"></div>
 </td>
 </tr>
 <tr id="ExtOption_tr" style="display:none;">
-<th width="20%"><#1590#></th>
+<th width="20%"><#1630#></th>
 <td>
 <select id="ExtOption" class="input_option" name="ExtOption">
-<option value="-r state" selected><#1581#></option>
-<option value="-r src"><#1579#></option>
-<option value="-r dst"><#1577#></option>
-<option value="-r src-port"><#1580#></option>
-<option value="-r dst-port"><#1578#></option>
+<option value="-r state" selected><#1621#></option>
+<option value="-r src"><#1619#></option>
+<option value="-r dst"><#1617#></option>
+<option value="-r src-port"><#1620#></option>
+<option value="-r dst-port"><#1618#></option>
 </select>
 </td>
 </tr>
 <tr id = "resolvename" style="">
-<th width="20%"><#1597#></th>
+<th width="20%"><#1637#></th>
 <td>
 <select id="ResolveName" class="input_option" name="ResolveName">
 <option value="0">No</option>

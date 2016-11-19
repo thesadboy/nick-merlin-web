@@ -148,7 +148,7 @@ var validator_key = {
 var isCurrect = true;
 var altStr = "";
 if(alg == "wep"){
-altStr = "<#155#>";
+altStr = "<#158#>";
 if((keyObj.value.length == 5 || keyObj.value.length == 13) && validator.string(keyObj)){
 isCurrect = true;
 }
@@ -156,7 +156,7 @@ else if((keyObj.value.length == 10 || keyObj.value.length == 26)&& validator.hex
 isCurrect = true;
 }
 else{
-altStr = altStr + "\n<#542#>\n<#543#>";
+altStr = altStr + "\n<#557#>\n<#558#>";
 isCurrect = false;
 }
 }
@@ -165,7 +165,7 @@ isCurrect = true;
 }
 else{
 var psk_length = keyObj.value.length;
-altStr = "<#141#>"
+altStr = "<#144#>"
 if(psk_length < 8 || psk_length > 64){
 isCurrect = false;
 }
@@ -185,13 +185,13 @@ keyPressed = event.keyCode ? event.keyCode : event.which;
 if(keyPressed >= 0 && keyPressed <= 126)
 return true;
 else{
-alert('<#145#>');
+alert('<#148#>');
 return false;
 }
 },
 "isNull" : function(obj){
 if(obj.value == ""){
-alert("<#137#>");
+alert("<#140#>");
 obj.focus();
 obj.select();
 return false;
@@ -220,7 +220,7 @@ if(document.getElementById("thekey_manual").value == ""){
 viewHandler.changeAuthMode("open");
 document.getElementById("wlc_auth_mode_x_manual").selectedIndex = 0;
 }
-document.getElementById("deviceDiscorvy").innerHTML = "<#2056#>";
+document.getElementById("deviceDiscorvy").innerHTML = "<#2111#>";
 viewHandler.displayObj(["manualPAP", "btnPre", "btnNext"]);
 },
 "saveWlcVar" : function(idx){
@@ -286,7 +286,7 @@ if(!validator_key.key(document.getElementById("wl_wpa_psk"), "psk"))
 return false;
 }
 else{
-if(!confirm("<#288#>")){
+if(!confirm("<#291#>")){
 document.form.wl_wpa_psk.focus();
 document.form.wl_wpa_psk.select();
 return false;
@@ -522,16 +522,16 @@ var initRow = '<tr class="inputRow" style="display:none;background-color:#708789
 var connectedHint = '<td style="border:0px;"><span style="color:#FFCC00;"><#36#></span></td>';
 var unEncrypt = '<td style="border:0px;"><span style="color:#FFCC00;"><#35#></span></td>';
 var unSupport = "<td style=\"border:0px;\"><span style=\"color:#FFCC00;\"><#37#></span></td>";
-var networkKey = '<td style="border:0px;"><span style="color:#FFFFFF;"><#226#>:</span><input type="password" id="thekey_tmp" class="input_25_table" style="padding-left:3px;margin-left:5px;width:200px;" autocomplete="off" autocorrect="off" autocapitalize="off"><input type="checkbox" onclick="pass_checked(this, document.getElementById(\'thekey_tmp\'));"><span style="color:#FFF"><#372#></span></td>';
-var connectBtn = '<td style="border:0px;text-align:right"><input style="margin-left:10px;" id="connect_btn" type="button" value="<#71#>" onclick="btnAction.saveWlcVar('+ bindEvent.idx +', false)" class="button_gen_long"></td></tr>';
-var wep_auth = "<tr><td style=\"border:0px;\"><span style=\"margin-left:5px;color:#FFFFFF;\"><#2186#></span><select id=\"thekey_wep_method_tmp\" class=\"input_option\" style=\"margin-left:5px;\"><option value=\"open\" selected>open</option><option value=\"shared\">shared</option></select>";
-var wepkeyIndex = '<span style="margin-left:5px;color:#FFFFFF;"><#540#></span><select id="thekey_index_tmp" class="input_option" style="margin-left:5px;"><option value="1" selected>1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select></td></tr>';
+var networkKey = '<td style="border:0px;"><span style="color:#FFFFFF;"><#229#>:</span><input type="password" id="thekey_tmp" class="input_25_table" style="padding-left:3px;margin-left:5px;width:200px;" autocomplete="off" autocorrect="off" autocapitalize="off"><input type="checkbox" onclick="pass_checked(this, document.getElementById(\'thekey_tmp\'));"><span style="color:#FFF"><#377#></span></td>';
+var connectBtn = '<td style="border:0px;text-align:right"><input style="margin-left:10px;" id="connect_btn" type="button" value="<#72#>" onclick="btnAction.saveWlcVar('+ bindEvent.idx +', false)" class="button_gen_long"></td></tr>';
+var wep_auth = "<tr><td style=\"border:0px;\"><span style=\"margin-left:5px;color:#FFFFFF;\"><#2239#></span><select id=\"thekey_wep_method_tmp\" class=\"input_option\" style=\"margin-left:5px;\"><option value=\"open\" selected>open</option><option value=\"shared\">shared</option></select>";
+var wepkeyIndex = '<span style="margin-left:5px;color:#FFFFFF;"><#555#></span><select id="thekey_index_tmp" class="input_option" style="margin-left:5px;"><option value="1" selected>1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select></td></tr>';
 var endOfRow = '</table></td></tr>';
 if(wlc_scan_state != 3)
 initRow = "";
 else if(btnAction.curState == "Connecting"){
 if(wlc_state == 3 && wlc_sbstate == 2){
-connectBtn = '<input style="margin-left:10px;" id="connect_btn" type="button" value="<#71#>" onclick="submitForm()" class="button_gen"> <img id="loadingIcon" style="display:none;" src="/images/InternetScan.gif"></td></tr>';
+connectBtn = '<input style="margin-left:10px;" id="connect_btn" type="button" value="<#72#>" onclick="submitForm()" class="button_gen"> <img id="loadingIcon" style="display:none;" src="/images/InternetScan.gif"></td></tr>';
 if(document.form.wlc_wep.value == 1){
 initRow += networkKey;
 initRow += wepkeyIndex;
@@ -548,7 +548,7 @@ else if(wlc_state == 2){ // success
 initRow = "";
 }
 else
-initRow += '<span style="color:#FFCC00;"><#545#>...</span><img id="loadingIcon" src="/images/InternetScan.gif"></td></tr>';
+initRow += '<span style="color:#FFCC00;"><#560#>...</span><img id="loadingIcon" src="/images/InternetScan.gif"></td></tr>';
 }
 else{
 if(Profiles[bindEvent.idx].alg == "NONE"){
@@ -763,7 +763,7 @@ htmlCode += '<tr style="height: 45px;">';
 ssid_str=handle_show_str(Profiles[i].ssid);
 htmlCode += '<td><span title="' + Profiles[i].macaddr + '">' + ssid_str + '</span>';
 if(retValHandler.isConnected(Profiles[i].state))
-htmlCode += "<span style='color:#FC0;margin-left:10px;'><#66#></span>";
+htmlCode += "<span style='color:#FC0;margin-left:10px;'><#67#></span>";
 htmlCode += "</td>";
 htmlCode += '<td width="15%" style="text-align:center;">' + Profiles[i].channel;
 htmlCode += '<span style="margin-left:5px;">(' + Profiles[i].wlmode + ')</span>';
@@ -867,11 +867,11 @@ parent.regen_band(document.form.wlc_band_manual);
 <div id="PAPSurvey">
 <div style="margin-left:18px;">
 <table width="670px" border="0" cellspacing="0" cellpadding="4" align="center" class="QIS_survey">
-<th onclick="sorter.addBorder(this);sorter.doSorter(1, 'str');" style="cursor:pointer;"><#330#></th>
-<th onclick="sorter.addBorder(this);sorter.doSorter(2, 'num');" width="15%" style="text-align:center;cursor:pointer;"><#539#></th>
-<th onclick="sorter.addBorder(this);sorter.doSorter(3, 'str');" width="20%" style="cursor:pointer;"><#331#></th>
-<th onclick="sorter.addBorder(this);sorter.doSorter(0, 'str');" width="10%" style="text-align:center;cursor:pointer;"><#1251#></th>
-<th onclick="sorter.addBorder(this);sorter.doSorter(5, 'num');" width="10%" id="sigTh" style="border-bottom: 1px solid #FC0;text-align:center;cursor:pointer;"><#466#></th>
+<th onclick="sorter.addBorder(this);sorter.doSorter(1, 'str');" style="cursor:pointer;"><#335#></th>
+<th onclick="sorter.addBorder(this);sorter.doSorter(2, 'num');" width="15%" style="text-align:center;cursor:pointer;"><#554#></th>
+<th onclick="sorter.addBorder(this);sorter.doSorter(3, 'str');" width="20%" style="cursor:pointer;"><#336#></th>
+<th onclick="sorter.addBorder(this);sorter.doSorter(0, 'str');" width="10%" style="text-align:center;cursor:pointer;"><#1288#></th>
+<th onclick="sorter.addBorder(this);sorter.doSorter(5, 'num');" width="10%" id="sigTh" style="border-bottom: 1px solid #FC0;text-align:center;cursor:pointer;"><#467#></th>
 </table>
 </div>
 <div style="height:360px;overflow-y:auto;margin-top:0px;" id="wlscan_table_container">
@@ -893,13 +893,13 @@ parent.regen_band(document.form.wlc_band_manual);
 <#31#>
 <br/>
 <span style="color:#FC0" id="deviceDiscorvy">
-<#2056#>
+<#2111#>
 </span>
 </div>
 <br><br>
 <table class="QISform" width="400" border=0 align="center" cellpadding="5" cellspacing="0" style="padding-left:30px;">
 <tr id="wl_unit_field">
-<th width="25%"><#1251#></th>
+<th width="25%"><#1288#></th>
 <td>
 <select id="wlc_band_manual" class="input_option">
 <option class="content_input_fd" value="2G" selected>2.4GHz</option>
@@ -908,13 +908,13 @@ parent.regen_band(document.form.wlc_band_manual);
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 1);"><#330#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 1);"><#335#></a></th>
 <td>
 <input type="text" maxlength="32" class="input_32_table" id="wlc_ssid_manual" value="" onkeypress="return validator_key.isString(this, event);" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 5);"><#2186#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 5);"><#2239#></a></th>
 <td>
 <select id="wlc_auth_mode_x_manual" class="input_option" onChange="viewHandler.changeAuthMode(this.value)">
 <option value="open">Open System</option>
@@ -923,28 +923,28 @@ parent.regen_band(document.form.wlc_band_manual);
 <option value="psk2">WPA2-Personal</option>
 </select>
 <div id="wl_nmode_hint_manual" style="margin-top:5px;color:#FC0;">
-<#2330#> <#2331#>
+<#2380#> <#2381#>
 </div>
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 6);"><#544#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 6);"><#559#></a></th>
 <td>
 <select id="wlc_crypto_manual" class="input_option"></select>
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 9);"><#2227#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 9);"><#2277#></a></th>
 <td>
 <select id="wlc_wep_manual" class="input_option" onChange="viewHandler.changeWepMode();">
-<option value="0"><#538#></option>
+<option value="0"><#553#></option>
 <option value="1">WEP-64bits</option>
 <option value="2">WEP-128bits</option>
 </select>
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 10);"><#540#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 10);"><#555#></a></th>
 <td>
 <select id="wlc_key_index_manual" class="input_option">
 <option value="1">1</option>
@@ -955,7 +955,7 @@ parent.regen_band(document.form.wlc_band_manual);
 </td>
 </tr>
 <tr>
-<th><#226#></th>
+<th><#229#></th>
 <td>
 <input type="password" id="thekey_manual" name="thekey_manual" class="input_32_table" style="height:25px;" autocomplete="off" autocorrect="off" autocapitalize="off">
 </td>
@@ -963,25 +963,25 @@ parent.regen_band(document.form.wlc_band_manual);
 <tr>
 <th></th>
 <td>
-<input type="checkbox" id="show_pass_manual" onclick="pass_checked(this, document.getElementById('thekey_manual'));"><#372#>
+<input type="checkbox" id="show_pass_manual" onclick="pass_checked(this, document.getElementById('thekey_manual'));"><#377#>
 </td>
 </tr>
 </table>
 </div>
 <div id="localAP" style="display:none">
 <div style="margin-left:25px;" class="QISGeneralFont">
-<#424#>
+<#425#>
 </div>
 <br><br>
 <table id="tblsetting_2" class="QISform" width="400" border=0 align="center" cellpadding="5" cellspacing="0" style="padding-left:100px;">
 <tr>
-<th width="25%"><#330#></th>
+<th width="25%"><#335#></th>
 <td>
 <input type="text" id="wl_ssid" onkeypress="return validator_key.isString(this, event);" style="height:25px;" class="input_32_table" maxlength="32" value="" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr>
-<th width="25%"><#226#></th>
+<th width="25%"><#229#></th>
 <td>
 <input id="wl_wpa_psk" type="password" value="" style="height:25px;" class="input_32_table" maxlength="65" autocomplete="off" autocorrect="off" autocapitalize="off">
 </td>
@@ -989,18 +989,18 @@ parent.regen_band(document.form.wlc_band_manual);
 <tr>
 <th></th>
 <td>
-<input type="checkbox" onclick="parent.switchType(document.getElementById('wl_wpa_psk'), this.checked, true);"><#372#>
+<input type="checkbox" onclick="parent.switchType(document.getElementById('wl_wpa_psk'), this.checked, true);"><#377#>
 </td>
 </tr>
 </table>
 <input id="rescanBtn" type="button" class="button_gen" width="72" value="Rescan" style="display:none">
 </div>
 <div class="apply_gen" style="margin-top:10px">
-<input id="btnPre" type="button" value="<#74#>" onclick='btnAction.goPreStage();' class="button_gen" >
-<input id="btnSubmit" type="button" value="<#71#>" onclick="btnAction.submitForm();" class="button_gen_long" >
-<input id="btnManual" type="button" value="<#177#>" onclick="btnAction.manual();" class="button_gen_long">
-<input id="btnRescan" type="button" value="<#370#>" onclick="btnAction.curState='Rescanning';btnAction.rescan();" class="button_gen_long">
-<input id="btnNext" type="button" value="<#71#>" onclick="btnAction.saveWlcVar(-1)" class="button_gen_long">
+<input id="btnPre" type="button" value="<#75#>" onclick='btnAction.goPreStage();' class="button_gen" >
+<input id="btnSubmit" type="button" value="<#72#>" onclick="btnAction.submitForm();" class="button_gen_long" >
+<input id="btnManual" type="button" value="<#180#>" onclick="btnAction.manual();" class="button_gen_long">
+<input id="btnRescan" type="button" value="<#375#>" onclick="btnAction.curState='Rescanning';btnAction.rescan();" class="button_gen_long">
+<input id="btnNext" type="button" value="<#72#>" onclick="btnAction.saveWlcVar(-1)" class="button_gen_long">
 <img id="loadingIcon" style="display:none;" src="/images/InternetScan.gif">
 </div>
 </div>
